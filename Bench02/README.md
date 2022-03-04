@@ -23,3 +23,16 @@ $ mv CogniCrypt-SARIF-Report.txt CogniCrypt-Report.json
 $ python3 ../scripts/process-cc-report.py ./CogniCrypt-Report.json CogniCrypt-Report.csv
 
 ```
+
+
+### CryptoGuard
+
+In order to reproduce the CryptoGuard results, execute the following steps
+
+```{shell}
+$ cd tools
+
+$ java -jar CryptoGuard.jar -in jar \
+            -s ../asset/rigorityj-samples-1.0-SNAPSHOT.jar \
+	    -o ../results/CryptoGuard-Report.json
+```
