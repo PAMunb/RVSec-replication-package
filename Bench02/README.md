@@ -27,7 +27,9 @@ $ python3 ../scripts/process-cc-report.py ./CogniCrypt-Report.json CogniCrypt-Re
 
 ### CryptoGuard
 
-In order to reproduce the CryptoGuard results, execute the following steps
+In order to reproduce the CryptoGuard results, execute the following steps.
+
+   * Running CrypotGuard
 
 ```{shell}
 $ cd tools
@@ -35,4 +37,12 @@ $ cd tools
 $ java -jar CryptoGuard.jar -in jar \
             -s ../asset/rigorityj-samples-1.0-SNAPSHOT.jar \
 	    -o ../results/CryptoGuard-Report.json
+```
+
+   * Converting the CryptoGuard outcomes to a CSV file
+
+```{shell}
+$ cd ../results
+
+$ python3 ../scripts/process-cg-report.py ./CryptoGuard-Report.json CryptoGuard-Report.csv
 ```
