@@ -226,3 +226,22 @@ precision_cg
 recall_cg <- cg_tp$tp / (cg_tp$tp + cg_fn$fn)
 recall_cg
 ```
+
+
+## Examples of False Negative
+
+```{r}
+sqldf("select distinct className as fn
+       from tp 
+       where className not in (select className from bench03mop)")
+
+sqldf("select distinct className as fn
+       from tp 
+       where className not in (select className from bench03cc)")
+
+sqldf("select distinct className as fn
+       from tp 
+       where className not in (select className from bench03cg)")
+
+
+```
