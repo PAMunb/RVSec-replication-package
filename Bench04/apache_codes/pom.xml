@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>br.unb.cic</groupId>
+	<artifactId>mop-test-suite-b04</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<!-- <modules> -->
+	<!-- <module>activemq-artemis/artemis-commons</module> -->
+	<!-- <module>deltaspike/deltaspike/checkstyle-rules</module> -->
+	<!-- <module>deltaspike/deltaspike/parent</module> -->
+	<!-- <module>deltaspike/deltaspike/test-utils</module> -->
+	<!-- <module>deltaspike/deltaspike/core</module> -->
+	<!-- <module>deltaspike/deltaspike/core/impl</module> -->
+	<!-- <module>directory-ldap-api/asn1</module> -->
+	<!-- <module>directory-server/kerberos-codec</module> -->
+	<!-- <module>manifoldcf/framework/core</module> -->
+	<!-- <module>openwebbeans-meecrowave/meecrowave-core</module> -->
+	<!-- <module>spark/core</module> -->
+	<!-- <module>tika/tika-core</module> -->
+	<!-- <module>tomee/container/openejb-core</module> -->
+	<!-- <module>wicket/wicket-util</module> -->
+	<!-- </modules> -->
+
+	<build>
+		<!-- -am -->
+		<defaultGoal>clean install</defaultGoal>
+	</build>
+
+	<profiles>
+		<profile>
+			<id>test</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<modules>
+				<module>activemq-artemis/artemis-commons</module>
+				<module>deltaspike/deltaspike/core/impl</module>
+				<module>directory-ldap-api/asn1</module>
+				<module>directory-server/kerberos-codec</module>
+				<module>manifoldcf/framework/core</module>
+				<module>openwebbeans-meecrowave/meecrowave-core</module>
+<!-- 				<module>spark/core</module> -->
+				<module>tika/tika-core</module>
+				<module>tomee/container/openejb-core</module>
+				<module>wicket/wicket-util</module>
+			</modules>
+		</profile>
+		<profile>
+			<!-- initial build (to download and install all dependencies) -->
+			<id>build</id>
+			<modules>
+				<module>activemq-artemis/artemis-commons</module>
+				<module>deltaspike/deltaspike/checkstyle-rules</module>
+				<module>deltaspike/deltaspike/parent</module>
+				<module>deltaspike/deltaspike/test-utils</module>
+				<module>deltaspike/deltaspike/core</module>
+				<module>directory-ldap-api/i18n</module>
+				<module>directory-ldap-api/util</module>
+				<module>directory-ldap-api/asn1</module>
+				<module>directory-server/i18n</module>
+				<module>directory-server/kerberos-codec</module>
+				<module>manifoldcf/framework</module>
+				<module>manifoldcf/framework/less-compiler</module>
+				<module>manifoldcf/framework/core</module>
+				<module>openwebbeans-meecrowave/meecrowave-core</module>
+				<module>common/sketch</module>
+				<module>spark/common/kvstore</module>
+				<module>spark/common/network-common</module>
+				<module>spark/common/network-shuffle</module>
+				<module>spark/common/unsafe</module>
+				<module>spark/common/tags</module>
+				<module>spark/core</module>
+				<module>tika/tika-parent</module>
+				<module>tika/tika-core</module>
+				<module>tomee/itests</module>
+				<module>tomee/maven</module>
+				<module>tomee/gradle</module>
+				<module>tomee/container/mbean-annotation-api</module>
+				<module>tomee/container/openejb-api</module>
+				<module>tomee/container/openejb-core</module>
+				<module>wicket/wicket</module>
+				<module>wicket/wicket-core</module>
+				<module>wicket/wicket-util</module>
+			</modules>
+		</profile>
+	</profiles>
+
+</project>
