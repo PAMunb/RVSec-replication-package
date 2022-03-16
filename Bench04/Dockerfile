@@ -6,4 +6,6 @@ FROM maven:3.8.4-jdk-8-slim
 ADD apache_codes /app
 WORKDIR /app
 
+#VOLUME "/root/.m2"
+
 #CMD ["mvn"]

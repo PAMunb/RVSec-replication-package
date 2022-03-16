@@ -38,30 +38,30 @@
       <module>artemis-website</module>
       <module>artemis-cli</module>
       <module>artemis-commons</module>
-      <module>artemis-selector</module>
-      <module>artemis-core-client</module>
-      <module>artemis-core-client-all</module>
-      <module>artemis-core-client-osgi</module>
-      <module>artemis-server</module>
-      <module>artemis-junit</module>
-      <module>artemis-jms-client</module>
-      <module>artemis-jms-client-all</module>
-      <module>artemis-jms-client-osgi</module>
-      <module>artemis-jms-server</module>
-      <module>artemis-native</module>
-      <module>artemis-journal</module>
-      <module>artemis-ra</module>
-      <module>artemis-rest</module>
-      <module>artemis-service-extensions</module>
-      <module>artemis-jdbc-store</module>
-      <module>artemis-maven-plugin</module>
-      <module>artemis-server-osgi</module>
-      <module>artemis-hawtio</module>
-      <module>integration/activemq-spring-integration</module>
-      <module>artemis-distribution</module>
-      <module>artemis-tools</module>
-      <module>tests</module>
-      <module>artemis-features</module>
+<!--       <module>artemis-selector</module> -->
+<!--       <module>artemis-core-client</module> -->
+<!--       <module>artemis-core-client-all</module> -->
+<!--       <module>artemis-core-client-osgi</module> -->
+<!--       <module>artemis-server</module> -->
+<!--       <module>artemis-junit</module> -->
+<!--       <module>artemis-jms-client</module> -->
+<!--       <module>artemis-jms-client-all</module> -->
+<!--       <module>artemis-jms-client-osgi</module> -->
+<!--       <module>artemis-jms-server</module> -->
+<!--       <module>artemis-native</module> -->
+<!--       <module>artemis-journal</module> -->
+<!--       <module>artemis-ra</module> -->
+<!--       <module>artemis-rest</module> -->
+<!--       <module>artemis-service-extensions</module> -->
+<!--       <module>artemis-jdbc-store</module> -->
+<!--       <module>artemis-maven-plugin</module> -->
+<!--       <module>artemis-server-osgi</module> -->
+<!--       <module>artemis-hawtio</module> -->
+<!--       <module>integration/activemq-spring-integration</module> -->
+<!--       <module>artemis-distribution</module> -->
+<!--       <module>artemis-tools</module> -->
+<!--       <module>tests</module> -->
+<!--       <module>artemis-features</module> -->
    </modules>
 
    <name>ActiveMQ Artemis Parent</name>
