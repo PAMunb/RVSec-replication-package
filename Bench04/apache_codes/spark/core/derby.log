@@ -1,0 +1,53 @@
+----------------------------------------------------------------
+Thu Mar 17 10:55:51 BRT 2022:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.12.1.1 - (1704137): instance a816c00e-017f-9829-d18e-0000521aa678 
+on database directory /home/pedro/tmp/RV/spark/core/metastore_db with class loader sun.misc.Launcher$AppClassLoader@ee7d9f1 
+Loaded from file:/home/pedro/.m2/repository/org/apache/derby/derby/10.12.1.1/derby-10.12.1.1.jar
+java.vendor=AdoptOpenJDK
+java.runtime.version=1.8.0_282-b08
+user.dir=/home/pedro/tmp/RV/spark/core
+os.name=Linux
+os.arch=amd64
+os.version=5.13.0-35-generic
+derby.system.home=null
+Warning: The database is booted with derby.system.durability=test. In this mode, it is possible that database may not be able to recover, committed transactions may be lost, database may be in an inconsistent state. Please use this mode only when these consequences are acceptable  
+
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Thu Mar 17 11:00:53 BRT 2022:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.12.1.1 - (1704137): instance b86e839c-017f-9829-d18e-0000521aa678 
+on database directory /home/pedro/tmp/RV/spark/core/target/JdbcRDDSuiteDb with class loader sun.misc.Launcher$AppClassLoader@ee7d9f1 
+Loaded from file:/home/pedro/.m2/repository/org/apache/derby/derby/10.12.1.1/derby-10.12.1.1.jar
+java.vendor=AdoptOpenJDK
+java.runtime.version=1.8.0_282-b08
+user.dir=/home/pedro/tmp/RV/spark/core
+os.name=Linux
+os.arch=amd64
+os.version=5.13.0-35-generic
+derby.system.home=null
+Warning: The database is booted with derby.system.durability=test. In this mode, it is possible that database may not be able to recover, committed transactions may be lost, database may be in an inconsistent state. Please use this mode only when these consequences are acceptable  
+
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Thu Mar 17 11:00:53 BRT 2022:
+Shutting down instance b86e839c-017f-9829-d18e-0000521aa678 on database directory /home/pedro/tmp/RV/spark/core/target/JdbcRDDSuiteDb with class loader sun.misc.Launcher$AppClassLoader@ee7d9f1 
+----------------------------------------------------------------
+Thu Mar 17 11:00:53 BRT 2022:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.12.1.1 - (1704137): instance 4b110449-017f-9829-d18e-0000521aa678 
+on database directory /home/pedro/tmp/RV/spark/core/target/JdbcRDDSuiteDb with class loader sun.misc.Launcher$AppClassLoader@ee7d9f1 
+Loaded from file:/home/pedro/.m2/repository/org/apache/derby/derby/10.12.1.1/derby-10.12.1.1.jar
+java.vendor=AdoptOpenJDK
+java.runtime.version=1.8.0_282-b08
+user.dir=/home/pedro/tmp/RV/spark/core
+os.name=Linux
+os.arch=amd64
+os.version=5.13.0-35-generic
+derby.system.home=null
+Warning: The database is booted with derby.system.durability=test. In this mode, it is possible that database may not be able to recover, committed transactions may be lost, database may be in an inconsistent state. Please use this mode only when these consequences are acceptable  
+
+Warning: The database was at least at one time booted with derby.system.durability=test. As a result of this mode being used, it is possible that the database may not be able to recover, committed transactions may be lost, and the database may be in an inconsistent state. This may cause unexpected errors.
+
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Thu Mar 17 11:00:53 BRT 2022:
+Shutting down instance 4b110449-017f-9829-d18e-0000521aa678 on database directory /home/pedro/tmp/RV/spark/core/target/JdbcRDDSuiteDb with class loader sun.misc.Launcher$AppClassLoader@ee7d9f1 

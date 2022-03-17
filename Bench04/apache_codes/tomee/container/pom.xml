@@ -33,11 +33,11 @@
     <module>mbean-annotation-api</module>
     <module>openejb-api</module>
     <module>openejb-core</module>
-<!--     <module>openejb-loader</module> -->
-<!--     <module>openejb-javaagent</module> -->
-<!--     <module>openejb-jee</module> -->
-<!--     <module>openejb-jee-accessors</module> -->
-<!--     <module>openejb-junit</module> -->
-<!--     <module>openejb-jpa-integration</module> -->
+    <module>openejb-loader</module>
+    <module>openejb-javaagent</module>
+    <module>openejb-jee</module>
+    <module>openejb-jee-accessors</module>
+    <module>openejb-junit</module>
+    <module>openejb-jpa-integration</module>
   </modules>
 </project>

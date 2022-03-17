@@ -1,0 +1,29 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1647550420839
+Build-Jdk: 1.8.0_282
+Built-By: pedro
+Bundle-Description: LDAP Schema Converter
+Bundle-DocURL: http://www.apache.org/
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-ManifestVersion: 2
+Bundle-Name: Apache Directory LDAP API Schema Converter
+Bundle-SymbolicName: org.apache.directory.api.ldap.schema.converter
+Bundle-Vendor: The Apache Software Foundation
+Bundle-Version: 2.0.0.M1-SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Export-Package: org.apache.directory.api.ldap.schema.converter;version="
+ 2.0.0.M1-SNAPSHOT";uses:="antlr,antlr.collections.impl,org.apache.direc
+ tory.api.ldap.model.exception,org.apache.directory.api.ldap.model.schem
+ a"
+Import-Package: org.apache.directory.api.i18n;version="2.0.0.M1-SNAPSHOT
+ ",org.apache.directory.api.ldap.model.entry;version="2.0.0.M1-SNAPSHOT"
+ ,org.apache.directory.api.ldap.model.exception;version="2.0.0.M1-SNAPSH
+ OT",org.apache.directory.api.ldap.model.ldif;version="2.0.0.M1-SNAPSHOT
+ ",org.apache.directory.api.ldap.model.name;version="2.0.0.M1-SNAPSHOT",
+ org.apache.directory.api.ldap.model.schema;version="2.0.0.M1-SNAPSHOT",
+ org.apache.directory.api.util;version="2.0.0.M1-SNAPSHOT",org.slf4j;ver
+ sion="[1.7,1.8)",antlr;version="2.7.7",antlr.collections.impl,org.apach
+ e.commons.lang.exception;version="[2.6,3)",org.apache.directory.api.lda
+ p.model.constants;version="2.0.0.M1-SNAPSHOT"
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.7))"
+Tool: Bnd-2.3.0.201405100607

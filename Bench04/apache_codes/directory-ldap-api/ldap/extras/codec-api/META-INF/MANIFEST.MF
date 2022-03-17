@@ -1,0 +1,61 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1647550417973
+Build-Jdk: 1.8.0_282
+Built-By: pedro
+Bundle-Description: Extra LDAP controls and extended operation interface
+ s and POJOs for the    Codec extensions used by clients and servers.
+Bundle-DocURL: http://www.apache.org/
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-ManifestVersion: 2
+Bundle-Name: Apache Directory LDAP API Extras Codec API
+Bundle-SymbolicName: org.apache.directory.api.ldap.extras.codec.api
+Bundle-Vendor: The Apache Software Foundation
+Bundle-Version: 2.0.0.M1-SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Export-Package: org.apache.directory.api.ldap.extras.controls;version="2
+ .0.0.M1-SNAPSHOT",org.apache.directory.api.ldap.extras.controls.ad;vers
+ ion="2.0.0.M1-SNAPSHOT";uses:="org.apache.directory.api.ldap.model.mess
+ age,org.apache.directory.api.ldap.model.message.controls",org.apache.di
+ rectory.api.ldap.extras.controls.permissiveModify;version="2.0.0.M1-SNA
+ PSHOT";uses:="org.apache.directory.api.ldap.model.message,org.apache.di
+ rectory.api.ldap.model.message.controls",org.apache.directory.api.ldap.
+ extras.controls.ppolicy;version="2.0.0.M1-SNAPSHOT";uses:="org.apache.d
+ irectory.api.ldap.model.message",org.apache.directory.api.ldap.extras.c
+ ontrols.syncrepl.syncDone;version="2.0.0.M1-SNAPSHOT";uses:="org.apache
+ .directory.api.ldap.model.message,org.apache.directory.api.ldap.model.m
+ essage.controls",org.apache.directory.api.ldap.extras.controls.syncrepl
+ .syncInfoValue;version="2.0.0.M1-SNAPSHOT";uses:="org.apache.directory.
+ api.ldap.extras.controls,org.apache.directory.api.ldap.model.message,or
+ g.apache.directory.api.ldap.model.message.controls",org.apache.director
+ y.api.ldap.extras.controls.syncrepl.syncState;version="2.0.0.M1-SNAPSHO
+ T";uses:="org.apache.directory.api.ldap.model.message,org.apache.direct
+ ory.api.ldap.model.message.controls",org.apache.directory.api.ldap.extr
+ as.controls.vlv;version="2.0.0.M1-SNAPSHOT";uses:="org.apache.directory
+ .api.ldap.model.message,org.apache.directory.api.ldap.model.message.con
+ trols",org.apache.directory.api.ldap.extras.extended.cancel;version="2.
+ 0.0.M1-SNAPSHOT";uses:="org.apache.directory.api.ldap.model.message",or
+ g.apache.directory.api.ldap.extras.extended.certGeneration;version="2.0
+ .0.M1-SNAPSHOT";uses:="org.apache.directory.api.ldap.model.message",org
+ .apache.directory.api.ldap.extras.extended.gracefulDisconnect;version="
+ 2.0.0.M1-SNAPSHOT";uses:="org.apache.directory.api.ldap.model.message",
+ org.apache.directory.api.ldap.extras.extended.gracefulShutdown;version=
+ "2.0.0.M1-SNAPSHOT";uses:="org.apache.directory.api.ldap.model.message"
+ ,org.apache.directory.api.ldap.extras.extended.pwdModify;version="2.0.0
+ .M1-SNAPSHOT";uses:="org.apache.directory.api.ldap.model.message",org.a
+ pache.directory.api.ldap.extras.extended.startTls;version="2.0.0.M1-SNA
+ PSHOT";uses:="org.apache.directory.api.ldap.model.message",org.apache.d
+ irectory.api.ldap.extras.extended.storedProcedure;version="2.0.0.M1-SNA
+ PSHOT";uses:="org.apache.directory.api.ldap.model.message",org.apache.d
+ irectory.api.ldap.extras.extended.whoAmI;version="2.0.0.M1-SNAPSHOT";us
+ es:="org.apache.directory.api.ldap.model.message,org.apache.directory.a
+ pi.ldap.model.name",org.apache.directory.api.ldap.extras.controls.chang
+ eNotifications_impl;version="2.0.0.M1-SNAPSHOT"
+Import-Package: org.apache.directory.api.asn1.ber.tlv;version="2.0.0.M1-
+ SNAPSHOT",org.apache.directory.api.i18n;version="2.0.0.M1-SNAPSHOT",org
+ .apache.directory.api.ldap.model.message;version="2.0.0.M1-SNAPSHOT",or
+ g.apache.directory.api.ldap.model.message.controls;version="2.0.0.M1-SN
+ APSHOT",org.apache.directory.api.ldap.model.name;version="2.0.0.M1-SNAP
+ SHOT",org.apache.directory.api.util;version="2.0.0.M1-SNAPSHOT",org.apa
+ che.directory.api.util.exception;version="2.0.0.M1-SNAPSHOT"
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.7))"
+Tool: Bnd-2.3.0.201405100607
