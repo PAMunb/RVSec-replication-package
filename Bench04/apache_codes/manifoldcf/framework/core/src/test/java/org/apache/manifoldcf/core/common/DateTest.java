@@ -18,36 +18,42 @@
 */
 package org.apache.manifoldcf.core.common;
 
-import java.util.*;
-import org.junit.*;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
-public class DateTest
-{
+import java.util.Date;
 
-  @Test
-  public void iso8601()
-    throws Exception
-  {
-    Date d = DateParser.parseISO8601Date("96-11-15T01:32:33.344GMT");
-    assertNotNull(d);
-    Date d2 = DateParser.parseISO8601Date("1996-11-15T01:32:33.344Z");
-    assertNotNull(d2);
-    assertEquals(d,d2);
-    d = DateParser.parseISO8601Date("2012-11-15T01:32:33Z");
-    assertNotNull(d);
-    d = DateParser.parseISO8601Date("2012-11-15T01:32:33+0100");
-    assertNotNull(d);
-    d = DateParser.parseISO8601Date("2012-11-15T01:32:33-03:00");
-    assertNotNull(d);
-    d = DateParser.parseISO8601Date("2012-11-15T01:32:33GMT-03:00");
-    assertNotNull(d);
-    d = DateParser.parseISO8601Date("2012-11-15T01:32:33.001-04:00");
-    assertNotNull(d);
-    // Microsoft variation
-    d = DateParser.parseISO8601Date("2014-06-03 11:21:37");
-    assertNotNull(d);
-  }
+import org.apache.manifoldcf.core.system.ManifoldCF;
+import org.junit.Test;
 
+public class DateTest {
+
+    @Test
+    public void testHash() throws Exception {
+        ManifoldCF.hash("teste");
+        ManifoldCF.encrypt("123", "123", "teste");
+    }
+
+    @Test
+    public void iso8601() throws Exception {
+        Date d = DateParser.parseISO8601Date("96-11-15T01:32:33.344GMT");
+        assertNotNull(d);
+        Date d2 = DateParser.parseISO8601Date("1996-11-15T01:32:33.344Z");
+        assertNotNull(d2);
+        assertEquals(d, d2);
+        d = DateParser.parseISO8601Date("2012-11-15T01:32:33Z");
+        assertNotNull(d);
+        d = DateParser.parseISO8601Date("2012-11-15T01:32:33+0100");
+        assertNotNull(d);
+        d = DateParser.parseISO8601Date("2012-11-15T01:32:33-03:00");
+        assertNotNull(d);
+        d = DateParser.parseISO8601Date("2012-11-15T01:32:33GMT-03:00");
+        assertNotNull(d);
+        d = DateParser.parseISO8601Date("2012-11-15T01:32:33.001-04:00");
+        assertNotNull(d);
+        // Microsoft variation
+        d = DateParser.parseISO8601Date("2014-06-03 11:21:37");
+        assertNotNull(d);
+    }
 
 }

@@ -45,9 +45,9 @@ cd ..
 
 
 ##### TOMEE #############################################################
-cd tomee
-mvn clean test -pl container/openejb-core -am
-cd ..
+#cd tomee
+#mvn clean test -pl container/openejb-core -am
+#cd ..
 
 
 ##### WICKET #############################################################

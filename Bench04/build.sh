@@ -53,12 +53,12 @@ cd ..
 ##### TOMEE #############################################################
 cd tomee/
 mvn clean install -DskipTests -pl container/openejb-core -am
-cd container/openejb-core
-mvn test
-cd ../../..
+#cd container/openejb-core
+#mvn test
+#cd ../../..
 
 
 ##### WICKET #############################################################
 cd wicket/
-mvn clean test -pl wicket-util -am
+mvn clean install -pl wicket-util -am
 cd ..
