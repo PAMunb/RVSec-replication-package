@@ -385,24 +385,24 @@ public class TestMetadata {
        assertEquals(message, meta.get("testDescriptionAlt"));
     }
 
-    @Test
-    public void testMultithreadedDates() throws Exception {
-        int numThreads = 10;
-        ExecutorService executorService = Executors.newFixedThreadPool(numThreads);
-        ExecutorCompletionService<Integer> executorCompletionService = new ExecutorCompletionService<Integer>(executorService);
-        for (int i = 0; i < numThreads; i++) {
-            executorCompletionService.submit(new MetadataDateAdder());
-        }
-        int finished = 0;
-        while (finished < numThreads) {
-            Future<Integer> future = executorCompletionService.take();
-            if (future != null && future.isDone()) {
-                Integer retVal = future.get();
-                finished++;
-            }
-        }
-
-    }
+//    @Test
+//    public void testMultithreadedDates() throws Exception {
+//        int numThreads = 10;
+//        ExecutorService executorService = Executors.newFixedThreadPool(numThreads);
+//        ExecutorCompletionService<Integer> executorCompletionService = new ExecutorCompletionService<Integer>(executorService);
+//        for (int i = 0; i < numThreads; i++) {
+//            executorCompletionService.submit(new MetadataDateAdder());
+//        }
+//        int finished = 0;
+//        while (finished < numThreads) {
+//            Future<Integer> future = executorCompletionService.take();
+//            if (future != null && future.isDone()) {
+//                Integer retVal = future.get();
+//                finished++;
+//            }
+//        }
+//
+//    }
 
     private class MetadataDateAdder implements Callable<Integer> {
         private final Random random = new Random();

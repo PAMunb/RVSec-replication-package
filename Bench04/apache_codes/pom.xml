@@ -19,9 +19,6 @@
 		<module>directory-server/kerberos-codec</module>
 		<module>manifoldcf/framework/core</module>
 		<module>openwebbeans-meecrowave/meecrowave-core</module>
-		
-		<!-- TODO: terminar de configurar modulos abaixo -->
-		
 		<!-- <module>spark/core</module> -->
 		<module>tika/tika-core</module>
 		<!-- <module>tomee/container/openejb-core</module> -->
