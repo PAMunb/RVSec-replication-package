@@ -476,7 +476,8 @@
 					<argLine>-javaagent:${basedir}/JavaMOPAgent.jar</argLine>
 					<runOrder>alphabetical</runOrder>
 				</configuration>
-			</plugin>			
+			</plugin>
+			
 						<plugin>
           <groupId>org.scalatest</groupId>
           <artifactId>scalatest-maven-plugin</artifactId>
