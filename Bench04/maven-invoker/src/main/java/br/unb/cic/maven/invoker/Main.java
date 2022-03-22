@@ -34,9 +34,8 @@ public class Main {
             }
         }
         
-        System.err.println("RESULTS: ");        
+        System.out.println("RESULTS: ");        
         for (ExecutionResult result : results) {
-//            System.out.println(result);
             System.out.format("%20s%10b%15s%n", result.getBaseDir(), result.isPassed(), result.getTimeMillis());
         }
 
