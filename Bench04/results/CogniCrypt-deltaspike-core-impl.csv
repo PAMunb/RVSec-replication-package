@@ -1,0 +1,6 @@
+spec,error,class,className,method
+CipherSpec,"Second parameter was not properly generated as generated Key. RequiredPredicateError violating CrySL rule for javax.crypto.Cipher.",org.apache.deltaspike.core.impl.crypto.DefaultCipherService,DefaultCipherService,aesEncrypt
+CipherSpec,"First parameter (with value 'AES') should be any of AES/{CBC, GCM, PCBC, CTR, CTS, CFB, OFB}. ConstraintError violating CrySL rule for javax.crypto.Cipher.",org.apache.deltaspike.core.impl.crypto.DefaultCipherService,DefaultCipherService,aesEncrypt
+CipherSpec,"Second parameter was not properly generated as generated Key. RequiredPredicateError violating CrySL rule for javax.crypto.Cipher.",org.apache.deltaspike.core.impl.crypto.DefaultCipherService,DefaultCipherService,aesDecrypt
+CipherSpec,"First parameter (with value 'AES') should be any of AES/{CBC, GCM, PCBC, CTR, CTS, CFB, OFB}. ConstraintError violating CrySL rule for javax.crypto.Cipher.",org.apache.deltaspike.core.impl.crypto.DefaultCipherService,DefaultCipherService,aesDecrypt
+SecretKeySpecSpec,"First parameter was not properly generated as prepared Key Material. RequiredPredicateError violating CrySL rule for javax.crypto.spec.SecretKeySpec.",org.apache.deltaspike.core.impl.crypto.DefaultCipherService,DefaultCipherService,getSecretKeySpec

@@ -1,0 +1,5 @@
+spec,error,class,className,method
+1,Found: "Blowfish",DefaultSensitiveStringCodec$BlowfishAlgorithm,DefaultSensitiveStringCodec$BlowfishAlgorithm,-
+1,Found: "Blowfish",DefaultSensitiveStringCodec$BlowfishAlgorithm,DefaultSensitiveStringCodec$BlowfishAlgorithm,-
+13,Found: Untrused PRNG (java.util.Random),RandomUtil,RandomUtil,-
+3,Found: Constant "clusterpassword",DefaultSensitiveStringCodec$BlowfishAlgorithm,DefaultSensitiveStringCodec$BlowfishAlgorithm,-
