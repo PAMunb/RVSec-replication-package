@@ -1,0 +1,6 @@
+spec,error,class,className,method
+13,Found: Untrused PRNG (java.util.Random),ConnectorPool,ConnectorPool,-
+13,Found: Untrused PRNG (java.util.Random),Database,Database,-
+2,Found: "SHA",ManifoldCF,ManifoldCF,-
+3,Found: Constant "NowIsTheTime",ManifoldCF,ManifoldCF,-
+9,Found: "Salty",ManifoldCF,ManifoldCF,-
