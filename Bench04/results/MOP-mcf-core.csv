@@ -1,0 +1,10 @@
+spec,error,class,className,method
+MessageDigestSpec,UnsafeAlgorithm,org.apache.manifoldcf.core.system.ManifoldCF,ManifoldCF,addToHash
+MessageDigestSpec,InvalidSequenceOfMethodCalls,org.apache.manifoldcf.core.system.ManifoldCF,ManifoldCF,addToHash
+MessageDigestSpec,InvalidSequenceOfMethodCalls,org.apache.manifoldcf.core.system.ManifoldCF,ManifoldCF,getHashValue
+PBEKeySpec,UnsatisfiedConstraint,third argument should be >= 1000 org.apache.manifoldcf.core.system.ManifoldCF.getCipher(ManifoldCF.java:731),java:731),third argument should be >= 1000 org.apache.manifoldcf.core.system.ManifoldCF.getCipher(ManifoldCF.java:731)
+PBEKeySpec,InvalidSequenceOfMethodCalls,org.apache.manifoldcf.core.system.ManifoldCF,ManifoldCF,getCipher
+PBEKeySpec,UnsatisfiedConstraint,first argument should have been randomized org.apache.manifoldcf.core.system.ManifoldCF.getCipher(ManifoldCF.java:731),java:731),first argument should have been randomized org.apache.manifoldcf.core.system.ManifoldCF.getCipher(ManifoldCF.java:731)
+PBEKeySpec,InvalidSequenceOfMethodCalls,org.apache.manifoldcf.core.system.ManifoldCF,ManifoldCF,getCipher
+PBEKeySpec,UnsatisfiedConstraint,second argument should have been randomized org.apache.manifoldcf.core.system.ManifoldCF.getCipher(ManifoldCF.java:731),java:731),second argument should have been randomized org.apache.manifoldcf.core.system.ManifoldCF.getCipher(ManifoldCF.java:731)
+PBEKeySpec,InvalidSequenceOfMethodCalls,org.apache.manifoldcf.core.system.ManifoldCF,ManifoldCF,getCipher
