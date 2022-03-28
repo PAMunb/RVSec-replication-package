@@ -34,9 +34,10 @@ public class Main {
             }
         }
         
-        System.out.println("RESULTS: ");        
+        System.out.println("RESULTS: ");   
+        System.out.format("%25s%10s%15s%n", "PROJECT", "PASSED", "TIME (ms)");
         for (ExecutionResult result : results) {
-            System.out.format("%20s%10b%15s%n", result.getBaseDir(), result.isPassed(), result.getTimeMillis());
+            System.out.format("%25s%10b%15s%n", result.getBaseDir(), result.isPassed(), result.getTimeMillis());
         }
 
     }

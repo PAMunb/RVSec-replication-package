@@ -27,7 +27,7 @@ public class MavenInvoker {
 
         InvocationRequest request = new DefaultInvocationRequest();
         request.setPomFile(new File(pomFile));
-        request.setGoals(Arrays.asList("clean", "test"));
+        request.setGoals(Arrays.asList("clean", "verify"));
         request.setAlsoMake(true);
         request.setBaseDirectory(new File(baseDir));
         request.setBatchMode(true);
