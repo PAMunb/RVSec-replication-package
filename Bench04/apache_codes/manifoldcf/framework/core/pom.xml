@@ -37,6 +37,25 @@
 				</executions>
 			</plugin>
 			<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<version>0.8.7</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>prepare-agent</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>report</id>
+						<phase>test</phase>
+						<goals>
+							<goal>report</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
 				<configuration>
@@ -44,8 +63,9 @@
 						<exclude>**/*Postgresql*.java</exclude>
 					</excludes>
 					<!-- <forkCount>1</forkCount> <reuseForks>true</reuseForks> <workingDirectory>target/test-output</workingDirectory> -->
+					<argLine>-javaagent:${basedir}/JavaMOPAgent.jar</argLine>
+					<argLine>${argLine} -Xmx4096m -XX:MaxPermSize=1024m</argLine>					
 					<runOrder>alphabetical</runOrder>
-					<argLine> -javaagent:${basedir}/JavaMOPAgent.jar </argLine>
 				</configuration>
 			</plugin>
 		</plugins>
