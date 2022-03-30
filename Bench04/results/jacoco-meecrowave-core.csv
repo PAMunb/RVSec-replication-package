@@ -1,0 +1,77 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+Meecrowave :: Core,org.apache.meecrowave.watching,ReloadOnChangeController.new SimpleFileVisitor() {...},0,28,0,0,0,3,0,2,0,2
+Meecrowave :: Core,org.apache.meecrowave.watching,ReloadOnChangeController,78,383,18,34,27,84,17,20,0,11
+Meecrowave :: Core,org.apache.meecrowave.api,ListeningBase,12,49,2,2,3,8,5,2,3,2
+Meecrowave :: Core,org.apache.meecrowave.api,StartListening,0,6,0,0,0,2,0,1,0,1
+Meecrowave :: Core,org.apache.meecrowave.api,StopListening,0,6,0,0,0,2,0,1,0,1
+Meecrowave :: Core,org.apache.meecrowave.runner,Cli.ParsedCommand,30,212,1,1,9,42,3,14,2,14
+Meecrowave :: Core,org.apache.meecrowave.runner,Cli,363,212,26,13,62,46,34,12,15,10
+Meecrowave :: Core,org.apache.meecrowave.cxf,MeecrowaveBus.ConfiguredJsrProvider,0,26,0,0,0,3,0,1,0,1
+Meecrowave :: Core,org.apache.meecrowave.cxf,CxfCdiAutoSetup.MeecrowaveCXFCdiServlet,93,322,8,8,20,64,8,9,2,7
+Meecrowave :: Core,org.apache.meecrowave.cxf,JAXRSFieldInjectionInterceptor.Binding,0,5,0,0,0,1,0,1,0,1
+Meecrowave :: Core,org.apache.meecrowave.cxf,JAXWSCdiExtension,320,39,16,2,53,15,14,4,5,4
+Meecrowave :: Core,org.apache.meecrowave.cxf,MeecrowaveBus.ConfiguredJsrProvider.new HashMap() {...},2,76,2,2,0,6,2,6,0,6
+Meecrowave :: Core,org.apache.meecrowave.cxf,MeecrowaveBus.ConfiguredJsrProvider.new HashMap() {...},1,52,1,1,0,5,1,4,0,4
+Meecrowave :: Core,org.apache.meecrowave.cxf,CxfCdiAutoSetup.Logs.LogResourceEndpointInfo,6,28,1,1,1,10,1,2,0,2
+Meecrowave :: Core,org.apache.meecrowave.cxf,JAXRSFieldInjectionInterceptor,3,108,4,10,1,29,4,7,0,4
+Meecrowave :: Core,org.apache.meecrowave.cxf,CxfCdiAutoSetup.1.new ServletConfig() {...},6,18,0,0,2,3,2,3,2,3
+Meecrowave :: Core,org.apache.meecrowave.cxf,CxfCdiAutoSetup.1.new HttpServletRequestWrapper() {...},0,17,0,0,0,3,0,3,0,3
+Meecrowave :: Core,org.apache.meecrowave.cxf,JAXRSFieldInjectionInterceptor.Binding.new EmptyAnnotationLiteral() {...},0,5,0,0,0,2,0,2,0,2
+Meecrowave :: Core,org.apache.meecrowave.cxf,CxfCdiAutoSetup.Logs.LogOperationEndpointInfo,11,33,3,3,3,11,3,2,0,2
+Meecrowave :: Core,org.apache.meecrowave.cxf,CxfCdiAutoSetup,8,60,0,2,0,11,1,4,1,3
+Meecrowave :: Core,org.apache.meecrowave.cxf,CxfCdiAutoSetup.new Filter() {...},8,92,2,4,2,15,2,5,0,4
+Meecrowave :: Core,org.apache.meecrowave.cxf,CxfCdiAutoSetup.Logs,101,217,17,27,19,44,13,13,0,4
+Meecrowave :: Core,org.apache.meecrowave.cxf,MeecrowaveBus,146,171,14,8,35,43,23,12,13,11
+Meecrowave :: Core,org.apache.meecrowave.cxf,MeecrowaveBus.ConfiguredJsonbJaxrsProvider,0,39,0,0,0,9,0,1,0,1
+Meecrowave :: Core,org.apache.meecrowave.logging.openwebbeans,Log4j2LoggerFactory,10,10,0,0,1,2,1,2,1,2
+Meecrowave :: Core,org.apache.meecrowave.io,IO,43,75,7,11,11,22,8,8,1,6
+Meecrowave :: Core,org.apache.meecrowave.logging.tomcat,JULLog,220,0,16,0,59,0,29,0,21,0
+Meecrowave :: Core,org.apache.meecrowave.logging.tomcat,Log4j2Log,63,34,0,0,21,12,12,7,12,7
+Meecrowave :: Core,org.apache.meecrowave.logging.tomcat,LogFacade,67,49,1,1,21,15,13,8,12,8
+Meecrowave :: Core,org.apache.meecrowave.cdi,MeecrowaveProvider,3,0,0,0,1,0,1,0,1,0
+Meecrowave :: Core,org.apache.meecrowave.cdi,MeecrowaveSeContainerSelector,0,7,0,0,0,2,0,2,0,2
+Meecrowave :: Core,org.apache.meecrowave.cdi,MeecrowaveSeContainerInitializer,113,153,8,6,20,30,6,8,0,7
+Meecrowave :: Core,org.apache.meecrowave.cdi,MeecrowaveSeContainerInitializer.new KnowClassesFilter() {...},5,17,3,1,0,2,2,2,0,2
+Meecrowave :: Core,org.apache.meecrowave.cdi,MeecrowaveSeContainerInitializer.new OWBContainer() {...},0,19,0,0,0,5,0,2,0,2
+Meecrowave :: Core,org.apache.meecrowave.logging.log4j2,MeecrowaveLogEventFactory.MeecrowaveLog4jLogEvent,77,10,16,0,12,2,9,1,1,1
+Meecrowave :: Core,org.apache.meecrowave.logging.log4j2,MeecrowaveLogEventFactory,0,14,0,0,0,2,0,2,0,2
+Meecrowave :: Core,org.apache.meecrowave.logging.log4j2,MeecrowaveLog4j2ConfigurationFactory,0,26,0,0,0,4,0,4,0,4
+Meecrowave :: Core,org.apache.meecrowave.logging.log4j2,Log4j2Shutdown,16,6,0,0,2,4,0,2,0,2
+Meecrowave :: Core,org.apache.meecrowave.logging.jul,Log4j2Logger,70,99,14,3,21,27,12,6,1,5
+Meecrowave :: Core,org.apache.meecrowave.tomcat,TomcatAutoInitializer,50,44,3,1,11,11,2,2,0,2
+Meecrowave :: Core,org.apache.meecrowave.tomcat,ProvidedLoader.TomcatSettersClassLoader,0,8,0,0,0,6,0,5,0,5
+Meecrowave :: Core,org.apache.meecrowave.tomcat,LoggingAccessLogPattern,21,0,0,0,7,0,2,0,2,0
+Meecrowave :: Core,org.apache.meecrowave.tomcat,NoDescriptorRegistry.NoJmxMBeanServer,64,1,0,0,35,1,35,1,35,1
+Meecrowave :: Core,org.apache.meecrowave.tomcat,NoDescriptorRegistry,17,21,0,0,10,7,10,5,10,5
+Meecrowave :: Core,org.apache.meecrowave.tomcat,OWBJarScanner,25,90,6,8,8,21,7,6,1,5
+Meecrowave :: Core,org.apache.meecrowave.tomcat,CDIInstanceManager,5,87,1,3,3,23,1,8,0,7
+Meecrowave :: Core,org.apache.meecrowave.tomcat,ProvidedLoader,22,54,2,4,9,19,11,9,9,8
+Meecrowave :: Core,org.apache.meecrowave.openwebbeans,KnownJarsFilter,64,51,5,3,5,8,8,3,5,2
+Meecrowave :: Core,org.apache.meecrowave.openwebbeans,MeecrowaveSecurityService,0,8,0,0,0,2,0,2,0,2
+Meecrowave :: Core,org.apache.meecrowave.openwebbeans,KnowClassesFilter,6,637,10,18,0,147,9,14,0,9
+Meecrowave :: Core,org.apache.meecrowave.openwebbeans,OWBTomcatWebScannerService,286,487,37,49,52,105,29,38,2,22
+Meecrowave :: Core,org.apache.meecrowave.openwebbeans,KnownJarsFilter.new HashSet() {...},0,1166,0,0,0,292,0,1,0,1
+Meecrowave :: Core,org.apache.meecrowave.openwebbeans,KnownJarsFilter.new HashSet() {...},0,10,0,0,0,3,0,1,0,1
+Meecrowave :: Core,org.apache.meecrowave.openwebbeans,MeecrowaveExtension,0,48,1,5,0,8,1,7,0,5
+Meecrowave :: Core,org.apache.meecrowave.openwebbeans,MeecrowaveExtension.JAXRSFIeldInjectionAT,5,47,2,4,0,8,2,5,0,4
+Meecrowave :: Core,org.apache.meecrowave.openwebbeans,OWBAutoSetup,16,36,1,1,2,8,1,2,0,2
+Meecrowave :: Core,org.apache.meecrowave.openwebbeans,KnowClassesFilter.OptimizedExclusionFilter,0,35,0,4,0,9,0,4,0,2
+Meecrowave :: Core,org.apache.meecrowave.openwebbeans,MeecrowaveSecurityService.MeecrowavePrincipal,0,25,0,0,0,7,0,2,0,2
+Meecrowave :: Core,org.apache.meecrowave.openwebbeans,OWBAutoSetup.EagerBootListener,4,126,0,0,1,29,1,8,1,8
+Meecrowave :: Core,org.apache.meecrowave,Meecrowave.new Catalina() {...},6,0,0,0,4,0,4,0,4,0
+Meecrowave :: Core,org.apache.meecrowave,Meecrowave.new StandardContext() {...},23,22,3,3,5,7,2,3,0,2
+Meecrowave :: Core,org.apache.meecrowave,Meecrowave,942,1379,106,76,180,294,93,65,19,47
+Meecrowave :: Core,org.apache.meecrowave,Meecrowave.Builder,732,739,58,44,228,205,141,78,98,70
+Meecrowave :: Core,org.apache.meecrowave,Meecrowave.TomcatWithFastSessionIDs,31,58,5,5,6,8,3,4,0,2
+Meecrowave :: Core,org.apache.meecrowave,Meecrowave.MeecrowaveContainerLoader,0,5,0,0,0,2,0,1,0,1
+Meecrowave :: Core,org.apache.meecrowave,Meecrowave.ValueTransformers,24,74,3,5,3,12,3,3,0,2
+Meecrowave :: Core,org.apache.meecrowave,Meecrowave.LoginConfigBuilder,44,27,0,0,15,8,9,5,9,5
+Meecrowave :: Core,org.apache.meecrowave,Meecrowave.Builder.new StrLookup() {...},12,9,2,0,2,1,2,1,1,1
+Meecrowave :: Core,org.apache.meecrowave,Meecrowave.Builder.new Properties() {...},13,0,0,0,3,0,1,0,1,0
+Meecrowave :: Core,org.apache.meecrowave,Meecrowave.ValueTransformers.new ValueTransformer() {...},8,134,0,0,3,7,1,2,1,2
+Meecrowave :: Core,org.apache.meecrowave,Meecrowave.DeploymentMeta,0,12,0,0,0,5,0,1,0,1
+Meecrowave :: Core,org.apache.meecrowave,Meecrowave.SecurityConstaintBuilder,89,49,7,1,18,13,11,5,7,5
+Meecrowave :: Core,org.apache.meecrowave,Meecrowave.InternalTomcat,32,3,6,0,4,1,4,1,1,1
+Meecrowave :: Core,org.apache.meecrowave,Meecrowave.QuickServerXmlParser,199,0,22,0,47,0,21,0,10,0
+Meecrowave :: Core,org.apache.meecrowave,MeecrowaveExplosion,5,0,0,0,2,0,1,0,1,0
+Meecrowave :: Core,org.apache.catalina.startup,MeecrowaveContextConfig,45,454,11,33,11,87,12,31,1,20
