@@ -30,8 +30,8 @@ public class DateTest {
 
     @Test
     public void testHash() throws Exception {
-        ManifoldCF.hash("teste");
-        ManifoldCF.encrypt("123", "123", "teste");
+        ManifoldCF.hash("test");
+        ManifoldCF.encrypt("123", "123", "test");
     }
 
     @Test
