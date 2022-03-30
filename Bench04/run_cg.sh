@@ -32,6 +32,11 @@ java -jar CryptoGuard.jar -in jar \
 	    
 	    
 java -jar CryptoGuard.jar -in jar \
+            -s ../Bench04/assets/tika-core-1.17-SNAPSHOT.jar \
+	    -o ../Bench04/results/CryptoGuard-tika-core.json  
+	    
+	    	    
+java -jar CryptoGuard.jar -in jar \
             -s ../Bench04/assets/wicket-util-8.0.0-SNAPSHOT.jar \
 	    -o ../Bench04/results/CryptoGuard-wicket-util.json     	
 	    

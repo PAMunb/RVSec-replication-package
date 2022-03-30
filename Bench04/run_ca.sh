@@ -43,6 +43,13 @@ java -Xss4096m -cp CryptoAnalysis.jar crypto.HeadlessCryptoScanner \
            --applicationCp ../Bench04/assets/spark-core_2.11-2.4.0-SNAPSHOT.jar
 mv ../Bench04/results/CogniCrypt-SARIF-Report.txt ../Bench04/results/CogniCrypt-spark-core_2.11.json                 
            
+
+java -Xss4096m -cp CryptoAnalysis.jar crypto.HeadlessCryptoScanner \
+           --sarifReport --reportDir ../Bench04/results \
+           --rulesDir ./rules \
+           --applicationCp ../Bench04/assets/tika-core-1.17-SNAPSHOT.jar
+mv ../Bench04/results/CogniCrypt-SARIF-Report.txt ../Bench04/results/CogniCrypt-tika-core.json 
+     
            
 java -cp CryptoAnalysis.jar crypto.HeadlessCryptoScanner \
            --sarifReport --reportDir ../Bench04/results \
