@@ -1,46 +1,20 @@
 package br.unb.cic.maven.invoker.model;
 
+import java.io.Serializable;
 import java.util.List;
-import java.util.Objects;
 
-public class Configuration {
-    private List<Project> projects;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-    public Configuration() {
-        
-    }
-    public Configuration(List<Project> projects) {
-        this.projects = projects;
-    }
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class Configuration implements Serializable {
+	private static final long serialVersionUID = 1L;
 
-    public List<Project> getProjects() {
-        return projects;
-    }
-
-    public void setProjects(List<Project> projects) {
-        this.projects = projects;
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(projects);
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj)
-            return true;
-        if (obj == null)
-            return false;
-        if (getClass() != obj.getClass())
-            return false;
-        Configuration other = (Configuration) obj;
-        return Objects.equals(projects, other.projects);
-    }
-
-    @Override
-    public String toString() {
-        return String.format("Configuration [projects=%s]", projects);
-    }
+	private int runs = 1;
+	private List<String> profiles;
+	private List<Project> projects;
 
 }

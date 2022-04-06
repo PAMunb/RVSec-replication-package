@@ -18,10 +18,12 @@ public class MavenInvoker {
     private Invoker invoker = new DefaultInvoker();
 
     public ExecutionResult execute(Project project) throws MavenInvocationException {
-        return execute(project.getBaseDir(), project.getModules());
+        return execute(project.getBaseDir(), project.getModule(), "default");
     }
-    
-    public ExecutionResult execute(String baseDir, List<String> projects) throws MavenInvocationException {
+    public ExecutionResult execute(Project project, String profile) throws MavenInvocationException {
+    	return execute(project.getBaseDir(), project.getModule(), profile);
+    }
+    public ExecutionResult execute(String baseDir, String module, String profile) throws MavenInvocationException {
         System.out.println("Executing: "+baseDir);
         String pomFile = baseDir + File.separator + "pom.xml";
 
@@ -31,7 +33,7 @@ public class MavenInvoker {
         request.setAlsoMake(true);
         request.setBaseDirectory(new File(baseDir));
         request.setBatchMode(true);
-        request.setProjects(projects);
+        request.setProjects(List.of(module));
         request.setQuiet(true);
 
         long start = System.currentTimeMillis();
@@ -40,7 +42,7 @@ public class MavenInvoker {
 
         boolean passed = result.getExitCode() == 0;
 
-        ExecutionResult executionResult = new ExecutionResult(baseDir, passed, (end - start));
+        ExecutionResult executionResult = new ExecutionResult(baseDir, profile, passed, (end - start));
 
         if (!passed) {
             executionResult.setException(result.getExecutionException());

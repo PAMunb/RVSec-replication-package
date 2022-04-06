@@ -1,64 +1,28 @@
 package br.unb.cic.maven.invoker.model;
 
-import java.util.Objects;
+import java.io.Serializable;
 
-public class ExecutionResult {
-    private String baseDir;
-    private boolean passed;
-    private long timeMillis;
-    private Exception exception;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-    public ExecutionResult(String baseDir, boolean passed, long timeMillis) {
-        this(baseDir, passed, timeMillis, null);
-    }
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class ExecutionResult implements Serializable {
+	private static final long serialVersionUID = 1L;
 
-    public ExecutionResult(String baseDir, boolean passed, long timeMillis, Exception exception) {
-        this.baseDir = baseDir;
-        this.passed = passed;
-        this.timeMillis = timeMillis;
-        this.exception = exception;
-    }
-
-    public String getBaseDir() {
-        return baseDir;
-    }
-
-    public boolean isPassed() {
-        return passed;
-    }
-
-    public long getTimeMillis() {
-        return timeMillis;
-    }
-
-    public Exception getException() {
-        return exception;
-    }
-
-    public void setException(Exception exception) {
-        this.exception = exception;
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(baseDir, exception, passed, timeMillis);
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj)
-            return true;
-        if (obj == null)
-            return false;
-        if (getClass() != obj.getClass())
-            return false;
-        ExecutionResult other = (ExecutionResult) obj;
-        return Objects.equals(baseDir, other.baseDir) && Objects.equals(exception, other.exception) && passed == other.passed && timeMillis == other.timeMillis;
-    }
-
-    @Override
-    public String toString() {
-        return String.format("ExecutionResult [baseDir=%s, passed=%s, timeMillis=%s]", baseDir, passed, timeMillis);
-    }
-
+	private String baseDir;
+	private String profile;
+	private boolean passed;
+	private long timeMillis;
+	private Exception exception;
+	
+	public ExecutionResult(String baseDir, String profile, boolean passed, long timeMillis) {
+		this.baseDir = baseDir;
+		this.profile = profile;
+		this.passed = passed;
+		this.timeMillis = timeMillis;
+	}
+	
 }
