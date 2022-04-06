@@ -159,6 +159,9 @@ precision_mop
 
 recall_mop <- mop_tp$tp / (mop_tp$tp + mop_fn$fn)
 recall_mop
+
+fmeasure_mop = (2 * precision_mop * recall_mop) / (precision_mop + recall_mop)
+fmeasure_mop
 ```
 
 
@@ -195,6 +198,9 @@ precision_cc
 
 recall_cc <- cc_tp$tp / (cc_tp$tp + cc_fn$fn)
 recall_cc
+
+fmeasure_cc = (2 * precision_cc * recall_cc) / (precision_cc + recall_cc)
+fmeasure_cc
 ```
 
 ## Ground Truth (CG)
@@ -230,6 +236,9 @@ precision_cg
 
 recall_cg <- cg_tp$tp / (cg_tp$tp + cg_fn$fn)
 recall_cg
+
+fmeasure_cg = (2 * precision_cg * recall_cg) / (precision_cg + recall_cg)
+fmeasure_cg
 ```
 
 ## Examples of FP and FN 
@@ -248,3 +257,18 @@ sqldf("select distinct class
        where class not in (select className from bench02mop)")
 ```
 
+
+
+```{r}
+# false positive 
+sqldf("select distinct className
+       from bench02cg
+       where className in (select class from tn)")
+
+
+
+# false-negative  
+sqldf("select distinct class
+       from tp 
+       where class not in (select className from bench02cg)")
+```
