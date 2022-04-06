@@ -1,8 +1,0 @@
-activemq-artemis,artemis-commons
-deltaspike,deltaspike/core/impl
-directory-server,kerberos-codec
-manifoldcf,framework/core
-openwebbeans-meecrowave,meecrowave-core
-spark,core
-tika,tika-core
-wicket,wicket-util

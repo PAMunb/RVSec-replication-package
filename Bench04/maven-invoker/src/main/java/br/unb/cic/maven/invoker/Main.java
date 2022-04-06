@@ -9,45 +9,57 @@ import org.apache.maven.shared.invoker.MavenInvocationException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import br.unb.cic.maven.invoker.io.ConfigurationParserYaml;
+import br.unb.cic.maven.invoker.io.ConfigurationReader;
+import br.unb.cic.maven.invoker.io.ResultsWriter;
 import br.unb.cic.maven.invoker.model.Configuration;
 import br.unb.cic.maven.invoker.model.ExecutionResult;
 import br.unb.cic.maven.invoker.model.Project;
 
 public class Main {
 	private static final Logger log = LoggerFactory.getLogger(Main.class);
-	
-	private static final String CONFIG_FILE = "configuration.yaml";
 
-	private ConfigurationParserYaml configParser = new ConfigurationParserYaml();
+	private static final String CONFIG_FILE = "configuration.yaml";
+	private static final String RESULTS_FILE = "results.csv";
+
+	private ConfigurationReader configReader = new ConfigurationReader();
+	private ResultsWriter resultsWriter = new ResultsWriter();
 
 	public void execute(String configurationFileName) throws IOException {
-		log.info("Starting execution: "+configurationFileName);
+		log.info("Starting execution: " + configurationFileName);
 		File configurationFile = new File(configurationFileName);
+		
+		Long start = System.currentTimeMillis();
 
-		Configuration configuration = configParser.read(configurationFile);
+		Configuration configuration = configReader.read(configurationFile);
 
 		List<ExecutionResult> results = new LinkedList<>();
 
 		MavenInvoker invoker = new MavenInvoker();
 
-		for (String profile : configuration.getProfiles()) {
-			for (Project project : configuration.getProjects()) {
-				try {
-					ExecutionResult result = invoker.execute(project, profile);
-					results.add(result);
-				} catch (MavenInvocationException e) {
-					e.printStackTrace();
+		int runCont = 0;
+		while (runCont < configuration.getRuns()) {
+			log.info("RUN: " + (runCont + 1));
+			for (String profile : configuration.getProfiles()) {
+				log.info("PROFILE: " + profile);
+				for (Project project : configuration.getProjects()) {
+					log.info("PROJECT: " + project.getBaseDir());
+					try {
+						ExecutionResult result = invoker.execute(project, profile);
+						results.add(result);
+						log.info(String.format("Executed: project=%s, profile=%s, passed=%b, time=%d", result.getProject(), result.getProfile(), result.isPassed(), result.getTime()));
+					} catch (MavenInvocationException e) {
+						log.error("Error while executing: profile '" + profile + "' on project '" + project + "' ", e);
+					}
 				}
 			}
+			runCont++;
 		}
 
-//        System.out.println("RESULTS: ");   
-//        System.out.format("%25s%10s%15s%n", "PROJECT", "PASSED", "TIME (ms)");
-//        for (ExecutionResult result : results) {
-//            System.out.format("%25s%10b%15s%n", result.getBaseDir(), result.isPassed(), result.getTimeMillis());
-//        }
-
+		Long end = System.currentTimeMillis();
+		log.info("Finished execution: "+(end-start)+"ms");
+		
+		log.info("Saving results: " + results.size());
+		resultsWriter.write(results, RESULTS_FILE);
 	}
 
 	public static void main(String[] args) {
@@ -59,7 +71,7 @@ public class Main {
 		try {
 			new Main().execute(file);
 		} catch (Exception e) {
-			e.printStackTrace();
+			log.error("Error",e);
 		}
 	}
 

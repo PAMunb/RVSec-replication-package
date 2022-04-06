@@ -2,6 +2,8 @@ package br.unb.cic.maven.invoker.model;
 
 import java.io.Serializable;
 
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -9,20 +11,21 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@JsonPropertyOrder({ "project", "profile", "passed", "time", "exception" })
 public class ExecutionResult implements Serializable {
 	private static final long serialVersionUID = 1L;
 
-	private String baseDir;
+	private String project;
 	private String profile;
 	private boolean passed;
-	private long timeMillis;
+	private long time;
 	private Exception exception;
 	
-	public ExecutionResult(String baseDir, String profile, boolean passed, long timeMillis) {
-		this.baseDir = baseDir;
+	public ExecutionResult(String project, String profile, boolean passed, long time) {
+		this.project = project;
 		this.profile = profile;
 		this.passed = passed;
-		this.timeMillis = timeMillis;
+		this.time = time;
 	}
 	
 }

@@ -1,24 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
 
-	<appender name="CONSOLE"
-		class="ch.qos.logback.core.ConsoleAppender">
+	<property name="HOME_LOG" value="maven-invoker.log" />
+
+	<appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
 		<layout class="ch.qos.logback.classic.PatternLayout">
 			<Pattern>
-				%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n
+				%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %m%n
 			</Pattern>
 		</layout>
 	</appender>
 
-	<logger name="br.unb.cic" level="INFO" />
-	<logger name="br.unb.cic.maven.invoker" level="DEBUG" />
+	<appender name="FILE" class="ch.qos.logback.core.FileAppender">
+		<file>${HOME_LOG}</file>
+		<append>true</append>
+		<immediateFlush>true</immediateFlush>
+		<encoder>
+			<pattern>%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %m%n</pattern>
+		</encoder>
+	</appender>
 
-<!-- 	<logger name="br.unb.cic.maven.invoker" level="DEBUG" -->
-<!-- 		additivity="false"> -->
-<!-- 		<appender-ref ref="CONSOLE" /> -->
-<!-- 	</logger> -->
+	<logger name="br.unb.cic.maven.invoker" level="DEBUG" additivity="false">
+		<appender-ref ref="CONSOLE" />
+		<appender-ref ref="FILE" />
+	</logger>
 
-	<root level="WARN">
+	<root level="ERROR">
 		<appender-ref ref="CONSOLE" />
 	</root>
 

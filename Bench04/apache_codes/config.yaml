@@ -1,0 +1,21 @@
+runs: 3
+profiles:
+- "original"
+- "mop"
+projects:
+- baseDir: "activemq-artemis"
+  module: "artemis-commons"
+- baseDir: "deltaspike"
+  module: "deltaspike/core/impl"
+- baseDir: "directory-server"
+  module: "kerberos-codec"
+- baseDir: "manifoldcf"
+  module: "framework/core"
+- baseDir: "openwebbeans-meecrowave"
+  module: "meecrowave-core"
+- baseDir: "spark"
+  module: "core"
+- baseDir: "tika"
+  module: "tika-core"
+- baseDir: "wicket"
+  module: "wicket-util"
