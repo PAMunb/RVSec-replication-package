@@ -38,6 +38,7 @@ public class MavenInvoker {
 		request.setAlsoMake(true);
 		request.setBaseDirectory(new File(baseDir));
 		request.setBatchMode(true);
+		request.setProfiles(Arrays.asList(profile));		
 		request.setProjects(Arrays.asList(module));
 		request.setQuiet(true);
 
