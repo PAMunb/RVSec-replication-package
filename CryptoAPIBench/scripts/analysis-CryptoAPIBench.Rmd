@@ -56,61 +56,6 @@ sqldf("select error, count(*) from bench02cc group by error")
 sqldf("select error, count(*) from bench02cg group by error")
 ```
 
-## Message Digest
-
-```{r}
-md = sqldf("select class, method 
-            from bench02cc 
-            where spec = 'MessageDigestSpec'")
-            
-sqldf("select b1.class, b1.method 
-       from bench02mop b1 
-       where b1.spec = 'MessageDigestSpec' and 
-             (b1.class, b1.method) not in (select b2.class, b2.method from md b2)")
-```
-
-## Cipher
-
-```{r}
-md = sqldf("select class, method 
-            from bench02mop
-            where spec = 'CipherSpec'")
-            
-sqldf("select b1.class, b1.method 
-       from bench02cc b1 
-       where b1.spec = 'CipherSpec' and 
-             (b1.class, b1.method) not in (select b2.class, b2.method from md b2)")
-```
-
-## IVParameterSpec
-
-```{r}
-md = sqldf("select class, method 
-            from bench02mop
-            where spec = 'IvParameterSpecSpec'")
-            
-sqldf("select b1.class, b1.method 
-       from bench02cc b1 
-       where b1.spec = 'IvParameterSpecSpec' and 
-             (b1.class, b1.method) not in (select b2.class, b2.method from md b2)
-       order by 1" )
-```
-
-
-## SecureRandomSpec
-
-```{r}
-md = sqldf("select class, method 
-            from bench02mop
-            where spec = 'SecureRandomSpec'")
-            
-sqldf("select b1.class, b1.method 
-       from bench02cc b1 
-       where b1.spec = 'SecureRandomSpec' and 
-             (b1.class, b1.method) not in (select b2.class, b2.method from md b2)
-       order by 1" )
-```
-
 
 ## Ground Truth (MOP)
 
@@ -206,19 +151,32 @@ fmeasure_cc
 ## Ground Truth (CG)
 
 ```{r}
+
+gtcg <- read.csv("../results/bench02-gt-cg-converted.csv", head=T, sep=",")
+
+gtcg <- na.omit(gtcg)
+
+gtcg <- sqldf("select propertyShortName, class, method, vulnerability 
+            from gtcg")
+
+nrow(gtcg)
+
+tpcg <- gtcg[gtcg$vulnerability == "TRUE",]
+tncg <- gtcg[gtcg$vulnerability == "FALSE",]
+
 # compute true positive 
 cg_tp <- sqldf("select count(distinct className) as tp
                 from bench02cg
-                where className in (select class from tp)")
+                where className in (select class from tpcg)")
 
 # compute false positive 
 cg_fp <- sqldf("select count(distinct className) as fp
                 from bench02cg
-                where className in (select class from tn)")
+                where className in (select class from tncg)")
 
 # compute false-negative  
 cg_fn <- sqldf("select count(distinct class) as fn
-                from tp 
+                from tpcg 
                 where class not in (select className from bench02cg)")
 
 
@@ -263,12 +221,12 @@ sqldf("select distinct class
 # false positive 
 sqldf("select distinct className
        from bench02cg
-       where className in (select class from tn)")
+       where className in (select class from tncg)")
 
 
 
 # false-negative  
 sqldf("select distinct class
-       from tp 
+       from tpcg 
        where class not in (select className from bench02cg)")
 ```
