@@ -216,6 +216,21 @@ sqldf("select distinct class
 ```
 
 
+```{r}
+# false positive 
+sqldf("select distinct className
+       from bench02cc
+       where className in (select class from tn)")
+
+
+
+# false-negative  
+sqldf("select distinct class
+       from tp
+       where class not in (select className from bench02cc)")
+```
+
+
 
 ```{r}
 # false positive 
