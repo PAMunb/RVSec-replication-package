@@ -1,0 +1,30 @@
+spec,error,class,className,method
+13,Found: Untrused PRNG (java.util.Random),Utils$,Utils$,-
+13,Found: Untrused PRNG (java.util.Random),XORShiftRandom$,XORShiftRandom$,-
+13,Found: Untrused PRNG (java.util.Random),PlusConfiguration,PlusConfiguration,-
+13,Found: Untrused PRNG (java.util.Random),DigestAuthentication$DigestResult,DigestAuthentication$DigestResult,-
+13,Found: Untrused PRNG (java.util.Random),RDD$$anonfun$coalesce$1$$anonfun$8,RDD$$anonfun$coalesce$1$$anonfun$8,-
+13,Found: Untrused PRNG (java.util.Random),Utils$,Utils$,-
+13,Found: Untrused PRNG (java.util.Random),XORShiftRandom,XORShiftRandom,-
+13,Found: Untrused PRNG (java.util.Random),PartitionwiseSampledRDD,PartitionwiseSampledRDD,-
+13,Found: Untrused PRNG (java.util.Random),AbstractSessionIdManager,AbstractSessionIdManager,-
+13,Found: Untrused PRNG (java.util.Random),RDD$$anonfun$takeSample$1,RDD$$anonfun$takeSample$1,-
+13,Found: Untrused PRNG (java.util.Random),SizeEstimator$,SizeEstimator$,-
+13,Found: Untrused PRNG (java.util.Random),MultiPartContentProvider,MultiPartContentProvider,-
+13,Found: Untrused PRNG (java.util.Random),ShutdownMonitor,ShutdownMonitor,-
+12,Didn't manually verify hostname in newSslSocket,SslContextFactory,SslContextFactory,-
+4,Should at least get One accepted Issuer from Other Sources in getAcceptedIssuers method of UNKNOWN,UNKNOWN,UNKNOWN,-
+4,Should throw java.security.cert.CertificateException in check(Client|Server)Trusted method of UNKNOWN,UNKNOWN,UNKNOWN,-
+4,Should at least get One accepted Issuer from Other Sources in getAcceptedIssuers method of UNKNOWN,UNKNOWN,UNKNOWN,-
+4,Should throw java.security.cert.CertificateException in check(Client|Server)Trusted method of UNKNOWN,UNKNOWN,UNKNOWN,-
+4,Should at least get One accepted Issuer from Other Sources in getAcceptedIssuers method of ssl.SslContextFactory,SslContextFactory,SslContextFactory,-
+4,Should throw java.security.cert.CertificateException in check(Client|Server)Trusted method of ssl.SslContextFactory,SslContextFactory,SslContextFactory,-
+6,Cause: Fixed "[1]",UNKNOWN,UNKNOWN,-
+6,Cause: Fixed "[1]",UNKNOWN,UNKNOWN,-
+2,Found: "MD5",Credential$MD5,Credential$MD5,-
+2,Found: "MD5",DigestAuthentication,DigestAuthentication,-
+2,Found: "MD5",Credential$MD5,Credential$MD5,-
+2,Found: "MD5",DigestAuthenticator$Digest,DigestAuthenticator$Digest,-
+10,Found: "AES",CryptoStreamUtils$CryptoParams,CryptoStreamUtils$CryptoParams,-
+7,Found: "http://localhost:",ShutdownHandler,ShutdownHandler,-
+7,Found: "http://localhost",ShutdownHandler,ShutdownHandler,-

@@ -1,12 +1,12 @@
 # RVSec (replication package)
 
-### Bench01
+### MASCBench
 
    * Description: 
 
-### Bench02
+### CryptoAPIBench
 
-   * Description: `Bench02` is a micro-benchmark we build on top of the
+   * Description: This is a micro-benchmark we build on top of the
    CryptoAPI-Bench. From the original benchmark (CryptoAPI-Bench), we
    removed the non JCA test cases and fixed several test cases that
    throw exceptions at runtime. The following table summarizes the
@@ -20,4 +20,4 @@
       * RVSec (rev 0d3c1f32)
 
 
-### Bench03
+### ApacheCryptoAPIBench

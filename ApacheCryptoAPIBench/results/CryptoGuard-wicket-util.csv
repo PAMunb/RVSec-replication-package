@@ -1,0 +1,13 @@
+spec,error,class,className,method
+1,Found: "PBEWithMD5AndDES",SunJceCrypt,SunJceCrypt,-
+13,Found: Untrused PRNG (java.util.Random),Diff,Diff,-
+13,Found: Untrused PRNG (java.util.Random),Diff,Diff,-
+9,Found: "102",SunJceCrypt,SunJceCrypt,-
+9,Found: "42",SunJceCrypt,SunJceCrypt,-
+9,Found: "21",SunJceCrypt,SunJceCrypt,-
+9,Found: "81",SunJceCrypt,SunJceCrypt,-
+9,Found: "74",SunJceCrypt,SunJceCrypt,-
+9,Found: "-93",SunJceCrypt,SunJceCrypt,-
+9,Found: "-68",SunJceCrypt,SunJceCrypt,-
+9,Found: "-116",SunJceCrypt,SunJceCrypt,-
+8,Found: "17",SunJceCrypt,SunJceCrypt,-

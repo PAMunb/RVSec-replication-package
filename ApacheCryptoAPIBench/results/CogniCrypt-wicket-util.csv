@@ -1,0 +1,7 @@
+spec,error,class,className,method
+PBEKeySpecSpec,"Detected call to forbidden method void <init>(char[]) of class javax.crypto.spec.PBEKeySpec. Instead, call method <javax.crypto.spec.PBEKeySpec: void <init>(char[],byte[],int,int)>.. ForbiddenMethodError violating CrySL rule for javax.crypto.spec.PBEKeySpec.",org.apache.wicket.util.crypt.SunJceCrypt,SunJceCrypt,createKeySpec
+PBEParameterSpecSpec,"Second parameter (with value 17)Variable iterationCountmust be  at least 10000. ConstraintError violating CrySL rule for javax.crypto.spec.PBEParameterSpec.",org.apache.wicket.util.crypt.SunJceCrypt,SunJceCrypt,<clinit>
+PBEParameterSpecSpec,"First parameter was not properly generated as randomized. RequiredPredicateError violating CrySL rule for javax.crypto.spec.PBEParameterSpec.",org.apache.wicket.util.crypt.SunJceCrypt,SunJceCrypt,<clinit>
+CipherSpec,"Third parameter was not properly generated as prepared G C M. RequiredPredicateError violating CrySL rule for javax.crypto.Cipher.",org.apache.wicket.util.crypt.SunJceCrypt,SunJceCrypt,createCipher
+CipherSpec,"Second parameter was not properly generated as generated Key. RequiredPredicateError violating CrySL rule for javax.crypto.Cipher.",org.apache.wicket.util.crypt.SunJceCrypt,SunJceCrypt,createCipher
+SecretKeyFactorySpec,"First parameter was not properly generated as specced Key. RequiredPredicateError violating CrySL rule for javax.crypto.SecretKeyFactory.",org.apache.wicket.util.crypt.SunJceCrypt,SunJceCrypt,generateSecretKey

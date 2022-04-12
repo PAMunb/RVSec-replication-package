@@ -1,0 +1,69 @@
+---
+title: "JavaMOP"
+author: "Rodrigo Bonifácio et al."
+date: "1/26/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+setwd(".")
+library(sqldf)
+library(xtable)
+```
+
+## Load the MOP datasets
+
+```{r load}
+bench04mop_apacheds <- read.csv("MOP-apacheds-kerberos-codec.csv", head=T, sep=",")
+bench04mop_artemis <- read.csv("MOP-artemis-commons.csv", head=T, sep=",")
+bench04mop_deltaspike <- read.csv("MOP-deltaspike-core-impl.csv", head=T, sep=",")
+bench04mop_meecrowave <- read.csv("MOP-meecrowave-core.csv", head=T, sep=",")
+bench04mop_spark <- read.csv("MOP-spark-core_2.11.csv", head=T, sep=",")
+bench04mop_wicket <- read.csv("MOP-wicket-util.csv", head=T, sep=",")
+
+# "spec"      "error"     "class"     "className" "method"
+colnames(bench04mop_apacheds)
+nrow(sqldf("select distinct className, method, error from bench04mop_apacheds"))
+nrow(sqldf("select distinct className, method, error from bench04mop_artemis"))
+nrow(sqldf("select distinct className, method, error from bench04mop_deltaspike")) 
+nrow(sqldf("select distinct className, method, error from bench04mop_meecrowave"))
+nrow(sqldf("select distinct className, method, error from bench04mop_spark"))
+nrow(sqldf("select distinct className, method, error from bench04mop_wicket"))
+```
+
+## Load the CC datasets
+
+```{r loadcc}
+bench04cc_apacheds <- read.csv("CogniCrypt-apacheds-kerberos-codec.csv", head=T, sep=",")
+bench04cc_artemis <- read.csv("CogniCrypt-artemis-commons.csv", head=T, sep=",")
+bench04cc_deltaspike <- read.csv("CogniCrypt-deltaspike-core-impl.csv", head=T, sep=",")
+bench04cc_meecrowave <- read.csv("CogniCrypt-meecrowave-core.csv", head=T, sep=",")
+bench04cc_spark <- read.csv("CogniCrypt-spark-core_2.11.csv", head=T, sep=",")
+bench04cc_wicket <- read.csv("CogniCrypt-wicket-util.csv", head=T, sep=",")
+
+nrow(bench04cc_apacheds)
+nrow(bench04cc_artemis)
+nrow(bench04cc_deltaspike)
+nrow(bench04cc_meecrowave)
+nrow(bench04cc_spark)
+nrow(bench04cc_wicket)
+```
+
+## Load the CG datasets
+
+```{r loadcg}
+bench04cg_apacheds <- read.csv("CryptoGuard-apacheds-kerberos-codec.csv", head=T, sep=",")
+bench04cg_artemis <- read.csv("CryptoGuard-artemis-commons.csv", head=T, sep=",")
+bench04cg_deltaspike <- read.csv("CryptoGuard-deltaspike-core-impl.csv", head=T, sep=",")
+bench04cg_meecrowave <- read.csv("CryptoGuard-meecrowave-core.csv", head=T, sep=",")
+bench04cg_spark <- read.csv("CryptoGuard-spark-core_2.11.csv", head=T, sep=",")
+bench04cg_wicket <- read.csv("CryptoGuard-wicket-util.csv", head=T, sep=",")
+
+nrow(bench04cg_apacheds)
+nrow(bench04cg_artemis)
+nrow(bench04cg_deltaspike)
+nrow(bench04cg_meecrowave)
+nrow(bench04cg_spark)
+nrow(bench04cg_wicket)
+```
