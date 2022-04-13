@@ -1,17 +1,21 @@
-<!-- Licensed to the Apache Software Foundation (ASF) under one or more contributor 
-	license agreements. See the NOTICE file distributed with this work for additional 
-	information regarding copyright ownership. The ASF licenses this file to 
-	You under the Apache License, Version 2.0 (the "License"); you may not use 
-	this file except in compliance with the License. You may obtain a copy of 
-	the License at http://www.apache.org/licenses/LICENSE-2.0 Unless required 
-	by applicable law or agreed to in writing, software distributed under the 
-	License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS 
-	OF ANY KIND, either express or implied. See the License for the specific 
-	language governing permissions and limitations under the License. -->
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-	<modelVersion>4.0.0</modelVersion>
+<!--
+  Licensed to the Apache Software Foundation (ASF) under one or more
+  contributor license agreements.  See the NOTICE file distributed with
+  this work for additional information regarding copyright ownership.
+  The ASF licenses this file to You under the Apache License, Version 2.0
+  (the "License"); you may not use this file except in compliance with
+  the License.  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+   <modelVersion>4.0.0</modelVersion>
 
 	<parent>
 		<groupId>org.apache.activemq</groupId>
@@ -94,7 +98,7 @@
 		</plugins>
 	</build>
 
-	<profiles>		
+	<profiles>
 		<profile>
 			<id>mop</id>
 			<build>
@@ -106,6 +110,87 @@
 							<argLine>-Xmx4096m -XX:MaxPermSize=1024m</argLine>
 							<argLine>-javaagent:${basedir}/JavaMOPAgent.jar</argLine>
 							<runOrder>alphabetical</runOrder>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		<profile>
+			<!-- https://github.com/5aab/randoop-maven-plugin#start-of-content -->
+			<id>randoop</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>com.5aab.automation</groupId>
+						<artifactId>randoop-maven-plugin</artifactId>
+						<version>4.0.3</version>
+						<configuration>
+							<packageName>org.apache.activemq.artemis</packageName>
+						</configuration>
+						<executions>
+							<execution>
+								<id>generate-tests</id>
+								<goals>
+									<goal>gentests</goal>
+								</goals>
+								<phase>generate-test-sources</phase>
+							</execution>
+						</executions>
+					</plugin>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-surefire-plugin</artifactId>
+						<configuration>
+							<argLine>-Xmx4096m -XX:MaxPermSize=1024m</argLine>
+							<argLine>-javaagent:${basedir}/JavaMOPAgent.jar</argLine>
+							<runOrder>alphabetical</runOrder>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		<profile>
+			<!-- https://www.evosuite.org/documentation/maven-plugin/ -->
+			<id>evosuite</id>
+			<properties>
+				<evosuiteVersion>1.0.6</evosuiteVersion>
+			</properties>
+			<dependencies>
+				<dependency>
+					<groupId>org.evosuite</groupId>
+					<artifactId>evosuite-standalone-runtime</artifactId>
+					<version>${evosuiteVersion}</version>
+					<scope>test</scope>
+				</dependency>
+			</dependencies>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.evosuite.plugins</groupId>
+						<artifactId>evosuite-maven-plugin</artifactId>
+						<version>${evosuiteVersion}</version>
+						<executions>
+							<execution>
+								<phase>process-test-classes</phase>
+								<goals>
+									<goal>prepare</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-surefire-plugin</artifactId>
+						<configuration>
+							<argLine>-Xmx4096m -XX:MaxPermSize=1024m</argLine>
+							<argLine>-javaagent:${basedir}/JavaMOPAgent.jar</argLine>
+							<runOrder>alphabetical</runOrder>
+							<properties>
+								<property>
+									<name>listener</name>
+									<value>org.evosuite.runtime.InitializingListener</value>
+								</property>
+							</properties>
 						</configuration>
 					</plugin>
 				</plugins>
