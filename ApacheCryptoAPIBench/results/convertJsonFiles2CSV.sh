@@ -4,6 +4,7 @@ python3 ../../scripts/process-cc-report.py CogniCrypt-deltaspike-core-impl.json 
 python3 ../../scripts/process-cc-report.py CogniCrypt-mcf-core.json CogniCrypt-mcf-core.csv
 python3 ../../scripts/process-cc-report.py CogniCrypt-meecrowave-core.json CogniCrypt-meecrowave-core.csv
 python3 ../../scripts/process-cc-report.py CogniCrypt-spark-core_2.11.json CogniCrypt-spark-core_2.11.csv
+python3 ../../scripts/process-cc-report.py CogniCrypt-tika-core.json CogniCrypt-tika-core.csv
 python3 ../../scripts/process-cc-report.py CogniCrypt-wicket-util.json CogniCrypt-wicket-util.csv
 python3 ../../scripts/process-cg-report.py CryptoGuard-apacheds-kerberos-codec.json CryptoGuard-apacheds-kerberos-codec.csv
 python3 ../../scripts/process-cg-report.py CryptoGuard-artemis-commons.json CryptoGuard-artemis-commons.csv
@@ -11,4 +12,5 @@ python3 ../../scripts/process-cg-report.py CryptoGuard-deltaspike-core-impl.json
 python3 ../../scripts/process-cg-report.py CryptoGuard-mcf-core.json CryptoGuard-mcf-core.csv
 python3 ../../scripts/process-cg-report.py CryptoGuard-meecrowave-core.json CryptoGuard-meecrowave-core.csv
 python3 ../../scripts/process-cg-report.py CryptoGuard-spark-core_2.11.json CryptoGuard-spark-core_2.11.csv
+python3 ../../scripts/process-cg-report.py CryptoGuard-tika-core.json CryptoGuard-tika-core.csv
 python3 ../../scripts/process-cg-report.py CryptoGuard-wicket-util.json CryptoGuard-wicket-util.csv
