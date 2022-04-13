@@ -8,3 +8,5 @@ PBEKeySpec,UnsatisfiedConstraint,first argument should have been randomized org.
 PBEKeySpec,InvalidSequenceOfMethodCalls,org.apache.manifoldcf.core.system.ManifoldCF,ManifoldCF,getCipher
 PBEKeySpec,UnsatisfiedConstraint,second argument should have been randomized org.apache.manifoldcf.core.system.ManifoldCF.getCipher(ManifoldCF.java:731),java:731),second argument should have been randomized org.apache.manifoldcf.core.system.ManifoldCF.getCipher(ManifoldCF.java:731)
 PBEKeySpec,InvalidSequenceOfMethodCalls,org.apache.manifoldcf.core.system.ManifoldCF,ManifoldCF,getCipher
+SecretKeySpec,UnsatisfiedConstraint,org.apache.manifoldcf.core.system.ManifoldCF,ManifoldCF,getCipher
+SecretKeySpec,InvalidSequenceOfMethodCalls,org.apache.manifoldcf.core.system.ManifoldCF,ManifoldCF,getCipher
