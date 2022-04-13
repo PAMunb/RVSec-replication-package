@@ -1,0 +1,79 @@
+---
+title: "JavaMOP"
+author: "Rodrigo Bonifácio et al."
+date: "1/26/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+setwd(".")
+library(sqldf)
+library(xtable)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r load}
+mopApachedsKrberosCodec <- read.csv("../results/MOP-apacheds-kerberos-codec.csv", head=T, sep=",")
+mopApachedsKrberosCodec['module'] <- 'ApachedsKrberosCodec'
+
+mopArtemisCommons <- read.csv("../results/MOP-artemis-commons.csv", head=T, sep=",")
+mopArtemisCommons['module'] <- 'ArtemisCommons'
+
+mopDeltaSpikeCore <- read.csv("../results/MOP-deltaspike-core-impl.csv", head=T, sep=",")
+mopDeltaSpikeCore['module'] <- 'DeltaSpikeCore'
+
+mopMcfCore <- read.csv("../results/MOP-mcf-core.csv", head=T, sep=",")
+mopMcfCore['module'] <- 'DeltaMcfCore'
+
+mopMeecrowaveCore <- read.csv("../results/MOP-meecrowave-core.csv", head=T, sep=",")
+mopMeecrowaveCore['module'] <- 'MeecrowaveCore'
+
+mopSparkCore <- read.csv("../results/MOP-spark-core_2.11.csv", head=T, sep=",")
+mopSparkCore['module'] <- 'SparkCore'
+
+
+
+
+mopApachedsKrberosCodec <- sqldf('select module, ClassName, count(*) 
+                                  from mopApachedsKrberosCodec 
+                                  group by module, className')
+
+mopApachedsKrberosCodec
+
+mopArtemisCommons <- sqldf('select module, ClassName, count(*) 
+                                  from mopArtemisCommons 
+                                  group by module, className')
+
+mopArtemisCommons
+
+mopDeltaSpikeCore <- sqldf('select module, ClassName, count(*) 
+                                  from mopDeltaSpikeCore 
+                                  group by module, className')
+
+mopDeltaSpikeCore
+
+
+mopMcfCore <- sqldf('select module, ClassName, count(*) 
+                                  from mopMcfCore 
+                                  group by module, className')
+
+mopMcfCore
+
+mopMeecrowaveCore <- sqldf('select module, ClassName, count(*) 
+                                  from mopMeecrowaveCore 
+                                  group by module, className')
+
+mopMeecrowaveCore
+
+mopSparkCore <- sqldf('select module, ClassName, count(*) 
+                                  from mopSparkCore 
+                                  group by module, className')
+
+mopSparkCore
+```

@@ -2,8 +2,8 @@ spec,error,class,className,method
 SecureRandomSpec,InvalidSequenceOfMethodCalls,org.apache.catalina.util.SessionIdGeneratorBase,SessionIdGeneratorBase,getRandomBytes
 SecureRandomSpec,InvalidSequenceOfMethodCalls,org.apache.catalina.util.SessionIdGeneratorBase,SessionIdGeneratorBase,getRandomBytes
 SecureRandomSpec,InvalidSequenceOfMethodCalls,org.apache.catalina.util.SessionIdGeneratorBase,SessionIdGeneratorBase,getRandomBytes
-CipherSpec,InvalidSequenceOfMethodCalls,org.apache.meecrowave.Meecrowave$ValueTransformers$1.apply(Meecrowave.java:2033),java:2033),org.apache.meecrowave.Meecrowave$ValueTransformers$1.apply(Meecrowave.java:2033)
-CipherSpec,InvalidSequenceOfMethodCalls,org.apache.meecrowave.Meecrowave$ValueTransformers$1.apply(Meecrowave.java:2033),java:2033),org.apache.meecrowave.Meecrowave$ValueTransformers$1.apply(Meecrowave.java:2033)
+CipherSpec,InvalidSequenceOfMethodCalls,org.apache.meecrowave.Meecrowave,ValueTransformers,apply
+CipherSpec,InvalidSequenceOfMethodCalls,org.apache.meecrowave.Meecrowave,ValueTransformers,apply
 SecureRandomSpec,InvalidSequenceOfMethodCalls,org.apache.catalina.util.SessionIdGeneratorBase,SessionIdGeneratorBase,getRandomBytes
 SecureRandomSpec,InvalidSequenceOfMethodCalls,org.apache.catalina.util.SessionIdGeneratorBase,SessionIdGeneratorBase,getRandomBytes
 SecureRandomSpec,InvalidSequenceOfMethodCalls,org.apache.catalina.util.SessionIdGeneratorBase,SessionIdGeneratorBase,getRandomBytes
