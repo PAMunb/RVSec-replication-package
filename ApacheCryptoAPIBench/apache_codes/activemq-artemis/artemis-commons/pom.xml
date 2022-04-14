@@ -116,6 +116,48 @@
 			</build>
 		</profile>
 		<profile>
+			<id>FindSecBugs</id>
+			<build>
+				<plugins>
+					<!-- https://spotbugs.github.io/spotbugs-maven-plugin/check-mojo.html -->
+					<plugin>
+						<groupId>com.github.spotbugs</groupId>
+						<artifactId>spotbugs-maven-plugin</artifactId>
+						<version>4.6.0.0</version>
+						<configuration>
+							<effort>Max</effort>
+							<threshold>Low</threshold>
+							<xmlOutput>true</xmlOutput>
+							<failOnError>false</failOnError>
+							<debug>false</debug>
+							<includeTests>false</includeTests>
+							<spotbugsXmlOutput>true</spotbugsXmlOutput>
+							<includeFilterFile>${session.executionRootDirectory}/spotbugs-security-include.xml</includeFilterFile>
+							<plugins>
+								<plugin>
+									<groupId>com.mebigfatguy.fb-contrib</groupId>
+									<artifactId>fb-contrib</artifactId>
+									<version>7.4.3.sb</version>
+								</plugin>
+								<plugin>
+									<groupId>com.h3xstream.findsecbugs</groupId>
+									<artifactId>findsecbugs-plugin</artifactId>
+									<version>1.12.0</version>
+								</plugin>
+							</plugins>
+						</configuration>
+						<executions>
+							<execution>
+								<goals>
+									<goal>check</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		<profile>
 			<!-- https://github.com/5aab/randoop-maven-plugin#start-of-content -->
 			<id>randoop</id>
 			<build>
@@ -151,6 +193,7 @@
 		</profile>
 		<profile>
 			<!-- https://www.evosuite.org/documentation/maven-plugin/ -->
+			<!-- mvn -Dcores=8 -DmemoryInMB=8000 -Pevosuite evosuite:generate evosuite:export test -->
 			<id>evosuite</id>
 			<properties>
 				<evosuiteVersion>1.0.6</evosuiteVersion>
@@ -195,6 +238,13 @@
 					</plugin>
 				</plugins>
 			</build>
+			<pluginRepositories>
+				<pluginRepository>
+					<id>EvoSuite</id>
+					<name>EvoSuite Repository</name>
+					<url>http://www.evosuite.org/m2</url>
+				</pluginRepository>
+			</pluginRepositories>
 		</profile>
 		<profile>
 			<id>jacoco</id>
