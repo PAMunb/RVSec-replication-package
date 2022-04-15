@@ -1,3 +1,5 @@
 /work/
 /maven-invoker.log
 /config_mini.yaml
+.evosuite/
+.tmp_*
