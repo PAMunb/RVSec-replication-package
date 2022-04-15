@@ -120,6 +120,8 @@
 			<build>
 				<plugins>
 					<!-- https://spotbugs.github.io/spotbugs-maven-plugin/check-mojo.html -->
+					<!-- mvn clean compile spotbugs:spotbugs -PFindSecBugs -->
+					<!-- mvn spotbugs:gui -PFindSecBugs -->
 					<plugin>
 						<groupId>com.github.spotbugs</groupId>
 						<artifactId>spotbugs-maven-plugin</artifactId>
