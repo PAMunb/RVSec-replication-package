@@ -1,0 +1,270 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+Apache Tika core,org.apache.tika.parser.external,ExternalParsersConfigReader,377,0,56,0,92,0,37,0,9,0
+Apache Tika core,org.apache.tika.parser.external,ExternalParser.LineConsumer,5,0,0,0,1,0,1,0,1,0
+Apache Tika core,org.apache.tika.parser.external,ExternalParser.new Thread() {...},18,0,0,0,5,0,2,0,2,0
+Apache Tika core,org.apache.tika.parser.external,ExternalParser.new Thread() {...},104,0,12,0,20,0,8,0,2,0
+Apache Tika core,org.apache.tika.parser.external,ExternalParser.new Thread() {...},24,0,0,0,6,0,2,0,2,0
+Apache Tika core,org.apache.tika.parser.external,ExternalParser.LineConsumer.new ExternalParser.LineConsumer() {...},4,0,0,0,2,0,2,0,2,0
+Apache Tika core,org.apache.tika.parser.external,CompositeExternalParser,11,0,0,0,5,0,2,0,2,0
+Apache Tika core,org.apache.tika.parser.external,ExternalParsersFactory,94,0,4,0,21,0,9,0,7,0
+Apache Tika core,org.apache.tika.parser.external,ExternalParser,428,0,40,0,121,0,39,0,19,0
+Apache Tika core,org.apache.tika.utils,ConcurrentUtils,3,32,0,2,1,10,1,2,1,1
+Apache Tika core,org.apache.tika.utils,XMLReaderUtils.new XMLResolver() {...},2,3,0,0,1,1,1,1,1,1
+Apache Tika core,org.apache.tika.utils,XMLReaderUtils.new EntityResolver() {...},8,3,0,0,1,1,1,1,1,1
+Apache Tika core,org.apache.tika.utils,RereadableInputStream,0,196,1,27,0,49,1,20,0,7
+Apache Tika core,org.apache.tika.utils,CharsetUtils,73,377,7,25,19,65,6,16,1,5
+Apache Tika core,org.apache.tika.utils,ExceptionUtils,59,0,6,0,21,0,8,0,5,0
+Apache Tika core,org.apache.tika.utils,AnnotationUtils.new PrivilegedAction() {...},0,12,0,0,0,3,0,2,0,2
+Apache Tika core,org.apache.tika.utils,XMLReaderUtils,120,74,0,0,38,24,6,5,6,5
+Apache Tika core,org.apache.tika.utils,RegexUtils,3,31,0,6,1,8,1,5,1,2
+Apache Tika core,org.apache.tika.utils,ServiceLoaderUtils,26,6,0,0,8,2,3,1,3,1
+Apache Tika core,org.apache.tika.utils,DateUtils,0,229,0,10,0,43,0,14,0,9
+Apache Tika core,org.apache.tika.utils,AnnotationUtils,3,225,2,20,1,47,3,12,1,3
+Apache Tika core,org.apache.tika.utils,ServiceLoaderUtils.new Comparator() {...},29,3,4,0,9,1,3,1,1,1
+Apache Tika core,org.apache.tika.exception,UnsupportedFormatException,4,0,0,0,2,0,1,0,1,0
+Apache Tika core,org.apache.tika.exception,TikaException,0,9,0,0,0,4,0,2,0,2
+Apache Tika core,org.apache.tika.exception,TikaConfigException,0,9,0,0,0,4,0,2,0,2
+Apache Tika core,org.apache.tika.exception,AccessPermissionException,18,0,0,0,8,0,4,0,4,0
+Apache Tika core,org.apache.tika.exception,EncryptedDocumentException,18,0,0,0,8,0,4,0,4,0
+Apache Tika core,org.apache.tika.exception,TikaMemoryLimitException,4,0,0,0,2,0,1,0,1,0
+Apache Tika core,org.apache.tika.exception,ZeroByteFileException,4,0,0,0,2,0,1,0,1,0
+Apache Tika core,org.apache.tika.language,LanguageProfilerBuilder.NGramEntry,53,58,0,2,13,18,5,9,5,8
+Apache Tika core,org.apache.tika.language,LanguageProfile,160,228,7,19,27,55,10,18,5,10
+Apache Tika core,org.apache.tika.language,ProfilingWriter,7,110,0,6,2,25,2,10,2,7
+Apache Tika core,org.apache.tika.language,LanguageProfile.Counter,4,6,0,0,1,2,1,1,1,1
+Apache Tika core,org.apache.tika.language,LanguageProfile.Interleaved,0,169,0,12,0,28,0,10,0,4
+Apache Tika core,org.apache.tika.language,ProfilingHandler,28,0,0,0,9,0,5,0,5,0
+Apache Tika core,org.apache.tika.language,LanguageProfilerBuilder,591,424,46,32,127,90,36,21,8,9
+Apache Tika core,org.apache.tika.language,LanguageProfile.Interleaved.new Comparator() {...},0,14,0,0,0,2,0,2,0,2
+Apache Tika core,org.apache.tika.language,LanguageProfile.Interleaved.Entry,30,124,2,8,2,18,3,9,2,5
+Apache Tika core,org.apache.tika.language,LanguageProfilerBuilder.QuickStringBuffer,71,83,6,4,20,21,9,8,5,7
+Apache Tika core,org.apache.tika.language,LanguageIdentifier,75,237,5,17,11,60,8,17,4,10
+Apache Tika core,org.apache.tika.language.detect,LanguageDetector,96,0,2,0,30,0,15,0,14,0
+Apache Tika core,org.apache.tika.language.detect,LanguageNames,29,16,0,0,8,5,5,2,5,2
+Apache Tika core,org.apache.tika.language.detect,LanguageDetector.new Comparator() {...},32,0,4,0,10,0,4,0,2,0
+Apache Tika core,org.apache.tika.language.detect,LanguageHandler,30,0,0,0,9,0,5,0,5,0
+Apache Tika core,org.apache.tika.language.detect,LanguageResult,101,0,8,0,19,0,13,0,9,0
+Apache Tika core,org.apache.tika.language.detect,LanguageWriter,28,0,0,0,12,0,7,0,7,0
+Apache Tika core,org.apache.tika.language.detect,LanguageConfidence,44,0,0,0,5,0,1,0,1,0
+Apache Tika core,org.apache.tika.detect,TextDetector,0,109,1,9,0,28,1,8,0,4
+Apache Tika core,org.apache.tika.detect,DefaultEncodingDetector,15,6,0,0,4,2,2,1,2,1
+Apache Tika core,org.apache.tika.detect,DefaultProbDetector,70,0,2,0,21,0,8,0,7,0
+Apache Tika core,org.apache.tika.detect,TrainedModel,0,3,0,0,0,1,0,1,0,1
+Apache Tika core,org.apache.tika.detect,NameDetector,7,117,1,21,2,30,1,12,0,2
+Apache Tika core,org.apache.tika.detect,CompositeEncodingDetector,85,28,16,2,19,7,12,3,4,2
+Apache Tika core,org.apache.tika.detect,XmlRootExtractor,13,32,0,0,3,10,0,3,0,3
+Apache Tika core,org.apache.tika.detect,TrainedModelDetector,70,175,3,15,15,48,5,12,3,5
+Apache Tika core,org.apache.tika.detect,NNTrainedModel,2,228,0,16,1,42,1,11,1,3
+Apache Tika core,org.apache.tika.detect,DefaultDetector,27,45,1,1,9,14,5,4,4,4
+Apache Tika core,org.apache.tika.detect,TypeDetector,0,18,0,4,0,7,0,4,0,2
+Apache Tika core,org.apache.tika.detect,AutoDetectReader,147,0,12,0,43,0,17,0,11,0
+Apache Tika core,org.apache.tika.detect,CompositeDetector,89,48,18,6,17,14,15,5,5,3
+Apache Tika core,org.apache.tika.detect,ZeroSizeFileDetector,0,20,1,3,0,7,1,3,0,2
+Apache Tika core,org.apache.tika.detect,MagicDetector,65,927,11,115,8,171,12,62,1,10
+Apache Tika core,org.apache.tika.detect,EmptyDetector,10,0,0,0,3,0,3,0,3,0
+Apache Tika core,org.apache.tika.detect,OverrideDetector,14,0,2,0,5,0,3,0,2,0
+Apache Tika core,org.apache.tika.detect,TextStatistics,32,233,7,23,4,31,11,16,4,8
+Apache Tika core,org.apache.tika.detect,NonDetectingEncodingDetector,20,6,0,0,7,3,4,1,4,1
+Apache Tika core,org.apache.tika.detect,NNExampleModelDetector,61,180,5,7,19,43,5,9,2,6
+Apache Tika core,org.apache.tika.detect,NNTrainedModelBuilder,12,38,0,0,4,13,4,8,4,8
+Apache Tika core,org.apache.tika.detect,XmlRootExtractor.ExtractorHandler,0,18,0,0,0,4,0,2,0,2
+Apache Tika core,org.apache.tika.io,TaggedInputStream,51,14,8,0,13,4,8,2,4,2
+Apache Tika core,org.apache.tika.io,CountingInputStream,137,0,10,0,27,0,15,0,10,0
+Apache Tika core,org.apache.tika.io,CloseShieldInputStream,0,10,0,0,0,4,0,2,0,2
+Apache Tika core,org.apache.tika.io,LookaheadInputStream,35,129,2,14,8,32,3,15,2,8
+Apache Tika core,org.apache.tika.io,FilenameUtils,5,272,3,15,2,21,4,9,1,3
+Apache Tika core,org.apache.tika.io,TaggedIOException,7,9,0,0,2,3,2,1,2,1
+Apache Tika core,org.apache.tika.io,EndianUtils.BufferUnderrunException,0,4,0,0,0,2,0,1,0,1
+Apache Tika core,org.apache.tika.io,TailStream,0,287,0,22,0,61,0,23,0,12
+Apache Tika core,org.apache.tika.io,EndianUtils,542,114,16,6,89,21,37,5,28,3
+Apache Tika core,org.apache.tika.io,TemporaryResources,63,62,10,4,17,21,10,6,4,5
+Apache Tika core,org.apache.tika.io,TemporaryResources.new Closeable() {...},0,13,0,0,0,3,0,2,0,2
+Apache Tika core,org.apache.tika.io,ProxyInputStream,55,64,1,1,25,22,5,9,4,9
+Apache Tika core,org.apache.tika.io,IOUtils,501,115,80,8,168,30,85,10,43,8
+Apache Tika core,org.apache.tika.io,NullOutputStream,11,0,0,0,5,0,5,0,5,0
+Apache Tika core,org.apache.tika.io,IOExceptionWithCause,13,8,2,0,3,3,2,1,1,1
+Apache Tika core,org.apache.tika.io,TikaInputStream.new BufferedInputStream() {...},0,14,0,0,0,3,0,2,0,2
+Apache Tika core,org.apache.tika.io,ClosedInputStream,0,5,0,0,0,2,0,2,0,2
+Apache Tika core,org.apache.tika.io,TikaInputStream,366,256,38,12,82,59,39,22,17,19
+Apache Tika core,org.apache.tika.io,NullInputStream,235,44,28,2,55,14,26,5,11,5
+Apache Tika core,org.apache.tika.mime,AndClause,0,68,0,6,0,12,0,7,0,4
+Apache Tika core,org.apache.tika.mime,MimeTypesReader.ClauseRecord,0,98,0,8,0,18,0,7,0,3
+Apache Tika core,org.apache.tika.mime,MediaTypeRegistry,61,171,11,31,11,41,10,24,3,10
+Apache Tika core,org.apache.tika.mime,MimeTypes,100,634,18,80,25,161,20,49,2,18
+Apache Tika core,org.apache.tika.mime,MimeTypeException,5,4,0,0,2,2,1,1,1,1
+Apache Tika core,org.apache.tika.mime,Patterns.LengthComparator,0,14,0,2,0,4,0,2,0,1
+Apache Tika core,org.apache.tika.mime,MimeType,155,248,58,32,27,71,38,35,5,23
+Apache Tika core,org.apache.tika.mime,OrClause,0,57,0,6,0,14,0,7,0,4
+Apache Tika core,org.apache.tika.mime,Patterns,75,332,23,41,10,70,17,23,0,8
+Apache Tika core,org.apache.tika.mime,MimeTypesFactory,59,157,1,11,11,28,8,8,7,3
+Apache Tika core,org.apache.tika.mime,ProbabilisticMimeDetectionSelector.Builder,58,0,0,0,22,0,12,0,12,0
+Apache Tika core,org.apache.tika.mime,ProbabilisticMimeDetectionSelector,227,732,51,97,37,174,38,44,2,6
+Apache Tika core,org.apache.tika.mime,MagicMatch,3,89,0,4,2,14,0,7,0,5
+Apache Tika core,org.apache.tika.mime,MediaType,158,587,28,72,31,130,28,50,6,22
+Apache Tika core,org.apache.tika.mime,HexCoDec,217,0,18,0,24,0,17,0,8,0
+Apache Tika core,org.apache.tika.mime,MimeTypesReader,79,358,2,50,18,85,6,29,4,5
+Apache Tika core,org.apache.tika.mime,Magic,35,75,6,6,6,18,6,9,3,6
+Apache Tika core,org.apache.tika.mime,MimeType.RootXML,38,71,4,16,7,19,7,10,4,3
+Apache Tika core,org.apache.tika.concurrent,SimpleThreadPoolExecutor.new ThreadFactory() {...},0,9,0,0,0,2,0,2,0,2
+Apache Tika core,org.apache.tika.concurrent,SimpleThreadPoolExecutor,0,13,0,0,0,2,0,1,0,1
+Apache Tika core,org.apache.tika.extractor,ParserContainerExtractor.RecursiveParser,72,0,2,0,17,0,4,0,3,0
+Apache Tika core,org.apache.tika.extractor,EmbeddedDocumentUtil,335,0,56,0,101,0,44,0,16,0
+Apache Tika core,org.apache.tika.extractor,ParserContainerExtractor,76,0,0,0,18,0,5,0,5,0
+Apache Tika core,org.apache.tika.extractor,ParsingEmbeddedDocumentExtractor,135,16,20,0,32,5,12,2,2,2
+Apache Tika core,org.apache.tika.sax,StandardsText,176,0,20,0,42,0,15,0,5,0
+Apache Tika core,org.apache.tika.sax,StandardReference,90,0,4,0,27,0,14,0,12,0
+Apache Tika core,org.apache.tika.sax,StandardsExtractingContentHandler,84,0,2,0,23,0,7,0,6,0
+Apache Tika core,org.apache.tika.sax,WriteOutContentHandler.WriteLimitReachedException,0,7,0,0,0,3,0,1,0,1
+Apache Tika core,org.apache.tika.sax,ToXMLContentHandler,15,358,4,24,5,86,3,24,0,13
+Apache Tika core,org.apache.tika.sax,TaggedSAXException,20,0,0,0,6,0,3,0,3,0
+Apache Tika core,org.apache.tika.sax,Link,177,27,18,0,41,10,18,4,9,4
+Apache Tika core,org.apache.tika.sax,WriteOutContentHandler,42,133,6,8,4,28,4,12,0,9
+Apache Tika core,org.apache.tika.sax,EmbeddedContentHandler,6,0,0,0,4,0,3,0,3,0
+Apache Tika core,org.apache.tika.sax,ToXMLContentHandler.ElementInfo,25,53,3,9,2,16,3,6,0,3
+Apache Tika core,org.apache.tika.sax,StandardReference.StandardReferenceBuilder,46,0,0,0,13,0,4,0,4,0
+Apache Tika core,org.apache.tika.sax,CleanPhoneText,2785,0,12,0,26,0,10,0,4,0
+Apache Tika core,org.apache.tika.sax,ElementMappingContentHandler.TargetElement,79,0,4,0,23,0,9,0,7,0
+Apache Tika core,org.apache.tika.sax,SecureContentHandler.SecureSAXException,1,14,1,1,0,4,1,2,0,2
+Apache Tika core,org.apache.tika.sax,SafeContentHandler.StringOutput,20,0,0,0,5,0,3,0,3,0
+Apache Tika core,org.apache.tika.sax,TextContentHandler,64,0,2,0,21,0,11,0,10,0
+Apache Tika core,org.apache.tika.sax,LinkContentHandler,53,199,10,24,11,43,9,15,1,6
+Apache Tika core,org.apache.tika.sax,SafeContentHandler.new SafeContentHandler.Output() {...},0,13,0,0,0,3,0,2,0,2
+Apache Tika core,org.apache.tika.sax,SafeContentHandler.new SafeContentHandler.Output() {...},0,13,0,0,0,3,0,2,0,2
+Apache Tika core,org.apache.tika.sax,BasicContentHandlerFactory,97,146,18,19,21,25,18,13,2,3
+Apache Tika core,org.apache.tika.sax,DIFContentHandler,400,0,20,0,76,0,20,0,10,0
+Apache Tika core,org.apache.tika.sax,XMPContentHandler,237,0,8,0,58,0,13,0,9,0
+Apache Tika core,org.apache.tika.sax,ElementMappingContentHandler,79,0,6,0,23,0,7,0,4,0
+Apache Tika core,org.apache.tika.sax,ToTextContentHandler,34,43,0,0,6,16,1,7,1,7
+Apache Tika core,org.apache.tika.sax,ToHTMLContentHandler,0,92,0,4,0,15,0,7,0,5
+Apache Tika core,org.apache.tika.sax,OfflineContentHandler,0,11,0,0,0,3,0,2,0,2
+Apache Tika core,org.apache.tika.sax,ContentHandlerDecorator,68,92,7,3,26,38,8,14,3,14
+Apache Tika core,org.apache.tika.sax,TeeContentHandler,87,159,8,14,12,24,8,15,4,8
+Apache Tika core,org.apache.tika.sax,SafeContentHandler,76,177,16,22,16,45,10,20,0,11
+Apache Tika core,org.apache.tika.sax,BodyContentHandler,0,46,0,0,0,13,0,6,0,6
+Apache Tika core,org.apache.tika.sax,XHTMLContentHandler,52,537,18,28,12,95,18,22,1,16
+Apache Tika core,org.apache.tika.sax,StandardOrganizations,531,0,0,0,107,0,4,0,4,0
+Apache Tika core,org.apache.tika.sax,TaggedContentHandler,36,4,8,0,10,2,7,1,3,1
+Apache Tika core,org.apache.tika.sax,SecureContentHandler,71,185,8,14,23,36,14,13,8,8
+Apache Tika core,org.apache.tika.sax,ExpandedTitleContentHandler,68,0,12,0,21,0,12,0,6,0
+Apache Tika core,org.apache.tika.sax,EndDocumentShieldingContentHandler,17,0,0,0,8,0,4,0,4,0
+Apache Tika core,org.apache.tika.sax,PhoneExtractingContentHandler,71,0,2,0,19,0,5,0,4,0
+Apache Tika core,org.apache.tika.sax,BasicContentHandlerFactory.HANDLER_TYPE,0,54,0,0,0,6,0,1,0,1
+Apache Tika core,org.apache.tika.sax,RichTextContentHandler,0,67,2,6,0,10,2,4,0,2
+Apache Tika core,org.apache.tika.sax,LinkBuilder,8,82,1,7,2,25,2,10,1,7
+Apache Tika core,org.apache.tika,Tika,426,76,11,1,97,19,36,7,30,7
+Apache Tika core,org.apache.tika.embedder,ExternalEmbedder.new Runnable() {...},32,0,0,0,6,0,2,0,2,0
+Apache Tika core,org.apache.tika.embedder,ExternalEmbedder,644,0,76,0,161,0,63,0,25,0
+Apache Tika core,org.apache.tika.parser,ParsingReader.ParsingTask,26,39,4,0,8,9,2,2,0,2
+Apache Tika core,org.apache.tika.parser,NetworkParser,103,0,2,0,25,0,6,0,5,0
+Apache Tika core,org.apache.tika.parser,NetworkParser.new FilterOutputStream() {...},14,0,0,0,3,0,2,0,2,0
+Apache Tika core,org.apache.tika.parser,ParsingReader.new Executor() {...},10,27,1,1,1,8,1,2,0,2
+Apache Tika core,org.apache.tika.parser,CryptoParser,43,64,7,5,8,20,7,3,1,3
+Apache Tika core,org.apache.tika.parser,DelegatingParser,6,18,0,0,1,4,1,3,1,3
+Apache Tika core,org.apache.tika.parser,RecursiveParserWrapper.EmbeddedParserDecorator,191,0,16,0,44,0,10,0,2,0
+Apache Tika core,org.apache.tika.parser,NetworkParser.ParsingTask,107,0,2,0,28,0,4,0,3,0
+Apache Tika core,org.apache.tika.parser,ErrorParser,0,15,0,0,0,4,0,4,0,4
+Apache Tika core,org.apache.tika.parser,ParserDecorator.new ParserDecorator() {...},2,10,0,0,1,2,1,2,1,2
+Apache Tika core,org.apache.tika.parser,ParserDecorator.new ParserDecorator() {...},5,56,3,3,2,15,4,3,1,3
+Apache Tika core,org.apache.tika.parser,ParserDecorator.new ParserDecorator() {...},2,21,0,0,1,5,1,2,1,2
+Apache Tika core,org.apache.tika.parser,CompositeParser,174,243,22,20,34,58,22,18,8,11
+Apache Tika core,org.apache.tika.parser,ParseContext,101,33,16,2,37,9,16,4,7,4
+Apache Tika core,org.apache.tika.parser,AbstractEncodingDetectorParser,33,0,2,0,13,0,6,0,5,0
+Apache Tika core,org.apache.tika.parser,ParserPostProcessor,64,0,2,0,13,0,3,0,2,0
+Apache Tika core,org.apache.tika.parser,AutoDetectParser,60,88,5,5,20,22,11,3,6,3
+Apache Tika core,org.apache.tika.parser,NetworkParser.MetaHandler,34,0,8,0,10,0,6,0,2,0
+Apache Tika core,org.apache.tika.parser,RecursiveParserWrapper,278,0,28,0,71,0,26,0,12,0
+Apache Tika core,org.apache.tika.parser,DefaultParser,128,72,13,7,30,21,16,6,7,5
+Apache Tika core,org.apache.tika.parser,ParserDecorator,2,51,1,1,1,12,2,7,1,7
+Apache Tika core,org.apache.tika.parser,AbstractParser,9,3,0,0,2,1,1,1,1,1
+Apache Tika core,org.apache.tika.parser,ParsingReader,111,61,8,0,25,16,11,2,7,2
+Apache Tika core,org.apache.tika.parser,EmptyParser,0,21,0,0,0,7,0,4,0,4
+Apache Tika core,org.apache.tika.parser,DigestingParser,33,0,2,0,10,0,3,0,2,0
+Apache Tika core,org.apache.tika.metadata,Database,10,0,0,0,3,0,1,0,1,0
+Apache Tika core,org.apache.tika.metadata,Geographic,0,10,0,0,0,6,0,1,0,1
+Apache Tika core,org.apache.tika.metadata,Message,34,0,0,0,11,0,1,0,1,0
+Apache Tika core,org.apache.tika.metadata,Property,164,284,21,15,31,60,27,32,12,29
+Apache Tika core,org.apache.tika.metadata,Photoshop,102,0,0,0,16,0,1,0,1,0
+Apache Tika core,org.apache.tika.metadata,QuattroPro,13,0,0,0,4,0,1,0,1,0
+Apache Tika core,org.apache.tika.metadata,PDF,49,0,0,0,16,0,1,0,1,0
+Apache Tika core,org.apache.tika.metadata,TikaCoreProperties.EmbeddedResourceType,0,34,0,0,0,4,0,1,0,1
+Apache Tika core,org.apache.tika.metadata,OfficeOpenXMLCore,0,22,0,0,0,7,0,1,0,1
+Apache Tika core,org.apache.tika.metadata,IPTC,667,0,0,0,110,0,1,0,1,0
+Apache Tika core,org.apache.tika.metadata,Property.PropertyType,0,64,0,0,0,7,0,1,0,1
+Apache Tika core,org.apache.tika.metadata,XMPIdq,4,0,0,0,1,0,1,0,1,0
+Apache Tika core,org.apache.tika.metadata,XMPMM,60,0,0,0,11,0,1,0,1,0
+Apache Tika core,org.apache.tika.metadata,TIFF,0,99,0,0,0,36,0,1,0,1
+Apache Tika core,org.apache.tika.metadata,Office,0,98,0,0,0,21,0,1,0,1
+Apache Tika core,org.apache.tika.metadata,MSOffice,0,40,0,0,0,26,0,1,0,1
+Apache Tika core,org.apache.tika.metadata,Property.ValueType,0,154,0,0,0,3,0,1,0,1
+Apache Tika core,org.apache.tika.metadata,RTFMetadata,16,0,0,0,5,0,1,0,1,0
+Apache Tika core,org.apache.tika.metadata,WordPerfect,22,0,0,0,7,0,1,0,1,0
+Apache Tika core,org.apache.tika.metadata,XMP,0,22,0,0,0,7,0,1,0,1
+Apache Tika core,org.apache.tika.metadata,AccessPermissions,25,0,0,0,8,0,1,0,1,0
+Apache Tika core,org.apache.tika.metadata,PagedText,4,0,0,0,1,0,1,0,1,0
+Apache Tika core,org.apache.tika.metadata,XMPRights,16,0,0,0,5,0,1,0,1,0
+Apache Tika core,org.apache.tika.metadata,HTML,4,0,0,0,1,0,1,0,1,0
+Apache Tika core,org.apache.tika.metadata,XMPDM,418,0,0,0,53,0,1,0,1,0
+Apache Tika core,org.apache.tika.metadata,DublinCore,0,52,0,0,0,17,0,1,0,1
+Apache Tika core,org.apache.tika.metadata,OfficeOpenXMLExtended,0,34,0,0,0,11,0,1,0,1
+Apache Tika core,org.apache.tika.metadata,Metadata,183,531,33,61,36,121,26,52,6,25
+Apache Tika core,org.apache.tika.metadata,XMPDM.ChannelTypePropertyConverter,69,0,20,0,22,0,14,0,4,0
+Apache Tika core,org.apache.tika.metadata,TikaCoreProperties,0,315,0,0,0,67,0,1,0,1
+Apache Tika core,org.apache.tika.metadata,HttpHeaders,4,0,0,0,2,0,1,0,1,0
+Apache Tika core,org.apache.tika.metadata,PropertyTypeException,16,34,2,0,2,6,2,3,1,3
+Apache Tika core,org.apache.tika.fork,ContentHandlerResource,27,188,7,21,6,48,5,14,0,5
+Apache Tika core,org.apache.tika.fork,ClassLoaderResource,16,74,3,7,5,23,3,5,0,3
+Apache Tika core,org.apache.tika.fork,MemoryURLStreamHandlerFactory,13,0,2,0,4,0,3,0,2,0
+Apache Tika core,org.apache.tika.fork,ForkParser,112,214,11,21,31,50,18,13,8,7
+Apache Tika core,org.apache.tika.fork,ForkClient,59,440,12,26,18,102,11,18,0,10
+Apache Tika core,org.apache.tika.fork,MemoryURLStreamRecord,3,0,0,0,1,0,1,0,1,0
+Apache Tika core,org.apache.tika.fork,ContentHandlerProxy,248,6,8,0,87,3,20,1,16,1
+Apache Tika core,org.apache.tika.fork,InputStreamProxy,66,6,4,0,19,3,5,1,3,1
+Apache Tika core,org.apache.tika.fork,ForkServer,302,0,22,0,85,0,22,0,11,0
+Apache Tika core,org.apache.tika.fork,MetadataContentHandler,0,24,0,2,0,8,0,3,0,2
+Apache Tika core,org.apache.tika.fork,ForkObjectInputStream,35,25,0,0,9,8,3,1,3,1
+Apache Tika core,org.apache.tika.fork,InputStreamResource,3,32,0,2,2,12,0,3,0,2
+Apache Tika core,org.apache.tika.fork,MemoryURLConnection,14,0,0,0,5,0,3,0,3,0
+Apache Tika core,org.apache.tika.fork,MemoryURLStreamHandler,97,0,6,0,22,0,7,0,4,0
+Apache Tika core,org.apache.tika.fork,ClassLoaderProxy,189,11,10,0,42,4,10,1,5,1
+Apache Tika core,org.apache.tika.sax.xpath,NodeMatcher,2,12,0,0,1,4,1,4,1,4
+Apache Tika core,org.apache.tika.sax.xpath,MatchingContentHandler,30,108,6,14,8,26,7,10,2,5
+Apache Tika core,org.apache.tika.sax.xpath,ElementMatcher,0,10,0,0,0,3,0,3,0,3
+Apache Tika core,org.apache.tika.sax.xpath,SubtreeMatcher,16,25,3,1,2,8,3,4,1,4
+Apache Tika core,org.apache.tika.sax.xpath,NamedElementMatcher,0,39,0,8,0,8,0,7,0,3
+Apache Tika core,org.apache.tika.sax.xpath,ChildMatcher,0,9,0,0,0,4,0,2,0,2
+Apache Tika core,org.apache.tika.sax.xpath,CompositeMatcher,44,43,16,4,7,10,11,4,1,4
+Apache Tika core,org.apache.tika.sax.xpath,Matcher,0,16,0,0,0,6,0,6,0,6
+Apache Tika core,org.apache.tika.sax.xpath,XPathParser,19,192,7,25,6,45,7,13,0,4
+Apache Tika core,org.apache.tika.sax.xpath,TextMatcher,0,10,0,0,0,3,0,3,0,3
+Apache Tika core,org.apache.tika.sax.xpath,AttributeMatcher,0,10,0,0,0,3,0,3,0,3
+Apache Tika core,org.apache.tika.sax.xpath,NamedAttributeMatcher,0,35,0,8,0,6,0,7,0,3
+Apache Tika core,org.apache.tika.config,TikaConfig.ParserXmlLoader,108,229,13,17,14,45,10,18,1,12
+Apache Tika core,org.apache.tika.config,TikaConfig.XmlLoader,111,283,9,37,18,65,8,19,0,4
+Apache Tika core,org.apache.tika.config,InitializableProblemHandler,0,19,0,0,0,5,0,1,0,1
+Apache Tika core,org.apache.tika.config,LoadErrorHandler,0,13,0,0,0,3,0,1,0,1
+Apache Tika core,org.apache.tika.config,TikaConfig,171,688,17,59,38,163,24,55,9,32
+Apache Tika core,org.apache.tika.config,Param,70,290,5,11,12,73,8,18,3,15
+Apache Tika core,org.apache.tika.config,ServiceLoader.RankedService,21,0,0,0,6,0,3,0,3,0
+Apache Tika core,org.apache.tika.config,ParamField.new HashMap() {...},0,33,0,0,0,8,0,1,0,1
+Apache Tika core,org.apache.tika.config,TikaConfig.TranslatorXmlLoader,22,11,0,0,8,4,8,4,8,4
+Apache Tika core,org.apache.tika.config,TikaActivator,72,0,2,0,21,0,7,0,6,0
+Apache Tika core,org.apache.tika.config,LoadErrorHandler.new LoadErrorHandler() {...},0,6,0,0,0,3,0,3,0,3
+Apache Tika core,org.apache.tika.config,LoadErrorHandler.new LoadErrorHandler() {...},0,19,0,0,0,4,0,3,0,3
+Apache Tika core,org.apache.tika.config,LoadErrorHandler.new LoadErrorHandler() {...},13,5,0,0,1,2,1,2,1,2
+Apache Tika core,org.apache.tika.config,TikaConfig.ExecutorServiceXmlLoader,7,54,2,2,2,17,4,11,2,11
+Apache Tika core,org.apache.tika.config,ParamField,62,150,6,16,9,35,8,14,3,8
+Apache Tika core,org.apache.tika.config,ServiceLoader,128,287,16,22,27,79,18,23,4,18
+Apache Tika core,org.apache.tika.config,TikaConfig.EncodingDetectorXmlLoader,64,29,4,0,15,10,4,10,2,10
+Apache Tika core,org.apache.tika.config,TikaConfigSerializer,157,438,43,39,35,110,32,20,1,10
+Apache Tika core,org.apache.tika.config,TikaConfigSerializer.Mode,0,44,0,0,0,5,0,1,0,1
+Apache Tika core,org.apache.tika.config,TikaConfig.DetectorXmlLoader,169,12,10,0,29,4,13,4,8,4
+Apache Tika core,org.apache.tika.config,InitializableProblemHandler.new InitializableProblemHandler() {...},0,11,0,0,0,4,0,3,0,3
+Apache Tika core,org.apache.tika.config,InitializableProblemHandler.new InitializableProblemHandler() {...},0,10,0,0,0,3,0,3,0,3
+Apache Tika core,org.apache.tika.config,InitializableProblemHandler.new InitializableProblemHandler() {...},1,5,0,0,1,2,1,2,1,2
+Apache Tika core,org.apache.tika.config,InitializableProblemHandler.new InitializableProblemHandler() {...},0,11,0,0,0,4,0,3,0,3
+Apache Tika core,org.apache.tika.language.translate,DefaultTranslator,61,30,9,1,14,9,10,4,5,4
+Apache Tika core,org.apache.tika.language.translate,EmptyTranslator,9,0,0,0,4,0,4,0,4,0
+Apache Tika core,org.apache.tika.language.translate,DefaultTranslator.new Comparator() {...},29,3,4,0,9,1,3,1,1,1
+Apache Tika core,org.apache.tika.parser.digest,CompositeDigester,46,0,2,0,12,0,3,0,2,0
+Apache Tika core,org.apache.tika.parser.digest,InputStreamDigester,215,0,22,0,58,0,20,0,9,0
+Apache Tika core,org.apache.tika.parser.digest,InputStreamDigester.SimpleBoundedInputStream,143,0,16,0,28,0,16,0,8,0

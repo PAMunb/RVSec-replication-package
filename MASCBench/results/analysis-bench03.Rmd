@@ -1,0 +1,214 @@
+---
+title: "JavaMOP"
+author: "Rodrigo Bonifácio et al."
+date: "1/26/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+setwd(".")
+library(sqldf)
+library(xtable)
+```
+
+## Load the datasets
+
+```{r load}
+bench03mop <- read.csv("../results/mop-report.csv", head=T, sep=",")
+bench03cc  <- read.csv("../results/CogniCrypt-Report.csv", head=T, sep=",")
+bench03cg <- read.csv("../results/CryptoGuard-Report.csv", head=T, sep=",")
+
+gt <- read.csv("../results/gt.csv", head=T, sep=",")
+
+gt <- na.omit(gt)
+
+nrow(bench03mop)
+colnames(bench03mop)
+
+nrow(bench03cc)
+colnames(bench03cc)
+
+nrow(bench03cg)
+colnames(bench03cg)
+
+colnames(gt)
+nrow(gt)
+```
+
+### Filter out irrelevant warnings for the stud
+
+This is necessary because we have enriched the test cases for more complete scenarios, instead of just instantiating cryptographic primitives and then doing nothing with them. To solve this issue, we introduce the usege of Keys. 
+
+```{r}
+bench03mop <- sqldf("select * from bench03mop where spec != 'KeyGeneratorSpec'")
+nrow(bench03mop)
+
+bench03cc <- sqldf("select * from bench03cc  where spec != 'KeyGeneratorSpec'")
+nrow(bench03cc)
+
+```
+
+
+
+## Ground Truth (MOP)
+
+```{r}
+tp <- gt[gt$vulnerability == "True",]
+tn <- gt[gt$vulnerability == "False",]
+
+sqldf("select count(distinct className) from tp")
+sqldf("select count(distinct className) from tn")
+
+
+```
+
+
+## Compute Precision and Recall (MOP)
+
+```{r}
+
+# compute true positive 
+
+mop_tp <- sqldf("select count(distinct className) as tp
+                 from bench03mop 
+                 where className in (select className from tp)")
+
+# compute false positive 
+
+mop_fp <- sqldf("select count(distinct className) as fp
+                 from bench03mop 
+                 where className in (select className from tn)")
+
+
+
+# compute false-negative  
+
+mop_fn <- sqldf("select count(distinct className) as fn
+                 from tp 
+                 where className not in (select className from bench03mop)")
+
+# MOP true positives
+mop_tp
+
+# MOP false positives
+mop_fp
+
+# MOP false negatives
+mop_fn
+
+precision_mop <- mop_tp$tp / (mop_tp$tp + mop_fp$fp)
+precision_mop
+
+recall_mop <- mop_tp$tp / (mop_tp$tp + mop_fn$fn)
+recall_mop
+
+fmeasure_mop = (2 * precision_mop * recall_mop) / (precision_mop + recall_mop)
+fmeasure_mop
+```
+
+## Compute Precision and Recall (CC)
+
+```{r}
+
+# compute true positive 
+
+cc_tp <- sqldf("select count(distinct className) as tp
+                 from bench03cc 
+                 where className in (select className from tp)")
+
+# compute false positive 
+
+cc_fp <- sqldf("select count(distinct className) as fp
+                 from bench03cc
+                 where className in (select className from tn)")
+
+
+
+# compute false-negative  
+
+cc_fn <- sqldf("select count(distinct className) as fn
+                 from tp 
+                 where className not in (select className from bench03cc)")
+
+# MOP true positives
+cc_tp
+
+# MOP false positives
+cc_fp
+
+# MOP false negatives
+cc_fn
+
+precision_cc <- cc_tp$tp / (cc_tp$tp + cc_fp$fp)
+precision_cc
+
+recall_cc <- cc_tp$tp / (cc_tp$tp + cc_fn$fn)
+recall_cc
+
+fmeasure_cc = (2 * precision_cc * recall_cc) / (precision_cc + recall_cc)
+fmeasure_cc
+```
+
+
+## Compute Precision and Recall (CG)
+
+```{r}
+
+# compute true positive 
+
+cg_tp <- sqldf("select count(distinct className) as tp
+                 from bench03cg
+                 where className in (select className from tp)")
+
+# compute false positive 
+
+cg_fp <- sqldf("select count(distinct className) as fp
+                 from bench03cg
+                 where className in (select className from tn)")
+
+
+
+# compute false-negative  
+
+cg_fn <- sqldf("select count(distinct className) as fn
+                 from tp 
+                 where className not in (select className from bench03cg)")
+
+# MOP true positives
+cg_tp
+
+# MOP false positives
+cg_fp
+
+# MOP false negatives
+cg_fn
+
+precision_cg <- cg_tp$tp / (cg_tp$tp + cg_fp$fp)
+precision_cg
+
+recall_cg <- cg_tp$tp / (cg_tp$tp + cg_fn$fn)
+recall_cg
+
+fmeasure_cg = (2 * precision_cg * recall_cg) / (precision_cg + recall_cg)
+fmeasure_cg
+```
+
+
+## Examples of False Negative
+
+```{r}
+sqldf("select distinct className as fn
+       from tp 
+       where className not in (select className from bench03mop)")
+
+sqldf("select distinct className as fn
+       from tp 
+       where className not in (select className from bench03cc)")
+
+sqldf("select distinct className as fn
+       from tp 
+       where className not in (select className from bench03cg)")
+
+
+```

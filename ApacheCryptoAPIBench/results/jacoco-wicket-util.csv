@@ -1,0 +1,238 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+Wicket Util,org.apache.wicket.util.string,Entities.MapIntMap,46,0,2,0,12,0,5,0,4,0
+Wicket Util,org.apache.wicket.util.string,Entities.BinaryEntityMap,126,0,10,0,31,0,10,0,5,0
+Wicket Util,org.apache.wicket.util.string,Entities.ArrayEntityMap,146,0,10,0,33,0,11,0,6,0
+Wicket Util,org.apache.wicket.util.string,StringList.new IStringIterator() {...},21,0,0,0,4,0,3,0,3,0
+Wicket Util,org.apache.wicket.util.string,Entities.LookupEntityMap,42,0,6,0,11,0,7,0,4,0
+Wicket Util,org.apache.wicket.util.string,Entities.PrimitiveEntityMap,44,0,2,0,11,0,5,0,4,0
+Wicket Util,org.apache.wicket.util.string,Strings,602,1220,115,197,144,293,83,122,10,32
+Wicket Util,org.apache.wicket.util.string,AppendingStringBuffer,961,567,139,63,208,133,119,39,31,26
+Wicket Util,org.apache.wicket.util.string,Strings.new PrivilegedAction() {...},0,6,0,0,0,2,0,2,0,2
+Wicket Util,org.apache.wicket.util.string,Strings.new HashSet() {...},0,21,0,2,0,5,0,2,0,1
+Wicket Util,org.apache.wicket.util.string,StringList,9,236,2,20,1,59,3,31,1,22
+Wicket Util,org.apache.wicket.util.string,PrependingStringBuffer,16,156,4,8,5,37,5,11,1,9
+Wicket Util,org.apache.wicket.util.string,StringValueConversionException,0,9,0,0,0,4,0,2,0,2
+Wicket Util,org.apache.wicket.util.string,StringValue,321,476,39,59,49,105,49,57,12,45
+Wicket Util,org.apache.wicket.util.string,Entities.HashEntityMap,9,0,0,0,2,0,1,0,1,0
+Wicket Util,org.apache.wicket.util.string,AbstractStringList,65,70,6,4,15,11,6,7,3,5
+Wicket Util,org.apache.wicket.util.string,Entities.TreeEntityMap,9,0,0,0,2,0,1,0,1,0
+Wicket Util,org.apache.wicket.util.string,StringEscapeUtils,136,0,24,0,47,0,22,0,10,0
+Wicket Util,org.apache.wicket.util.string,Entities,3638,0,34,0,110,0,31,0,14,0
+Wicket Util,org.apache.wicket.util,LazyInitializer,26,0,4,0,8,0,4,0,2,0
+Wicket Util,org.apache.wicket.util,LongEncoder,0,113,0,16,0,22,0,12,0,4
+Wicket Util,org.apache.wicket.util,IContextProvider,4,0,0,0,1,0,1,0,1,0
+Wicket Util,org.apache.wicket.util,NullProvider,5,0,0,0,2,0,2,0,2,0
+Wicket Util,org.apache.wicket.util,ValueProvider,14,0,0,0,5,0,3,0,3,0
+Wicket Util,org.apache.wicket.util.xml,CustomEntityResolver.ServletApiEntityLocator,21,6,2,0,4,3,2,1,1,1
+Wicket Util,org.apache.wicket.util.xml,CustomEntityResolver,34,43,6,0,5,9,4,3,1,3
+Wicket Util,org.apache.wicket.util.xml,CustomEntityResolver.EntityKey,27,31,6,0,8,9,4,2,1,2
+Wicket Util,org.apache.wicket.util.crypt,TrivialCrypt,26,0,2,0,5,0,3,0,2,0
+Wicket Util,org.apache.wicket.util.crypt,NoCrypt,1,7,0,0,1,4,1,3,1,3
+Wicket Util,org.apache.wicket.util.crypt,SunJceCrypt,0,102,0,0,0,19,0,8,0,8
+Wicket Util,org.apache.wicket.util.crypt,NoCryptFactory,10,0,0,0,3,0,3,0,3,0
+Wicket Util,org.apache.wicket.util.crypt,CryptFactoryCachingDecorator,0,21,1,1,0,7,1,2,0,2
+Wicket Util,org.apache.wicket.util.crypt,CachingSunJceCryptFactory,0,8,0,0,0,2,0,1,0,1
+Wicket Util,org.apache.wicket.util.crypt,CharEncoding,3,0,0,0,1,0,1,0,1,0
+Wicket Util,org.apache.wicket.util.crypt,AbstractCrypt,72,59,0,0,13,15,0,8,0,8
+Wicket Util,org.apache.wicket.util.crypt,ClassCryptFactory,80,41,3,1,17,11,2,3,0,3
+Wicket Util,org.apache.wicket.util.crypt,StringUtils,93,0,4,0,24,0,18,0,16,0
+Wicket Util,org.apache.wicket.util.crypt,Base64,247,2019,51,97,52,162,57,55,16,21
+Wicket Util,org.apache.wicket.util.listener,ListenerCollection.new ListenerCollection.INotifier() {...},27,0,0,0,6,0,2,0,2,0
+Wicket Util,org.apache.wicket.util.listener,ListenerCollection,118,0,14,0,33,0,18,0,11,0
+Wicket Util,org.apache.wicket.util.listener,ChangeListenerSet.new ListenerCollection.INotifier() {...},14,0,0,0,3,0,2,0,2,0
+Wicket Util,org.apache.wicket.util.listener,ChangeListenerSet,11,0,0,0,3,0,2,0,2,0
+Wicket Util,org.apache.wicket.util.diff,Delta,149,0,4,0,43,0,12,0,10,0
+Wicket Util,org.apache.wicket.util.diff,DifferentiationFailedException,7,0,0,0,4,0,2,0,2,0
+Wicket Util,org.apache.wicket.util.diff,DiffException,7,0,0,0,4,0,2,0,2,0
+Wicket Util,org.apache.wicket.util.diff,ToString,88,3,4,0,19,2,7,1,5,1
+Wicket Util,org.apache.wicket.util.diff,AddDelta,98,0,2,0,25,0,8,0,7,0
+Wicket Util,org.apache.wicket.util.diff,PatchFailedException,7,0,0,0,4,0,2,0,2,0
+Wicket Util,org.apache.wicket.util.diff,DeleteDelta,82,0,2,0,24,0,8,0,7,0
+Wicket Util,org.apache.wicket.util.diff,Chunk,255,0,22,0,62,0,33,0,22,0
+Wicket Util,org.apache.wicket.util.diff,Diff,227,54,27,7,41,14,27,6,10,6
+Wicket Util,org.apache.wicket.util.diff,ChangeDelta,142,0,4,0,36,0,9,0,7,0
+Wicket Util,org.apache.wicket.util.diff,Revision,135,12,12,0,37,4,17,2,11,2
+Wicket Util,org.apache.wicket.util.collections,IntHashMap.Values,23,0,0,0,6,0,5,0,5,0
+Wicket Util,org.apache.wicket.util.collections,IntHashMap,658,234,90,10,160,54,71,14,23,12
+Wicket Util,org.apache.wicket.util.collections,MiniMap.1.new Iterator() {...},22,49,0,4,4,7,1,5,1,3
+Wicket Util,org.apache.wicket.util.collections,IntHashMap.EntrySet,41,10,8,0,9,2,8,2,4,2
+Wicket Util,org.apache.wicket.util.collections,MiniMap.new AbstractList() {...},9,37,1,3,1,7,1,4,0,3
+Wicket Util,org.apache.wicket.util.collections,MiniMap.new AbstractSet() {...},4,11,0,0,1,2,1,2,1,2
+Wicket Util,org.apache.wicket.util.collections,MiniMap.new AbstractSet() {...},4,11,0,0,1,2,1,2,1,2
+Wicket Util,org.apache.wicket.util.collections,IntHashMap.HashIterator,47,90,8,12,11,22,7,7,1,3
+Wicket Util,org.apache.wicket.util.collections,MostRecentlyUsedMap,8,32,1,5,2,9,2,4,1,2
+Wicket Util,org.apache.wicket.util.collections,IntHashMap.Entry,69,18,12,0,16,7,10,3,4,3
+Wicket Util,org.apache.wicket.util.collections,MicroMap.new AbstractSet() {...},0,15,0,0,0,3,0,3,0,3
+Wicket Util,org.apache.wicket.util.collections,MicroMap.new AbstractSet() {...},0,15,0,0,0,3,0,3,0,3
+Wicket Util,org.apache.wicket.util.collections,MicroMap.new AbstractList() {...},0,24,0,2,0,5,0,4,0,3
+Wicket Util,org.apache.wicket.util.collections,MicroMap.1.new Iterator() {...},5,35,0,4,2,6,1,5,1,3
+Wicket Util,org.apache.wicket.util.collections,MultiMap,85,0,10,0,28,0,13,0,8,0
+Wicket Util,org.apache.wicket.util.collections,IntHashMap.ValueIterator,11,0,0,0,2,0,2,0,2,0
+Wicket Util,org.apache.wicket.util.collections,ClassMetaCache,84,0,8,0,22,0,9,0,5,0
+Wicket Util,org.apache.wicket.util.collections,ArrayListStack,64,0,6,0,20,0,11,0,8,0
+Wicket Util,org.apache.wicket.util.collections,ReverseListIterator,4,21,0,0,1,7,1,4,1,4
+Wicket Util,org.apache.wicket.util.collections,MicroMap.3.1.new Map.Entry() {...},15,18,0,0,3,3,1,3,1,3
+Wicket Util,org.apache.wicket.util.collections,UrlExternalFormComparator,9,0,0,0,2,0,2,0,2,0
+Wicket Util,org.apache.wicket.util.collections,MicroMap.3.new Iterator() {...},4,38,0,4,2,7,1,5,1,3
+Wicket Util,org.apache.wicket.util.collections,MiniMap.3.1.new Map.Entry() {...},22,26,0,0,3,3,1,3,1,3
+Wicket Util,org.apache.wicket.util.collections,IntHashMap.KeySet,46,0,6,0,11,0,9,0,6,0
+Wicket Util,org.apache.wicket.util.collections,IntHashMap.KeyIterator,12,0,0,0,2,0,2,0,2,0
+Wicket Util,org.apache.wicket.util.collections,MiniMap,224,103,35,5,54,26,31,10,11,10
+Wicket Util,org.apache.wicket.util.collections,ConcurrentHashSet,163,0,8,0,40,0,19,0,15,0
+Wicket Util,org.apache.wicket.util.collections,MiniMap.3.new Iterator() {...},17,53,0,4,3,9,1,5,1,3
+Wicket Util,org.apache.wicket.util.collections,MicroMap,115,42,12,4,29,11,16,7,9,6
+Wicket Util,org.apache.wicket.util.collections,ReadOnlyIterator,19,0,0,0,2,0,2,0,2,0
+Wicket Util,org.apache.wicket.util.collections,IntHashMap.EntryIterator,0,10,0,0,0,2,0,2,0,2
+Wicket Util,org.apache.wicket.util.value,ValueMap,323,464,48,46,83,127,38,55,10,36
+Wicket Util,org.apache.wicket.util.value,IntValue,80,0,16,0,17,0,17,0,9,0
+Wicket Util,org.apache.wicket.util.value,LongValue,60,113,13,21,11,27,14,19,6,10
+Wicket Util,org.apache.wicket.util.value,CopyOnWriteValueMap,264,0,2,0,60,0,49,0,48,0
+Wicket Util,org.apache.wicket.util.value,AttributeMap,7,0,0,0,4,0,2,0,2,0
+Wicket Util,org.apache.wicket.util.convert,MaskConverter,65,0,0,0,21,0,5,0,5,0
+Wicket Util,org.apache.wicket.util.convert,ConversionException,53,34,2,0,17,14,11,7,10,7
+Wicket Util,org.apache.wicket.util.watch,ModificationWatcher.Entry,8,0,0,0,2,0,1,0,1,0
+Wicket Util,org.apache.wicket.util.watch,ModificationWatcher,141,0,16,0,39,0,17,0,9,0
+Wicket Util,org.apache.wicket.util.watch,ModificationWatcher.new ICode() {...},10,0,0,0,3,0,2,0,2,0
+Wicket Util,org.apache.wicket.util.time,Duration,45,289,4,22,14,60,7,35,3,26
+Wicket Util,org.apache.wicket.util.time,AbstractTime,3,47,0,0,1,11,1,6,1,6
+Wicket Util,org.apache.wicket.util.time,TimeFrame.new ITimeFrameSource() {...},0,20,0,0,0,2,0,2,0,2
+Wicket Util,org.apache.wicket.util.time,AbstractTimeValue,0,7,0,0,0,3,0,2,0,2
+Wicket Util,org.apache.wicket.util.time,Time,217,320,4,0,49,50,14,27,12,27
+Wicket Util,org.apache.wicket.util.time,TimeOfDay,124,169,11,13,14,36,17,17,7,15
+Wicket Util,org.apache.wicket.util.time,TimeMap,32,53,3,5,5,12,3,5,1,3
+Wicket Util,org.apache.wicket.util.time,TimeOfDay.Meridian,0,4,0,0,0,2,0,1,0,1
+Wicket Util,org.apache.wicket.util.time,TimeFrame,46,133,9,17,6,23,11,16,2,12
+Wicket Util,org.apache.wicket.util.license,HtmlLicenseHeaderHandler,0,12,0,0,0,3,0,2,0,2
+Wicket Util,org.apache.wicket.util.license,XmlPrologHeaderHandler,16,12,0,0,5,3,1,2,1,2
+Wicket Util,org.apache.wicket.util.license,ApacheLicenseHeaderTestCase.SuffixAndIgnoreFileFilter,0,143,1,21,0,38,1,13,0,3
+Wicket Util,org.apache.wicket.util.license,VelocityLicenseHeaderHandler,36,12,2,0,10,3,4,2,3,2
+Wicket Util,org.apache.wicket.util.license,JavaLicenseHeaderHandler,86,30,8,0,24,7,6,4,2,4
+Wicket Util,org.apache.wicket.util.license,ApacheLicenseHeaderTestCase.DirectoryFileFilter,3,73,2,8,2,15,2,5,0,2
+Wicket Util,org.apache.wicket.util.license,ApacheLicenseHeaderTestCase.new ApacheLicenseHeaderTestCase.FileVisitor() {...},33,18,7,1,7,3,4,2,0,2
+Wicket Util,org.apache.wicket.util.license,XmlLicenseHeaderHandler,73,109,6,8,21,19,5,7,1,4
+Wicket Util,org.apache.wicket.util.license,PropertiesLicenseHeaderHandler,36,12,2,0,10,3,4,2,3,2
+Wicket Util,org.apache.wicket.util.license,AbstractLicenseHeaderHandler,49,112,0,6,16,33,3,8,3,5
+Wicket Util,org.apache.wicket.util.license,ApacheLicenseHeaderTestCase,90,274,10,10,20,44,7,10,0,7
+Wicket Util,org.apache.wicket.util.license,CssLicenseHeaderHandler,36,12,2,0,10,3,4,2,3,2
+Wicket Util,org.apache.wicket.util.license,JavaScriptLicenseHeaderHandler,18,16,0,0,5,3,3,2,3,2
+Wicket Util,org.apache.wicket.util.thread,Task.new Runnable() {...},85,0,6,0,20,0,5,0,2,0
+Wicket Util,org.apache.wicket.util.thread,Lock,3,0,0,0,1,0,1,0,1,0
+Wicket Util,org.apache.wicket.util.thread,Task,164,0,14,0,43,0,18,0,11,0
+Wicket Util,org.apache.wicket.util.diff.myers,Snake,0,8,0,0,0,3,0,2,0,2
+Wicket Util,org.apache.wicket.util.diff.myers,PathNode,57,26,9,3,14,8,7,3,1,3
+Wicket Util,org.apache.wicket.util.diff.myers,MyersDiff,120,173,26,18,21,41,21,5,0,4
+Wicket Util,org.apache.wicket.util.diff.myers,DiffNode,4,9,1,1,1,2,2,1,1,1
+Wicket Util,org.apache.wicket.util.convert.converter,DateConverter,0,10,0,0,0,3,0,3,0,3
+Wicket Util,org.apache.wicket.util.convert.converter,ZonedDateTimeConverter,0,15,0,0,0,5,0,5,0,5
+Wicket Util,org.apache.wicket.util.convert.converter,IntegerConverter,0,35,0,2,0,9,0,5,0,4
+Wicket Util,org.apache.wicket.util.convert.converter,ByteConverter,0,35,0,2,0,9,0,5,0,4
+Wicket Util,org.apache.wicket.util.convert.converter,SqlTimestampConverter,40,0,2,0,13,0,7,0,6,0
+Wicket Util,org.apache.wicket.util.convert.converter,LocalTimeConverter,0,10,0,0,0,4,0,4,0,4
+Wicket Util,org.apache.wicket.util.convert.converter,AbstractIntegerConverter,0,14,0,0,0,5,0,2,0,2
+Wicket Util,org.apache.wicket.util.convert.converter,FloatConverter,0,35,0,2,0,9,0,5,0,4
+Wicket Util,org.apache.wicket.util.convert.converter,LocalDateConverter,0,14,0,0,0,5,0,5,0,5
+Wicket Util,org.apache.wicket.util.convert.converter,DoubleConverter,0,35,0,2,0,9,0,5,0,4
+Wicket Util,org.apache.wicket.util.convert.converter,AbstractJavaTimeConverter,9,52,4,4,4,14,4,4,0,4
+Wicket Util,org.apache.wicket.util.convert.converter,BigIntegerConverter,2,17,1,1,1,5,1,3,0,3
+Wicket Util,org.apache.wicket.util.convert.converter,AbstractNumberConverter,25,120,6,20,6,29,6,11,0,4
+Wicket Util,org.apache.wicket.util.convert.converter,LocalDateTimeConverter,0,14,0,0,0,5,0,5,0,5
+Wicket Util,org.apache.wicket.util.convert.converter,AbstractDecimalConverter,0,6,0,0,0,2,0,2,0,2
+Wicket Util,org.apache.wicket.util.convert.converter,SqlDateConverter,10,0,0,0,3,0,3,0,3,0
+Wicket Util,org.apache.wicket.util.convert.converter,BooleanConverter,0,29,0,0,0,6,0,4,0,4
+Wicket Util,org.apache.wicket.util.convert.converter,CalendarConverter,5,45,3,3,2,13,3,4,0,4
+Wicket Util,org.apache.wicket.util.convert.converter,SqlTimeConverter,21,0,2,0,6,0,5,0,4,0
+Wicket Util,org.apache.wicket.util.convert.converter,AbstractConverter,2,61,1,3,1,14,1,5,0,4
+Wicket Util,org.apache.wicket.util.convert.converter,CharacterConverter,0,40,0,4,0,9,0,6,0,4
+Wicket Util,org.apache.wicket.util.convert.converter,BigDecimalConverter,2,10,0,0,1,2,1,2,1,2
+Wicket Util,org.apache.wicket.util.convert.converter,AbstractDateConverter,8,44,3,5,3,12,3,5,0,4
+Wicket Util,org.apache.wicket.util.convert.converter,LongConverter,0,35,0,2,0,9,0,5,0,4
+Wicket Util,org.apache.wicket.util.convert.converter,ShortConverter,0,35,0,2,0,9,0,5,0,4
+Wicket Util,org.apache.wicket.util.lang,Primitives,3,8,0,0,1,1,1,1,1,1
+Wicket Util,org.apache.wicket.util.lang,Exceptions.Visit,13,0,0,0,6,0,3,0,3,0
+Wicket Util,org.apache.wicket.util.lang,Exceptions,43,0,6,0,13,0,6,0,3,0
+Wicket Util,org.apache.wicket.util.lang,PackageName,55,0,4,0,14,0,9,0,7,0
+Wicket Util,org.apache.wicket.util.lang,EnumeratedType,31,33,6,2,8,9,4,4,1,3
+Wicket Util,org.apache.wicket.util.lang,Classes,8,32,2,6,1,12,3,4,1,2
+Wicket Util,org.apache.wicket.util.lang,Numbers,0,141,0,48,0,31,0,27,0,3
+Wicket Util,org.apache.wicket.util.lang,Exceptions.new Exceptions.IThrowableVisitor() {...},16,0,2,0,4,0,3,0,2,0
+Wicket Util,org.apache.wicket.util.lang,Threads.ThreadDump,2,0,0,0,1,0,1,0,1,0
+Wicket Util,org.apache.wicket.util.lang,Generics,17,12,0,0,4,3,4,3,4,3
+Wicket Util,org.apache.wicket.util.lang,Threads,124,0,8,0,31,0,7,0,3,0
+Wicket Util,org.apache.wicket.util.lang,Bytes,29,261,4,24,4,52,4,33,0,23
+Wicket Util,org.apache.wicket.util.lang,Checks,99,0,8,0,19,0,11,0,7,0
+Wicket Util,org.apache.wicket.util.lang,Args,94,44,10,6,16,9,11,6,5,4
+Wicket Util,org.apache.wicket.util.lang,Packages,61,47,7,7,14,11,9,4,5,1
+Wicket Util,org.apache.wicket.util.lang,Objects,688,227,205,39,162,53,132,13,12,7
+Wicket Util,org.apache.wicket.util.markup.xhtml,WellFormedXmlTestCase,114,0,4,0,27,0,7,0,5,0
+Wicket Util,org.apache.wicket.util.markup.xhtml,WellFormedXmlTestCase.new FileFilter() {...},34,0,10,0,5,0,7,0,2,0
+Wicket Util,org.apache.wicket.util.markup.xhtml,WellFormedXmlTestCase.new EntityResolver() {...},50,0,2,0,11,0,3,0,2,0
+Wicket Util,org.apache.wicket.util.markup.xhtml,WellFormedXmlTestCase.new ErrorHandler() {...},9,0,0,0,4,0,4,0,4,0
+Wicket Util,org.apache.wicket.util.encoding,UrlEncoder,42,313,12,24,9,73,9,14,1,3
+Wicket Util,org.apache.wicket.util.encoding,UrlEncoder.Type,0,34,0,0,0,4,0,1,0,1
+Wicket Util,org.apache.wicket.util.encoding,UrlDecoder,37,138,8,17,8,39,8,9,1,3
+Wicket Util,org.apache.wicket.util.resource,ResourceUtils.PathLocale,0,9,0,0,0,4,0,1,0,1
+Wicket Util,org.apache.wicket.util.resource,FileSystemResourceStream,178,0,6,0,43,0,14,0,11,0
+Wicket Util,org.apache.wicket.util.resource,XSLTResourceStream,91,0,4,0,26,0,9,0,7,0
+Wicket Util,org.apache.wicket.util.resource,ResourceStreamNotFoundException,16,0,0,0,8,0,4,0,4,0
+Wicket Util,org.apache.wicket.util.resource,FileResourceStream,113,0,14,0,34,0,17,0,10,0
+Wicket Util,org.apache.wicket.util.resource,AbstractResourceStream,30,0,0,0,13,0,10,0,10,0
+Wicket Util,org.apache.wicket.util.resource,AbstractStringResourceStream,125,0,8,0,35,0,15,0,11,0
+Wicket Util,org.apache.wicket.util.resource,StringResourceStream,33,0,0,0,8,0,5,0,5,0
+Wicket Util,org.apache.wicket.util.resource,ResourceUtils,85,138,12,16,17,28,11,7,2,2
+Wicket Util,org.apache.wicket.util.resource,AbstractResourceStreamWriter,36,0,0,0,15,0,12,0,12,0
+Wicket Util,org.apache.wicket.util.resource,StringBufferResourceStream,54,0,0,0,14,0,6,0,6,0
+Wicket Util,org.apache.wicket.util.resource,ZipResourceStream,197,0,14,0,43,0,16,0,9,0
+Wicket Util,org.apache.wicket.util.resource,ResourceStreamWrapper,59,0,0,0,19,0,13,0,13,0
+Wicket Util,org.apache.wicket.util.parse.metapattern,GroupNotBoundException,3,0,0,0,2,0,1,0,1,0
+Wicket Util,org.apache.wicket.util.parse.metapattern,Group,8,37,2,2,2,9,2,4,0,4
+Wicket Util,org.apache.wicket.util.parse.metapattern,IntegerGroup,4,48,2,2,0,13,2,7,0,7
+Wicket Util,org.apache.wicket.util.parse.metapattern,BooleanGroup,24,0,2,0,5,0,4,0,3,0
+Wicket Util,org.apache.wicket.util.parse.metapattern,FloatingPointGroup,36,0,4,0,8,0,7,0,5,0
+Wicket Util,org.apache.wicket.util.parse.metapattern,GroupAlreadyBoundException,3,0,0,0,2,0,1,0,1,0
+Wicket Util,org.apache.wicket.util.parse.metapattern,MetaPattern,10,355,0,12,3,81,2,16,2,10
+Wicket Util,org.apache.wicket.util.parse.metapattern,OptionalMetaPattern,8,20,0,0,4,5,2,3,2,3
+Wicket Util,org.apache.wicket.util.visit,Visit,48,0,6,0,13,0,11,0,8,0
+Wicket Util,org.apache.wicket.util.visit,IVisitFilter,0,5,0,0,0,1,0,1,0,1
+Wicket Util,org.apache.wicket.util.visit,Visit.Action,34,0,0,0,2,0,1,0,1,0
+Wicket Util,org.apache.wicket.util.visit,Visits,162,0,26,0,42,0,21,0,8,0
+Wicket Util,org.apache.wicket.util.visit,IVisitFilter.new IVisitFilter() {...},2,5,0,0,1,2,1,2,1,2
+Wicket Util,org.apache.wicket.util.visit,ClassVisitFilter,2,16,0,0,1,5,1,2,1,2
+Wicket Util,org.apache.wicket.util.visit,Visits.SingletonIterable,11,0,0,0,4,0,2,0,2,0
+Wicket Util,org.apache.wicket.util.io,FullyBufferedReader,78,167,7,25,20,35,16,19,11,8
+Wicket Util,org.apache.wicket.util.io,ByteCountingOutputStream,21,0,0,0,6,0,4,0,4,0
+Wicket Util,org.apache.wicket.util.io,BOMInputStream.new Comparator() {...},18,3,4,0,7,1,3,1,1,1
+Wicket Util,org.apache.wicket.util.io,ByteOrderMark,161,134,20,4,32,14,17,4,5,4
+Wicket Util,org.apache.wicket.util.io,IOUtils,431,13,61,1,133,7,61,3,30,3
+Wicket Util,org.apache.wicket.util.io,StringBufferWriter,60,0,0,0,20,0,11,0,11,0
+Wicket Util,org.apache.wicket.util.io,ProxyInputStream,111,12,4,0,41,6,12,3,10,3
+Wicket Util,org.apache.wicket.util.io,ByteArrayOutputStream,143,166,16,14,30,41,21,7,7,6
+Wicket Util,org.apache.wicket.util.io,Streams,122,0,10,0,32,0,13,0,8,0
+Wicket Util,org.apache.wicket.util.io,BOMInputStream,104,245,23,33,17,55,23,23,7,11
+Wicket Util,org.apache.wicket.util.io,XmlReader,27,163,6,20,3,42,7,15,1,8
+Wicket Util,org.apache.wicket.util.io,DeferredFileOutputStream,91,0,6,0,25,0,10,0,7,0
+Wicket Util,org.apache.wicket.util.io,Connections,66,8,11,1,25,3,8,1,2,1
+Wicket Util,org.apache.wicket.util.io,ThresholdingOutputStream,102,0,6,0,29,0,13,0,10,0
+Wicket Util,org.apache.wicket.util.io,HandleArrayListStack,135,0,26,0,37,0,23,0,10,0
+Wicket Util,org.apache.wicket.util.file,Files,189,152,22,28,47,37,24,18,10,7
+Wicket Util,org.apache.wicket.util.file,Folder.FileFilter.new Folder.FileFilter() {...},5,0,0,0,2,0,2,0,2,0
+Wicket Util,org.apache.wicket.util.file,Path,63,0,4,0,14,0,6,0,4,0
+Wicket Util,org.apache.wicket.util.file,FileCleanerTrackerAdapter,41,0,0,0,11,0,5,0,5,0
+Wicket Util,org.apache.wicket.util.file,FileCleaner,25,0,0,0,9,0,4,0,4,0
+Wicket Util,org.apache.wicket.util.file,Folder.new FileFilter() {...},24,0,4,0,2,0,4,0,2,0
+Wicket Util,org.apache.wicket.util.file,Folder.new Folder.FolderFilter() {...},21,0,4,0,3,0,4,0,2,0
+Wicket Util,org.apache.wicket.util.file,Folder.new FileFilter() {...},25,0,4,0,2,0,4,0,2,0
+Wicket Util,org.apache.wicket.util.file,Folder,267,0,34,0,50,0,34,0,17,0
+Wicket Util,org.apache.wicket.util.file,FolderDeleteStrategy,79,0,18,0,18,0,12,0,3,0
+Wicket Util,org.apache.wicket.util.file,WebXmlFile,144,216,10,26,35,47,8,19,2,7
+Wicket Util,org.apache.wicket.util.file,Folder.FileFilter,5,0,0,0,1,0,1,0,1,0
+Wicket Util,org.apache.wicket.util.file,File,175,14,8,0,42,6,22,3,18,3
+Wicket Util,org.apache.wicket.util.parse.metapattern.parsers,WordParser,34,0,0,0,5,0,3,0,3,0
+Wicket Util,org.apache.wicket.util.parse.metapattern.parsers,ListParser,2,59,1,5,1,12,1,5,0,3
+Wicket Util,org.apache.wicket.util.parse.metapattern.parsers,IntegerVariableAssignmentParser,0,56,0,0,0,8,0,5,0,5
+Wicket Util,org.apache.wicket.util.parse.metapattern.parsers,MetaPatternParser,9,60,2,2,1,17,2,7,1,6
+Wicket Util,org.apache.wicket.util.parse.metapattern.parsers,VariableAssignmentParser,0,126,0,0,0,11,0,5,0,5
+Wicket Util,org.apache.wicket.util.parse.metapattern.parsers,TagNameParser,0,59,0,2,0,10,0,5,0,4
+Wicket Util,org.apache.wicket.util.parse.metapattern.parsers,CommaSeparatedVariableParser,0,25,0,0,0,3,0,2,0,2
+Wicket Util,org.apache.wicket.util.string.interpolator,VariableInterpolator,4,162,3,17,1,36,3,11,0,4
+Wicket Util,org.apache.wicket.util.string.interpolator,MapVariableInterpolator,11,21,0,0,3,7,2,3,2,3
+Wicket Util,org.apache.wicket.util.string.interpolator,SystemVariableInterpolator,5,0,0,0,2,0,1,0,1,0

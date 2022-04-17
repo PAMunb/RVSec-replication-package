@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>br.unb.cic</groupId>
+	<artifactId>mop-test-suite-b04</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<properties>
+		<checkstyle.skip>true</checkstyle.skip>
+	</properties>
+
+	<modules>
+		<module>activemq-artemis/artemis-commons</module>
+		<module>deltaspike/deltaspike/core/impl</module>
+		<module>directory-server/kerberos-codec</module>
+		<module>manifoldcf/framework/core</module>
+		<module>openwebbeans-meecrowave/meecrowave-core</module>
+		<!-- <module>spark/core</module> -->
+		<module>tika/tika-core</module>
+		<!-- <module>tomee/container/openejb-core</module> -->
+		<module>wicket/wicket-util</module>
+	</modules>
+
+	<build>
+		<!-- -am -->
+		<defaultGoal>clean install</defaultGoal>
+	</build>
+
+</project>
