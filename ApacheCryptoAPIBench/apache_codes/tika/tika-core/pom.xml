@@ -299,6 +299,135 @@
 				</plugins>
 			</build>
 		</profile>
+		<profile>
+			<!-- https://www.evosuite.org/documentation/maven-plugin/ -->
+			<!-- mvn -Dcores=8 -DmemoryInMB=8000 -Pevosuite-generate test -->
+			<id>evosuite-generate</id>
+			<properties>
+				<evosuiteVersion>1.0.6</evosuiteVersion>
+				<targetFolder>src/test/evosuite</targetFolder>
+			</properties>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.evosuite.plugins</groupId>
+						<artifactId>evosuite-maven-plugin</artifactId>
+						<version>${evosuiteVersion}</version>
+						<executions>
+							<execution>
+								<id>evosuite-prepare</id>
+								<phase>process-test-classes</phase>
+								<goals>
+									<goal>prepare</goal>
+								</goals>
+							</execution>
+							<execution>
+								<id>evosuite-generate</id>
+								<phase>process-test-classes</phase>
+								<goals>
+									<goal>generate</goal>
+								</goals>
+							</execution>
+							<execution>
+								<id>evosuite-export</id>
+								<phase>process-test-classes</phase>
+								<goals>
+									<goal>export</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-surefire-plugin</artifactId>
+						<configuration>
+							<skip>true</skip>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		<profile>
+			<!-- https://www.evosuite.org/documentation/maven-plugin/ -->
+			<!-- mvn -Dcores=8 -DmemoryInMB=8000 -Pevosuite evosuite:generate evosuite:export test -->
+			<id>evosuite</id>
+			<properties>
+				<evosuiteVersion>1.0.6</evosuiteVersion>
+				<targetFolder>src/test/evosuite</targetFolder>		
+				<testSourceDirectory>src/test/evosuite</testSourceDirectory>		
+			</properties>
+			<dependencies>
+				<dependency>
+					<groupId>org.evosuite</groupId>
+					<artifactId>evosuite-standalone-runtime</artifactId>
+					<version>${evosuiteVersion}</version>
+					<scope>test</scope>
+				</dependency>
+			</dependencies>
+			<build>
+<!-- 				<testSourceDirectory>src/test/evosuite</testSourceDirectory> -->
+				<plugins>
+					<plugin>
+    <groupId>org.codehaus.mojo</groupId>
+    <artifactId>build-helper-maven-plugin</artifactId>
+    <version>1.8</version>
+   <executions>
+     <execution>
+       <id>add-test-source</id>
+       <phase>generate-test-sources</phase>
+       <goals>
+         <goal>add-test-source</goal>
+       </goals>
+       <configuration>
+          <sources>
+          	<source>src/main/java</source>
+          	<source>src/test/java</source>
+            <source>${targetFolder}</source>
+          </sources>
+       </configuration>
+    </execution>
+  </executions>
+</plugin>
+					<plugin>
+						<groupId>org.evosuite.plugins</groupId>
+						<artifactId>evosuite-maven-plugin</artifactId>
+						<version>${evosuiteVersion}</version>
+						<executions>
+							<execution>
+								<id>evosuite-prepare</id>
+								<phase>process-test-classes</phase>
+								<goals>
+									<goal>prepare</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-surefire-plugin</artifactId>
+						<configuration>							
+							<argLine>-Xmx4096m -XX:MaxPermSize=1024m</argLine>
+							<argLine>-javaagent:${basedir}/JavaMOPAgent.jar</argLine>
+							<runOrder>alphabetical</runOrder>
+							<properties>
+								<property>
+									<name>listener</name>
+									<value>org.evosuite.runtime.InitializingListener</value>
+								</property>
+							</properties>
+						</configuration>
+					</plugin>
+				</plugins>
+				<testResources>
+					<testResource>
+						<directory>${basedir}/src/test/java</directory>
+					</testResource>
+					<testResource>
+						<directory>${basedir}/src/test/evosuite</directory>
+					</testResource>
+				</testResources>
+			</build>
+		</profile>
 	</profiles>
 
   <description>This is the core Apache Tika™ toolkit library from which all other modules inherit functionality. It also
