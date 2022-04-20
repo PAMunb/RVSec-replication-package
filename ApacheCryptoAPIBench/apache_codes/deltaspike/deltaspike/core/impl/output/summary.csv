@@ -1,0 +1,4 @@
+spec,class,className,method,location,error
+SecretKeySpec,org.apache.deltaspike.core.impl.crypto.DefaultCipherService,DefaultCipherService,getSecretKeySpec,DefaultCipherService.java:189,UnsatisfiedConstraint
+CipherSpec,org.apache.deltaspike.core.impl.crypto.DefaultCipherService,DefaultCipherService,aesEncrypt,DefaultCipherService.java:156,InvalidSequenceOfMethodCalls
+CipherSpec,org.apache.deltaspike.core.impl.crypto.DefaultCipherService,DefaultCipherService,aesDecrypt,DefaultCipherService.java:175,InvalidSequenceOfMethodCalls

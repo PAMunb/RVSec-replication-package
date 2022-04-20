@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
-Bnd-LastModified: 1649264900550
-Build-Jdk: 1.8.0_312
-Built-By: pedro
+Bnd-LastModified: 1650126675851
+Build-Jdk: 1.8.0_282
+Built-By: rbonifacio
 Bundle-Description: Internationalization of errors and other messages
 Bundle-DocURL: http://www.apache.org/
 Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt

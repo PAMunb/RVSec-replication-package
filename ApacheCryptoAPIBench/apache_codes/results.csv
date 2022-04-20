@@ -1,0 +1,9 @@
+project,profile,passed,time,exception
+activemq-artemis,mop,true,23815,
+deltaspike,mop,true,49907,
+directory-server,mop,true,33945,
+manifoldcf,mop,true,25747,
+openwebbeans-meecrowave,mop,true,54982,
+spark,mop,false,6760390,
+tika,mop,true,85429,
+wicket,mop,true,1178432,
