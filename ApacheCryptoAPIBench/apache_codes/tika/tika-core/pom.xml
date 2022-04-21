@@ -308,8 +308,8 @@
 			<properties>
 				<evosuiteVersion>1.2.0</evosuiteVersion>
 				<targetFolder>src/test/evosuite</targetFolder>
-				<cores>2</cores>
-				<memoryInMB>8000</memoryInMB>
+				<cores>8</cores>
+				<memoryInMB>16000</memoryInMB>
 			</properties>
 			<build>
 				<plugins>
