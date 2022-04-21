@@ -302,8 +302,7 @@
 		<profile>
 			<!-- https://www.evosuite.org/documentation/maven-plugin/ -->
 			<!-- mvn clean test -Pevosuite-generate -->
-			<!-- mvn -Dcores=8 -DmemoryInMB=8000 -Pevosuite-generate evosuite:generate 
-				evosuite:export test -->
+			<!-- mvn -Dcores=8 -DmemoryInMB=8000 -Pevosuite-generate evosuite:generate evosuite:export test -->
 			<id>evosuite-generate</id>
 			<properties>
 				<evosuiteVersion>1.2.0</evosuiteVersion>
@@ -351,6 +350,13 @@
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-surefire-plugin</artifactId>
+						<configuration>
+							<skip>true</skip>
+						</configuration>
+					</plugin>
+					<plugin>
+						<artifactId>maven-failsafe-plugin</artifactId>
+						<version>2.10</version>
 						<configuration>
 							<skip>true</skip>
 						</configuration>
