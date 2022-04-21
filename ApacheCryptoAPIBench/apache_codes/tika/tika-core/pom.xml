@@ -206,7 +206,7 @@
 					<plugin>
 						<groupId>org.jacoco</groupId>
 						<artifactId>jacoco-maven-plugin</artifactId>
-						<version>0.8.7</version>
+						<version>0.8.8</version>
 						<executions>
 							<execution>
 								<goals>
@@ -301,11 +301,15 @@
 		</profile>
 		<profile>
 			<!-- https://www.evosuite.org/documentation/maven-plugin/ -->
-			<!-- mvn -Dcores=8 -DmemoryInMB=8000 -Pevosuite-generate test -->
+			<!-- mvn clean test -Pevosuite-generate -->
+			<!-- mvn -Dcores=8 -DmemoryInMB=8000 -Pevosuite-generate evosuite:generate 
+				evosuite:export test -->
 			<id>evosuite-generate</id>
 			<properties>
-				<evosuiteVersion>1.0.6</evosuiteVersion>
+				<evosuiteVersion>1.2.0</evosuiteVersion>
 				<targetFolder>src/test/evosuite</targetFolder>
+				<cores>2</cores>
+				<memoryInMB>8000</memoryInMB>
 			</properties>
 			<build>
 				<plugins>
@@ -329,6 +333,13 @@
 								</goals>
 							</execution>
 							<execution>
+								<id>evosuite-info</id>
+								<phase>process-test-classes</phase>
+								<goals>
+									<goal>info</goal>
+								</goals>
+							</execution>
+							<execution>
 								<id>evosuite-export</id>
 								<phase>process-test-classes</phase>
 								<goals>
@@ -349,12 +360,11 @@
 		</profile>
 		<profile>
 			<!-- https://www.evosuite.org/documentation/maven-plugin/ -->
-			<!-- mvn -Dcores=8 -DmemoryInMB=8000 -Pevosuite evosuite:generate evosuite:export test -->
+			<!-- mvn clean test -Pevosuite -->
 			<id>evosuite</id>
 			<properties>
-				<evosuiteVersion>1.0.6</evosuiteVersion>
-				<targetFolder>src/test/evosuite</targetFolder>		
-				<testSourceDirectory>src/test/evosuite</testSourceDirectory>		
+				<evosuiteVersion>1.2.0</evosuiteVersion>
+				<targetFolder>src/test/evosuite</targetFolder>
 			</properties>
 			<dependencies>
 				<dependency>
@@ -365,29 +375,27 @@
 				</dependency>
 			</dependencies>
 			<build>
-<!-- 				<testSourceDirectory>src/test/evosuite</testSourceDirectory> -->
+				<!-- <testSourceDirectory>src/test/evosuite</testSourceDirectory> -->
 				<plugins>
 					<plugin>
-    <groupId>org.codehaus.mojo</groupId>
-    <artifactId>build-helper-maven-plugin</artifactId>
-    <version>1.8</version>
-   <executions>
-     <execution>
-       <id>add-test-source</id>
-       <phase>generate-test-sources</phase>
-       <goals>
-         <goal>add-test-source</goal>
-       </goals>
-       <configuration>
-          <sources>
-          	<source>src/main/java</source>
-          	<source>src/test/java</source>
-            <source>${targetFolder}</source>
-          </sources>
-       </configuration>
-    </execution>
-  </executions>
-</plugin>
+						<groupId>org.codehaus.mojo</groupId>
+						<artifactId>build-helper-maven-plugin</artifactId>
+						<version>3.3.0</version>
+						<executions>
+							<execution>
+								<id>add-test-source</id>
+								<phase>generate-test-sources</phase>
+								<goals>
+									<goal>add-test-source</goal>
+								</goals>
+								<configuration>
+									<sources>
+										<source>${targetFolder}</source>
+									</sources>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
 					<plugin>
 						<groupId>org.evosuite.plugins</groupId>
 						<artifactId>evosuite-maven-plugin</artifactId>
@@ -403,11 +411,30 @@
 						</executions>
 					</plugin>
 					<plugin>
+						<groupId>org.jacoco</groupId>
+						<artifactId>jacoco-maven-plugin</artifactId>
+						<version>0.8.8</version>
+						<executions>
+							<execution>
+								<goals>
+									<goal>prepare-agent</goal>
+								</goals>
+							</execution>
+							<execution>
+								<id>report</id>
+								<phase>test</phase>
+								<goals>
+									<goal>report</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-surefire-plugin</artifactId>
-						<configuration>							
+						<configuration>
 							<argLine>-Xmx4096m -XX:MaxPermSize=1024m</argLine>
-							<argLine>-javaagent:${basedir}/JavaMOPAgent.jar</argLine>
+							<argLine>-javaagent:${basedir}/JavaMOPAgent.jar @{argLine}</argLine>
 							<runOrder>alphabetical</runOrder>
 							<properties>
 								<property>
@@ -418,14 +445,6 @@
 						</configuration>
 					</plugin>
 				</plugins>
-				<testResources>
-					<testResource>
-						<directory>${basedir}/src/test/java</directory>
-					</testResource>
-					<testResource>
-						<directory>${basedir}/src/test/evosuite</directory>
-					</testResource>
-				</testResources>
 			</build>
 		</profile>
 	</profiles>
