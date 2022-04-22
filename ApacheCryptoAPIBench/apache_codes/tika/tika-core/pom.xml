@@ -442,6 +442,7 @@
 							<argLine>-Xmx4096m -XX:MaxPermSize=1024m</argLine>
 							<argLine>-javaagent:${basedir}/JavaMOPAgent.jar @{argLine}</argLine>
 							<runOrder>alphabetical</runOrder>
+							<testFailureIgnore>true</testFailureIgnore>
 							<properties>
 								<property>
 									<name>listener</name>
