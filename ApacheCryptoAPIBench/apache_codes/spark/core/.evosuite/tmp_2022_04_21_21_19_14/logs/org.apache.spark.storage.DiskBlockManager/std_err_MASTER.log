@@ -1,0 +1,5 @@
+[MASTER] 23:19:44.592 [main] ERROR ExternalProcessGroupHandler - Class org.apache.spark.storage.DiskBlockManager. Clients have not finished yet, although a timeout occurred.
+Client-0: SEARCH
+
+[MASTER] 23:19:44.695 [main] ERROR SearchStatistics - No statistics has been saved because EvoSuite failed to generate any test case
+[MASTER] 23:19:44.797 [main] ERROR TestGeneration - failed to write statistics data

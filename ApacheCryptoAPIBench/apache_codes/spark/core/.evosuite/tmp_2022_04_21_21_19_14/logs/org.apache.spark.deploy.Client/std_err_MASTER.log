@@ -1,0 +1,7 @@
+[MASTER] 00:17:09.831 [main] ERROR ExternalProcessGroupHandler - Class org.apache.spark.deploy.Client. Clients have not finished yet, although a timeout occurred.
+Client-0: SEARCH
+
+[MASTER] 00:17:09.860 [Thread-3] ERROR ExternalProcessGroupHandler - Exception while reading output of client process. Stream closed
+[MASTER] 00:17:09.935 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 00:17:10.937 [main] ERROR SearchStatistics - Not going to write down statistics data, as some are missing
+[MASTER] 00:17:11.039 [main] ERROR TestGeneration - failed to write statistics data

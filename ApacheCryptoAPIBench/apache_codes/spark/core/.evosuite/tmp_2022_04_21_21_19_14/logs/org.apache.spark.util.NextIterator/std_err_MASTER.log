@@ -1,0 +1,5 @@
+[MASTER] 23:23:06.791 [main] ERROR ExternalProcessGroupHandler - Class org.apache.spark.util.NextIterator. Clients have not finished yet, although a timeout occurred.
+Client-0: SEARCH
+
+[MASTER] 23:23:06.894 [main] ERROR SearchStatistics - No statistics has been saved because EvoSuite failed to generate any test case
+[MASTER] 23:23:06.995 [main] ERROR TestGeneration - failed to write statistics data

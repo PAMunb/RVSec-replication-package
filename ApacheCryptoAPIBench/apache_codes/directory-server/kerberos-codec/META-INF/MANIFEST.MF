@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Bnd-LastModified: 1650553576603
+Bnd-LastModified: 1650573753736
 Build-Jdk: 1.8.0_292
 Built-By: pedro
 Bundle-Description: The Kerberos protocol encoder/decoder module

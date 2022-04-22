@@ -1,0 +1,18 @@
+[MASTER] 18:53:57.712 [TEST_EXECUTION_THREAD_0] ERROR FunctionalMockStatement - Cannot use Mockito on java.util.Comparator<java.lang.Object> due to IAE: 
+Mockito cannot mock this class: interface java.util.Comparator.
+
+Mockito can only mock non-private & non-final classes.
+If you're not sure why you're getting this error, please report to the mailing list.
+
+
+Java               : 1.8
+JVM vendor name    : AdoptOpenJDK
+JVM vendor version : 25.292-b10
+JVM name           : OpenJDK 64-Bit Server VM
+JVM version        : 1.8.0_292-b10
+JVM info           : mixed mode
+OS name            : Linux
+OS version         : 4.19.0-20-cloud-amd64
+
+
+Underlying exception : java.lang.IllegalArgumentException: Could not create type

@@ -1,0 +1,5 @@
+[MASTER] 00:32:04.808 [main] ERROR ExternalProcessGroupHandler - Class org.apache.spark.InterruptibleIterator. Clients have not finished yet, although a timeout occurred.
+Client-0: SEARCH
+
+[MASTER] 00:32:04.911 [main] ERROR SearchStatistics - No statistics has been saved because EvoSuite failed to generate any test case
+[MASTER] 00:32:05.012 [main] ERROR TestGeneration - failed to write statistics data

@@ -1,0 +1,5 @@
+[MASTER] 00:13:42.711 [main] ERROR ExternalProcessGroupHandler - Class org.apache.spark.serializer.SerializerInstance. Clients have not finished yet, although a timeout occurred.
+Client-0: SEARCH
+
+[MASTER] 00:13:42.813 [main] ERROR SearchStatistics - No statistics has been saved because EvoSuite failed to generate any test case
+[MASTER] 00:13:42.914 [main] ERROR TestGeneration - failed to write statistics data

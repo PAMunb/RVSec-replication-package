@@ -1,0 +1,6 @@
+[MASTER] 23:59:45.603 [main] ERROR ExternalProcessGroupHandler - Class org.apache.spark.metrics.sink.MetricsServlet. Clients have not finished yet, although a timeout occurred.
+Client-0: SEARCH
+
+[MASTER] 23:59:45.706 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 23:59:46.709 [main] ERROR SearchStatistics - Not going to write down statistics data, as some are missing
+[MASTER] 23:59:46.810 [main] ERROR TestGeneration - failed to write statistics data

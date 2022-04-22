@@ -1,0 +1,6 @@
+[MASTER] 00:26:19.579 [main] ERROR ExternalProcessGroupHandler - Class org.apache.spark.scheduler.cluster.ExecutorData. Clients have not finished yet, although a timeout occurred.
+Client-0: SEARCH
+
+[MASTER] 00:26:19.682 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 00:26:20.693 [main] ERROR SearchStatistics - Not going to write down statistics data, as some are missing
+[MASTER] 00:26:20.794 [main] ERROR TestGeneration - failed to write statistics data

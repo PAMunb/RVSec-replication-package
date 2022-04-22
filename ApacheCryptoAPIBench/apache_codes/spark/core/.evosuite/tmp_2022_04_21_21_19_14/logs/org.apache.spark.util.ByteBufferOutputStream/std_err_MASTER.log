@@ -1,0 +1,3 @@
+[MASTER] 23:34:06.663 [main] ERROR ExternalProcessGroupHandler - Class org.apache.spark.util.ByteBufferOutputStream. Clients have not finished yet, although a timeout occurred.
+Client-0: ASSERTION_GENERATION
+

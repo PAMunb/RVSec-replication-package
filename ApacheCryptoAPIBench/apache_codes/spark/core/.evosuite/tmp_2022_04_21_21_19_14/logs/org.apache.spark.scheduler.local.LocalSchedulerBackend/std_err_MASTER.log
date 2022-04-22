@@ -1,0 +1,5 @@
+[MASTER] 00:34:28.260 [main] ERROR ExternalProcessGroupHandler - Class org.apache.spark.scheduler.local.LocalSchedulerBackend. Clients have not finished yet, although a timeout occurred.
+Client-0: SEARCH
+
+[MASTER] 00:34:28.362 [main] ERROR SearchStatistics - No statistics has been saved because EvoSuite failed to generate any test case
+[MASTER] 00:34:28.463 [main] ERROR TestGeneration - failed to write statistics data

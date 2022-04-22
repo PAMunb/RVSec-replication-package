@@ -1,0 +1,6 @@
+[MASTER] 01:36:28.424 [main] ERROR ExternalProcessGroupHandler - Class org.apache.tika.detect.TextDetector. Clients have not finished yet, although a timeout occurred.
+Client-0: COVERAGE_ANALYSIS
+
+[MASTER] 01:36:28.527 [main] ERROR SearchStatistics - No obtained value for output variable: WeakMutationScore
+[MASTER] 01:36:29.530 [main] ERROR SearchStatistics - Not going to write down statistics data, as some are missing
+[MASTER] 01:36:29.630 [main] ERROR TestGeneration - failed to write statistics data

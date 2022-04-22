@@ -1,0 +1,6 @@
+[MASTER] 00:47:14.192 [main] ERROR ExternalProcessGroupHandler - Class org.apache.spark.storage.BlockManagerSource. Clients have not finished yet, although a timeout occurred.
+Client-0: SEARCH
+
+[MASTER] 00:47:14.295 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 00:47:15.298 [main] ERROR SearchStatistics - Not going to write down statistics data, as some are missing
+[MASTER] 00:47:15.401 [main] ERROR TestGeneration - failed to write statistics data

@@ -1,0 +1,5 @@
+[MASTER] 01:43:15.765 [pool-2-thread-1] WARN  TimeController - Phase INITIALIZATION lasted too long, 2 seconds more than allowed.
+[MASTER] 01:43:22.500 [pool-2-thread-1] WARN  TestChromosome - Functional mock problem: org.evosuite.ga.ConstructionFailedException: No generators of type java.util.List<org.apache.tika.detect.DefaultEncodingDetector>
+[MASTER] 01:43:22.634 [pool-2-thread-1] WARN  TestChromosome - Functional mock problem: org.evosuite.ga.ConstructionFailedException: No generators of type java.util.List<java.lang.Object>
+[MASTER] 01:43:22.671 [pool-2-thread-1] WARN  TestChromosome - Functional mock problem: org.evosuite.ga.ConstructionFailedException: No generators of type java.util.List<java.lang.Class<java.lang.Object>>
+[MASTER] 01:43:22.715 [pool-2-thread-1] WARN  TestChromosome - Functional mock problem: org.evosuite.ga.ConstructionFailedException: No generators of type java.util.List<java.lang.Class<org.apache.tika.detect.DefaultEncodingDetector>>

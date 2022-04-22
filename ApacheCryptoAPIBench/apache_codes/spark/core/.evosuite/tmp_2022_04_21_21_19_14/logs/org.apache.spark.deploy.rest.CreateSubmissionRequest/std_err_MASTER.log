@@ -1,0 +1,6 @@
+[MASTER] 23:53:35.638 [main] ERROR ExternalProcessGroupHandler - Class org.apache.spark.deploy.rest.CreateSubmissionRequest. Clients have not finished yet, although a timeout occurred.
+Client-0: SEARCH
+
+[MASTER] 23:53:35.742 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 23:53:36.744 [main] ERROR SearchStatistics - Not going to write down statistics data, as some are missing
+[MASTER] 23:53:36.846 [main] ERROR TestGeneration - failed to write statistics data

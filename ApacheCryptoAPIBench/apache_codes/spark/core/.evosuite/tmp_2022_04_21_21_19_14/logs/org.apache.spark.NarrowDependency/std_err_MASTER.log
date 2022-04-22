@@ -1,0 +1,6 @@
+[MASTER] 00:22:13.547 [main] ERROR ExternalProcessGroupHandler - Class org.apache.spark.NarrowDependency. Clients have not finished yet, although a timeout occurred.
+Client-0: SEARCH
+
+[MASTER] 00:22:13.651 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 00:22:14.656 [main] ERROR SearchStatistics - Not going to write down statistics data, as some are missing
+[MASTER] 00:22:14.759 [main] ERROR TestGeneration - failed to write statistics data

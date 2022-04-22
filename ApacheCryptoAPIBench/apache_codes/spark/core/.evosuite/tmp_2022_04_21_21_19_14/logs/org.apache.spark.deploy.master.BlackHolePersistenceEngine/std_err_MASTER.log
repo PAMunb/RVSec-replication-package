@@ -1,0 +1,6 @@
+[MASTER] 00:12:20.840 [main] ERROR ExternalProcessGroupHandler - Class org.apache.spark.deploy.master.BlackHolePersistenceEngine. Clients have not finished yet, although a timeout occurred.
+Client-0: SEARCH
+
+[MASTER] 00:12:20.944 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 00:12:21.948 [main] ERROR SearchStatistics - Not going to write down statistics data, as some are missing
+[MASTER] 00:12:22.050 [main] ERROR TestGeneration - failed to write statistics data

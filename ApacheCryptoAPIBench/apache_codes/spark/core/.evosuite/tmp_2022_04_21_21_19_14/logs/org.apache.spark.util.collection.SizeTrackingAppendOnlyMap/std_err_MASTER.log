@@ -1,0 +1,5 @@
+[MASTER] 00:26:29.405 [main] ERROR ExternalProcessGroupHandler - Class org.apache.spark.util.collection.SizeTrackingAppendOnlyMap. Clients have not finished yet, although a timeout occurred.
+Client-0: SEARCH
+
+[MASTER] 00:26:29.508 [main] ERROR SearchStatistics - No statistics has been saved because EvoSuite failed to generate any test case
+[MASTER] 00:26:29.609 [main] ERROR TestGeneration - failed to write statistics data

@@ -1,0 +1,5 @@
+[MASTER] 23:08:06.722 [main] ERROR ExternalProcessGroupHandler - Class org.apache.spark.memory.ExecutionMemoryPool. Clients have not finished yet, although a timeout occurred.
+Client-0: SEARCH
+
+[MASTER] 23:08:06.825 [main] ERROR SearchStatistics - No statistics has been saved because EvoSuite failed to generate any test case
+[MASTER] 23:08:06.926 [main] ERROR TestGeneration - failed to write statistics data

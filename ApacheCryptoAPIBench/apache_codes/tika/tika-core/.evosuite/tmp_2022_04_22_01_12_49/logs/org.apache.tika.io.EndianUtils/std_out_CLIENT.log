@@ -1,0 +1,4 @@
+[MASTER] 01:29:26.112 [pool-2-thread-1] WARN  CoverageArchive - A solution with a timeout/exception result has been added to the archive. The covered goal was [METHODNOEX] org.apache.tika.io.EndianUtils.getUShortLE([B)I
+[MASTER] 01:30:27.259 [pool-2-thread-1] WARN  TimeController - Phase SEARCH lasted too long, 7 seconds more than allowed.
+[MASTER] 01:30:38.717 [pool-2-thread-1] WARN  TestSuiteMinimizer - Minimization timeout. Roll back to original test suite
+[MASTER] 01:30:47.660 [pool-2-thread-1] WARN  SimpleMutationAssertionGenerator - Assertion minimization is taking too long (0.6687272727272727% of time used, but only 40/148 tests minimized), falling back to using all assertions

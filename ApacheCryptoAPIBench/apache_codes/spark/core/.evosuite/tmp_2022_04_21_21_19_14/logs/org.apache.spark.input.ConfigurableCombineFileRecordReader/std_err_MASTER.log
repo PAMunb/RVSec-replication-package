@@ -1,0 +1,6 @@
+[MASTER] 23:53:02.679 [main] ERROR ExternalProcessGroupHandler - Class org.apache.spark.input.ConfigurableCombineFileRecordReader. Clients have not finished yet, although a timeout occurred.
+Client-0: SEARCH
+
+[MASTER] 23:53:02.783 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 23:53:03.787 [main] ERROR SearchStatistics - Not going to write down statistics data, as some are missing
+[MASTER] 23:53:03.891 [main] ERROR TestGeneration - failed to write statistics data

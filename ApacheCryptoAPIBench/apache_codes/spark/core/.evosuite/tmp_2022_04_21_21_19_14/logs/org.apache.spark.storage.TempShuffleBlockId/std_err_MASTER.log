@@ -1,0 +1,5 @@
+[MASTER] 22:55:16.206 [main] ERROR ExternalProcessGroupHandler - Class org.apache.spark.storage.TempShuffleBlockId. Clients have not finished yet, although a timeout occurred.
+Client-0: SEARCH
+
+[MASTER] 22:55:16.309 [main] ERROR SearchStatistics - No statistics has been saved because EvoSuite failed to generate any test case
+[MASTER] 22:55:16.410 [main] ERROR TestGeneration - failed to write statistics data

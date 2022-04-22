@@ -1,0 +1,3 @@
+[MASTER] 00:11:21.654 [main] ERROR ExternalProcessGroupHandler - Class org.apache.spark.status.PoolData. Clients have not finished yet, although a timeout occurred.
+Client-0: JUNIT_CHECK
+

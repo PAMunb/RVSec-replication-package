@@ -1,0 +1,1 @@
+[MASTER] 01:25:31.993 [pool-2-thread-1] WARN  SimpleMutationAssertionGenerator - Assertion minimization is taking too long (0.7326428571428572% of time used, but only 15/41 tests minimized), falling back to using all assertions

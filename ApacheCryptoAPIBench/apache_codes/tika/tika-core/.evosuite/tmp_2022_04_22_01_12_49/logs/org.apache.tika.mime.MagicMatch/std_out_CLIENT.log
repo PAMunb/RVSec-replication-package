@@ -1,0 +1,2 @@
+[MASTER] 01:38:55.873 [pool-2-thread-1] WARN  TimeController - Phase INITIALIZATION lasted too long, 2 seconds more than allowed.
+[MASTER] 01:39:01.353 [pool-2-thread-1] WARN  CoverageArchive - A solution with a timeout/exception result has been added to the archive. The covered goal was [METHODNOEX] org.apache.tika.mime.MagicMatch.size()I

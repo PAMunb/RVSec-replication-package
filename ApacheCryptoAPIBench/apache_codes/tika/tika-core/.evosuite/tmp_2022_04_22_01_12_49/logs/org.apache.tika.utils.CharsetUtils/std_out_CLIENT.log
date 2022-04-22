@@ -1,0 +1,4 @@
+[MASTER] 01:27:25.902 [pool-2-thread-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.nio.charset.IllegalCharsetNameException: |
+[MASTER] 01:27:25.909 [pool-2-thread-1] WARN  JUnitAnalyzer - Failing test:
+ CharsetUtils.forName("|,J$rm8yy/0 Db");
+

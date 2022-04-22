@@ -1,0 +1,6 @@
+[MASTER] 23:28:10.861 [main] ERROR ExternalProcessGroupHandler - Class org.apache.spark.partial.BoundedDouble. Clients have not finished yet, although a timeout occurred.
+Client-0: MINIMIZATION
+
+[MASTER] 23:28:10.965 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 23:28:11.968 [main] ERROR SearchStatistics - Not going to write down statistics data, as some are missing
+[MASTER] 23:28:12.071 [main] ERROR TestGeneration - failed to write statistics data

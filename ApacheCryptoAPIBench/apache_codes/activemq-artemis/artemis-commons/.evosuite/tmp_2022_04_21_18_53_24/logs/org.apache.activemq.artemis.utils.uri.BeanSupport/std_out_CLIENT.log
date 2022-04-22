@@ -1,0 +1,17 @@
+[MASTER] 18:53:47.046 [pool-2-thread-1] WARN  TestCluster - Failed to check cache for java.util.AbstractMap<K, V>.SimpleImmutableEntry<K, V> : Type points to itself
+[MASTER] 18:53:57.061 [pool-2-thread-1] WARN  TestCluster - Failed to check cache for java.util.Comparator<T> : Type points to itself
+[MASTER] 18:54:20.523 [pool-2-thread-1] WARN  TestCluster - Failed to check cache for java.util.function.Function<T, R> : Type points to itself
+[MASTER] 18:54:31.097 [pool-2-thread-1] WARN  TestCluster - Failed to check cache for java.util.List<E> : Type points to itself
+[MASTER] 18:54:47.487 [pool-2-thread-1] WARN  TestCluster - Failed to check cache for java.util.Enumeration<E> : Type points to itself
+[MASTER] 18:57:44.505 [pool-2-thread-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class org.junit.ComparisonFailure: expected:<...g.String%40000000000[1&country=java.lang.String%400000000002&displayName=java.lang.String%400000000003&displayVariant=java.lang.String%400000000004&language=java.lang.String%400000000005&displayLanguage=java.lang.String%400000000006&script=java.lang.String%400000000004&displayCountry=java.lang.String%400000000007&ISO3Country=java.lang.String%400000000008&variant=java.lang.String%400000000004&displayScript=java.lang.String%400000000004]> but was:<...g.String%40000000000[7&country=java.lang.String%400000000008&displayName=java.lang.String%400000000009&displayVariant=java.lang.String%400000000010&language=java.lang.String%400000000011&displayLanguage=java.lang.String%400000000012&script=java.lang.String%400000000010&displayCountry=java.lang.String%400000000013&ISO3Country=java.lang.String%400000000014&variant=java.lang.String%400000000010&displayScript=java.lang.String%400000000010]>
+[MASTER] 18:57:44.506 [pool-2-thread-1] WARN  JUnitAnalyzer - Failing test:
+ LinkedList<Locale.LanguageRange> linkedList0 = new LinkedList<Locale.LanguageRange>();
+Locale locale0 = Locale.CANADA_FRENCH;
+Set<String> set0 = locale0.getUnicodeLocaleKeys();
+List<String> list0 = Locale.filterTags((List<Locale.LanguageRange>) linkedList0, (Collection<String>) set0);
+Object[] objectArray0 = new Object[3];
+objectArray0[1] = (Object) locale0;
+String string0 = BeanSupport.getData(list0, objectArray0);
+assertEquals("ISO3Language=java.lang.String%400000000001&country=java.lang.String%400000000002&displayName=java.lang.String%400000000003&displayVariant=java.lang.String%400000000004&language=java.lang.String%400000000005&displayLanguage=java.lang.String%400000000006&script=java.lang.String%400000000004&displayCountry=java.lang.String%400000000007&ISO3Country=java.lang.String%400000000008&variant=java.lang.String%400000000004&displayScript=java.lang.String%400000000004", string0);
+
+

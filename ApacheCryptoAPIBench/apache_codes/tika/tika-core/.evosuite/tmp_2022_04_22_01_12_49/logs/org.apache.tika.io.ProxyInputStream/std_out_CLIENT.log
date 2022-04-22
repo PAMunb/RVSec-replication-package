@@ -1,0 +1,5 @@
+[MASTER] 01:39:58.106 [pool-2-thread-1] WARN  TimeController - Phase INITIALIZATION lasted too long, 3 seconds more than allowed.
+[MASTER] 01:40:05.322 [pool-2-thread-1] WARN  CoverageArchive - A solution with a timeout/exception result has been added to the archive. The covered goal was [METHOD] org.apache.tika.io.ProxyInputStream.mark(I)V
+[MASTER] 01:40:05.323 [pool-2-thread-1] WARN  CoverageArchive - A solution with a timeout/exception result has been added to the archive. The covered goal was [METHODNOEX] org.apache.tika.io.ProxyInputStream.mark(I)V
+[MASTER] 01:40:06.031 [pool-2-thread-1] WARN  TestCluster - Failed to check cache for java.util.Enumeration<E> : Type points to itself
+[MASTER] 01:40:40.328 [pool-2-thread-1] WARN  TimeController - Phase SEARCH lasted too long, 6 seconds more than allowed.

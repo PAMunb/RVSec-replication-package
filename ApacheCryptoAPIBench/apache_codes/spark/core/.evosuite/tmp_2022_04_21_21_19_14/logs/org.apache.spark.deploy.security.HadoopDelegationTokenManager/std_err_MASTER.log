@@ -1,0 +1,5 @@
+[MASTER] 00:51:48.182 [main] ERROR ExternalProcessGroupHandler - Class org.apache.spark.deploy.security.HadoopDelegationTokenManager. Clients have not finished yet, although a timeout occurred.
+Client-0: SEARCH
+
+[MASTER] 00:51:48.287 [main] ERROR SearchStatistics - No statistics has been saved because EvoSuite failed to generate any test case
+[MASTER] 00:51:48.389 [main] ERROR TestGeneration - failed to write statistics data

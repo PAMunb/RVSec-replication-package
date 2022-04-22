@@ -1,0 +1,2 @@
+[MASTER] 19:08:04.778 [pool-2-thread-1] WARN  TimeController - Phase INITIALIZATION lasted too long, 2 seconds more than allowed.
+[MASTER] 19:08:38.921 [pool-2-thread-1] WARN  TimeController - Phase SEARCH lasted too long, 4 seconds more than allowed.

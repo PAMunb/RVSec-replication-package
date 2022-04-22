@@ -1,0 +1,5 @@
+[MASTER] 23:53:20.960 [main] ERROR ExternalProcessGroupHandler - Class org.apache.spark.api.python.PythonRDD. Clients have not finished yet, although a timeout occurred.
+Client-0: SEARCH
+
+[MASTER] 23:53:21.062 [main] ERROR SearchStatistics - No statistics has been saved because EvoSuite failed to generate any test case
+[MASTER] 23:53:21.164 [main] ERROR TestGeneration - failed to write statistics data

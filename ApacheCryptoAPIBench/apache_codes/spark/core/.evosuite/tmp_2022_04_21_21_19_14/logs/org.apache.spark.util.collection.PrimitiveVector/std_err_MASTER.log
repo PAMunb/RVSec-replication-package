@@ -1,0 +1,6 @@
+[MASTER] 23:33:19.506 [main] ERROR ExternalProcessGroupHandler - Class org.apache.spark.util.collection.PrimitiveVector. Clients have not finished yet, although a timeout occurred.
+Client-0: SEARCH
+
+[MASTER] 23:33:19.609 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 23:33:20.612 [main] ERROR SearchStatistics - Not going to write down statistics data, as some are missing
+[MASTER] 23:33:20.716 [main] ERROR TestGeneration - failed to write statistics data

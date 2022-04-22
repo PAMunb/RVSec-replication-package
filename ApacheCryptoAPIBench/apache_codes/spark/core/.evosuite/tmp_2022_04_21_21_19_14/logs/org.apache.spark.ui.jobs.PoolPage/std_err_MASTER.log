@@ -1,0 +1,6 @@
+[MASTER] 23:51:59.923 [main] ERROR ExternalProcessGroupHandler - Class org.apache.spark.ui.jobs.PoolPage. Clients have not finished yet, although a timeout occurred.
+Client-0: SEARCH
+
+[MASTER] 23:52:00.027 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 23:52:01.029 [main] ERROR SearchStatistics - Not going to write down statistics data, as some are missing
+[MASTER] 23:52:01.130 [main] ERROR TestGeneration - failed to write statistics data

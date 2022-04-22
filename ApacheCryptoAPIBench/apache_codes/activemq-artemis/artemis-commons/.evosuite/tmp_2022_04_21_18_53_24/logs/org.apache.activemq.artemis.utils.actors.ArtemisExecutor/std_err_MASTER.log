@@ -1,0 +1,6 @@
+[MASTER] 19:09:34.544 [main] ERROR ExternalProcessGroupHandler - Class org.apache.activemq.artemis.utils.actors.ArtemisExecutor. Clients have not finished yet, although a timeout occurred.
+Client-0: SEARCH
+
+[MASTER] 19:09:34.647 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 19:09:35.649 [main] ERROR SearchStatistics - Not going to write down statistics data, as some are missing
+[MASTER] 19:09:35.750 [main] ERROR TestGeneration - failed to write statistics data

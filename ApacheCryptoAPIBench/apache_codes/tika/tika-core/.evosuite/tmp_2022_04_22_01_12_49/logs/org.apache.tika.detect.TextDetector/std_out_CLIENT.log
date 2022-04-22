@@ -1,0 +1,2 @@
+[MASTER] 01:35:06.671 [pool-2-thread-1] WARN  TimeController - Phase INITIALIZATION lasted too long, 3 seconds more than allowed.
+[MASTER] 01:36:16.317 [pool-2-thread-1] WARN  TestSuiteMinimizer - Minimization timeout. Roll back to original test suite

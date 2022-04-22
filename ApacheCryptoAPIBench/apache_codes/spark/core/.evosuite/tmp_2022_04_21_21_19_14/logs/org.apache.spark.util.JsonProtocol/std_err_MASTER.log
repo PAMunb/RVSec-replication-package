@@ -1,0 +1,5 @@
+[MASTER] 00:25:26.847 [main] ERROR ExternalProcessGroupHandler - Class org.apache.spark.util.JsonProtocol. Clients have not finished yet, although a timeout occurred.
+Client-0: INITIALIZATION
+
+[MASTER] 00:25:26.949 [main] ERROR SearchStatistics - No statistics has been saved because EvoSuite failed to generate any test case
+[MASTER] 00:25:27.051 [main] ERROR TestGeneration - failed to write statistics data

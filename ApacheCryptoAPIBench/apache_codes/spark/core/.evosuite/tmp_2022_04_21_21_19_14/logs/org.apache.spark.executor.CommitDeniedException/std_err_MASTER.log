@@ -1,0 +1,6 @@
+[MASTER] 00:42:35.388 [main] ERROR ExternalProcessGroupHandler - Class org.apache.spark.executor.CommitDeniedException. Clients have not finished yet, although a timeout occurred.
+Client-0: SEARCH
+
+[MASTER] 00:42:35.492 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 00:42:36.494 [main] ERROR SearchStatistics - Not going to write down statistics data, as some are missing
+[MASTER] 00:42:36.599 [main] ERROR TestGeneration - failed to write statistics data

@@ -1,0 +1,6 @@
+[MASTER] 00:42:14.992 [main] ERROR ExternalProcessGroupHandler - Class org.apache.spark.status.api.v1.OneApplicationResource. Clients have not finished yet, although a timeout occurred.
+Client-0: SEARCH
+
+[MASTER] 00:42:15.096 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 00:42:16.099 [main] ERROR SearchStatistics - Not going to write down statistics data, as some are missing
+[MASTER] 00:42:16.202 [main] ERROR TestGeneration - failed to write statistics data

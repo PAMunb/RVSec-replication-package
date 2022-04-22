@@ -1,0 +1,7 @@
+[MASTER] 01:45:32.166 [pool-2-thread-1] WARN  TimeController - Phase INITIALIZATION lasted too long, 4 seconds more than allowed.
+[MASTER] 01:46:04.633 [pool-2-thread-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalArgumentException
+[MASTER] 01:46:04.634 [pool-2-thread-1] WARN  JUnitAnalyzer - Failing test:
+ TextMatcher textMatcher0 = new TextMatcher();
+Matcher matcher0 = textMatcher0.descend("", "");
+matcher0.matchesText();
+

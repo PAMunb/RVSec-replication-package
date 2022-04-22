@@ -1,0 +1,2928 @@
+[MASTER] 01:21:17.551 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:21:17.555 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:21:26.007 [pool-2-thread-1] WARN  TestCluster - Failed to check cache for java.util.Enumeration<E> : Type points to itself
+[MASTER] 01:21:33.472 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:21:33.472 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:21:34.380 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:21:34.380 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:21:35.180 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:21:35.180 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:21:39.406 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:21:39.406 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:21:39.544 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:21:39.544 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:21:41.308 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:21:41.309 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:21:41.700 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:21:41.700 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:21:47.705 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:21:47.705 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:21:47.985 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:21:47.985 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:21:48.345 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:21:48.345 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:21:49.067 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:21:49.067 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:21:50.298 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:21:50.298 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:21:51.176 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:21:51.178 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:21:51.598 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:21:51.598 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:21:51.865 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:21:51.866 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:21:52.148 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:21:52.148 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:21:52.232 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:21:52.233 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:21:55.148 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:21:55.148 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:21:55.454 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:21:55.455 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:21:57.588 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:21:57.588 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:21:58.463 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:21:58.463 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:22:00.623 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:22:00.624 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:22:01.339 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:22:01.339 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:22:01.634 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:22:01.634 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:22:03.359 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:22:03.359 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:22:03.936 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:22:03.936 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:22:09.100 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:22:09.101 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:22:09.298 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:22:09.299 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:22:10.309 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:22:10.310 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:22:11.131 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:22:11.132 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:22:11.505 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:22:11.506 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:22:12.959 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:22:12.959 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:22:13.139 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:22:13.140 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:22:13.571 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:22:13.572 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:22:14.422 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:22:14.422 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:22:14.689 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:22:14.690 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:22:14.844 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:22:14.844 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:22:15.142 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:22:15.142 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:22:15.552 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:22:15.552 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:22:15.570 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:22:15.570 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:22:21.020 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:22:21.020 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:22:21.394 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:22:21.395 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:22:21.772 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:22:21.772 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:22:21.978 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:22:21.978 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:22:22.344 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:22:22.344 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:22:22.872 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:22:22.872 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:22:22.875 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:22:22.876 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:22:23.497 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:22:23.497 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:22:26.011 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:22:26.011 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:22:26.279 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:22:26.279 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:22:26.522 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:22:26.522 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:22:27.002 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:22:27.002 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:22:27.002 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:22:27.002 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:22:27.002 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Method stack is empty: org.apache.tika.io.TikaInputStream.<init>(Ljava/io/File;)V - l496
+[MASTER] 01:22:27.085 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:22:27.085 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:22:27.090 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:22:27.090 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:22:27.761 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:22:27.762 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:22:28.000 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:22:28.000 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:22:29.107 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:22:29.107 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:22:29.178 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:22:29.178 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:22:35.945 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:22:35.945 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:22:35.945 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:22:35.945 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:22:35.945 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Method stack is empty: org.apache.tika.io.TikaInputStream.<init>(Ljava/io/File;)V - l496
+[MASTER] 01:22:36.944 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:22:36.945 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:22:37.340 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:22:37.340 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:22:37.354 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:22:37.354 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:22:38.920 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:22:38.920 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:22:40.443 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:22:40.444 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:22:40.984 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:22:40.984 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:22:41.334 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:22:41.334 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:22:42.003 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:22:42.003 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:22:43.068 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:22:43.068 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:22:43.809 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:22:43.809 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:22:43.809 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:22:43.809 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:22:44.034 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:22:44.034 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:22:44.800 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:22:44.800 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:22:45.953 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:22:45.953 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:22:45.957 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:22:45.957 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:22:51.347 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:22:51.348 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:22:51.348 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:22:51.348 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:22:52.231 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:22:52.232 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:22:52.255 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:22:52.255 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:22:52.774 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:22:52.774 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:22:52.775 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:22:52.775 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:22:52.973 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:22:52.973 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:22:53.452 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:22:53.452 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:22:53.545 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:22:53.545 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:22:54.649 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:22:54.649 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:22:54.650 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:22:54.650 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:22:54.650 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Method stack is empty: org.apache.tika.io.TikaInputStream.<init>(Ljava/io/File;)V - l496
+[MASTER] 01:22:55.272 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:22:55.272 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:22:56.037 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:22:56.037 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:22:56.262 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:22:56.262 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:22:59.869 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:22:59.870 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:22:59.936 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:22:59.937 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:00.600 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:00.601 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:00.605 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:00.605 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:00.671 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:00.671 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:00.856 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:00.856 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:02.084 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:02.085 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:07.822 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:07.822 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:07.993 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:07.993 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:10.589 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:10.589 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:10.687 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:10.687 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:10.695 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:10.695 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:10.722 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:10.722 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:10.728 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:10.728 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:10.730 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:10.730 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:10.730 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:10.730 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:10.730 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Method stack is empty: org.apache.tika.io.TikaInputStream.<init>(Ljava/io/File;)V - l496
+[MASTER] 01:23:10.731 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:10.731 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:10.732 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:10.732 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:10.833 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:10.833 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:10.946 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:10.946 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:10.952 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:10.953 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:10.968 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:10.968 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:10.972 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:10.972 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:10.972 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:10.972 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:10.972 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Method stack is empty: org.apache.tika.io.TikaInputStream.<init>(Ljava/io/File;)V - l496
+[MASTER] 01:23:10.973 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:10.973 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:10.973 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:10.973 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:11.055 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:11.055 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:11.172 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:11.172 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:11.173 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:11.173 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:11.176 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:11.176 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:11.428 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:11.428 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:11.429 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:11.430 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:11.433 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:11.433 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:11.446 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:11.446 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:11.742 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:11.742 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:11.744 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:11.744 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:11.746 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:11.746 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:11.762 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:11.762 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:11.764 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:11.764 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:12.669 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:12.669 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:12.680 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:12.681 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:12.717 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:12.718 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:12.718 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:12.718 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:12.718 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Method stack is empty: org.apache.tika.io.TikaInputStream.<init>(Ljava/io/File;)V - l496
+[MASTER] 01:23:12.719 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:12.719 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:12.720 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:12.721 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:12.721 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:12.722 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:13.018 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:13.018 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:13.020 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:13.020 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:13.021 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:13.021 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:13.023 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:13.023 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:13.024 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:13.024 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:13.034 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:13.034 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:13.039 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:13.039 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:13.048 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:13.048 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:13.050 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:13.050 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:13.052 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:13.052 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:13.059 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:13.059 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:13.063 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:13.063 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:13.064 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:13.064 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:13.066 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:13.066 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:13.067 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:13.067 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:13.080 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:13.080 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:13.082 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:13.082 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:13.083 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:13.084 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:13.085 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:13.085 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:13.086 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:13.086 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:13.090 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:13.090 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:13.093 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:13.093 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:13.096 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:13.096 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:13.098 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:13.098 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:13.103 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:13.103 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:13.115 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:13.115 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:13.117 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:13.117 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:13.417 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:13.417 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:13.419 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:13.419 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:13.421 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:13.421 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:14.892 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:14.893 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:14.952 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:14.952 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:14.952 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:14.952 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:14.952 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Method stack is empty: org.apache.tika.io.TikaInputStream.<init>(Ljava/io/File;)V - l496
+[MASTER] 01:23:14.958 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:14.958 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:14.958 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:14.958 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:15.085 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:15.086 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:15.134 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:15.134 [TEST_EXECUTION_THREAD_0] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:19.331 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:19.331 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:19.343 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:19.343 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:19.346 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:19.346 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:19.366 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:19.366 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:19.377 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:19.377 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:19.382 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:19.382 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:19.416 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:19.417 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:19.431 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:19.432 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:20.076 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:20.076 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:20.080 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:20.080 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:20.092 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:20.093 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:20.106 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:20.109 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:20.112 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:20.114 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:20.119 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:20.121 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:20.148 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:20.149 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:20.152 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:20.152 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:20.157 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:20.157 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:22.545 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:22.545 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:22.546 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:22.546 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:22.548 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:22.549 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:22.550 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:22.550 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:22.569 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:22.569 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:22.570 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:22.571 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:22.573 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:22.579 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:22.580 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:22.580 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:22.592 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:22.593 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:22.594 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:22.594 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:22.596 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:22.596 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:22.597 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:22.597 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:22.599 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:22.599 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:22.600 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:22.600 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:22.609 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:22.609 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:22.610 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:22.610 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:22.627 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:22.627 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:22.628 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:22.628 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:22.628 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Method stack is empty: org.apache.tika.io.TikaInputStream.<init>(Ljava/io/File;)V - l496
+[MASTER] 01:23:22.636 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:22.636 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:22.637 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:22.637 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:22.637 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Method stack is empty: org.apache.tika.io.TikaInputStream.<init>(Ljava/io/File;)V - l496
+[MASTER] 01:23:22.650 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:22.650 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:22.651 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:22.651 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:22.651 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Method stack is empty: org.apache.tika.io.TikaInputStream.<init>(Ljava/io/File;)V - l496
+[MASTER] 01:23:22.660 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:22.660 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:22.662 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:22.662 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:22.662 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Method stack is empty: org.apache.tika.io.TikaInputStream.<init>(Ljava/io/File;)V - l496
+[MASTER] 01:23:22.718 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:22.718 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:22.719 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:22.719 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:22.719 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Method stack is empty: org.apache.tika.io.TikaInputStream.<init>(Ljava/io/File;)V - l496
+[MASTER] 01:23:22.721 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:22.721 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:22.731 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:22.731 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:22.731 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Method stack is empty: org.apache.tika.io.TikaInputStream.<init>(Ljava/io/File;)V - l496
+[MASTER] 01:23:22.738 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:22.738 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:22.740 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:22.740 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:22.740 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Method stack is empty: org.apache.tika.io.TikaInputStream.<init>(Ljava/io/File;)V - l496
+[MASTER] 01:23:22.742 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:22.742 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:22.743 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:22.743 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:22.743 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Method stack is empty: org.apache.tika.io.TikaInputStream.<init>(Ljava/io/File;)V - l496
+[MASTER] 01:23:23.160 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:23.165 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:23.264 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:23.264 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:23.351 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:23.351 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:23.444 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:23.444 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:23.530 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:23.530 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:23.651 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:23.651 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:23.719 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:23.719 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:23.762 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:23.762 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:23.855 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:23.855 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:32.704 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:32.704 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:35.613 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:35.613 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:40.776 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:40.776 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:40.776 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:40.776 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:41.100 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:41.100 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:41.101 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:41.101 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:41.101 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Method stack is empty: org.apache.tika.io.TikaInputStream.<init>(Ljava/io/File;)V - l496
+[MASTER] 01:23:42.607 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:42.607 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:42.632 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:42.632 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:42.632 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:42.632 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:42.632 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Method stack is empty: org.apache.tika.io.TikaInputStream.<init>(Ljava/io/File;)V - l496
+[MASTER] 01:23:42.634 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:42.634 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:42.634 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:42.634 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:42.658 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:42.658 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
+[MASTER] 01:23:42.685 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Popping method get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream; because we were looking for <init>(Ljava/io/File;)V
+[MASTER] 01:23:42.686 [TEST_EXECUTION_THREAD_1] WARN  ExecutionTrace - Current stack: [org.apache.tika.io.TikaInputStream:get(Ljava/io/File;Lorg/apache/tika/metadata/Metadata;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, org.apache.tika.io.TikaInputStream:get(Ljava/io/File;)Lorg/apache/tika/io/TikaInputStream;
+Branches: 
+True Distances: 
+False Distances: 
+, :
+Branches: 
+True Distances: 
+False Distances: 
+]
