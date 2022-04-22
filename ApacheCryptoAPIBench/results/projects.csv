@@ -1,4 +1,4 @@
-group,module,latex,test_cases
+group,latex,module,test_cases
 ApacheDS Protocol Kerberos Codec,\directory,ApachedsKerberosCodec,376
 ActiveMQ Artemis Commons,\artemis,ArtemisCommons,110
 Apache DeltaSpike Core-Implementation,\deltaspike,DeltaSpikeCore,155

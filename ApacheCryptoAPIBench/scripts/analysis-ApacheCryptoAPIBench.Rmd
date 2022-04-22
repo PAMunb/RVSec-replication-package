@@ -3,15 +3,19 @@ title: "JavaMOP"
 author: "Rodrigo Bonifácio et al."
 date: "1/26/2022"
 output: html_document
+keep_md: yes
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(fig.width=5, fig.height=5, fig.path='./figures/', dev=c('png', 'pdf'))
 setwd(".")
 library(sqldf)
 library(xtable)
 library(dplyr)
+library(corrplot)
 library(xtable)
+
 ```
 
 ## R Markdown
@@ -191,12 +195,51 @@ nrow(codeCoverage)
 ## [13] "COMPLEXITY_MISSED"   "COMPLEXITY_COVERED"  "METHOD_MISSED"      
 ## [16] "METHOD_COVERED"
 
-sqldf("select project, module, latex, test_cases, 
-              avg(instruction_covered/(instruction_covered + instruction_missed)) as instruction_coverage,
-              avg(branch_covered/(branch_covered + branch_missed)) as branch_coverage,
-              avg(method_covered/(method_covered + method_missed)) as method_coverage
+cc_summary <- sqldf("select project, module, latex, test_cases, 
+              avg(instruction_covered/(instruction_covered + instruction_missed) * 100) as IC,
+              avg(branch_covered/(branch_covered + branch_missed) * 100) as BC,
+              avg(method_covered/(method_covered + method_missed) * 100) as MC
         from codeCoverage 
         group by project, module, latex, test_cases")
+
+
+cc_summary
+cc_summary = merge(cc_summary, final_ds, by.x = "module", by.y = "module")
+
+colnames(cc_summary)
+
+nrow(cc_summary)
+
+##  [1] "module"      "project"     "latex"       "test_cases"  "IC"         
+##  [6] "BC"          "MC"          "RVSec"       "CogniCrypt"  "CryptoGuard"
+## [11] "diff"
+
+xtable(sqldf("select latex, test_cases as TCs, IC, BC, MC 
+       from cc_summary"))
+
+corrmatrix = sqldf("select test_cases, IC, BC, MC, RVSec
+                    from cc_summary")
+
+
+colnames(corrmatrix) <- c("TCs", "IC", "BC", "MC", "RVSec")
+
+cor.test(cc_summary$IC, cc_summary$diff)
+cor.test(cc_summary$BC, cc_summary$diff)
+cor.test(cc_summary$MC, cc_summary$diff)
+
+
+cor.test(cc_summary$IC, cc_summary$RVSec)
+cor.test(cc_summary$BC, cc_summary$RVSec)
+cor.test(cc_summary$MC, cc_summary$RVSec)
+
+cor.test(cc_summary$test_cases, cc_summary$RVSec)
+
+
+M = cor(corrmatrix)
+
+corrplot(M, method = 'number', type='lower')
+corrplot(M, order = 'AOE')
+corrplot(M, method = 'square', order = 'FPC', type = 'lower', diag = FALSE)
 ```
 
 ```{r detailed-analysis, eval=FALSE}
