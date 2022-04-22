@@ -23,481 +23,481 @@ import scala.Tuple3;
 @RunWith(EvoRunner.class) @EvoRunnerParameters(mockJVMNonDeterminism = true, useVFS = true, useVNET = true, resetStaticState = true, separateClassLoader = true) 
 public class TestWritable_ESTest extends TestWritable_ESTest_scaffolding {
 
-  @Test(timeout = 4000)
-  public void test00()  throws Throwable  {
-      TestWritable testWritable0 = new TestWritable();
-      testWritable0.setDouble((-1.0));
-      TestWritable testWritable1 = new TestWritable();
-      boolean boolean0 = testWritable0.equals(testWritable1);
-      assertEquals((-1.0), testWritable0.double(), 0.01);
-      assertFalse(boolean0);
-  }
-
-  @Test(timeout = 4000)
-  public void test01()  throws Throwable  {
-      TestWritable testWritable0 = TestWritable.apply((String) null, (-3908), 4135.979559348);
-      TestWritable testWritable1 = testWritable0.copy((String) null, (-424), 0.0);
-      boolean boolean0 = testWritable0.equals(testWritable1);
-      assertEquals((-424), testWritable1.int());
-      assertFalse(boolean0);
-      assertEquals(4135.979559348, testWritable0.double(), 0.01);
-      assertEquals(0.0, testWritable1.copy$default$3(), 0.01);
-      assertEquals((-3908), testWritable0.getInt());
-  }
-
-  @Test(timeout = 4000)
-  public void test02()  throws Throwable  {
-      TestWritable testWritable0 = new TestWritable((String) null, (-3596), (-704.3927));
-      DataOutput dataOutput0 = mock(DataOutput.class, new ViolatedAssumptionAnswer());
-      testWritable0.write(dataOutput0);
-      assertEquals((-704.3927), testWritable0.copy$default$3(), 0.01);
-      assertEquals((-3596), testWritable0.copy$default$2());
-  }
-
-  @Test(timeout = 4000)
-  public void test03()  throws Throwable  {
-      TestWritable testWritable0 = new TestWritable("6g{p^?gkkK}3a483I", (-3413), 0.0);
-      DataInput dataInput0 = mock(DataInput.class, new ViolatedAssumptionAnswer());
-      doReturn(0.0).when(dataInput0).readDouble();
-      doReturn(0).when(dataInput0).readInt();
-      doReturn((String) null).when(dataInput0).readUTF();
-      testWritable0.readFields(dataInput0);
-      testWritable0.str();
-      assertEquals(0, testWritable0.int());
-  }
-
-  @Test(timeout = 4000)
-  public void test04()  throws Throwable  {
-      TestWritable testWritable0 = new TestWritable("org.apache.spark.api.python.TestWritable$", 0, 1.0);
-      String string0 = testWritable0.str();
-      assertEquals("org.apache.spark.api.python.TestWritable$", string0);
-  }
-
-  @Test(timeout = 4000)
-  public void test05()  throws Throwable  {
-      TestWritable testWritable0 = new TestWritable("6g{p^?gkkK}3a483I", (-3413), 0.0);
-      DataInput dataInput0 = mock(DataInput.class, new ViolatedAssumptionAnswer());
-      doReturn(0.0).when(dataInput0).readDouble();
-      doReturn(0).when(dataInput0).readInt();
-      doReturn((String) null).when(dataInput0).readUTF();
-      testWritable0.readFields(dataInput0);
-      testWritable0.productElement(0);
-      assertEquals(0, testWritable0.copy$default$2());
-  }
-
-  @Test(timeout = 4000)
-  public void test06()  throws Throwable  {
-      TestWritable testWritable0 = new TestWritable("", 3568, 337.06845852);
-      int int0 = testWritable0.int();
-      assertEquals(3568, int0);
-  }
-
-  @Test(timeout = 4000)
-  public void test07()  throws Throwable  {
-      TestWritable testWritable0 = TestWritable.apply("", (-637), (-637));
-      int int0 = testWritable0.int();
-      assertEquals((-637), int0);
-      assertEquals((-637.0), testWritable0.getDouble(), 0.01);
-  }
-
-  @Test(timeout = 4000)
-  public void test08()  throws Throwable  {
-      TestWritable testWritable0 = TestWritable.apply("MafxF)f`VD5.y", 0, 0);
-      DataInput dataInput0 = mock(DataInput.class, new ViolatedAssumptionAnswer());
-      doReturn(0.0).when(dataInput0).readDouble();
-      doReturn(0).when(dataInput0).readInt();
-      doReturn((String) null).when(dataInput0).readUTF();
-      testWritable0.readFields(dataInput0);
-      testWritable0.getStr();
-      assertEquals(0, testWritable0.getInt());
-      assertEquals(0.0, testWritable0.getDouble(), 0.01);
-  }
-
-  @Test(timeout = 4000)
-  public void test09()  throws Throwable  {
-      TestWritable testWritable0 = TestWritable.apply("MafxF)f`VD5.y", 0, 0);
-      testWritable0.getStr();
-      assertEquals(0, testWritable0.getInt());
-      assertEquals(0.0, testWritable0.copy$default$3(), 0.01);
-  }
-
-  @Test(timeout = 4000)
-  public void test10()  throws Throwable  {
-      TestWritable testWritable0 = new TestWritable("", 3568, 337.06845852);
-      int int0 = testWritable0.getInt();
-      assertEquals(3568, int0);
-  }
-
-  @Test(timeout = 4000)
-  public void test11()  throws Throwable  {
-      TestWritable testWritable0 = new TestWritable((String) null, (-3596), (-704.3927));
-      int int0 = testWritable0.getInt();
-      assertEquals((-3596), int0);
-  }
-
-  @Test(timeout = 4000)
-  public void test12()  throws Throwable  {
-      TestWritable testWritable0 = new TestWritable();
-      double double0 = testWritable0.getDouble();
-      assertEquals(0.0, double0, 0.01);
-  }
-
-  @Test(timeout = 4000)
-  public void test13()  throws Throwable  {
-      TestWritable testWritable0 = new TestWritable("", (-424), 0.0);
-      testWritable0.double_$eq((-424));
-      double double0 = testWritable0.getDouble();
-      assertEquals((-424.0), double0, 0.01);
-  }
-
-  @Test(timeout = 4000)
-  public void test14()  throws Throwable  {
-      TestWritable testWritable0 = new TestWritable("org.apache.spark.api.python.TestWritable$", 0, 1.0);
-      double double0 = testWritable0.double();
-      assertEquals(1.0, double0, 0.01);
-  }
-
-  @Test(timeout = 4000)
-  public void test15()  throws Throwable  {
-      TestWritable testWritable0 = new TestWritable("=x", 15, 15);
-      testWritable0.double_$eq((-894.0202));
-      double double0 = testWritable0.double();
-      assertEquals((-894.0202), double0, 0.01);
-  }
-
-  @Test(timeout = 4000)
-  public void test16()  throws Throwable  {
-      TestWritable testWritable0 = new TestWritable("?\"qUrL/6v", (-231), (-231));
-      TestWritable testWritable1 = testWritable0.copy("?\"qUrL/6v", 0, 1176.627744776889);
-      double double0 = testWritable1.copy$default$3();
-      assertEquals(1176.627744776889, double0, 0.01);
-      assertEquals(0, testWritable1.getInt());
-  }
-
-  @Test(timeout = 4000)
-  public void test17()  throws Throwable  {
-      TestWritable testWritable0 = TestWritable.apply("", (-637), (-637));
-      double double0 = testWritable0.copy$default$3();
-      assertEquals((-637.0), double0, 0.01);
-      assertEquals((-637), testWritable0.copy$default$2());
-  }
-
-  @Test(timeout = 4000)
-  public void test18()  throws Throwable  {
-      TestWritable testWritable0 = new TestWritable();
-      int int0 = testWritable0.copy$default$2();
-      assertEquals(0, int0);
-  }
-
-  @Test(timeout = 4000)
-  public void test19()  throws Throwable  {
-      TestWritable testWritable0 = new TestWritable("=x", 15, 15);
-      int int0 = testWritable0.copy$default$2();
-      assertEquals(15, int0);
-  }
-
-  @Test(timeout = 4000)
-  public void test20()  throws Throwable  {
-      TestWritable testWritable0 = TestWritable.apply((String) null, (-2160), (-2160));
-      testWritable0.copy$default$1();
-      assertEquals((-2160), testWritable0.int());
-      assertEquals((-2160.0), testWritable0.copy$default$3(), 0.01);
-  }
-
-  @Test(timeout = 4000)
-  public void test21()  throws Throwable  {
-      TestWritable testWritable0 = new TestWritable("d?dYyNkaR+", 0, 0);
-      String string0 = testWritable0.copy$default$1();
-      assertEquals("d?dYyNkaR+", string0);
-  }
-
-  @Test(timeout = 4000)
-  public void test22()  throws Throwable  {
-      TestWritable testWritable0 = new TestWritable("6g{p^?gkkK}3a483I", (-3413), 0.0);
-      boolean boolean0 = testWritable0.canEqual((Object) null);
-      assertFalse(boolean0);
-  }
-
-  @Test(timeout = 4000)
-  public void test23()  throws Throwable  {
-      TestWritable testWritable0 = new TestWritable("yO1eK!Oy", 1, 0.0);
-      Object object0 = testWritable0.productElement(1);
-      assertEquals(1, object0);
-  }
-
-  @Test(timeout = 4000)
-  public void test24()  throws Throwable  {
-      TestWritable testWritable0 = new TestWritable("6g{p^?gkkK}3a483I", (-3413), 0.0);
-      Object object0 = testWritable0.productElement(0);
-      assertEquals("6g{p^?gkkK}3a483I", object0);
-  }
-
-  @Test(timeout = 4000)
-  public void test25()  throws Throwable  {
-      TestWritable testWritable0 = new TestWritable();
-      Object object0 = testWritable0.productElement(2);
-      assertEquals(0.0, object0);
-  }
-
-  @Test(timeout = 4000)
-  public void test26()  throws Throwable  {
-      TestWritable testWritable0 = new TestWritable();
-      int int0 = testWritable0.int();
-      assertEquals(0, int0);
-  }
-
-  @Test(timeout = 4000)
-  public void test27()  throws Throwable  {
-      TestWritable testWritable0 = TestWritable.apply((String) null, (-2160), (-2160));
-      testWritable0.productIterator();
-      assertEquals(3, testWritable0.productArity());
-      assertEquals((-2160.0), testWritable0.double(), 0.01);
-      assertEquals((-2160), testWritable0.getInt());
-  }
-
-  @Test(timeout = 4000)
-  public void test28()  throws Throwable  {
-      TestWritable testWritable0 = new TestWritable("", (-424), 0.0);
-      int int0 = testWritable0.productArity();
-      assertEquals(3, int0);
-  }
-
-  @Test(timeout = 4000)
-  public void test29()  throws Throwable  {
-      TestWritable testWritable0 = new TestWritable();
-      String string0 = testWritable0.productPrefix();
-      assertEquals("TestWritable", string0);
-  }
-
-  @Test(timeout = 4000)
-  public void test30()  throws Throwable  {
-      TestWritable testWritable0 = new TestWritable();
-      testWritable0.int_$eq((-889275714));
-      assertEquals((-889275714), testWritable0.getInt());
-  }
-
-  @Test(timeout = 4000)
-  public void test31()  throws Throwable  {
-      TestWritable testWritable0 = new TestWritable();
-      String string0 = testWritable0.str();
-      assertEquals("", string0);
-  }
-
-  @Test(timeout = 4000)
-  public void test32()  throws Throwable  {
-      TestWritable testWritable0 = new TestWritable();
-      boolean boolean0 = testWritable0.canEqual(testWritable0);
-      assertTrue(boolean0);
-  }
-
-  @Test(timeout = 4000)
-  public void test33()  throws Throwable  {
-      TestWritable testWritable0 = new TestWritable("d?dYyNkaR+", 0, 0);
-      double double0 = testWritable0.double();
-      assertEquals(0.0, double0, 0.01);
-  }
-
-  @Test(timeout = 4000)
-  public void test34()  throws Throwable  {
-      TestWritable testWritable0 = new TestWritable();
-      TestWritable testWritable1 = testWritable0.copy("", 2066, 2066);
-      boolean boolean0 = testWritable1.equals(testWritable0);
-      assertFalse(boolean0);
-      assertEquals(2066, testWritable1.copy$default$2());
-      assertEquals(2066.0, testWritable1.double(), 0.01);
-  }
-
-  @Test(timeout = 4000)
-  public void test35()  throws Throwable  {
-      TestWritable testWritable0 = new TestWritable();
-      testWritable0.str_$eq(":XC{gy7|_c ~");
-      TestWritable testWritable1 = new TestWritable();
-      boolean boolean0 = testWritable0.equals(testWritable1);
-      assertFalse(boolean0);
-  }
-
-  @Test(timeout = 4000)
-  public void test36()  throws Throwable  {
-      TestWritable testWritable0 = new TestWritable();
-      TestWritable testWritable1 = testWritable0.copy((String) null, 537, 537);
-      boolean boolean0 = testWritable1.equals(testWritable0);
-      assertFalse(boolean0);
-      assertEquals(537, testWritable1.copy$default$2());
-      assertEquals(537.0, testWritable1.double(), 0.01);
-  }
-
-  @Test(timeout = 4000)
-  public void test37()  throws Throwable  {
-      TestWritable testWritable0 = TestWritable.apply((String) null, (-3908), 4135.979559348);
-      TestWritable testWritable1 = testWritable0.copy((String) null, (-3908), 0.0);
-      boolean boolean0 = testWritable0.equals(testWritable1);
-      assertEquals(4135.979559348, testWritable0.getDouble(), 0.01);
-      assertFalse(boolean0);
-      assertEquals((-3908), testWritable0.int());
-      assertFalse(testWritable1.equals((Object)testWritable0));
-      assertEquals(0.0, testWritable1.double(), 0.01);
-      assertEquals((-3908), testWritable1.copy$default$2());
-  }
-
-  @Test(timeout = 4000)
-  public void test38()  throws Throwable  {
-      TestWritable testWritable0 = new TestWritable();
-      boolean boolean0 = testWritable0.equals((Object) null);
-      assertFalse(boolean0);
-  }
-
-  @Test(timeout = 4000)
-  public void test39()  throws Throwable  {
-      TestWritable testWritable0 = new TestWritable();
-      boolean boolean0 = testWritable0.equals(testWritable0);
-      assertTrue(boolean0);
-  }
-
-  @Test(timeout = 4000)
-  public void test40()  throws Throwable  {
-      TestWritable testWritable0 = new TestWritable();
-      // Undeclared exception!
-      try { 
-        testWritable0.productElement((-821));
-        fail("Expecting exception: IndexOutOfBoundsException");
-      
-      } catch(IndexOutOfBoundsException e) {
-         //
-         // java.lang.Integer@0000000002
-         //
-         verifyException("org.apache.spark.api.python.TestWritable", e);
-      }
-  }
-
-  @Test(timeout = 4000)
-  public void test41()  throws Throwable  {
-      Option<Tuple3<String, Object, Object>> option0 = TestWritable.unapply((TestWritable) null);
-      assertNotNull(option0);
-  }
-
-  @Test(timeout = 4000)
-  public void test42()  throws Throwable  {
-      TestWritable testWritable0 = TestWritable.apply("D5+df$0SJ'=m[l)X", 1, 1);
-      double double0 = testWritable0.getDouble();
-      assertEquals(1.0, double0, 0.01);
-      assertEquals(1, testWritable0.getInt());
-  }
-
-  @Test(timeout = 4000)
-  public void test43()  throws Throwable  {
-      TestWritable testWritable0 = new TestWritable();
-      String string0 = testWritable0.getStr();
-      assertEquals("", string0);
-  }
-
-  @Test(timeout = 4000)
-  public void test44()  throws Throwable  {
-      Function1<Tuple3<String, Object, Object>, TestWritable> function1_0 = TestWritable.tupled();
-      assertNotNull(function1_0);
-  }
-
-  @Test(timeout = 4000)
-  public void test45()  throws Throwable  {
-      TestWritable testWritable0 = new TestWritable();
-      testWritable0.setStr("?UV_`");
-      assertEquals(0, testWritable0.int());
-  }
-
-  @Test(timeout = 4000)
-  public void test46()  throws Throwable  {
-      TestWritable testWritable0 = new TestWritable();
-      double double0 = testWritable0.copy$default$3();
-      assertEquals(0.0, double0, 0.01);
-  }
-
-  @Test(timeout = 4000)
-  public void test47()  throws Throwable  {
-      TestWritable testWritable0 = new TestWritable();
-      testWritable0.hashCode();
-      assertEquals(0.0, testWritable0.copy$default$3(), 0.01);
-      assertEquals(0, testWritable0.copy$default$2());
-  }
-
-  @Test(timeout = 4000)
-  public void test48()  throws Throwable  {
-      TestWritable testWritable0 = new TestWritable(" -> ", (-1390), (-1390));
-      int int0 = testWritable0.copy$default$2();
-      assertEquals((-1390), int0);
-  }
-
-  @Test(timeout = 4000)
-  public void test49()  throws Throwable  {
-      Function1<String, Function1<Object, Function1<Object, TestWritable>>> function1_0 = TestWritable.curried();
-      assertNotNull(function1_0);
-  }
-
-  @Test(timeout = 4000)
-  public void test50()  throws Throwable  {
-      TestWritable testWritable0 = new TestWritable();
-      // Undeclared exception!
-      try { 
-        testWritable0.write((DataOutput) null);
-        fail("Expecting exception: NullPointerException");
-      
-      } catch(NullPointerException e) {
-         //
-         // no message in exception (getMessage() returned null)
-         //
-         verifyException("org.apache.spark.api.python.TestWritable", e);
-      }
-  }
-
-  @Test(timeout = 4000)
-  public void test51()  throws Throwable  {
-      TestWritable testWritable0 = new TestWritable();
-      int int0 = testWritable0.getInt();
-      assertEquals(0, int0);
-  }
-
-  @Test(timeout = 4000)
-  public void test52()  throws Throwable  {
-      TestWritable testWritable0 = new TestWritable();
-      // Undeclared exception!
-      try { 
-        testWritable0.readFields((DataInput) null);
-        fail("Expecting exception: NullPointerException");
-      
-      } catch(NullPointerException e) {
-         //
-         // no message in exception (getMessage() returned null)
-         //
-         verifyException("org.apache.spark.api.python.TestWritable", e);
-      }
-  }
-
-  @Test(timeout = 4000)
-  public void test53()  throws Throwable  {
-      TestWritable testWritable0 = new TestWritable();
-      testWritable0.setInt(33554432);
-      assertEquals(33554432, testWritable0.copy$default$2());
-  }
-
-  @Test(timeout = 4000)
-  public void test54()  throws Throwable  {
-      TestWritable testWritable0 = new TestWritable();
-      String string0 = testWritable0.toString();
-      assertEquals("TestWritable(,0,0.0)", string0);
-      assertEquals(3, testWritable0.productArity());
-  }
-
-  @Test(timeout = 4000)
-  public void test55()  throws Throwable  {
-      TestWritable testWritable0 = new TestWritable();
-      TestWritable.unapply(testWritable0);
-      assertEquals(0, testWritable0.copy$default$2());
-      assertEquals(0.0, testWritable0.getDouble(), 0.01);
-      assertEquals(0, testWritable0.getInt());
-  }
-
-  @Test(timeout = 4000)
-  public void test56()  throws Throwable  {
-      TestWritable testWritable0 = new TestWritable();
-      String string0 = testWritable0.copy$default$1();
-      assertEquals("", string0);
-  }
+//  @Test(timeout = 4000)
+//  public void test00()  throws Throwable  {
+//      TestWritable testWritable0 = new TestWritable();
+//      testWritable0.setDouble((-1.0));
+//      TestWritable testWritable1 = new TestWritable();
+//      boolean boolean0 = testWritable0.equals(testWritable1);
+//      assertEquals((-1.0), testWritable0.double(), 0.01);
+//      assertFalse(boolean0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test01()  throws Throwable  {
+//      TestWritable testWritable0 = TestWritable.apply((String) null, (-3908), 4135.979559348);
+//      TestWritable testWritable1 = testWritable0.copy((String) null, (-424), 0.0);
+//      boolean boolean0 = testWritable0.equals(testWritable1);
+//      assertEquals((-424), testWritable1.int());
+//      assertFalse(boolean0);
+//      assertEquals(4135.979559348, testWritable0.double(), 0.01);
+//      assertEquals(0.0, testWritable1.copy$default$3(), 0.01);
+//      assertEquals((-3908), testWritable0.getInt());
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test02()  throws Throwable  {
+//      TestWritable testWritable0 = new TestWritable((String) null, (-3596), (-704.3927));
+//      DataOutput dataOutput0 = mock(DataOutput.class, new ViolatedAssumptionAnswer());
+//      testWritable0.write(dataOutput0);
+//      assertEquals((-704.3927), testWritable0.copy$default$3(), 0.01);
+//      assertEquals((-3596), testWritable0.copy$default$2());
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test03()  throws Throwable  {
+//      TestWritable testWritable0 = new TestWritable("6g{p^?gkkK}3a483I", (-3413), 0.0);
+//      DataInput dataInput0 = mock(DataInput.class, new ViolatedAssumptionAnswer());
+//      doReturn(0.0).when(dataInput0).readDouble();
+//      doReturn(0).when(dataInput0).readInt();
+//      doReturn((String) null).when(dataInput0).readUTF();
+//      testWritable0.readFields(dataInput0);
+//      testWritable0.str();
+//      assertEquals(0, testWritable0.int());
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test04()  throws Throwable  {
+//      TestWritable testWritable0 = new TestWritable("org.apache.spark.api.python.TestWritable$", 0, 1.0);
+//      String string0 = testWritable0.str();
+//      assertEquals("org.apache.spark.api.python.TestWritable$", string0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test05()  throws Throwable  {
+//      TestWritable testWritable0 = new TestWritable("6g{p^?gkkK}3a483I", (-3413), 0.0);
+//      DataInput dataInput0 = mock(DataInput.class, new ViolatedAssumptionAnswer());
+//      doReturn(0.0).when(dataInput0).readDouble();
+//      doReturn(0).when(dataInput0).readInt();
+//      doReturn((String) null).when(dataInput0).readUTF();
+//      testWritable0.readFields(dataInput0);
+//      testWritable0.productElement(0);
+//      assertEquals(0, testWritable0.copy$default$2());
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test06()  throws Throwable  {
+//      TestWritable testWritable0 = new TestWritable("", 3568, 337.06845852);
+//      int int0 = testWritable0.int();
+//      assertEquals(3568, int0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test07()  throws Throwable  {
+//      TestWritable testWritable0 = TestWritable.apply("", (-637), (-637));
+//      int int0 = testWritable0.int();
+//      assertEquals((-637), int0);
+//      assertEquals((-637.0), testWritable0.getDouble(), 0.01);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test08()  throws Throwable  {
+//      TestWritable testWritable0 = TestWritable.apply("MafxF)f`VD5.y", 0, 0);
+//      DataInput dataInput0 = mock(DataInput.class, new ViolatedAssumptionAnswer());
+//      doReturn(0.0).when(dataInput0).readDouble();
+//      doReturn(0).when(dataInput0).readInt();
+//      doReturn((String) null).when(dataInput0).readUTF();
+//      testWritable0.readFields(dataInput0);
+//      testWritable0.getStr();
+//      assertEquals(0, testWritable0.getInt());
+//      assertEquals(0.0, testWritable0.getDouble(), 0.01);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test09()  throws Throwable  {
+//      TestWritable testWritable0 = TestWritable.apply("MafxF)f`VD5.y", 0, 0);
+//      testWritable0.getStr();
+//      assertEquals(0, testWritable0.getInt());
+//      assertEquals(0.0, testWritable0.copy$default$3(), 0.01);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test10()  throws Throwable  {
+//      TestWritable testWritable0 = new TestWritable("", 3568, 337.06845852);
+//      int int0 = testWritable0.getInt();
+//      assertEquals(3568, int0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test11()  throws Throwable  {
+//      TestWritable testWritable0 = new TestWritable((String) null, (-3596), (-704.3927));
+//      int int0 = testWritable0.getInt();
+//      assertEquals((-3596), int0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test12()  throws Throwable  {
+//      TestWritable testWritable0 = new TestWritable();
+//      double double0 = testWritable0.getDouble();
+//      assertEquals(0.0, double0, 0.01);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test13()  throws Throwable  {
+//      TestWritable testWritable0 = new TestWritable("", (-424), 0.0);
+//      testWritable0.double_$eq((-424));
+//      double double0 = testWritable0.getDouble();
+//      assertEquals((-424.0), double0, 0.01);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test14()  throws Throwable  {
+//      TestWritable testWritable0 = new TestWritable("org.apache.spark.api.python.TestWritable$", 0, 1.0);
+//      double double0 = testWritable0.double();
+//      assertEquals(1.0, double0, 0.01);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test15()  throws Throwable  {
+//      TestWritable testWritable0 = new TestWritable("=x", 15, 15);
+//      testWritable0.double_$eq((-894.0202));
+//      double double0 = testWritable0.double();
+//      assertEquals((-894.0202), double0, 0.01);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test16()  throws Throwable  {
+//      TestWritable testWritable0 = new TestWritable("?\"qUrL/6v", (-231), (-231));
+//      TestWritable testWritable1 = testWritable0.copy("?\"qUrL/6v", 0, 1176.627744776889);
+//      double double0 = testWritable1.copy$default$3();
+//      assertEquals(1176.627744776889, double0, 0.01);
+//      assertEquals(0, testWritable1.getInt());
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test17()  throws Throwable  {
+//      TestWritable testWritable0 = TestWritable.apply("", (-637), (-637));
+//      double double0 = testWritable0.copy$default$3();
+//      assertEquals((-637.0), double0, 0.01);
+//      assertEquals((-637), testWritable0.copy$default$2());
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test18()  throws Throwable  {
+//      TestWritable testWritable0 = new TestWritable();
+//      int int0 = testWritable0.copy$default$2();
+//      assertEquals(0, int0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test19()  throws Throwable  {
+//      TestWritable testWritable0 = new TestWritable("=x", 15, 15);
+//      int int0 = testWritable0.copy$default$2();
+//      assertEquals(15, int0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test20()  throws Throwable  {
+//      TestWritable testWritable0 = TestWritable.apply((String) null, (-2160), (-2160));
+//      testWritable0.copy$default$1();
+//      assertEquals((-2160), testWritable0.int());
+//      assertEquals((-2160.0), testWritable0.copy$default$3(), 0.01);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test21()  throws Throwable  {
+//      TestWritable testWritable0 = new TestWritable("d?dYyNkaR+", 0, 0);
+//      String string0 = testWritable0.copy$default$1();
+//      assertEquals("d?dYyNkaR+", string0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test22()  throws Throwable  {
+//      TestWritable testWritable0 = new TestWritable("6g{p^?gkkK}3a483I", (-3413), 0.0);
+//      boolean boolean0 = testWritable0.canEqual((Object) null);
+//      assertFalse(boolean0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test23()  throws Throwable  {
+//      TestWritable testWritable0 = new TestWritable("yO1eK!Oy", 1, 0.0);
+//      Object object0 = testWritable0.productElement(1);
+//      assertEquals(1, object0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test24()  throws Throwable  {
+//      TestWritable testWritable0 = new TestWritable("6g{p^?gkkK}3a483I", (-3413), 0.0);
+//      Object object0 = testWritable0.productElement(0);
+//      assertEquals("6g{p^?gkkK}3a483I", object0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test25()  throws Throwable  {
+//      TestWritable testWritable0 = new TestWritable();
+//      Object object0 = testWritable0.productElement(2);
+//      assertEquals(0.0, object0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test26()  throws Throwable  {
+//      TestWritable testWritable0 = new TestWritable();
+//      int int0 = testWritable0.int();
+//      assertEquals(0, int0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test27()  throws Throwable  {
+//      TestWritable testWritable0 = TestWritable.apply((String) null, (-2160), (-2160));
+//      testWritable0.productIterator();
+//      assertEquals(3, testWritable0.productArity());
+//      assertEquals((-2160.0), testWritable0.double(), 0.01);
+//      assertEquals((-2160), testWritable0.getInt());
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test28()  throws Throwable  {
+//      TestWritable testWritable0 = new TestWritable("", (-424), 0.0);
+//      int int0 = testWritable0.productArity();
+//      assertEquals(3, int0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test29()  throws Throwable  {
+//      TestWritable testWritable0 = new TestWritable();
+//      String string0 = testWritable0.productPrefix();
+//      assertEquals("TestWritable", string0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test30()  throws Throwable  {
+//      TestWritable testWritable0 = new TestWritable();
+//      testWritable0.int_$eq((-889275714));
+//      assertEquals((-889275714), testWritable0.getInt());
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test31()  throws Throwable  {
+//      TestWritable testWritable0 = new TestWritable();
+//      String string0 = testWritable0.str();
+//      assertEquals("", string0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test32()  throws Throwable  {
+//      TestWritable testWritable0 = new TestWritable();
+//      boolean boolean0 = testWritable0.canEqual(testWritable0);
+//      assertTrue(boolean0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test33()  throws Throwable  {
+//      TestWritable testWritable0 = new TestWritable("d?dYyNkaR+", 0, 0);
+//      double double0 = testWritable0.double();
+//      assertEquals(0.0, double0, 0.01);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test34()  throws Throwable  {
+//      TestWritable testWritable0 = new TestWritable();
+//      TestWritable testWritable1 = testWritable0.copy("", 2066, 2066);
+//      boolean boolean0 = testWritable1.equals(testWritable0);
+//      assertFalse(boolean0);
+//      assertEquals(2066, testWritable1.copy$default$2());
+//      assertEquals(2066.0, testWritable1.double(), 0.01);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test35()  throws Throwable  {
+//      TestWritable testWritable0 = new TestWritable();
+//      testWritable0.str_$eq(":XC{gy7|_c ~");
+//      TestWritable testWritable1 = new TestWritable();
+//      boolean boolean0 = testWritable0.equals(testWritable1);
+//      assertFalse(boolean0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test36()  throws Throwable  {
+//      TestWritable testWritable0 = new TestWritable();
+//      TestWritable testWritable1 = testWritable0.copy((String) null, 537, 537);
+//      boolean boolean0 = testWritable1.equals(testWritable0);
+//      assertFalse(boolean0);
+//      assertEquals(537, testWritable1.copy$default$2());
+//      assertEquals(537.0, testWritable1.double(), 0.01);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test37()  throws Throwable  {
+//      TestWritable testWritable0 = TestWritable.apply((String) null, (-3908), 4135.979559348);
+//      TestWritable testWritable1 = testWritable0.copy((String) null, (-3908), 0.0);
+//      boolean boolean0 = testWritable0.equals(testWritable1);
+//      assertEquals(4135.979559348, testWritable0.getDouble(), 0.01);
+//      assertFalse(boolean0);
+//      assertEquals((-3908), testWritable0.int());
+//      assertFalse(testWritable1.equals((Object)testWritable0));
+//      assertEquals(0.0, testWritable1.double(), 0.01);
+//      assertEquals((-3908), testWritable1.copy$default$2());
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test38()  throws Throwable  {
+//      TestWritable testWritable0 = new TestWritable();
+//      boolean boolean0 = testWritable0.equals((Object) null);
+//      assertFalse(boolean0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test39()  throws Throwable  {
+//      TestWritable testWritable0 = new TestWritable();
+//      boolean boolean0 = testWritable0.equals(testWritable0);
+//      assertTrue(boolean0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test40()  throws Throwable  {
+//      TestWritable testWritable0 = new TestWritable();
+//      // Undeclared exception!
+//      try { 
+//        testWritable0.productElement((-821));
+//        fail("Expecting exception: IndexOutOfBoundsException");
+//      
+//      } catch(IndexOutOfBoundsException e) {
+//         //
+//         // java.lang.Integer@0000000002
+//         //
+//         verifyException("org.apache.spark.api.python.TestWritable", e);
+//      }
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test41()  throws Throwable  {
+//      Option<Tuple3<String, Object, Object>> option0 = TestWritable.unapply((TestWritable) null);
+//      assertNotNull(option0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test42()  throws Throwable  {
+//      TestWritable testWritable0 = TestWritable.apply("D5+df$0SJ'=m[l)X", 1, 1);
+//      double double0 = testWritable0.getDouble();
+//      assertEquals(1.0, double0, 0.01);
+//      assertEquals(1, testWritable0.getInt());
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test43()  throws Throwable  {
+//      TestWritable testWritable0 = new TestWritable();
+//      String string0 = testWritable0.getStr();
+//      assertEquals("", string0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test44()  throws Throwable  {
+//      Function1<Tuple3<String, Object, Object>, TestWritable> function1_0 = TestWritable.tupled();
+//      assertNotNull(function1_0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test45()  throws Throwable  {
+//      TestWritable testWritable0 = new TestWritable();
+//      testWritable0.setStr("?UV_`");
+//      assertEquals(0, testWritable0.int());
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test46()  throws Throwable  {
+//      TestWritable testWritable0 = new TestWritable();
+//      double double0 = testWritable0.copy$default$3();
+//      assertEquals(0.0, double0, 0.01);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test47()  throws Throwable  {
+//      TestWritable testWritable0 = new TestWritable();
+//      testWritable0.hashCode();
+//      assertEquals(0.0, testWritable0.copy$default$3(), 0.01);
+//      assertEquals(0, testWritable0.copy$default$2());
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test48()  throws Throwable  {
+//      TestWritable testWritable0 = new TestWritable(" -> ", (-1390), (-1390));
+//      int int0 = testWritable0.copy$default$2();
+//      assertEquals((-1390), int0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test49()  throws Throwable  {
+//      Function1<String, Function1<Object, Function1<Object, TestWritable>>> function1_0 = TestWritable.curried();
+//      assertNotNull(function1_0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test50()  throws Throwable  {
+//      TestWritable testWritable0 = new TestWritable();
+//      // Undeclared exception!
+//      try { 
+//        testWritable0.write((DataOutput) null);
+//        fail("Expecting exception: NullPointerException");
+//      
+//      } catch(NullPointerException e) {
+//         //
+//         // no message in exception (getMessage() returned null)
+//         //
+//         verifyException("org.apache.spark.api.python.TestWritable", e);
+//      }
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test51()  throws Throwable  {
+//      TestWritable testWritable0 = new TestWritable();
+//      int int0 = testWritable0.getInt();
+//      assertEquals(0, int0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test52()  throws Throwable  {
+//      TestWritable testWritable0 = new TestWritable();
+//      // Undeclared exception!
+//      try { 
+//        testWritable0.readFields((DataInput) null);
+//        fail("Expecting exception: NullPointerException");
+//      
+//      } catch(NullPointerException e) {
+//         //
+//         // no message in exception (getMessage() returned null)
+//         //
+//         verifyException("org.apache.spark.api.python.TestWritable", e);
+//      }
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test53()  throws Throwable  {
+//      TestWritable testWritable0 = new TestWritable();
+//      testWritable0.setInt(33554432);
+//      assertEquals(33554432, testWritable0.copy$default$2());
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test54()  throws Throwable  {
+//      TestWritable testWritable0 = new TestWritable();
+//      String string0 = testWritable0.toString();
+//      assertEquals("TestWritable(,0,0.0)", string0);
+//      assertEquals(3, testWritable0.productArity());
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test55()  throws Throwable  {
+//      TestWritable testWritable0 = new TestWritable();
+//      TestWritable.unapply(testWritable0);
+//      assertEquals(0, testWritable0.copy$default$2());
+//      assertEquals(0.0, testWritable0.getDouble(), 0.01);
+//      assertEquals(0, testWritable0.getInt());
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test56()  throws Throwable  {
+//      TestWritable testWritable0 = new TestWritable();
+//      String string0 = testWritable0.copy$default$1();
+//      assertEquals("", string0);
+//  }
 }

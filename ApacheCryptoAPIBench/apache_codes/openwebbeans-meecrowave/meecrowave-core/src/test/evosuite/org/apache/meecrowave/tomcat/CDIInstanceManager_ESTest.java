@@ -114,17 +114,17 @@ public class CDIInstanceManager_ESTest extends CDIInstanceManager_ESTest_scaffol
       }
   }
 
-  @Test(timeout = 4000)
-  public void test07()  throws Throwable  {
-      Class<Object> class0 = Object.class;
-      // Undeclared exception!
-      try { 
-        ((CDIInstanceManager)"").newInstance(class0);
-        fail("Expecting exception: IllegalArgumentException");
-      
-      } catch(IllegalArgumentException e) {
-      }
-  }
+//  @Test(timeout = 4000)
+//  public void test07()  throws Throwable  {
+//      Class<Object> class0 = Object.class;
+//      // Undeclared exception!
+//      try { 
+//        ((CDIInstanceManager)"").newInstance(class0);
+//        fail("Expecting exception: IllegalArgumentException");
+//      
+//      } catch(IllegalArgumentException e) {
+//      }
+//  }
 
   @Test(timeout = 4000)
   public void test08()  throws Throwable  {

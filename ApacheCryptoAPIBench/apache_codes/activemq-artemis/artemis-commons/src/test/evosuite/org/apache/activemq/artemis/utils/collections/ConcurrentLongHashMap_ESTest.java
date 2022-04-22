@@ -762,28 +762,28 @@ public class ConcurrentLongHashMap_ESTest extends ConcurrentLongHashMap_ESTest_s
 
   @Test(timeout = 4000)
   public void test39()  throws Throwable  {
-      ConcurrentLongHashMap<Object> concurrentLongHashMap0 = new ConcurrentLongHashMap<Object>();
-      concurrentLongHashMap0.isEmpty();
-      int int0 = 579;
-      ConcurrentLongHashMap<Long> concurrentLongHashMap1 = new ConcurrentLongHashMap<Long>((-667), 579);
-      concurrentLongHashMap1.capacity();
-      concurrentLongHashMap0.getUsedBucketCount();
-      ConcurrentLongHashMap<Object> concurrentLongHashMap2 = new ConcurrentLongHashMap<Object>(0, 579);
-      ConcurrentLongHashMap<Long> concurrentLongHashMap3 = new ConcurrentLongHashMap<Long>((-667));
-      LongFunction<Object> longFunction0 = (LongFunction<Object>) mock(LongFunction.class, new ViolatedAssumptionAnswer());
-      doReturn((Object) null).when(longFunction0).apply(anyLong());
-      concurrentLongHashMap3.computeIfAbsent((-1L), longFunction0);
-      // Undeclared exception!
-      try { 
-        concurrentLongHashMap2.put(0L, (Object) null);
-        fail("Expecting exception: NullPointerException");
-      
-      } catch(NullPointerException e) {
-         //
-         // no message in exception (getMessage() returned null)
-         //
-         verifyException("com.google.common.base.Preconditions", e);
-      }
+//      ConcurrentLongHashMap<Object> concurrentLongHashMap0 = new ConcurrentLongHashMap<Object>();
+//      concurrentLongHashMap0.isEmpty();
+//      int int0 = 579;
+//      ConcurrentLongHashMap<Long> concurrentLongHashMap1 = new ConcurrentLongHashMap<Long>((-667), 579);
+//      concurrentLongHashMap1.capacity();
+//      concurrentLongHashMap0.getUsedBucketCount();
+//      ConcurrentLongHashMap<Object> concurrentLongHashMap2 = new ConcurrentLongHashMap<Object>(0, 579);
+//      ConcurrentLongHashMap<Long> concurrentLongHashMap3 = new ConcurrentLongHashMap<Long>((-667));
+//      LongFunction<Object> longFunction0 = (LongFunction<Object>) mock(LongFunction.class, new ViolatedAssumptionAnswer());
+//      doReturn((Object) null).when(longFunction0).apply(anyLong());
+//      concurrentLongHashMap3.computeIfAbsent((-1L), longFunction0);
+//      // Undeclared exception!
+//      try { 
+//        concurrentLongHashMap2.put(0L, (Object) null);
+//        fail("Expecting exception: NullPointerException");
+//      
+//      } catch(NullPointerException e) {
+//         //
+//         // no message in exception (getMessage() returned null)
+//         //
+//         verifyException("com.google.common.base.Preconditions", e);
+//      }
   }
 
   @Test(timeout = 4000)

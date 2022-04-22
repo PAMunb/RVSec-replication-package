@@ -77,38 +77,38 @@ public class ApplicationDescription_ESTest extends ApplicationDescription_ESTest
       assertEquals("0$WBEGx)T^(EgP)M)", applicationDescription0.copy$default$1());
   }
 
-  @Test(timeout = 4000)
-  public void test06()  throws Throwable  {
-      ScalaReflectionException. scalaReflectionException_0 = ScalaReflectionException..MODULE$;
-      ScalaReflectionException scalaReflectionException0 = scalaReflectionException_0.apply("/Ksm*");
-      Option<String> option0 = scalaReflectionException_0.unapply(scalaReflectionException0);
-      ApplicationDescription applicationDescription0 = ApplicationDescription.apply("/Ksm*", (Option<Object>) null, (-1486), (Command) null, "/Ksm*", (Option<URI>) null, option0, (Option<Object>) null, (Option<Object>) null, "zero step");
-      Option<String> option1 = applicationDescription0.eventLogCodec();
-      assertEquals("/Ksm*", applicationDescription0.appUiUrl());
-      assertNotNull(option1);
-      assertEquals("zero step", applicationDescription0.user());
-      assertEquals((-1486), applicationDescription0.memoryPerExecutorMB());
-      assertEquals("/Ksm*", applicationDescription0.name());
-  }
+//  @Test(timeout = 4000)
+//  public void test06()  throws Throwable  {
+//      ScalaReflectionException. scalaReflectionException_0 = ScalaReflectionException..MODULE$;
+//      ScalaReflectionException scalaReflectionException0 = scalaReflectionException_0.apply("/Ksm*");
+//      Option<String> option0 = scalaReflectionException_0.unapply(scalaReflectionException0);
+//      ApplicationDescription applicationDescription0 = ApplicationDescription.apply("/Ksm*", (Option<Object>) null, (-1486), (Command) null, "/Ksm*", (Option<URI>) null, option0, (Option<Object>) null, (Option<Object>) null, "zero step");
+//      Option<String> option1 = applicationDescription0.eventLogCodec();
+//      assertEquals("/Ksm*", applicationDescription0.appUiUrl());
+//      assertNotNull(option1);
+//      assertEquals("zero step", applicationDescription0.user());
+//      assertEquals((-1486), applicationDescription0.memoryPerExecutorMB());
+//      assertEquals("/Ksm*", applicationDescription0.name());
+//  }
 
-  @Test(timeout = 4000)
-  public void test07()  throws Throwable  {
-      ApplicationDescription applicationDescription0 = ApplicationDescription.apply("scala.collection.immutable.List$", (Option<Object>) null, (-32743), (Command) null, "b^Wm04&`5,uSZ?Ehi4", (Option<URI>) null, (Option<String>) null, (Option<Object>) null, (Option<Object>) null, "CVNzOo");
-      ScalaReflectionException. scalaReflectionException_0 = ScalaReflectionException..MODULE$;
-      ScalaReflectionException scalaReflectionException0 = scalaReflectionException_0.apply((String) null);
-      Option<String> option0 = scalaReflectionException_0.unapply(scalaReflectionException0);
-      ApplicationDescription applicationDescription1 = applicationDescription0.copy("scala.collection.immutable.List$", (Option<Object>) null, 1901, (Command) null, "b^Wm04&`5,uSZ?Ehi4", (Option<URI>) null, option0, (Option<Object>) null, (Option<Object>) null, "");
-      Option<String> option1 = applicationDescription1.copy$default$7();
-      assertNotNull(option1);
-      assertEquals(1901, applicationDescription1.copy$default$3());
-      assertEquals((-32743), applicationDescription0.memoryPerExecutorMB());
-      assertEquals("CVNzOo", applicationDescription0.copy$default$10());
-      assertEquals("", applicationDescription1.copy$default$10());
-      assertEquals("scala.collection.immutable.List$", applicationDescription1.copy$default$1());
-      assertEquals("b^Wm04&`5,uSZ?Ehi4", applicationDescription1.copy$default$5());
-      assertEquals("scala.collection.immutable.List$", applicationDescription0.copy$default$1());
-      assertEquals("b^Wm04&`5,uSZ?Ehi4", applicationDescription0.appUiUrl());
-  }
+//  @Test(timeout = 4000)
+//  public void test07()  throws Throwable  {
+//      ApplicationDescription applicationDescription0 = ApplicationDescription.apply("scala.collection.immutable.List$", (Option<Object>) null, (-32743), (Command) null, "b^Wm04&`5,uSZ?Ehi4", (Option<URI>) null, (Option<String>) null, (Option<Object>) null, (Option<Object>) null, "CVNzOo");
+//      ScalaReflectionException. scalaReflectionException_0 = ScalaReflectionException..MODULE$;
+//      ScalaReflectionException scalaReflectionException0 = scalaReflectionException_0.apply((String) null);
+//      Option<String> option0 = scalaReflectionException_0.unapply(scalaReflectionException0);
+//      ApplicationDescription applicationDescription1 = applicationDescription0.copy("scala.collection.immutable.List$", (Option<Object>) null, 1901, (Command) null, "b^Wm04&`5,uSZ?Ehi4", (Option<URI>) null, option0, (Option<Object>) null, (Option<Object>) null, "");
+//      Option<String> option1 = applicationDescription1.copy$default$7();
+//      assertNotNull(option1);
+//      assertEquals(1901, applicationDescription1.copy$default$3());
+//      assertEquals((-32743), applicationDescription0.memoryPerExecutorMB());
+//      assertEquals("CVNzOo", applicationDescription0.copy$default$10());
+//      assertEquals("", applicationDescription1.copy$default$10());
+//      assertEquals("scala.collection.immutable.List$", applicationDescription1.copy$default$1());
+//      assertEquals("b^Wm04&`5,uSZ?Ehi4", applicationDescription1.copy$default$5());
+//      assertEquals("scala.collection.immutable.List$", applicationDescription0.copy$default$1());
+//      assertEquals("b^Wm04&`5,uSZ?Ehi4", applicationDescription0.appUiUrl());
+//  }
 
   @Test(timeout = 4000)
   public void test08()  throws Throwable  {

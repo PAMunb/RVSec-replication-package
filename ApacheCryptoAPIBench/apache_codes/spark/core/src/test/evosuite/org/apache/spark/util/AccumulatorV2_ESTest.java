@@ -5,483 +5,483 @@
 
 package org.apache.spark.util;
 
-import org.junit.Test;
-import static org.junit.Assert.*;
-import static org.evosuite.shaded.org.mockito.Mockito.*;
-import static org.evosuite.runtime.EvoAssertions.*;
-import java.util.List;
-import org.apache.spark.AccumulableParam;
-import org.apache.spark.ContextCleaner;
-import org.apache.spark.SparkContext;
-import org.apache.spark.util.AccumulatorMetadata;
-import org.apache.spark.util.AccumulatorV2;
-import org.apache.spark.util.CollectionAccumulator;
-import org.apache.spark.util.DoubleAccumulator;
-import org.apache.spark.util.LegacyAccumulatorWrapper;
-import org.apache.spark.util.LongAccumulator;
-import org.evosuite.runtime.EvoRunner;
-import org.evosuite.runtime.EvoRunnerParameters;
-import org.evosuite.runtime.ViolatedAssumptionAnswer;
-import org.junit.runner.RunWith;
-import scala.Option;
+//import org.junit.Test;
+//import static org.junit.Assert.*;
+//import static org.evosuite.shaded.org.mockito.Mockito.*;
+//import static org.evosuite.runtime.EvoAssertions.*;
+//import java.util.List;
+//import org.apache.spark.AccumulableParam;
+//import org.apache.spark.ContextCleaner;
+//import org.apache.spark.SparkContext;
+//import org.apache.spark.util.AccumulatorMetadata;
+//import org.apache.spark.util.AccumulatorV2;
+//import org.apache.spark.util.CollectionAccumulator;
+//import org.apache.spark.util.DoubleAccumulator;
+//import org.apache.spark.util.LegacyAccumulatorWrapper;
+//import org.apache.spark.util.LongAccumulator;
+//import org.evosuite.runtime.EvoRunner;
+//import org.evosuite.runtime.EvoRunnerParameters;
+//import org.evosuite.runtime.ViolatedAssumptionAnswer;
+//import org.junit.runner.RunWith;
+//import scala.Option;
+//
+//@RunWith(EvoRunner.class) @EvoRunnerParameters(mockJVMNonDeterminism = true, useVFS = true, useVNET = true, resetStaticState = true, separateClassLoader = true) 
+public class AccumulatorV2_ESTest { //extends AccumulatorV2_ESTest_scaffolding {
 
-@RunWith(EvoRunner.class) @EvoRunnerParameters(mockJVMNonDeterminism = true, useVFS = true, useVNET = true, resetStaticState = true, separateClassLoader = true) 
-public class AccumulatorV2_ESTest extends AccumulatorV2_ESTest_scaffolding {
-
-  @Test(timeout = 4000)
-  public void test00()  throws Throwable  {
-      AccumulableParam<String, String> accumulableParam0 = (AccumulableParam<String, String>) mock(AccumulableParam.class, new ViolatedAssumptionAnswer());
-      doReturn((Object) null).when(accumulableParam0).addInPlace(anyString() , anyString());
-      LegacyAccumulatorWrapper<String, String> legacyAccumulatorWrapper0 = new LegacyAccumulatorWrapper<String, String>("<>Cqz44B%dZ8bZ9", accumulableParam0);
-      legacyAccumulatorWrapper0.merge(legacyAccumulatorWrapper0);
-      assertTrue(legacyAccumulatorWrapper0.org$apache$spark$util$AccumulatorV2$$atDriverSide);
-  }
-
-  @Test(timeout = 4000)
-  public void test01()  throws Throwable  {
-      AccumulableParam<String, String> accumulableParam0 = (AccumulableParam<String, String>) mock(AccumulableParam.class, new ViolatedAssumptionAnswer());
-      doReturn((Object) null).when(accumulableParam0).addAccumulator(anyString() , anyString());
-      LegacyAccumulatorWrapper<String, String> legacyAccumulatorWrapper0 = new LegacyAccumulatorWrapper<String, String>("7~", accumulableParam0);
-      legacyAccumulatorWrapper0.add("7~");
-      assertTrue(legacyAccumulatorWrapper0.org$apache$spark$util$AccumulatorV2$$atDriverSide);
-  }
-
-  @Test(timeout = 4000)
-  public void test02()  throws Throwable  {
-      LegacyAccumulatorWrapper<String, String> legacyAccumulatorWrapper0 = new LegacyAccumulatorWrapper<String, String>((String) null, (AccumulableParam<String, String>) null);
-      legacyAccumulatorWrapper0.value();
-      assertTrue(legacyAccumulatorWrapper0.org$apache$spark$util$AccumulatorV2$$atDriverSide);
-  }
-
-  @Test(timeout = 4000)
-  public void test03()  throws Throwable  {
-      AccumulableParam<String, String> accumulableParam0 = (AccumulableParam<String, String>) mock(AccumulableParam.class, new ViolatedAssumptionAnswer());
-      LegacyAccumulatorWrapper<String, String> legacyAccumulatorWrapper0 = new LegacyAccumulatorWrapper<String, String>("", accumulableParam0);
-      legacyAccumulatorWrapper0.value();
-      assertTrue(legacyAccumulatorWrapper0.org$apache$spark$util$AccumulatorV2$$atDriverSide);
-  }
-
-  @Test(timeout = 4000)
-  public void test04()  throws Throwable  {
-      CollectionAccumulator<String> collectionAccumulator0 = new CollectionAccumulator<String>();
-      collectionAccumulator0.isZero();
-      assertTrue(collectionAccumulator0.org$apache$spark$util$AccumulatorV2$$atDriverSide);
-  }
-
-  @Test(timeout = 4000)
-  public void test05()  throws Throwable  {
-      AccumulableParam<String, String> accumulableParam0 = (AccumulableParam<String, String>) mock(AccumulableParam.class, new ViolatedAssumptionAnswer());
-      doReturn((Object) null).when(accumulableParam0).zero(anyString());
-      LegacyAccumulatorWrapper<String, String> legacyAccumulatorWrapper0 = new LegacyAccumulatorWrapper<String, String>("", accumulableParam0);
-      legacyAccumulatorWrapper0.isZero();
-      assertTrue(legacyAccumulatorWrapper0.org$apache$spark$util$AccumulatorV2$$atDriverSide);
-  }
-
-  @Test(timeout = 4000)
-  public void test06()  throws Throwable  {
-      DoubleAccumulator doubleAccumulator0 = new DoubleAccumulator();
-      Option<ContextCleaner> option0 = (Option<ContextCleaner>) mock(Option.class, new ViolatedAssumptionAnswer());
-      SparkContext sparkContext0 = mock(SparkContext.class, new ViolatedAssumptionAnswer());
-      doReturn(option0).when(sparkContext0).cleaner();
-      doubleAccumulator0.register(sparkContext0, (Option<String>) null, true);
-      long long0 = doubleAccumulator0.id();
-      assertEquals(105L, long0);
-  }
-
-  @Test(timeout = 4000)
-  public void test07()  throws Throwable  {
-      DoubleAccumulator doubleAccumulator0 = new DoubleAccumulator();
-      Option<ContextCleaner> option0 = (Option<ContextCleaner>) mock(Option.class, new ViolatedAssumptionAnswer());
-      SparkContext sparkContext0 = mock(SparkContext.class, new ViolatedAssumptionAnswer());
-      doReturn(option0).when(sparkContext0).cleaner();
-      doubleAccumulator0.register(sparkContext0, (Option<String>) null, true);
-      boolean boolean0 = doubleAccumulator0.countFailedValues();
-      assertTrue(doubleAccumulator0.org$apache$spark$util$AccumulatorV2$$atDriverSide);
-      assertTrue(boolean0);
-  }
-
-  @Test(timeout = 4000)
-  public void test08()  throws Throwable  {
-      AccumulableParam<String, String> accumulableParam0 = (AccumulableParam<String, String>) mock(AccumulableParam.class, new ViolatedAssumptionAnswer());
-      LegacyAccumulatorWrapper<String, String> legacyAccumulatorWrapper0 = new LegacyAccumulatorWrapper<String, String>("", accumulableParam0);
-      AccumulatorV2<String, String> accumulatorV2_0 = legacyAccumulatorWrapper0.copy();
-      assertTrue(accumulatorV2_0.org$apache$spark$util$AccumulatorV2$$atDriverSide);
-  }
-
-  @Test(timeout = 4000)
-  public void test09()  throws Throwable  {
-      DoubleAccumulator doubleAccumulator0 = new DoubleAccumulator();
-      Option<ContextCleaner> option0 = (Option<ContextCleaner>) mock(Option.class, new ViolatedAssumptionAnswer());
-      SparkContext sparkContext0 = mock(SparkContext.class, new ViolatedAssumptionAnswer());
-      doReturn(option0).when(sparkContext0).cleaner();
-      doubleAccumulator0.register(sparkContext0, (Option<String>) null, true);
-      // Undeclared exception!
-      try { 
-        doubleAccumulator0.toString();
-        fail("Expecting exception: NullPointerException");
-      
-      } catch(NullPointerException e) {
-         //
-         // no message in exception (getMessage() returned null)
-         //
-         verifyException("org.apache.spark.util.AccumulatorV2", e);
-      }
-  }
-
-  @Test(timeout = 4000)
-  public void test10()  throws Throwable  {
-      DoubleAccumulator doubleAccumulator0 = new DoubleAccumulator();
-      Option<ContextCleaner> option0 = (Option<ContextCleaner>) mock(Option.class, new ViolatedAssumptionAnswer());
-      SparkContext sparkContext0 = mock(SparkContext.class, new ViolatedAssumptionAnswer());
-      doReturn(option0).when(sparkContext0).cleaner();
-      doubleAccumulator0.register(sparkContext0, (Option<String>) null, true);
-      Option<Object> option1 = (Option<Object>) mock(Option.class, new ViolatedAssumptionAnswer());
-      // Undeclared exception!
-      try { 
-        doubleAccumulator0.toInfo(option1, option1);
-        fail("Expecting exception: NullPointerException");
-      
-      } catch(NullPointerException e) {
-         //
-         // no message in exception (getMessage() returned null)
-         //
-         verifyException("org.apache.spark.util.AccumulatorV2", e);
-      }
-  }
-
-  @Test(timeout = 4000)
-  public void test11()  throws Throwable  {
-      LegacyAccumulatorWrapper<String, String> legacyAccumulatorWrapper0 = new LegacyAccumulatorWrapper<String, String>("scala.util.Right$", (AccumulableParam<String, String>) null);
-      // Undeclared exception!
-      try { 
-        legacyAccumulatorWrapper0.reset();
-        fail("Expecting exception: NullPointerException");
-      
-      } catch(NullPointerException e) {
-         //
-         // no message in exception (getMessage() returned null)
-         //
-         verifyException("org.apache.spark.util.LegacyAccumulatorWrapper", e);
-      }
-  }
-
-  @Test(timeout = 4000)
-  public void test12()  throws Throwable  {
-      DoubleAccumulator doubleAccumulator0 = new DoubleAccumulator();
-      // Undeclared exception!
-      try { 
-        doubleAccumulator0.register((SparkContext) null, (Option<String>) null, true);
-        fail("Expecting exception: NullPointerException");
-      
-      } catch(NullPointerException e) {
-         //
-         // no message in exception (getMessage() returned null)
-         //
-         verifyException("org.apache.spark.util.AccumulatorV2", e);
-      }
-  }
-
-  @Test(timeout = 4000)
-  public void test13()  throws Throwable  {
-      LongAccumulator longAccumulator0 = new LongAccumulator();
-      // Undeclared exception!
-      try { 
-        longAccumulator0.name();
-        fail("Expecting exception: IllegalStateException");
-      
-      } catch(IllegalStateException e) {
-         //
-         // The metadata of this accumulator has not been assigned yet.
-         //
-         verifyException("org.apache.spark.util.AccumulatorV2", e);
-      }
-  }
-
-  @Test(timeout = 4000)
-  public void test14()  throws Throwable  {
-      CollectionAccumulator<String> collectionAccumulator0 = new CollectionAccumulator<String>();
-      List<String> list0 = collectionAccumulator0.value();
-      AccumulableParam<List<String>, String> accumulableParam0 = (AccumulableParam<List<String>, String>) mock(AccumulableParam.class, new ViolatedAssumptionAnswer());
-      LegacyAccumulatorWrapper<List<String>, String> legacyAccumulatorWrapper0 = new LegacyAccumulatorWrapper<List<String>, String>(list0, accumulableParam0);
-      // Undeclared exception!
-      try { 
-        collectionAccumulator0.merge(legacyAccumulatorWrapper0);
-        fail("Expecting exception: UnsupportedOperationException");
-      
-      } catch(UnsupportedOperationException e) {
-         //
-         // Cannot merge org.apache.spark.util.CollectionAccumulator with org.apache.spark.util.LegacyAccumulatorWrapper
-         //
-         verifyException("org.apache.spark.util.CollectionAccumulator", e);
-      }
-  }
-
-  @Test(timeout = 4000)
-  public void test15()  throws Throwable  {
-      LegacyAccumulatorWrapper<String, String> legacyAccumulatorWrapper0 = new LegacyAccumulatorWrapper<String, String>((String) null, (AccumulableParam<String, String>) null);
-      // Undeclared exception!
-      try { 
-        legacyAccumulatorWrapper0.merge(legacyAccumulatorWrapper0);
-        fail("Expecting exception: NullPointerException");
-      
-      } catch(NullPointerException e) {
-         //
-         // no message in exception (getMessage() returned null)
-         //
-         verifyException("org.apache.spark.util.LegacyAccumulatorWrapper", e);
-      }
-  }
-
-  @Test(timeout = 4000)
-  public void test16()  throws Throwable  {
-      LegacyAccumulatorWrapper<String, String> legacyAccumulatorWrapper0 = new LegacyAccumulatorWrapper<String, String>("copyAndReset must return a zero value copy", (AccumulableParam<String, String>) null);
-      // Undeclared exception!
-      try { 
-        legacyAccumulatorWrapper0.isZero();
-        fail("Expecting exception: NullPointerException");
-      
-      } catch(NullPointerException e) {
-         //
-         // no message in exception (getMessage() returned null)
-         //
-         verifyException("org.apache.spark.util.LegacyAccumulatorWrapper", e);
-      }
-  }
-
-  @Test(timeout = 4000)
-  public void test17()  throws Throwable  {
-      LegacyAccumulatorWrapper<String, String> legacyAccumulatorWrapper0 = new LegacyAccumulatorWrapper<String, String>("", (AccumulableParam<String, String>) null);
-      // Undeclared exception!
-      try { 
-        legacyAccumulatorWrapper0.copyAndReset();
-        fail("Expecting exception: NullPointerException");
-      
-      } catch(NullPointerException e) {
-         //
-         // no message in exception (getMessage() returned null)
-         //
-         verifyException("org.apache.spark.util.LegacyAccumulatorWrapper", e);
-      }
-  }
-
-  @Test(timeout = 4000)
-  public void test18()  throws Throwable  {
-      LegacyAccumulatorWrapper<String, String> legacyAccumulatorWrapper0 = new LegacyAccumulatorWrapper<String, String>("Accumulator must be registered before send to executor", (AccumulableParam<String, String>) null);
-      // Undeclared exception!
-      try { 
-        legacyAccumulatorWrapper0.add("cs15c?");
-        fail("Expecting exception: NullPointerException");
-      
-      } catch(NullPointerException e) {
-         //
-         // no message in exception (getMessage() returned null)
-         //
-         verifyException("org.apache.spark.util.LegacyAccumulatorWrapper", e);
-      }
-  }
-
-  @Test(timeout = 4000)
-  public void test19()  throws Throwable  {
-      AccumulableParam<String, String> accumulableParam0 = (AccumulableParam<String, String>) mock(AccumulableParam.class, new ViolatedAssumptionAnswer());
-      LegacyAccumulatorWrapper<String, String> legacyAccumulatorWrapper0 = new LegacyAccumulatorWrapper<String, String>("", accumulableParam0);
-      legacyAccumulatorWrapper0.metadata();
-      assertTrue(legacyAccumulatorWrapper0.org$apache$spark$util$AccumulatorV2$$atDriverSide);
-  }
-
-  @Test(timeout = 4000)
-  public void test20()  throws Throwable  {
-      LongAccumulator longAccumulator0 = new LongAccumulator();
-      longAccumulator0.metadata_$eq((AccumulatorMetadata) null);
-      assertTrue(longAccumulator0.org$apache$spark$util$AccumulatorV2$$atDriverSide);
-  }
-
-  @Test(timeout = 4000)
-  public void test21()  throws Throwable  {
-      LongAccumulator longAccumulator0 = new LongAccumulator();
-      // Undeclared exception!
-      try { 
-        longAccumulator0.id();
-        fail("Expecting exception: IllegalStateException");
-      
-      } catch(IllegalStateException e) {
-         //
-         // The metadata of this accumulator has not been assigned yet.
-         //
-         verifyException("org.apache.spark.util.AccumulatorV2", e);
-      }
-  }
-
-  @Test(timeout = 4000)
-  public void test22()  throws Throwable  {
-      AccumulableParam<String, String> accumulableParam0 = (AccumulableParam<String, String>) mock(AccumulableParam.class, new ViolatedAssumptionAnswer());
-      LegacyAccumulatorWrapper<String, String> legacyAccumulatorWrapper0 = new LegacyAccumulatorWrapper<String, String>("", accumulableParam0);
-      String string0 = legacyAccumulatorWrapper0.toString();
-      assertTrue(legacyAccumulatorWrapper0.org$apache$spark$util$AccumulatorV2$$atDriverSide);
-      assertEquals("Un-registered Accumulator: LegacyAccumulatorWrapper", string0);
-  }
-
-  @Test(timeout = 4000)
-  public void test23()  throws Throwable  {
-      AccumulableParam<String, String> accumulableParam0 = (AccumulableParam<String, String>) mock(AccumulableParam.class, new ViolatedAssumptionAnswer());
-      LegacyAccumulatorWrapper<String, String> legacyAccumulatorWrapper0 = new LegacyAccumulatorWrapper<String, String>("7~", accumulableParam0);
-      // Undeclared exception!
-      try { 
-        legacyAccumulatorWrapper0.writeReplace();
-        fail("Expecting exception: UnsupportedOperationException");
-      
-      } catch(UnsupportedOperationException e) {
-         //
-         // Accumulator must be registered before send to executor
-         //
-         verifyException("org.apache.spark.util.AccumulatorV2", e);
-      }
-  }
-
-  @Test(timeout = 4000)
-  public void test24()  throws Throwable  {
-      CollectionAccumulator<String> collectionAccumulator0 = new CollectionAccumulator<String>();
-      collectionAccumulator0.org$apache$spark$util$AccumulatorV2$$atDriverSide = false;
-      CollectionAccumulator collectionAccumulator1 = (CollectionAccumulator)collectionAccumulator0.writeReplace();
-      assertFalse(collectionAccumulator1.register$default$3());
-  }
-
-  @Test(timeout = 4000)
-  public void test25()  throws Throwable  {
-      DoubleAccumulator doubleAccumulator0 = new DoubleAccumulator();
-      assertTrue(doubleAccumulator0.org$apache$spark$util$AccumulatorV2$$atDriverSide);
-      
-      Option<ContextCleaner> option0 = (Option<ContextCleaner>) mock(Option.class, new ViolatedAssumptionAnswer());
-      SparkContext sparkContext0 = mock(SparkContext.class, new ViolatedAssumptionAnswer());
-      doReturn(option0).when(sparkContext0).cleaner();
-      doubleAccumulator0.org$apache$spark$util$AccumulatorV2$$atDriverSide = false;
-      doubleAccumulator0.register(sparkContext0, (Option<String>) null, false);
-      String string0 = doubleAccumulator0.toString();
-      assertEquals("DoubleAccumulator(id: 33, name: null, value: 0.0)", string0);
-  }
-
-  @Test(timeout = 4000)
-  public void test26()  throws Throwable  {
-      AccumulableParam<String, String> accumulableParam0 = (AccumulableParam<String, String>) mock(AccumulableParam.class, new ViolatedAssumptionAnswer());
-      LegacyAccumulatorWrapper<String, String> legacyAccumulatorWrapper0 = new LegacyAccumulatorWrapper<String, String>("org.apache.spark.util.AccumulatorV2$$anonfun$name$1$$anonfun$apply$1", accumulableParam0);
-      boolean boolean0 = legacyAccumulatorWrapper0.isRegistered();
-      assertFalse(boolean0);
-      assertTrue(legacyAccumulatorWrapper0.org$apache$spark$util$AccumulatorV2$$atDriverSide);
-  }
-
-  @Test(timeout = 4000)
-  public void test27()  throws Throwable  {
-      DoubleAccumulator doubleAccumulator0 = new DoubleAccumulator();
-      Option<ContextCleaner> option0 = (Option<ContextCleaner>) mock(Option.class, new ViolatedAssumptionAnswer());
-      SparkContext sparkContext0 = mock(SparkContext.class, new ViolatedAssumptionAnswer());
-      doReturn(option0).when(sparkContext0).cleaner();
-      doubleAccumulator0.register(sparkContext0, (Option<String>) null, true);
-      // Undeclared exception!
-      try { 
-        doubleAccumulator0.register((SparkContext) null, (Option<String>) null, false);
-        fail("Expecting exception: IllegalStateException");
-      
-      } catch(IllegalStateException e) {
-         //
-         // Cannot register an Accumulator twice.
-         //
-         verifyException("org.apache.spark.util.AccumulatorV2", e);
-      }
-  }
-
-  @Test(timeout = 4000)
-  public void test28()  throws Throwable  {
-      DoubleAccumulator doubleAccumulator0 = new DoubleAccumulator();
-      Option<ContextCleaner> option0 = (Option<ContextCleaner>) mock(Option.class, new ViolatedAssumptionAnswer());
-      SparkContext sparkContext0 = mock(SparkContext.class, new ViolatedAssumptionAnswer());
-      doReturn(option0).when(sparkContext0).cleaner();
-      doubleAccumulator0.register(sparkContext0, (Option<String>) null, true);
-      // Undeclared exception!
-      try { 
-        doubleAccumulator0.writeReplace();
-        fail("Expecting exception: NullPointerException");
-      
-      } catch(NullPointerException e) {
-         //
-         // no message in exception (getMessage() returned null)
-         //
-         verifyException("org.apache.spark.util.AccumulatorV2", e);
-      }
-  }
-
-  @Test(timeout = 4000)
-  public void test29()  throws Throwable  {
-      AccumulableParam<String, String> accumulableParam0 = (AccumulableParam<String, String>) mock(AccumulableParam.class, new ViolatedAssumptionAnswer());
-      LegacyAccumulatorWrapper<String, String> legacyAccumulatorWrapper0 = new LegacyAccumulatorWrapper<String, String>(", value: ", accumulableParam0);
-      boolean boolean0 = legacyAccumulatorWrapper0.register$default$3();
-      assertFalse(boolean0);
-      assertTrue(legacyAccumulatorWrapper0.org$apache$spark$util$AccumulatorV2$$atDriverSide);
-  }
-
-  @Test(timeout = 4000)
-  public void test30()  throws Throwable  {
-      LongAccumulator longAccumulator0 = new LongAccumulator();
-      AccumulatorV2<Long, Long> accumulatorV2_0 = longAccumulator0.copyAndReset();
-      assertTrue(accumulatorV2_0.org$apache$spark$util$AccumulatorV2$$atDriverSide);
-      assertNotSame(longAccumulator0, accumulatorV2_0);
-  }
-
-  @Test(timeout = 4000)
-  public void test31()  throws Throwable  {
-      LongAccumulator longAccumulator0 = new LongAccumulator();
-      // Undeclared exception!
-      try { 
-        longAccumulator0.toInfo((Option<Object>) null, (Option<Object>) null);
-        fail("Expecting exception: IllegalStateException");
-      
-      } catch(IllegalStateException e) {
-         //
-         // The metadata of this accumulator has not been assigned yet.
-         //
-         verifyException("org.apache.spark.util.AccumulatorV2", e);
-      }
-  }
-
-  @Test(timeout = 4000)
-  public void test32()  throws Throwable  {
-      LegacyAccumulatorWrapper<String, String> legacyAccumulatorWrapper0 = new LegacyAccumulatorWrapper<String, String>("?b`X+7221aX]BwYk", (AccumulableParam<String, String>) null);
-      boolean boolean0 = legacyAccumulatorWrapper0.isAtDriverSide();
-      assertTrue(boolean0);
-  }
-
-  @Test(timeout = 4000)
-  public void test33()  throws Throwable  {
-      AccumulableParam<String, String> accumulableParam0 = (AccumulableParam<String, String>) mock(AccumulableParam.class, new ViolatedAssumptionAnswer());
-      LegacyAccumulatorWrapper<String, String> legacyAccumulatorWrapper0 = new LegacyAccumulatorWrapper<String, String>("", accumulableParam0);
-      legacyAccumulatorWrapper0.register$default$2();
-      assertTrue(legacyAccumulatorWrapper0.org$apache$spark$util$AccumulatorV2$$atDriverSide);
-  }
-
-  @Test(timeout = 4000)
-  public void test34()  throws Throwable  {
-      AccumulableParam<String, String> accumulableParam0 = (AccumulableParam<String, String>) mock(AccumulableParam.class, new ViolatedAssumptionAnswer());
-      LegacyAccumulatorWrapper<String, String> legacyAccumulatorWrapper0 = new LegacyAccumulatorWrapper<String, String>(", value: ", accumulableParam0);
-      // Undeclared exception!
-      try { 
-        legacyAccumulatorWrapper0.countFailedValues();
-        fail("Expecting exception: IllegalStateException");
-      
-      } catch(IllegalStateException e) {
-         //
-         // The metadata of this accumulator has not been assigned yet.
-         //
-         verifyException("org.apache.spark.util.AccumulatorV2", e);
-      }
-  }
-
-  @Test(timeout = 4000)
-  public void test35()  throws Throwable  {
-      DoubleAccumulator doubleAccumulator0 = new DoubleAccumulator();
-      Option<ContextCleaner> option0 = (Option<ContextCleaner>) mock(Option.class, new ViolatedAssumptionAnswer());
-      SparkContext sparkContext0 = mock(SparkContext.class, new ViolatedAssumptionAnswer());
-      doReturn(option0).when(sparkContext0).cleaner();
-      doubleAccumulator0.register(sparkContext0, (Option<String>) null, false);
-      boolean boolean0 = doubleAccumulator0.isRegistered();
-      assertTrue(doubleAccumulator0.org$apache$spark$util$AccumulatorV2$$atDriverSide);
-      assertTrue(boolean0);
-  }
+//  @Test(timeout = 4000)
+//  public void test00()  throws Throwable  {
+//      AccumulableParam<String, String> accumulableParam0 = (AccumulableParam<String, String>) mock(AccumulableParam.class, new ViolatedAssumptionAnswer());
+//      doReturn((Object) null).when(accumulableParam0).addInPlace(anyString() , anyString());
+//      LegacyAccumulatorWrapper<String, String> legacyAccumulatorWrapper0 = new LegacyAccumulatorWrapper<String, String>("<>Cqz44B%dZ8bZ9", accumulableParam0);
+//      legacyAccumulatorWrapper0.merge(legacyAccumulatorWrapper0);
+//      assertTrue(legacyAccumulatorWrapper0.org$apache$spark$util$AccumulatorV2$$atDriverSide);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test01()  throws Throwable  {
+//      AccumulableParam<String, String> accumulableParam0 = (AccumulableParam<String, String>) mock(AccumulableParam.class, new ViolatedAssumptionAnswer());
+//      doReturn((Object) null).when(accumulableParam0).addAccumulator(anyString() , anyString());
+//      LegacyAccumulatorWrapper<String, String> legacyAccumulatorWrapper0 = new LegacyAccumulatorWrapper<String, String>("7~", accumulableParam0);
+//      legacyAccumulatorWrapper0.add("7~");
+//      assertTrue(legacyAccumulatorWrapper0.org$apache$spark$util$AccumulatorV2$$atDriverSide);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test02()  throws Throwable  {
+//      LegacyAccumulatorWrapper<String, String> legacyAccumulatorWrapper0 = new LegacyAccumulatorWrapper<String, String>((String) null, (AccumulableParam<String, String>) null);
+//      legacyAccumulatorWrapper0.value();
+//      assertTrue(legacyAccumulatorWrapper0.org$apache$spark$util$AccumulatorV2$$atDriverSide);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test03()  throws Throwable  {
+//      AccumulableParam<String, String> accumulableParam0 = (AccumulableParam<String, String>) mock(AccumulableParam.class, new ViolatedAssumptionAnswer());
+//      LegacyAccumulatorWrapper<String, String> legacyAccumulatorWrapper0 = new LegacyAccumulatorWrapper<String, String>("", accumulableParam0);
+//      legacyAccumulatorWrapper0.value();
+//      assertTrue(legacyAccumulatorWrapper0.org$apache$spark$util$AccumulatorV2$$atDriverSide);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test04()  throws Throwable  {
+//      CollectionAccumulator<String> collectionAccumulator0 = new CollectionAccumulator<String>();
+//      collectionAccumulator0.isZero();
+//      assertTrue(collectionAccumulator0.org$apache$spark$util$AccumulatorV2$$atDriverSide);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test05()  throws Throwable  {
+//      AccumulableParam<String, String> accumulableParam0 = (AccumulableParam<String, String>) mock(AccumulableParam.class, new ViolatedAssumptionAnswer());
+//      doReturn((Object) null).when(accumulableParam0).zero(anyString());
+//      LegacyAccumulatorWrapper<String, String> legacyAccumulatorWrapper0 = new LegacyAccumulatorWrapper<String, String>("", accumulableParam0);
+//      legacyAccumulatorWrapper0.isZero();
+//      assertTrue(legacyAccumulatorWrapper0.org$apache$spark$util$AccumulatorV2$$atDriverSide);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test06()  throws Throwable  {
+//      DoubleAccumulator doubleAccumulator0 = new DoubleAccumulator();
+//      Option<ContextCleaner> option0 = (Option<ContextCleaner>) mock(Option.class, new ViolatedAssumptionAnswer());
+//      SparkContext sparkContext0 = mock(SparkContext.class, new ViolatedAssumptionAnswer());
+//      doReturn(option0).when(sparkContext0).cleaner();
+//      doubleAccumulator0.register(sparkContext0, (Option<String>) null, true);
+//      long long0 = doubleAccumulator0.id();
+//      assertEquals(105L, long0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test07()  throws Throwable  {
+//      DoubleAccumulator doubleAccumulator0 = new DoubleAccumulator();
+//      Option<ContextCleaner> option0 = (Option<ContextCleaner>) mock(Option.class, new ViolatedAssumptionAnswer());
+//      SparkContext sparkContext0 = mock(SparkContext.class, new ViolatedAssumptionAnswer());
+//      doReturn(option0).when(sparkContext0).cleaner();
+//      doubleAccumulator0.register(sparkContext0, (Option<String>) null, true);
+//      boolean boolean0 = doubleAccumulator0.countFailedValues();
+//      assertTrue(doubleAccumulator0.org$apache$spark$util$AccumulatorV2$$atDriverSide);
+//      assertTrue(boolean0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test08()  throws Throwable  {
+//      AccumulableParam<String, String> accumulableParam0 = (AccumulableParam<String, String>) mock(AccumulableParam.class, new ViolatedAssumptionAnswer());
+//      LegacyAccumulatorWrapper<String, String> legacyAccumulatorWrapper0 = new LegacyAccumulatorWrapper<String, String>("", accumulableParam0);
+//      AccumulatorV2<String, String> accumulatorV2_0 = legacyAccumulatorWrapper0.copy();
+//      assertTrue(accumulatorV2_0.org$apache$spark$util$AccumulatorV2$$atDriverSide);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test09()  throws Throwable  {
+//      DoubleAccumulator doubleAccumulator0 = new DoubleAccumulator();
+//      Option<ContextCleaner> option0 = (Option<ContextCleaner>) mock(Option.class, new ViolatedAssumptionAnswer());
+//      SparkContext sparkContext0 = mock(SparkContext.class, new ViolatedAssumptionAnswer());
+//      doReturn(option0).when(sparkContext0).cleaner();
+//      doubleAccumulator0.register(sparkContext0, (Option<String>) null, true);
+//      // Undeclared exception!
+//      try { 
+//        doubleAccumulator0.toString();
+//        fail("Expecting exception: NullPointerException");
+//      
+//      } catch(NullPointerException e) {
+//         //
+//         // no message in exception (getMessage() returned null)
+//         //
+//         verifyException("org.apache.spark.util.AccumulatorV2", e);
+//      }
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test10()  throws Throwable  {
+//      DoubleAccumulator doubleAccumulator0 = new DoubleAccumulator();
+//      Option<ContextCleaner> option0 = (Option<ContextCleaner>) mock(Option.class, new ViolatedAssumptionAnswer());
+//      SparkContext sparkContext0 = mock(SparkContext.class, new ViolatedAssumptionAnswer());
+//      doReturn(option0).when(sparkContext0).cleaner();
+//      doubleAccumulator0.register(sparkContext0, (Option<String>) null, true);
+//      Option<Object> option1 = (Option<Object>) mock(Option.class, new ViolatedAssumptionAnswer());
+//      // Undeclared exception!
+//      try { 
+//        doubleAccumulator0.toInfo(option1, option1);
+//        fail("Expecting exception: NullPointerException");
+//      
+//      } catch(NullPointerException e) {
+//         //
+//         // no message in exception (getMessage() returned null)
+//         //
+//         verifyException("org.apache.spark.util.AccumulatorV2", e);
+//      }
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test11()  throws Throwable  {
+//      LegacyAccumulatorWrapper<String, String> legacyAccumulatorWrapper0 = new LegacyAccumulatorWrapper<String, String>("scala.util.Right$", (AccumulableParam<String, String>) null);
+//      // Undeclared exception!
+//      try { 
+//        legacyAccumulatorWrapper0.reset();
+//        fail("Expecting exception: NullPointerException");
+//      
+//      } catch(NullPointerException e) {
+//         //
+//         // no message in exception (getMessage() returned null)
+//         //
+//         verifyException("org.apache.spark.util.LegacyAccumulatorWrapper", e);
+//      }
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test12()  throws Throwable  {
+//      DoubleAccumulator doubleAccumulator0 = new DoubleAccumulator();
+//      // Undeclared exception!
+//      try { 
+//        doubleAccumulator0.register((SparkContext) null, (Option<String>) null, true);
+//        fail("Expecting exception: NullPointerException");
+//      
+//      } catch(NullPointerException e) {
+//         //
+//         // no message in exception (getMessage() returned null)
+//         //
+//         verifyException("org.apache.spark.util.AccumulatorV2", e);
+//      }
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test13()  throws Throwable  {
+//      LongAccumulator longAccumulator0 = new LongAccumulator();
+//      // Undeclared exception!
+//      try { 
+//        longAccumulator0.name();
+//        fail("Expecting exception: IllegalStateException");
+//      
+//      } catch(IllegalStateException e) {
+//         //
+//         // The metadata of this accumulator has not been assigned yet.
+//         //
+//         verifyException("org.apache.spark.util.AccumulatorV2", e);
+//      }
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test14()  throws Throwable  {
+//      CollectionAccumulator<String> collectionAccumulator0 = new CollectionAccumulator<String>();
+//      List<String> list0 = collectionAccumulator0.value();
+//      AccumulableParam<List<String>, String> accumulableParam0 = (AccumulableParam<List<String>, String>) mock(AccumulableParam.class, new ViolatedAssumptionAnswer());
+//      LegacyAccumulatorWrapper<List<String>, String> legacyAccumulatorWrapper0 = new LegacyAccumulatorWrapper<List<String>, String>(list0, accumulableParam0);
+//      // Undeclared exception!
+//      try { 
+//        collectionAccumulator0.merge(legacyAccumulatorWrapper0);
+//        fail("Expecting exception: UnsupportedOperationException");
+//      
+//      } catch(UnsupportedOperationException e) {
+//         //
+//         // Cannot merge org.apache.spark.util.CollectionAccumulator with org.apache.spark.util.LegacyAccumulatorWrapper
+//         //
+//         verifyException("org.apache.spark.util.CollectionAccumulator", e);
+//      }
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test15()  throws Throwable  {
+//      LegacyAccumulatorWrapper<String, String> legacyAccumulatorWrapper0 = new LegacyAccumulatorWrapper<String, String>((String) null, (AccumulableParam<String, String>) null);
+//      // Undeclared exception!
+//      try { 
+//        legacyAccumulatorWrapper0.merge(legacyAccumulatorWrapper0);
+//        fail("Expecting exception: NullPointerException");
+//      
+//      } catch(NullPointerException e) {
+//         //
+//         // no message in exception (getMessage() returned null)
+//         //
+//         verifyException("org.apache.spark.util.LegacyAccumulatorWrapper", e);
+//      }
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test16()  throws Throwable  {
+//      LegacyAccumulatorWrapper<String, String> legacyAccumulatorWrapper0 = new LegacyAccumulatorWrapper<String, String>("copyAndReset must return a zero value copy", (AccumulableParam<String, String>) null);
+//      // Undeclared exception!
+//      try { 
+//        legacyAccumulatorWrapper0.isZero();
+//        fail("Expecting exception: NullPointerException");
+//      
+//      } catch(NullPointerException e) {
+//         //
+//         // no message in exception (getMessage() returned null)
+//         //
+//         verifyException("org.apache.spark.util.LegacyAccumulatorWrapper", e);
+//      }
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test17()  throws Throwable  {
+//      LegacyAccumulatorWrapper<String, String> legacyAccumulatorWrapper0 = new LegacyAccumulatorWrapper<String, String>("", (AccumulableParam<String, String>) null);
+//      // Undeclared exception!
+//      try { 
+//        legacyAccumulatorWrapper0.copyAndReset();
+//        fail("Expecting exception: NullPointerException");
+//      
+//      } catch(NullPointerException e) {
+//         //
+//         // no message in exception (getMessage() returned null)
+//         //
+//         verifyException("org.apache.spark.util.LegacyAccumulatorWrapper", e);
+//      }
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test18()  throws Throwable  {
+//      LegacyAccumulatorWrapper<String, String> legacyAccumulatorWrapper0 = new LegacyAccumulatorWrapper<String, String>("Accumulator must be registered before send to executor", (AccumulableParam<String, String>) null);
+//      // Undeclared exception!
+//      try { 
+//        legacyAccumulatorWrapper0.add("cs15c?");
+//        fail("Expecting exception: NullPointerException");
+//      
+//      } catch(NullPointerException e) {
+//         //
+//         // no message in exception (getMessage() returned null)
+//         //
+//         verifyException("org.apache.spark.util.LegacyAccumulatorWrapper", e);
+//      }
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test19()  throws Throwable  {
+//      AccumulableParam<String, String> accumulableParam0 = (AccumulableParam<String, String>) mock(AccumulableParam.class, new ViolatedAssumptionAnswer());
+//      LegacyAccumulatorWrapper<String, String> legacyAccumulatorWrapper0 = new LegacyAccumulatorWrapper<String, String>("", accumulableParam0);
+//      legacyAccumulatorWrapper0.metadata();
+//      assertTrue(legacyAccumulatorWrapper0.org$apache$spark$util$AccumulatorV2$$atDriverSide);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test20()  throws Throwable  {
+//      LongAccumulator longAccumulator0 = new LongAccumulator();
+//      longAccumulator0.metadata_$eq((AccumulatorMetadata) null);
+//      assertTrue(longAccumulator0.org$apache$spark$util$AccumulatorV2$$atDriverSide);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test21()  throws Throwable  {
+//      LongAccumulator longAccumulator0 = new LongAccumulator();
+//      // Undeclared exception!
+//      try { 
+//        longAccumulator0.id();
+//        fail("Expecting exception: IllegalStateException");
+//      
+//      } catch(IllegalStateException e) {
+//         //
+//         // The metadata of this accumulator has not been assigned yet.
+//         //
+//         verifyException("org.apache.spark.util.AccumulatorV2", e);
+//      }
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test22()  throws Throwable  {
+//      AccumulableParam<String, String> accumulableParam0 = (AccumulableParam<String, String>) mock(AccumulableParam.class, new ViolatedAssumptionAnswer());
+//      LegacyAccumulatorWrapper<String, String> legacyAccumulatorWrapper0 = new LegacyAccumulatorWrapper<String, String>("", accumulableParam0);
+//      String string0 = legacyAccumulatorWrapper0.toString();
+//      assertTrue(legacyAccumulatorWrapper0.org$apache$spark$util$AccumulatorV2$$atDriverSide);
+//      assertEquals("Un-registered Accumulator: LegacyAccumulatorWrapper", string0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test23()  throws Throwable  {
+//      AccumulableParam<String, String> accumulableParam0 = (AccumulableParam<String, String>) mock(AccumulableParam.class, new ViolatedAssumptionAnswer());
+//      LegacyAccumulatorWrapper<String, String> legacyAccumulatorWrapper0 = new LegacyAccumulatorWrapper<String, String>("7~", accumulableParam0);
+//      // Undeclared exception!
+//      try { 
+//        legacyAccumulatorWrapper0.writeReplace();
+//        fail("Expecting exception: UnsupportedOperationException");
+//      
+//      } catch(UnsupportedOperationException e) {
+//         //
+//         // Accumulator must be registered before send to executor
+//         //
+//         verifyException("org.apache.spark.util.AccumulatorV2", e);
+//      }
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test24()  throws Throwable  {
+//      CollectionAccumulator<String> collectionAccumulator0 = new CollectionAccumulator<String>();
+//      collectionAccumulator0.org$apache$spark$util$AccumulatorV2$$atDriverSide = false;
+//      CollectionAccumulator collectionAccumulator1 = (CollectionAccumulator)collectionAccumulator0.writeReplace();
+//      assertFalse(collectionAccumulator1.register$default$3());
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test25()  throws Throwable  {
+//      DoubleAccumulator doubleAccumulator0 = new DoubleAccumulator();
+//      assertTrue(doubleAccumulator0.org$apache$spark$util$AccumulatorV2$$atDriverSide);
+//      
+//      Option<ContextCleaner> option0 = (Option<ContextCleaner>) mock(Option.class, new ViolatedAssumptionAnswer());
+//      SparkContext sparkContext0 = mock(SparkContext.class, new ViolatedAssumptionAnswer());
+//      doReturn(option0).when(sparkContext0).cleaner();
+//      doubleAccumulator0.org$apache$spark$util$AccumulatorV2$$atDriverSide = false;
+//      doubleAccumulator0.register(sparkContext0, (Option<String>) null, false);
+//      String string0 = doubleAccumulator0.toString();
+//      assertEquals("DoubleAccumulator(id: 33, name: null, value: 0.0)", string0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test26()  throws Throwable  {
+//      AccumulableParam<String, String> accumulableParam0 = (AccumulableParam<String, String>) mock(AccumulableParam.class, new ViolatedAssumptionAnswer());
+//      LegacyAccumulatorWrapper<String, String> legacyAccumulatorWrapper0 = new LegacyAccumulatorWrapper<String, String>("org.apache.spark.util.AccumulatorV2$$anonfun$name$1$$anonfun$apply$1", accumulableParam0);
+//      boolean boolean0 = legacyAccumulatorWrapper0.isRegistered();
+//      assertFalse(boolean0);
+//      assertTrue(legacyAccumulatorWrapper0.org$apache$spark$util$AccumulatorV2$$atDriverSide);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test27()  throws Throwable  {
+//      DoubleAccumulator doubleAccumulator0 = new DoubleAccumulator();
+//      Option<ContextCleaner> option0 = (Option<ContextCleaner>) mock(Option.class, new ViolatedAssumptionAnswer());
+//      SparkContext sparkContext0 = mock(SparkContext.class, new ViolatedAssumptionAnswer());
+//      doReturn(option0).when(sparkContext0).cleaner();
+//      doubleAccumulator0.register(sparkContext0, (Option<String>) null, true);
+//      // Undeclared exception!
+//      try { 
+//        doubleAccumulator0.register((SparkContext) null, (Option<String>) null, false);
+//        fail("Expecting exception: IllegalStateException");
+//      
+//      } catch(IllegalStateException e) {
+//         //
+//         // Cannot register an Accumulator twice.
+//         //
+//         verifyException("org.apache.spark.util.AccumulatorV2", e);
+//      }
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test28()  throws Throwable  {
+//      DoubleAccumulator doubleAccumulator0 = new DoubleAccumulator();
+//      Option<ContextCleaner> option0 = (Option<ContextCleaner>) mock(Option.class, new ViolatedAssumptionAnswer());
+//      SparkContext sparkContext0 = mock(SparkContext.class, new ViolatedAssumptionAnswer());
+//      doReturn(option0).when(sparkContext0).cleaner();
+//      doubleAccumulator0.register(sparkContext0, (Option<String>) null, true);
+//      // Undeclared exception!
+//      try { 
+//        doubleAccumulator0.writeReplace();
+//        fail("Expecting exception: NullPointerException");
+//      
+//      } catch(NullPointerException e) {
+//         //
+//         // no message in exception (getMessage() returned null)
+//         //
+//         verifyException("org.apache.spark.util.AccumulatorV2", e);
+//      }
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test29()  throws Throwable  {
+//      AccumulableParam<String, String> accumulableParam0 = (AccumulableParam<String, String>) mock(AccumulableParam.class, new ViolatedAssumptionAnswer());
+//      LegacyAccumulatorWrapper<String, String> legacyAccumulatorWrapper0 = new LegacyAccumulatorWrapper<String, String>(", value: ", accumulableParam0);
+//      boolean boolean0 = legacyAccumulatorWrapper0.register$default$3();
+//      assertFalse(boolean0);
+//      assertTrue(legacyAccumulatorWrapper0.org$apache$spark$util$AccumulatorV2$$atDriverSide);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test30()  throws Throwable  {
+//      LongAccumulator longAccumulator0 = new LongAccumulator();
+//      AccumulatorV2<Long, Long> accumulatorV2_0 = longAccumulator0.copyAndReset();
+//      assertTrue(accumulatorV2_0.org$apache$spark$util$AccumulatorV2$$atDriverSide);
+//      assertNotSame(longAccumulator0, accumulatorV2_0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test31()  throws Throwable  {
+//      LongAccumulator longAccumulator0 = new LongAccumulator();
+//      // Undeclared exception!
+//      try { 
+//        longAccumulator0.toInfo((Option<Object>) null, (Option<Object>) null);
+//        fail("Expecting exception: IllegalStateException");
+//      
+//      } catch(IllegalStateException e) {
+//         //
+//         // The metadata of this accumulator has not been assigned yet.
+//         //
+//         verifyException("org.apache.spark.util.AccumulatorV2", e);
+//      }
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test32()  throws Throwable  {
+//      LegacyAccumulatorWrapper<String, String> legacyAccumulatorWrapper0 = new LegacyAccumulatorWrapper<String, String>("?b`X+7221aX]BwYk", (AccumulableParam<String, String>) null);
+//      boolean boolean0 = legacyAccumulatorWrapper0.isAtDriverSide();
+//      assertTrue(boolean0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test33()  throws Throwable  {
+//      AccumulableParam<String, String> accumulableParam0 = (AccumulableParam<String, String>) mock(AccumulableParam.class, new ViolatedAssumptionAnswer());
+//      LegacyAccumulatorWrapper<String, String> legacyAccumulatorWrapper0 = new LegacyAccumulatorWrapper<String, String>("", accumulableParam0);
+//      legacyAccumulatorWrapper0.register$default$2();
+//      assertTrue(legacyAccumulatorWrapper0.org$apache$spark$util$AccumulatorV2$$atDriverSide);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test34()  throws Throwable  {
+//      AccumulableParam<String, String> accumulableParam0 = (AccumulableParam<String, String>) mock(AccumulableParam.class, new ViolatedAssumptionAnswer());
+//      LegacyAccumulatorWrapper<String, String> legacyAccumulatorWrapper0 = new LegacyAccumulatorWrapper<String, String>(", value: ", accumulableParam0);
+//      // Undeclared exception!
+//      try { 
+//        legacyAccumulatorWrapper0.countFailedValues();
+//        fail("Expecting exception: IllegalStateException");
+//      
+//      } catch(IllegalStateException e) {
+//         //
+//         // The metadata of this accumulator has not been assigned yet.
+//         //
+//         verifyException("org.apache.spark.util.AccumulatorV2", e);
+//      }
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test35()  throws Throwable  {
+//      DoubleAccumulator doubleAccumulator0 = new DoubleAccumulator();
+//      Option<ContextCleaner> option0 = (Option<ContextCleaner>) mock(Option.class, new ViolatedAssumptionAnswer());
+//      SparkContext sparkContext0 = mock(SparkContext.class, new ViolatedAssumptionAnswer());
+//      doReturn(option0).when(sparkContext0).cleaner();
+//      doubleAccumulator0.register(sparkContext0, (Option<String>) null, false);
+//      boolean boolean0 = doubleAccumulator0.isRegistered();
+//      assertTrue(doubleAccumulator0.org$apache$spark$util$AccumulatorV2$$atDriverSide);
+//      assertTrue(boolean0);
+//  }
 }

@@ -254,45 +254,45 @@ public class MeecrowaveBus_ESTest extends MeecrowaveBus_ESTest_scaffolding {
       }
   }
 
-  @Test(timeout = 4000)
-  public void test11()  throws Throwable  {
-      MeecrowaveBus meecrowaveBus0 = new MeecrowaveBus();
-      StaxTransformFeature staxTransformFeature0 = mock(StaxTransformFeature.class, new ViolatedAssumptionAnswer());
-      doReturn((String) null).when(staxTransformFeature0).toString();
-      SingletonService<WebBeansContext> singletonService0 = (SingletonService<WebBeansContext>) mock(SingletonService.class, new ViolatedAssumptionAnswer());
-      WebBeansFinder.setSingletonService(singletonService0);
-      meecrowaveBus0.getOutFaultInterceptors();
-      meecrowaveBus0.getInFaultInterceptors();
-      meecrowaveBus0.getInInterceptors();
-      meecrowaveBus0.getInInterceptors();
-      Class<StaxTransformFeature> class0 = StaxTransformFeature.class;
-      meecrowaveBus0.setExtension(staxTransformFeature0, class0);
-      meecrowaveBus0.getId();
-      meecrowaveBus0.getOutInterceptors();
-      meecrowaveBus0.getOutFaultInterceptors();
-      meecrowaveBus0.getOutInterceptors();
-      meecrowaveBus0.getId();
-      meecrowaveBus0.getOutInterceptors();
-      meecrowaveBus0.getOutFaultInterceptors();
-      Class<StaxTransformFeature> class1 = StaxTransformFeature.class;
-      meecrowaveBus0.getOutFaultInterceptors();
-      meecrowaveBus0.getInFaultInterceptors();
-      meecrowaveBus0.getExtension((Class<LinkedList<LinkedList>>) class1);
-      meecrowaveBus0.getProperty("");
-      meecrowaveBus0.getProperty("cxf5");
-      SingletonService<WebBeansContext> singletonService1 = (SingletonService<WebBeansContext>) mock(SingletonService.class, new ViolatedAssumptionAnswer());
-      // Undeclared exception!
-      try { 
-        WebBeansFinder.setSingletonService(singletonService1);
-        fail("Expecting exception: WebBeansConfigurationException");
-      
-      } catch(WebBeansConfigurationException e) {
-         //
-         // Already using another custom SingletonService!
-         //
-         verifyException("org.apache.webbeans.config.WebBeansFinder", e);
-      }
-  }
+//  @Test(timeout = 4000)
+//  public void test11()  throws Throwable  {
+//      MeecrowaveBus meecrowaveBus0 = new MeecrowaveBus();
+//      StaxTransformFeature staxTransformFeature0 = mock(StaxTransformFeature.class, new ViolatedAssumptionAnswer());
+//      doReturn((String) null).when(staxTransformFeature0).toString();
+//      SingletonService<WebBeansContext> singletonService0 = (SingletonService<WebBeansContext>) mock(SingletonService.class, new ViolatedAssumptionAnswer());
+//      WebBeansFinder.setSingletonService(singletonService0);
+//      meecrowaveBus0.getOutFaultInterceptors();
+//      meecrowaveBus0.getInFaultInterceptors();
+//      meecrowaveBus0.getTInInterceptors();
+//      meecrowaveBus0.getInInterceptors();
+//      Class<StaxTransformFeature> class0 = StaxTransformFeature.class;
+//      meecrowaveBus0.setExtension(staxTransformFeature0, class0);
+//      meecrowaveBus0.getId();
+//      meecrowaveBus0.getOutInterceptors();
+//      meecrowaveBus0.getOutFaultInterceptors();
+//      meecrowaveBus0.getOutInterceptors();
+//      meecrowaveBus0.getId();
+//      meecrowaveBus0.getOutInterceptors();
+//      meecrowaveBus0.getOutFaultInterceptors();
+//      Class<StaxTransformFeature> class1 = StaxTransformFeature.class;
+//      meecrowaveBus0.getOutFaultInterceptors();
+//      meecrowaveBus0.getInFaultInterceptors();
+//      meecrowaveBus0.getExtension((Class<LinkedList<LinkedList>>) class1);
+//      meecrowaveBus0.getProperty("");
+//      meecrowaveBus0.getProperty("cxf5");
+//      SingletonService<WebBeansContext> singletonService1 = (SingletonService<WebBeansContext>) mock(SingletonService.class, new ViolatedAssumptionAnswer());
+//      // Undeclared exception!
+//      try { 
+//        WebBeansFinder.setSingletonService(singletonService1);
+//        fail("Expecting exception: WebBeansConfigurationException");
+//      
+//      } catch(WebBeansConfigurationException e) {
+//         //
+//         // Already using another custom SingletonService!
+//         //
+//         verifyException("org.apache.webbeans.config.WebBeansFinder", e);
+//      }
+//  }
 
   @Test(timeout = 4000)
   public void test12()  throws Throwable  {
