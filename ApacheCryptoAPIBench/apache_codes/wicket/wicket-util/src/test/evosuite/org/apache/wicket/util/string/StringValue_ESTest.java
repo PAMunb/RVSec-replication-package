@@ -27,1405 +27,1405 @@ import org.evosuite.runtime.mock.java.lang.MockThread;
 import org.junit.runner.RunWith;
 import org.slf4j.event.Level;
 
-@RunWith(EvoRunner.class) @EvoRunnerParameters(mockJVMNonDeterminism = true, useVFS = true, useVNET = true, resetStaticState = true, separateClassLoader = true) 
-public class StringValue_ESTest extends StringValue_ESTest_scaffolding {
-
-  @Test(timeout = 4000)
-  public void test000()  throws Throwable  {
-      StringValue stringValue0 = new StringValue("An error occurred while converting '%s' to a boolean: %s");
-      StringValue stringValue1 = new StringValue("An error occurred while converting '%s' to a boolean: %s");
-      boolean boolean0 = stringValue0.equals(stringValue1);
-      assertTrue(boolean0);
-  }
-
-  @Test(timeout = 4000)
-  public void test001()  throws Throwable  {
-      Time time0 = Time.START_OF_UNIX_TIME;
-      TimeOfDay.Meridian timeOfDay_Meridian0 = TimeOfDay.AM;
-      Time time1 = timeOfDay_Meridian0.toTime(time0);
-      assertEquals(0L, time1.getMilliseconds());
-  }
-
-  @Test(timeout = 4000)
-  public void test002()  throws Throwable  {
-      Time time0 = Time.now();
-      StringValue stringValue0 = StringValue.valueOf((Object) null);
-      Time time1 = stringValue0.toTime(time0);
-      assertSame(time0, time1);
-  }
-
-  @Test(timeout = 4000)
-  public void test003()  throws Throwable  {
-      StringValue stringValue0 = StringValue.repeat(1607, "");
-      String string0 = stringValue0.toString("QY^Uscu;J|o[");
-      assertEquals("", string0);
-  }
-
-  @Test(timeout = 4000)
-  public void test004()  throws Throwable  {
-      StringValue stringValue0 = StringValue.valueOf((String) null);
-      String string0 = stringValue0.toString();
-      assertNull(string0);
-  }
-
-  @Test(timeout = 4000)
-  public void test005()  throws Throwable  {
-      Locale locale0 = Locale.ITALIAN;
-      StringValue stringValue0 = StringValue.valueOf(0.0, 0, locale0);
-      String string0 = stringValue0.toString();
-      assertEquals("0,", string0);
-  }
-
-  @Test(timeout = 4000)
-  public void test006()  throws Throwable  {
-      Locale locale0 = Locale.ITALIAN;
-      StringValue stringValue0 = StringValue.valueOf("", locale0);
-      String string0 = stringValue0.toString();
-      assertEquals("", string0);
-  }
-
-  @Test(timeout = 4000)
-  public void test007()  throws Throwable  {
-      StringValue stringValue0 = new StringValue((String) null);
-      String string0 = stringValue0.toOptionalString();
-      assertNull(string0);
-  }
-
-  @Test(timeout = 4000)
-  public void test008()  throws Throwable  {
-      StringValue stringValue0 = StringValue.repeat(137, "");
-      String string0 = stringValue0.toOptionalString();
-      assertEquals("", string0);
-  }
-
-  @Test(timeout = 4000)
-  public void test009()  throws Throwable  {
-      Locale locale0 = Locale.ITALIAN;
-      StringValue stringValue0 = StringValue.valueOf((double) 0, 314, locale0);
-      Long long0 = stringValue0.toOptionalLong();
-      assertEquals(0L, (long)long0);
-  }
-
-  @Test(timeout = 4000)
-  public void test010()  throws Throwable  {
-      StringValue stringValue0 = StringValue.valueOf(1000.0);
-      Long long0 = stringValue0.toOptionalLong();
-      assertEquals(1000L, (long)long0);
-  }
-
-  @Test(timeout = 4000)
-  public void test011()  throws Throwable  {
-      Locale locale0 = Locale.FRANCE;
-      StringValue stringValue0 = StringValue.valueOf((double) 1607, locale0);
-      Integer integer0 = stringValue0.toOptionalInteger();
-      assertEquals(1607, (int)integer0);
-  }
-
-  @Test(timeout = 4000)
-  public void test012()  throws Throwable  {
-      Locale locale0 = Locale.ROOT;
-      StringValue stringValue0 = StringValue.valueOf((-1.0), 117, locale0);
-      Integer integer0 = stringValue0.toOptionalInteger();
-      assertEquals((-1), (int)integer0);
-  }
-
-  @Test(timeout = 4000)
-  public void test013()  throws Throwable  {
-      Locale locale0 = Locale.forLanguageTag("Argument '%s' must have a value within [%s,%s], but was %s");
-      StringValue stringValue0 = StringValue.valueOf(0.0, locale0);
-      Double double0 = stringValue0.toOptionalDouble();
-      assertEquals(0.0, (double)double0, 0.01);
-  }
-
-  @Test(timeout = 4000)
-  public void test014()  throws Throwable  {
-      Locale locale0 = Locale.CANADA_FRENCH;
-      StringValue stringValue0 = StringValue.valueOf((double) (-922), locale0);
-      Double double0 = stringValue0.toOptionalDouble();
-      assertEquals((-922.0), (double)double0, 0.01);
-  }
-
-  @Test(timeout = 4000)
-  public void test015()  throws Throwable  {
-      Locale locale0 = Locale.PRC;
-      StringValue stringValue0 = new StringValue("\"", locale0);
-      Character character0 = stringValue0.toOptionalCharacter();
-      assertEquals('\"', (char)character0);
-  }
-
-  @Test(timeout = 4000)
-  public void test016()  throws Throwable  {
-      StringValue stringValue0 = new StringValue("L");
-      Character character0 = stringValue0.toOptionalCharacter();
-      assertEquals('L', (char)character0);
-  }
-
-  @Test(timeout = 4000)
-  public void test017()  throws Throwable  {
-      StringValue stringValue0 = new StringValue("on");
-      Boolean boolean0 = stringValue0.toOptionalBoolean();
-      assertTrue(boolean0);
-  }
-
-  @Test(timeout = 4000)
-  public void test018()  throws Throwable  {
-      Locale locale0 = Locale.GERMAN;
-      StringValue stringValue0 = StringValue.valueOf(24.0, locale0);
-      Long long0 = stringValue0.toLongObject();
-      assertEquals(24L, (long)long0);
-  }
-
-  @Test(timeout = 4000)
-  public void test019()  throws Throwable  {
-      Locale locale0 = Locale.ITALIAN;
-      StringValue stringValue0 = StringValue.valueOf((double) (-1529), 201, locale0);
-      Long long0 = stringValue0.toLongObject();
-      assertEquals((-1529L), (long)long0);
-  }
-
-  @Test(timeout = 4000)
-  public void test020()  throws Throwable  {
-      StringValue stringValue0 = new StringValue((String) null);
-      long long0 = stringValue0.toLong(0L);
-      assertEquals(0L, long0);
-  }
-
-  @Test(timeout = 4000)
-  public void test021()  throws Throwable  {
-      StringValue stringValue0 = StringValue.valueOf((double) 1L);
-      long long0 = stringValue0.toLong(1L);
-      assertEquals(1L, long0);
-  }
-
-  @Test(timeout = 4000)
-  public void test022()  throws Throwable  {
-      Locale locale0 = Locale.forLanguageTag("Argument '%s' must have a value within [%s,%s], but was %s");
-      StringValue stringValue0 = StringValue.valueOf(0.0, locale0);
-      long long0 = stringValue0.toLong();
-      assertEquals(0L, long0);
-  }
-
-  @Test(timeout = 4000)
-  public void test023()  throws Throwable  {
-      StringValue stringValue0 = StringValue.valueOf((double) 772);
-      long long0 = stringValue0.toLong();
-      assertEquals(772L, long0);
-  }
-
-  @Test(timeout = 4000)
-  public void test024()  throws Throwable  {
-      Locale locale0 = Locale.UK;
-      StringValue stringValue0 = StringValue.valueOf((-1345.034), locale0);
-      long long0 = stringValue0.toLong();
-      assertEquals((-1345L), long0);
-  }
-
-  @Test(timeout = 4000)
-  public void test025()  throws Throwable  {
-      Locale locale0 = new Locale("", "CSSK/7DoQ*0H@3$_o");
-      StringValue stringValue0 = StringValue.valueOf(0.0, 2, locale0);
-      Integer integer0 = stringValue0.toInteger();
-      assertEquals(0, (int)integer0);
-  }
-
-  @Test(timeout = 4000)
-  public void test026()  throws Throwable  {
-      Locale locale0 = Locale.CANADA_FRENCH;
-      StringValue stringValue0 = StringValue.valueOf((double) 886, locale0);
-      Integer integer0 = stringValue0.toInteger();
-      assertEquals(886, (int)integer0);
-  }
-
-  @Test(timeout = 4000)
-  public void test027()  throws Throwable  {
-      Locale locale0 = Locale.CANADA_FRENCH;
-      StringValue stringValue0 = StringValue.valueOf((double) (-922), locale0);
-      Integer integer0 = stringValue0.toInteger();
-      assertEquals((-922), (int)integer0);
-  }
-
-  @Test(timeout = 4000)
-  public void test028()  throws Throwable  {
-      Locale locale0 = Locale.US;
-      StringValue stringValue0 = StringValue.valueOf(0.0, 48, locale0);
-      int int0 = stringValue0.toInt();
-      assertEquals(0, int0);
-  }
-
-  @Test(timeout = 4000)
-  public void test029()  throws Throwable  {
-      StringValue stringValue0 = StringValue.valueOf((double) 772);
-      int int0 = stringValue0.toInt();
-      assertEquals(772, int0);
-  }
-
-  @Test(timeout = 4000)
-  public void test030()  throws Throwable  {
-      Locale locale0 = Locale.ROOT;
-      StringValue stringValue0 = StringValue.valueOf((-1.0), 117, locale0);
-      int int0 = stringValue0.toInt();
-      assertEquals((-1), int0);
-  }
-
-  @Test(timeout = 4000)
-  public void test031()  throws Throwable  {
-      TimeOfDay.Meridian timeOfDay_Meridian0 = TimeOfDay.AM;
-      Duration duration0 = timeOfDay_Meridian0.toDuration((Duration) null);
-      assertNull(duration0);
-  }
-
-  @Test(timeout = 4000)
-  public void test032()  throws Throwable  {
-      StringValue stringValue0 = StringValue.valueOf((String) null);
-      ThreadGroup threadGroup0 = mock(ThreadGroup.class, new ViolatedAssumptionAnswer());
-      MockThread mockThread0 = new MockThread(threadGroup0, "");
-      Duration duration0 = Duration.benchmark((Runnable) mockThread0);
-      Duration duration1 = stringValue0.toDuration(duration0);
-      assertEquals(0L, duration1.getMilliseconds());
-  }
-
-  @Test(timeout = 4000)
-  public void test033()  throws Throwable  {
-      Locale locale0 = Locale.forLanguageTag("Argument '%s' must have a value within [%s,%s], but was %s");
-      StringValue stringValue0 = StringValue.valueOf(0.0, locale0);
-      Double double0 = stringValue0.toDoubleObject();
-      assertEquals(0.0, (double)double0, 0.01);
-  }
-
-  @Test(timeout = 4000)
-  public void test034()  throws Throwable  {
-      Locale locale0 = Locale.FRANCE;
-      StringValue stringValue0 = StringValue.valueOf((double) 1607, locale0);
-      Double double0 = stringValue0.toDoubleObject();
-      assertEquals(1607.0, (double)double0, 0.01);
-  }
-
-  @Test(timeout = 4000)
-  public void test035()  throws Throwable  {
-      Locale locale0 = Locale.ROOT;
-      StringValue stringValue0 = StringValue.valueOf((-1.0), 117, locale0);
-      Double double0 = stringValue0.toDoubleObject();
-      assertEquals((-1.0), (double)double0, 0.01);
-  }
-
-  @Test(timeout = 4000)
-  public void test036()  throws Throwable  {
-      StringValue stringValue0 = StringValue.valueOf(0.0);
-      double double0 = stringValue0.toDouble(0.0);
-      assertEquals(0.0, double0, 0.01);
-  }
-
-  @Test(timeout = 4000)
-  public void test037()  throws Throwable  {
-      Locale locale0 = Locale.ITALIAN;
-      StringValue stringValue0 = StringValue.valueOf((double) 0, 314, locale0);
-      double double0 = stringValue0.toDouble();
-      assertEquals(0.0, double0, 0.01);
-  }
-
-  @Test(timeout = 4000)
-  public void test038()  throws Throwable  {
-      StringValue stringValue0 = StringValue.valueOf((double) 1607);
-      double double0 = stringValue0.toDouble();
-      assertEquals(1607.0, double0, 0.01);
-  }
-
-  @Test(timeout = 4000)
-  public void test039()  throws Throwable  {
-      Locale locale0 = Locale.FRENCH;
-      StringValue stringValue0 = StringValue.valueOf((double) (-187L), 1211, locale0);
-      double double0 = stringValue0.toDouble();
-      assertEquals((-187.0), double0, 0.01);
-  }
-
-  @Test(timeout = 4000)
-  public void test040()  throws Throwable  {
-      StringValue stringValue0 = StringValue.valueOf(0.0);
-      Character character0 = stringValue0.toCharacter();
-      assertEquals('0', (char)character0);
-  }
-
-  @Test(timeout = 4000)
-  public void test041()  throws Throwable  {
-      StringValue stringValue0 = new StringValue("L");
-      Character character0 = stringValue0.toCharacter();
-      assertEquals('L', (char)character0);
-  }
-
-  @Test(timeout = 4000)
-  public void test042()  throws Throwable  {
-      StringValue stringValue0 = StringValue.repeat(897, '0');
-      stringValue0.toChar('0');
-  }
-
-  @Test(timeout = 4000)
-  public void test043()  throws Throwable  {
-      Locale locale0 = Locale.PRC;
-      StringValue stringValue0 = new StringValue("\"", locale0);
-      char char0 = stringValue0.toChar();
-      assertEquals('\"', char0);
-  }
-
-  @Test(timeout = 4000)
-  public void test044()  throws Throwable  {
-      Locale locale0 = Locale.forLanguageTag("u[$pjDz=Bz");
-      StringValue stringValue0 = StringValue.valueOf(0.0, locale0);
-      char char0 = stringValue0.toChar();
-      assertEquals('0', char0);
-  }
-
-  @Test(timeout = 4000)
-  public void test045()  throws Throwable  {
-      StringValue stringValue0 = new StringValue("G");
-      char char0 = stringValue0.toChar();
-      assertEquals('G', char0);
-  }
-
-  @Test(timeout = 4000)
-  public void test046()  throws Throwable  {
-      StringValue stringValue0 = new StringValue("");
-      Boolean boolean0 = stringValue0.toBooleanObject();
-      assertFalse(boolean0);
-  }
-
-  @Test(timeout = 4000)
-  public void test047()  throws Throwable  {
-      StringValue stringValue0 = StringValue.valueOf("on");
-      boolean boolean0 = stringValue0.toBoolean();
-      assertTrue(boolean0);
-  }
-
-  @Test(timeout = 4000)
-  public void test048()  throws Throwable  {
-      StringValue stringValue0 = StringValue.valueOf((String) null);
-      CharSequence charSequence0 = stringValue0.replaceAll((CharSequence) null, (CharSequence) null);
-      assertNull(charSequence0);
-  }
-
-  @Test(timeout = 4000)
-  public void test049()  throws Throwable  {
-      StringValue stringValue0 = StringValue.valueOf("Cannot convert '");
-      CharSequence charSequence0 = stringValue0.replaceAll("Cannot convert '", (CharSequence) null);
-      assertEquals(0, charSequence0.length());
-  }
-
-  @Test(timeout = 4000)
-  public void test050()  throws Throwable  {
-      StringValue stringValue0 = new StringValue("0rl;2S");
-      AppendingStringBuffer appendingStringBuffer0 = (AppendingStringBuffer)stringValue0.replaceAll("0rl;2S", "0rl;2S");
-      assertEquals(22, appendingStringBuffer0.capacity());
-  }
-
-  @Test(timeout = 4000)
-  public void test051()  throws Throwable  {
-      TimeOfDay.Meridian timeOfDay_Meridian0 = TimeOfDay.PM;
-      boolean boolean0 = timeOfDay_Meridian0.isEmpty();
-      assertFalse(boolean0);
-  }
-
-  @Test(timeout = 4000)
-  public void test052()  throws Throwable  {
-      StringValue stringValue0 = StringValue.valueOf((String) null);
-      String string0 = stringValue0.beforeLast('y');
-      assertNull(string0);
-  }
-
-  @Test(timeout = 4000)
-  public void test053()  throws Throwable  {
-      TimeOfDay.Meridian timeOfDay_Meridian0 = TimeOfDay.PM;
-      String string0 = timeOfDay_Meridian0.beforeLast('a');
-      assertEquals("", string0);
-  }
-
-  @Test(timeout = 4000)
-  public void test054()  throws Throwable  {
-      StringValue stringValue0 = StringValue.valueOf((Object) null);
-      String string0 = stringValue0.beforeFirst('v');
-      assertNull(string0);
-  }
-
-  @Test(timeout = 4000)
-  public void test055()  throws Throwable  {
-      StringValue stringValue0 = StringValue.repeat(1, "mgI78=b|=co]*gCTzi");
-      String string0 = stringValue0.beforeFirst('C');
-      assertEquals("mgI78=b|=co]*g", string0);
-      assertEquals("mgI78=b|=co]*gCTzi", stringValue0.toOptionalString());
-  }
-
-  @Test(timeout = 4000)
-  public void test056()  throws Throwable  {
-      StringValue stringValue0 = StringValue.repeat(1, "mgI78=b|=co]*gCTzi");
-      String string0 = stringValue0.afterLast('*');
-      assertEquals("gCTzi", string0);
-      assertEquals("mgI78=b|=co]*gCTzi", stringValue0.toOptionalString());
-  }
-
-  @Test(timeout = 4000)
-  public void test057()  throws Throwable  {
-      TimeOfDay.Meridian timeOfDay_Meridian0 = TimeOfDay.AM;
-      String string0 = timeOfDay_Meridian0.afterLast('c');
-      assertEquals("", string0);
-  }
-
-  @Test(timeout = 4000)
-  public void test058()  throws Throwable  {
-      StringValue stringValue0 = StringValue.valueOf((-656.39755998669));
-      String string0 = stringValue0.afterFirst('-');
-      assertEquals("656.4", string0);
-  }
-
-  @Test(timeout = 4000)
-  public void test059()  throws Throwable  {
-      TimeOfDay.Meridian timeOfDay_Meridian0 = TimeOfDay.PM;
-      String string0 = timeOfDay_Meridian0.afterFirst('B');
-      assertEquals("", string0);
-  }
-
-  @Test(timeout = 4000)
-  public void test060()  throws Throwable  {
-      // Undeclared exception!
-      try { 
-        StringValue.valueOf((AppendingStringBuffer) null);
-        fail("Expecting exception: NullPointerException");
-      
-      } catch(NullPointerException e) {
-         //
-         // no message in exception (getMessage() returned null)
-         //
-         verifyException("org.apache.wicket.util.string.StringValue", e);
-      }
-  }
-
-  @Test(timeout = 4000)
-  public void test061()  throws Throwable  {
-      // Undeclared exception!
-      try { 
-        StringValue.valueOf((double) 521, (Locale) null);
-        fail("Expecting exception: NullPointerException");
-      
-      } catch(NullPointerException e) {
-         //
-         // no message in exception (getMessage() returned null)
-         //
-      }
-  }
-
-  @Test(timeout = 4000)
-  public void test062()  throws Throwable  {
-      Locale locale0 = Locale.TRADITIONAL_CHINESE;
-      // Undeclared exception!
-      StringValue.valueOf((double) (-1418L), 65534, locale0);
-  }
-
-  @Test(timeout = 4000)
-  public void test063()  throws Throwable  {
-      Locale locale0 = Locale.ITALY;
-      // Undeclared exception!
-      try { 
-        StringValue.valueOf((-2635.7), (-2100), locale0);
-        fail("Expecting exception: NegativeArraySizeException");
-      
-      } catch(NegativeArraySizeException e) {
-         //
-         // no message in exception (getMessage() returned null)
-         //
-         verifyException("org.apache.wicket.util.string.AppendingStringBuffer", e);
-      }
-  }
-
-  @Test(timeout = 4000)
-  public void test064()  throws Throwable  {
-      StringValue stringValue0 = new StringValue((String) null);
-      // Undeclared exception!
-      try { 
-        stringValue0.toTime();
-        fail("Expecting exception: NullPointerException");
-      
-      } catch(NullPointerException e) {
-         //
-         // no message in exception (getMessage() returned null)
-         //
-         verifyException("java.text.SimpleDateFormat", e);
-      }
-  }
-
-  @Test(timeout = 4000)
-  public void test065()  throws Throwable  {
-      TimeOfDay.Meridian timeOfDay_Meridian0 = TimeOfDay.AM;
-      try { 
-        timeOfDay_Meridian0.toOptionalLong();
-        fail("Expecting exception: RuntimeException");
-      
-      } catch(RuntimeException e) {
-         //
-         // Unable to convert 'AM' to a Long value
-         //
-         verifyException("org.apache.wicket.util.string.StringValue", e);
-      }
-  }
-
-  @Test(timeout = 4000)
-  public void test066()  throws Throwable  {
-      TimeOfDay.Meridian timeOfDay_Meridian0 = TimeOfDay.PM;
-      try { 
-        timeOfDay_Meridian0.toOptionalInteger();
-        fail("Expecting exception: RuntimeException");
-      
-      } catch(RuntimeException e) {
-         //
-         // Unable to convert 'PM' to an Integer value
-         //
-         verifyException("org.apache.wicket.util.string.StringValue", e);
-      }
-  }
-
-  @Test(timeout = 4000)
-  public void test067()  throws Throwable  {
-      TimeOfDay.Meridian timeOfDay_Meridian0 = TimeOfDay.PM;
-      try { 
-        timeOfDay_Meridian0.toOptionalDouble();
-        fail("Expecting exception: RuntimeException");
-      
-      } catch(RuntimeException e) {
-         //
-         // Unable to convert 'PM' to a double value
-         //
-         verifyException("org.apache.wicket.util.string.StringValue", e);
-      }
-  }
-
-  @Test(timeout = 4000)
-  public void test068()  throws Throwable  {
-      TimeOfDay.Meridian timeOfDay_Meridian0 = TimeOfDay.AM;
-      try { 
-        timeOfDay_Meridian0.toOptionalCharacter();
-        fail("Expecting exception: RuntimeException");
-      
-      } catch(RuntimeException e) {
-         //
-         // Expected single character, not \"AM\"
-         //
-         verifyException("org.apache.wicket.util.string.Strings", e);
-      }
-  }
-
-  @Test(timeout = 4000)
-  public void test069()  throws Throwable  {
-      TimeOfDay.Meridian timeOfDay_Meridian0 = TimeOfDay.PM;
-      try { 
-        timeOfDay_Meridian0.toOptionalBoolean();
-        fail("Expecting exception: RuntimeException");
-      
-      } catch(RuntimeException e) {
-         //
-         // Boolean value \"PM\" not recognized
-         //
-         verifyException("org.apache.wicket.util.string.Strings", e);
-      }
-  }
-
-  @Test(timeout = 4000)
-  public void test070()  throws Throwable  {
-      TimeOfDay.Meridian timeOfDay_Meridian0 = TimeOfDay.PM;
-      try { 
-        timeOfDay_Meridian0.toLongObject();
-        fail("Expecting exception: RuntimeException");
-      
-      } catch(RuntimeException e) {
-         //
-         // Unable to convert 'PM' to a Long value
-         //
-         verifyException("org.apache.wicket.util.string.StringValue", e);
-      }
-  }
-
-  @Test(timeout = 4000)
-  public void test071()  throws Throwable  {
-      TimeOfDay.Meridian timeOfDay_Meridian0 = TimeOfDay.PM;
-      // Undeclared exception!
-      try { 
-        timeOfDay_Meridian0.toEnum((TextStyle) null);
-        fail("Expecting exception: IllegalArgumentException");
-      
-      } catch(IllegalArgumentException e) {
-         //
-         // Argument 'defaultValue' may not be null.
-         //
-         verifyException("org.apache.wicket.util.lang.Args", e);
-      }
-  }
-
-  @Test(timeout = 4000)
-  public void test072()  throws Throwable  {
-      StringValue stringValue0 = new StringValue((String) null);
-      Class<Level> class0 = Level.class;
-      // Undeclared exception!
-      try { 
-        stringValue0.toEnum(class0);
-        fail("Expecting exception: IllegalArgumentException");
-      
-      } catch(IllegalArgumentException e) {
-         //
-         // Argument 'value' may not be null.
-         //
-         verifyException("org.apache.wicket.util.lang.Args", e);
-      }
-  }
-
-  @Test(timeout = 4000)
-  public void test073()  throws Throwable  {
-      StringValue stringValue0 = new StringValue((String) null);
-      // Undeclared exception!
-      try { 
-        stringValue0.toDuration();
-        fail("Expecting exception: NullPointerException");
-      
-      } catch(NullPointerException e) {
-         //
-         // no message in exception (getMessage() returned null)
-         //
-      }
-  }
-
-  @Test(timeout = 4000)
-  public void test074()  throws Throwable  {
-      Character character0 = Character.valueOf('m');
-      StringValue stringValue0 = StringValue.valueOf((Object) character0, (Locale) null);
-      // Undeclared exception!
-      try { 
-        stringValue0.toDoubleObject();
-        fail("Expecting exception: NullPointerException");
-      
-      } catch(NullPointerException e) {
-         //
-         // no message in exception (getMessage() returned null)
-         //
-      }
-  }
-
-  @Test(timeout = 4000)
-  public void test075()  throws Throwable  {
-      StringValue stringValue0 = new StringValue((String) null);
-      // Undeclared exception!
-      try { 
-        stringValue0.toDouble();
-        fail("Expecting exception: NullPointerException");
-      
-      } catch(NullPointerException e) {
-         //
-         // no message in exception (getMessage() returned null)
-         //
-         verifyException("java.text.DecimalFormat", e);
-      }
-  }
-
-  @Test(timeout = 4000)
-  public void test076()  throws Throwable  {
-      TimeOfDay.Meridian timeOfDay_Meridian0 = TimeOfDay.AM;
-      try { 
-        timeOfDay_Meridian0.toBoolean();
-        fail("Expecting exception: RuntimeException");
-      
-      } catch(RuntimeException e) {
-         //
-         // Boolean value \"AM\" not recognized
-         //
-         verifyException("org.apache.wicket.util.string.Strings", e);
-      }
-  }
-
-  @Test(timeout = 4000)
-  public void test077()  throws Throwable  {
-      StringValue stringValue0 = StringValue.valueOf((String) null);
-      Class<IOCase> class0 = IOCase.class;
-      // Undeclared exception!
-      try { 
-        stringValue0.to(class0);
-        fail("Expecting exception: IllegalArgumentException");
-      
-      } catch(IllegalArgumentException e) {
-         //
-         // Argument 'value' may not be null.
-         //
-         verifyException("org.apache.wicket.util.lang.Args", e);
-      }
-  }
-
-  @Test(timeout = 4000)
-  public void test078()  throws Throwable  {
-      // Undeclared exception!
-      StringValue.repeat(65007, "2XZ.{'WZi8o>W;iU#|=");
-  }
-
-  @Test(timeout = 4000)
-  public void test079()  throws Throwable  {
-      // Undeclared exception!
-      StringValue.repeat(Integer.MAX_VALUE, (String) null);
-  }
-
-  @Test(timeout = 4000)
-  public void test080()  throws Throwable  {
-      // Undeclared exception!
-      try { 
-        StringValue.repeat((-1143), "Q11+BHzKd+{");
-        fail("Expecting exception: NegativeArraySizeException");
-      
-      } catch(NegativeArraySizeException e) {
-         //
-         // no message in exception (getMessage() returned null)
-         //
-         verifyException("org.apache.wicket.util.string.AppendingStringBuffer", e);
-      }
-  }
-
-  @Test(timeout = 4000)
-  public void test081()  throws Throwable  {
-      // Undeclared exception!
-      StringValue.repeat(65007, 'h');
-  }
-
-  @Test(timeout = 4000)
-  public void test082()  throws Throwable  {
-      // Undeclared exception!
-      try { 
-        StringValue.repeat((-507), 'n');
-        fail("Expecting exception: NegativeArraySizeException");
-      
-      } catch(NegativeArraySizeException e) {
-         //
-         // no message in exception (getMessage() returned null)
-         //
-         verifyException("org.apache.wicket.util.string.AppendingStringBuffer", e);
-      }
-  }
-
-  @Test(timeout = 4000)
-  public void test083()  throws Throwable  {
-      StringValue stringValue0 = new StringValue((String) null);
-      Locale.FilteringMode locale_FilteringMode0 = Locale.FilteringMode.MAP_EXTENDED_RANGES;
-      Class<Locale.FilteringMode> class0 = Locale.FilteringMode.class;
-      Locale.FilteringMode locale_FilteringMode1 = stringValue0.toEnum(class0, locale_FilteringMode0);
-      assertSame(locale_FilteringMode1, locale_FilteringMode0);
-  }
-
-  @Test(timeout = 4000)
-  public void test084()  throws Throwable  {
-      Object object0 = new Object();
-      Locale locale0 = Locale.ITALY;
-      StringValue stringValue0 = StringValue.valueOf(object0, locale0);
-      Class<Locale.FilteringMode> class0 = Locale.FilteringMode.class;
-      Locale.FilteringMode locale_FilteringMode0 = Locale.FilteringMode.IGNORE_EXTENDED_RANGES;
-      Locale.FilteringMode locale_FilteringMode1 = stringValue0.toEnum(class0, locale_FilteringMode0);
-      assertSame(locale_FilteringMode1, locale_FilteringMode0);
-  }
-
-  @Test(timeout = 4000)
-  public void test085()  throws Throwable  {
-      // Undeclared exception!
-      try { 
-        StringValue.valueOf((-1094.187598), 35, (Locale) null);
-        fail("Expecting exception: NullPointerException");
-      
-      } catch(NullPointerException e) {
-         //
-         // no message in exception (getMessage() returned null)
-         //
-      }
-  }
-
-  @Test(timeout = 4000)
-  public void test086()  throws Throwable  {
-      TimeOfDay.Meridian timeOfDay_Meridian0 = TimeOfDay.PM;
-      try { 
-        timeOfDay_Meridian0.toChar();
-        fail("Expecting exception: RuntimeException");
-      
-      } catch(RuntimeException e) {
-         //
-         // Expected single character, not \"PM\"
-         //
-         verifyException("org.apache.wicket.util.string.Strings", e);
-      }
-  }
-
-  @Test(timeout = 4000)
-  public void test087()  throws Throwable  {
-      TimeOfDay.Meridian timeOfDay_Meridian0 = TimeOfDay.AM;
-      try { 
-        timeOfDay_Meridian0.toDouble();
-        fail("Expecting exception: RuntimeException");
-      
-      } catch(RuntimeException e) {
-         //
-         // Unable to convert 'AM' to a double value
-         //
-         verifyException("org.apache.wicket.util.string.StringValue", e);
-      }
-  }
-
-  @Test(timeout = 4000)
-  public void test088()  throws Throwable  {
-      TimeOfDay.Meridian timeOfDay_Meridian0 = TimeOfDay.PM;
-      try { 
-        timeOfDay_Meridian0.toTime();
-        fail("Expecting exception: RuntimeException");
-      
-      } catch(RuntimeException e) {
-         //
-         // Unable to convert 'PM' to a Time value
-         //
-         verifyException("org.apache.wicket.util.string.StringValue", e);
-      }
-  }
-
-  @Test(timeout = 4000)
-  public void test089()  throws Throwable  {
-      TimeOfDay.Meridian timeOfDay_Meridian0 = TimeOfDay.PM;
-      try { 
-        timeOfDay_Meridian0.toInteger();
-        fail("Expecting exception: RuntimeException");
-      
-      } catch(RuntimeException e) {
-         //
-         // Unable to convert 'PM' to an Integer value
-         //
-         verifyException("org.apache.wicket.util.string.StringValue", e);
-      }
-  }
-
-  @Test(timeout = 4000)
-  public void test090()  throws Throwable  {
-      TimeOfDay.Meridian timeOfDay_Meridian0 = TimeOfDay.PM;
-      try { 
-        timeOfDay_Meridian0.toLong();
-        fail("Expecting exception: RuntimeException");
-      
-      } catch(RuntimeException e) {
-         //
-         // Unable to convert 'PM' to a long value
-         //
-         verifyException("org.apache.wicket.util.string.StringValue", e);
-      }
-  }
-
-  @Test(timeout = 4000)
-  public void test091()  throws Throwable  {
-      TimeOfDay.Meridian timeOfDay_Meridian0 = TimeOfDay.AM;
-      try { 
-        timeOfDay_Meridian0.toBooleanObject();
-        fail("Expecting exception: RuntimeException");
-      
-      } catch(RuntimeException e) {
-         //
-         // Boolean value \"AM\" not recognized
-         //
-         verifyException("org.apache.wicket.util.string.Strings", e);
-      }
-  }
-
-  @Test(timeout = 4000)
-  public void test092()  throws Throwable  {
-      StringValue stringValue0 = StringValue.valueOf((-656.39755998669));
-      try { 
-        stringValue0.toInt();
-        fail("Expecting exception: RuntimeException");
-      
-      } catch(RuntimeException e) {
-         //
-         // Unable to convert '-656.4' to an int value
-         //
-         verifyException("org.apache.wicket.util.string.StringValue", e);
-      }
-  }
-
-  @Test(timeout = 4000)
-  public void test093()  throws Throwable  {
-      TimeOfDay.Meridian timeOfDay_Meridian0 = TimeOfDay.AM;
-      try { 
-        timeOfDay_Meridian0.toDuration();
-        fail("Expecting exception: RuntimeException");
-      
-      } catch(RuntimeException e) {
-         //
-         // Unable to parse duration: AM
-         //
-         verifyException("org.apache.wicket.util.time.Duration", e);
-      }
-  }
-
-  @Test(timeout = 4000)
-  public void test094()  throws Throwable  {
-      TimeOfDay.Meridian timeOfDay_Meridian0 = TimeOfDay.PM;
-      Class<Locale.FilteringMode> class0 = Locale.FilteringMode.class;
-      try { 
-        timeOfDay_Meridian0.toEnum(class0);
-        fail("Expecting exception: RuntimeException");
-      
-      } catch(RuntimeException e) {
-         //
-         // Cannot convert 'PM' to enum constant of type 'class java.util.Locale$FilteringMode'.
-         //
-         verifyException("org.apache.wicket.util.string.Strings", e);
-      }
-  }
-
-  @Test(timeout = 4000)
-  public void test095()  throws Throwable  {
-      TimeOfDay.Meridian timeOfDay_Meridian0 = TimeOfDay.AM;
-      try { 
-        timeOfDay_Meridian0.toDoubleObject();
-        fail("Expecting exception: RuntimeException");
-      
-      } catch(RuntimeException e) {
-         //
-         // Unable to convert 'AM' to a double value
-         //
-         verifyException("org.apache.wicket.util.string.StringValue", e);
-      }
-  }
-
-  @Test(timeout = 4000)
-  public void test096()  throws Throwable  {
-      TimeOfDay.Meridian timeOfDay_Meridian0 = TimeOfDay.PM;
-      try { 
-        timeOfDay_Meridian0.toCharacter();
-        fail("Expecting exception: RuntimeException");
-      
-      } catch(RuntimeException e) {
-         //
-         // Expected single character, not \"PM\"
-         //
-         verifyException("org.apache.wicket.util.string.Strings", e);
-      }
-  }
-
-  @Test(timeout = 4000)
-  public void test097()  throws Throwable  {
-      TimeOfDay.Meridian timeOfDay_Meridian0 = TimeOfDay.PM;
-      StringValue stringValue0 = StringValue.valueOf((Object) timeOfDay_Meridian0);
-      boolean boolean0 = stringValue0.equals(timeOfDay_Meridian0);
-      assertFalse(boolean0);
-  }
-
-  @Test(timeout = 4000)
-  public void test098()  throws Throwable  {
-      StringValue stringValue0 = StringValue.valueOf((String) null);
-      boolean boolean0 = stringValue0.equals((Object) null);
-      assertFalse(boolean0);
-  }
-
-  @Test(timeout = 4000)
-  public void test099()  throws Throwable  {
-      StringValue stringValue0 = StringValue.valueOf((String) null);
-      boolean boolean0 = stringValue0.isNull();
-      assertTrue(boolean0);
-  }
-
-  @Test(timeout = 4000)
-  public void test100()  throws Throwable  {
-      StringValue stringValue0 = StringValue.repeat((int) ';', ';');
-      boolean boolean0 = stringValue0.isNull();
-      assertFalse(boolean0);
-      assertEquals(";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;", stringValue0.toString());
-  }
-
-  @Test(timeout = 4000)
-  public void test101()  throws Throwable  {
-      StringValue stringValue0 = new StringValue((String) null);
-      Class<ResolverStyle> class0 = ResolverStyle.class;
-      stringValue0.toOptionalEnum(class0);
-  }
-
-  @Test(timeout = 4000)
-  public void test102()  throws Throwable  {
-      TimeOfDay.Meridian timeOfDay_Meridian0 = TimeOfDay.AM;
-      Class<MinguoEra> class0 = MinguoEra.class;
-      try { 
-        timeOfDay_Meridian0.toOptionalEnum(class0);
-        fail("Expecting exception: RuntimeException");
-      
-      } catch(RuntimeException e) {
-         //
-         // Cannot convert 'AM' to enum constant of type 'class java.time.chrono.MinguoEra'.
-         //
-         verifyException("org.apache.wicket.util.string.Strings", e);
-      }
-  }
-
-  @Test(timeout = 4000)
-  public void test103()  throws Throwable  {
-      StringValue stringValue0 = new StringValue((String) null);
-      ChronoField chronoField0 = ChronoField.DAY_OF_MONTH;
-      ChronoField chronoField1 = stringValue0.toEnum(chronoField0);
-      assertEquals(ChronoField.DAY_OF_MONTH, chronoField1);
-  }
-
-  @Test(timeout = 4000)
-  public void test104()  throws Throwable  {
-      StringValue stringValue0 = new StringValue("An error occurred while converting '%s' to a boolean: %s");
-      Time time0 = Time.millis((-1822L));
-      Time time1 = stringValue0.toTime(time0);
-      assertEquals((-1822L), time1.getMilliseconds());
-  }
-
-  @Test(timeout = 4000)
-  public void test105()  throws Throwable  {
-      StringValue stringValue0 = StringValue.valueOf((Object) null, (Locale) null);
-      Time time0 = stringValue0.toTime((Time) null);
-      assertNull(time0);
-  }
-
-  @Test(timeout = 4000)
-  public void test106()  throws Throwable  {
-      StringValue stringValue0 = StringValue.valueOf((String) null);
-      String string0 = stringValue0.toString((String) null);
-      assertNull(string0);
-  }
-
-  @Test(timeout = 4000)
-  public void test107()  throws Throwable  {
-      StringValue stringValue0 = StringValue.repeat(897, 'G');
-      stringValue0.toString("<Null Throwable>");
-  }
-
-  @Test(timeout = 4000)
-  public void test108()  throws Throwable  {
-      StringValue stringValue0 = StringValue.valueOf((String) null);
-      Time time0 = stringValue0.toOptionalTime();
-      assertNull(time0);
-  }
-
-  @Test(timeout = 4000)
-  public void test109()  throws Throwable  {
-      StringValue stringValue0 = new StringValue((String) null);
-      Long long0 = stringValue0.toOptionalLong();
-      assertNull(long0);
-  }
-
-  @Test(timeout = 4000)
-  public void test110()  throws Throwable  {
-      StringValue stringValue0 = StringValue.valueOf((-1.0));
-      Long long0 = stringValue0.toOptionalLong();
-      assertEquals((-1L), (long)long0);
-  }
-
-  @Test(timeout = 4000)
-  public void test111()  throws Throwable  {
-      StringValue stringValue0 = StringValue.repeat(784, "");
-      Integer integer0 = stringValue0.toOptionalInteger();
-      assertNull(integer0);
-  }
-
-  @Test(timeout = 4000)
-  public void test112()  throws Throwable  {
-      Locale locale0 = Locale.FRENCH;
-      StringValue stringValue0 = new StringValue((String) null, locale0);
-      Duration duration0 = stringValue0.toOptionalDuration();
-      assertNull(duration0);
-  }
-
-  @Test(timeout = 4000)
-  public void test113()  throws Throwable  {
-      StringValue stringValue0 = StringValue.valueOf((String) null);
-      Double double0 = stringValue0.toOptionalDouble();
-      assertNull(double0);
-  }
-
-  @Test(timeout = 4000)
-  public void test114()  throws Throwable  {
-      StringValue stringValue0 = StringValue.valueOf((Object) null);
-      Character character0 = stringValue0.toOptionalCharacter();
-      assertNull(character0);
-  }
-
-  @Test(timeout = 4000)
-  public void test115()  throws Throwable  {
-      Locale locale0 = Locale.ENGLISH;
-      StringValue stringValue0 = StringValue.valueOf((double) 0L, locale0);
-      Character character0 = stringValue0.toOptionalCharacter();
-      assertEquals('0', (char)character0);
-  }
-
-  @Test(timeout = 4000)
-  public void test116()  throws Throwable  {
-      StringValue stringValue0 = StringValue.valueOf((String) null);
-      Boolean boolean0 = stringValue0.toOptionalBoolean();
-      assertNull(boolean0);
-  }
-
-  @Test(timeout = 4000)
-  public void test117()  throws Throwable  {
-      Locale locale0 = Locale.FRENCH;
-      StringValue stringValue0 = new StringValue((String) null, locale0);
-      long long0 = stringValue0.toLong((-187L));
-      assertEquals((-187L), long0);
-  }
-
-  @Test(timeout = 4000)
-  public void test118()  throws Throwable  {
-      TimeOfDay.Meridian timeOfDay_Meridian0 = TimeOfDay.AM;
-      int int0 = timeOfDay_Meridian0.toInt(1776);
-      assertEquals(1776, int0);
-  }
-
-  @Test(timeout = 4000)
-  public void test119()  throws Throwable  {
-      StringValue stringValue0 = new StringValue((String) null);
-      int int0 = stringValue0.toInt((-222));
-      assertEquals((-222), int0);
-  }
-
-  @Test(timeout = 4000)
-  public void test120()  throws Throwable  {
-      TimeOfDay.Meridian timeOfDay_Meridian0 = TimeOfDay.AM;
-      Duration duration0 = Duration.days((-581));
-      Duration duration1 = timeOfDay_Meridian0.toDuration(duration0);
-      assertSame(duration1, duration0);
-  }
-
-  @Test(timeout = 4000)
-  public void test121()  throws Throwable  {
-      Locale locale0 = Locale.JAPAN;
-      StringValue stringValue0 = StringValue.valueOf((String) null, locale0);
-      Duration duration0 = Duration.days(1357);
-      Duration duration1 = stringValue0.toDuration(duration0);
-      assertEquals(117244800000L, duration1.getMilliseconds());
-  }
-
-  @Test(timeout = 4000)
-  public void test122()  throws Throwable  {
-      TimeOfDay.Meridian timeOfDay_Meridian0 = TimeOfDay.AM;
-      double double0 = timeOfDay_Meridian0.toDouble(1437.7946159329);
-      assertEquals(1437.7946159329, double0, 0.01);
-  }
-
-  @Test(timeout = 4000)
-  public void test123()  throws Throwable  {
-      StringValue stringValue0 = new StringValue((String) null);
-      double double0 = stringValue0.toDouble((-3142.184721179255));
-      assertEquals((-3142.184721179255), double0, 0.01);
-  }
-
-  @Test(timeout = 4000)
-  public void test124()  throws Throwable  {
-      TimeOfDay.Meridian timeOfDay_Meridian0 = TimeOfDay.AM;
-      char char0 = timeOfDay_Meridian0.toChar(';');
-      assertEquals(';', char0);
-  }
-
-  @Test(timeout = 4000)
-  public void test125()  throws Throwable  {
-      TimeOfDay.Meridian timeOfDay_Meridian0 = TimeOfDay.PM;
-      boolean boolean0 = timeOfDay_Meridian0.toBoolean(true);
-      assertTrue(boolean0);
-  }
-
-  @Test(timeout = 4000)
-  public void test126()  throws Throwable  {
-      StringValue stringValue0 = StringValue.valueOf((String) null);
-      boolean boolean0 = stringValue0.toBoolean(false);
-      assertFalse(boolean0);
-  }
-
-  @Test(timeout = 4000)
-  public void test127()  throws Throwable  {
-      AppendingStringBuffer appendingStringBuffer0 = new AppendingStringBuffer();
-      StringValue stringValue0 = StringValue.valueOf(appendingStringBuffer0);
-      Class<Object> class0 = Object.class;
-      Object object0 = stringValue0.toOptional(class0);
-      assertNull(object0);
-  }
-
-  @Test(timeout = 4000)
-  public void test128()  throws Throwable  {
-      TimeOfDay.Meridian timeOfDay_Meridian0 = TimeOfDay.PM;
-      Class<Object> class0 = Object.class;
-      try { 
-        timeOfDay_Meridian0.to(class0);
-        fail("Expecting exception: RuntimeException");
-      
-      } catch(RuntimeException e) {
-         //
-         // Cannot convert 'PM'to type class java.lang.Object
-         //
-         verifyException("org.apache.wicket.util.string.StringValue", e);
-      }
-  }
-
-  @Test(timeout = 4000)
-  public void test129()  throws Throwable  {
-      TimeOfDay.Meridian timeOfDay_Meridian0 = TimeOfDay.AM;
-      Class<Character> class0 = Character.TYPE;
-      try { 
-        timeOfDay_Meridian0.toOptional(class0);
-        fail("Expecting exception: RuntimeException");
-      
-      } catch(RuntimeException e) {
-         //
-         // Expected single character, not \"AM\"
-         //
-         verifyException("org.apache.wicket.util.string.Strings", e);
-      }
-  }
-
-  @Test(timeout = 4000)
-  public void test130()  throws Throwable  {
-      TimeOfDay.Meridian timeOfDay_Meridian0 = TimeOfDay.PM;
-      Object object0 = timeOfDay_Meridian0.to((Class<Object>) null);
-      assertNull(object0);
-  }
-
-  @Test(timeout = 4000)
-  public void test131()  throws Throwable  {
-      Locale locale0 = Locale.CANADA_FRENCH;
-      StringValue stringValue0 = StringValue.valueOf((double) 886, locale0);
-      String string0 = stringValue0.beforeLast('8');
-      assertEquals("6", string0);
-  }
-
-  @Test(timeout = 4000)
-  public void test132()  throws Throwable  {
-      StringValue stringValue0 = StringValue.valueOf(0.0);
-      Boolean boolean0 = stringValue0.toOptionalBoolean();
-      assertFalse(boolean0);
-  }
-
-  @Test(timeout = 4000)
-  public void test133()  throws Throwable  {
-      StringValue stringValue0 = StringValue.valueOf(0.0);
-      Integer integer0 = stringValue0.toOptionalInteger();
-      assertEquals(0, (int)integer0);
-  }
-
-  @Test(timeout = 4000)
-  public void test134()  throws Throwable  {
-      StringValue stringValue0 = StringValue.valueOf(0.0);
-      int int0 = stringValue0.toInt(402);
-      assertEquals(0, int0);
-  }
-
-  @Test(timeout = 4000)
-  public void test135()  throws Throwable  {
-      StringValue stringValue0 = new StringValue((String) null);
-      String string0 = stringValue0.afterLast('2');
-      assertNull(string0);
-  }
-
-  @Test(timeout = 4000)
-  public void test136()  throws Throwable  {
-      StringValue stringValue0 = StringValue.valueOf(0.0);
-      Long long0 = stringValue0.toLongObject();
-      assertEquals(0L, (long)long0);
-  }
-
-  @Test(timeout = 4000)
-  public void test137()  throws Throwable  {
-      StringValue stringValue0 = StringValue.valueOf(0.0);
-      try { 
-        stringValue0.toOptionalDuration();
-        fail("Expecting exception: RuntimeException");
-      
-      } catch(RuntimeException e) {
-         //
-         // Unable to parse duration: 0
-         //
-         verifyException("org.apache.wicket.util.time.Duration", e);
-      }
-  }
-
-  @Test(timeout = 4000)
-  public void test138()  throws Throwable  {
-      StringValue stringValue0 = StringValue.valueOf(0.0);
-      StringBuilder stringBuilder0 = new StringBuilder(124);
-      // Undeclared exception!
-      stringValue0.replaceAll(stringBuilder0, stringBuilder0);
-  }
-
-  @Test(timeout = 4000)
-  public void test139()  throws Throwable  {
-      TimeOfDay.Meridian timeOfDay_Meridian0 = TimeOfDay.AM;
-      long long0 = timeOfDay_Meridian0.toLong((-1418L));
-      assertEquals((-1418L), long0);
-  }
-
-  @Test(timeout = 4000)
-  public void test140()  throws Throwable  {
-      Locale locale0 = Locale.FRENCH;
-      StringValue stringValue0 = new StringValue((String) null, locale0);
-      boolean boolean0 = stringValue0.toBoolean();
-      assertFalse(boolean0);
-  }
-
-  @Test(timeout = 4000)
-  public void test141()  throws Throwable  {
-      StringValue stringValue0 = StringValue.valueOf((Object) null, (Locale) null);
-      String string0 = stringValue0.afterFirst('_');
-      assertNull(string0);
-  }
-
-  @Test(timeout = 4000)
-  public void test142()  throws Throwable  {
-      Locale locale0 = Locale.forLanguageTag("u[$pjDz=Bz");
-      StringValue stringValue0 = StringValue.valueOf(0.0, locale0);
-      try { 
-        stringValue0.toOptionalTime();
-        fail("Expecting exception: RuntimeException");
-      
-      } catch(RuntimeException e) {
-         //
-         // Unable to convert '0' to a Time value
-         //
-         verifyException("org.apache.wicket.util.string.StringValue", e);
-      }
-  }
-
-  @Test(timeout = 4000)
-  public void test143()  throws Throwable  {
-      TimeOfDay.Meridian timeOfDay_Meridian0 = TimeOfDay.PM;
-      String string0 = timeOfDay_Meridian0.beforeFirst('@');
-      assertEquals("", string0);
-  }
-
-  @Test(timeout = 4000)
-  public void test144()  throws Throwable  {
-      StringValue stringValue0 = StringValue.valueOf(974.37);
-      stringValue0.hashCode();
-      assertEquals("974.4", stringValue0.toString());
-  }
-
-  @Test(timeout = 4000)
-  public void test145()  throws Throwable  {
-      StringValue stringValue0 = StringValue.valueOf((double) 886);
-      Double double0 = stringValue0.toOptionalDouble();
-      assertEquals(886.0, (double)double0, 0.01);
-  }
-
-  @Test(timeout = 4000)
-  public void test146()  throws Throwable  {
-      StringValue stringValue0 = StringValue.valueOf((String) null);
-      boolean boolean0 = stringValue0.isEmpty();
-      assertTrue(boolean0);
-  }
-
-  @Test(timeout = 4000)
-  public void test147()  throws Throwable  {
-      StringValue stringValue0 = StringValue.valueOf((Object) null);
-      char char0 = stringValue0.toChar('w');
-      assertEquals('w', char0);
-  }
-
-  @Test(timeout = 4000)
-  public void test148()  throws Throwable  {
-      TimeOfDay.Meridian timeOfDay_Meridian0 = TimeOfDay.AM;
-      String string0 = timeOfDay_Meridian0.toOptionalString();
-      assertEquals("AM", string0);
-  }
-
-  @Test(timeout = 4000)
-  public void test149()  throws Throwable  {
-      StringValue stringValue0 = StringValue.valueOf(0.0);
-      Class<Character> class0 = Character.class;
-      Character character0 = stringValue0.to(class0);
-      assertEquals('0', (char)character0);
-  }
+//@RunWith(EvoRunner.class) @EvoRunnerParameters(mockJVMNonDeterminism = true, useVFS = true, useVNET = true, resetStaticState = true, separateClassLoader = true) 
+public class StringValue_ESTest { //extends StringValue_ESTest_scaffolding {
+
+//  @Test(timeout = 4000)
+//  public void test000()  throws Throwable  {
+//      StringValue stringValue0 = new StringValue("An error occurred while converting '%s' to a boolean: %s");
+//      StringValue stringValue1 = new StringValue("An error occurred while converting '%s' to a boolean: %s");
+//      boolean boolean0 = stringValue0.equals(stringValue1);
+//      assertTrue(boolean0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test001()  throws Throwable  {
+//      Time time0 = Time.START_OF_UNIX_TIME;
+//      TimeOfDay.Meridian timeOfDay_Meridian0 = TimeOfDay.AM;
+//      Time time1 = timeOfDay_Meridian0.toTime(time0);
+//      assertEquals(0L, time1.getMilliseconds());
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test002()  throws Throwable  {
+//      Time time0 = Time.now();
+//      StringValue stringValue0 = StringValue.valueOf((Object) null);
+//      Time time1 = stringValue0.toTime(time0);
+//      assertSame(time0, time1);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test003()  throws Throwable  {
+//      StringValue stringValue0 = StringValue.repeat(1607, "");
+//      String string0 = stringValue0.toString("QY^Uscu;J|o[");
+//      assertEquals("", string0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test004()  throws Throwable  {
+//      StringValue stringValue0 = StringValue.valueOf((String) null);
+//      String string0 = stringValue0.toString();
+//      assertNull(string0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test005()  throws Throwable  {
+//      Locale locale0 = Locale.ITALIAN;
+//      StringValue stringValue0 = StringValue.valueOf(0.0, 0, locale0);
+//      String string0 = stringValue0.toString();
+//      assertEquals("0,", string0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test006()  throws Throwable  {
+//      Locale locale0 = Locale.ITALIAN;
+//      StringValue stringValue0 = StringValue.valueOf("", locale0);
+//      String string0 = stringValue0.toString();
+//      assertEquals("", string0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test007()  throws Throwable  {
+//      StringValue stringValue0 = new StringValue((String) null);
+//      String string0 = stringValue0.toOptionalString();
+//      assertNull(string0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test008()  throws Throwable  {
+//      StringValue stringValue0 = StringValue.repeat(137, "");
+//      String string0 = stringValue0.toOptionalString();
+//      assertEquals("", string0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test009()  throws Throwable  {
+//      Locale locale0 = Locale.ITALIAN;
+//      StringValue stringValue0 = StringValue.valueOf((double) 0, 314, locale0);
+//      Long long0 = stringValue0.toOptionalLong();
+//      assertEquals(0L, (long)long0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test010()  throws Throwable  {
+//      StringValue stringValue0 = StringValue.valueOf(1000.0);
+//      Long long0 = stringValue0.toOptionalLong();
+//      assertEquals(1000L, (long)long0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test011()  throws Throwable  {
+//      Locale locale0 = Locale.FRANCE;
+//      StringValue stringValue0 = StringValue.valueOf((double) 1607, locale0);
+//      Integer integer0 = stringValue0.toOptionalInteger();
+//      assertEquals(1607, (int)integer0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test012()  throws Throwable  {
+//      Locale locale0 = Locale.ROOT;
+//      StringValue stringValue0 = StringValue.valueOf((-1.0), 117, locale0);
+//      Integer integer0 = stringValue0.toOptionalInteger();
+//      assertEquals((-1), (int)integer0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test013()  throws Throwable  {
+//      Locale locale0 = Locale.forLanguageTag("Argument '%s' must have a value within [%s,%s], but was %s");
+//      StringValue stringValue0 = StringValue.valueOf(0.0, locale0);
+//      Double double0 = stringValue0.toOptionalDouble();
+//      assertEquals(0.0, (double)double0, 0.01);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test014()  throws Throwable  {
+//      Locale locale0 = Locale.CANADA_FRENCH;
+//      StringValue stringValue0 = StringValue.valueOf((double) (-922), locale0);
+//      Double double0 = stringValue0.toOptionalDouble();
+//      assertEquals((-922.0), (double)double0, 0.01);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test015()  throws Throwable  {
+//      Locale locale0 = Locale.PRC;
+//      StringValue stringValue0 = new StringValue("\"", locale0);
+//      Character character0 = stringValue0.toOptionalCharacter();
+//      assertEquals('\"', (char)character0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test016()  throws Throwable  {
+//      StringValue stringValue0 = new StringValue("L");
+//      Character character0 = stringValue0.toOptionalCharacter();
+//      assertEquals('L', (char)character0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test017()  throws Throwable  {
+//      StringValue stringValue0 = new StringValue("on");
+//      Boolean boolean0 = stringValue0.toOptionalBoolean();
+//      assertTrue(boolean0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test018()  throws Throwable  {
+//      Locale locale0 = Locale.GERMAN;
+//      StringValue stringValue0 = StringValue.valueOf(24.0, locale0);
+//      Long long0 = stringValue0.toLongObject();
+//      assertEquals(24L, (long)long0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test019()  throws Throwable  {
+//      Locale locale0 = Locale.ITALIAN;
+//      StringValue stringValue0 = StringValue.valueOf((double) (-1529), 201, locale0);
+//      Long long0 = stringValue0.toLongObject();
+//      assertEquals((-1529L), (long)long0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test020()  throws Throwable  {
+//      StringValue stringValue0 = new StringValue((String) null);
+//      long long0 = stringValue0.toLong(0L);
+//      assertEquals(0L, long0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test021()  throws Throwable  {
+//      StringValue stringValue0 = StringValue.valueOf((double) 1L);
+//      long long0 = stringValue0.toLong(1L);
+//      assertEquals(1L, long0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test022()  throws Throwable  {
+//      Locale locale0 = Locale.forLanguageTag("Argument '%s' must have a value within [%s,%s], but was %s");
+//      StringValue stringValue0 = StringValue.valueOf(0.0, locale0);
+//      long long0 = stringValue0.toLong();
+//      assertEquals(0L, long0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test023()  throws Throwable  {
+//      StringValue stringValue0 = StringValue.valueOf((double) 772);
+//      long long0 = stringValue0.toLong();
+//      assertEquals(772L, long0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test024()  throws Throwable  {
+//      Locale locale0 = Locale.UK;
+//      StringValue stringValue0 = StringValue.valueOf((-1345.034), locale0);
+//      long long0 = stringValue0.toLong();
+//      assertEquals((-1345L), long0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test025()  throws Throwable  {
+//      Locale locale0 = new Locale("", "CSSK/7DoQ*0H@3$_o");
+//      StringValue stringValue0 = StringValue.valueOf(0.0, 2, locale0);
+//      Integer integer0 = stringValue0.toInteger();
+//      assertEquals(0, (int)integer0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test026()  throws Throwable  {
+//      Locale locale0 = Locale.CANADA_FRENCH;
+//      StringValue stringValue0 = StringValue.valueOf((double) 886, locale0);
+//      Integer integer0 = stringValue0.toInteger();
+//      assertEquals(886, (int)integer0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test027()  throws Throwable  {
+//      Locale locale0 = Locale.CANADA_FRENCH;
+//      StringValue stringValue0 = StringValue.valueOf((double) (-922), locale0);
+//      Integer integer0 = stringValue0.toInteger();
+//      assertEquals((-922), (int)integer0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test028()  throws Throwable  {
+//      Locale locale0 = Locale.US;
+//      StringValue stringValue0 = StringValue.valueOf(0.0, 48, locale0);
+//      int int0 = stringValue0.toInt();
+//      assertEquals(0, int0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test029()  throws Throwable  {
+//      StringValue stringValue0 = StringValue.valueOf((double) 772);
+//      int int0 = stringValue0.toInt();
+//      assertEquals(772, int0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test030()  throws Throwable  {
+//      Locale locale0 = Locale.ROOT;
+//      StringValue stringValue0 = StringValue.valueOf((-1.0), 117, locale0);
+//      int int0 = stringValue0.toInt();
+//      assertEquals((-1), int0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test031()  throws Throwable  {
+//      TimeOfDay.Meridian timeOfDay_Meridian0 = TimeOfDay.AM;
+//      Duration duration0 = timeOfDay_Meridian0.toDuration((Duration) null);
+//      assertNull(duration0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test032()  throws Throwable  {
+//      StringValue stringValue0 = StringValue.valueOf((String) null);
+//      ThreadGroup threadGroup0 = mock(ThreadGroup.class, new ViolatedAssumptionAnswer());
+//      MockThread mockThread0 = new MockThread(threadGroup0, "");
+//      Duration duration0 = Duration.benchmark((Runnable) mockThread0);
+//      Duration duration1 = stringValue0.toDuration(duration0);
+//      assertEquals(0L, duration1.getMilliseconds());
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test033()  throws Throwable  {
+//      Locale locale0 = Locale.forLanguageTag("Argument '%s' must have a value within [%s,%s], but was %s");
+//      StringValue stringValue0 = StringValue.valueOf(0.0, locale0);
+//      Double double0 = stringValue0.toDoubleObject();
+//      assertEquals(0.0, (double)double0, 0.01);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test034()  throws Throwable  {
+//      Locale locale0 = Locale.FRANCE;
+//      StringValue stringValue0 = StringValue.valueOf((double) 1607, locale0);
+//      Double double0 = stringValue0.toDoubleObject();
+//      assertEquals(1607.0, (double)double0, 0.01);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test035()  throws Throwable  {
+//      Locale locale0 = Locale.ROOT;
+//      StringValue stringValue0 = StringValue.valueOf((-1.0), 117, locale0);
+//      Double double0 = stringValue0.toDoubleObject();
+//      assertEquals((-1.0), (double)double0, 0.01);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test036()  throws Throwable  {
+//      StringValue stringValue0 = StringValue.valueOf(0.0);
+//      double double0 = stringValue0.toDouble(0.0);
+//      assertEquals(0.0, double0, 0.01);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test037()  throws Throwable  {
+//      Locale locale0 = Locale.ITALIAN;
+//      StringValue stringValue0 = StringValue.valueOf((double) 0, 314, locale0);
+//      double double0 = stringValue0.toDouble();
+//      assertEquals(0.0, double0, 0.01);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test038()  throws Throwable  {
+//      StringValue stringValue0 = StringValue.valueOf((double) 1607);
+//      double double0 = stringValue0.toDouble();
+//      assertEquals(1607.0, double0, 0.01);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test039()  throws Throwable  {
+//      Locale locale0 = Locale.FRENCH;
+//      StringValue stringValue0 = StringValue.valueOf((double) (-187L), 1211, locale0);
+//      double double0 = stringValue0.toDouble();
+//      assertEquals((-187.0), double0, 0.01);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test040()  throws Throwable  {
+//      StringValue stringValue0 = StringValue.valueOf(0.0);
+//      Character character0 = stringValue0.toCharacter();
+//      assertEquals('0', (char)character0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test041()  throws Throwable  {
+//      StringValue stringValue0 = new StringValue("L");
+//      Character character0 = stringValue0.toCharacter();
+//      assertEquals('L', (char)character0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test042()  throws Throwable  {
+//      StringValue stringValue0 = StringValue.repeat(897, '0');
+//      stringValue0.toChar('0');
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test043()  throws Throwable  {
+//      Locale locale0 = Locale.PRC;
+//      StringValue stringValue0 = new StringValue("\"", locale0);
+//      char char0 = stringValue0.toChar();
+//      assertEquals('\"', char0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test044()  throws Throwable  {
+//      Locale locale0 = Locale.forLanguageTag("u[$pjDz=Bz");
+//      StringValue stringValue0 = StringValue.valueOf(0.0, locale0);
+//      char char0 = stringValue0.toChar();
+//      assertEquals('0', char0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test045()  throws Throwable  {
+//      StringValue stringValue0 = new StringValue("G");
+//      char char0 = stringValue0.toChar();
+//      assertEquals('G', char0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test046()  throws Throwable  {
+//      StringValue stringValue0 = new StringValue("");
+//      Boolean boolean0 = stringValue0.toBooleanObject();
+//      assertFalse(boolean0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test047()  throws Throwable  {
+//      StringValue stringValue0 = StringValue.valueOf("on");
+//      boolean boolean0 = stringValue0.toBoolean();
+//      assertTrue(boolean0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test048()  throws Throwable  {
+//      StringValue stringValue0 = StringValue.valueOf((String) null);
+//      CharSequence charSequence0 = stringValue0.replaceAll((CharSequence) null, (CharSequence) null);
+//      assertNull(charSequence0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test049()  throws Throwable  {
+//      StringValue stringValue0 = StringValue.valueOf("Cannot convert '");
+//      CharSequence charSequence0 = stringValue0.replaceAll("Cannot convert '", (CharSequence) null);
+//      assertEquals(0, charSequence0.length());
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test050()  throws Throwable  {
+//      StringValue stringValue0 = new StringValue("0rl;2S");
+//      AppendingStringBuffer appendingStringBuffer0 = (AppendingStringBuffer)stringValue0.replaceAll("0rl;2S", "0rl;2S");
+//      assertEquals(22, appendingStringBuffer0.capacity());
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test051()  throws Throwable  {
+//      TimeOfDay.Meridian timeOfDay_Meridian0 = TimeOfDay.PM;
+//      boolean boolean0 = timeOfDay_Meridian0.isEmpty();
+//      assertFalse(boolean0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test052()  throws Throwable  {
+//      StringValue stringValue0 = StringValue.valueOf((String) null);
+//      String string0 = stringValue0.beforeLast('y');
+//      assertNull(string0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test053()  throws Throwable  {
+//      TimeOfDay.Meridian timeOfDay_Meridian0 = TimeOfDay.PM;
+//      String string0 = timeOfDay_Meridian0.beforeLast('a');
+//      assertEquals("", string0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test054()  throws Throwable  {
+//      StringValue stringValue0 = StringValue.valueOf((Object) null);
+//      String string0 = stringValue0.beforeFirst('v');
+//      assertNull(string0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test055()  throws Throwable  {
+//      StringValue stringValue0 = StringValue.repeat(1, "mgI78=b|=co]*gCTzi");
+//      String string0 = stringValue0.beforeFirst('C');
+//      assertEquals("mgI78=b|=co]*g", string0);
+//      assertEquals("mgI78=b|=co]*gCTzi", stringValue0.toOptionalString());
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test056()  throws Throwable  {
+//      StringValue stringValue0 = StringValue.repeat(1, "mgI78=b|=co]*gCTzi");
+//      String string0 = stringValue0.afterLast('*');
+//      assertEquals("gCTzi", string0);
+//      assertEquals("mgI78=b|=co]*gCTzi", stringValue0.toOptionalString());
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test057()  throws Throwable  {
+//      TimeOfDay.Meridian timeOfDay_Meridian0 = TimeOfDay.AM;
+//      String string0 = timeOfDay_Meridian0.afterLast('c');
+//      assertEquals("", string0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test058()  throws Throwable  {
+//      StringValue stringValue0 = StringValue.valueOf((-656.39755998669));
+//      String string0 = stringValue0.afterFirst('-');
+//      assertEquals("656.4", string0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test059()  throws Throwable  {
+//      TimeOfDay.Meridian timeOfDay_Meridian0 = TimeOfDay.PM;
+//      String string0 = timeOfDay_Meridian0.afterFirst('B');
+//      assertEquals("", string0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test060()  throws Throwable  {
+//      // Undeclared exception!
+//      try { 
+//        StringValue.valueOf((AppendingStringBuffer) null);
+//        fail("Expecting exception: NullPointerException");
+//      
+//      } catch(NullPointerException e) {
+//         //
+//         // no message in exception (getMessage() returned null)
+//         //
+//         verifyException("org.apache.wicket.util.string.StringValue", e);
+//      }
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test061()  throws Throwable  {
+//      // Undeclared exception!
+//      try { 
+//        StringValue.valueOf((double) 521, (Locale) null);
+//        fail("Expecting exception: NullPointerException");
+//      
+//      } catch(NullPointerException e) {
+//         //
+//         // no message in exception (getMessage() returned null)
+//         //
+//      }
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test062()  throws Throwable  {
+//      Locale locale0 = Locale.TRADITIONAL_CHINESE;
+//      // Undeclared exception!
+//      StringValue.valueOf((double) (-1418L), 65534, locale0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test063()  throws Throwable  {
+//      Locale locale0 = Locale.ITALY;
+//      // Undeclared exception!
+//      try { 
+//        StringValue.valueOf((-2635.7), (-2100), locale0);
+//        fail("Expecting exception: NegativeArraySizeException");
+//      
+//      } catch(NegativeArraySizeException e) {
+//         //
+//         // no message in exception (getMessage() returned null)
+//         //
+//         verifyException("org.apache.wicket.util.string.AppendingStringBuffer", e);
+//      }
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test064()  throws Throwable  {
+//      StringValue stringValue0 = new StringValue((String) null);
+//      // Undeclared exception!
+//      try { 
+//        stringValue0.toTime();
+//        fail("Expecting exception: NullPointerException");
+//      
+//      } catch(NullPointerException e) {
+//         //
+//         // no message in exception (getMessage() returned null)
+//         //
+//         verifyException("java.text.SimpleDateFormat", e);
+//      }
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test065()  throws Throwable  {
+//      TimeOfDay.Meridian timeOfDay_Meridian0 = TimeOfDay.AM;
+//      try { 
+//        timeOfDay_Meridian0.toOptionalLong();
+//        fail("Expecting exception: RuntimeException");
+//      
+//      } catch(RuntimeException e) {
+//         //
+//         // Unable to convert 'AM' to a Long value
+//         //
+//         verifyException("org.apache.wicket.util.string.StringValue", e);
+//      }
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test066()  throws Throwable  {
+//      TimeOfDay.Meridian timeOfDay_Meridian0 = TimeOfDay.PM;
+//      try { 
+//        timeOfDay_Meridian0.toOptionalInteger();
+//        fail("Expecting exception: RuntimeException");
+//      
+//      } catch(RuntimeException e) {
+//         //
+//         // Unable to convert 'PM' to an Integer value
+//         //
+//         verifyException("org.apache.wicket.util.string.StringValue", e);
+//      }
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test067()  throws Throwable  {
+//      TimeOfDay.Meridian timeOfDay_Meridian0 = TimeOfDay.PM;
+//      try { 
+//        timeOfDay_Meridian0.toOptionalDouble();
+//        fail("Expecting exception: RuntimeException");
+//      
+//      } catch(RuntimeException e) {
+//         //
+//         // Unable to convert 'PM' to a double value
+//         //
+//         verifyException("org.apache.wicket.util.string.StringValue", e);
+//      }
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test068()  throws Throwable  {
+//      TimeOfDay.Meridian timeOfDay_Meridian0 = TimeOfDay.AM;
+//      try { 
+//        timeOfDay_Meridian0.toOptionalCharacter();
+//        fail("Expecting exception: RuntimeException");
+//      
+//      } catch(RuntimeException e) {
+//         //
+//         // Expected single character, not \"AM\"
+//         //
+//         verifyException("org.apache.wicket.util.string.Strings", e);
+//      }
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test069()  throws Throwable  {
+//      TimeOfDay.Meridian timeOfDay_Meridian0 = TimeOfDay.PM;
+//      try { 
+//        timeOfDay_Meridian0.toOptionalBoolean();
+//        fail("Expecting exception: RuntimeException");
+//      
+//      } catch(RuntimeException e) {
+//         //
+//         // Boolean value \"PM\" not recognized
+//         //
+//         verifyException("org.apache.wicket.util.string.Strings", e);
+//      }
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test070()  throws Throwable  {
+//      TimeOfDay.Meridian timeOfDay_Meridian0 = TimeOfDay.PM;
+//      try { 
+//        timeOfDay_Meridian0.toLongObject();
+//        fail("Expecting exception: RuntimeException");
+//      
+//      } catch(RuntimeException e) {
+//         //
+//         // Unable to convert 'PM' to a Long value
+//         //
+//         verifyException("org.apache.wicket.util.string.StringValue", e);
+//      }
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test071()  throws Throwable  {
+//      TimeOfDay.Meridian timeOfDay_Meridian0 = TimeOfDay.PM;
+//      // Undeclared exception!
+//      try { 
+//        timeOfDay_Meridian0.toEnum((TextStyle) null);
+//        fail("Expecting exception: IllegalArgumentException");
+//      
+//      } catch(IllegalArgumentException e) {
+//         //
+//         // Argument 'defaultValue' may not be null.
+//         //
+//         verifyException("org.apache.wicket.util.lang.Args", e);
+//      }
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test072()  throws Throwable  {
+//      StringValue stringValue0 = new StringValue((String) null);
+//      Class<Level> class0 = Level.class;
+//      // Undeclared exception!
+//      try { 
+//        stringValue0.toEnum(class0);
+//        fail("Expecting exception: IllegalArgumentException");
+//      
+//      } catch(IllegalArgumentException e) {
+//         //
+//         // Argument 'value' may not be null.
+//         //
+//         verifyException("org.apache.wicket.util.lang.Args", e);
+//      }
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test073()  throws Throwable  {
+//      StringValue stringValue0 = new StringValue((String) null);
+//      // Undeclared exception!
+//      try { 
+//        stringValue0.toDuration();
+//        fail("Expecting exception: NullPointerException");
+//      
+//      } catch(NullPointerException e) {
+//         //
+//         // no message in exception (getMessage() returned null)
+//         //
+//      }
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test074()  throws Throwable  {
+//      Character character0 = Character.valueOf('m');
+//      StringValue stringValue0 = StringValue.valueOf((Object) character0, (Locale) null);
+//      // Undeclared exception!
+//      try { 
+//        stringValue0.toDoubleObject();
+//        fail("Expecting exception: NullPointerException");
+//      
+//      } catch(NullPointerException e) {
+//         //
+//         // no message in exception (getMessage() returned null)
+//         //
+//      }
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test075()  throws Throwable  {
+//      StringValue stringValue0 = new StringValue((String) null);
+//      // Undeclared exception!
+//      try { 
+//        stringValue0.toDouble();
+//        fail("Expecting exception: NullPointerException");
+//      
+//      } catch(NullPointerException e) {
+//         //
+//         // no message in exception (getMessage() returned null)
+//         //
+//         verifyException("java.text.DecimalFormat", e);
+//      }
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test076()  throws Throwable  {
+//      TimeOfDay.Meridian timeOfDay_Meridian0 = TimeOfDay.AM;
+//      try { 
+//        timeOfDay_Meridian0.toBoolean();
+//        fail("Expecting exception: RuntimeException");
+//      
+//      } catch(RuntimeException e) {
+//         //
+//         // Boolean value \"AM\" not recognized
+//         //
+//         verifyException("org.apache.wicket.util.string.Strings", e);
+//      }
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test077()  throws Throwable  {
+//      StringValue stringValue0 = StringValue.valueOf((String) null);
+//      Class<IOCase> class0 = IOCase.class;
+//      // Undeclared exception!
+//      try { 
+//        stringValue0.to(class0);
+//        fail("Expecting exception: IllegalArgumentException");
+//      
+//      } catch(IllegalArgumentException e) {
+//         //
+//         // Argument 'value' may not be null.
+//         //
+//         verifyException("org.apache.wicket.util.lang.Args", e);
+//      }
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test078()  throws Throwable  {
+//      // Undeclared exception!
+//      StringValue.repeat(65007, "2XZ.{'WZi8o>W;iU#|=");
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test079()  throws Throwable  {
+//      // Undeclared exception!
+//      StringValue.repeat(Integer.MAX_VALUE, (String) null);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test080()  throws Throwable  {
+//      // Undeclared exception!
+//      try { 
+//        StringValue.repeat((-1143), "Q11+BHzKd+{");
+//        fail("Expecting exception: NegativeArraySizeException");
+//      
+//      } catch(NegativeArraySizeException e) {
+//         //
+//         // no message in exception (getMessage() returned null)
+//         //
+//         verifyException("org.apache.wicket.util.string.AppendingStringBuffer", e);
+//      }
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test081()  throws Throwable  {
+//      // Undeclared exception!
+//      StringValue.repeat(65007, 'h');
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test082()  throws Throwable  {
+//      // Undeclared exception!
+//      try { 
+//        StringValue.repeat((-507), 'n');
+//        fail("Expecting exception: NegativeArraySizeException");
+//      
+//      } catch(NegativeArraySizeException e) {
+//         //
+//         // no message in exception (getMessage() returned null)
+//         //
+//         verifyException("org.apache.wicket.util.string.AppendingStringBuffer", e);
+//      }
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test083()  throws Throwable  {
+//      StringValue stringValue0 = new StringValue((String) null);
+//      Locale.FilteringMode locale_FilteringMode0 = Locale.FilteringMode.MAP_EXTENDED_RANGES;
+//      Class<Locale.FilteringMode> class0 = Locale.FilteringMode.class;
+//      Locale.FilteringMode locale_FilteringMode1 = stringValue0.toEnum(class0, locale_FilteringMode0);
+//      assertSame(locale_FilteringMode1, locale_FilteringMode0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test084()  throws Throwable  {
+//      Object object0 = new Object();
+//      Locale locale0 = Locale.ITALY;
+//      StringValue stringValue0 = StringValue.valueOf(object0, locale0);
+//      Class<Locale.FilteringMode> class0 = Locale.FilteringMode.class;
+//      Locale.FilteringMode locale_FilteringMode0 = Locale.FilteringMode.IGNORE_EXTENDED_RANGES;
+//      Locale.FilteringMode locale_FilteringMode1 = stringValue0.toEnum(class0, locale_FilteringMode0);
+//      assertSame(locale_FilteringMode1, locale_FilteringMode0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test085()  throws Throwable  {
+//      // Undeclared exception!
+//      try { 
+//        StringValue.valueOf((-1094.187598), 35, (Locale) null);
+//        fail("Expecting exception: NullPointerException");
+//      
+//      } catch(NullPointerException e) {
+//         //
+//         // no message in exception (getMessage() returned null)
+//         //
+//      }
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test086()  throws Throwable  {
+//      TimeOfDay.Meridian timeOfDay_Meridian0 = TimeOfDay.PM;
+//      try { 
+//        timeOfDay_Meridian0.toChar();
+//        fail("Expecting exception: RuntimeException");
+//      
+//      } catch(RuntimeException e) {
+//         //
+//         // Expected single character, not \"PM\"
+//         //
+//         verifyException("org.apache.wicket.util.string.Strings", e);
+//      }
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test087()  throws Throwable  {
+//      TimeOfDay.Meridian timeOfDay_Meridian0 = TimeOfDay.AM;
+//      try { 
+//        timeOfDay_Meridian0.toDouble();
+//        fail("Expecting exception: RuntimeException");
+//      
+//      } catch(RuntimeException e) {
+//         //
+//         // Unable to convert 'AM' to a double value
+//         //
+//         verifyException("org.apache.wicket.util.string.StringValue", e);
+//      }
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test088()  throws Throwable  {
+//      TimeOfDay.Meridian timeOfDay_Meridian0 = TimeOfDay.PM;
+//      try { 
+//        timeOfDay_Meridian0.toTime();
+//        fail("Expecting exception: RuntimeException");
+//      
+//      } catch(RuntimeException e) {
+//         //
+//         // Unable to convert 'PM' to a Time value
+//         //
+//         verifyException("org.apache.wicket.util.string.StringValue", e);
+//      }
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test089()  throws Throwable  {
+//      TimeOfDay.Meridian timeOfDay_Meridian0 = TimeOfDay.PM;
+//      try { 
+//        timeOfDay_Meridian0.toInteger();
+//        fail("Expecting exception: RuntimeException");
+//      
+//      } catch(RuntimeException e) {
+//         //
+//         // Unable to convert 'PM' to an Integer value
+//         //
+//         verifyException("org.apache.wicket.util.string.StringValue", e);
+//      }
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test090()  throws Throwable  {
+//      TimeOfDay.Meridian timeOfDay_Meridian0 = TimeOfDay.PM;
+//      try { 
+//        timeOfDay_Meridian0.toLong();
+//        fail("Expecting exception: RuntimeException");
+//      
+//      } catch(RuntimeException e) {
+//         //
+//         // Unable to convert 'PM' to a long value
+//         //
+//         verifyException("org.apache.wicket.util.string.StringValue", e);
+//      }
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test091()  throws Throwable  {
+//      TimeOfDay.Meridian timeOfDay_Meridian0 = TimeOfDay.AM;
+//      try { 
+//        timeOfDay_Meridian0.toBooleanObject();
+//        fail("Expecting exception: RuntimeException");
+//      
+//      } catch(RuntimeException e) {
+//         //
+//         // Boolean value \"AM\" not recognized
+//         //
+//         verifyException("org.apache.wicket.util.string.Strings", e);
+//      }
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test092()  throws Throwable  {
+//      StringValue stringValue0 = StringValue.valueOf((-656.39755998669));
+//      try { 
+//        stringValue0.toInt();
+//        fail("Expecting exception: RuntimeException");
+//      
+//      } catch(RuntimeException e) {
+//         //
+//         // Unable to convert '-656.4' to an int value
+//         //
+//         verifyException("org.apache.wicket.util.string.StringValue", e);
+//      }
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test093()  throws Throwable  {
+//      TimeOfDay.Meridian timeOfDay_Meridian0 = TimeOfDay.AM;
+//      try { 
+//        timeOfDay_Meridian0.toDuration();
+//        fail("Expecting exception: RuntimeException");
+//      
+//      } catch(RuntimeException e) {
+//         //
+//         // Unable to parse duration: AM
+//         //
+//         verifyException("org.apache.wicket.util.time.Duration", e);
+//      }
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test094()  throws Throwable  {
+//      TimeOfDay.Meridian timeOfDay_Meridian0 = TimeOfDay.PM;
+//      Class<Locale.FilteringMode> class0 = Locale.FilteringMode.class;
+//      try { 
+//        timeOfDay_Meridian0.toEnum(class0);
+//        fail("Expecting exception: RuntimeException");
+//      
+//      } catch(RuntimeException e) {
+//         //
+//         // Cannot convert 'PM' to enum constant of type 'class java.util.Locale$FilteringMode'.
+//         //
+//         verifyException("org.apache.wicket.util.string.Strings", e);
+//      }
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test095()  throws Throwable  {
+//      TimeOfDay.Meridian timeOfDay_Meridian0 = TimeOfDay.AM;
+//      try { 
+//        timeOfDay_Meridian0.toDoubleObject();
+//        fail("Expecting exception: RuntimeException");
+//      
+//      } catch(RuntimeException e) {
+//         //
+//         // Unable to convert 'AM' to a double value
+//         //
+//         verifyException("org.apache.wicket.util.string.StringValue", e);
+//      }
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test096()  throws Throwable  {
+//      TimeOfDay.Meridian timeOfDay_Meridian0 = TimeOfDay.PM;
+//      try { 
+//        timeOfDay_Meridian0.toCharacter();
+//        fail("Expecting exception: RuntimeException");
+//      
+//      } catch(RuntimeException e) {
+//         //
+//         // Expected single character, not \"PM\"
+//         //
+//         verifyException("org.apache.wicket.util.string.Strings", e);
+//      }
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test097()  throws Throwable  {
+//      TimeOfDay.Meridian timeOfDay_Meridian0 = TimeOfDay.PM;
+//      StringValue stringValue0 = StringValue.valueOf((Object) timeOfDay_Meridian0);
+//      boolean boolean0 = stringValue0.equals(timeOfDay_Meridian0);
+//      assertFalse(boolean0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test098()  throws Throwable  {
+//      StringValue stringValue0 = StringValue.valueOf((String) null);
+//      boolean boolean0 = stringValue0.equals((Object) null);
+//      assertFalse(boolean0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test099()  throws Throwable  {
+//      StringValue stringValue0 = StringValue.valueOf((String) null);
+//      boolean boolean0 = stringValue0.isNull();
+//      assertTrue(boolean0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test100()  throws Throwable  {
+//      StringValue stringValue0 = StringValue.repeat((int) ';', ';');
+//      boolean boolean0 = stringValue0.isNull();
+//      assertFalse(boolean0);
+//      assertEquals(";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;", stringValue0.toString());
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test101()  throws Throwable  {
+//      StringValue stringValue0 = new StringValue((String) null);
+//      Class<ResolverStyle> class0 = ResolverStyle.class;
+//      stringValue0.toOptionalEnum(class0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test102()  throws Throwable  {
+//      TimeOfDay.Meridian timeOfDay_Meridian0 = TimeOfDay.AM;
+//      Class<MinguoEra> class0 = MinguoEra.class;
+//      try { 
+//        timeOfDay_Meridian0.toOptionalEnum(class0);
+//        fail("Expecting exception: RuntimeException");
+//      
+//      } catch(RuntimeException e) {
+//         //
+//         // Cannot convert 'AM' to enum constant of type 'class java.time.chrono.MinguoEra'.
+//         //
+//         verifyException("org.apache.wicket.util.string.Strings", e);
+//      }
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test103()  throws Throwable  {
+//      StringValue stringValue0 = new StringValue((String) null);
+//      ChronoField chronoField0 = ChronoField.DAY_OF_MONTH;
+//      ChronoField chronoField1 = stringValue0.toEnum(chronoField0);
+//      assertEquals(ChronoField.DAY_OF_MONTH, chronoField1);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test104()  throws Throwable  {
+//      StringValue stringValue0 = new StringValue("An error occurred while converting '%s' to a boolean: %s");
+//      Time time0 = Time.millis((-1822L));
+//      Time time1 = stringValue0.toTime(time0);
+//      assertEquals((-1822L), time1.getMilliseconds());
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test105()  throws Throwable  {
+//      StringValue stringValue0 = StringValue.valueOf((Object) null, (Locale) null);
+//      Time time0 = stringValue0.toTime((Time) null);
+//      assertNull(time0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test106()  throws Throwable  {
+//      StringValue stringValue0 = StringValue.valueOf((String) null);
+//      String string0 = stringValue0.toString((String) null);
+//      assertNull(string0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test107()  throws Throwable  {
+//      StringValue stringValue0 = StringValue.repeat(897, 'G');
+//      stringValue0.toString("<Null Throwable>");
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test108()  throws Throwable  {
+//      StringValue stringValue0 = StringValue.valueOf((String) null);
+//      Time time0 = stringValue0.toOptionalTime();
+//      assertNull(time0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test109()  throws Throwable  {
+//      StringValue stringValue0 = new StringValue((String) null);
+//      Long long0 = stringValue0.toOptionalLong();
+//      assertNull(long0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test110()  throws Throwable  {
+//      StringValue stringValue0 = StringValue.valueOf((-1.0));
+//      Long long0 = stringValue0.toOptionalLong();
+//      assertEquals((-1L), (long)long0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test111()  throws Throwable  {
+//      StringValue stringValue0 = StringValue.repeat(784, "");
+//      Integer integer0 = stringValue0.toOptionalInteger();
+//      assertNull(integer0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test112()  throws Throwable  {
+//      Locale locale0 = Locale.FRENCH;
+//      StringValue stringValue0 = new StringValue((String) null, locale0);
+//      Duration duration0 = stringValue0.toOptionalDuration();
+//      assertNull(duration0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test113()  throws Throwable  {
+//      StringValue stringValue0 = StringValue.valueOf((String) null);
+//      Double double0 = stringValue0.toOptionalDouble();
+//      assertNull(double0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test114()  throws Throwable  {
+//      StringValue stringValue0 = StringValue.valueOf((Object) null);
+//      Character character0 = stringValue0.toOptionalCharacter();
+//      assertNull(character0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test115()  throws Throwable  {
+//      Locale locale0 = Locale.ENGLISH;
+//      StringValue stringValue0 = StringValue.valueOf((double) 0L, locale0);
+//      Character character0 = stringValue0.toOptionalCharacter();
+//      assertEquals('0', (char)character0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test116()  throws Throwable  {
+//      StringValue stringValue0 = StringValue.valueOf((String) null);
+//      Boolean boolean0 = stringValue0.toOptionalBoolean();
+//      assertNull(boolean0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test117()  throws Throwable  {
+//      Locale locale0 = Locale.FRENCH;
+//      StringValue stringValue0 = new StringValue((String) null, locale0);
+//      long long0 = stringValue0.toLong((-187L));
+//      assertEquals((-187L), long0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test118()  throws Throwable  {
+//      TimeOfDay.Meridian timeOfDay_Meridian0 = TimeOfDay.AM;
+//      int int0 = timeOfDay_Meridian0.toInt(1776);
+//      assertEquals(1776, int0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test119()  throws Throwable  {
+//      StringValue stringValue0 = new StringValue((String) null);
+//      int int0 = stringValue0.toInt((-222));
+//      assertEquals((-222), int0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test120()  throws Throwable  {
+//      TimeOfDay.Meridian timeOfDay_Meridian0 = TimeOfDay.AM;
+//      Duration duration0 = Duration.days((-581));
+//      Duration duration1 = timeOfDay_Meridian0.toDuration(duration0);
+//      assertSame(duration1, duration0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test121()  throws Throwable  {
+//      Locale locale0 = Locale.JAPAN;
+//      StringValue stringValue0 = StringValue.valueOf((String) null, locale0);
+//      Duration duration0 = Duration.days(1357);
+//      Duration duration1 = stringValue0.toDuration(duration0);
+//      assertEquals(117244800000L, duration1.getMilliseconds());
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test122()  throws Throwable  {
+//      TimeOfDay.Meridian timeOfDay_Meridian0 = TimeOfDay.AM;
+//      double double0 = timeOfDay_Meridian0.toDouble(1437.7946159329);
+//      assertEquals(1437.7946159329, double0, 0.01);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test123()  throws Throwable  {
+//      StringValue stringValue0 = new StringValue((String) null);
+//      double double0 = stringValue0.toDouble((-3142.184721179255));
+//      assertEquals((-3142.184721179255), double0, 0.01);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test124()  throws Throwable  {
+//      TimeOfDay.Meridian timeOfDay_Meridian0 = TimeOfDay.AM;
+//      char char0 = timeOfDay_Meridian0.toChar(';');
+//      assertEquals(';', char0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test125()  throws Throwable  {
+//      TimeOfDay.Meridian timeOfDay_Meridian0 = TimeOfDay.PM;
+//      boolean boolean0 = timeOfDay_Meridian0.toBoolean(true);
+//      assertTrue(boolean0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test126()  throws Throwable  {
+//      StringValue stringValue0 = StringValue.valueOf((String) null);
+//      boolean boolean0 = stringValue0.toBoolean(false);
+//      assertFalse(boolean0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test127()  throws Throwable  {
+//      AppendingStringBuffer appendingStringBuffer0 = new AppendingStringBuffer();
+//      StringValue stringValue0 = StringValue.valueOf(appendingStringBuffer0);
+//      Class<Object> class0 = Object.class;
+//      Object object0 = stringValue0.toOptional(class0);
+//      assertNull(object0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test128()  throws Throwable  {
+//      TimeOfDay.Meridian timeOfDay_Meridian0 = TimeOfDay.PM;
+//      Class<Object> class0 = Object.class;
+//      try { 
+//        timeOfDay_Meridian0.to(class0);
+//        fail("Expecting exception: RuntimeException");
+//      
+//      } catch(RuntimeException e) {
+//         //
+//         // Cannot convert 'PM'to type class java.lang.Object
+//         //
+//         verifyException("org.apache.wicket.util.string.StringValue", e);
+//      }
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test129()  throws Throwable  {
+//      TimeOfDay.Meridian timeOfDay_Meridian0 = TimeOfDay.AM;
+//      Class<Character> class0 = Character.TYPE;
+//      try { 
+//        timeOfDay_Meridian0.toOptional(class0);
+//        fail("Expecting exception: RuntimeException");
+//      
+//      } catch(RuntimeException e) {
+//         //
+//         // Expected single character, not \"AM\"
+//         //
+//         verifyException("org.apache.wicket.util.string.Strings", e);
+//      }
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test130()  throws Throwable  {
+//      TimeOfDay.Meridian timeOfDay_Meridian0 = TimeOfDay.PM;
+//      Object object0 = timeOfDay_Meridian0.to((Class<Object>) null);
+//      assertNull(object0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test131()  throws Throwable  {
+//      Locale locale0 = Locale.CANADA_FRENCH;
+//      StringValue stringValue0 = StringValue.valueOf((double) 886, locale0);
+//      String string0 = stringValue0.beforeLast('8');
+//      assertEquals("6", string0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test132()  throws Throwable  {
+//      StringValue stringValue0 = StringValue.valueOf(0.0);
+//      Boolean boolean0 = stringValue0.toOptionalBoolean();
+//      assertFalse(boolean0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test133()  throws Throwable  {
+//      StringValue stringValue0 = StringValue.valueOf(0.0);
+//      Integer integer0 = stringValue0.toOptionalInteger();
+//      assertEquals(0, (int)integer0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test134()  throws Throwable  {
+//      StringValue stringValue0 = StringValue.valueOf(0.0);
+//      int int0 = stringValue0.toInt(402);
+//      assertEquals(0, int0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test135()  throws Throwable  {
+//      StringValue stringValue0 = new StringValue((String) null);
+//      String string0 = stringValue0.afterLast('2');
+//      assertNull(string0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test136()  throws Throwable  {
+//      StringValue stringValue0 = StringValue.valueOf(0.0);
+//      Long long0 = stringValue0.toLongObject();
+//      assertEquals(0L, (long)long0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test137()  throws Throwable  {
+//      StringValue stringValue0 = StringValue.valueOf(0.0);
+//      try { 
+//        stringValue0.toOptionalDuration();
+//        fail("Expecting exception: RuntimeException");
+//      
+//      } catch(RuntimeException e) {
+//         //
+//         // Unable to parse duration: 0
+//         //
+//         verifyException("org.apache.wicket.util.time.Duration", e);
+//      }
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test138()  throws Throwable  {
+//      StringValue stringValue0 = StringValue.valueOf(0.0);
+//      StringBuilder stringBuilder0 = new StringBuilder(124);
+//      // Undeclared exception!
+//      stringValue0.replaceAll(stringBuilder0, stringBuilder0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test139()  throws Throwable  {
+//      TimeOfDay.Meridian timeOfDay_Meridian0 = TimeOfDay.AM;
+//      long long0 = timeOfDay_Meridian0.toLong((-1418L));
+//      assertEquals((-1418L), long0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test140()  throws Throwable  {
+//      Locale locale0 = Locale.FRENCH;
+//      StringValue stringValue0 = new StringValue((String) null, locale0);
+//      boolean boolean0 = stringValue0.toBoolean();
+//      assertFalse(boolean0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test141()  throws Throwable  {
+//      StringValue stringValue0 = StringValue.valueOf((Object) null, (Locale) null);
+//      String string0 = stringValue0.afterFirst('_');
+//      assertNull(string0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test142()  throws Throwable  {
+//      Locale locale0 = Locale.forLanguageTag("u[$pjDz=Bz");
+//      StringValue stringValue0 = StringValue.valueOf(0.0, locale0);
+//      try { 
+//        stringValue0.toOptionalTime();
+//        fail("Expecting exception: RuntimeException");
+//      
+//      } catch(RuntimeException e) {
+//         //
+//         // Unable to convert '0' to a Time value
+//         //
+//         verifyException("org.apache.wicket.util.string.StringValue", e);
+//      }
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test143()  throws Throwable  {
+//      TimeOfDay.Meridian timeOfDay_Meridian0 = TimeOfDay.PM;
+//      String string0 = timeOfDay_Meridian0.beforeFirst('@');
+//      assertEquals("", string0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test144()  throws Throwable  {
+//      StringValue stringValue0 = StringValue.valueOf(974.37);
+//      stringValue0.hashCode();
+//      assertEquals("974.4", stringValue0.toString());
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test145()  throws Throwable  {
+//      StringValue stringValue0 = StringValue.valueOf((double) 886);
+//      Double double0 = stringValue0.toOptionalDouble();
+//      assertEquals(886.0, (double)double0, 0.01);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test146()  throws Throwable  {
+//      StringValue stringValue0 = StringValue.valueOf((String) null);
+//      boolean boolean0 = stringValue0.isEmpty();
+//      assertTrue(boolean0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test147()  throws Throwable  {
+//      StringValue stringValue0 = StringValue.valueOf((Object) null);
+//      char char0 = stringValue0.toChar('w');
+//      assertEquals('w', char0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test148()  throws Throwable  {
+//      TimeOfDay.Meridian timeOfDay_Meridian0 = TimeOfDay.AM;
+//      String string0 = timeOfDay_Meridian0.toOptionalString();
+//      assertEquals("AM", string0);
+//  }
+//
+//  @Test(timeout = 4000)
+//  public void test149()  throws Throwable  {
+//      StringValue stringValue0 = StringValue.valueOf(0.0);
+//      Class<Character> class0 = Character.class;
+//      Character character0 = stringValue0.to(class0);
+//      assertEquals('0', (char)character0);
+//  }
 }
