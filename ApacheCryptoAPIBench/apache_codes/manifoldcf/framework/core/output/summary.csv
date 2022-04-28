@@ -1,0 +1,5 @@
+spec,class,className,method,location,error
+MessageDigestSpec,org.apache.manifoldcf.core.system.ManifoldCF,ManifoldCF,addToHash,ManifoldCF.java:674,UnsafeAlgorithm
+MessageDigestSpec,org.apache.manifoldcf.core.system.ManifoldCF,ManifoldCF,getHashValue,ManifoldCF.java:689,InvalidSequenceOfMethodCalls
+PBEKeySpec,org.apache.manifoldcf.core.system.ManifoldCF,ManifoldCF,getCipher,ManifoldCF.java:731,UnsatisfiedConstraint
+SecretKeySpec,org.apache.manifoldcf.core.system.ManifoldCF,ManifoldCF,getCipher,ManifoldCF.java:735,UnsatisfiedConstraint

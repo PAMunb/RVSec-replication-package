@@ -1,0 +1,9 @@
+group,latex,module,test_cases
+ApacheDS Protocol Kerberos Codec,\directory,ApachedsKerberosCodec,376
+ActiveMQ Artemis Commons,\artemis,ArtemisCommons,110
+Apache DeltaSpike Core-Implementation,\deltaspike,DeltaSpikeCore,155
+ManifoldCF - Framework - Core,\manifold,DeltaMcfCore,5
+Meecrowave :: Core,\meecrowave,MeecrowaveCore,19
+Spark Project Core,\spark,SparkCore,2045
+Apache Tika core,\tika,TikaCore,222
+Wicket Util,\wicket,WicketUtil,237

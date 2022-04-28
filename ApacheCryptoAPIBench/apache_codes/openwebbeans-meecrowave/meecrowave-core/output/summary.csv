@@ -1,0 +1,4 @@
+spec,class,className,method,location,error
+SecureRandomSpec,org.apache.catalina.util.SessionIdGeneratorBase,SessionIdGeneratorBase,getRandomBytes,SessionIdGeneratorBase.java:205,InvalidSequenceOfMethodCalls
+SecretKeySpec,org.apache.meecrowave.Meecrowave$ValueTransformers$1,Meecrowave$ValueTransformers$1,<init>,Meecrowave.java:2014,UnsatisfiedConstraint
+CipherSpec,org.apache.meecrowave.Meecrowave$ValueTransformers$1,Meecrowave$ValueTransformers$1,apply,Meecrowave.java:2033,InvalidSequenceOfMethodCalls
