@@ -6,8 +6,9 @@
 
 java -Xmx8000m -classpath ./target/classes:${RANDOOP_JAR} randoop.main.Main gentests \
 	--classlist=randoop_test_classes.txt \
-	--output-limit=200 --time-limit=60 --testsperfile=5000 \
+	--output-limit=100 --time-limit=60 --testsperfile=5000 \
 	--junit-package-name=randoop \
 	--junit-output-dir=src/test/java \
 	--regression-test-basename=RandoopRegressionTest \
-	--no-error-revealing-tests
+	--no-error-revealing-tests 
+#	--specifications=spec.json
