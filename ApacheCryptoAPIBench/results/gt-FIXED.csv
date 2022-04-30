@@ -1,0 +1,199 @@
+Project,Spec,Class,Method,Tool,Vulnerability,RelatedWarnings,TestClass,ExternalClass,Observation
+Artemis,PBEKeySpecSpec,DefaultSensitiveStringCodec$PBKDF2Algorithm,encode,RV,TRUE,1,FALSE,FALSE,
+Artemis,PBEKeySpecSpec,DefaultSensitiveStringCodec$PBKDF2Algorithm,verify,RV,TRUE,1,FALSE,FALSE,
+Artemis,SecretKeySpecSpec,DefaultSensitiveStringCodec$BlowfishAlgorithm,encode,RV,TRUE,1,FALSE,FALSE,
+Artemis,CipherSpec,DefaultSensitiveStringCodec$BlowfishAlgorithm,encode,RV,TRUE,1,FALSE,FALSE,
+Artemis,SecretKeySpecSpec,DefaultSensitiveStringCodec$BlowfishAlgorithm,decode,RV,TRUE,1,FALSE,FALSE,
+Artemis,CipherSpec,DefaultSensitiveStringCodec$BlowfishAlgorithm,decode,RV,TRUE,1,FALSE,FALSE,
+Deltaspike,SecretKeySpecSpec,DefaultCipherService,getSecretKeySpec,RV,TRUE,1,FALSE,FALSE,
+Deltaspike,CipherSpec,DefaultCipherService,aesEncrypt,RV,TRUE,1,FALSE,FALSE,
+Deltaspike,CipherSpec,DefaultCipherService,aesDecrypt,RV,TRUE,1,FALSE,FALSE,
+Wicket,PBEParameterSpecSpec,SunJceCrypt,<init>,RV,TRUE,1,FALSE,FALSE,
+Wicket,PBEKeySpecSpec,SunJceCrypt,createKeySpec,RV,TRUE,1,FALSE,FALSE,
+Wicket,CipherSpec,SunJceCrypt,createCipher,RV,TRUE,1,FALSE,FALSE,
+Wicket,PBEKeySpec,UnlimitedStrengthJurisdictionPolicyTest$UnlimitedStrenghtJurisdictionPolicyCrypt,<init>,RV,TRUE,1,TRUE,FALSE,
+Wicket,PBEKeySpec,UnlimitedStrengthJurisdictionPolicyTest$UnlimitedStrenghtJurisdictionPolicyCrypt,<init>,RV,TRUE,1,TRUE,FALSE,
+Wicket,IvParameterSpecSpec,UnlimitedStrengthJurisdictionPolicyTest$UnlimitedStrenghtJurisdictionPolicyCrypt,<init>,RV,TRUE,1,TRUE,FALSE,
+Wicket,CipherSpec,UnlimitedStrengthJurisdictionPolicyTest$UnlimitedStrenghtJurisdictionPolicyCrypt,crypt,RV,TRUE,1,TRUE,FALSE,
+Meecrowave,SecureRandomSpec,SessionIdGeneratorBase,getRandomBytes,RV,-,1,FALSE,TRUE,
+Meecrowave,SecretKeySpecSpec,Meecrowave$ValueTransformers$1,<init>,RV,TRUE,1,FALSE,FALSE,
+Meecrowave,CipherSpec,Meecrowave$ValueTransformers$1,apply,RV,TRUE,1,FALSE,FALSE,
+Kerberos,SecretKeySpec,AesEncryptionTest,<init>,RV,TRUE,1,TRUE,FALSE,
+Kerberos,IvParameterSpecSpec,AesEncryptionTest,<init>,RV,TRUE,1,TRUE,FALSE,
+Kerberos,SecretKeySpecSpec,DesCbcMd5Encryption,processCipher,RV,TRUE,1,FALSE,FALSE,
+Kerberos,SecretKeySpecSpec,Des3CbcSha1KdEncryption,processCipher,RV,TRUE,1,FALSE,FALSE,
+Kerberos,IvParameterSpecSpec,DesCbcMd5Encryption,processCipher,RV,TRUE,1,FALSE,FALSE,
+Kerberos,IvParameterSpecSpec,Des3CbcSha1KdEncryption,processCipher,RV,TRUE,1,FALSE,FALSE,
+Kerberos,CipherSpec,DesCbcMd5Encryption,processCipher,RV,TRUE,1,FALSE,FALSE,
+Kerberos,CipherSpec,Des3CbcSha1KdEncryption,processCipher,RV,TRUE,1,FALSE,FALSE,
+Kerberos,SecretKeySpecSpec,Des3CbcSha1KdEncryption,processChecksum,RV,TRUE,1,FALSE,FALSE,
+Kerberos,MessageDigestSpec,DesCbcMd5Encryption,calculateIntegrity,RV,TRUE,1,FALSE,FALSE,
+Kerberos,MacSpec,Des3CbcSha1KdEncryption,processChecksum,RV,TRUE,1,FALSE,FALSE,
+Kerberos,SecureRandomSpec,EncryptionEngine,getRandomBytes,RV,FALSE,1,FALSE,FALSE,It looks like a bug in our specification
+Kerberos,SecretKeySpecSpec,DesCbcCrcEncryption,processCipher,RV,TRUE,1,FALSE,FALSE,
+Kerberos,IvParameterSpecSpec,DesCbcCrcEncryption,processCipher,RV,TRUE,1,FALSE,FALSE,
+Kerberos,CipherSpec,DesCbcCrcEncryption,processCipher,RV,TRUE,1,FALSE,FALSE,
+Kerberos,SecretKeySpecSpec,DesStringToKey,calculateChecksum,RV,TRUE,1,FALSE,FALSE,
+Kerberos,IvParameterSpecSpec,DesStringToKey,calculateChecksum,RV,TRUE,1,FALSE,FALSE,
+Kerberos,CipherSpec,DesStringToKey,calculateChecksum,RV,TRUE,1,FALSE,FALSE,
+Kerberos,KeyGeneratorSpec,KeyTypeTest,testDesCipher,RV,TRUE,1,TRUE,FALSE,
+Kerberos,KeyGeneratorSpec,KeyTypeTest,testGenerateHmacMd5,RV,TRUE,1,TRUE,FALSE,
+Kerberos,KeyGeneratorSpec,KeyTypeTest,testGenerateHmacSha1,RV,TRUE,1,TRUE,FALSE,
+Kerberos,MacSpec,KeyTypeTest,testGenerateHmacMd5,RV,TRUE,1,TRUE,FALSE,
+Kerberos,MacSpec,KeyTypeTest,testGenerateHmacSha1,RV,TRUE,1,TRUE,FALSE,
+Kerberos,KeyGeneratorSpec,KeyTypeTest,testArcFourCipher,RV,TRUE,1,TRUE,FALSE,
+Kerberos,KeyGeneratorSpec,KeyTypeTest,testTripleDesCipher,RV,TRUE,1,TRUE,FALSE,
+Kerberos,KeyGeneratorSpec,RandomKeyFactoryTest,testGenerateDesKey,RV,TRUE,1,TRUE,FALSE,
+Kerberos,KeyGeneratorSpec,RandomKeyFactoryTest,testGenerateTripleDesKey,RV,TRUE,1,TRUE,FALSE,
+Kerberos,KeyGeneratorSpec,RandomKeyFactory,getRandomKey,RV,TRUE,1,FALSE,FALSE,
+Spark,KeyGeneratorSpec,CryptoStreamUtils$,createKey,RV,TRUE,3,FALSE,FALSE,
+Spark,SecretKeySpecSpec,CryptoStreamUtils$CryptoParams,<init>,RV,TRUE,2,FALSE,FALSE,
+Spark,IvParameterSpecSpec,CryptoStreamUtils$,createCryptoOutputStream,RV,TRUE,2,FALSE,FALSE,
+Spark,IvParameterSpecSpec,CryptoStreamUtils$,createCryptoInputStream,RV,TRUE,2,FALSE,FALSE,
+Spark,MessageDigestSpec,SequenceFile$Writer,<init>,RV,-,3,FALSE,TRUE,
+Spark,SSLContextSpec,HtmlUnitSSLConnectionSocketFactory,buildSSLSocketFactory,RV,-,3,FALSE,TRUE,
+Spark,PBEKeySpecSpec,AuthEngine,generateKey,RV,-,2,FALSE,TRUE,
+Spark,SecretKeySpecSpec,AuthEngine,generateKey,RV,-,2,FALSE,TRUE,
+Spark,IvParameterSpecSpec,AuthEngine,initializeForAuth,RV,-,4,FALSE,TRUE,
+Spark,IvParameterSpecSpec,TransportCipher,createOutputStream,RV,-,4,FALSE,TRUE,
+Spark,KeyGeneratorSpec,CryptoStreamUtils$,createKey,RV,TRUE,3,FALSE,FALSE,
+Spark,SecretKeySpecSpec,CryptoStreamUtils$CryptoParams,<init>,RV,TRUE,2,FALSE,FALSE,
+Spark,IvParameterSpecSpec,CryptoStreamUtils$,createWritableChannel,RV,TRUE,2,FALSE,FALSE,
+Spark,IvParameterSpecSpec,CryptoStreamUtils$,createReadableChannel,RV,TRUE,2,FALSE,FALSE,
+Spark,IvParameterSpecSpec,CryptoStreamUtils$,createCryptoOutputStream,RV,TRUE,2,FALSE,FALSE,
+Spark,IvParameterSpecSpec,CryptoStreamUtils$,createCryptoInputStream,RV,TRUE,2,FALSE,FALSE,
+Spark,SecureRandomSpec,LauncherServer,createSecret,RV,-,1,FALSE,TRUE,
+Spark,KeyStoreSpec,SecurityManager$$anonfun$2,apply,RV,TRUE,1,FALSE,FALSE,
+Spark,KeyManagerFactorySpec,SslContextFactory,getKeyManagers,RV,-,1,FALSE,TRUE,
+Spark,SSLContextSpec,SslContextFactory,load,RV,-,3,FALSE,TRUE,
+Spark,SSLContextSpec,TestUtils$,httpResponseCode,RV,TRUE,3,FALSE,FALSE,
+Spark,SSLContextSpec,SSLOptions.liftedTree1$1,<init>,RV,TRUE,3,FALSE,FALSE,
+Spark,MessageDigestSpec,SequenceFile$Writer,<init>,RV,-,3,FALSE,TRUE,
+Kerberos,SecretKeySpecSpec,HmacMd5Checksum,calculateChecksum,CogniCrypt,TRUE,2,FALSE,FALSE,
+Kerberos,MacSpec,ArcFourHmacMd5Encryption,calculateIntegrity,CogniCrypt,TRUE,1,FALSE,FALSE,
+Kerberos,SecretKeySpecSpec,ArcFourHmacMd5Encryption,processCipher,CogniCrypt,TRUE,2,FALSE,FALSE,
+Kerberos,CipherSpec,ArcFourHmacMd5Encryption,processCipher,CogniCrypt,TRUE,2,FALSE,FALSE,
+Kerberos,SecretKeySpecSpec,Des3CbcSha1KdEncryption,processCipher,CogniCrypt,TRUE,2,FALSE,FALSE,
+Kerberos,IvParameterSpecSpec,Des3CbcSha1KdEncryption,processCipher,CogniCrypt,TRUE,1,FALSE,FALSE,
+Kerberos,CipherSpec,Des3CbcSha1KdEncryption,processCipher,CogniCrypt,TRUE,1,FALSE,FALSE,
+Kerberos,SecretKeySpecSpec,Des3CbcSha1KdEncryption,processChecksum,CogniCrypt,TRUE,2,FALSE,FALSE,
+Kerberos,CipherSpec,DesCbcCrcEncryption,processCipher,CogniCrypt,TRUE,2,FALSE,FALSE,
+Kerberos,SecretKeySpecSpec,DesCbcCrcEncryption,processCipher,CogniCrypt,TRUE,2,FALSE,FALSE,
+Kerberos,IvParameterSpecSpec,DesCbcCrcEncryption,processCipher,CogniCrypt,TRUE,1,FALSE,FALSE,
+Kerberos,SecretKeySpecSpec,DesCbcMd5Encryption,processCipher,CogniCrypt,TRUE,2,FALSE,FALSE,
+Kerberos,CipherSpec,DesCbcMd5Encryption,processCipher,CogniCrypt,TRUE,2,FALSE,FALSE,
+Kerberos,IvParameterSpecSpec,DesCbcMd5Encryption,processCipher,CogniCrypt,TRUE,1,FALSE,FALSE,
+Kerberos,IvParameterSpecSpec,DesStringToKey,calculateChecksum,CogniCrypt,TRUE,1,FALSE,FALSE,
+Kerberos,CipherSpec,DesStringToKey,calculateChecksum,CogniCrypt,TRUE,3,FALSE,FALSE,
+Kerberos,SecretKeySpecSpec,DesStringToKey,calculateChecksum,CogniCrypt,TRUE,2,FALSE,FALSE,
+Kerberos,KeyGeneratorSpec,RandomKeyFactory,getRandomKey,CogniCrypt,TRUE,1,FALSE,FALSE,It is hard to assume an error after reading the code. Let's double check this warning.
+Kerberos,SecretKeySpecSpec,AesCtsSha1Encryption,processChecksum,CogniCrypt,FALSE,1,FALSE,FALSE,It is hard to assume an error after reading the code. Let's double check this warning.
+Kerberos,SecretKeySpecSpec,AesCtsSha1Encryption,processChecksum,CogniCrypt,FALSE,1,FALSE,FALSE,It is hard to assume an error after reading the code. Let's double check this warning.
+Kerberos,IvParameterSpecSpec,AesCtsSha1Encryption,processCipher,CogniCrypt,TRUE,1,FALSE,FALSE,
+Artemis,SecretKeyFactorySpec,DefaultSensitiveStringCodec$PBKDF2Algorithm,<init>,CogniCrypt,FALSE,1,FALSE,FALSE,Secret key factory is initialized at this method and then used in other methods
+Artemis,PBEKeySpecSpec,DefaultSensitiveStringCodec$PBKDF2Algorithm,encode,CogniCrypt,TRUE,3,FALSE,FALSE,
+Artemis,PBEKeySpecSpec,DefaultSensitiveStringCodec$PBKDF2Algorithm,verify,CogniCrypt,TRUE,3,FALSE,FALSE,
+Artemis,SecretKeySpecSpec,DefaultSensitiveStringCodec$BlowfishAlgorithm,decode,CogniCrypt,TRUE,2,FALSE,FALSE,
+Artemis,CipherSpec,DefaultSensitiveStringCodec$BlowfishAlgorithm,decode,CogniCrypt,TRUE,2,FALSE,FALSE,
+Artemis,SecretKeySpecSpec,DefaultSensitiveStringCodec$BlowfishAlgorithm,encode,CogniCrypt,TRUE,2,FALSE,FALSE,
+Artemis,CipherSpec,DefaultSensitiveStringCodec$BlowfishAlgorithm,encode,CogniCrypt,TRUE,2,FALSE,FALSE,
+Deltaspike,CipherSpec,DefaultCipherService,aesEncrypt,CogniCrypt,TRUE,2,FALSE,FALSE,Not convinced that secretKeySpec has not been generated properly
+Deltaspike,CipherSpec,DefaultCipherService,aesDecrypt,CogniCrypt,TRUE,2,FALSE,FALSE,Not convinced that secretKeySpec has not been generated properly
+Deltaspike,SecretKeySpecSpec,DefaultCipherService,getSecretKeySpec,CogniCrypt,TRUE,1,FALSE,FALSE,
+Manifold,MessageDigestSpec,ManifoldCF,startHash,CogniCrypt,TRUE,1,FALSE,FALSE,
+Manifold,MessageDigestSpec,ManifoldCF,getHashValue,CogniCrypt,FALSE,1,FALSE,FALSE,"It is an API. There is a method addToHash that should be called befor getHashValue. The static analysis is ok, though I think it is a false positive"
+Manifold,CipherSpec,ManifoldCF,getCipher,CogniCrypt,FALSE,1,FALSE,FALSE,Instantiates a cipher for future use
+Manifold,CipherOutputStreamSpec,ManifoldCF,encrypt,CogniCrypt,FALSE,1,FALSE,FALSE,"I believe that the write method is called, when we call w.write"
+Manifold,CipherSpec,ManifoldCF,encrypt,CogniCrypt,FALSE,1,FALSE,FALSE,Cipher used as argument to CipherOutputStream
+Manifold,CipherSpec,ManifoldCF,decrypt,CogniCrypt,FALSE,1,FALSE,FALSE,Cipher used as argument to CipherInputStream
+Manifold,CipherInputStreamSpec,ManifoldCF,decrypt,CogniCrypt,FALSE,1,FALSE,FALSE,"I believe that the read method is called, when we call reader.read()"
+Manifold,SecretKeySpecSpec,ManifoldCF,getCipher,CogniCrypt,TRUE,1,FALSE,FALSE,The next issue originates the problem reported here. This is an interesiting scenario
+Manifold,PBEKeySpecSpec,ManifoldCF,getCipher,CogniCrypt,TRUE,4,FALSE,FALSE,< 10000 iterations
+Manifold,SecretKeyFactorySpec,ManifoldCF,getCipher,CogniCrypt,TRUE,2,FALSE,FALSE,
+Meecrowave,SecretKeySpecSpec,Meecrowave$ValueTransformers$1,<init>,CogniCrypt,TRUE,2,FALSE,FALSE,
+Meecrowave,CipherSpec,Meecrowave$ValueTransformers$1,apply,CogniCrypt,TRUE,2,FALSE,FALSE,
+Tika,CipherSpec,CryptoParser,parse,CogniCrypt,FALSE,7,FALSE,FALSE,Cipher used as argument to CipherInputStream. It is also not clear why CC reports a forbiden call at line 98
+Tika,MessageDigestSpec,InputStreamDigester,digestStream,CogniCrypt,FALSE,2,FALSE,FALSE,There is a call to the update method (interprocedural issue)
+Wicket,PBEKeySpecSpec,SunJceCrypt,createKeySpec,CogniCrypt,TRUE,1,FALSE,FALSE,
+Wicket,PBEParameterSpecSpec,SunJceCrypt,<init>,CogniCrypt,TRUE,2,FALSE,FALSE,
+Wicket,CipherSpec,SunJceCrypt,createCipher,CogniCrypt,TRUE,2,FALSE,FALSE,
+Wicket,SecretKeyFactorySpec,SunJceCrypt,generateSecretKey,CogniCrypt,TRUE,1,FALSE,FALSE,
+Spark,SSLContextSpec,SSLOptions.liftedTree1$1,<init>,CogniCrypt,TRUE,4,FALSE,FALSE,Scala code. We might have to review the method name here.
+Spark,SSLContextSpec,SslContextFactory,dump,CogniCrypt,-,1,FALSE,TRUE,
+Spark,KeyManagerFactorySpec,SslContextFactory,getKeyManagers,CogniCrypt,-,3,FALSE,TRUE,
+Spark,TrustManagerFactorySpec,SslContextFactory,getTrustManagers,CogniCrypt,-,2,FALSE,TRUE,
+Spark,PKIXBuildParametersSpec,SslContextFactory,getTrustManagers,CogniCrypt,-,1,FALSE,TRUE,
+Spark,CertPathTrustManagerParametersSpec,SslContextFactory,getTrustManagers,CogniCrypt,-,1,FALSE,TRUE,
+Spark,SSLContextSpec,SslContextFactory,load,CogniCrypt,-,2,FALSE,TRUE,
+Spark,KeyStoreSpec,SecurityManager$$anonfun$2,apply,CogniCrypt,TRUE,1,FALSE,FALSE,
+Spark,TrustManagerFactorySpec,SecurityManager$$anonfun$2,apply,CogniCrypt,TRUE,1,FALSE,FALSE,
+Spark,SSLContextSpec,TestUtils$,httpResponseCode,CogniCrypt,TRUE,3,FALSE,FALSE,Test case configuration
+Spark,MessageDigestSpec,DigestAuthenticator$Digest,check,CogniCrypt,-,1,FALSE,TRUE,
+Spark,MessageDigestSpec,Credential$MD5,check,CogniCrypt,-,2,FALSE,TRUE,
+Spark,MessageDigestSpec,Credential$MD5,digest,CogniCrypt,-,2,FALSE,TRUE,
+Spark,KeyStoreSpec,CertificateUtils,getKeyStore,CogniCrypt,-,5,FALSE,TRUE,
+Spark,MessageDigestSpec,DigestAuthentication,getMessageDigest,CogniCrypt,-,1,FALSE,TRUE,
+Spark,MessageDigestSpec,DigestAuthentication,authenticate,CogniCrypt,-,1,FALSE,TRUE,
+Spark,MessageDigestSpec,DigestAuthentication,apply,CogniCrypt,-,1,FALSE,TRUE,
+Spark,PKIXBuildParametersSpec,CertificateValidator,validate,CogniCrypt,-,1,FALSE,TRUE,
+Spark,IvParameterSpecSpec,CryptoStreamUtils$,createReadableChannel,CogniCrypt,TRUE,1,FALSE,FALSE,
+Spark,IvParameterSpecSpec,CryptoStreamUtils$,createCryptoOutputStream,CogniCrypt,TRUE,1,FALSE,FALSE,Uses an Apache CryptoRandomFactory. It might be as secure as SecureRandom
+Spark,IvParameterSpecSpec,CryptoStreamUtils$,createCryptoInputStream,CogniCrypt,TRUE,1,FALSE,FALSE,
+Spark,IvParameterSpecSpec,CryptoStreamUtils$,createWritableChannel,CogniCrypt,TRUE,1,FALSE,FALSE,Uses an Apache CryptoRandomFactory. It might be as secure as SecureRandom
+Spark,SSLContextSpec,SecurityManager,<init>,CogniCrypt,TRUE,2,FALSE,FALSE,
+Spark,SecretKeySpecSpec,CryptoStreamUtils$CryptoParams,<init>,CogniCrypt,TRUE,1,FALSE,FALSE,
+Kerberos,CipherSpec,Des3CbcSha1KdEncryption,processCipher,CryptoGuard,TRUE,1,FALSE,FALSE,
+Kerberos,CipherSpec,DesStringToKey,calculateChecksum,CryptoGuard,TRUE,1,FALSE,FALSE,
+Kerberos,CipherSpec,DesCbcMd5Encryption,processCipher,CryptoGuard,TRUE,1,FALSE,FALSE,
+Kerberos,CipherSpec,DesCbcCrcEncryption,processCipher,CryptoGuard,TRUE,1,FALSE,FALSE,
+Kerberos,IvParameterSpecSpec,Des3CbcSha1KdEncryption,processCipher,CryptoGuard,TRUE,7,FALSE,FALSE,
+Kerberos,IvParameterSpecSpec,AesCtsSha1Encryption,processCipher,CryptoGuard,TRUE,15,FALSE,FALSE,
+Kerberos,IvParameterSpecSpec,DesCbcCrcEncryption,processCipher,CryptoGuard,TRUE,8,FALSE,FALSE,
+Kerberos,IvParameterSpecSpec,DesCbcMd5Encryption,processCipher,CryptoGuard,TRUE,8,FALSE,FALSE,
+Artemis,CipherSpec,DefaultSensitiveStringCodec$BlowfishAlgorithm,decode,CryptoGuard,TRUE,1,FALSE,FALSE,
+Artemis,CipherSpec,DefaultSensitiveStringCodec$BlowfishAlgorithm,encode,CryptoGuard,TRUE,1,FALSE,FALSE,
+Artemis,RandomSpec,RandomUtil,<init>,CryptoGuard,FALSE,1,FALSE,FALSE,Non-JCA
+Artemis,SecretKeySpecSpec,DefaultSensitiveStringCodec$BlowfishAlgorithm,decode,CryptoGuard,TRUE,0.5,FALSE,FALSE,"Hardcoded key (""clusterpassword""). It should be reported twice"
+Artemis,SecretKeySpecSpec,DefaultSensitiveStringCodec$BlowfishAlgorithm,encode,CryptoGuard,TRUE,0.5,FALSE,FALSE,"Hardcoded key (""clusterpassword""). It should be reported twice"
+Deltaspike,CipherSpec,DefaultCipherService,aesEncrypt,CryptoGuard,TRUE,1,FALSE,FALSE,
+Deltaspike,CipherSpec,DefaultCipherService,aesDecrypt,CryptoGuard,TRUE,1,FALSE,FALSE,
+Manifold,RandomSpec,ConnectorPool,<init>,CryptoGuard,FALSE,1,FALSE,FALSE,The Random instance is not used for a cryptographic primitive
+Manifold,RandomSpec,Database,<init>,CryptoGuard,FALSE,1,FALSE,FALSE,The Random instance is not used for a cryptographic primitive
+Manifold,MessageDigestSpec,ManifoldCF,startHash,CryptoGuard,TRUE,1,FALSE,FALSE,
+Manifold,PBEKeySpecSpec,ManifoldCF,getCipher,CryptoGuard,TRUE,1,FALSE,FALSE,"Hardcoded password (""NowIsTheTime"")"
+Manifold,PBEKeySpecSpec,ManifoldCF,getCipher,CryptoGuard,TRUE,1,FALSE,FALSE,Hardcoded salt
+Meecrowave,CipherSpec,Meecrowave$ValueTransformers$1,apply,CryptoGuard,TRUE,1,FALSE,FALSE,"Internal class: L2031 (final Cipher cipher = Cipher.getInstance(""DESede"");)"
+Meecrowave,SecretKeySpecSpec,Meecrowave$ValueTransformers$1,<init>,CryptoGuard,TRUE,24,FALSE,FALSE,
+Spark,RandomSpec,Utils$,<init>,CryptoGuard,FALSE,1,FALSE,FALSE,The Random instance is not used for a cryptographic primitive
+Spark,RandomSpec,Utils$,randomizeInPlace,CryptoGuard,FALSE,1,FALSE,FALSE,The Random instance is not used for a cryptographic primitive
+Spark,RandomSpec,XORShiftRandom$,benchmark,CryptoGuard,FALSE,1,FALSE,FALSE,The Random instance is not used for a cryptographic primitive
+Spark,RandomSpec,PlusConfiguration,-,CryptoGuard,-,-,FALSE,TRUE,Could not find the class / package (issue 2)
+Spark,RandomSpec,DigestAuthentication,-,CryptoGuard,-,-,FALSE,TRUE,Could not find the class / package (issue 3)
+Spark,RandomSpec,RDD,coalesce,CryptoGuard,FALSE,1,FALSE,FALSE,The Random instance is not used for a cryptographic primitive
+Spark,RandomSpec,XORShiftRandom,benchmark,CryptoGuard,FALSE,1,FALSE,FALSE,Duplicated (XORShiftRandom$)
+Spark,RandomSpec,PartitionwiseSampledRDD,getPartitions,CryptoGuard,FALSE,1,FALSE,FALSE,The Random instance is not used for a cryptographic primitive
+Spark,RandomSpec,PlusConfiguration,-,CryptoGuard,-,-,FALSE,TRUE,Could not find the class / package (issue 8)
+Spark,RandomSpec,RDD,takeSample,CryptoGuard,FALSE,1,FALSE,FALSE,The Random instance is not used for a cryptographic primitive
+Spark,RandomSpec,SizeEstimator,visitArray,CryptoGuard,FALSE,1,FALSE,FALSE,The Random instance is not used for a cryptographic primitive
+Spark,RandomSpec,MultiPartContentProvider,-,CryptoGuard,-,-,FALSE,TRUE,Could not find the class / package (issue 11)
+Spark,RandomSpec,ShutdownMonitor,-,CryptoGuard,-,-,FALSE,TRUE,Could not find the class / package (issue 12)
+Spark,SslSpec,SslContextFactory,-,CryptoGuard,-,-,FALSE,TRUE,Could not find the class / package (issue 13)
+Spark,TrustManagerSpec,UNKNOWN,-,CryptoGuard,-,-,FALSE,TRUE,Could not find the class / package (issue 14)
+Spark,TrustManagerSpec,UNKNOWN,-,CryptoGuard,-,-,FALSE,TRUE,Could not find the class / package (issue 15)
+Spark,TrustManagerSpec,UNKNOWN,-,CryptoGuard,-,-,FALSE,TRUE,Could not find the class / package (issue 16)
+Spark,TrustManagerSpec,UNKNOWN,-,CryptoGuard,-,-,FALSE,TRUE,Could not find the class / package (issue 17)
+Spark,TrustManagerSpec,SslContextFactory,-,CryptoGuard,-,-,FALSE,TRUE,Could not find the class / package (issue 18)
+Spark,TrustManagerSpec,SslContextFactory,-,CryptoGuard,-,-,FALSE,TRUE,Could not find the class / package (issue 19)
+Spark,HostNameVerifierSpec,UNKNOWN,-,CryptoGuard,-,-,FALSE,TRUE,Could not find the class / package (issue 20)
+Spark,HostNameVerifierSpec,UNKNOWN,-,CryptoGuard,-,-,FALSE,TRUE,Could not find the class / package (issue 21)
+Spark,MessageDigestSpec,Credential$MD5,-,CryptoGuard,-,-,FALSE,TRUE,Could not find the class / package (issue 22)
+Spark,MessageDigestSpec,DigestAuthentication,-,CryptoGuard,-,-,FALSE,TRUE,Could not find the class / package (issue 23)
+Spark,MessageDigestSpec,Credential$MD5,-,CryptoGuard,-,-,FALSE,TRUE,Could not find the class / package (issue 24)
+Spark,MessageDigestSpec,DigestAuthenticator$MD5,-,CryptoGuard,-,-,FALSE,TRUE,Could not find the class / package (issue 25)
+Spark,IVParameterSpec,CryptoStreamUtils,,CryptoGuard,FALSE,1,FALSE,FALSE,Difficult to understand the error
+Spark,HTTPSpec,ShutdownHandler,-,CryptoGuard,-,-,FALSE,TRUE,Could not find the class / package (issue 27)
+Spark,HTTPSpec,ShutdownHandler,-,CryptoGuard,-,-,FALSE,TRUE,Could not find the class / package (issue 28)
+Wicket,CipherSpec,SunJceCrypt,createCipher,CryptoGuard,TRUE,1,FALSE,FALSE,
+Wicket,RandomSpec,Diff,randomEdit,CryptoGuard,FALSE,1,FALSE,FALSE,The Random instance is not used for a cryptographic primitive
+Wicket,RandomSpec,Diff,randomSequence,CryptoGuard,FALSE,1,FALSE,FALSE,The Random instance is not used for a cryptographic primitive
+Wicket,PBEParameterSpecSpec,SunJceCrypt,<init>,CryptoGuard,TRUE,8,FALSE,FALSE,Hardcoded salt + < 1000 iterations for PBE
