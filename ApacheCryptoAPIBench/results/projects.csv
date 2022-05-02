@@ -1,9 +1,9 @@
-group,latex,module,test_cases,sloc,misuses
-ApacheDS Protocol Kerberos Codec,\directory,ApachedsKerberosCodec,376,42185,19
-ActiveMQ Artemis Commons,\artemis,ArtemisCommons,110,11737,15
-Apache DeltaSpike Core-Implementation,\deltaspike,DeltaSpikeCore,155,13515,2
-ManifoldCF - Framework - Core,\manifold,DeltaMcfCore,5,21281,3
-Meecrowave :: Core,\meecrowave,MeecrowaveCore,19,6788,3
-Spark Project Core,\spark,SparkCore,2045,164335,27
-Apache Tika core,\tika,TikaCore,222,23207,0
-Wicket Util,\wicket,WicketUtil,237,20220,5
+group,latex,module,test_cases,sloc,misuses,monitors,events
+ApacheDS Protocol Kerberos Codec,\directory,ApachedsKerberosCodec,376,42185,19,135,2379
+ActiveMQ Artemis Commons,\artemis,ArtemisCommons,110,11737,15,14,73
+Apache DeltaSpike Core-Implementation,\deltaspike,DeltaSpikeCore,155,13515,2,31,3954
+ManifoldCF - Framework - Core,\manifold,DeltaMcfCore,5,21281,3,39,744
+Meecrowave :: Core,\meecrowave,MeecrowaveCore,19,6788,3,23,8998
+Spark Project Core,\spark,SparkCore,2045,164335,27,123,181548
+Apache Tika core,\tika,TikaCore,222,23207,0,6,294
+Wicket Util,\wicket,WicketUtil,237,20220,5,52,405

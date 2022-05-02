@@ -225,3 +225,54 @@ sets_diff = setdiff(cc_tp, mop_tp)
 nrow(sets_diff)
 sets_diff
 ```
+
+
+
+### Coverage Assessment
+
+```{r load-coverage}
+projects <- read.csv("../results/projects.csv")
+
+
+apachedsKerberosCodecCoverage <- read.csv("../results/jacoco-apacheds-kerberos-codec.csv", sep=",", header = T)
+artemisCommonsCodecCoverage <- read.csv("../results/jacoco-artemis-commons.csv", sep=",", header = T)
+deltaSpikeCoreCodeCoverage <- read.csv("../results/jacoco-deltaspike-core-impl.csv", sep=",", header = T)
+mcfCoreCodeCoverage <- read.csv("../results/jacoco-mcf-core.csv", sep=",", header = T)
+meecrowaveCoreCodeCoverage <- read.csv("../results/jacoco-meecrowave-core.csv", sep=",", header=T)
+sparkCoreCodeCoverage <- read.csv("../results/jacoco-spark-core_2.11.csv", sep=",", header=T)
+tikaCoreCodeCoverage <- read.csv("../results/jacoco-tika-core.csv", sep=",", header=T)
+wicketUtilCodeCoverage <- read.csv("../results/jacoco-wicket-util.csv", sep=",", header=T)
+
+codeCoverage <- rbind(apachedsKerberosCodecCoverage, artemisCommonsCodecCoverage)
+codeCoverage <- rbind(codeCoverage, deltaSpikeCoreCodeCoverage)
+codeCoverage <- rbind(codeCoverage, mcfCoreCodeCoverage)
+codeCoverage <- rbind(codeCoverage, sparkCoreCodeCoverage)
+codeCoverage <- rbind(codeCoverage, tikaCoreCodeCoverage)
+codeCoverage <- rbind(codeCoverage, wicketUtilCodeCoverage)
+
+nrow(codeCoverage)
+
+codeCoverage = merge(projects, codeCoverage, by.x = "group", by.y = "GROUP")
+
+
+names(codeCoverage)[1] <- "project"
+colnames(codeCoverage)
+nrow(codeCoverage)
+
+##  [1] "group"               "module"              "latex"              
+##  [4] "test_cases"          "PACKAGE"             "CLASS"              
+##  [7] "INSTRUCTION_MISSED"  "INSTRUCTION_COVERED" "BRANCH_MISSED"      
+## [10] "BRANCH_COVERED"      "LINE_MISSED"         "LINE_COVERED"       
+## [13] "COMPLEXITY_MISSED"   "COMPLEXITY_COVERED"  "METHOD_MISSED"      
+## [16] "METHOD_COVERED"
+
+cc_summary <- sqldf("select project, module, latex, test_cases, 
+              avg(instruction_covered/(instruction_covered + instruction_missed) * 100) as IC,
+              avg(branch_covered/(branch_covered + branch_missed) * 100) as BC,
+              avg(method_covered/(method_covered + method_missed) * 100) as MC
+        from codeCoverage 
+        group by project, module, latex, test_cases")
+
+cc_summary
+
+```

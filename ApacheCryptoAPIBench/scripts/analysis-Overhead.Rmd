@@ -1,0 +1,75 @@
+---
+title: "ApacheCryptoAPIBench-Analysis-Fixed"
+author: "Rodrigo Bonifácio et al."
+date: "4/27/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(fig.width=5, fig.height=5, fig.path='./figures/', dev=c('png', 'pdf'))
+setwd(".")
+library(dplyr)
+library(sqldf)
+library(xtable)
+library(lattice)
+library(ggvenn)
+library(corrplot)
+```
+
+## R Markdown
+
+
+### Load the dataset
+
+
+```{r load}
+
+projects <- read.csv("../results/projects.csv")
+
+projects
+
+overhead_ds <- read.csv("../results/overhead-assessment.csv", head=T, sep=',')
+colnames(overhead_ds)
+
+# "project"   "profile"   "passed"    "time"      "exception"
+```
+
+```{r correlation-overhead}
+original = sqldf("select module, avg(time/1000) avg_time_original
+                  from overhead_ds 
+                  where profile = 'original'
+                  group by module")
+
+
+rv = sqldf("select module, avg(time/1000) avg_time_mop
+                  from overhead_ds 
+                  where profile = 'mop'
+                  group by module")
+
+overhead_ds = merge(original, rv)
+
+overhead_ds["Overhead"] = 100 * (overhead_ds$avg_time_mop - overhead_ds$avg_time_original) / overhead_ds$avg_time_original
+
+summary(overhead_ds$Overhead)
+
+overhead_ds = sqldf("select p.latex, p.test_cases, p.sloc, p.misuses, p.monitors, p.events, o.avg_time_mop, o.avg_time_original, o.Overhead
+                     from overhead_ds o, projects p 
+                     where o.module = p.module")
+
+
+xtable(sqldf("select latex, monitors, avg_time_mop, avg_time_original, overhead
+              from overhead_ds")) 
+
+
+coormatrix = sqldf("select test_cases TCs, sloc SLOC, misuses Misuses, monitors as Monitors, events as Events, Overhead 
+                    from overhead_ds")
+
+M = cor(coormatrix)
+
+corrplot(M, method = 'number', type='lower')
+corrplot(M, order = 'AOE')
+corrplot(M, method = 'square', order = 'FPC', type = 'lower', diag = FALSE)
+
+
+```
