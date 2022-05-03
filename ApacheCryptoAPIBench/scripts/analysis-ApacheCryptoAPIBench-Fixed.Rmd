@@ -1,0 +1,278 @@
+---
+title: "ApacheCryptoAPIBench-Analysis-Fixed"
+author: "Rodrigo Bonifácio et al."
+date: "4/27/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(fig.width=5, fig.height=5, fig.path='./figures/', dev=c('png', 'pdf'))
+setwd(".")
+library(dplyr)
+library(sqldf)
+library(xtable)
+library(lattice)
+library(ggvenn)
+```
+
+## R Markdown
+
+
+
+```{r load}
+final_ds <- read.csv("../results/gt-FIXED.csv", head=T, sep=',')
+colnames(final_ds)
+
+##  [1] "Project"         "Spec"            "Class"           "Method"         
+##  [5] "Tool"            "Vulnerability"   "RelatedWarnings" "TestClass"      
+##  [9] "ExternalClass"   "Observation"
+```
+
+### Remove duplicated records
+
+```{r remove-dups}
+final_ds = distinct(final_ds)
+```
+
+### Count the number of rows in `final_ds`
+
+```{r total-rows}
+nrow(final_ds)
+
+t1 = sqldf("select Tool, count(*) as FullDataSet
+       from final_ds 
+       group by Tool")
+```
+
+### Count warnings from external libraries (and remove them from our analysis)
+
+```{r remove-external-observations}
+sqldf("select count(*) 
+       from final_ds 
+      where Vulnerability = '-'")
+
+final_ds = sqldf("select *
+                  from final_ds 
+                  where Vulnerability != '-'")
+
+nrow(final_ds)
+```
+
+### Count warnings from tests (and remove them from our analysis)
+
+```{r remove-test-observations}
+sqldf("select TestClass, count(*) 
+       from final_ds 
+       group by TestClass")
+
+
+final_ds = sqldf("select *
+                  from final_ds 
+                  where TestClass = FALSE")
+
+nrow(final_ds)
+
+t2 = sqldf("select Tool, count(*) as CuratedDataSet
+       from final_ds 
+       group by Tool")
+
+
+xtable(merge(t1, t2))
+```
+
+```{r warnings-projects}
+warnings_projects = sqldf("select Project, Tool, count(*) as Warnings
+                           from final_ds group by Project, Tool")
+
+warnings_projects
+
+barchart(Warnings ~ Tool | Project, 
+  data = warnings_projects, stack = T, xlab="Tool"
+)
+```
+
+### Compute the set of True Positives
+
+```{r true-positives}
+tp = sqldf("select distinct Project, Spec, Class, Method 
+            from final_ds 
+            where Vulnerability = 'TRUE'
+            order by 1,2,3,4")
+
+nrow(tp)
+```
+
+### MOP Precision and Recal
+
+```{r mop-assessment}
+mop_tp = sqldf("select distinct Project, Spec, Class, Method 
+                from final_ds 
+               where Tool = 'RV' and Vulnerability = 'TRUE'")
+
+mop_fp = sqldf("select distinct Project, Spec, Class, Method 
+                from final_ds 
+                where Tool = 'RV' and Vulnerability = 'FALSE'")
+
+mop_fn = setdiff(tp, mop_tp)
+
+mop_precision = nrow(mop_tp) / (nrow(mop_tp) + nrow(mop_fp))
+mop_recall = nrow(mop_tp) / (nrow(mop_tp) + nrow(mop_fn))
+mop_fmeasure = 2 * ((mop_precision * mop_recall) / (mop_precision + mop_recall))
+
+nrow(mop_tp)
+nrow(mop_fp)
+nrow(mop_fn)
+mop_precision
+mop_recall
+mop_fmeasure
+```
+
+### CC Precision and Recal
+
+```{r cc-assessment}
+cc_tp = sqldf("select distinct Project, Spec, Class, Method 
+                from final_ds 
+               where Tool = 'CogniCrypt' and Vulnerability = 'TRUE'")
+
+cc_fp = sqldf("select distinct Project, Spec, Class, Method 
+                from final_ds 
+                where Tool = 'CogniCrypt' and Vulnerability = 'FALSE'")
+
+cc_fn = setdiff(tp, cc_tp)
+
+cc_precision = nrow(cc_tp) / (nrow(cc_tp) + nrow(cc_fp))
+cc_recall = nrow(cc_tp) / (nrow(cc_tp) + nrow(cc_fn))
+cc_fmeasure = 2 * ((cc_precision * cc_recall) / (cc_precision + cc_recall))
+
+nrow(cc_tp)
+nrow(cc_fp)
+nrow(cc_fn)
+cc_precision
+cc_recall
+cc_fmeasure
+```
+
+### CG Precision and Recal
+
+```{r cg-assessment}
+cg_tp = sqldf("select distinct Project, Spec, Class, Method 
+                from final_ds 
+               where Tool = 'CryptoGuard' and Vulnerability = 'TRUE'")
+
+cg_fp = sqldf("select distinct Project, Spec, Class, Method 
+                from final_ds 
+                where Tool = 'CryptoGuard' and Vulnerability = 'FALSE'")
+
+cg_fn = setdiff(tp, cg_tp)
+
+ nrow(cg_tp)
+ nrow(cg_fp)
+ nrow(cg_fn)
+
+
+cg_precision = nrow(cg_tp) / (nrow(cg_tp) + nrow(cg_fp))
+cg_recall = nrow(cg_tp) / (nrow(cg_tp) + nrow(cg_fn))
+cg_fmeasure = 2 * ((cg_precision * cg_recall) / (cg_precision + cg_recall))
+
+cg_precision
+cg_recall
+
+cg_fmeasure
+```
+
+### Venn Diagram
+
+```{r vd}
+tp_warnings = sqldf("select distinct (Project || '-' || Spec || '-' || Class|| '-' || Method) as Warning
+                      from final_ds 
+                      where Vulnerability = 'TRUE'")
+  
+sets = sqldf("select Tool, (Project || '-' || Spec || '-' || Class|| '-' || Method) as Warning, count(*) as total
+                  from final_ds 
+                  group by Tool, Warning")
+
+
+tp = tp_warnings[, c("Warning")]
+rv = sets[sets$Tool=="RV", c("Warning")]
+cc = sets[sets$Tool=="CogniCrypt", c("Warning")]
+cg = sets[sets$Tool=="CryptoGuard", c("Warning")]
+
+length(tp)
+length(rv)
+length(cc)
+length(cg)
+
+x <- list(
+  TP = tp,
+  RV= rv,
+  CogniCrypt = cc, 
+  CryptoGuard = cg
+)
+
+ggvenn(
+ x,
+ fill_color = c("#0073C2FF", "#EFC000FF", "#868686FF", "#CD534CFF"),
+   stroke_size = 0.5, set_name_size = 3, text_size=2
+)
+
+```
+
+```{r interesting-cases}
+
+sets_diff = setdiff(cc_tp, mop_tp)
+
+nrow(sets_diff)
+sets_diff
+```
+
+
+
+### Coverage Assessment
+
+```{r load-coverage}
+projects <- read.csv("../results/projects.csv")
+
+
+apachedsKerberosCodecCoverage <- read.csv("../results/jacoco-apacheds-kerberos-codec.csv", sep=",", header = T)
+artemisCommonsCodecCoverage <- read.csv("../results/jacoco-artemis-commons.csv", sep=",", header = T)
+deltaSpikeCoreCodeCoverage <- read.csv("../results/jacoco-deltaspike-core-impl.csv", sep=",", header = T)
+mcfCoreCodeCoverage <- read.csv("../results/jacoco-mcf-core.csv", sep=",", header = T)
+meecrowaveCoreCodeCoverage <- read.csv("../results/jacoco-meecrowave-core.csv", sep=",", header=T)
+sparkCoreCodeCoverage <- read.csv("../results/jacoco-spark-core_2.11.csv", sep=",", header=T)
+tikaCoreCodeCoverage <- read.csv("../results/jacoco-tika-core.csv", sep=",", header=T)
+wicketUtilCodeCoverage <- read.csv("../results/jacoco-wicket-util.csv", sep=",", header=T)
+
+codeCoverage <- rbind(apachedsKerberosCodecCoverage, artemisCommonsCodecCoverage)
+codeCoverage <- rbind(codeCoverage, deltaSpikeCoreCodeCoverage)
+codeCoverage <- rbind(codeCoverage, mcfCoreCodeCoverage)
+codeCoverage <- rbind(codeCoverage, sparkCoreCodeCoverage)
+codeCoverage <- rbind(codeCoverage, tikaCoreCodeCoverage)
+codeCoverage <- rbind(codeCoverage, wicketUtilCodeCoverage)
+
+nrow(codeCoverage)
+
+codeCoverage = merge(projects, codeCoverage, by.x = "group", by.y = "GROUP")
+
+
+names(codeCoverage)[1] <- "project"
+colnames(codeCoverage)
+nrow(codeCoverage)
+
+##  [1] "group"               "module"              "latex"              
+##  [4] "test_cases"          "PACKAGE"             "CLASS"              
+##  [7] "INSTRUCTION_MISSED"  "INSTRUCTION_COVERED" "BRANCH_MISSED"      
+## [10] "BRANCH_COVERED"      "LINE_MISSED"         "LINE_COVERED"       
+## [13] "COMPLEXITY_MISSED"   "COMPLEXITY_COVERED"  "METHOD_MISSED"      
+## [16] "METHOD_COVERED"
+
+cc_summary <- sqldf("select project, module, latex, test_cases, 
+              avg(instruction_covered/(instruction_covered + instruction_missed) * 100) as IC,
+              avg(branch_covered/(branch_covered + branch_missed) * 100) as BC,
+              avg(method_covered/(method_covered + method_missed) * 100) as MC
+        from codeCoverage 
+        group by project, module, latex, test_cases")
+
+cc_summary
+
+```
