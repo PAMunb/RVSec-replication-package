@@ -54,9 +54,11 @@ public abstract class ReflectionBased {
         int errors = 0;
 
         Set<String> classNames = new HashSet<>();
+        String[] emptyArray = {};
 
         for (Class<?> c : classes) {
-            logger.log(Level.WARNING,"Class: "+c);
+            //logger.log(Level.WARNING,"Class: "+c);
+            System.err.println("CLASS: "+c.getName());
             Method mainMethod = findMainMethod(c);
 
             classNames.add(c.getName());
@@ -69,11 +71,11 @@ public abstract class ReflectionBased {
                             executions++;
                             break;
                         case 1:
-                            mainMethod.invoke(null, (Object) null);
+                            mainMethod.invoke(null, (Object) emptyArray);
                             executions++;
                             break;
                         default:
-                            logger.log(Level.WARNING, String.format("Error in class %s. Method main has %d",
+                            logger.log(Level.WARNING, String.format("Error in class %s. Method main has %d parameters",
                                     c.getName(), mainMethod.getParameterCount()));
                     }
                 }
@@ -103,7 +105,11 @@ public abstract class ReflectionBased {
 
         Set<Class<?>> classes = new HashSet<>();
 
-        cp.getTopLevelClassesRecursive(definePackage()).stream().forEach(ci -> classes.add(ci.load()));
+        //cp.getTopLevelClassesRecursive(definePackage()).stream().forEach(ci -> classes.add(ci.load()));
+        cp.getTopLevelClassesRecursive(definePackage()).stream()
+                .filter(ci -> "Main".equals(ci.getSimpleName()))
+                //.forEach(ci -> System.err.println(">> "+ci.getSimpleName()));
+                .forEach(ci -> classes.add(ci.load()));
 
         return classes;
     }
