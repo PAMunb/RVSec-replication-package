@@ -21,6 +21,52 @@ import com.google.common.reflect.ClassPath;
 
 import br.unb.cic.mop.eh.ErrorCollector;
 
+/*
+ * testcases.CWE129_Improper_Validation_of_Array_Index.s04
+testcases.CWE129_Improper_Validation_of_Array_Index.s05
+testcases.CWE190_Integer_Overflow.s01
+testcases.CWE190_Integer_Overflow.s03
+testcases.CWE190_Integer_Overflow.s04
+testcases.CWE190_Integer_Overflow.s05
+testcases.CWE190_Integer_Overflow.s06
+testcases.CWE190_Integer_Overflow.s07
+testcases.CWE191_Integer_Underflow.s01
+testcases.CWE191_Integer_Underflow.s02
+testcases.CWE191_Integer_Underflow.s03
+testcases.CWE191_Integer_Underflow.s04
+testcases.CWE191_Integer_Underflow.s05
+testcases.CWE197_Numeric_Truncation_Error.s02
+testcases.CWE256_Plaintext_Storage_of_Password
+testcases.CWE315_Plaintext_Storage_in_Cookie
+testcases.CWE319_Cleartext_Tx_Sensitive_Info
+testcases.CWE321_Hard_Coded_Cryptographic_Key
+testcases.CWE325_Missing_Required_Cryptographic_Step
+testcases.CWE327_Use_Broken_Crypto
+testcases.CWE329_Not_Using_Random_IV_with_CBC_Mode
+testcases.CWE336_Same_Seed_in_PRNG
+testcases.CWE338_Weak_PRNG
+testcases.CWE369_Divide_by_Zero.s02
+testcases.CWE369_Divide_by_Zero.s03
+testcases.CWE398_Poor_Code_Quality
+testcases.CWE400_Resource_Exhaustion.s02
+testcases.CWE400_Resource_Exhaustion.s03
+testcases.CWE404_Improper_Resource_Shutdown
+testcases.CWE478_Missing_Default_Case_in_Switch
+testcases.CWE481_Assigning_Instead_of_Comparing
+testcases.CWE482_Comparing_Instead_of_Assigning
+testcases.CWE483_Incorrect_Block_Delimitation
+testcases.CWE484_Omitted_Break_Statement_in_Switch
+testcases.CWE506_Embedded_Malicious_Code
+testcases.CWE511_Logic_Time_Bomb
+testcases.CWE570_Expression_Always_False
+testcases.CWE571_Expression_Always_True
+testcases.CWE674_Uncontrolled_Recursion
+testcases.CWE759_Unsalted_One_Way_Hash
+testcases.CWE760_Predictable_Salt_One_Way_Hash
+testcases.CWE772_Missing_Release_of_Resource
+testcases.CWE789_Uncontrolled_Mem_Alloc.s03
+ */
+
 public abstract class ReflectionBased {
 
     private PrintStream original, dummy = null;
@@ -38,7 +84,7 @@ public abstract class ReflectionBased {
 
     @Test
     public void executeBenchmark()  {
-        setupStandardOutput();
+//        setupStandardOutput();
         Set<Class<?>> classes = null;
 
         try {
@@ -96,7 +142,7 @@ public abstract class ReflectionBased {
         logger.log(Level.WARNING, "number of executed methods: " + executions);
         logger.log(Level.WARNING, "number of executions with errors: " + errors);
 
-        restoreStandardOutput();
+//        restoreStandardOutput();
     }
 
     /* finds the classes of our second benchmark */
@@ -108,7 +154,7 @@ public abstract class ReflectionBased {
         //cp.getTopLevelClassesRecursive(definePackage()).stream().forEach(ci -> classes.add(ci.load()));
         cp.getTopLevelClassesRecursive(definePackage()).stream()
                 .filter(ci -> "Main".equals(ci.getSimpleName()))
-                //.forEach(ci -> System.err.println(">> "+ci.getSimpleName()));
+//                .sorted()
                 .forEach(ci -> classes.add(ci.load()));
 
         return classes;
