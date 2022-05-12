@@ -58,6 +58,12 @@
 			<version>4.12</version>
 			<scope>test</scope>
 		</dependency>
+
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<version>2.1.212</version>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -73,6 +79,30 @@
 			</plugins>
 		</pluginManagement>
 		<plugins>
+
+
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<version>3.0.0</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>java</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<executable>java</executable>
+					<mainClass>testcases.CWE256_Plaintext_Storage_of_Password.Main</mainClass>
+					<arguments>
+						<argument>testcases.CWE256_Plaintext_Storage_of_Password.CWE256_Plaintext_Storage_of_Password__basic_01</argument>
+					</arguments>
+				</configuration>
+			</plugin>
+
+
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>

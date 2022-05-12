@@ -42,6 +42,7 @@ testcases.CWE319_Cleartext_Tx_Sensitive_Info
 testcases.CWE321_Hard_Coded_Cryptographic_Key
 testcases.CWE325_Missing_Required_Cryptographic_Step
 testcases.CWE327_Use_Broken_Crypto
+CWE328 ???????
 testcases.CWE329_Not_Using_Random_IV_with_CBC_Mode
 testcases.CWE336_Same_Seed_in_PRNG
 testcases.CWE338_Weak_PRNG
@@ -154,6 +155,7 @@ public abstract class ReflectionBased {
         //cp.getTopLevelClassesRecursive(definePackage()).stream().forEach(ci -> classes.add(ci.load()));
         cp.getTopLevelClassesRecursive(definePackage()).stream()
                 .filter(ci -> "Main".equals(ci.getSimpleName()))
+                //.filter(ci -> ci.getName().contains("CWE256_Plaintext_Storage_of_Password"))
 //                .sorted()
                 .forEach(ci -> classes.add(ci.load()));
 
