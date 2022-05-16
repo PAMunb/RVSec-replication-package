@@ -1,12 +1,18 @@
 package br.unb.cic;
 
-
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.PrintStream;
 import java.lang.reflect.Method;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeoutException;
 import java.util.logging.FileHandler;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -73,6 +79,10 @@ public abstract class ReflectionBased {
     private PrintStream original, dummy = null;
     private Logger logger;
 
+    private int executions = 0;
+    private int errors = 0;
+    private int timeouts = 0;
+
     @BeforeClass
     public static void setUp() {
         ErrorCollector.instance().reset();
@@ -84,57 +94,83 @@ public abstract class ReflectionBased {
     }
 
     @Test
-    public void executeBenchmark()  {
+    public void executeBenchmark() {
 //        setupStandardOutput();
         Set<Class<?>> classes = null;
 
         try {
             setupLogger();
             classes = findBenchmarkClasses();
-        } catch(IOException ex) {
+        } catch (IOException ex) {
             Assert.fail(ex.getMessage());
         }
 
         Assert.assertTrue(classes.size() > 0);
 
-        int executions = 0;
-        int errors = 0;
+        executions = 0;
+        errors = 0;
 
         Set<String> classNames = new HashSet<>();
         String[] emptyArray = {};
-
+        ExecutorService executor = Executors.newCachedThreadPool();
+        
         for (Class<?> c : classes) {
-            //logger.log(Level.WARNING,"Class: "+c);
-            System.err.println("CLASS: "+c.getName());
+            // logger.log(Level.WARNING,"Class: "+c);
+            System.err.println("CLASS: " + c.getName());
             Method mainMethod = findMainMethod(c);
 
             classNames.add(c.getName());
 
-            try {
-                if (mainMethod != null) {
-                    switch (mainMethod.getParameterCount()) {
-                        case 0:
-                            mainMethod.invoke(null);
-                            executions++;
-                            break;
-                        case 1:
-                            mainMethod.invoke(null, (Object) emptyArray);
-                            executions++;
-                            break;
-                        default:
-                            logger.log(Level.WARNING, String.format("Error in class %s. Method main has %d parameters",
-                                    c.getName(), mainMethod.getParameterCount()));
+            
+            Callable<Object> task = new Callable<Object>() {
+                public Object call() {
+                    try {
+                        if (mainMethod != null) {
+                            switch (mainMethod.getParameterCount()) {
+                                case 0:
+                                    mainMethod.invoke(null);
+                                    executions++;
+                                    break;
+                                case 1:
+                                    mainMethod.invoke(null, (Object) emptyArray);
+                                    executions++;
+                                    break;
+                                default:
+                                    logger.log(Level.WARNING, String.format("Error in class %s. Method main has %d parameters", c.getName(), mainMethod.getParameterCount()));
+                            }
+                        }
+                    } catch (IllegalArgumentException ex) {
+                        logger.log(Level.WARNING, "Error on method: " + mainMethod.toString());
+                        errors++;
+                    } catch (Exception ex) {
+                        logger.log(Level.WARNING, ex.getCause() + " " + ex.getMessage() + " when executing " + c.getName());
+                        ex.getCause().printStackTrace();
+                        errors++;
                     }
+                    return null;
                 }
-            } catch (IllegalArgumentException ex) {
-                logger.log(Level.WARNING, "Error on method: " + mainMethod.toString());
-                errors++;
-            } catch (Exception ex) {
-                logger.log(Level.WARNING, ex.getCause() + " " + ex.getMessage() + " when executing " + c.getName());
-                ex.getCause().printStackTrace();
-                errors++;
+            };
+            Future<Object> future = executor.submit(task);
+            try {
+                future.get(1, TimeUnit.SECONDS);
+                executions++;
+                System.err.println("executou ********************************");
+            } catch (TimeoutException ex) {
+                // handle the timeout
+                System.err.println(">>>>> TIMEOUT");
+                timeouts++;
+            } catch (InterruptedException e) {
+                // handle the interrupts
+            } catch (ExecutionException e) {
+                // handle other exceptions
+            } finally {
+                future.cancel(true); // may or may not desire this
             }
+
         }
+        
+        System.err.println("TERMINOU !!!!!!!!!!!!!!!!!!!!!!");
+        System.err.println("executions="+executions);
 
         Assert.assertTrue(executions > 0);
 
@@ -152,10 +188,13 @@ public abstract class ReflectionBased {
 
         Set<Class<?>> classes = new HashSet<>();
 
-        //cp.getTopLevelClassesRecursive(definePackage()).stream().forEach(ci -> classes.add(ci.load()));
-        cp.getTopLevelClassesRecursive(definePackage()).stream()
+        // cp.getTopLevelClassesRecursive(definePackage()).stream().forEach(ci ->
+        // classes.add(ci.load()));
+        cp.getTopLevelClassesRecursive(definePackage())
+                .stream()
                 .filter(ci -> "Main".equals(ci.getSimpleName()))
                 //.filter(ci -> ci.getName().contains("CWE256_Plaintext_Storage_of_Password"))
+                //.filter(ci -> ci.getName().contains("CWE197_Numeric_Truncation_Error"))
 //                .sorted()
                 .forEach(ci -> classes.add(ci.load()));
 
@@ -169,8 +208,8 @@ public abstract class ReflectionBased {
         Method mainMethod = null;
         Method[] methods = c.getDeclaredMethods();
 
-        for(Method m: methods) {
-            if("main".equals(m.getName())) {
+        for (Method m : methods) {
+            if ("main".equals(m.getName())) {
                 return m;
             }
         }
