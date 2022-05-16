@@ -18,6 +18,8 @@ public abstract class AbstractTestCase extends AbstractTestCaseBase
     public static final String DB_CONNECTION = "jdbc:h2:mem:test;DB_CLOSE_DELAY=-1";
     public static final String DB_USER = "sa";
     public static final String DB_PASSWORD = "123456";
+    
+    public static final String DEFAULT_STRING = "Lorem ipsum nam.";
 
     public abstract void bad() throws Throwable;
 

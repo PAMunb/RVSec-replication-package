@@ -4,17 +4,14 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.io.PrintStream;
 import java.lang.reflect.Method;
+import java.util.Arrays;
+import java.util.Date;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
-import java.util.concurrent.Callable;
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.Future;
-import java.util.concurrent.TimeUnit;
-import java.util.concurrent.TimeoutException;
 import java.util.logging.FileHandler;
 import java.util.logging.Level;
+import java.util.logging.LogRecord;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
 
@@ -27,61 +24,14 @@ import com.google.common.reflect.ClassPath;
 
 import br.unb.cic.mop.eh.ErrorCollector;
 
-/*
- * testcases.CWE129_Improper_Validation_of_Array_Index.s04
-testcases.CWE129_Improper_Validation_of_Array_Index.s05
-testcases.CWE190_Integer_Overflow.s01
-testcases.CWE190_Integer_Overflow.s03
-testcases.CWE190_Integer_Overflow.s04
-testcases.CWE190_Integer_Overflow.s05
-testcases.CWE190_Integer_Overflow.s06
-testcases.CWE190_Integer_Overflow.s07
-testcases.CWE191_Integer_Underflow.s01
-testcases.CWE191_Integer_Underflow.s02
-testcases.CWE191_Integer_Underflow.s03
-testcases.CWE191_Integer_Underflow.s04
-testcases.CWE191_Integer_Underflow.s05
-testcases.CWE197_Numeric_Truncation_Error.s02
-testcases.CWE256_Plaintext_Storage_of_Password
-testcases.CWE315_Plaintext_Storage_in_Cookie
-testcases.CWE319_Cleartext_Tx_Sensitive_Info
-testcases.CWE321_Hard_Coded_Cryptographic_Key
-testcases.CWE325_Missing_Required_Cryptographic_Step
-testcases.CWE327_Use_Broken_Crypto
-CWE328 ???????
-testcases.CWE329_Not_Using_Random_IV_with_CBC_Mode
-testcases.CWE336_Same_Seed_in_PRNG
-testcases.CWE338_Weak_PRNG
-testcases.CWE369_Divide_by_Zero.s02
-testcases.CWE369_Divide_by_Zero.s03
-testcases.CWE398_Poor_Code_Quality
-testcases.CWE400_Resource_Exhaustion.s02
-testcases.CWE400_Resource_Exhaustion.s03
-testcases.CWE404_Improper_Resource_Shutdown
-testcases.CWE478_Missing_Default_Case_in_Switch
-testcases.CWE481_Assigning_Instead_of_Comparing
-testcases.CWE482_Comparing_Instead_of_Assigning
-testcases.CWE483_Incorrect_Block_Delimitation
-testcases.CWE484_Omitted_Break_Statement_in_Switch
-testcases.CWE506_Embedded_Malicious_Code
-testcases.CWE511_Logic_Time_Bomb
-testcases.CWE570_Expression_Always_False
-testcases.CWE571_Expression_Always_True
-testcases.CWE674_Uncontrolled_Recursion
-testcases.CWE759_Unsalted_One_Way_Hash
-testcases.CWE760_Predictable_Salt_One_Way_Hash
-testcases.CWE772_Missing_Release_of_Resource
-testcases.CWE789_Uncontrolled_Mem_Alloc.s03
- */
-
 public abstract class ReflectionBased {
 
     private PrintStream original, dummy = null;
     private Logger logger;
 
-    private int executions = 0;
-    private int errors = 0;
-    private int timeouts = 0;
+    
+    
+    private static final List<String> packagesToExclude = Arrays.asList("CWE256", "CWE319", "CWE321", "CWE506");
 
     @BeforeClass
     public static void setUp() {
@@ -95,7 +45,7 @@ public abstract class ReflectionBased {
 
     @Test
     public void executeBenchmark() {
-//        setupStandardOutput();
+        setupStandardOutput();
         Set<Class<?>> classes = null;
 
         try {
@@ -104,82 +54,59 @@ public abstract class ReflectionBased {
         } catch (IOException ex) {
             Assert.fail(ex.getMessage());
         }
-
         Assert.assertTrue(classes.size() > 0);
 
-        executions = 0;
-        errors = 0;
+        int executions = 0;
+        int errors = 0;
 
         Set<String> classNames = new HashSet<>();
         String[] emptyArray = {};
-        ExecutorService executor = Executors.newCachedThreadPool();
-        
-        for (Class<?> c : classes) {
-            // logger.log(Level.WARNING,"Class: "+c);
-            System.err.println("CLASS: " + c.getName());
-            Method mainMethod = findMainMethod(c);
-
-            classNames.add(c.getName());
-
-            
-            Callable<Object> task = new Callable<Object>() {
-                public Object call() {
-                    try {
-                        if (mainMethod != null) {
-                            switch (mainMethod.getParameterCount()) {
-                                case 0:
-                                    mainMethod.invoke(null);
-                                    executions++;
-                                    break;
-                                case 1:
-                                    mainMethod.invoke(null, (Object) emptyArray);
-                                    executions++;
-                                    break;
-                                default:
-                                    logger.log(Level.WARNING, String.format("Error in class %s. Method main has %d parameters", c.getName(), mainMethod.getParameterCount()));
-                            }
-                        }
-                    } catch (IllegalArgumentException ex) {
-                        logger.log(Level.WARNING, "Error on method: " + mainMethod.toString());
-                        errors++;
-                    } catch (Exception ex) {
-                        logger.log(Level.WARNING, ex.getCause() + " " + ex.getMessage() + " when executing " + c.getName());
-                        ex.getCause().printStackTrace();
-                        errors++;
-                    }
-                    return null;
-                }
-            };
-            Future<Object> future = executor.submit(task);
-            try {
-                future.get(1, TimeUnit.SECONDS);
-                executions++;
-                System.err.println("executou ********************************");
-            } catch (TimeoutException ex) {
-                // handle the timeout
-                System.err.println(">>>>> TIMEOUT");
-                timeouts++;
-            } catch (InterruptedException e) {
-                // handle the interrupts
-            } catch (ExecutionException e) {
-                // handle other exceptions
-            } finally {
-                future.cancel(true); // may or may not desire this
+                
+        for (Class<?> c : classes) {            
+            if(exclude(c.getName())) {
+                continue;
             }
-
+            
+            System.err.println(c.getName());
+            
+            Method mainMethod = findMainMethod(c);
+           
+            try {
+                if (mainMethod != null) {
+                    classNames.add(c.getName());
+                    
+                    switch (mainMethod.getParameterCount()) {
+                        case 0:
+                            mainMethod.invoke(null);
+                            executions++;
+                            break;
+                        case 1:
+                            mainMethod.invoke(null, (Object) emptyArray);
+                            executions++;
+                            break;
+                        default:
+                            logger.log(Level.WARNING, String.format("Error in class %s. Method main has %d parameters", c.getName(), mainMethod.getParameterCount()));
+                    }
+                }
+            } catch (IllegalArgumentException ex) {
+                logger.log(Level.WARNING, "Error on method: " + mainMethod.toString());
+                errors++;
+            } catch (Exception ex) {
+                logger.log(Level.WARNING, ex.getCause() + " " + ex.getMessage() + " when executing " + c.getName());
+                ex.getCause().printStackTrace();
+                errors++;
+            }
+            
         }
-        
-        System.err.println("TERMINOU !!!!!!!!!!!!!!!!!!!!!!");
-        System.err.println("executions="+executions);
 
         Assert.assertTrue(executions > 0);
 
-        logger.log(Level.WARNING, "number of classes: " + classes.size());
+        //logger.log(Level.WARNING, "number of classes: " + classes.size());
         logger.log(Level.WARNING, "number of distinct classes: " + classNames.size());
         logger.log(Level.WARNING, "number of executed methods: " + executions);
         logger.log(Level.WARNING, "number of executions with errors: " + errors);
 
-//        restoreStandardOutput();
+        restoreStandardOutput();
     }
 
     /* finds the classes of our second benchmark */
@@ -188,14 +115,10 @@ public abstract class ReflectionBased {
 
         Set<Class<?>> classes = new HashSet<>();
 
-        // cp.getTopLevelClassesRecursive(definePackage()).stream().forEach(ci ->
-        // classes.add(ci.load()));
         cp.getTopLevelClassesRecursive(definePackage())
                 .stream()
                 .filter(ci -> "Main".equals(ci.getSimpleName()))
                 //.filter(ci -> ci.getName().contains("CWE256_Plaintext_Storage_of_Password"))
-                //.filter(ci -> ci.getName().contains("CWE197_Numeric_Truncation_Error"))
-//                .sorted()
                 .forEach(ci -> classes.add(ci.load()));
 
         return classes;
@@ -203,9 +126,17 @@ public abstract class ReflectionBased {
 
     protected abstract String definePackage();
 
+    private boolean exclude(String clazz) {
+        for (String pack : packagesToExclude) {
+            if(clazz.contains(pack)) {
+                return true;
+            }
+        }
+        return false;
+    }
+    
     /* finds the main method of a given class */
     private Method findMainMethod(Class<?> c) {
-        Method mainMethod = null;
         Method[] methods = c.getDeclaredMethods();
 
         for (Method m : methods) {
@@ -236,7 +167,20 @@ public abstract class ReflectionBased {
     private void setupLogger() throws IOException {
         FileHandler handler = new FileHandler("target/logger.txt", true);
 
-        handler.setFormatter(new SimpleFormatter());
+        handler.setFormatter(new SimpleFormatter() {
+            private static final String format = "[%1$tF %1$tT] [%2$-7s] %3$s %n";
+
+            @Override
+            public synchronized String format(LogRecord lr) {
+                return String.format(format,
+                        new Date(lr.getMillis()),
+                        lr.getLevel().getLocalizedName(),
+                        lr.getMessage()
+                );
+            }
+        });
+        
+        //handler.setFormatter(new SimpleFormatter());               
         handler.setLevel(Level.WARNING);
 
         logger = Logger.getLogger("");
@@ -246,3 +190,51 @@ public abstract class ReflectionBased {
     }
 
 }
+
+/* packages that uses JCA
+ * 
+testcases.CWE129_Improper_Validation_of_Array_Index.s04
+testcases.CWE129_Improper_Validation_of_Array_Index.s05
+testcases.CWE190_Integer_Overflow.s01
+testcases.CWE190_Integer_Overflow.s03
+testcases.CWE190_Integer_Overflow.s04
+testcases.CWE190_Integer_Overflow.s05
+testcases.CWE190_Integer_Overflow.s06
+testcases.CWE190_Integer_Overflow.s07
+testcases.CWE191_Integer_Underflow.s01
+testcases.CWE191_Integer_Underflow.s02
+testcases.CWE191_Integer_Underflow.s03
+testcases.CWE191_Integer_Underflow.s04
+testcases.CWE191_Integer_Underflow.s05
+testcases.CWE197_Numeric_Truncation_Error.s02
+testcases.CWE256_Plaintext_Storage_of_Password
+testcases.CWE315_Plaintext_Storage_in_Cookie
+testcases.CWE319_Cleartext_Tx_Sensitive_Info
+testcases.CWE321_Hard_Coded_Cryptographic_Key
+testcases.CWE325_Missing_Required_Cryptographic_Step
+testcases.CWE327_Use_Broken_Crypto
+CWE328 
+testcases.CWE329_Not_Using_Random_IV_with_CBC_Mode
+testcases.CWE336_Same_Seed_in_PRNG
+testcases.CWE338_Weak_PRNG
+testcases.CWE369_Divide_by_Zero.s02
+testcases.CWE369_Divide_by_Zero.s03
+testcases.CWE398_Poor_Code_Quality
+testcases.CWE400_Resource_Exhaustion.s02
+testcases.CWE400_Resource_Exhaustion.s03
+testcases.CWE404_Improper_Resource_Shutdown
+testcases.CWE478_Missing_Default_Case_in_Switch
+testcases.CWE481_Assigning_Instead_of_Comparing
+testcases.CWE482_Comparing_Instead_of_Assigning
+testcases.CWE483_Incorrect_Block_Delimitation
+testcases.CWE484_Omitted_Break_Statement_in_Switch
+testcases.CWE506_Embedded_Malicious_Code
+testcases.CWE511_Logic_Time_Bomb
+testcases.CWE570_Expression_Always_False
+testcases.CWE571_Expression_Always_True
+testcases.CWE674_Uncontrolled_Recursion
+testcases.CWE759_Unsalted_One_Way_Hash
+testcases.CWE760_Predictable_Salt_One_Way_Hash
+testcases.CWE772_Missing_Release_of_Resource
+testcases.CWE789_Uncontrolled_Mem_Alloc.s03
+ */

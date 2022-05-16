@@ -80,7 +80,7 @@ public class CWE321_Hard_Coded_Cryptographic_Key__basic_02 extends AbstractTestC
                 BufferedReader readerBuffered = new BufferedReader(readerInputStream);
 
                 /* FIX: Read data from the console using readLine() */
-                data = readerBuffered.readLine();
+                data = DEFAULT_STRING;
             }
             catch (IOException exceptIO)
             {
@@ -117,7 +117,7 @@ public class CWE321_Hard_Coded_Cryptographic_Key__basic_02 extends AbstractTestC
                 InputStreamReader readerInputStream = new InputStreamReader(System.in, "UTF-8");
                 BufferedReader readerBuffered = new BufferedReader(readerInputStream);
                 /* FIX: Read data from the console using readLine() */
-                data = readerBuffered.readLine();
+                data = DEFAULT_STRING;
             }
             catch (IOException exceptIO)
             {

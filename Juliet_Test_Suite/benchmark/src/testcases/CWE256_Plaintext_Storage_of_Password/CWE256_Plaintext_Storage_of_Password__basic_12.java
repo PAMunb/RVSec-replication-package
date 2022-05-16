@@ -48,7 +48,7 @@ public class CWE256_Plaintext_Storage_of_Password__basic_12 extends AbstractTest
             FileInputStream streamFileInput = null;
             try
             {
-                streamFileInput = new FileInputStream("../common/config.properties");
+                streamFileInput = getConfiguration();
                 properties.load(streamFileInput);
                 password = properties.getProperty("password");
             }
@@ -84,7 +84,7 @@ public class CWE256_Plaintext_Storage_of_Password__basic_12 extends AbstractTest
             FileInputStream streamFileInput = null;
             try
             {
-                streamFileInput = new FileInputStream("../common/config.properties");
+                streamFileInput = getConfiguration();
                 properties.load(streamFileInput);
 
                 password = properties.getProperty("password");
@@ -129,7 +129,7 @@ public class CWE256_Plaintext_Storage_of_Password__basic_12 extends AbstractTest
             Connection dBConnection = null;
             try
             {
-                dBConnection = DriverManager.getConnection("192.168.105.23", "sa", password);
+                dBConnection = DriverManager.getConnection(DB_CONNECTION, DB_USER, password);
             }
             catch (SQLException exceptSql)
             {
@@ -168,7 +168,7 @@ public class CWE256_Plaintext_Storage_of_Password__basic_12 extends AbstractTest
             Connection dBConnection = null;
             try
             {
-                dBConnection = DriverManager.getConnection("192.168.105.23", "sa", password);
+                dBConnection = DriverManager.getConnection(DB_CONNECTION, DB_USER, password);
             }
             catch (SQLException exceptSql)
             {
@@ -205,7 +205,7 @@ public class CWE256_Plaintext_Storage_of_Password__basic_12 extends AbstractTest
             FileInputStream streamFileInput = null;
             try
             {
-                streamFileInput = new FileInputStream("../common/config.properties");
+                streamFileInput = getConfiguration();
                 properties.load(streamFileInput);
                 password = properties.getProperty("password");
             }
@@ -251,7 +251,7 @@ public class CWE256_Plaintext_Storage_of_Password__basic_12 extends AbstractTest
             FileInputStream streamFileInput = null;
             try
             {
-                streamFileInput = new FileInputStream("../common/config.properties");
+                streamFileInput = getConfiguration();
                 properties.load(streamFileInput);
 
                 password = properties.getProperty("password");
@@ -296,7 +296,7 @@ public class CWE256_Plaintext_Storage_of_Password__basic_12 extends AbstractTest
             Connection dBConnection = null;
             try
             {
-                dBConnection = DriverManager.getConnection("192.168.105.23", "sa", password);
+                dBConnection = DriverManager.getConnection(DB_CONNECTION, DB_USER, password);
             }
             catch (SQLException exceptSql)
             {
@@ -325,7 +325,7 @@ public class CWE256_Plaintext_Storage_of_Password__basic_12 extends AbstractTest
             Connection dBConnection = null;
             try
             {
-                dBConnection = DriverManager.getConnection("192.168.105.23", "sa", password);
+                dBConnection = DriverManager.getConnection(DB_CONNECTION, DB_USER, password);
             }
             catch (SQLException exceptSql)
             {
@@ -362,7 +362,7 @@ public class CWE256_Plaintext_Storage_of_Password__basic_12 extends AbstractTest
             FileInputStream streamFileInput = null;
             try
             {
-                streamFileInput = new FileInputStream("../common/config.properties");
+                streamFileInput = getConfiguration();
                 properties.load(streamFileInput);
                 password = properties.getProperty("password");
             }
@@ -397,7 +397,7 @@ public class CWE256_Plaintext_Storage_of_Password__basic_12 extends AbstractTest
             FileInputStream streamFileInput = null;
             try
             {
-                streamFileInput = new FileInputStream("../common/config.properties");
+                streamFileInput = getConfiguration();
                 properties.load(streamFileInput);
 
                 password = properties.getProperty("password");
@@ -440,7 +440,7 @@ public class CWE256_Plaintext_Storage_of_Password__basic_12 extends AbstractTest
             Connection dBConnection = null;
             try
             {
-                dBConnection = DriverManager.getConnection("192.168.105.23", "sa", password);
+                dBConnection = DriverManager.getConnection(DB_CONNECTION, DB_USER, password);
             }
             catch (SQLException exceptSql)
             {
@@ -479,7 +479,7 @@ public class CWE256_Plaintext_Storage_of_Password__basic_12 extends AbstractTest
             Connection dBConnection = null;
             try
             {
-                dBConnection = DriverManager.getConnection("192.168.105.23", "sa", password);
+                dBConnection = DriverManager.getConnection(DB_CONNECTION, DB_USER, password);
             }
             catch (SQLException exceptSql)
             {

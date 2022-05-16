@@ -69,7 +69,8 @@ public class CWE321_Hard_Coded_Cryptographic_Key__basic_01 extends AbstractTestC
             BufferedReader readerBuffered = new BufferedReader(readerInputStream);
 
             /* FIX: Read data from the console using readLine() */
-            data = readerBuffered.readLine();
+            //data = readerBuffered.readLine();
+            data = DEFAULT_STRING;
         }
         catch (IOException exceptIO)
         {
