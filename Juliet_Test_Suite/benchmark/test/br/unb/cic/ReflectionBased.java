@@ -28,8 +28,6 @@ public abstract class ReflectionBased {
 
     private PrintStream original, dummy = null;
     private Logger logger;
-
-    
     
     private static final List<String> packagesToExclude = Arrays.asList("CWE256", "CWE319", "CWE321", "CWE506");
 
