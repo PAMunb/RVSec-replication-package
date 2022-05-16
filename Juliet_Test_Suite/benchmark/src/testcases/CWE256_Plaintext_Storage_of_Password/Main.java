@@ -99,10 +99,10 @@ private static void runTestCWE2() {
 //			(new testcases.CWE256_Plaintext_Storage_of_Password.CWE256_Plaintext_Storage_of_Password__basic_41()).runTest("CWE256_Plaintext_Storage_of_Password__basic_41");
 //			(new testcases.CWE256_Plaintext_Storage_of_Password.CWE256_Plaintext_Storage_of_Password__basic_31()).runTest("CWE256_Plaintext_Storage_of_Password__basic_31");
 //			(new testcases.CWE256_Plaintext_Storage_of_Password.CWE256_Plaintext_Storage_of_Password__basic_17()).runTest("CWE256_Plaintext_Storage_of_Password__basic_17");
-//			(new testcases.CWE256_Plaintext_Storage_of_Password.CWE256_Plaintext_Storage_of_Password__basic_12()).runTest("CWE256_Plaintext_Storage_of_Password__basic_12");
+			(new testcases.CWE256_Plaintext_Storage_of_Password.CWE256_Plaintext_Storage_of_Password__basic_12()).runTest("CWE256_Plaintext_Storage_of_Password__basic_12");
 //			(new testcases.CWE256_Plaintext_Storage_of_Password.CWE256_Plaintext_Storage_of_Password__basic_16()).runTest("CWE256_Plaintext_Storage_of_Password__basic_16");
 //			(new testcases.CWE256_Plaintext_Storage_of_Password.CWE256_Plaintext_Storage_of_Password__basic_74a()).runTest("CWE256_Plaintext_Storage_of_Password__basic_74a");
-			(new testcases.CWE256_Plaintext_Storage_of_Password.CWE256_Plaintext_Storage_of_Password__basic_01()).runTest("CWE256_Plaintext_Storage_of_Password__basic_01");
+//			(new testcases.CWE256_Plaintext_Storage_of_Password.CWE256_Plaintext_Storage_of_Password__basic_01()).runTest("CWE256_Plaintext_Storage_of_Password__basic_01");
 //			(new testcases.CWE256_Plaintext_Storage_of_Password.CWE256_Plaintext_Storage_of_Password__basic_68a()).runTest("CWE256_Plaintext_Storage_of_Password__basic_68a");
 //			(new testcases.CWE256_Plaintext_Storage_of_Password.CWE256_Plaintext_Storage_of_Password__basic_15()).runTest("CWE256_Plaintext_Storage_of_Password__basic_15");
 //			(new testcases.CWE256_Plaintext_Storage_of_Password.CWE256_Plaintext_Storage_of_Password__basic_07()).runTest("CWE256_Plaintext_Storage_of_Password__basic_07");
