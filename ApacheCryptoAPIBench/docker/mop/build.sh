@@ -1,7 +1,7 @@
 #!/bin/bash
 
 VERSION=0.0.1
-IMAGE=phtcosta/mop
+IMAGE=pamunb/mop
 
 #docker build -t $IMAGE:$VERSION $(dirname $0)
 docker build -t $IMAGE:$VERSION $(dirname $0)
