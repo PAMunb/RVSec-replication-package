@@ -222,6 +222,14 @@ sqldf("select distinct className
        from bench02cc
        where className in (select class from tn)")
 
+sqldf("select count (distinct className)
+       from bench02cc
+       where className in (select class from tn) and className like '%ABPS%'")
+
+
+sqldf("select count (distinct className)
+       from bench02cc
+       where className in (select class from tn)")
 
 
 # false-negative  
@@ -239,6 +247,14 @@ sqldf("select distinct className
        where className in (select class from tncg)")
 
 
+sqldf("select count (distinct className)
+       from bench02cg
+       where className in (select class from tncg) and className like '%ABPS%'")
+
+
+sqldf("select count (distinct className)
+       from bench02cg
+       where className in (select class from tncg)")
 
 # false-negative  
 sqldf("select distinct class

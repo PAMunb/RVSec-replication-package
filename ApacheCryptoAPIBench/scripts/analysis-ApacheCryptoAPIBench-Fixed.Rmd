@@ -14,6 +14,8 @@ library(sqldf)
 library(xtable)
 library(lattice)
 library(ggvenn)
+library(corrplot)
+
 ```
 
 ## R Markdown
@@ -99,6 +101,9 @@ tp = sqldf("select distinct Project, Spec, Class, Method
             from final_ds 
             where Vulnerability = 'TRUE'
             order by 1,2,3,4")
+
+
+sqldf("select count(distinct class) from tp")
 
 nrow(tp)
 ```
@@ -220,17 +225,53 @@ ggvenn(
 
 ```{r interesting-cases}
 
-sets_diff = setdiff(cc_tp, mop_tp)
+sets_diff = setdiff(mop_tp, cc_tp)
 
 nrow(sets_diff)
 sets_diff
 ```
 
 
+### Precision and Recall per-project (MOP)
+
+```{r pr-by-project}
+mop_tp = sqldf("select Project, count(*) as TP
+                from final_ds 
+                 where Tool = 'RV' and Vulnerability = 'TRUE' group by Project")
+
+mop_tp
+
+mop_fp = sqldf("select Project, count(*) as FP
+                from final_ds 
+                where Tool = 'RV' and Vulnerability = 'FALSE' group by Project")
+
+mop_fp
+
+mop_fn = sqldf("select Project, count(*) as FN from mop_fn group by Project")
+
+mop_fn 
+
+mop_precision_recall = full_join(mop_tp, mop_fp)
+mop_precision_recall = full_join(mop_precision_recall, mop_fn)
+
+
+mop_precision_recall[is.na(mop_precision_recall)] <- 0
+
+
+mop_precision_recall["Precision"] = mop_precision_recall$TP / (mop_precision_recall$TP + mop_precision_recall$FP)
+mop_precision_recall["Recall"] = mop_precision_recall$TP / (mop_precision_recall$TP + mop_precision_recall$FN)
+mop_precision_recall["FMeasure"] = 2 * (mop_precision_recall$Precision * mop_precision_recall$Recall) / (mop_precision_recall$Precision + mop_precision_recall$Recall)
+
+
+mop_precision_recall
+
+
+```
+
 
 ### Coverage Assessment
 
-```{r load-coverage}
+```{r correlation-coverage}
 projects <- read.csv("../results/projects.csv")
 
 
@@ -266,6 +307,9 @@ nrow(codeCoverage)
 ## [13] "COMPLEXITY_MISSED"   "COMPLEXITY_COVERED"  "METHOD_MISSED"      
 ## [16] "METHOD_COVERED"
 
+sqldf("select count(distinct class) 
+      from codeCoverage") 
+
 cc_summary <- sqldf("select project, module, latex, test_cases, 
               avg(instruction_covered/(instruction_covered + instruction_missed) * 100) as IC,
               avg(branch_covered/(branch_covered + branch_missed) * 100) as BC,
@@ -274,5 +318,31 @@ cc_summary <- sqldf("select project, module, latex, test_cases,
         group by project, module, latex, test_cases")
 
 cc_summary
+
+
+module_name = c("ArtemisCommons", "DeltaSpikeCore", "ApachedsKerberosCodec", "SparkCore", "WicketUtil")
+accuracy = c(1.0, 1.0, 0.84, 0.90, 0.85)
+
+accuracy_ds = data.frame(module_name, accuracy)
+accuracy_ds
+
+colnames(accuracy_ds) = c("module", "accuracy")
+
+
+cc_summary = merge(cc_summary, accuracy_ds)
+
+cc_summary
+
+corrmatrix = sqldf("select test_cases, IC, BC, MC, accuracy
+                    from cc_summary")
+
+
+colnames(corrmatrix) <- c("TCs", "IC", "BC", "MC", "Accuracy")
+
+M = cor(corrmatrix)
+
+corrplot(M, method = 'number', type='lower')
+corrplot(M, order = 'AOE')
+corrplot(M, method = 'square', order = 'FPC', type = 'lower', diag = FALSE)
 
 ```

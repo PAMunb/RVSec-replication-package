@@ -194,6 +194,23 @@ fmeasure_cg = (2 * precision_cg * recall_cg) / (precision_cg + recall_cg)
 fmeasure_cg
 ```
 
+## Examples of False Positives
+
+```{r}
+sqldf("select distinct className as fp
+       from bench03mop
+       where className not in (select className from tp)")
+
+sqldf("select distinct className as fp
+       from bench03cc
+       where className not in (select className from  tp)")
+
+sqldf("select distinct className as fp
+       from bench03cg 
+       where className not in (select className from tp)")
+
+
+```
 
 ## Examples of False Negative
 
