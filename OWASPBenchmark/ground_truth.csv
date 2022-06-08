@@ -1,4 +1,4 @@
-"test name", "category", "real vulnerability", "cwe", "Benchmark version: 1.2", "2016-06-1"
+"test name", "category", "real vulnerability", "cwe"
 BenchmarkTest00001,pathtraver,true,22
 BenchmarkTest00002,pathtraver,true,22
 BenchmarkTest00003,hash,true,328
