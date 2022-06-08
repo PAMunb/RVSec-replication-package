@@ -26,11 +26,25 @@ def precision(ground_truth, results):
 	true_positives = sum(1 for bench in retrieved_results if ground_truth[bench][1] == 'true')
 	return true_positives / len(retrieved_results)
 
-if __name__ == '__main__':
+def recall(ground_truth, results):
+	retrieved_results = ground_truth.keys() & results.keys()
+	true_positives = sum(1 for bench in retrieved_results if ground_truth[bench][1] == 'true')
+	relevant_items = sum(1 for bench in ground_truth if ground_truth[bench][1] == 'true')
+	return true_positives / relevant_items
+
+def print_results(ground_truth_file, result_files):
 	ground_truth = load_ground_truth('../ground_truth.csv', (327,328))
-	cogni_crypt = load_result_file('../results/CogniCrypt-Report.csv')
-	crypto_guard = load_result_file('../results/CryptoGuard-Report.csv')
-	java_mop = load_result_file('../results/summary.csv')
-	print(precision(ground_truth, cogni_crypt))
-	print(precision(ground_truth, crypto_guard))
-	print(precision(ground_truth, java_mop))
+	print('Tool,Precision,Recall')
+	for tool in result_files:
+		results = load_result_file(result_files[tool])
+		print(tool, end=',')
+		print('%.2f'%precision(ground_truth,results), end=',')
+		print('%.2f'%recall(ground_truth,results))
+
+if __name__ == '__main__':
+	ground_truth = '../ground_truth.csv'
+	test_suites = {
+		'cogni_crypt': '../results/CogniCrypt-Report.csv',
+		'crypto_guard': '../results/CryptoGuard-Report.csv',
+		'java_mop': '../results/summary.csv'}
+	print_results(ground_truth, test_suites)
