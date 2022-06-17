@@ -235,7 +235,7 @@ sqldf("select distinct class
 ```{r}
 # false positive 
 sqldf("select distinct className
-       from bench02cg
+       from \
        where className in (select class from tncg)")
 
 
