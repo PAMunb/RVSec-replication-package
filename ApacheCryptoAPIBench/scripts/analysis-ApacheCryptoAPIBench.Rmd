@@ -1,0 +1,270 @@
+---
+title: "JavaMOP"
+author: "Rodrigo Bonifácio et al."
+date: "1/26/2022"
+output: html_document
+keep_md: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(fig.width=5, fig.height=5, fig.path='./figures/', dev=c('png', 'pdf'))
+setwd(".")
+library(sqldf)
+library(xtable)
+library(dplyr)
+library(corrplot)
+library(xtable)
+
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r load-projects}
+projects <- read.csv("../results/projects.csv")
+
+projects
+```
+
+
+```{r load-mop}
+
+mopArtemisCommons <- read.csv("../apache_codes/activemq-artemis/artemis-commons/output/summary.csv", head=T, sep=",")
+mopArtemisCommons['module'] <- 'ArtemisCommons'
+
+mopDeltaSpikeCore <- read.csv("../apache_codes/deltaspike/deltaspike/core/impl/output/summary.csv", head=T, sep=",")
+mopDeltaSpikeCore['module'] <- 'DeltaSpikeCore'
+
+mopApachedsKerberosCodec <- read.csv("../apache_codes/directory-server/kerberos-codec/output/summary.csv", head=T, sep=",")
+mopApachedsKerberosCodec['module'] <- 'ApachedsKerberosCodec'
+
+mopMcfCore <- read.csv("../apache_codes/manifoldcf/framework/core/output/summary.csv", head=T, sep=",")
+mopMcfCore['module'] <- 'DeltaMcfCore'
+
+mopMeecrowaveCore <- read.csv("../apache_codes/openwebbeans-meecrowave/meecrowave-core/output/summary.csv", head=T, sep=",")
+mopMeecrowaveCore['module'] <- 'MeecrowaveCore'
+
+mopSparkCore <- read.csv("../apache_codes/spark/core/output/summary.csv", head=T, sep=",")
+mopSparkCore['module'] <- 'SparkCore'
+
+mopTikaCore <- read.csv("../apache_codes/tika/tika-core/output/summary.csv", head=T, sep=",")
+mopTikaCore['module'] <- 'TikaCore'
+
+mopWicketUtil <- read.csv("../apache_codes/wicket/wicket-util/output/summary.csv", head=T, sep=",")
+mopWicketUtil['module'] <- 'WicketUtil'
+
+
+mop <- rbind(mopArtemisCommons, mopDeltaSpikeCore)
+mop <- rbind(mop, mopApachedsKerberosCodec)
+mop <- rbind(mop, mopMcfCore)
+mop <- rbind(mop, mopMeecrowaveCore)
+mop <- rbind(mop, mopSparkCore)
+mop <- rbind(mop, mopTikaCore)
+mop <- rbind(mop, mopWicketUtil)
+
+mop <- sqldf("select module, count(*) as RVSec from mop group by module order by 1,2")
+
+
+```
+
+
+```{r load-cc}
+ccArtemisCommons <- read.csv("../results/CogniCrypt-artemis-commons.csv", head=T, sep=",")
+ccArtemisCommons['module'] <- 'ArtemisCommons'
+
+ccDeltaSpikeCore <- read.csv("../results/CogniCrypt-deltaspike-core-impl.csv", head=T, sep=",")
+ccDeltaSpikeCore['module'] <- 'DeltaSpikeCore'
+
+ccApachedsKerberosCodec <- read.csv("../results/CogniCrypt-apacheds-kerberos-codec.csv", head=T, sep=",")
+ccApachedsKerberosCodec['module'] <- 'ApachedsKerberosCodec'
+
+ccMcfCore <- read.csv("../results/CogniCrypt-mcf-core.csv", head=T, sep=",")
+ccMcfCore['module'] <- 'DeltaMcfCore'
+
+ccMeecrowaveCore <- read.csv("../results/CogniCrypt-meecrowave-core.csv", head=T, sep=",")
+ccMeecrowaveCore['module'] <- 'MeecrowaveCore'
+
+ccSparkCore <- read.csv("../results/CogniCrypt-spark-core_2.11.csv", head=T, sep=",")
+ccSparkCore['module'] <- 'SparkCore'
+
+ccTikaCore <- read.csv("../results/CogniCrypt-tika-core.csv", head=T, sep=",")
+ccTikaCore['module'] <- 'TikaCore'
+
+ccWicketUtil <- read.csv("../results/CogniCrypt-wicket-util.csv", head=T, sep=",")
+ccWicketUtil['module'] <- 'WicketUtil'
+
+cc <- rbind(ccArtemisCommons, ccDeltaSpikeCore)
+cc <- rbind(cc, ccApachedsKerberosCodec)
+cc <- rbind(cc, ccMcfCore)
+cc <- rbind(cc, ccMeecrowaveCore)
+cc <- rbind(cc, ccSparkCore)
+cc <- rbind(cc, ccTikaCore)
+cc <- rbind(cc, ccWicketUtil)
+
+cc <- sqldf("select module, count(*) as CogniCrypt from cc group by module order by 1,2")
+
+```
+
+
+```{r load-cg}
+cgArtemisCommons <- read.csv("../results/CryptoGuard-artemis-commons.csv", head=T, sep=",")
+cgArtemisCommons['module'] <- 'ArtemisCommons'
+
+cgDeltaSpikeCore <- read.csv("../results/CryptoGuard-deltaspike-core-impl.csv", head=T, sep=",")
+cgDeltaSpikeCore['module'] <- 'DeltaSpikeCore'
+
+cgApachedsKerberosCodec <- read.csv("../results/CryptoGuard-apacheds-kerberos-codec.csv", head=T, sep=",")
+cgApachedsKerberosCodec['module'] <- 'ApachedsKerberosCodec'
+
+cgMcfCore <- read.csv("../results/CryptoGuard-mcf-core.csv", head=T, sep=",")
+cgMcfCore['module'] <- 'DeltaMcfCore'
+
+cgMeecrowaveCore <- read.csv("../results/CryptoGuard-meecrowave-core.csv", head=T, sep=",")
+cgMeecrowaveCore['module'] <- 'MeecrowaveCore'
+
+cgSparkCore <- read.csv("../results/CryptoGuard-spark-core_2.11.csv", head=T, sep=",")
+cgSparkCore['module'] <- 'SparkCore'
+
+# No issue found. 
+#cgTikaCore <- read.csv("../results/CryptoGuard-tika-core.csv", head=T, sep=",")
+#cgTikaCore['module'] <- 'TikaCore'
+
+cgWicketUtil <- read.csv("../results/CryptoGuard-wicket-util.csv", head=T, sep=",")
+cgWicketUtil['module'] <- 'WicketUtil'
+
+cg <- rbind(cgArtemisCommons, cgDeltaSpikeCore)
+cg <- rbind(cg, cgApachedsKerberosCodec)
+cg <- rbind(cg, cgMcfCore)
+cg <- rbind(cg, cgMeecrowaveCore)
+cg <- rbind(cg, cgSparkCore)
+# cg <- rbind(cg, cgTikaCore)
+cg <- rbind(cg, cgWicketUtil)
+
+cg <- sqldf("select module, count(*) as CryptoGuard from cg group by module order by 1,2")
+
+```
+
+
+```{r mergeall}
+final_ds <- full_join(mop, cc)
+final_ds <- full_join(final_ds, cg)
+
+final_ds[is.na(final_ds)] <- 0
+
+final_ds['diff'] <- (final_ds$RVSec - ((final_ds$CogniCrypt + final_ds$CryptoGuard)/2))/(final_ds$CogniCrypt + final_ds$CryptoGuard)/2 * 100
+
+xtable(final_ds)
+```
+
+### Coverage Assessment
+
+```{r load-coverage}
+apachedsKerberosCodecCoverage <- read.csv("../results/jacoco-apacheds-kerberos-codec.csv", sep=",", header = T)
+artemisCommonsCodecCoverage <- read.csv("../results/jacoco-artemis-commons.csv", sep=",", header = T)
+deltaSpikeCoreCodeCoverage <- read.csv("../results/jacoco-deltaspike-core-impl.csv", sep=",", header = T)
+mcfCoreCodeCoverage <- read.csv("../results/jacoco-mcf-core.csv", sep=",", header = T)
+meecrowaveCoreCodeCoverage <- read.csv("../results/jacoco-meecrowave-core.csv", sep=",", header=T)
+sparkCoreCodeCoverage <- read.csv("../results/jacoco-spark-core_2.11.csv", sep=",", header=T)
+tikaCoreCodeCoverage <- read.csv("../results/jacoco-tika-core.csv", sep=",", header=T)
+wicketUtilCodeCoverage <- read.csv("../results/jacoco-wicket-util.csv", sep=",", header=T)
+
+codeCoverage <- rbind(apachedsKerberosCodecCoverage, artemisCommonsCodecCoverage)
+codeCoverage <- rbind(codeCoverage, deltaSpikeCoreCodeCoverage)
+codeCoverage <- rbind(codeCoverage, mcfCoreCodeCoverage)
+codeCoverage <- rbind(codeCoverage, sparkCoreCodeCoverage)
+codeCoverage <- rbind(codeCoverage, tikaCoreCodeCoverage)
+codeCoverage <- rbind(codeCoverage, wicketUtilCodeCoverage)
+
+nrow(codeCoverage)
+
+codeCoverage = merge(projects, codeCoverage, by.x = "group", by.y = "GROUP")
+
+
+names(codeCoverage)[1] <- "project"
+colnames(codeCoverage)
+nrow(codeCoverage)
+
+##  [1] "group"               "module"              "latex"              
+##  [4] "test_cases"          "PACKAGE"             "CLASS"              
+##  [7] "INSTRUCTION_MISSED"  "INSTRUCTION_COVERED" "BRANCH_MISSED"      
+## [10] "BRANCH_COVERED"      "LINE_MISSED"         "LINE_COVERED"       
+## [13] "COMPLEXITY_MISSED"   "COMPLEXITY_COVERED"  "METHOD_MISSED"      
+## [16] "METHOD_COVERED"
+
+cc_summary <- sqldf("select project, module, latex, test_cases, 
+              avg(instruction_covered/(instruction_covered + instruction_missed) * 100) as IC,
+              avg(branch_covered/(branch_covered + branch_missed) * 100) as BC,
+              avg(method_covered/(method_covered + method_missed) * 100) as MC
+        from codeCoverage 
+        group by project, module, latex, test_cases")
+
+
+cc_summary
+cc_summary = merge(cc_summary, final_ds, by.x = "module", by.y = "module")
+
+colnames(cc_summary)
+
+nrow(cc_summary)
+
+##  [1] "module"      "project"     "latex"       "test_cases"  "IC"         
+##  [6] "BC"          "MC"          "RVSec"       "CogniCrypt"  "CryptoGuard"
+## [11] "diff"
+
+xtable(sqldf("select latex, test_cases as TCs, IC, BC, MC 
+       from cc_summary"))
+
+corrmatrix = sqldf("select test_cases, IC, BC, MC, RVSec
+                    from cc_summary")
+
+
+colnames(corrmatrix) <- c("TCs", "IC", "BC", "MC", "RVSec")
+
+cor.test(cc_summary$IC, cc_summary$diff)
+cor.test(cc_summary$BC, cc_summary$diff)
+cor.test(cc_summary$MC, cc_summary$diff)
+
+
+cor.test(cc_summary$IC, cc_summary$RVSec)
+cor.test(cc_summary$BC, cc_summary$RVSec)
+cor.test(cc_summary$MC, cc_summary$RVSec)
+
+cor.test(cc_summary$test_cases, cc_summary$RVSec)
+
+
+M = cor(corrmatrix)
+
+corrplot(M, method = 'number', type='lower')
+corrplot(M, order = 'AOE')
+corrplot(M, method = 'square', order = 'FPC', type = 'lower', diag = FALSE)
+```
+
+```{r detailed-analysis, eval=FALSE}
+colnames(cgMeecrowaveCore)
+sqldf("select spec, error, count(*) from cgMeecrowaveCore group by spec, error")
+
+
+sqldf("select spec, className, count(*) from ccArtemisCommons group by spec, className")
+
+sqldf("select spec, className, count(*) from cgArtemisCommons group by spec, className")
+
+sqldf("select spec, className, count(*) from mopArtemisCommons group by spec, className")
+
+
+
+sqldf("select spec, className, count(*) from ccMcfCore group by spec, className")
+
+sqldf("select spec, className, count(*) from cgMcfCore group by spec, className")
+
+sqldf("select spec, className, count(*) from mopMcfCore group by spec, className")
+
+
+sqldf("select spec, className, count(*) from ccTikaCore group by spec, className")
+
+# sqldf("select spec, className, count(*) from cgTikaCore group by spec, className")
+
+sqldf("select spec, className, count(*) from mopTikaCore group by spec, className")
+```

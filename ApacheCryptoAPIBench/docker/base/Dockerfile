@@ -13,9 +13,10 @@ RUN DEBIAN_FRONTEND="noninteractive" apt-get update && \
 	apt-get clean && apt-get --purge -y autoremove && \
 	rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 	
-RUN git clone https://github.com/runtimeverification/rv-monitor.git && \
+RUN git clone https://github.com/owolabileg/rv-monitor.git && \
     cd rv-monitor && \
-	mvn clean install && \
+    git checkout -b statistics 2848c85a7589077f14384c9c730371507df07bfe && \
+	mvn clean install -DskipTests && \
 	cd ..
 COPY rv-monitor /projects/rv-monitor/target/release/rv-monitor/bin/
 RUN chmod +x /projects/rv-monitor/target/release/rv-monitor/bin/rv-monitor
@@ -25,16 +26,14 @@ RUN mkdir aspectj && \
 	java -jar aspectj-1.8.14.jar -to /projects/aspectj && \
 	rm /projects/aspectj-1.8.14.jar
 		
-RUN git clone https://github.com/runtimeverification/javamop.git && \
+RUN git clone https://github.com/owolabileg/javamop.git && \
     cd javamop && \
-	mvn clean install && \
+    git checkout -b statistics 6b602baccf1c3a97d7e8123b0a132f9ea34ffe31 && \
+	mvn clean install -DskipTests && \
 	cd ..		
 	
-RUN git clone https://github.com/PAMunb/mop-maven-plugin.git && \
-    cd mop-maven-plugin && \
-	mvn clean install && \
-	cd ..				
+#RUN git clone https://github.com/PAMunb/mop-maven-plugin.git && \
+#    cd mop-maven-plugin && \
+#	mvn clean install && \
+#	cd ..				
 
-#RUN find ${MAVEN_REPO} -mindepth 1 ! -regex '^MAVEN_REPO/com/runtimeverification/rvmonitor\(/.*\)?' -delete
-
-	

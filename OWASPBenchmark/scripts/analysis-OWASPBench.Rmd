@@ -1,0 +1,163 @@
+---
+title: "analysis-OWASPBench"
+author: "Rodrigo Bonifácio et al."
+date: '2022-06-17'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+setwd(".")
+library(sqldf)
+```
+
+## Load the datasets
+
+
+
+```{r load-gt}
+gt <- read.csv("../results/datasets/gt.csv", head=T, sep=",")
+
+colnames(gt)
+nrow(gt)
+
+# prune the ground truth. we are only interested in 
+# the categories crypto and hash. 
+
+gt <- sqldf("select TestCase, Category, Vulnerability, CWE 
+             from gt
+             where category in ('crypto', 'hash')")
+
+nrow(gt)
+
+sqldf("select count(*) from gt where vulnerability = 'true'")
+
+```
+
+```{r load-mop}
+mop <- read.csv("../results/datasets/mop.csv", head=T, sep=",")
+
+colnames(mop)
+nrow(mop)
+
+# lets prune the mop dataset, since we are only interested in 
+# the categories crypto and hash
+
+mop <- sqldf("select spec, className, count(*) warnings 
+              from mop 
+              where spec in ('CipherSpec', 'MessageDigestSpec')
+              group by spec, className")
+
+
+
+``` 
+
+```{r mop-recall} 
+tp = sqldf("select * 
+            from mop m
+            where m.className in (select TestCase from gt where vulnerability = 'true')")
+
+fp = sqldf("select * 
+            from mop m
+            where m.className not in (select TestCase from gt where vulnerability = 'true')")
+
+fn = sqldf("select TestCase 
+            from gt 
+            where vulnerability = 'true' and TestCase not in (select className from mop)")
+
+
+precision_mop = nrow(tp) / (nrow(tp) + nrow(fp))
+
+recall_mop = nrow(tp) / (nrow(tp) + nrow(fn))
+
+precision_mop
+
+recall_mop
+
+```
+
+
+```{r load-cc}
+cc <- read.csv("../results/datasets/cognicrypt.csv", head=T, sep=",")
+
+colnames(cc)
+nrow(cc)
+
+# lets prune the cc dataset, since we are only interested in 
+# the categories crypto and hash
+
+cc <- sqldf("select spec, className, count(*) warnings 
+              from cc 
+              where spec in ('CipherSpec', 'MessageDigestSpec')
+              group by spec, className")
+
+nrow(cc)
+
+``` 
+
+
+```{r cc-precision-recall} 
+tp = sqldf("select * 
+            from cc c
+            where c.className in (select TestCase from gt where vulnerability = 'true')")
+
+fp = sqldf("select * 
+            from cc c
+            where c.className not in (select TestCase from gt where vulnerability = 'true')")
+
+fn = sqldf("select TestCase 
+            from gt 
+            where vulnerability = 'true' and TestCase not in (select className from cc)")
+
+
+precision_cc = nrow(tp) / (nrow(tp) + nrow(fp))
+
+recall_cc = nrow(tp) / (nrow(tp) + nrow(fn))
+
+precision_cc
+
+recall_cc
+
+```
+
+```{r load-cg}
+cg <- read.csv("../results/datasets/cryptoguard.csv", head=T, sep=",")
+
+colnames(cg)
+nrow(cg)
+
+# lets prune the cc dataset, since we are only interested in 
+# the categories crypto (1) and hash (2) 
+ 
+cg <- sqldf("select spec, className, count(*) warnings 
+              from cg
+              where spec in (1, 2)   
+              group by spec, className")
+
+nrow(cg)
+
+``` 
+
+
+```{r cg-precision-recall} 
+tp = sqldf("select * 
+            from cg c
+            where c.className in (select TestCase from gt where vulnerability = 'true')")
+
+fp = sqldf("select * 
+            from cg c
+            where c.className not in (select TestCase from gt where vulnerability = 'true')")
+
+fn = sqldf("select TestCase 
+            from gt 
+            where vulnerability = 'true' and TestCase not in (select className from cg)")
+
+
+precision_cg = nrow(tp) / (nrow(tp) + nrow(fp))
+
+recall_cg = nrow(tp) / (nrow(tp) + nrow(fn))
+
+precision_cg
+
+recall_cg
+```

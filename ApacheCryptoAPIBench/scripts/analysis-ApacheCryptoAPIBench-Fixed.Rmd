@@ -15,7 +15,6 @@ library(xtable)
 library(lattice)
 library(ggvenn)
 library(corrplot)
-
 ```
 
 ## R Markdown
@@ -102,7 +101,6 @@ tp = sqldf("select distinct Project, Spec, Class, Method
             where Vulnerability = 'TRUE'
             order by 1,2,3,4")
 
-
 sqldf("select count(distinct class) from tp")
 
 nrow(tp)
@@ -171,9 +169,9 @@ cg_fp = sqldf("select distinct Project, Spec, Class, Method
 
 cg_fn = setdiff(tp, cg_tp)
 
- nrow(cg_tp)
- nrow(cg_fp)
- nrow(cg_fn)
+nrow(cg_tp)
+nrow(cg_fp)
+nrow(cg_fn)
 
 
 cg_precision = nrow(cg_tp) / (nrow(cg_tp) + nrow(cg_fp))
@@ -224,9 +222,7 @@ ggvenn(
 ```
 
 ```{r interesting-cases}
-
 sets_diff = setdiff(mop_tp, cc_tp)
-
 nrow(sets_diff)
 sets_diff
 ```
@@ -272,6 +268,7 @@ mop_precision_recall
 ### Coverage Assessment
 
 ```{r correlation-coverage}
+
 projects <- read.csv("../results/projects.csv")
 
 
@@ -307,8 +304,10 @@ nrow(codeCoverage)
 ## [13] "COMPLEXITY_MISSED"   "COMPLEXITY_COVERED"  "METHOD_MISSED"      
 ## [16] "METHOD_COVERED"
 
+
 sqldf("select count(distinct class) 
       from codeCoverage") 
+
 
 cc_summary <- sqldf("select project, module, latex, test_cases, 
               avg(instruction_covered/(instruction_covered + instruction_missed) * 100) as IC,
@@ -318,7 +317,6 @@ cc_summary <- sqldf("select project, module, latex, test_cases,
         group by project, module, latex, test_cases")
 
 cc_summary
-
 
 module_name = c("ArtemisCommons", "DeltaSpikeCore", "ApachedsKerberosCodec", "SparkCore", "WicketUtil")
 accuracy = c(1.0, 1.0, 0.84, 0.90, 0.85)

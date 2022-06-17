@@ -1,0 +1,14 @@
+spec,class,className,method,location,error
+MessageDigestSpec,org.apache.manifoldcf.core.system.ManifoldCF,ManifoldCF,addToHash,ManifoldCF.java:674,UnsafeAlgorithm
+MessageDigestSpec,org.apache.manifoldcf.core.system.ManifoldCF,ManifoldCF,addToHash,ManifoldCF.java:674,InvalidSequenceOfMethodCalls
+MessageDigestSpec,org.apache.manifoldcf.core.system.ManifoldCF,ManifoldCF,getHashValue,ManifoldCF.java:689,InvalidSequenceOfMethodCalls
+PBEKeySpec,org.apache.manifoldcf.core.system.ManifoldCF,ManifoldCF,getCipher,ManifoldCF.java:731,UnsatisfiedConstraint
+PBEKeySpec,org.apache.manifoldcf.core.system.ManifoldCF,ManifoldCF,getCipher,ManifoldCF.java:731,InvalidSequenceOfMethodCalls
+SecretKeySpecSpec,org.apache.manifoldcf.core.system.ManifoldCF,ManifoldCF,getCipher,ManifoldCF.java:735,UnsatisfiedConstraint
+SecretKeySpecSpec,org.apache.manifoldcf.core.system.ManifoldCF,ManifoldCF,getCipher,ManifoldCF.java:735,InvalidSequenceOfMethodCalls
+IvParameterSpecSpec,org.apache.manifoldcf.core.system.ManifoldCF,ManifoldCF,getCipher,ManifoldCF.java:736,UnsatisfiedConstraint
+IvParameterSpecSpec,org.apache.manifoldcf.core.system.ManifoldCF,ManifoldCF,getCipher,ManifoldCF.java:736,InvalidSequenceOfMethodCalls
+CipherOutputStreamSpec,org.apache.manifoldcf.core.system.ManifoldCF,ManifoldCF,encrypt,ManifoldCF.java:802,InvalidSequenceOfMethodCalls
+CipherOutputStreamSpec,org.apache.manifoldcf.core.system.ManifoldCF,ManifoldCF,encrypt,ManifoldCF.java:807,InvalidSequenceOfMethodCalls
+CipherOutputStreamSpec,org.apache.manifoldcf.core.system.ManifoldCF,ManifoldCF,encrypt,ManifoldCF.java:808,InvalidSequenceOfMethodCalls
+CipherInputStreamSpec,org.apache.manifoldcf.core.system.ManifoldCF,ManifoldCF,decrypt,ManifoldCF.java:847,InvalidSequenceOfMethodCalls

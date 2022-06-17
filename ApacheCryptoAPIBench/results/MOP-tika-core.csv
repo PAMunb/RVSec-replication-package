@@ -1,4 +1,0 @@
-spec,error,class,className,method
-KeyGeneratorSpec,InvalidSequenceOfMethodCalls,org.apache.tika.parser.CryptoParserTest,CryptoParserTest,testCryptoParser
-KeyGeneratorSpec,UnsafeAlgorithm,org.apache.tika.parser.CryptoParserTest,CryptoParserTest,testCryptoParser
-KeyGeneratorSpec,InvalidSequenceOfMethodCalls,org.apache.tika.parser.CryptoParserTest,CryptoParserTest,testCryptoParser
