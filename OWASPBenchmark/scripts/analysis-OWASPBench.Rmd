@@ -70,9 +70,16 @@ precision_mop = nrow(tp) / (nrow(tp) + nrow(fp))
 
 recall_mop = nrow(tp) / (nrow(tp) + nrow(fn))
 
+fmeasure_mop = 2 * ((precision_mop * recall_mop) / (precision_mop + recall_mop))
+
+
 precision_mop
 
 recall_mop
+
+fmeasure_mop
+
+fp
 
 ```
 
@@ -114,10 +121,15 @@ precision_cc = nrow(tp) / (nrow(tp) + nrow(fp))
 
 recall_cc = nrow(tp) / (nrow(tp) + nrow(fn))
 
+fmeasure_cc = 2 * ((precision_cc * recall_cc) / (precision_cc + recall_cc))
+
 precision_cc
 
 recall_cc
 
+fmeasure_cc
+
+fp
 ```
 
 ```{r load-cg}
@@ -157,7 +169,26 @@ precision_cg = nrow(tp) / (nrow(tp) + nrow(fp))
 
 recall_cg = nrow(tp) / (nrow(tp) + nrow(fn))
 
+fmeasure_cg = 2 * ((precision_cg * recall_cg) / (precision_cg + recall_cg))
+
 precision_cg
 
 recall_cg
+
+fmeasure_cg
+
+fp
+```
+
+```{r table}
+
+Tools = c("MOP", "CogniCrypt", "CryptoGuard")
+Precision = c(precision_mop, precision_cc, precision_cg)
+Recall = c(recall_mop, recall_cc, recall_cg)
+FMeasure = c(fmeasure_mop, fmeasure_cc, fmeasure_cg)
+
+analysis_ds = data.frame(Tools, Precision, Recall, FMeasure)
+
+analysis_ds
+
 ```
