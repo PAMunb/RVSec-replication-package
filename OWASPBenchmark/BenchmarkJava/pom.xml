@@ -158,8 +158,7 @@
                                     <cargo.start.jvmargs>
                                         -Xmx8G -XX:MaxPermSize=4096m
                                         -javaagent:${basedir}/JavaMOPAgent.jar
-                                        ${tomcat.jvmargs}
-                                        <!-- ${tomcat.jvmargs.debug} -->
+                                        <!-- ${tomcat.jvmargs} ${tomcat.jvmargs.debug} -->
                                     </cargo.start.jvmargs>
                                 </properties>
                             </configuration>
@@ -255,7 +254,7 @@
                                 <properties>
                                     <cargo.jvmargs>
                                         -Xmx8G
-                                        -javaagent:${basedir}/tools/Contrast/contrast.jar
+                                        -javaagent:${basedir}/tools/Contrast/contrast.jar -javaagent:${basedir}/JavaMOPAgent.jar
                                         -Dcontrast.dir=${basedir}/tools/Contrast/working
                                         -Dcontrast.config.path=${basedir}/tools/Contrast/contrast.yaml
                                     </cargo.jvmargs>
