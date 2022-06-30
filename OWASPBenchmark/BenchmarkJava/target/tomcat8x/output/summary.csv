@@ -12,9 +12,6 @@ MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest00003,BenchmarkTest0
 KeyGeneratorSpec,org.owasp.benchmark.testcode.BenchmarkTest00005,BenchmarkTest00005,doPost,BenchmarkTest00005.java:66,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found DES."
 KeyGeneratorSpec,org.owasp.benchmark.testcode.BenchmarkTest00005,BenchmarkTest00005,doPost,BenchmarkTest00005.java:66,InvalidSequenceOfMethodCalls,unknown
 CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00005,BenchmarkTest00005,doPost,BenchmarkTest00005.java:86,InvalidSequenceOfMethodCalls,unknown
-MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest00009,BenchmarkTest00009,doPost,BenchmarkTest00009.java:86,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found ."
-MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest00009,BenchmarkTest00009,doPost,BenchmarkTest00009.java:86,InvalidSequenceOfMethodCalls,unknown
-MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest00009,BenchmarkTest00009,doPost,BenchmarkTest00009.java:88,InvalidSequenceOfMethodCalls,unknown
 KeyGeneratorSpec,org.owasp.benchmark.testcode.BenchmarkTest00019,BenchmarkTest00019,doPost,BenchmarkTest00019.java:54,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found DES."
 KeyGeneratorSpec,org.owasp.benchmark.testcode.BenchmarkTest00019,BenchmarkTest00019,doPost,BenchmarkTest00019.java:54,InvalidSequenceOfMethodCalls,unknown
 CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00019,BenchmarkTest00019,doPost,BenchmarkTest00019.java:72,InvalidSequenceOfMethodCalls,unknown
@@ -48,12 +45,6 @@ CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00057,BenchmarkTest00057,do
 CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00058,BenchmarkTest00058,doPost,BenchmarkTest00058.java:77,UnsafeAlgorithm,"expecting one of {AES/CBC/PKCS5Padding, AES/PCBC/ISO10126Padding, ...} but found ."
 CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00058,BenchmarkTest00058,doPost,BenchmarkTest00058.java:77,InvalidSequenceOfMethodCalls,unknown
 CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00058,BenchmarkTest00058,doPost,BenchmarkTest00058.java:94,InvalidSequenceOfMethodCalls,unknown
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00059,BenchmarkTest00059,doPost,BenchmarkTest00059.java:87,UnsafeAlgorithm,"expecting one of {AES/CBC/PKCS5Padding, AES/PCBC/ISO10126Padding, ...} but found AES/CCM/NoPadding."
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00059,BenchmarkTest00059,doPost,BenchmarkTest00059.java:87,InvalidSequenceOfMethodCalls,unknown
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00059,BenchmarkTest00059,doPost,BenchmarkTest00059.java:104,InvalidSequenceOfMethodCalls,unknown
-MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest00069,BenchmarkTest00069,doPost,BenchmarkTest00069.java:96,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found ."
-MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest00069,BenchmarkTest00069,doPost,BenchmarkTest00069.java:96,InvalidSequenceOfMethodCalls,unknown
-MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest00069,BenchmarkTest00069,doPost,BenchmarkTest00069.java:98,InvalidSequenceOfMethodCalls,unknown
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest00070,BenchmarkTest00070,doPost,BenchmarkTest00070.java:88,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found ."
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest00070,BenchmarkTest00070,doPost,BenchmarkTest00070.java:88,InvalidSequenceOfMethodCalls,unknown
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest00070,BenchmarkTest00070,doPost,BenchmarkTest00070.java:90,InvalidSequenceOfMethodCalls,unknown
@@ -84,18 +75,6 @@ CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00125,BenchmarkTest00125,do
 CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00126,BenchmarkTest00126,doPost,BenchmarkTest00126.java:73,UnsafeAlgorithm,"expecting one of {AES/CBC/PKCS5Padding, AES/PCBC/ISO10126Padding, ...} but found ."
 CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00126,BenchmarkTest00126,doPost,BenchmarkTest00126.java:73,InvalidSequenceOfMethodCalls,unknown
 CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00126,BenchmarkTest00126,doPost,BenchmarkTest00126.java:90,InvalidSequenceOfMethodCalls,unknown
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00127,BenchmarkTest00127,doPost,BenchmarkTest00127.java:82,UnsafeAlgorithm,"expecting one of {AES/CBC/PKCS5Padding, AES/PCBC/ISO10126Padding, ...} but found AES/CCM/NoPadding."
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00127,BenchmarkTest00127,doPost,BenchmarkTest00127.java:82,InvalidSequenceOfMethodCalls,unknown
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00127,BenchmarkTest00127,doPost,BenchmarkTest00127.java:99,InvalidSequenceOfMethodCalls,unknown
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00128,BenchmarkTest00128,doPost,BenchmarkTest00128.java:77,UnsafeAlgorithm,"expecting one of {AES/CBC/PKCS5Padding, AES/PCBC/ISO10126Padding, ...} but found AES/CCM/NoPadding."
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00128,BenchmarkTest00128,doPost,BenchmarkTest00128.java:77,InvalidSequenceOfMethodCalls,unknown
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00128,BenchmarkTest00128,doPost,BenchmarkTest00128.java:94,InvalidSequenceOfMethodCalls,unknown
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00129,BenchmarkTest00129,doPost,BenchmarkTest00129.java:72,UnsafeAlgorithm,"expecting one of {AES/CBC/PKCS5Padding, AES/PCBC/ISO10126Padding, ...} but found AES/CCM/NoPadding."
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00129,BenchmarkTest00129,doPost,BenchmarkTest00129.java:72,InvalidSequenceOfMethodCalls,unknown
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00129,BenchmarkTest00129,doPost,BenchmarkTest00129.java:89,InvalidSequenceOfMethodCalls,unknown
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00130,BenchmarkTest00130,doPost,BenchmarkTest00130.java:91,UnsafeAlgorithm,"expecting one of {AES/CBC/PKCS5Padding, AES/PCBC/ISO10126Padding, ...} but found AES/CCM/NoPadding."
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00130,BenchmarkTest00130,doPost,BenchmarkTest00130.java:91,InvalidSequenceOfMethodCalls,unknown
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00130,BenchmarkTest00130,doPost,BenchmarkTest00130.java:108,InvalidSequenceOfMethodCalls,unknown
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest00141,BenchmarkTest00141,doPost,BenchmarkTest00141.java:82,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found ."
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest00141,BenchmarkTest00141,doPost,BenchmarkTest00141.java:82,InvalidSequenceOfMethodCalls,unknown
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest00141,BenchmarkTest00141,doPost,BenchmarkTest00141.java:84,InvalidSequenceOfMethodCalls,unknown
@@ -106,7 +85,6 @@ KeyGeneratorSpec,org.owasp.benchmark.testcode.BenchmarkTest00208,BenchmarkTest00
 KeyGeneratorSpec,org.owasp.benchmark.testcode.BenchmarkTest00208,BenchmarkTest00208,doPost,BenchmarkTest00208.java:82,InvalidSequenceOfMethodCalls,unknown
 CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00208,BenchmarkTest00208,doPost,BenchmarkTest00208.java:102,InvalidSequenceOfMethodCalls,unknown
 KeyPairSpec,org.owasp.benchmark.helpers.Utils,Utils,getCipher,Utils.java:411,InvalidSequenceOfMethodCalls,unknown
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00209,BenchmarkTest00209,doPost,BenchmarkTest00209.java:84,InvalidSequenceOfMethodCalls,unknown
 KeyGeneratorSpec,org.owasp.benchmark.testcode.BenchmarkTest00210,BenchmarkTest00210,doPost,BenchmarkTest00210.java:80,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found DES."
 KeyGeneratorSpec,org.owasp.benchmark.testcode.BenchmarkTest00210,BenchmarkTest00210,doPost,BenchmarkTest00210.java:80,InvalidSequenceOfMethodCalls,unknown
 CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00210,BenchmarkTest00210,doPost,BenchmarkTest00210.java:100,InvalidSequenceOfMethodCalls,unknown
@@ -116,18 +94,9 @@ CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00211,BenchmarkTest00211,do
 CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00212,BenchmarkTest00212,doPost,BenchmarkTest00212.java:78,UnsafeAlgorithm,"expecting one of {AES/CBC/PKCS5Padding, AES/PCBC/ISO10126Padding, ...} but found ."
 CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00212,BenchmarkTest00212,doPost,BenchmarkTest00212.java:78,InvalidSequenceOfMethodCalls,unknown
 CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00212,BenchmarkTest00212,doPost,BenchmarkTest00212.java:95,InvalidSequenceOfMethodCalls,unknown
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00213,BenchmarkTest00213,doPost,BenchmarkTest00213.java:92,UnsafeAlgorithm,"expecting one of {AES/CBC/PKCS5Padding, AES/PCBC/ISO10126Padding, ...} but found AES/CCM/NoPadding."
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00213,BenchmarkTest00213,doPost,BenchmarkTest00213.java:92,InvalidSequenceOfMethodCalls,unknown
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00213,BenchmarkTest00213,doPost,BenchmarkTest00213.java:109,InvalidSequenceOfMethodCalls,unknown
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00214,BenchmarkTest00214,doPost,BenchmarkTest00214.java:82,UnsafeAlgorithm,"expecting one of {AES/CBC/PKCS5Padding, AES/PCBC/ISO10126Padding, ...} but found AES/CCM/NoPadding."
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00214,BenchmarkTest00214,doPost,BenchmarkTest00214.java:82,InvalidSequenceOfMethodCalls,unknown
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00214,BenchmarkTest00214,doPost,BenchmarkTest00214.java:99,InvalidSequenceOfMethodCalls,unknown
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest00223,BenchmarkTest00223,doPost,BenchmarkTest00223.java:92,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found ."
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest00223,BenchmarkTest00223,doPost,BenchmarkTest00223.java:92,InvalidSequenceOfMethodCalls,unknown
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest00223,BenchmarkTest00223,doPost,BenchmarkTest00223.java:94,InvalidSequenceOfMethodCalls,unknown
-MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest00224,BenchmarkTest00224,doPost,BenchmarkTest00224.java:87,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found ."
-MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest00224,BenchmarkTest00224,doPost,BenchmarkTest00224.java:87,InvalidSequenceOfMethodCalls,unknown
-MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest00224,BenchmarkTest00224,doPost,BenchmarkTest00224.java:89,InvalidSequenceOfMethodCalls,unknown
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest00226,BenchmarkTest00226,doPost,BenchmarkTest00226.java:89,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found MD5."
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest00226,BenchmarkTest00226,doPost,BenchmarkTest00226.java:89,InvalidSequenceOfMethodCalls,unknown
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest00226,BenchmarkTest00226,doPost,BenchmarkTest00226.java:91,InvalidSequenceOfMethodCalls,unknown
@@ -146,8 +115,6 @@ CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00257,BenchmarkTest00257,do
 KeyGeneratorSpec,org.owasp.benchmark.testcode.BenchmarkTest00258,BenchmarkTest00258,doPost,BenchmarkTest00258.java:69,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found DES."
 KeyGeneratorSpec,org.owasp.benchmark.testcode.BenchmarkTest00258,BenchmarkTest00258,doPost,BenchmarkTest00258.java:69,InvalidSequenceOfMethodCalls,unknown
 CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00258,BenchmarkTest00258,doPost,BenchmarkTest00258.java:89,InvalidSequenceOfMethodCalls,unknown
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00259,BenchmarkTest00259,doPost,BenchmarkTest00259.java:75,InvalidSequenceOfMethodCalls,unknown
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00260,BenchmarkTest00260,doPost,BenchmarkTest00260.java:75,InvalidSequenceOfMethodCalls,unknown
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest00266,BenchmarkTest00266,doPost,BenchmarkTest00266.java:84,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found ."
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest00266,BenchmarkTest00266,doPost,BenchmarkTest00266.java:84,InvalidSequenceOfMethodCalls,unknown
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest00266,BenchmarkTest00266,doPost,BenchmarkTest00266.java:86,InvalidSequenceOfMethodCalls,unknown
@@ -175,8 +142,6 @@ CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00345,BenchmarkTest00345,do
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest00346,BenchmarkTest00346,doPost,BenchmarkTest00346.java:71,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found ."
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest00346,BenchmarkTest00346,doPost,BenchmarkTest00346.java:71,InvalidSequenceOfMethodCalls,unknown
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest00346,BenchmarkTest00346,doPost,BenchmarkTest00346.java:73,InvalidSequenceOfMethodCalls,unknown
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00350,BenchmarkTest00350,doPost,BenchmarkTest00350.java:74,InvalidSequenceOfMethodCalls,unknown
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00351,BenchmarkTest00351,doPost,BenchmarkTest00351.java:73,InvalidSequenceOfMethodCalls,unknown
 CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00352,BenchmarkTest00352,doPost,BenchmarkTest00352.java:78,UnsafeAlgorithm,"expecting one of {AES/CBC/PKCS5Padding, AES/PCBC/ISO10126Padding, ...} but found ."
 CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00352,BenchmarkTest00352,doPost,BenchmarkTest00352.java:78,InvalidSequenceOfMethodCalls,unknown
 CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00352,BenchmarkTest00352,doPost,BenchmarkTest00352.java:95,InvalidSequenceOfMethodCalls,unknown
@@ -192,15 +157,6 @@ CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00355,BenchmarkTest00355,do
 KeyGeneratorSpec,org.owasp.benchmark.testcode.BenchmarkTest00356,BenchmarkTest00356,doPost,BenchmarkTest00356.java:61,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found DES."
 KeyGeneratorSpec,org.owasp.benchmark.testcode.BenchmarkTest00356,BenchmarkTest00356,doPost,BenchmarkTest00356.java:61,InvalidSequenceOfMethodCalls,unknown
 CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00356,BenchmarkTest00356,doPost,BenchmarkTest00356.java:79,InvalidSequenceOfMethodCalls,unknown
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00357,BenchmarkTest00357,doPost,BenchmarkTest00357.java:67,UnsafeAlgorithm,"expecting one of {AES/CBC/PKCS5Padding, AES/PCBC/ISO10126Padding, ...} but found AES/CCM/NoPadding."
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00357,BenchmarkTest00357,doPost,BenchmarkTest00357.java:67,InvalidSequenceOfMethodCalls,unknown
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00357,BenchmarkTest00357,doPost,BenchmarkTest00357.java:84,InvalidSequenceOfMethodCalls,unknown
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00358,BenchmarkTest00358,doPost,BenchmarkTest00358.java:68,UnsafeAlgorithm,"expecting one of {AES/CBC/PKCS5Padding, AES/PCBC/ISO10126Padding, ...} but found AES/CCM/NoPadding."
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00358,BenchmarkTest00358,doPost,BenchmarkTest00358.java:68,InvalidSequenceOfMethodCalls,unknown
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00358,BenchmarkTest00358,doPost,BenchmarkTest00358.java:85,InvalidSequenceOfMethodCalls,unknown
-MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest00370,BenchmarkTest00370,doPost,BenchmarkTest00370.java:77,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found ."
-MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest00370,BenchmarkTest00370,doPost,BenchmarkTest00370.java:77,InvalidSequenceOfMethodCalls,unknown
-MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest00370,BenchmarkTest00370,doPost,BenchmarkTest00370.java:79,InvalidSequenceOfMethodCalls,unknown
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest00371,BenchmarkTest00371,doPost,BenchmarkTest00371.java:69,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found ."
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest00371,BenchmarkTest00371,doPost,BenchmarkTest00371.java:69,InvalidSequenceOfMethodCalls,unknown
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest00371,BenchmarkTest00371,doPost,BenchmarkTest00371.java:71,InvalidSequenceOfMethodCalls,unknown
@@ -210,7 +166,6 @@ MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest00372,BenchmarkTest0
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest00374,BenchmarkTest00374,doPost,BenchmarkTest00374.java:70,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found MD5."
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest00374,BenchmarkTest00374,doPost,BenchmarkTest00374.java:70,InvalidSequenceOfMethodCalls,unknown
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest00374,BenchmarkTest00374,doPost,BenchmarkTest00374.java:72,InvalidSequenceOfMethodCalls,unknown
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00444,BenchmarkTest00444,doPost,BenchmarkTest00444.java:72,InvalidSequenceOfMethodCalls,unknown
 KeyGeneratorSpec,org.owasp.benchmark.testcode.BenchmarkTest00445,BenchmarkTest00445,doPost,BenchmarkTest00445.java:86,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found DES."
 KeyGeneratorSpec,org.owasp.benchmark.testcode.BenchmarkTest00445,BenchmarkTest00445,doPost,BenchmarkTest00445.java:86,InvalidSequenceOfMethodCalls,unknown
 CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00445,BenchmarkTest00445,doPost,BenchmarkTest00445.java:106,InvalidSequenceOfMethodCalls,unknown
@@ -226,18 +181,9 @@ CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00448,BenchmarkTest00448,do
 KeyGeneratorSpec,org.owasp.benchmark.testcode.BenchmarkTest00449,BenchmarkTest00449,doPost,BenchmarkTest00449.java:63,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found DES."
 KeyGeneratorSpec,org.owasp.benchmark.testcode.BenchmarkTest00449,BenchmarkTest00449,doPost,BenchmarkTest00449.java:63,InvalidSequenceOfMethodCalls,unknown
 CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00449,BenchmarkTest00449,doPost,BenchmarkTest00449.java:81,InvalidSequenceOfMethodCalls,unknown
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00450,BenchmarkTest00450,doPost,BenchmarkTest00450.java:91,UnsafeAlgorithm,"expecting one of {AES/CBC/PKCS5Padding, AES/PCBC/ISO10126Padding, ...} but found AES/CCM/NoPadding."
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00450,BenchmarkTest00450,doPost,BenchmarkTest00450.java:91,InvalidSequenceOfMethodCalls,unknown
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00450,BenchmarkTest00450,doPost,BenchmarkTest00450.java:108,InvalidSequenceOfMethodCalls,unknown
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00451,BenchmarkTest00451,doPost,BenchmarkTest00451.java:76,UnsafeAlgorithm,"expecting one of {AES/CBC/PKCS5Padding, AES/PCBC/ISO10126Padding, ...} but found AES/CCM/NoPadding."
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00451,BenchmarkTest00451,doPost,BenchmarkTest00451.java:76,InvalidSequenceOfMethodCalls,unknown
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00451,BenchmarkTest00451,doPost,BenchmarkTest00451.java:93,InvalidSequenceOfMethodCalls,unknown
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest00462,BenchmarkTest00462,doPost,BenchmarkTest00462.java:86,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found ."
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest00462,BenchmarkTest00462,doPost,BenchmarkTest00462.java:86,InvalidSequenceOfMethodCalls,unknown
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest00462,BenchmarkTest00462,doPost,BenchmarkTest00462.java:88,InvalidSequenceOfMethodCalls,unknown
-MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest00463,BenchmarkTest00463,doPost,BenchmarkTest00463.java:76,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found ."
-MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest00463,BenchmarkTest00463,doPost,BenchmarkTest00463.java:76,InvalidSequenceOfMethodCalls,unknown
-MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest00463,BenchmarkTest00463,doPost,BenchmarkTest00463.java:78,InvalidSequenceOfMethodCalls,unknown
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest00464,BenchmarkTest00464,doPost,BenchmarkTest00464.java:71,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found ."
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest00464,BenchmarkTest00464,doPost,BenchmarkTest00464.java:71,InvalidSequenceOfMethodCalls,unknown
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest00464,BenchmarkTest00464,doPost,BenchmarkTest00464.java:73,InvalidSequenceOfMethodCalls,unknown
@@ -250,10 +196,6 @@ CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00521,BenchmarkTest00521,do
 KeyGeneratorSpec,org.owasp.benchmark.testcode.BenchmarkTest00522,BenchmarkTest00522,doPost,BenchmarkTest00522.java:81,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found DES."
 KeyGeneratorSpec,org.owasp.benchmark.testcode.BenchmarkTest00522,BenchmarkTest00522,doPost,BenchmarkTest00522.java:81,InvalidSequenceOfMethodCalls,unknown
 CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00522,BenchmarkTest00522,doPost,BenchmarkTest00522.java:101,InvalidSequenceOfMethodCalls,unknown
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00523,BenchmarkTest00523,doPost,BenchmarkTest00523.java:103,InvalidSequenceOfMethodCalls,unknown
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00524,BenchmarkTest00524,doPost,BenchmarkTest00524.java:101,UnsafeAlgorithm,"expecting one of {AES/CBC/PKCS5Padding, AES/PCBC/ISO10126Padding, ...} but found AES/CCM/NoPadding."
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00524,BenchmarkTest00524,doPost,BenchmarkTest00524.java:101,InvalidSequenceOfMethodCalls,unknown
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00524,BenchmarkTest00524,doPost,BenchmarkTest00524.java:118,InvalidSequenceOfMethodCalls,unknown
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest00531,BenchmarkTest00531,doPost,BenchmarkTest00531.java:91,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found ."
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest00531,BenchmarkTest00531,doPost,BenchmarkTest00531.java:91,InvalidSequenceOfMethodCalls,unknown
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest00531,BenchmarkTest00531,doPost,BenchmarkTest00531.java:93,InvalidSequenceOfMethodCalls,unknown
@@ -284,7 +226,6 @@ CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00610,BenchmarkTest00610,do
 KeyGeneratorSpec,org.owasp.benchmark.testcode.BenchmarkTest00611,BenchmarkTest00611,doPost,BenchmarkTest00611.java:71,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found DES."
 KeyGeneratorSpec,org.owasp.benchmark.testcode.BenchmarkTest00611,BenchmarkTest00611,doPost,BenchmarkTest00611.java:71,InvalidSequenceOfMethodCalls,unknown
 CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00611,BenchmarkTest00611,doPost,BenchmarkTest00611.java:91,InvalidSequenceOfMethodCalls,unknown
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00613,BenchmarkTest00613,doPost,BenchmarkTest00613.java:76,InvalidSequenceOfMethodCalls,unknown
 KeyGeneratorSpec,org.owasp.benchmark.testcode.BenchmarkTest00614,BenchmarkTest00614,doPost,BenchmarkTest00614.java:74,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found DES."
 KeyGeneratorSpec,org.owasp.benchmark.testcode.BenchmarkTest00614,BenchmarkTest00614,doPost,BenchmarkTest00614.java:74,InvalidSequenceOfMethodCalls,unknown
 CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00614,BenchmarkTest00614,doPost,BenchmarkTest00614.java:94,InvalidSequenceOfMethodCalls,unknown
@@ -297,18 +238,9 @@ CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00616,BenchmarkTest00616,do
 KeyGeneratorSpec,org.owasp.benchmark.testcode.BenchmarkTest00617,BenchmarkTest00617,doPost,BenchmarkTest00617.java:59,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found DES."
 KeyGeneratorSpec,org.owasp.benchmark.testcode.BenchmarkTest00617,BenchmarkTest00617,doPost,BenchmarkTest00617.java:59,InvalidSequenceOfMethodCalls,unknown
 CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00617,BenchmarkTest00617,doPost,BenchmarkTest00617.java:77,InvalidSequenceOfMethodCalls,unknown
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00618,BenchmarkTest00618,doPost,BenchmarkTest00618.java:74,UnsafeAlgorithm,"expecting one of {AES/CBC/PKCS5Padding, AES/PCBC/ISO10126Padding, ...} but found AES/CCM/NoPadding."
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00618,BenchmarkTest00618,doPost,BenchmarkTest00618.java:74,InvalidSequenceOfMethodCalls,unknown
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00618,BenchmarkTest00618,doPost,BenchmarkTest00618.java:91,InvalidSequenceOfMethodCalls,unknown
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest00631,BenchmarkTest00631,doPost,BenchmarkTest00631.java:75,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found ."
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest00631,BenchmarkTest00631,doPost,BenchmarkTest00631.java:75,InvalidSequenceOfMethodCalls,unknown
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest00631,BenchmarkTest00631,doPost,BenchmarkTest00631.java:77,InvalidSequenceOfMethodCalls,unknown
-MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest00632,BenchmarkTest00632,doPost,BenchmarkTest00632.java:75,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found ."
-MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest00632,BenchmarkTest00632,doPost,BenchmarkTest00632.java:75,InvalidSequenceOfMethodCalls,unknown
-MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest00632,BenchmarkTest00632,doPost,BenchmarkTest00632.java:77,InvalidSequenceOfMethodCalls,unknown
-MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest00633,BenchmarkTest00633,doPost,BenchmarkTest00633.java:93,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found ."
-MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest00633,BenchmarkTest00633,doPost,BenchmarkTest00633.java:93,InvalidSequenceOfMethodCalls,unknown
-MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest00633,BenchmarkTest00633,doPost,BenchmarkTest00633.java:95,InvalidSequenceOfMethodCalls,unknown
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest00634,BenchmarkTest00634,doPost,BenchmarkTest00634.java:76,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found ."
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest00634,BenchmarkTest00634,doPost,BenchmarkTest00634.java:76,InvalidSequenceOfMethodCalls,unknown
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest00634,BenchmarkTest00634,doPost,BenchmarkTest00634.java:78,InvalidSequenceOfMethodCalls,unknown
@@ -333,8 +265,6 @@ CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00685,BenchmarkTest00685,do
 KeyGeneratorSpec,org.owasp.benchmark.testcode.BenchmarkTest00688,BenchmarkTest00688,doPost,BenchmarkTest00688.java:71,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found DES."
 KeyGeneratorSpec,org.owasp.benchmark.testcode.BenchmarkTest00688,BenchmarkTest00688,doPost,BenchmarkTest00688.java:71,InvalidSequenceOfMethodCalls,unknown
 CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00688,BenchmarkTest00688,doPost,BenchmarkTest00688.java:91,InvalidSequenceOfMethodCalls,unknown
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00689,BenchmarkTest00689,doPost,BenchmarkTest00689.java:91,InvalidSequenceOfMethodCalls,unknown
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00690,BenchmarkTest00690,doPost,BenchmarkTest00690.java:89,InvalidSequenceOfMethodCalls,unknown
 KeyGeneratorSpec,org.owasp.benchmark.testcode.BenchmarkTest00691,BenchmarkTest00691,doPost,BenchmarkTest00691.java:74,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found DES."
 KeyGeneratorSpec,org.owasp.benchmark.testcode.BenchmarkTest00691,BenchmarkTest00691,doPost,BenchmarkTest00691.java:74,InvalidSequenceOfMethodCalls,unknown
 CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00691,BenchmarkTest00691,doPost,BenchmarkTest00691.java:94,InvalidSequenceOfMethodCalls,unknown
@@ -362,7 +292,6 @@ MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest00710,BenchmarkTest0
 KeyGeneratorSpec,org.owasp.benchmark.testcode.BenchmarkTest00779,BenchmarkTest00779,doPost,BenchmarkTest00779.java:86,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found DES."
 KeyGeneratorSpec,org.owasp.benchmark.testcode.BenchmarkTest00779,BenchmarkTest00779,doPost,BenchmarkTest00779.java:86,InvalidSequenceOfMethodCalls,unknown
 CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00779,BenchmarkTest00779,doPost,BenchmarkTest00779.java:106,InvalidSequenceOfMethodCalls,unknown
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00780,BenchmarkTest00780,doPost,BenchmarkTest00780.java:111,InvalidSequenceOfMethodCalls,unknown
 KeyGeneratorSpec,org.owasp.benchmark.testcode.BenchmarkTest00781,BenchmarkTest00781,doPost,BenchmarkTest00781.java:86,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found DES."
 KeyGeneratorSpec,org.owasp.benchmark.testcode.BenchmarkTest00781,BenchmarkTest00781,doPost,BenchmarkTest00781.java:86,InvalidSequenceOfMethodCalls,unknown
 CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00781,BenchmarkTest00781,doPost,BenchmarkTest00781.java:106,InvalidSequenceOfMethodCalls,unknown
@@ -423,7 +352,6 @@ MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest00875,BenchmarkTest0
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest00876,BenchmarkTest00876,doPost,BenchmarkTest00876.java:74,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found MD5."
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest00876,BenchmarkTest00876,doPost,BenchmarkTest00876.java:74,InvalidSequenceOfMethodCalls,unknown
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest00876,BenchmarkTest00876,doPost,BenchmarkTest00876.java:76,InvalidSequenceOfMethodCalls,unknown
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00943,BenchmarkTest00943,doPost,BenchmarkTest00943.java:87,InvalidSequenceOfMethodCalls,unknown
 CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00944,BenchmarkTest00944,doPost,BenchmarkTest00944.java:77,UnsafeAlgorithm,"expecting one of {AES/CBC/PKCS5Padding, AES/PCBC/ISO10126Padding, ...} but found ."
 CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00944,BenchmarkTest00944,doPost,BenchmarkTest00944.java:77,InvalidSequenceOfMethodCalls,unknown
 CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00944,BenchmarkTest00944,doPost,BenchmarkTest00944.java:94,InvalidSequenceOfMethodCalls,unknown
@@ -457,12 +385,6 @@ CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest01019,BenchmarkTest01019,do
 KeyGeneratorSpec,org.owasp.benchmark.testcode.BenchmarkTest01020,BenchmarkTest01020,doPost,BenchmarkTest01020.java:61,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found DES."
 KeyGeneratorSpec,org.owasp.benchmark.testcode.BenchmarkTest01020,BenchmarkTest01020,doPost,BenchmarkTest01020.java:61,InvalidSequenceOfMethodCalls,unknown
 CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest01020,BenchmarkTest01020,doPost,BenchmarkTest01020.java:79,InvalidSequenceOfMethodCalls,unknown
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest01021,BenchmarkTest01021,doPost,BenchmarkTest01021.java:72,UnsafeAlgorithm,"expecting one of {AES/CBC/PKCS5Padding, AES/PCBC/ISO10126Padding, ...} but found AES/CCM/NoPadding."
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest01021,BenchmarkTest01021,doPost,BenchmarkTest01021.java:72,InvalidSequenceOfMethodCalls,unknown
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest01021,BenchmarkTest01021,doPost,BenchmarkTest01021.java:89,InvalidSequenceOfMethodCalls,unknown
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest01022,BenchmarkTest01022,doPost,BenchmarkTest01022.java:72,UnsafeAlgorithm,"expecting one of {AES/CBC/PKCS5Padding, AES/PCBC/ISO10126Padding, ...} but found AES/CCM/NoPadding."
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest01022,BenchmarkTest01022,doPost,BenchmarkTest01022.java:72,InvalidSequenceOfMethodCalls,unknown
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest01022,BenchmarkTest01022,doPost,BenchmarkTest01022.java:89,InvalidSequenceOfMethodCalls,unknown
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest01038,BenchmarkTest01038,doPost,BenchmarkTest01038.java:69,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found MD5."
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest01038,BenchmarkTest01038,doPost,BenchmarkTest01038.java:69,InvalidSequenceOfMethodCalls,unknown
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest01038,BenchmarkTest01038,doPost,BenchmarkTest01038.java:71,InvalidSequenceOfMethodCalls,unknown
@@ -481,8 +403,6 @@ MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest01044,BenchmarkTest0
 KeyGeneratorSpec,org.owasp.benchmark.testcode.BenchmarkTest01099,BenchmarkTest01099,doPost,BenchmarkTest01099.java:79,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found DES."
 KeyGeneratorSpec,org.owasp.benchmark.testcode.BenchmarkTest01099,BenchmarkTest01099,doPost,BenchmarkTest01099.java:79,InvalidSequenceOfMethodCalls,unknown
 CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest01099,BenchmarkTest01099,doPost,BenchmarkTest01099.java:99,InvalidSequenceOfMethodCalls,unknown
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest01100,BenchmarkTest01100,doPost,BenchmarkTest01100.java:83,InvalidSequenceOfMethodCalls,unknown
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest01101,BenchmarkTest01101,doPost,BenchmarkTest01101.java:83,InvalidSequenceOfMethodCalls,unknown
 KeyGeneratorSpec,org.owasp.benchmark.testcode.BenchmarkTest01102,BenchmarkTest01102,doPost,BenchmarkTest01102.java:77,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found DES."
 KeyGeneratorSpec,org.owasp.benchmark.testcode.BenchmarkTest01102,BenchmarkTest01102,doPost,BenchmarkTest01102.java:77,InvalidSequenceOfMethodCalls,unknown
 CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest01102,BenchmarkTest01102,doPost,BenchmarkTest01102.java:97,InvalidSequenceOfMethodCalls,unknown
@@ -501,18 +421,6 @@ CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest01106,BenchmarkTest01106,do
 KeyGeneratorSpec,org.owasp.benchmark.testcode.BenchmarkTest01107,BenchmarkTest01107,doPost,BenchmarkTest01107.java:71,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found DES."
 KeyGeneratorSpec,org.owasp.benchmark.testcode.BenchmarkTest01107,BenchmarkTest01107,doPost,BenchmarkTest01107.java:71,InvalidSequenceOfMethodCalls,unknown
 CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest01107,BenchmarkTest01107,doPost,BenchmarkTest01107.java:89,InvalidSequenceOfMethodCalls,unknown
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest01108,BenchmarkTest01108,doPost,BenchmarkTest01108.java:82,UnsafeAlgorithm,"expecting one of {AES/CBC/PKCS5Padding, AES/PCBC/ISO10126Padding, ...} but found AES/CCM/NoPadding."
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest01108,BenchmarkTest01108,doPost,BenchmarkTest01108.java:82,InvalidSequenceOfMethodCalls,unknown
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest01108,BenchmarkTest01108,doPost,BenchmarkTest01108.java:99,InvalidSequenceOfMethodCalls,unknown
-MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest01120,BenchmarkTest01120,doPost,BenchmarkTest01120.java:87,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found ."
-MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest01120,BenchmarkTest01120,doPost,BenchmarkTest01120.java:87,InvalidSequenceOfMethodCalls,unknown
-MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest01120,BenchmarkTest01120,doPost,BenchmarkTest01120.java:89,InvalidSequenceOfMethodCalls,unknown
-MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest01121,BenchmarkTest01121,doPost,BenchmarkTest01121.java:87,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found ."
-MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest01121,BenchmarkTest01121,doPost,BenchmarkTest01121.java:87,InvalidSequenceOfMethodCalls,unknown
-MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest01121,BenchmarkTest01121,doPost,BenchmarkTest01121.java:89,InvalidSequenceOfMethodCalls,unknown
-MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest01122,BenchmarkTest01122,doPost,BenchmarkTest01122.java:87,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found ."
-MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest01122,BenchmarkTest01122,doPost,BenchmarkTest01122.java:87,InvalidSequenceOfMethodCalls,unknown
-MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest01122,BenchmarkTest01122,doPost,BenchmarkTest01122.java:89,InvalidSequenceOfMethodCalls,unknown
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest01123,BenchmarkTest01123,doPost,BenchmarkTest01123.java:79,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found ."
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest01123,BenchmarkTest01123,doPost,BenchmarkTest01123.java:79,InvalidSequenceOfMethodCalls,unknown
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest01123,BenchmarkTest01123,doPost,BenchmarkTest01123.java:81,InvalidSequenceOfMethodCalls,unknown
@@ -534,12 +442,6 @@ CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest01151,BenchmarkTest01151,do
 CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest01152,BenchmarkTest01152,doPost,BenchmarkTest01152.java:65,UnsafeAlgorithm,"expecting one of {AES/CBC/PKCS5Padding, AES/PCBC/ISO10126Padding, ...} but found ."
 CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest01152,BenchmarkTest01152,doPost,BenchmarkTest01152.java:65,InvalidSequenceOfMethodCalls,unknown
 CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest01152,BenchmarkTest01152,doPost,BenchmarkTest01152.java:82,InvalidSequenceOfMethodCalls,unknown
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest01153,BenchmarkTest01153,doPost,BenchmarkTest01153.java:74,UnsafeAlgorithm,"expecting one of {AES/CBC/PKCS5Padding, AES/PCBC/ISO10126Padding, ...} but found AES/CCM/NoPadding."
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest01153,BenchmarkTest01153,doPost,BenchmarkTest01153.java:74,InvalidSequenceOfMethodCalls,unknown
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest01153,BenchmarkTest01153,doPost,BenchmarkTest01153.java:91,InvalidSequenceOfMethodCalls,unknown
-MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest01164,BenchmarkTest01164,doPost,BenchmarkTest01164.java:79,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found ."
-MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest01164,BenchmarkTest01164,doPost,BenchmarkTest01164.java:79,InvalidSequenceOfMethodCalls,unknown
-MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest01164,BenchmarkTest01164,doPost,BenchmarkTest01164.java:81,InvalidSequenceOfMethodCalls,unknown
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest01165,BenchmarkTest01165,doPost,BenchmarkTest01165.java:71,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found ."
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest01165,BenchmarkTest01165,doPost,BenchmarkTest01165.java:71,InvalidSequenceOfMethodCalls,unknown
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest01165,BenchmarkTest01165,doPost,BenchmarkTest01165.java:73,InvalidSequenceOfMethodCalls,unknown
@@ -564,9 +466,6 @@ CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest01230,BenchmarkTest01230,do
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest01244,BenchmarkTest01244,doPost,BenchmarkTest01244.java:72,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found ."
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest01244,BenchmarkTest01244,doPost,BenchmarkTest01244.java:72,InvalidSequenceOfMethodCalls,unknown
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest01244,BenchmarkTest01244,doPost,BenchmarkTest01244.java:74,InvalidSequenceOfMethodCalls,unknown
-MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest01245,BenchmarkTest01245,doPost,BenchmarkTest01245.java:72,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found ."
-MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest01245,BenchmarkTest01245,doPost,BenchmarkTest01245.java:72,InvalidSequenceOfMethodCalls,unknown
-MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest01245,BenchmarkTest01245,doPost,BenchmarkTest01245.java:74,InvalidSequenceOfMethodCalls,unknown
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest01246,BenchmarkTest01246,doPost,BenchmarkTest01246.java:64,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found ."
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest01246,BenchmarkTest01246,doPost,BenchmarkTest01246.java:64,InvalidSequenceOfMethodCalls,unknown
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest01246,BenchmarkTest01246,doPost,BenchmarkTest01246.java:66,InvalidSequenceOfMethodCalls,unknown
@@ -585,7 +484,6 @@ CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest01318,BenchmarkTest01318,do
 KeyGeneratorSpec,org.owasp.benchmark.testcode.BenchmarkTest01320,BenchmarkTest01320,doPost,BenchmarkTest01320.java:66,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found DES."
 KeyGeneratorSpec,org.owasp.benchmark.testcode.BenchmarkTest01320,BenchmarkTest01320,doPost,BenchmarkTest01320.java:66,InvalidSequenceOfMethodCalls,unknown
 CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest01320,BenchmarkTest01320,doPost,BenchmarkTest01320.java:86,InvalidSequenceOfMethodCalls,unknown
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest01321,BenchmarkTest01321,doPost,BenchmarkTest01321.java:72,InvalidSequenceOfMethodCalls,unknown
 KeyGeneratorSpec,org.owasp.benchmark.testcode.BenchmarkTest01322,BenchmarkTest01322,doPost,BenchmarkTest01322.java:66,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found DES."
 KeyGeneratorSpec,org.owasp.benchmark.testcode.BenchmarkTest01322,BenchmarkTest01322,doPost,BenchmarkTest01322.java:66,InvalidSequenceOfMethodCalls,unknown
 CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest01322,BenchmarkTest01322,doPost,BenchmarkTest01322.java:86,InvalidSequenceOfMethodCalls,unknown
@@ -607,16 +505,9 @@ MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest01334,BenchmarkTest0
 KeyGeneratorSpec,org.owasp.benchmark.testcode.BenchmarkTest01398,BenchmarkTest01398,doPost,BenchmarkTest01398.java:76,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found DES."
 KeyGeneratorSpec,org.owasp.benchmark.testcode.BenchmarkTest01398,BenchmarkTest01398,doPost,BenchmarkTest01398.java:76,InvalidSequenceOfMethodCalls,unknown
 CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest01398,BenchmarkTest01398,doPost,BenchmarkTest01398.java:96,InvalidSequenceOfMethodCalls,unknown
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest01399,BenchmarkTest01399,doPost,BenchmarkTest01399.java:82,InvalidSequenceOfMethodCalls,unknown
 CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest01400,BenchmarkTest01400,doPost,BenchmarkTest01400.java:72,UnsafeAlgorithm,"expecting one of {AES/CBC/PKCS5Padding, AES/PCBC/ISO10126Padding, ...} but found ."
 CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest01400,BenchmarkTest01400,doPost,BenchmarkTest01400.java:72,InvalidSequenceOfMethodCalls,unknown
 CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest01400,BenchmarkTest01400,doPost,BenchmarkTest01400.java:89,InvalidSequenceOfMethodCalls,unknown
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest01401,BenchmarkTest01401,doPost,BenchmarkTest01401.java:81,UnsafeAlgorithm,"expecting one of {AES/CBC/PKCS5Padding, AES/PCBC/ISO10126Padding, ...} but found AES/CCM/NoPadding."
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest01401,BenchmarkTest01401,doPost,BenchmarkTest01401.java:81,InvalidSequenceOfMethodCalls,unknown
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest01401,BenchmarkTest01401,doPost,BenchmarkTest01401.java:98,InvalidSequenceOfMethodCalls,unknown
-MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest01410,BenchmarkTest01410,doPost,BenchmarkTest01410.java:86,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found ."
-MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest01410,BenchmarkTest01410,doPost,BenchmarkTest01410.java:86,InvalidSequenceOfMethodCalls,unknown
-MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest01410,BenchmarkTest01410,doPost,BenchmarkTest01410.java:88,InvalidSequenceOfMethodCalls,unknown
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest01411,BenchmarkTest01411,doPost,BenchmarkTest01411.java:78,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found ."
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest01411,BenchmarkTest01411,doPost,BenchmarkTest01411.java:78,InvalidSequenceOfMethodCalls,unknown
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest01411,BenchmarkTest01411,doPost,BenchmarkTest01411.java:80,InvalidSequenceOfMethodCalls,unknown
@@ -638,7 +529,6 @@ CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest01483,BenchmarkTest01483,do
 KeyGeneratorSpec,org.owasp.benchmark.testcode.BenchmarkTest01484,BenchmarkTest01484,doPost,BenchmarkTest01484.java:64,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found DES."
 KeyGeneratorSpec,org.owasp.benchmark.testcode.BenchmarkTest01484,BenchmarkTest01484,doPost,BenchmarkTest01484.java:64,InvalidSequenceOfMethodCalls,unknown
 CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest01484,BenchmarkTest01484,doPost,BenchmarkTest01484.java:84,InvalidSequenceOfMethodCalls,unknown
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest01485,BenchmarkTest01485,doPost,BenchmarkTest01485.java:70,InvalidSequenceOfMethodCalls,unknown
 KeyGeneratorSpec,org.owasp.benchmark.testcode.BenchmarkTest01486,BenchmarkTest01486,doPost,BenchmarkTest01486.java:64,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found DES."
 KeyGeneratorSpec,org.owasp.benchmark.testcode.BenchmarkTest01486,BenchmarkTest01486,doPost,BenchmarkTest01486.java:64,InvalidSequenceOfMethodCalls,unknown
 CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest01486,BenchmarkTest01486,doPost,BenchmarkTest01486.java:84,InvalidSequenceOfMethodCalls,unknown
@@ -663,9 +553,6 @@ CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest01565,BenchmarkTest01565,do
 KeyGeneratorSpec,org.owasp.benchmark.testcode.BenchmarkTest01566,BenchmarkTest01566,doPost,BenchmarkTest01566.java:58,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found DES."
 KeyGeneratorSpec,org.owasp.benchmark.testcode.BenchmarkTest01566,BenchmarkTest01566,doPost,BenchmarkTest01566.java:58,InvalidSequenceOfMethodCalls,unknown
 CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest01566,BenchmarkTest01566,doPost,BenchmarkTest01566.java:76,InvalidSequenceOfMethodCalls,unknown
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest01567,BenchmarkTest01567,doPost,BenchmarkTest01567.java:69,UnsafeAlgorithm,"expecting one of {AES/CBC/PKCS5Padding, AES/PCBC/ISO10126Padding, ...} but found AES/CCM/NoPadding."
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest01567,BenchmarkTest01567,doPost,BenchmarkTest01567.java:69,InvalidSequenceOfMethodCalls,unknown
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest01567,BenchmarkTest01567,doPost,BenchmarkTest01567.java:86,InvalidSequenceOfMethodCalls,unknown
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest01577,BenchmarkTest01577,doPost,BenchmarkTest01577.java:66,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found MD5."
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest01577,BenchmarkTest01577,doPost,BenchmarkTest01577.java:66,InvalidSequenceOfMethodCalls,unknown
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest01577,BenchmarkTest01577,doPost,BenchmarkTest01577.java:68,InvalidSequenceOfMethodCalls,unknown
@@ -708,8 +595,6 @@ MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest01653,BenchmarkTest0
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest01654,BenchmarkTest01654,doPost,BenchmarkTest01654.java:92,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found MD5."
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest01654,BenchmarkTest01654,doPost,BenchmarkTest01654.java:92,InvalidSequenceOfMethodCalls,unknown
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest01654,BenchmarkTest01654,doPost,BenchmarkTest01654.java:94,InvalidSequenceOfMethodCalls,unknown
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest01738,BenchmarkTest01738,doPost,BenchmarkTest01738.java:69,InvalidSequenceOfMethodCalls,unknown
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest01739,BenchmarkTest01739,doPost,BenchmarkTest01739.java:69,InvalidSequenceOfMethodCalls,unknown
 KeyGeneratorSpec,org.owasp.benchmark.testcode.BenchmarkTest01740,BenchmarkTest01740,doPost,BenchmarkTest01740.java:57,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found DES."
 KeyGeneratorSpec,org.owasp.benchmark.testcode.BenchmarkTest01740,BenchmarkTest01740,doPost,BenchmarkTest01740.java:57,InvalidSequenceOfMethodCalls,unknown
 CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest01740,BenchmarkTest01740,doPost,BenchmarkTest01740.java:75,InvalidSequenceOfMethodCalls,unknown
@@ -722,15 +607,6 @@ CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest01742,BenchmarkTest01742,do
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest01757,BenchmarkTest01757,doPost,BenchmarkTest01757.java:73,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found ."
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest01757,BenchmarkTest01757,doPost,BenchmarkTest01757.java:73,InvalidSequenceOfMethodCalls,unknown
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest01757,BenchmarkTest01757,doPost,BenchmarkTest01757.java:75,InvalidSequenceOfMethodCalls,unknown
-MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest01758,BenchmarkTest01758,doPost,BenchmarkTest01758.java:73,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found ."
-MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest01758,BenchmarkTest01758,doPost,BenchmarkTest01758.java:73,InvalidSequenceOfMethodCalls,unknown
-MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest01758,BenchmarkTest01758,doPost,BenchmarkTest01758.java:75,InvalidSequenceOfMethodCalls,unknown
-MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest01759,BenchmarkTest01759,doPost,BenchmarkTest01759.java:73,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found ."
-MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest01759,BenchmarkTest01759,doPost,BenchmarkTest01759.java:73,InvalidSequenceOfMethodCalls,unknown
-MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest01759,BenchmarkTest01759,doPost,BenchmarkTest01759.java:75,InvalidSequenceOfMethodCalls,unknown
-MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest01760,BenchmarkTest01760,doPost,BenchmarkTest01760.java:73,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found ."
-MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest01760,BenchmarkTest01760,doPost,BenchmarkTest01760.java:73,InvalidSequenceOfMethodCalls,unknown
-MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest01760,BenchmarkTest01760,doPost,BenchmarkTest01760.java:75,InvalidSequenceOfMethodCalls,unknown
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest01761,BenchmarkTest01761,doPost,BenchmarkTest01761.java:65,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found ."
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest01761,BenchmarkTest01761,doPost,BenchmarkTest01761.java:65,InvalidSequenceOfMethodCalls,unknown
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest01761,BenchmarkTest01761,doPost,BenchmarkTest01761.java:67,InvalidSequenceOfMethodCalls,unknown
@@ -746,7 +622,6 @@ CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest01822,BenchmarkTest01822,do
 KeyGeneratorSpec,org.owasp.benchmark.testcode.BenchmarkTest01823,BenchmarkTest01823,doPost,BenchmarkTest01823.java:83,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found DES."
 KeyGeneratorSpec,org.owasp.benchmark.testcode.BenchmarkTest01823,BenchmarkTest01823,doPost,BenchmarkTest01823.java:83,InvalidSequenceOfMethodCalls,unknown
 CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest01823,BenchmarkTest01823,doPost,BenchmarkTest01823.java:103,InvalidSequenceOfMethodCalls,unknown
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest01828,BenchmarkTest01828,doPost,BenchmarkTest01828.java:87,InvalidSequenceOfMethodCalls,unknown
 KeyGeneratorSpec,org.owasp.benchmark.testcode.BenchmarkTest01829,BenchmarkTest01829,doPost,BenchmarkTest01829.java:75,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found DES."
 KeyGeneratorSpec,org.owasp.benchmark.testcode.BenchmarkTest01829,BenchmarkTest01829,doPost,BenchmarkTest01829.java:75,InvalidSequenceOfMethodCalls,unknown
 CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest01829,BenchmarkTest01829,doPost,BenchmarkTest01829.java:93,InvalidSequenceOfMethodCalls,unknown
@@ -762,13 +637,9 @@ MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest01845,BenchmarkTest0
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest01846,BenchmarkTest01846,doPost,BenchmarkTest01846.java:91,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found ."
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest01846,BenchmarkTest01846,doPost,BenchmarkTest01846.java:91,InvalidSequenceOfMethodCalls,unknown
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest01846,BenchmarkTest01846,doPost,BenchmarkTest01846.java:93,InvalidSequenceOfMethodCalls,unknown
-MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest01847,BenchmarkTest01847,doPost,BenchmarkTest01847.java:91,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found ."
-MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest01847,BenchmarkTest01847,doPost,BenchmarkTest01847.java:91,InvalidSequenceOfMethodCalls,unknown
-MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest01847,BenchmarkTest01847,doPost,BenchmarkTest01847.java:93,InvalidSequenceOfMethodCalls,unknown
 KeyGeneratorSpec,org.owasp.benchmark.testcode.BenchmarkTest01895,BenchmarkTest01895,doPost,BenchmarkTest01895.java:67,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found DES."
 KeyGeneratorSpec,org.owasp.benchmark.testcode.BenchmarkTest01895,BenchmarkTest01895,doPost,BenchmarkTest01895.java:67,InvalidSequenceOfMethodCalls,unknown
 CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest01895,BenchmarkTest01895,doPost,BenchmarkTest01895.java:87,InvalidSequenceOfMethodCalls,unknown
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest01896,BenchmarkTest01896,doPost,BenchmarkTest01896.java:73,InvalidSequenceOfMethodCalls,unknown
 KeyGeneratorSpec,org.owasp.benchmark.testcode.BenchmarkTest01897,BenchmarkTest01897,doPost,BenchmarkTest01897.java:67,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found DES."
 KeyGeneratorSpec,org.owasp.benchmark.testcode.BenchmarkTest01897,BenchmarkTest01897,doPost,BenchmarkTest01897.java:67,InvalidSequenceOfMethodCalls,unknown
 CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest01897,BenchmarkTest01897,doPost,BenchmarkTest01897.java:87,InvalidSequenceOfMethodCalls,unknown
@@ -781,9 +652,6 @@ CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest01899,BenchmarkTest01899,do
 KeyGeneratorSpec,org.owasp.benchmark.testcode.BenchmarkTest01900,BenchmarkTest01900,doPost,BenchmarkTest01900.java:61,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found DES."
 KeyGeneratorSpec,org.owasp.benchmark.testcode.BenchmarkTest01900,BenchmarkTest01900,doPost,BenchmarkTest01900.java:61,InvalidSequenceOfMethodCalls,unknown
 CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest01900,BenchmarkTest01900,doPost,BenchmarkTest01900.java:79,InvalidSequenceOfMethodCalls,unknown
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest01901,BenchmarkTest01901,doPost,BenchmarkTest01901.java:72,UnsafeAlgorithm,"expecting one of {AES/CBC/PKCS5Padding, AES/PCBC/ISO10126Padding, ...} but found AES/CCM/NoPadding."
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest01901,BenchmarkTest01901,doPost,BenchmarkTest01901.java:72,InvalidSequenceOfMethodCalls,unknown
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest01901,BenchmarkTest01901,doPost,BenchmarkTest01901.java:89,InvalidSequenceOfMethodCalls,unknown
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest01911,BenchmarkTest01911,doPost,BenchmarkTest01911.java:77,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found ."
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest01911,BenchmarkTest01911,doPost,BenchmarkTest01911.java:77,InvalidSequenceOfMethodCalls,unknown
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest01911,BenchmarkTest01911,doPost,BenchmarkTest01911.java:79,InvalidSequenceOfMethodCalls,unknown
@@ -799,15 +667,6 @@ CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest01980,BenchmarkTest01980,do
 KeyGeneratorSpec,org.owasp.benchmark.testcode.BenchmarkTest01981,BenchmarkTest01981,doPost,BenchmarkTest01981.java:71,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found DES."
 KeyGeneratorSpec,org.owasp.benchmark.testcode.BenchmarkTest01981,BenchmarkTest01981,doPost,BenchmarkTest01981.java:71,InvalidSequenceOfMethodCalls,unknown
 CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest01981,BenchmarkTest01981,doPost,BenchmarkTest01981.java:89,InvalidSequenceOfMethodCalls,unknown
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest01982,BenchmarkTest01982,doPost,BenchmarkTest01982.java:82,UnsafeAlgorithm,"expecting one of {AES/CBC/PKCS5Padding, AES/PCBC/ISO10126Padding, ...} but found AES/CCM/NoPadding."
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest01982,BenchmarkTest01982,doPost,BenchmarkTest01982.java:82,InvalidSequenceOfMethodCalls,unknown
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest01982,BenchmarkTest01982,doPost,BenchmarkTest01982.java:99,InvalidSequenceOfMethodCalls,unknown
-MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest01993,BenchmarkTest01993,doPost,BenchmarkTest01993.java:87,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found ."
-MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest01993,BenchmarkTest01993,doPost,BenchmarkTest01993.java:87,InvalidSequenceOfMethodCalls,unknown
-MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest01993,BenchmarkTest01993,doPost,BenchmarkTest01993.java:89,InvalidSequenceOfMethodCalls,unknown
-MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest01994,BenchmarkTest01994,doPost,BenchmarkTest01994.java:87,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found ."
-MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest01994,BenchmarkTest01994,doPost,BenchmarkTest01994.java:87,InvalidSequenceOfMethodCalls,unknown
-MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest01994,BenchmarkTest01994,doPost,BenchmarkTest01994.java:89,InvalidSequenceOfMethodCalls,unknown
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest01996,BenchmarkTest01996,doPost,BenchmarkTest01996.java:83,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found MD5."
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest01996,BenchmarkTest01996,doPost,BenchmarkTest01996.java:83,InvalidSequenceOfMethodCalls,unknown
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest01996,BenchmarkTest01996,doPost,BenchmarkTest01996.java:85,InvalidSequenceOfMethodCalls,unknown
@@ -835,22 +694,12 @@ CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest02022,BenchmarkTest02022,do
 KeyGeneratorSpec,org.owasp.benchmark.testcode.BenchmarkTest02023,BenchmarkTest02023,doPost,BenchmarkTest02023.java:63,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found DES."
 KeyGeneratorSpec,org.owasp.benchmark.testcode.BenchmarkTest02023,BenchmarkTest02023,doPost,BenchmarkTest02023.java:63,InvalidSequenceOfMethodCalls,unknown
 CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest02023,BenchmarkTest02023,doPost,BenchmarkTest02023.java:81,InvalidSequenceOfMethodCalls,unknown
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest02024,BenchmarkTest02024,doPost,BenchmarkTest02024.java:74,UnsafeAlgorithm,"expecting one of {AES/CBC/PKCS5Padding, AES/PCBC/ISO10126Padding, ...} but found AES/CCM/NoPadding."
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest02024,BenchmarkTest02024,doPost,BenchmarkTest02024.java:74,InvalidSequenceOfMethodCalls,unknown
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest02024,BenchmarkTest02024,doPost,BenchmarkTest02024.java:91,InvalidSequenceOfMethodCalls,unknown
-MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest02041,BenchmarkTest02041,doPost,BenchmarkTest02041.java:79,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found ."
-MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest02041,BenchmarkTest02041,doPost,BenchmarkTest02041.java:79,InvalidSequenceOfMethodCalls,unknown
-MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest02041,BenchmarkTest02041,doPost,BenchmarkTest02041.java:81,InvalidSequenceOfMethodCalls,unknown
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest02042,BenchmarkTest02042,doPost,BenchmarkTest02042.java:71,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found ."
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest02042,BenchmarkTest02042,doPost,BenchmarkTest02042.java:71,InvalidSequenceOfMethodCalls,unknown
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest02042,BenchmarkTest02042,doPost,BenchmarkTest02042.java:73,InvalidSequenceOfMethodCalls,unknown
 KeyGeneratorSpec,org.owasp.benchmark.testcode.BenchmarkTest02101,BenchmarkTest02101,doPost,BenchmarkTest02101.java:62,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found DES."
 KeyGeneratorSpec,org.owasp.benchmark.testcode.BenchmarkTest02101,BenchmarkTest02101,doPost,BenchmarkTest02101.java:62,InvalidSequenceOfMethodCalls,unknown
 CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest02101,BenchmarkTest02101,doPost,BenchmarkTest02101.java:82,InvalidSequenceOfMethodCalls,unknown
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest02102,BenchmarkTest02102,doPost,BenchmarkTest02102.java:68,InvalidSequenceOfMethodCalls,unknown
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest02103,BenchmarkTest02103,doPost,BenchmarkTest02103.java:67,UnsafeAlgorithm,"expecting one of {AES/CBC/PKCS5Padding, AES/PCBC/ISO10126Padding, ...} but found AES/CCM/NoPadding."
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest02103,BenchmarkTest02103,doPost,BenchmarkTest02103.java:67,InvalidSequenceOfMethodCalls,unknown
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest02103,BenchmarkTest02103,doPost,BenchmarkTest02103.java:84,InvalidSequenceOfMethodCalls,unknown
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest02118,BenchmarkTest02118,doPost,BenchmarkTest02118.java:72,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found ."
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest02118,BenchmarkTest02118,doPost,BenchmarkTest02118.java:72,InvalidSequenceOfMethodCalls,unknown
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest02118,BenchmarkTest02118,doPost,BenchmarkTest02118.java:74,InvalidSequenceOfMethodCalls,unknown
@@ -869,9 +718,6 @@ CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest02194,BenchmarkTest02194,do
 KeyGeneratorSpec,org.owasp.benchmark.testcode.BenchmarkTest02195,BenchmarkTest02195,doPost,BenchmarkTest02195.java:66,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found DES."
 KeyGeneratorSpec,org.owasp.benchmark.testcode.BenchmarkTest02195,BenchmarkTest02195,doPost,BenchmarkTest02195.java:66,InvalidSequenceOfMethodCalls,unknown
 CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest02195,BenchmarkTest02195,doPost,BenchmarkTest02195.java:86,InvalidSequenceOfMethodCalls,unknown
-MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest02210,BenchmarkTest02210,doPost,BenchmarkTest02210.java:76,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found ."
-MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest02210,BenchmarkTest02210,doPost,BenchmarkTest02210.java:76,InvalidSequenceOfMethodCalls,unknown
-MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest02210,BenchmarkTest02210,doPost,BenchmarkTest02210.java:78,InvalidSequenceOfMethodCalls,unknown
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest02211,BenchmarkTest02211,doPost,BenchmarkTest02211.java:68,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found ."
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest02211,BenchmarkTest02211,doPost,BenchmarkTest02211.java:68,InvalidSequenceOfMethodCalls,unknown
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest02211,BenchmarkTest02211,doPost,BenchmarkTest02211.java:70,InvalidSequenceOfMethodCalls,unknown
@@ -905,15 +751,6 @@ CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest02294,BenchmarkTest02294,do
 KeyGeneratorSpec,org.owasp.benchmark.testcode.BenchmarkTest02295,BenchmarkTest02295,doPost,BenchmarkTest02295.java:76,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found DES."
 KeyGeneratorSpec,org.owasp.benchmark.testcode.BenchmarkTest02295,BenchmarkTest02295,doPost,BenchmarkTest02295.java:76,InvalidSequenceOfMethodCalls,unknown
 CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest02295,BenchmarkTest02295,doPost,BenchmarkTest02295.java:96,InvalidSequenceOfMethodCalls,unknown
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest02296,BenchmarkTest02296,doPost,BenchmarkTest02296.java:81,UnsafeAlgorithm,"expecting one of {AES/CBC/PKCS5Padding, AES/PCBC/ISO10126Padding, ...} but found AES/CCM/NoPadding."
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest02296,BenchmarkTest02296,doPost,BenchmarkTest02296.java:81,InvalidSequenceOfMethodCalls,unknown
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest02296,BenchmarkTest02296,doPost,BenchmarkTest02296.java:98,InvalidSequenceOfMethodCalls,unknown
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest02297,BenchmarkTest02297,doPost,BenchmarkTest02297.java:81,UnsafeAlgorithm,"expecting one of {AES/CBC/PKCS5Padding, AES/PCBC/ISO10126Padding, ...} but found AES/CCM/NoPadding."
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest02297,BenchmarkTest02297,doPost,BenchmarkTest02297.java:81,InvalidSequenceOfMethodCalls,unknown
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest02297,BenchmarkTest02297,doPost,BenchmarkTest02297.java:98,InvalidSequenceOfMethodCalls,unknown
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest02298,BenchmarkTest02298,doPost,BenchmarkTest02298.java:81,UnsafeAlgorithm,"expecting one of {AES/CBC/PKCS5Padding, AES/PCBC/ISO10126Padding, ...} but found AES/CCM/NoPadding."
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest02298,BenchmarkTest02298,doPost,BenchmarkTest02298.java:81,InvalidSequenceOfMethodCalls,unknown
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest02298,BenchmarkTest02298,doPost,BenchmarkTest02298.java:98,InvalidSequenceOfMethodCalls,unknown
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest02307,BenchmarkTest02307,doPost,BenchmarkTest02307.java:86,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found ."
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest02307,BenchmarkTest02307,doPost,BenchmarkTest02307.java:86,InvalidSequenceOfMethodCalls,unknown
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest02307,BenchmarkTest02307,doPost,BenchmarkTest02307.java:88,InvalidSequenceOfMethodCalls,unknown
@@ -923,7 +760,6 @@ MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest02308,BenchmarkTest0
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest02311,BenchmarkTest02311,doPost,BenchmarkTest02311.java:78,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found MD5."
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest02311,BenchmarkTest02311,doPost,BenchmarkTest02311.java:78,InvalidSequenceOfMethodCalls,unknown
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest02311,BenchmarkTest02311,doPost,BenchmarkTest02311.java:80,InvalidSequenceOfMethodCalls,unknown
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest02372,BenchmarkTest02372,doPost,BenchmarkTest02372.java:70,InvalidSequenceOfMethodCalls,unknown
 KeyGeneratorSpec,org.owasp.benchmark.testcode.BenchmarkTest02373,BenchmarkTest02373,doPost,BenchmarkTest02373.java:64,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found DES."
 KeyGeneratorSpec,org.owasp.benchmark.testcode.BenchmarkTest02373,BenchmarkTest02373,doPost,BenchmarkTest02373.java:64,InvalidSequenceOfMethodCalls,unknown
 CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest02373,BenchmarkTest02373,doPost,BenchmarkTest02373.java:84,InvalidSequenceOfMethodCalls,unknown
@@ -984,9 +820,6 @@ CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest02550,BenchmarkTest02550,do
 CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest02551,BenchmarkTest02551,doPost,BenchmarkTest02551.java:82,UnsafeAlgorithm,"expecting one of {AES/CBC/PKCS5Padding, AES/PCBC/ISO10126Padding, ...} but found ."
 CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest02551,BenchmarkTest02551,doPost,BenchmarkTest02551.java:82,InvalidSequenceOfMethodCalls,unknown
 CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest02551,BenchmarkTest02551,doPost,BenchmarkTest02551.java:99,InvalidSequenceOfMethodCalls,unknown
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest02552,BenchmarkTest02552,doPost,BenchmarkTest02552.java:91,UnsafeAlgorithm,"expecting one of {AES/CBC/PKCS5Padding, AES/PCBC/ISO10126Padding, ...} but found AES/CCM/NoPadding."
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest02552,BenchmarkTest02552,doPost,BenchmarkTest02552.java:91,InvalidSequenceOfMethodCalls,unknown
-CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest02552,BenchmarkTest02552,doPost,BenchmarkTest02552.java:108,InvalidSequenceOfMethodCalls,unknown
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest02573,BenchmarkTest02573,doPost,BenchmarkTest02573.java:88,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found ."
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest02573,BenchmarkTest02573,doPost,BenchmarkTest02573.java:88,InvalidSequenceOfMethodCalls,unknown
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest02573,BenchmarkTest02573,doPost,BenchmarkTest02573.java:90,InvalidSequenceOfMethodCalls,unknown
@@ -1020,12 +853,6 @@ MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest02670,BenchmarkTest0
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest02671,BenchmarkTest02671,doPost,BenchmarkTest02671.java:73,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found ."
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest02671,BenchmarkTest02671,doPost,BenchmarkTest02671.java:73,InvalidSequenceOfMethodCalls,unknown
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest02671,BenchmarkTest02671,doPost,BenchmarkTest02671.java:75,InvalidSequenceOfMethodCalls,unknown
-MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest02672,BenchmarkTest02672,doPost,BenchmarkTest02672.java:73,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found ."
-MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest02672,BenchmarkTest02672,doPost,BenchmarkTest02672.java:73,InvalidSequenceOfMethodCalls,unknown
-MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest02672,BenchmarkTest02672,doPost,BenchmarkTest02672.java:75,InvalidSequenceOfMethodCalls,unknown
-MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest02673,BenchmarkTest02673,doPost,BenchmarkTest02673.java:73,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found ."
-MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest02673,BenchmarkTest02673,doPost,BenchmarkTest02673.java:73,InvalidSequenceOfMethodCalls,unknown
-MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest02673,BenchmarkTest02673,doPost,BenchmarkTest02673.java:75,InvalidSequenceOfMethodCalls,unknown
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest02674,BenchmarkTest02674,doPost,BenchmarkTest02674.java:65,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found MD5."
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest02674,BenchmarkTest02674,doPost,BenchmarkTest02674.java:65,InvalidSequenceOfMethodCalls,unknown
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest02674,BenchmarkTest02674,doPost,BenchmarkTest02674.java:67,InvalidSequenceOfMethodCalls,unknown
