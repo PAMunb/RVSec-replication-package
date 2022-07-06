@@ -192,3 +192,17 @@ analysis_ds = data.frame(Tools, Precision, Recall, FMeasure)
 analysis_ds
 
 ```
+
+
+```{r details}
+cc <- read.csv("../results/datasets/cognicrypt.csv", head=T, sep=",")
+
+cc <- sqldf("select *
+              from cc as c
+              where c.spec in ('CipherSpec', 'MessageDigestSpec')
+                    and c.className not in (select TestCase from gt where vulnerability = 'true')")
+
+nrow(cc)
+sqldf("select error, count(*) total from cc group by error order by 2")
+
+```
