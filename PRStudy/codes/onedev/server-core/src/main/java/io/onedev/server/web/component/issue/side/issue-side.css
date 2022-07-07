@@ -1,0 +1,46 @@
+.issue-side>* {
+	margin-bottom: 1.5rem;
+	border-top: 1px dashed var(--secondary);
+	padding-top: 1.5rem;
+}
+.dark-mode .issue-side>* {
+	border-top-color: var(--dark-mode-dark-gray);
+}
+.issue-side>div:first-child {
+	border-top: none;
+	padding-top: 0;
+}
+.issue-side>div>.head {
+	font-weight: 600;
+	margin-bottom: 0.8rem;
+}
+.issue-side>.fields>.body>table {
+	width: 100%;
+}
+.issue-side>.fields>.body>table>tbody>tr>td.name {
+	padding: 0 0.6rem 1.2rem 0;
+	vertical-align: top;
+	font-weight: 600;
+}
+.issue-side>.fields>.body>table>tbody>tr>td.values {
+	padding-bottom: 0.6rem;
+	vertical-align: top;
+}
+.issue-side>.fields>.body>table>tbody>tr:last-child>td {
+	padding-bottom: 0;
+}
+.issue-side>.fields .field-values {
+	flex-grow: 1;
+}
+.issue-side>.fields .field-values.editable:not(.with-working-indicator) .icon {
+	display: inline;
+}
+.issue-side>.fields .field-values:hover .icon {
+	color: var(--primary);
+}
+.issue-side>.fields .field-values.editable {
+	border-color: transparent;
+}
+.issue-side>.milestones li+li, .issue-side>.links li+li {
+	margin-top: 1.2rem; 
+}

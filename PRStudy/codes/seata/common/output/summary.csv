@@ -1,0 +1,5 @@
+spec,class,className,method,location,error,expecting
+KeyPairSpec,io.seata.common.util.ConfigTools,ConfigTools,getPublicKey,ConfigTools.java:45,InvalidSequenceOfMethodCalls,unknown
+KeyPairSpec,io.seata.common.util.ConfigTools,ConfigTools,getPrivateKey,ConfigTools.java:52,InvalidSequenceOfMethodCalls,unknown
+KeyPairSpec,io.seata.common.util.ConfigTools,ConfigTools,getPublicKey,ConfigTools.java:45,InvalidSequenceOfMethodCalls,unknown
+KeyPairSpec,io.seata.common.util.ConfigTools,ConfigTools,getPrivateKey,ConfigTools.java:52,InvalidSequenceOfMethodCalls,unknown

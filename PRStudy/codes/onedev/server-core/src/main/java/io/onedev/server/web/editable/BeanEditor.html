@@ -1,0 +1,18 @@
+<wicket:panel>
+    <div wicket:id="groups" class="group bean-properties">
+        <a wicket:id="toggle" class="toggle d-flex align-items-center"><span wicket:id="groupName" class="mr-3"></span> <wicket:svg href="arrow" class="icon ml-auto"/></a>
+        <div>
+			<div wicket:id="properties" class="form-group">
+				<wicket:enclosure child="name">
+				<label class="name control-label">
+					<span wicket:id="name"></span>
+					<span wicket:id="required" class="text-danger"></span>
+				</label>
+				</wicket:enclosure>
+				<div wicket:id="value" class="value"></div>
+				<div wicket:id="feedback"></div>
+				<div wicket:id="description" class="text-muted form-text"></div>
+			</div>
+        </div>
+    </div>
+</wicket:panel>

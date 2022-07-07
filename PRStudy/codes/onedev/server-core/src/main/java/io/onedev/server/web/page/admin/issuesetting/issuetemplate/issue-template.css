@@ -1,0 +1,5 @@
+@media(min-width: 992px) {
+.floating.off-canvas.issue-template {
+    width: 600px;
+}
+}

@@ -1,0 +1,18 @@
+<wicket:panel>
+	<div class="m-4 no-commits text-center">
+		<img src="/icon/empty.svg" class="text-center mb-5"/>
+	    <h3 class="alert-heading mb-3">Project does not have any code yet</h3>
+		<div class="mb-4">
+			You may initialize the project by <a wicket:id="addFiles" class="link-primary">adding files</a>,
+			<a wicket:id="setupBuildSpec" class="link-primary">setting up build spec</a>,  
+			or <a wicket:id="pushInstructions" class="link-primary">pushing an existing repository</a>
+		</div>
+	</div>
+	<wicket:fragment wicket:id="pushInstructionsFrag">
+		<div class="mb-3">Run below commands from within your git repository:</div>
+		<div class="code">
+			<div>git remote add origin <span wicket:id="url"></span></div>
+			<div>git push -u origin master</div>
+		</div>
+	</wicket:fragment>
+</wicket:panel>

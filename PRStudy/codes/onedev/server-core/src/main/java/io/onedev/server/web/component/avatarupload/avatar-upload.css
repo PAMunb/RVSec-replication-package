@@ -1,0 +1,25 @@
+.avatar-upload .preview {
+    margin-top: 10px;
+}
+.avatar-upload .cropping {
+    width: 240px;
+    height: 240px;
+}
+.avatar-upload .cropping img {
+    width: 1px;
+    height: 1px;
+}
+.avatar-upload .cropped {
+    width: 240px;
+    height: 240px;
+    margin-left: 20px;
+    border-radius: 1000px;
+    overflow: hidden;
+}
+.avatar-upload.no-avatar .preview {
+    display: none;
+}
+
+.avatar-upload input[type="text"] {
+    display: none;
+}

@@ -1,0 +1,12 @@
+.agent-list table thead>tr>th, .agent-detail table thead>tr>th {
+	white-space: nowrap;
+}
+.floating .token-list {
+	width: 640px;
+}
+.floating .add-agent {
+	width: 600px;
+}
+.floating .add-agent ul {
+	padding-left: 14px;
+}

@@ -1,0 +1,12 @@
+.source-format select {
+	padding: 0 2rem 0 1rem;
+	height: 2rem;
+	border-radius: 4px;
+}
+.dark-mode .source-format select {
+	color: var(--dark-mode-gray);
+}
+
+.source-format>div:last-child {
+	margin-right: 0 !important;
+}

@@ -1,0 +1,9 @@
+.entity-watches>.head {
+	font-weight: 600;
+	margin-bottom: 0.8rem;
+}
+.entity-watches>.body a.avatar {
+	margin-right: 0.8rem;
+	margin-bottom: 0.8rem;
+	display: inline-block;
+}

@@ -1,0 +1,21 @@
+.blob-edit>.head {
+	border-bottom: 1px solid var(--light-gray);
+	height: 3rem;
+}
+.blob-edit>.head .tab a {
+	border-bottom: 1px solid transparent;
+	margin-bottom: -1px;
+}
+.blob-edit>.head .active.tab a, .blob-edit>.head .tab a:focus, .blob-edit>.head .tab a:hover {
+	border-color: var(--primary);
+}
+.blob-edit>.head .active.tab a {
+	color: var(--primary);
+}
+
+.blob-edit>.body>form>.feedback>ul {
+	margin-bottom: 0;
+}
+.blob-edit>.body>form>.feedback>ul>li {
+	border-radius: 0;
+}

@@ -1,0 +1,12 @@
+.source-edit>.code {
+	background: none;
+	border: none;
+	border-radius: 0;
+	padding: 0;
+	margin: 0;
+	font-family: inherit;
+	font-size: inherit;
+}
+.source-edit>.warning {
+	display: none;
+}

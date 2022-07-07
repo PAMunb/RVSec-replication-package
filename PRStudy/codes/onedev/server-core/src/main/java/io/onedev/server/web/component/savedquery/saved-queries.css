@@ -1,0 +1,8 @@
+.saved-queries > .card-body .watch-status:after, 
+.saved-queries > .card-body .subscription-status:after {
+	display: none;
+}
+.edit-saved-queries .modal-footer {
+	margin: -1.75rem;
+	margin-top: 0;
+}

@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en" xmlns:wicket="http://wicket.apache.org">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta wicket:id="pageRefresh" http-equiv="refresh"/>
+	<meta name="Author" content="onedev.io" />
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, shrink-to-fit=no">
+ 	<meta wicket:id="robots" name="robots">	
+	<link rel="icon" type="image/png" href="/img/logo.png">	
+	<title wicket:id="pageTitle">OneDev</title>
+</head>
+<body>
+	<script wicket:id="script" type="application/javascript"></script>
+	<wicket:child></wicket:child>
+	
+	<div wicket:id="sessionFeedback" id="session-feedback"></div>
+	<div id="ajax-loading-indicator"><div>Please wait...</div></div>
+	
+	<div wicket:id="keepSessionAlive" style="display:none;"></div>
+	<div class="websocket-error">
+		Page is in error, reload to recover
+	</div>
+	<div wicket:id="rootComponents"></div>
+</body>
+</html>

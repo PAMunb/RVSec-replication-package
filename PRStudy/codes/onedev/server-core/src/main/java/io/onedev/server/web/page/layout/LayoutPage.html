@@ -1,0 +1,126 @@
+<wicket:extend>
+	<div wicket:id="sidebar" class="sidebar">
+		<div class="sidebar-header">
+			<a wicket:id="brandLink" class="sidebar-brand">
+				<span wicket:id="brandLogo"></span>
+				<span wicket:id="brandName"></span>			
+			</a>
+			<a href="javascript:void(0);" class="sidebar-mini-toggle d-none d-lg-inline"><wicket:svg href="expand3" class="icon"></wicket:svg></a>
+			<a href="javascript:void(0);" class="sidebar-close d-lg-none"><wicket:svg href="times" class="icon"></wicket:svg></a>
+		</div>
+		<div class="sidebar-body ps ps-scroll">
+			<div wicket:id="menus" class="sidebar-menu">
+				<div wicket:id="header" class="menu-header"></div>
+				<div wicket:id="body" class="menu-body"></div>
+			</div>
+		</div>
+		<div class="sidebar-footer">
+			<a wicket:id="productVersion" class="sidebar-version"></a>
+			<div class="dropdown sidebar-help">
+				<a href="#" class="dropdown-toggle no-dropdown-caret" data-toggle="dropdown">
+					<wicket:svg href="question-o" class="icon"></wicket:svg>
+				</a>
+				<div class="dropdown-menu">
+					<a wicket:id="docLink" class="dropdown-item" target="_blank">Documentation</a>
+					<a href="https://code.onedev.io/projects/160/issues?query=%22State%22+is+%22Open%22" class="dropdown-item" target="_blank">Support &amp; Bug Report</a>
+					<a href="/help/api" class="dropdown-item" target="_blank">RESTful API</a>
+					<a wicket:id="incompatibilities" class="dropdown-item">Incompatibilities</a>
+	          	</div>  					
+			</div>
+		</div>
+	</div>
+	<div wicket:id="topbar" class="topbar">
+		<div class="topbar-left">
+			<a wicket:id="brandLink" class="topbar-brand">
+				<span wicket:id="brandLogo"></span>
+			</a>
+			<a class="sidebar-toggle topbar-link d-lg-none">
+				<wicket:svg href="menu" class="icon"></wicket:svg>
+			</a>
+			<div wicket:id="title" class="topbar-title"></div>
+		</div>
+		<div class="topbar-right text-nowrap">
+			<a wicket:id="showCommandPalette" class="topbar-link command-palette"></a>
+			<a wicket:id="darkMode" class="topbar-link" title="Toggle dark mode"><svg wicket:id="icon" class="icon"/></a>
+			<a href="https://github.com/theonedev/onedev" class="github topbar-link d-none d-sm-inline" target="_blank">
+				<wicket:svg href="github" class="icon"></wicket:svg>
+			</a>
+	  		<a wicket:id="signIn" class="topbar-link sign-in"><wicket:svg href="login" class="icon"/> <span class="d-none d-sm-inline">Sign In</span></a>
+			<div wicket:id="userInfo" class="dropdown user-info">
+				<a href="#" class="dropdown-toggle user-info no-dropdown-caret topbar-link" data-toggle="dropdown">
+					<img wicket:id="avatar"> 
+					<span wicket:id="name" class="ml-2 d-none d-lg-inline"></span>
+					<span wicket:id="warningIcon"><wicket:svg href="warning-o" class="icon text-warning ml-2"/></span>
+				</a>
+				<div class="dropdown-menu">
+					<wicket:enclosure child="hasUnverifiedLink">
+					<div class="mx-3 my-2 alert alert-light-warning">
+						You have unverified <a wicket:id="hasUnverifiedLink">email addresses</a>
+					</div>
+					</wicket:enclosure>
+					<wicket:enclosure child="noPrimaryAddressLink">
+					<div class="mx-3 my-2 alert alert-light-warning">
+						Primary <a wicket:id="noPrimaryAddressLink">email address</a> not specified
+					</div>
+					</wicket:enclosure>
+					<a wicket:id="myProfile" class="dropdown-item">
+						<wicket:svg href="profile" class="icon mr-2"></wicket:svg>
+						Profile
+					</a>
+					<a wicket:id="myEmailSetting" class="dropdown-item">
+						<wicket:svg href="mail" class="icon mr-2"></wicket:svg>
+						Email Addresses
+					</a>
+					<a wicket:id="myAvatar" class="dropdown-item">
+						<wicket:svg href="avatar" class="icon mr-2"></wicket:svg>
+						Edit Avatar
+					</a>
+					<a wicket:id="myPassword" class="dropdown-item">
+						<wicket:svg href="password" class="icon mr-2"></wicket:svg>
+						Change Password
+					</a>
+					<a wicket:id="mySshKeys" class="dropdown-item">
+						<wicket:svg href="key" class="icon mr-2"></wicket:svg>
+						SSH Keys
+					</a>
+					<a wicket:id="myGpgKeys" class="dropdown-item">
+						<wicket:svg href="key" class="icon mr-2"></wicket:svg>
+						GPG Keys
+					</a>
+					<a wicket:id="myAccessToken" class="dropdown-item">
+						<wicket:svg href="token" class="icon mr-2"></wicket:svg>
+						Access Token
+					</a>
+					<a wicket:id="myTwoFactorAuthentication" class="dropdown-item">
+						<wicket:svg href="shield" class="icon mr-2"></wicket:svg>
+						Two-factor Authentication
+					</a>
+					<a wicket:id="signOut" class="dropdown-item">
+						<wicket:svg href="logout" class="icon mr-2"></wicket:svg>
+						<span wicket:id="label"></span>
+					</a>
+	          	</div>        				
+			</div>
+		</div>
+	</div>
+	<div class="main autofit d-flex flex-column resize-aware">
+		<wicket:child></wicket:child>
+	</div>
+	
+	<wicket:fragment wicket:id="menuHeaderFrag">
+		<img wicket:id="icon" class="menu-header-icon"></img>
+		<span wicket:id="label" class="menu-header-text"></span>
+		<a wicket:id="moreInfo" class="mehu-header-ellipsis" title="More info"><wicket:svg href="ellipsis" class="icon"/></a>
+	</wicket:fragment>
+	<wicket:fragment wicket:id="menuBodyFrag">
+		<div wicket:id="items" class="menu-item">
+			<a wicket:id="link" class="menu-link">
+				<svg wicket:id="icon" class="icon menu-icon"></svg>
+				<span wicket:id="bullet" class="menu-bullet"></span>
+				<span wicket:id="label" class="menu-text"></span>
+				<svg wicket:id="arrow" class="icon menu-arrow"></svg>
+			</a>
+			<div wicket:id="subMenu" class="menu-body"></div>
+		</div>
+	</wicket:fragment>
+</wicket:extend>

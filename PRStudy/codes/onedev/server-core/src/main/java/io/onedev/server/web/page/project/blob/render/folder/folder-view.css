@@ -1,0 +1,32 @@
+.folder-view>table>tbody>tr>td {
+	padding: 0.6rem 1.2rem; 
+	border-top: 1px solid var(--light); 
+	min-width: 120px;
+}
+.dark-mode .folder-view>table>tbody>tr>td {
+	border-top-color: var(--dark-mode-light-dark); 
+}
+
+.folder-view>table>tbody>tr>td.path {
+	min-width: 200px;
+}
+
+.folder-view>table>tbody>tr:first-child>td {
+	border-top: none;
+}
+.folder-view>.readme>.head {
+	padding: 0.5rem 1rem;
+	background: var(--light);
+	border-top: 1px solid var(--light-gray);
+	border-bottom: 1px solid var(--light-gray);
+}
+.dark-mode .folder-view>.readme>.head {
+	background: var(--dark-mode-light-dark);
+	border-top-color: var(--dark-mode-lighter-dark);
+	border-bottom-color: var(--dark-mode-lighter-dark);
+}
+.folder-view>.readme>.body {
+	max-width: 900px;
+	margin-left: auto;
+	margin-right: auto;
+}

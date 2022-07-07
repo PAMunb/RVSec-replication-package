@@ -1,0 +1,59 @@
+.issue-list>div>.body table>tbody>tr>td {
+	padding: 1.2rem 0.8rem 0.7rem 0.8rem;
+}
+.issue-list>div>.body table>tbody>tr>td.row-selector {
+	padding-top: 1.3rem;
+}
+.issue-list .field.undefined {
+	display: none;
+}
+.issue-list .field .issue-state {
+	margin-bottom: 0.5rem;
+	margin-right: 0.5rem;
+}
+
+.issue-list>div>.body .new-indicator {
+	width: 4px;
+	padding: 0;
+}
+.issue-list>div>.body tr.issue.new td.new-indicator {
+	background: var(--primary);
+}
+
+.issue-list>div>.body tr.issue .working-indicator {
+	margin-top: 4px;
+}
+
+.issue-list .number {
+	margin-right: 0.25rem;
+}
+.issue-list .number, .issue-list .title {
+	font-size: 1.175rem;
+	font-weight: 500;	
+}
+.issue-list .state {
+	border-bottom: 2px dotted transparent;
+	cursor: pointer;
+}
+.issue-list .state:hover {
+	border-color: var(--gray);
+}
+
+.issue-list .link.expanded .icon {
+	transform: rotate(90deg);
+}
+
+.issue-list .linked-issues {
+	border-left: 2px dashed var(--secondary);
+}
+.dark-mode .issue-list .linked-issues {
+	border-left-color: var(--dark-mode-dark-gray);
+}
+.issue-list .linked-issue {
+	margin-top: 0.7rem;
+	padding-top: 1.2rem;
+	border-top: 1px solid var(--light-gray);
+}
+.dark-mode .issue-list .linked-issue {
+	border-top-color: var(--dark-mode-light-dark);
+}

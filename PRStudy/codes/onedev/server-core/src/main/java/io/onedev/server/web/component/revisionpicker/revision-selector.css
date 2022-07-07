@@ -1,0 +1,22 @@
+.revision-selector {
+	min-width: 240px;
+}
+.revision-selector input+.icon {
+	margin-left: -1.8rem;
+}
+.revision-selector input {
+	padding-right: 2rem;
+}
+.revision-selector .items {
+	margin-bottom: 0;
+	/* 
+	 * Configure max height to make sure scroll bar appears if there are many refs as we initially only 
+	 * loads a page of items 
+	 */
+	max-height: 600px; 
+}
+
+.revision-selector .items .icon {
+	width: 12px;
+	height: 12px;
+}

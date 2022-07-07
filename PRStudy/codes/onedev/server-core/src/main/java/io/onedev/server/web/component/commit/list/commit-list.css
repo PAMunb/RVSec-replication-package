@@ -1,0 +1,173 @@
+.commit-list>div>.body {
+	position: relative;
+}
+
+.commit-list li.date {
+	border-bottom: 1px solid var(--light-gray);
+	font-size: 1.5rem;
+	padding-bottom: 0.5rem;
+	margin-bottom: 0.5rem;
+	margin-top: 1.8rem;
+	align-items: center !important;
+}
+.dark-mode .commit-list li.date {
+	border-bottom-color: var(--dark-mode-lighter-dark);
+}
+
+.commit-list li.commit {
+	padding: 0.4rem 0;
+	border-radius: 0.42rem;
+}
+
+.commit-list .commit-message>.summary {
+	font-weight: 600;
+	font-size: 1.1rem;
+}
+
+.commit-list .commit-message .highlight {
+	background: yellow;
+}
+.dark-mode .commit-list .commit-message .highlight {
+	background: rgb(125, 82, 1);
+}
+
+@media(max-width: 991px) {
+	.commit-list .commit-graph, .commit-list li.commit .actions {
+		display: none !important;
+	}
+	.commit-list ul.list {
+		margin-left: 0 !important;
+	}
+}
+@media(min-width: 992px) {
+	.commit-list li.commit {
+		padding-left: 0.6rem;
+		padding-right: 0.6rem;
+	}
+	.commit-list li.commit:hover, .commit-list li.commit.hover {
+		background: var(--light);
+	}
+	.dark-mode .commit-list li.commit:hover, .dark-mode .commit-list li.commit.hover {
+		background: var(--dark-mode-light-dark);
+	}
+}
+
+.commit-graph {
+	position: absolute;
+	top: 0;
+}
+.commit-dot {
+	fill: #53a8fd;
+	stroke: #53a8fd;
+}
+.commit-line {
+	stroke-width: 1px;
+	stroke: #53a8fd;
+	fill: none;
+}
+
+.commit-dot-color1 {
+	fill: #53a8fd;
+	stroke: #53a8fd;
+}
+.commit-line-color1 {
+	stroke: #53a8fd;
+}
+
+.commit-dot-color2 {
+	fill: #09c112;
+	stroke: #09c112;
+}
+.commit-line-color2 {
+	stroke: #09c112;
+}
+
+.commit-dot-color3 {
+	fill: #ff4242;
+	stroke: #ff4242;
+}
+.commit-line-color3 {
+	stroke: #ff4242;
+}
+
+.commit-dot-color4 {
+	fill: #0252a2;
+	stroke: #0252a2;
+}
+.commit-line-color4 {
+	stroke: #0252a2;
+}
+
+.commit-dot-color5 {
+	fill: #056d0b;
+	stroke: #056d0b;
+}
+.commit-line-color5 {
+	stroke: #056d0b;
+}
+
+.commit-dot-color6 {
+	fill: #b00000;
+	stroke: #b00000;
+}
+.commit-line-color6 {
+	stroke: #b00000;
+}
+
+.commit-dot-color7 {
+	fill: #af29f8;
+	stroke: #af29f8;
+}
+.commit-line-color7 {
+	stroke: #af29f8;
+}
+
+.commit-dot-color8 {
+	fill: #ee6c1e;
+	stroke: #ee6c1e;
+}
+.commit-line-color8 {
+	stroke: #ee6c1e;
+}
+
+.commit-dot-color9 {
+	fill: #ef56cd;
+	stroke: #ef56cd;
+}
+.commit-line-color9 {
+	stroke: #ef56cd;
+}
+
+.commit-dot-color10 {
+	fill: #630596;
+	stroke: #630596;
+}
+.commit-line-color10 {
+	stroke: #630596;
+}
+
+.commit-dot-color11 {
+	fill: #8e4509;
+	stroke: #8e4509;
+}
+.commit-line-color11 {
+	stroke: #8e4509;
+}
+
+.commit-dot-color12 {
+	fill: #9b0f7b;
+	stroke: #9b0f7b;
+}
+.commit-line-color12 {
+	stroke: #9b0f7b;
+}
+
+.commit-list .no-commits {
+	background: url(/icon/empty.svg) no-repeat scroll center center;
+	background-size: 240px 240px;
+	border-top: none;
+	height: 240px;
+}
+.dark-mode .commit-list .no-commits {
+	filter: invert(80%);
+}

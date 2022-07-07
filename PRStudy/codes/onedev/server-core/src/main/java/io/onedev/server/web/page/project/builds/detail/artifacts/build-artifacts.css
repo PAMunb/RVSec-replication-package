@@ -1,0 +1,9 @@
+.build-artifacts>table th, .build-artifacts>table td {
+	padding: 0.6rem;
+}
+.build-artifacts>table th.tree {
+    padding-left: 1.2rem;
+}
+.build-artifacts>table td.tree {
+    padding-left: 0px;
+}

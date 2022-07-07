@@ -1,0 +1,35 @@
+<wicket:panel>
+    <div class="bean-list">
+        <table wicket:id="table">
+            <thead>
+                <th class="actions minimum"></th>
+                <th wicket:id="headers">
+                    <span wicket:id="header"></span>
+                    <span wicket:id="required" class="text-danger"></span>
+                    <span wicket:id="help"><wicket:svg href="question-o" class="icon icon-sm"/></span>
+                </th>
+                <th class="actions"></th>
+            </thead>
+            <tbody>
+                <tr wicket:id="elements">
+                    <td class="actions minimum">
+                        <wicket:svg href="grip" class="icon drag-indicator"/>
+                    </td>
+                    <td wicket:id="properties">
+                        <div wicket:id="propertyEditor"></div>
+                        <div wicket:id="feedback"></div>
+                    </td>
+                    <td class="actions minimum">
+                        <a wicket:id="deleteElement" class="btn btn-icon btn-light btn-hover-danger" title="Delete this"><wicket:svg href="trash" class="icon delete"/></a>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot wicket:id="noRecords">
+                <tr>
+                    <td wicket:id="td">Not defined</td>
+                </tr>
+            </tfoot>
+        </table>
+         <div class="foot"><a wicket:id="addElement" title="Add new" class="add-element btn btn-light btn-hover-primary btn-block"><wicket:svg href="plus" class="icon"></wicket:svg></a></div>
+    </div>
+</wicket:panel>

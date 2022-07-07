@@ -1,0 +1,17 @@
+.project-selector input {
+	padding-right: 2rem;
+}
+.project-selector input+.icon {
+	margin-left: -1.8rem;
+}
+.project-selector .project>a>.icon {
+	width: 12px;
+	height: 12px;
+	visibility: hidden;
+}
+.project-selector .project>a.current>.icon {
+	visibility: visible;
+}
+.no-current .project-selector .project>a>.icon {
+	display: none;
+}

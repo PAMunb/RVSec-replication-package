@@ -1,0 +1,23 @@
+.blame-message {
+	background-color: var(--light-info); 
+	border-radius: 0.42rem; 
+	color: var(--info);
+	position: absolute;
+	z-index: 10000;
+	font-size: 12px; 
+	padding: 1rem; 
+	z-index: 10000; 
+	box-shadow: 0px 10px 30px 0px rgba(82, 63, 105, 0.08);
+	max-width: 720px;
+	white-space: pre-wrap; 
+	word-wrap: break-word;
+}
+.dark-mode .blame-message {
+	background-color: var(--dark-mode-light-info); 
+	color: var(--info);
+	box-shadow: 0 0 30px rgb(0 0 0 / 50%);	
+}
+.blame-message>.authoring {
+	margin-bottom: 1rem;
+	font-weight: bold;	
+}

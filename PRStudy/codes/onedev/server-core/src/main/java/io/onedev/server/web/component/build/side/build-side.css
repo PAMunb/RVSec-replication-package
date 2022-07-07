@@ -1,0 +1,38 @@
+.build-side>* {
+	margin-bottom: 1.5rem;
+	border-top: 1px dashed var(--secondary);
+	padding-top: 1.5rem;
+}
+.dark-mode .build-side>* {
+	border-top-color: var(--dark-mode-dark-gray);
+}
+
+.build-side>div:first-child {
+	border-top: none;
+	padding-top: 0;
+}
+.build-side>.properties {
+    width: 100%;
+    display: table;
+}
+.build-side>.properties>div {
+    display: table-row;
+}
+.build-side>.properties>div>div.name {
+    display: table-cell;
+	padding: 0 1rem 1.5rem 0;
+	width: 40%;
+	font-weight: 500;
+}
+.build-side>.properties>div>div.value {
+    display: table-cell;
+	padding: 0 0 1.5rem 1rem;
+}
+.build-side>.properties>div:last-child>div {
+	padding-bottom: 0;
+}
+
+.build-side>div>.head {
+	font-weight: 600;
+	margin-bottom: 1rem;
+}

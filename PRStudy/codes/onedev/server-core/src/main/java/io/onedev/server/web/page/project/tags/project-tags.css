@@ -1,0 +1,24 @@
+.project-tags .body>table>thead {
+	display: none;
+}
+.project-tags .body>table td {
+	padding-left: 0;
+	padding-right: 0;
+}
+.project-tags .body>table td.tag>.title>.name {
+	font-weight: bold;
+	font-size: 1.1rem;
+}
+.project-tags .annotated .message {
+	display: none; 
+    font-size: 0.9rem;
+	border-left: 4px solid var(--secondary);
+    margin: 1rem 0;
+    padding: 0 0 0 1rem;
+    border-radius: 0;
+	white-space: pre-wrap;
+}
+.dark-mode .project-tags .annotated .message {
+	border-left-color: var(--dark-mode-lighter-dark);
+}
+

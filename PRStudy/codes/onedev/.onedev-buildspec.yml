@@ -1,0 +1,208 @@
+version: 15
+jobs:
+- name: CI
+  steps:
+  - !CheckoutStep
+    name: checkout
+    cloneCredential: !DefaultCredential {}
+    withLfs: false
+    withSubmodules: true
+    cloneDepth: 1
+    condition: ALL_PREVIOUS_STEPS_WERE_SUCCESSFUL
+  - !CommandStep
+    name: detect build version
+    runInContainer: true
+    image: 1dev/build-environment:1.3
+    interpreter: !DefaultInterpreter
+      commands:
+      - set -e
+      - echo "Detecting project version (may require some time while downloading maven
+        dependencies)..."
+      - echo $(mvn org.apache.maven.plugins:maven-help-plugin:3.2.0:evaluate -Dexpression=project.version
+        -q -DforceStdout) > buildVersion
+    useTTY: false
+    condition: ALL_PREVIOUS_STEPS_WERE_SUCCESSFUL
+  - !SetBuildVersionStep
+    name: set build version
+    buildVersion: '@file:buildVersion@'
+    condition: ALL_PREVIOUS_STEPS_WERE_SUCCESSFUL
+  - !CommandStep
+    name: test
+    runInContainer: true
+    image: 1dev/build-environment:1.3
+    interpreter: !DefaultInterpreter
+      commands:
+      - mvn test
+    useTTY: true
+    condition: ALL_PREVIOUS_STEPS_WERE_SUCCESSFUL
+  triggers:
+  - !PullRequestUpdateTrigger {}
+  - !BranchUpdateTrigger {}
+  retryCondition: never
+  maxRetries: 3
+  retryDelay: 30
+  cpuRequirement: 250
+  memoryRequirement: 128
+  caches:
+  - key: maven-cache
+    path: /root/.m2/repository
+  timeout: 3600
+- name: Release
+  steps:
+  - !CheckoutStep
+    name: checkout
+    cloneCredential: !HttpCredential
+      accessTokenSecret: onedev-token
+    withLfs: false
+    withSubmodules: true
+    condition: ALL_PREVIOUS_STEPS_WERE_SUCCESSFUL
+  - !CommandStep
+    name: 'detect build version '
+    runInContainer: true
+    image: 1dev/build-environment:1.3
+    interpreter: !DefaultInterpreter
+      commands:
+      - set -e
+      - echo "Detecting project version (may require some time while downloading maven
+        dependencies)..."
+      - echo $(mvn org.apache.maven.plugins:maven-help-plugin:3.1.0:evaluate -Dexpression=project.version
+        -q -DforceStdout) > buildVersion
+    useTTY: false
+    condition: ALL_PREVIOUS_STEPS_WERE_SUCCESSFUL
+  - !SetBuildVersionStep
+    name: set build version
+    buildVersion: '@file:buildVersion@'
+    condition: ALL_PREVIOUS_STEPS_WERE_SUCCESSFUL
+  - !CommandStep
+    name: build & deploy
+    runInContainer: true
+    image: 1dev/build-environment:1.3
+    interpreter: !DefaultInterpreter
+      commands:
+      - set -e
+      - set -o pipefail
+      - ''
+      - buildVersion=@build_version@
+      - ''
+      - projectDir=`pwd`
+      - docker login -u robinshen -p @secrets:dockerhub-password@
+      - ''
+      - '# Skip test as we''ve already tested in CI build'
+      - mvn -Dmaven.test.skip=true -Dmaven.deploy.password=@secrets:maven-deploy-password@
+        deploy
+      - ''
+      - curl -u onedev:@secrets:maven-deploy-password@ -f -d @@/root/.m2/archetype-catalog.xml
+        -X PUT "https://artifact.onedev.io/artifactory/onedev/archetype-catalog.xml"
+      - ''
+      - cd $projectDir/server-product/docker
+      - ./build.sh
+      - docker push 1dev/server:${buildVersion}
+      - docker tag 1dev/server:${buildVersion} 1dev/server:latest
+      - docker push 1dev/server:latest
+      - docker push 1dev/agent:latest
+      - ''
+      - cd $projectDir/server-product/helm
+      - ./build.sh
+      - ''
+      - cd $projectDir/server-product/target/helm-chart
+      - cloudsmith push helm onedev/onedev onedev-${buildVersion}.tgz -k @secret:cloudsmith-token@
+      - ''
+      - cd $projectDir
+      - cp server-product/target/onedev-${buildVersion}.zip .
+      - ''
+      - echo "Creating release tag..."
+      - git config --global user.name "Robin Shen"
+      - git config --global user.email "robin@@onedev.io"
+      - ''
+      - git tag v$buildVersion -m "Release tag"
+      - git push -f origin v$buildVersion:v$buildVersion
+      - git config --global --unset http.extraHeader
+      - git push -f https://robin:@secrets:github-token@@@github.com/theonedev/onedev
+        v$buildVersion:v$buildVersion
+      - ''
+      - echo "Creating release branch in onedev/manual..."
+      - ''
+      - cd /onedev-build
+      - branch=${buildVersion%.*}
+      - git clone https://robin:@secrets:onedev-token@@@code.onedev.io/onedev/manual
+        onedev-manual
+      - cd onedev-manual
+      - if [ "$(git branch -a|grep -c /$branch$)" -eq 0 ]; then
+      - '  git push origin main:$branch'
+      - fi
+      - ''
+      - echo "Creating release in GitHub..."
+      - ''
+      - releaseId=$(curl -u robinshine:@secrets:github-token@ https://api.github.com/repos/theonedev/onedev/releases/tags/v$buildVersion
+        | jq '.id')
+      - ''
+      - releaseJson="{\"name\":\"$buildVersion\",\"tag_name\":\"v$buildVersion\",\"body\":\"##
+        Installation Guide\n\nhttps://code.onedev.io/projects/162/blob/main/pages/installation-guide.md\n\n##
+        Change Log\n\nhttps://code.onedev.io/projects/160/builds/@build_number@/fixed-issues?query=%22State%22+is+%22Released%22+order+by+%22Type%22+asc+and+%22Priority%22+desc\n\n##
+        Incompatibilities\n\nhttps://code.onedev.io/projects/160/builds/@build_number@/markdown/Incompatibilities/server-product/system/incompatibilities/incompatibilities.md\"}"
+      - ''
+      - 'acceptHeader="Accept: application/vnd.github.v3+json"'
+      - if [ "$releaseId" == "null" ]; then
+      - '  curl -u robinshine:@secrets:github-token@ -X POST -H "$acceptHeader" -d
+        "$releaseJson" https://api.github.com/repos/theonedev/onedev/releases'
+      - else
+      - '  curl -u robinshine:@secrets:github-token@ -X PATCH -H "$acceptHeader" -d
+        "$releaseJson" https://api.github.com/repos/theonedev/onedev/releases/$releaseId'
+      - fi
+    useTTY: true
+    condition: ALL_PREVIOUS_STEPS_WERE_SUCCESSFUL
+  - !PublishArtifactStep
+    name: publish artifact
+    artifacts: '*.zip'
+    condition: ALL_PREVIOUS_STEPS_WERE_SUCCESSFUL
+  - !PublishMarkdownReportStep
+    name: publish markdown report
+    reportName: Incompatibilities
+    filePatterns: server-product/system/incompatibilities/**
+    startPage: server-product/system/incompatibilities/incompatibilities.md
+    condition: ALL_PREVIOUS_STEPS_WERE_SUCCESSFUL
+  - !CloseMilestoneStep
+    name: close milestone
+    milestoneName: '@build_version@'
+    condition: ALL_PREVIOUS_STEPS_WERE_SUCCESSFUL
+  jobDependencies:
+  - jobName: CI
+    requireSuccessful: true
+  retryCondition: never
+  maxRetries: 3
+  retryDelay: 30
+  cpuRequirement: 250
+  memoryRequirement: 128
+  caches:
+  - key: maven-cache
+    path: /root/.m2/repository
+  timeout: 3600
+- name: Sync Main (GitHub)
+  steps:
+  - !CheckoutStep
+    name: 'checkout '
+    cloneCredential: !DefaultCredential {}
+    withLfs: false
+    withSubmodules: true
+    condition: ALL_PREVIOUS_STEPS_WERE_SUCCESSFUL
+  - !CommandStep
+    name: sync
+    runInContainer: true
+    image: alpine/git:1.0.7
+    interpreter: !DefaultInterpreter
+      commands:
+      - git config --global --unset http.extraHeader
+      - git push -f https://robinshine:@secrets:github-token@@@github.com/theonedev/server
+        HEAD:main
+    useTTY: false
+    condition: ALL_PREVIOUS_STEPS_WERE_SUCCESSFUL
+  triggers:
+  - !BranchUpdateTrigger
+    branches: main
+    projects: onedev/server
+  retryCondition: never
+  maxRetries: 3
+  retryDelay: 30
+  cpuRequirement: 250
+  memoryRequirement: 128
+  timeout: 3600

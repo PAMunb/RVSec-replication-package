@@ -1,0 +1,39 @@
+<wicket:extend>
+	<div class="build-detail d-flex flex-column card m-2 m-sm-5 flex-grow-1">
+		<div class="card-header flex-shrink-0 flex-nowrap">
+            <div class="card-title flex-wrap">
+				<span wicket:id="title" class="mr-4 text-break"></span>
+	            <div wicket:id="status" class="status text-nowrap mr-4">
+	                <svg wicket:id="statusIcon" class="mr-2"></svg>
+	                <span wicket:id="statusLabel"></span>
+	            </div>
+                <div wicket:id="actions">
+                    <a wicket:id="rebuild" class="btn btn-icon btn-light btn-hover-primary btn-xs mr-3" title="Re-run this build"><wicket:svg href="re-run" class="icon"/></a>
+                    <a wicket:id="cancel" class="btn btn-icon btn-light btn-hover-danger btn-xs mr-3" title="Cancel this build"><wicket:svg href="cancel" class="icon"/></a>
+                </div>
+                <a wicket:id="promotions" class="btn btn-icon btn-light btn-hover-primary btn-xs mr-4" title="Promotions"><wicket:svg href="next" class="icon ml-1"/></a>
+			</div>
+			<div class="card-toolbar">
+	    		<a wicket:id="moreInfo" class="more-info side-info ml-auto" title="More info"><wicket:svg href="ellipsis" class="icon"/></a>
+			</div>
+		</div>
+		<div class="card-body d-flex flex-grow-1 position-relative">
+			<div class="main flex-grow-1 d-flex flex-column">
+				<div wicket:id="buildSpecNotFound" class="alert alert-notice alert-light-warning">Build spec not found in commit of this build</div>
+				<div wicket:id="jobNotFound" class="alert alert-notice alert-light-warning">Job '<span wicket:id="jobName"></span>' associated with the build not found. 
+				Most probably there are import errors in the <a wicket:id="buildSpec">build spec</a></div>
+				<div wicket:id="description" class="mb-2"></div>
+				<ul wicket:id="buildTabs" class="tabs nav nav-tabs nav-tabs-line nav-bold mb-5 flex-shrink-0"></ul>
+				<wicket:child></wicket:child>
+			</div>
+			<div wicket:id="side" class="more-info"></div>
+		</div>
+	</div>
+	<wicket:fragment wicket:id="projectTitleFrag">
+		<span class="d-flex align-items-center">
+			<a wicket:id="builds" class="text-nowrap">Builds</a> 
+			<span class="dot"></span>
+			<span wicket:id="buildNumber"></span>
+		</span>
+	</wicket:fragment>
+</wicket:extend>
