@@ -28,3 +28,11 @@ cd incubator-shenyu
 mvn clean install -pl shenyu-plugin/shenyu-plugin-cryptor --also-make -Drat.skip
 cd ..
 
+
+##### SHIRO #############################################################
+#git clone https://github.com/apache/shiro.git
+cd shiro
+#git checkout shiro-root-1.9.1
+mvn clean install -pl crypto/cipher,crypto/hash --also-make -Drat.skip
+cd ..
+

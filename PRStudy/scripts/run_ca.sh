@@ -24,4 +24,17 @@ java -cp CryptoAnalysis.jar crypto.HeadlessCryptoScanner \
 mv ../PRStudy/results/CogniCrypt-SARIF-Report.txt ../PRStudy/results/CogniCrypt-shenyu-plugin-cryptor.json
 
 
+java -cp CryptoAnalysis.jar crypto.HeadlessCryptoScanner \
+           --sarifReport --reportDir ../PRStudy/results \
+           --rulesDir ./rules \
+           --applicationCp ../PRStudy/assets/shiro-crypto-cipher-1.9.1.jar
+mv ../PRStudy/results/CogniCrypt-SARIF-Report.txt ../PRStudy/results/CogniCrypt-shiro-crypto-cipher.json
+
+
+java -cp CryptoAnalysis.jar crypto.HeadlessCryptoScanner \
+           --sarifReport --reportDir ../PRStudy/results \
+           --rulesDir ./rules \
+           --applicationCp ../PRStudy/assets/shiro-crypto-hash-1.9.1.jar
+mv ../PRStudy/results/CogniCrypt-SARIF-Report.txt ../PRStudy/results/CogniCrypt-shiro-crypto-hash.json
+
 cd -   
