@@ -30,6 +30,9 @@ gt <- sqldf("select TestCase, Category, Vulnerability, CWE
 
 nrow(gt)
 
+sqldf("select CWE, Category, count(*) from gt group by CWE, Vulnerability")
+
+
 sqldf("select count(*) from gt where vulnerability = 'true'")
 
 ```
@@ -64,6 +67,11 @@ fp = sqldf("select *
 fn = sqldf("select TestCase 
             from gt 
             where vulnerability = 'true' and TestCase not in (select className from mop)")
+
+
+nrow(tp)
+nrow(fp)
+nrow(fn)
 
 
 precision_mop = nrow(tp) / (nrow(tp) + nrow(fp))
@@ -117,6 +125,10 @@ fn = sqldf("select TestCase
             where vulnerability = 'true' and TestCase not in (select className from cc)")
 
 
+nrow(tp)
+nrow(fp)
+nrow(fn)
+
 precision_cc = nrow(tp) / (nrow(tp) + nrow(fp))
 
 recall_cc = nrow(tp) / (nrow(tp) + nrow(fn))
@@ -130,6 +142,10 @@ recall_cc
 fmeasure_cc
 
 fp
+
+set.seed(5) # random number will generate from 5
+randSample <- sort(sample.int(201, 20))
+randSample
 ```
 
 ```{r load-cg}
@@ -165,6 +181,10 @@ fn = sqldf("select TestCase
             where vulnerability = 'true' and TestCase not in (select className from cg)")
 
 
+nrow(tp)
+nrow(fp)
+nrow(fn)
+
 precision_cg = nrow(tp) / (nrow(tp) + nrow(fp))
 
 recall_cg = nrow(tp) / (nrow(tp) + nrow(fn))
@@ -194,7 +214,7 @@ analysis_ds
 ```
 
 
-```{r details}
+```{r cc-details}
 cc <- read.csv("../results/datasets/cognicrypt.csv", head=T, sep=",")
 
 cc <- sqldf("select *
@@ -203,6 +223,38 @@ cc <- sqldf("select *
                     and c.className not in (select TestCase from gt where vulnerability = 'true')")
 
 nrow(cc)
+
 sqldf("select error, count(*) total from cc group by error order by 2")
 
 ```
+
+
+
+```{r cg-details}
+cg <- read.csv("../results/datasets/cryptoguard.csv", head=T, sep=",")
+
+colnames(cg)
+nrow(cg)
+
+# lets prune the cc dataset, since we are only interested in 
+# the categories crypto (1) and hash (2) 
+ 
+cg <- sqldf("select spec, className, error
+              from cg
+              where spec in (1, 2)")
+
+nrow(cg)
+
+fp = sqldf("select * 
+            from cg c
+            where c.className not in (select TestCase from gt where vulnerability = 'true')")
+
+fn = sqldf("select TestCase 
+            from gt 
+            where vulnerability = 'true' and TestCase not in (select className from cg)")
+
+fp
+
+fn
+
+``` 
