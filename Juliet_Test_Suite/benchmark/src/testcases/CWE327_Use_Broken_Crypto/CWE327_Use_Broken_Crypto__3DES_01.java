@@ -54,8 +54,7 @@ public class CWE327_Use_Broken_Crypto__3DES_01 extends AbstractTestCase
         good1();
     }
 
-    private void good1() throws Throwable
-    {
+    public void good1() throws Throwable {
 
         final String CIPHER_INPUT = "ABCDEFG123456";
 
@@ -70,7 +69,7 @@ public class CWE327_Use_Broken_Crypto__3DES_01 extends AbstractTestCase
         /* FIX: Use a stronger crypto algorithm, AES */
         SecretKeySpec secretKeySpec = new SecretKeySpec(byteKey, "AES");
 
-        Cipher aesCipher = Cipher.getInstance("AES");
+        Cipher aesCipher = Cipher.getInstance("AES/GCM/NoPadding");
         aesCipher.init(Cipher.ENCRYPT_MODE, secretKeySpec);
 
         byte[] encrypted = aesCipher.doFinal(CIPHER_INPUT.getBytes("UTF-8"));

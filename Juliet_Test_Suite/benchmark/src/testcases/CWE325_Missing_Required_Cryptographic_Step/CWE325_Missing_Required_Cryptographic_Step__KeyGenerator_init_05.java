@@ -56,8 +56,7 @@ public class CWE325_Missing_Required_Cryptographic_Step__KeyGenerator_init_05 ex
     }
 
     /* good1() changes privateTrue to privateFalse */
-    private void good1() throws Throwable
-    {
+    public void good1() throws Throwable {
         if (privateFalse)
         {
             /* INCIDENTAL: CWE 561 Dead Code, the code below will never run */
@@ -78,7 +77,7 @@ public class CWE325_Missing_Required_Cryptographic_Step__KeyGenerator_init_05 ex
 
             SecretKeySpec secretKeySpec = new SecretKeySpec(byteKey, "AES");
 
-            Cipher aesCipher = Cipher.getInstance("AES");
+            Cipher aesCipher = Cipher.getInstance("AES/GCM/NoPadding");
             aesCipher.init(Cipher.ENCRYPT_MODE, secretKeySpec);
 
             byte[] encrypted = aesCipher.doFinal(CIPHER_INPUT.getBytes("UTF-8"));
@@ -89,8 +88,7 @@ public class CWE325_Missing_Required_Cryptographic_Step__KeyGenerator_init_05 ex
     }
 
     /* good2() reverses the bodies in the if statement */
-    private void good2() throws Throwable
-    {
+    public void good2() throws Throwable {
         if (privateTrue)
         {
             final String CIPHER_INPUT = "ABCDEFG123456";
@@ -100,7 +98,7 @@ public class CWE325_Missing_Required_Cryptographic_Step__KeyGenerator_init_05 ex
             SecretKey secretKey = keyGenerator.generateKey();
             byte[] byteKey = secretKey.getEncoded();
             SecretKeySpec secretKeySpec = new SecretKeySpec(byteKey, "AES");
-            Cipher aesCipher = Cipher.getInstance("AES");
+            Cipher aesCipher = Cipher.getInstance("AES/GCM/NoPadding");
             aesCipher.init(Cipher.ENCRYPT_MODE, secretKeySpec);
             byte[] encrypted = aesCipher.doFinal(CIPHER_INPUT.getBytes("UTF-8"));
             IO.writeLine(IO.toHex(encrypted));

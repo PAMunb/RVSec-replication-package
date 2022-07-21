@@ -51,8 +51,7 @@ public class CWE327_Use_Broken_Crypto__3DES_04 extends AbstractTestCase
     }
 
     /* good1() changes PRIVATE_STATIC_FINAL_TRUE to PRIVATE_STATIC_FINAL_FALSE */
-    private void good1() throws Throwable
-    {
+    public void good1() throws Throwable {
         if (PRIVATE_STATIC_FINAL_FALSE)
         {
             /* INCIDENTAL: CWE 561 Dead Code, the code below will never run */
@@ -74,7 +73,7 @@ public class CWE327_Use_Broken_Crypto__3DES_04 extends AbstractTestCase
             /* FIX: Use a stronger crypto algorithm, AES */
             SecretKeySpec secretKeySpec = new SecretKeySpec(byteKey, "AES");
 
-            Cipher aesCipher = Cipher.getInstance("AES");
+            Cipher aesCipher = Cipher.getInstance("AES/GCM/NoPadding");
             aesCipher.init(Cipher.ENCRYPT_MODE, secretKeySpec);
 
             byte[] encrypted = aesCipher.doFinal(CIPHER_INPUT.getBytes("UTF-8"));
@@ -85,8 +84,7 @@ public class CWE327_Use_Broken_Crypto__3DES_04 extends AbstractTestCase
     }
 
     /* good2() reverses the bodies in the if statement */
-    private void good2() throws Throwable
-    {
+    public void good2() throws Throwable {
         if (PRIVATE_STATIC_FINAL_TRUE)
         {
             final String CIPHER_INPUT = "ABCDEFG123456";
@@ -97,7 +95,7 @@ public class CWE327_Use_Broken_Crypto__3DES_04 extends AbstractTestCase
             byte[] byteKey = secretKey.getEncoded();
             /* FIX: Use a stronger crypto algorithm, AES */
             SecretKeySpec secretKeySpec = new SecretKeySpec(byteKey, "AES");
-            Cipher aesCipher = Cipher.getInstance("AES");
+            Cipher aesCipher = Cipher.getInstance("AES/GCM/NoPadding");
             aesCipher.init(Cipher.ENCRYPT_MODE, secretKeySpec);
             byte[] encrypted = aesCipher.doFinal(CIPHER_INPUT.getBytes("UTF-8"));
             IO.writeLine(IO.toHex(encrypted));

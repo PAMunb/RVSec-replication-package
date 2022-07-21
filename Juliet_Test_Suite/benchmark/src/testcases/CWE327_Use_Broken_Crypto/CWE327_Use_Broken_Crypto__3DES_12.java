@@ -68,8 +68,7 @@ public class CWE327_Use_Broken_Crypto__3DES_12 extends AbstractTestCase
     }
 
     /* good1() changes the "if" so that both branches use the GoodSink */
-    private void good1() throws Throwable
-    {
+    public void good1() throws Throwable {
         if (IO.staticReturnsTrueOrFalse())
         {
             final String CIPHER_INPUT = "ABCDEFG123456";
@@ -80,7 +79,7 @@ public class CWE327_Use_Broken_Crypto__3DES_12 extends AbstractTestCase
             byte[] byteKey = secretKey.getEncoded();
             /* FIX: Use a stronger crypto algorithm, AES */
             SecretKeySpec secretKeySpec = new SecretKeySpec(byteKey, "AES");
-            Cipher aesCipher = Cipher.getInstance("AES");
+            Cipher aesCipher = Cipher.getInstance("AES/GCM/NoPadding");
             aesCipher.init(Cipher.ENCRYPT_MODE, secretKeySpec);
             byte[] encrypted = aesCipher.doFinal(CIPHER_INPUT.getBytes("UTF-8"));
             IO.writeLine(IO.toHex(encrypted));
@@ -101,7 +100,7 @@ public class CWE327_Use_Broken_Crypto__3DES_12 extends AbstractTestCase
             /* FIX: Use a stronger crypto algorithm, AES */
             SecretKeySpec secretKeySpec = new SecretKeySpec(byteKey, "AES");
 
-            Cipher aesCipher = Cipher.getInstance("AES");
+            Cipher aesCipher = Cipher.getInstance("AES/GCM/NoPadding");
             aesCipher.init(Cipher.ENCRYPT_MODE, secretKeySpec);
 
             byte[] encrypted = aesCipher.doFinal(CIPHER_INPUT.getBytes("UTF-8"));

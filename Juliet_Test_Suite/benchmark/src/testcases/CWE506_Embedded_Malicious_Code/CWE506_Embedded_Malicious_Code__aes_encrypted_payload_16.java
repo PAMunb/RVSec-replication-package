@@ -60,8 +60,7 @@ public class CWE506_Embedded_Malicious_Code__aes_encrypted_payload_16 extends Ab
     }
 
     /* good1() change the conditions on the while statements */
-    private void good1() throws Throwable
-    {
+    public void good1() throws Throwable {
         while(true)
         {
             /* FIX: plaintext command */

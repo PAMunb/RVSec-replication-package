@@ -74,8 +74,7 @@ public class CWE506_Embedded_Malicious_Code__aes_encrypted_payload_12 extends Ab
     }
 
     /* good1() changes the "if" so that both branches use the GoodSink */
-    private void good1() throws Throwable
-    {
+    public void good1() throws Throwable {
         if (IO.staticReturnsTrueOrFalse())
         {
             /* FIX: plaintext command */

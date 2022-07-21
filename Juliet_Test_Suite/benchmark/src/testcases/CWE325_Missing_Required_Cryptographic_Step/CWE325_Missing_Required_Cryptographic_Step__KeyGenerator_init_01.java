@@ -59,8 +59,7 @@ public class CWE325_Missing_Required_Cryptographic_Step__KeyGenerator_init_01 ex
         good1();
     }
 
-    private void good1() throws Throwable
-    {
+    public void good1() throws Throwable {
 
         final String CIPHER_INPUT = "ABCDEFG123456";
 
@@ -74,7 +73,7 @@ public class CWE325_Missing_Required_Cryptographic_Step__KeyGenerator_init_01 ex
 
         SecretKeySpec secretKeySpec = new SecretKeySpec(byteKey, "AES");
 
-        Cipher aesCipher = Cipher.getInstance("AES");
+        Cipher aesCipher = Cipher.getInstance("AES/GCM/NoPadding");
         aesCipher.init(Cipher.ENCRYPT_MODE, secretKeySpec);
 
         byte[] encrypted = aesCipher.doFinal(CIPHER_INPUT.getBytes("UTF-8"));

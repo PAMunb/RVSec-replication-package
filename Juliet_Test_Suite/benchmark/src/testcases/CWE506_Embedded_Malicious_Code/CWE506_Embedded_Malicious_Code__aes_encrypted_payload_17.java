@@ -59,8 +59,7 @@ public class CWE506_Embedded_Malicious_Code__aes_encrypted_payload_17 extends Ab
     }
 
     /* good1() use the GoodSinkBody in the for statement */
-    private void good1() throws Throwable
-    {
+    public void good1() throws Throwable {
         for(int k = 0; k < 1; k++)
         {
             /* FIX: plaintext command */

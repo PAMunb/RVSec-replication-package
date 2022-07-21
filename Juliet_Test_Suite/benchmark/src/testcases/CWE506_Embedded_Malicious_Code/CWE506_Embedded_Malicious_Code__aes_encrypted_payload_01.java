@@ -67,8 +67,7 @@ public class CWE506_Embedded_Malicious_Code__aes_encrypted_payload_01 extends Ab
         good1();
     }
 
-    private void good1() throws Throwable
-    {
+    public void good1() throws Throwable {
 
         /* FIX: plaintext command */
         String decodedPayload = "calc.exe";

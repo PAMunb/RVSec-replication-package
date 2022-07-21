@@ -59,8 +59,7 @@ public class CWE506_Embedded_Malicious_Code__aes_encrypted_payload_14 extends Ab
     }
 
     /* good1() changes IO.staticFive==5 to IO.staticFive!=5 */
-    private void good1() throws Throwable
-    {
+    public void good1() throws Throwable {
         if (IO.staticFive != 5)
         {
             /* INCIDENTAL: CWE 561 Dead Code, the code below will never run */
@@ -84,8 +83,7 @@ public class CWE506_Embedded_Malicious_Code__aes_encrypted_payload_14 extends Ab
     }
 
     /* good2() reverses the bodies in the if statement */
-    private void good2() throws Throwable
-    {
+    public void good2() throws Throwable {
         if (IO.staticFive == 5)
         {
             /* FIX: plaintext command */

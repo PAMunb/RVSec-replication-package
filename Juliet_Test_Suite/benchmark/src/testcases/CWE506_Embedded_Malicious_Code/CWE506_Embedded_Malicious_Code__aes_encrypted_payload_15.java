@@ -65,8 +65,7 @@ public class CWE506_Embedded_Malicious_Code__aes_encrypted_payload_15 extends Ab
     }
 
     /* good1() change the switch to switch(8) */
-    private void good1() throws Throwable
-    {
+    public void good1() throws Throwable {
         switch (8)
         {
         case 7:
@@ -89,8 +88,7 @@ public class CWE506_Embedded_Malicious_Code__aes_encrypted_payload_15 extends Ab
     }
 
     /* good2() reverses the blocks in the switch  */
-    private void good2() throws Throwable
-    {
+    public void good2() throws Throwable {
         switch (7)
         {
         case 7:
