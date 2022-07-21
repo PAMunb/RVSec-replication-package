@@ -1,0 +1,29 @@
+.new-pull-request .can-send label {
+	font-size: 1.1rem;
+	font-weight: 600;
+	margin-bottom: 1rem;
+}
+
+.new-pull-request .form-group {
+	margin-bottom: 2rem;
+}
+
+.new-pull-request .can-send .merge-strategy .status {
+	margin-top: 0.6rem;
+	font-size: 1.2rem;
+	font-weight: bold;
+}
+.new-pull-request .can-send .merge-strategy .status svg,
+.new-pull-request .can-send .merge-strategy .status img {
+	width: 18px;
+	height: 18px;
+}
+.new-pull-request .can-send .merge-strategy .status .no-conflict {
+	color: var(--success);
+} 
+.new-pull-request .can-send .merge-strategy .status .conflict {
+	color: var(--danger);
+} 
+.new-pull-request .can-send .merge-strategy .status .calculating {
+	color: var(--warning);
+}

@@ -1,0 +1,23 @@
+.project-setting .avatar-edit .current img {
+	height: 240px;
+	width: 240px;
+	display: block;
+}
+
+.job-secret-edit textarea {
+    font-family: monospace;
+}
+
+.project-setting .web-hooks .bean-list td.property-eventTypes {
+	width: 25%;
+}
+.project-setting .branch-protections .bean-list td.property-jobNames {
+	width: 30%;
+}
+.project-setting .branch-protection>.card-header .badge, 
+.project-setting .tag-protection>.card-header .badge {
+	font-size: 0.9rem;
+}
+.project-setting .project-authorizations .bean-list td.property-userName {
+	width: 50%;
+}

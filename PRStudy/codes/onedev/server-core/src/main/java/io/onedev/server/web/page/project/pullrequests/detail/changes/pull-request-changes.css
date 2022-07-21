@@ -1,0 +1,31 @@
+.commits-selector ul a {
+	text-decoration: none;
+	display: block;
+	padding: 0.5rem 1rem;
+	white-space: nowrap;
+	font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+	color: var(--gray-dark);
+}
+.dark-mode .commits-selector ul a {
+	color: var(--dark-mode-light-gray);
+}
+.commits-selector ul a:hover {
+	background: var(--light);
+	color: var(--gray-dark) !important;
+}
+.dark-mode .commits-selector ul a:hover {
+	background: var(--dark-mode-light-dark);
+	color: var(--dark-mode-light-gray) !important;
+}
+.commits-selector ul a.selected, .commits-selector ul a.selected:hover {
+	background: var(--light-warning);	
+}
+.dark-mode .commits-selector ul a.selected, .dark-mode .commits-selector ul a.selected:hover {
+	background: var(--dark-mode-light-warning);	
+}
+.commits-selector ul a.shift-selected, .commits-selector ul a.shift-selected:hover {
+	background: var(--light-primary);	
+}
+.dark-mode .commits-selector ul a.shift-selected, .dark-mode .commits-selector ul a.shift-selected:hover {
+	background: var(--dark-mode-light-primary);	
+}

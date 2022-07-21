@@ -1,0 +1,14 @@
+.branch-selector input {
+	padding-right: 2rem;
+}
+.branch-selector input+.icon {
+	margin-left: -1.8rem;
+}
+.branch-selector a svg {
+	visibility: hidden;
+	width: 12px;
+	height: 12px;
+}
+.branch-selector a.current svg {
+	visibility: visible;
+}   

@@ -1,0 +1,51 @@
+.project-contribs select {
+	width: 120px;
+}
+.project-contribs .overall {
+	height: 360px;
+}
+.project-contribs .overall .no-data {
+	text-align: center;
+	font-size: 2rem;
+	margin-top: 2rem;
+	font-weight: bold;
+}
+
+.project-contribs .top-contributors .loading {
+	background: url(/img/ajax-indicator-big.png) no-repeat scroll center center;
+	background-size: 64px 64px;
+	height: 64px;
+}
+.dark-mode .project-contribs .top-contributors .loading {
+	background: url(/img/dark-ajax-indicator-big.png) no-repeat scroll center center;
+}
+
+.project-contribs .top-contributors .head .total-contribution span.additions {
+	color: green;
+}
+.project-contribs .top-contributors .head .total-contribution span.deletions {
+	color: red;
+}
+
+.project-contribs .top-contributors .avatar {
+	width: 36px;
+	height: 36px;
+}
+.project-contribs .top-contributors .body {
+	height: 300px;
+}
+.project-contribs .top-contributors .col-xl-6.left {
+	padding-right: 1rem;
+}
+.project-contribs .top-contributors .col-xl-6.right {
+	padding-left: 1rem;
+}
+
+.source-lines .chart {
+	min-height: 400px;
+}
+.source-lines .no-data {
+	text-align: center;
+	font-size: 3rem;
+	font-style: italic;
+}

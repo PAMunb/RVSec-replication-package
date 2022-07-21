@@ -1,0 +1,145 @@
+spec,class,className,method,location,error,expecting
+MessageDigestSpec,org.eclipse.jgit.storage.file.FileBasedConfig,FileBasedConfig,hash,FileBasedConfig.java:243,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found SHA-1."
+MessageDigestSpec,org.eclipse.jgit.storage.file.FileBasedConfig,FileBasedConfig,hash,FileBasedConfig.java:243,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCache,DirCache,writeTo,DirCache.java:705,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCache,DirCache,readFrom,DirCache.java:455,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found SHA-1."
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCache,DirCache,readFrom,DirCache.java:455,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCacheEntry,DirCacheEntry,<init>,DirCacheEntry.java:137,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found SHA-1."
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCacheEntry,DirCacheEntry,<init>,DirCacheEntry.java:137,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCacheEntry,DirCacheEntry,<init>,DirCacheEntry.java:178,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found SHA-1."
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCacheEntry,DirCacheEntry,<init>,DirCacheEntry.java:178,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCacheEntry,DirCacheEntry,<init>,DirCacheEntry.java:229,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found SHA-1."
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCacheEntry,DirCacheEntry,<init>,DirCacheEntry.java:229,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCache,DirCache,readFrom,DirCache.java:545,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.storage.file.FileBasedConfig,FileBasedConfig,hash,FileBasedConfig.java:243,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found SHA-1."
+MessageDigestSpec,org.eclipse.jgit.storage.file.FileBasedConfig,FileBasedConfig,hash,FileBasedConfig.java:243,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCache,DirCache,writeTo,DirCache.java:705,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCache,DirCache,readFrom,DirCache.java:455,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found SHA-1."
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCache,DirCache,readFrom,DirCache.java:455,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCacheEntry,DirCacheEntry,<init>,DirCacheEntry.java:137,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found SHA-1."
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCacheEntry,DirCacheEntry,<init>,DirCacheEntry.java:137,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCacheEntry,DirCacheEntry,<init>,DirCacheEntry.java:178,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found SHA-1."
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCacheEntry,DirCacheEntry,<init>,DirCacheEntry.java:178,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCacheEntry,DirCacheEntry,<init>,DirCacheEntry.java:229,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found SHA-1."
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCacheEntry,DirCacheEntry,<init>,DirCacheEntry.java:229,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCache,DirCache,readFrom,DirCache.java:545,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.storage.file.FileBasedConfig,FileBasedConfig,hash,FileBasedConfig.java:243,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found SHA-1."
+MessageDigestSpec,org.eclipse.jgit.storage.file.FileBasedConfig,FileBasedConfig,hash,FileBasedConfig.java:243,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCache,DirCache,writeTo,DirCache.java:705,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCache,DirCache,readFrom,DirCache.java:455,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found SHA-1."
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCache,DirCache,readFrom,DirCache.java:455,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCacheEntry,DirCacheEntry,<init>,DirCacheEntry.java:137,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found SHA-1."
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCacheEntry,DirCacheEntry,<init>,DirCacheEntry.java:137,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCacheEntry,DirCacheEntry,<init>,DirCacheEntry.java:178,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found SHA-1."
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCacheEntry,DirCacheEntry,<init>,DirCacheEntry.java:178,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCacheEntry,DirCacheEntry,<init>,DirCacheEntry.java:229,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found SHA-1."
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCacheEntry,DirCacheEntry,<init>,DirCacheEntry.java:229,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCache,DirCache,readFrom,DirCache.java:545,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.storage.file.FileBasedConfig,FileBasedConfig,hash,FileBasedConfig.java:243,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found SHA-1."
+MessageDigestSpec,org.eclipse.jgit.storage.file.FileBasedConfig,FileBasedConfig,hash,FileBasedConfig.java:243,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCache,DirCache,writeTo,DirCache.java:705,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCache,DirCache,readFrom,DirCache.java:455,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found SHA-1."
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCache,DirCache,readFrom,DirCache.java:455,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCacheEntry,DirCacheEntry,<init>,DirCacheEntry.java:137,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found SHA-1."
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCacheEntry,DirCacheEntry,<init>,DirCacheEntry.java:137,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCacheEntry,DirCacheEntry,<init>,DirCacheEntry.java:178,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found SHA-1."
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCacheEntry,DirCacheEntry,<init>,DirCacheEntry.java:178,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCacheEntry,DirCacheEntry,<init>,DirCacheEntry.java:229,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found SHA-1."
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCacheEntry,DirCacheEntry,<init>,DirCacheEntry.java:229,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCache,DirCache,readFrom,DirCache.java:545,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.storage.file.FileBasedConfig,FileBasedConfig,hash,FileBasedConfig.java:243,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found SHA-1."
+MessageDigestSpec,org.eclipse.jgit.storage.file.FileBasedConfig,FileBasedConfig,hash,FileBasedConfig.java:243,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCache,DirCache,writeTo,DirCache.java:705,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCache,DirCache,readFrom,DirCache.java:455,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found SHA-1."
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCache,DirCache,readFrom,DirCache.java:455,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCacheEntry,DirCacheEntry,<init>,DirCacheEntry.java:137,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found SHA-1."
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCacheEntry,DirCacheEntry,<init>,DirCacheEntry.java:137,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCacheEntry,DirCacheEntry,<init>,DirCacheEntry.java:178,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found SHA-1."
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCacheEntry,DirCacheEntry,<init>,DirCacheEntry.java:178,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCacheEntry,DirCacheEntry,<init>,DirCacheEntry.java:229,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found SHA-1."
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCacheEntry,DirCacheEntry,<init>,DirCacheEntry.java:229,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCache,DirCache,readFrom,DirCache.java:545,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.storage.file.FileBasedConfig,FileBasedConfig,hash,FileBasedConfig.java:243,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found SHA-1."
+MessageDigestSpec,org.eclipse.jgit.storage.file.FileBasedConfig,FileBasedConfig,hash,FileBasedConfig.java:243,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCache,DirCache,writeTo,DirCache.java:705,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCache,DirCache,readFrom,DirCache.java:455,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found SHA-1."
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCache,DirCache,readFrom,DirCache.java:455,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCacheEntry,DirCacheEntry,<init>,DirCacheEntry.java:137,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found SHA-1."
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCacheEntry,DirCacheEntry,<init>,DirCacheEntry.java:137,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCacheEntry,DirCacheEntry,<init>,DirCacheEntry.java:178,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found SHA-1."
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCacheEntry,DirCacheEntry,<init>,DirCacheEntry.java:178,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCacheEntry,DirCacheEntry,<init>,DirCacheEntry.java:229,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found SHA-1."
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCacheEntry,DirCacheEntry,<init>,DirCacheEntry.java:229,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCache,DirCache,readFrom,DirCache.java:545,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.storage.file.FileBasedConfig,FileBasedConfig,hash,FileBasedConfig.java:243,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found SHA-1."
+MessageDigestSpec,org.eclipse.jgit.storage.file.FileBasedConfig,FileBasedConfig,hash,FileBasedConfig.java:243,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCache,DirCache,writeTo,DirCache.java:705,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCache,DirCache,readFrom,DirCache.java:455,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found SHA-1."
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCache,DirCache,readFrom,DirCache.java:455,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCacheEntry,DirCacheEntry,<init>,DirCacheEntry.java:137,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found SHA-1."
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCacheEntry,DirCacheEntry,<init>,DirCacheEntry.java:137,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCacheEntry,DirCacheEntry,<init>,DirCacheEntry.java:178,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found SHA-1."
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCacheEntry,DirCacheEntry,<init>,DirCacheEntry.java:178,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCacheEntry,DirCacheEntry,<init>,DirCacheEntry.java:229,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found SHA-1."
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCacheEntry,DirCacheEntry,<init>,DirCacheEntry.java:229,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCache,DirCache,readFrom,DirCache.java:545,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.storage.file.FileBasedConfig,FileBasedConfig,hash,FileBasedConfig.java:243,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found SHA-1."
+MessageDigestSpec,org.eclipse.jgit.storage.file.FileBasedConfig,FileBasedConfig,hash,FileBasedConfig.java:243,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCache,DirCache,writeTo,DirCache.java:705,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCache,DirCache,readFrom,DirCache.java:455,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found SHA-1."
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCache,DirCache,readFrom,DirCache.java:455,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCacheEntry,DirCacheEntry,<init>,DirCacheEntry.java:137,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found SHA-1."
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCacheEntry,DirCacheEntry,<init>,DirCacheEntry.java:137,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCacheEntry,DirCacheEntry,<init>,DirCacheEntry.java:178,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found SHA-1."
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCacheEntry,DirCacheEntry,<init>,DirCacheEntry.java:178,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCacheEntry,DirCacheEntry,<init>,DirCacheEntry.java:229,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found SHA-1."
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCacheEntry,DirCacheEntry,<init>,DirCacheEntry.java:229,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCache,DirCache,readFrom,DirCache.java:545,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.storage.file.FileBasedConfig,FileBasedConfig,hash,FileBasedConfig.java:243,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found SHA-1."
+MessageDigestSpec,org.eclipse.jgit.storage.file.FileBasedConfig,FileBasedConfig,hash,FileBasedConfig.java:243,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCache,DirCache,writeTo,DirCache.java:705,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCache,DirCache,readFrom,DirCache.java:455,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found SHA-1."
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCache,DirCache,readFrom,DirCache.java:455,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCacheEntry,DirCacheEntry,<init>,DirCacheEntry.java:137,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found SHA-1."
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCacheEntry,DirCacheEntry,<init>,DirCacheEntry.java:137,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCacheEntry,DirCacheEntry,<init>,DirCacheEntry.java:178,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found SHA-1."
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCacheEntry,DirCacheEntry,<init>,DirCacheEntry.java:178,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCacheEntry,DirCacheEntry,<init>,DirCacheEntry.java:229,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found SHA-1."
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCacheEntry,DirCacheEntry,<init>,DirCacheEntry.java:229,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCache,DirCache,readFrom,DirCache.java:545,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.storage.file.FileBasedConfig,FileBasedConfig,hash,FileBasedConfig.java:243,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found SHA-1."
+MessageDigestSpec,org.eclipse.jgit.storage.file.FileBasedConfig,FileBasedConfig,hash,FileBasedConfig.java:243,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCache,DirCache,writeTo,DirCache.java:705,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCache,DirCache,readFrom,DirCache.java:455,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found SHA-1."
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCache,DirCache,readFrom,DirCache.java:455,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCacheEntry,DirCacheEntry,<init>,DirCacheEntry.java:137,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found SHA-1."
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCacheEntry,DirCacheEntry,<init>,DirCacheEntry.java:137,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCacheEntry,DirCacheEntry,<init>,DirCacheEntry.java:178,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found SHA-1."
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCacheEntry,DirCacheEntry,<init>,DirCacheEntry.java:178,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCacheEntry,DirCacheEntry,<init>,DirCacheEntry.java:229,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found SHA-1."
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCacheEntry,DirCacheEntry,<init>,DirCacheEntry.java:229,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCache,DirCache,readFrom,DirCache.java:545,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.storage.file.FileBasedConfig,FileBasedConfig,hash,FileBasedConfig.java:243,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found SHA-1."
+MessageDigestSpec,org.eclipse.jgit.storage.file.FileBasedConfig,FileBasedConfig,hash,FileBasedConfig.java:243,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCache,DirCache,writeTo,DirCache.java:705,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCache,DirCache,readFrom,DirCache.java:455,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found SHA-1."
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCache,DirCache,readFrom,DirCache.java:455,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCacheEntry,DirCacheEntry,<init>,DirCacheEntry.java:137,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found SHA-1."
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCacheEntry,DirCacheEntry,<init>,DirCacheEntry.java:137,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCacheEntry,DirCacheEntry,<init>,DirCacheEntry.java:178,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found SHA-1."
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCacheEntry,DirCacheEntry,<init>,DirCacheEntry.java:178,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCacheEntry,DirCacheEntry,<init>,DirCacheEntry.java:229,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found SHA-1."
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCacheEntry,DirCacheEntry,<init>,DirCacheEntry.java:229,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCache,DirCache,readFrom,DirCache.java:545,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.storage.file.FileBasedConfig,FileBasedConfig,hash,FileBasedConfig.java:243,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found SHA-1."
+MessageDigestSpec,org.eclipse.jgit.storage.file.FileBasedConfig,FileBasedConfig,hash,FileBasedConfig.java:243,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCache,DirCache,writeTo,DirCache.java:705,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCache,DirCache,readFrom,DirCache.java:455,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found SHA-1."
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCache,DirCache,readFrom,DirCache.java:455,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCacheEntry,DirCacheEntry,<init>,DirCacheEntry.java:137,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found SHA-1."
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCacheEntry,DirCacheEntry,<init>,DirCacheEntry.java:137,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCacheEntry,DirCacheEntry,<init>,DirCacheEntry.java:178,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found SHA-1."
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCacheEntry,DirCacheEntry,<init>,DirCacheEntry.java:178,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCacheEntry,DirCacheEntry,<init>,DirCacheEntry.java:229,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found SHA-1."
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCacheEntry,DirCacheEntry,<init>,DirCacheEntry.java:229,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.eclipse.jgit.dircache.DirCache,DirCache,readFrom,DirCache.java:545,InvalidSequenceOfMethodCalls,unknown

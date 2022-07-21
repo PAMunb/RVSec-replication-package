@@ -1,0 +1,8 @@
+.subtree-dropdown {
+	padding: 1rem; 
+	max-width: 800px; 
+}
+
+.blob-navigator .name .form-control {
+	width: 200px;
+}

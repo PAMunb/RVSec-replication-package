@@ -1,0 +1,43 @@
+spec,class,className,method,location,error,expecting
+SecretKeySpecSpec,org.apache.shiro.crypto.JcaCipherService,JcaCipherService,initNewCipher,JcaCipherService.java:592,UnsatisfiedConstraint,Using either an invalid algorithm or keyMaterial.length is not randomized.
+SecretKeySpecSpec,org.apache.shiro.crypto.JcaCipherService,JcaCipherService,initNewCipher,JcaCipherService.java:592,InvalidSequenceOfMethodCalls,unknown
+IvParameterSpecSpec,org.apache.shiro.crypto.JcaCipherService,JcaCipherService,createParameterSpec,JcaCipherService.java:605,UnsatisfiedConstraint,unknown
+IvParameterSpecSpec,org.apache.shiro.crypto.JcaCipherService,JcaCipherService,createParameterSpec,JcaCipherService.java:605,InvalidSequenceOfMethodCalls,unknown
+CipherSpec,org.apache.shiro.crypto.JcaCipherService,JcaCipherService,init,JcaCipherService.java:488,UnsafeAlgorithm,"expecting one of {AES/CBC/PKCS5Padding, AES/PCBC/ISO10126Padding, ...} but found AES/EAX/NoPadding."
+CipherSpec,org.apache.shiro.crypto.JcaCipherService,JcaCipherService,init,JcaCipherService.java:488,InvalidSequenceOfMethodCalls,unknown
+CipherSpec,org.apache.shiro.crypto.JcaCipherService,JcaCipherService,crypt,JcaCipherService.java:459,InvalidSequenceOfMethodCalls,unknown
+CipherSpec,org.apache.shiro.crypto.JcaCipherService,JcaCipherService,init,JcaCipherService.java:490,UnsafeAlgorithm,"expecting one of {AES/CBC/PKCS5Padding, AES/PCBC/ISO10126Padding, ...} but found AES/ECB/PKCS5Padding."
+CipherSpec,org.apache.shiro.crypto.JcaCipherService,JcaCipherService,init,JcaCipherService.java:490,InvalidSequenceOfMethodCalls,unknown
+CipherInputStreamSpec,org.apache.shiro.crypto.JcaCipherService,JcaCipherService,crypt,JcaCipherService.java:573,InvalidSequenceOfMethodCalls,unknown
+CipherInputStreamSpec,org.apache.shiro.crypto.JcaCipherService,JcaCipherService,crypt,JcaCipherService.java:580,InvalidSequenceOfMethodCalls,unknown
+KeyGeneratorSpec,org.apache.shiro.crypto.AbstractSymmetricCipherService,AbstractSymmetricCipherService,generateNewKey,AbstractSymmetricCipherService.java:61,InvalidSequenceOfMethodCalls,unknown
+KeyGeneratorSpec,org.apache.shiro.crypto.AbstractSymmetricCipherService,AbstractSymmetricCipherService,generateNewKey,AbstractSymmetricCipherService.java:62,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found Blowfish."
+KeyGeneratorSpec,org.apache.shiro.crypto.AbstractSymmetricCipherService,AbstractSymmetricCipherService,generateNewKey,AbstractSymmetricCipherService.java:62,InvalidSequenceOfMethodCalls,unknown
+SecretKeySpecSpec,org.apache.shiro.crypto.JcaCipherService,JcaCipherService,initNewCipher,JcaCipherService.java:592,UnsatisfiedConstraint,Using either an invalid algorithm or keyMaterial.length is not randomized.
+SecretKeySpecSpec,org.apache.shiro.crypto.JcaCipherService,JcaCipherService,initNewCipher,JcaCipherService.java:592,InvalidSequenceOfMethodCalls,unknown
+IvParameterSpecSpec,org.apache.shiro.crypto.JcaCipherService,JcaCipherService,createParameterSpec,JcaCipherService.java:605,UnsatisfiedConstraint,unknown
+IvParameterSpecSpec,org.apache.shiro.crypto.JcaCipherService,JcaCipherService,createParameterSpec,JcaCipherService.java:605,InvalidSequenceOfMethodCalls,unknown
+CipherSpec,org.apache.shiro.crypto.JcaCipherService,JcaCipherService,init,JcaCipherService.java:488,UnsafeAlgorithm,"expecting one of {AES/CBC/PKCS5Padding, AES/PCBC/ISO10126Padding, ...} but found AES/EAX/NoPadding."
+CipherSpec,org.apache.shiro.crypto.JcaCipherService,JcaCipherService,init,JcaCipherService.java:488,InvalidSequenceOfMethodCalls,unknown
+CipherSpec,org.apache.shiro.crypto.JcaCipherService,JcaCipherService,crypt,JcaCipherService.java:459,InvalidSequenceOfMethodCalls,unknown
+CipherSpec,org.apache.shiro.crypto.JcaCipherService,JcaCipherService,init,JcaCipherService.java:490,UnsafeAlgorithm,"expecting one of {AES/CBC/PKCS5Padding, AES/PCBC/ISO10126Padding, ...} but found AES/ECB/PKCS5Padding."
+CipherSpec,org.apache.shiro.crypto.JcaCipherService,JcaCipherService,init,JcaCipherService.java:490,InvalidSequenceOfMethodCalls,unknown
+CipherInputStreamSpec,org.apache.shiro.crypto.JcaCipherService,JcaCipherService,crypt,JcaCipherService.java:573,InvalidSequenceOfMethodCalls,unknown
+CipherInputStreamSpec,org.apache.shiro.crypto.JcaCipherService,JcaCipherService,crypt,JcaCipherService.java:580,InvalidSequenceOfMethodCalls,unknown
+KeyGeneratorSpec,org.apache.shiro.crypto.AbstractSymmetricCipherService,AbstractSymmetricCipherService,generateNewKey,AbstractSymmetricCipherService.java:61,InvalidSequenceOfMethodCalls,unknown
+KeyGeneratorSpec,org.apache.shiro.crypto.AbstractSymmetricCipherService,AbstractSymmetricCipherService,generateNewKey,AbstractSymmetricCipherService.java:62,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found Blowfish."
+KeyGeneratorSpec,org.apache.shiro.crypto.AbstractSymmetricCipherService,AbstractSymmetricCipherService,generateNewKey,AbstractSymmetricCipherService.java:62,InvalidSequenceOfMethodCalls,unknown
+SecretKeySpecSpec,org.apache.shiro.crypto.JcaCipherService,JcaCipherService,initNewCipher,JcaCipherService.java:592,UnsatisfiedConstraint,Using either an invalid algorithm or keyMaterial.length is not randomized.
+SecretKeySpecSpec,org.apache.shiro.crypto.JcaCipherService,JcaCipherService,initNewCipher,JcaCipherService.java:592,InvalidSequenceOfMethodCalls,unknown
+IvParameterSpecSpec,org.apache.shiro.crypto.JcaCipherService,JcaCipherService,createParameterSpec,JcaCipherService.java:605,UnsatisfiedConstraint,unknown
+IvParameterSpecSpec,org.apache.shiro.crypto.JcaCipherService,JcaCipherService,createParameterSpec,JcaCipherService.java:605,InvalidSequenceOfMethodCalls,unknown
+CipherSpec,org.apache.shiro.crypto.JcaCipherService,JcaCipherService,init,JcaCipherService.java:488,UnsafeAlgorithm,"expecting one of {AES/CBC/PKCS5Padding, AES/PCBC/ISO10126Padding, ...} but found AES/EAX/NoPadding."
+CipherSpec,org.apache.shiro.crypto.JcaCipherService,JcaCipherService,init,JcaCipherService.java:488,InvalidSequenceOfMethodCalls,unknown
+CipherSpec,org.apache.shiro.crypto.JcaCipherService,JcaCipherService,crypt,JcaCipherService.java:459,InvalidSequenceOfMethodCalls,unknown
+CipherSpec,org.apache.shiro.crypto.JcaCipherService,JcaCipherService,init,JcaCipherService.java:490,UnsafeAlgorithm,"expecting one of {AES/CBC/PKCS5Padding, AES/PCBC/ISO10126Padding, ...} but found AES/ECB/PKCS5Padding."
+CipherSpec,org.apache.shiro.crypto.JcaCipherService,JcaCipherService,init,JcaCipherService.java:490,InvalidSequenceOfMethodCalls,unknown
+CipherInputStreamSpec,org.apache.shiro.crypto.JcaCipherService,JcaCipherService,crypt,JcaCipherService.java:573,InvalidSequenceOfMethodCalls,unknown
+CipherInputStreamSpec,org.apache.shiro.crypto.JcaCipherService,JcaCipherService,crypt,JcaCipherService.java:580,InvalidSequenceOfMethodCalls,unknown
+KeyGeneratorSpec,org.apache.shiro.crypto.AbstractSymmetricCipherService,AbstractSymmetricCipherService,generateNewKey,AbstractSymmetricCipherService.java:61,InvalidSequenceOfMethodCalls,unknown
+KeyGeneratorSpec,org.apache.shiro.crypto.AbstractSymmetricCipherService,AbstractSymmetricCipherService,generateNewKey,AbstractSymmetricCipherService.java:62,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found Blowfish."
+KeyGeneratorSpec,org.apache.shiro.crypto.AbstractSymmetricCipherService,AbstractSymmetricCipherService,generateNewKey,AbstractSymmetricCipherService.java:62,InvalidSequenceOfMethodCalls,unknown

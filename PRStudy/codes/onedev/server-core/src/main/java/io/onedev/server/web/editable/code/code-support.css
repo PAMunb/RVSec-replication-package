@@ -1,0 +1,29 @@
+.code-support {
+	border: 1px solid var(--light-gray);
+	border-radius: 0.42rem;
+	padding: 1px;
+}
+.dark-mode .code-support {
+	border-color: var(--dark-mode-lighter-dark);
+}
+.code-support>div {
+	position: relative;
+	min-height: 100px;
+	max-height: 400px;
+}
+.is-invalid .code-support {
+	border-color: var(--danger);
+}
+.code-support .CodeMirror {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+.property-viewer .CodeMirror .CodeMirror-cursor {
+	border-left: none;
+}
+.CodeMirror-hint {
+	padding: 4px;
+}

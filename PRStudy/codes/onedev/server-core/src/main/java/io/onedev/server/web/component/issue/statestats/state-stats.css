@@ -1,0 +1,28 @@
+.state-stats {
+	white-space: nowrap;
+	min-width: 100px;
+	line-height: 1.1rem;
+	width: 100%;
+}
+.state-stats>span {
+	display: inline-block;
+	border: 1px solid var(--light-gray);
+	background: var(--light-gray);
+	border-radius: 0.42rem;
+}
+.dark-mode .state-stats>span {
+	border-color: var(--dark-mode-dark-gray);
+}
+.state-stats>a {
+	display: inline-block;
+	text-decoration: none;
+}
+.state-stats>a:first-child {
+	border-radius: 0.42rem 0 0 0.42rem;
+}
+.state-stats>a:last-child {
+	border-radius: 0 0.42rem 0.42rem 0;
+}
+.state-stats>a:first-child:last-child {
+	border-radius: 0.42rem;
+}

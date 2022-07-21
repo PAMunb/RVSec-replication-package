@@ -1,0 +1,12 @@
+.pull-request-list>div>.body table>tbody>tr>td {
+	padding: 1.2rem 0.8rem;
+}
+.pull-request-list>div>.body .new-indicator {
+	width: 4px;
+	padding: 0;
+}
+.pull-request-list>div>.body tr.request.new td.new-indicator {
+	background: var(--primary);
+}
+
+

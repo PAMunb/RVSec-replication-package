@@ -1,0 +1,29 @@
+spec,class,className,method,location,error,expecting
+MessageDigestSpec,org.apache.shiro.crypto.hash.SimpleHash,SimpleHash,hash,SimpleHash.java:345,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.apache.shiro.crypto.hash.SimpleHash,SimpleHash,hash,SimpleHash.java:346,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.apache.shiro.crypto.hash.SimpleHash,SimpleHash,hash,SimpleHash.java:348,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.apache.shiro.crypto.hash.SimpleHash,SimpleHash,hash,SimpleHash.java:352,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.apache.shiro.crypto.hash.SimpleHash,SimpleHash,hash,SimpleHash.java:353,InvalidSequenceOfMethodCalls,unknown
+SecureRandomSpec,org.apache.shiro.crypto.SecureRandomNumberGenerator,SecureRandomNumberGenerator,nextBytes,SecureRandomNumberGenerator.java:117,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.apache.shiro.crypto.hash.SimpleHash,SimpleHash,hash,SimpleHash.java:348,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found MD5."
+MessageDigestSpec,org.apache.shiro.crypto.hash.SimpleHash,SimpleHash,hash,SimpleHash.java:345,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.apache.shiro.crypto.hash.SimpleHash,SimpleHash,hash,SimpleHash.java:346,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.apache.shiro.crypto.hash.SimpleHash,SimpleHash,hash,SimpleHash.java:348,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.apache.shiro.crypto.hash.SimpleHash,SimpleHash,hash,SimpleHash.java:352,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.apache.shiro.crypto.hash.SimpleHash,SimpleHash,hash,SimpleHash.java:353,InvalidSequenceOfMethodCalls,unknown
+SecureRandomSpec,org.apache.shiro.crypto.SecureRandomNumberGenerator,SecureRandomNumberGenerator,nextBytes,SecureRandomNumberGenerator.java:117,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.apache.shiro.crypto.hash.SimpleHash,SimpleHash,hash,SimpleHash.java:348,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found MD5."
+MessageDigestSpec,org.apache.shiro.crypto.hash.SimpleHash,SimpleHash,hash,SimpleHash.java:345,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.apache.shiro.crypto.hash.SimpleHash,SimpleHash,hash,SimpleHash.java:346,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.apache.shiro.crypto.hash.SimpleHash,SimpleHash,hash,SimpleHash.java:348,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.apache.shiro.crypto.hash.SimpleHash,SimpleHash,hash,SimpleHash.java:352,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.apache.shiro.crypto.hash.SimpleHash,SimpleHash,hash,SimpleHash.java:353,InvalidSequenceOfMethodCalls,unknown
+SecureRandomSpec,org.apache.shiro.crypto.SecureRandomNumberGenerator,SecureRandomNumberGenerator,nextBytes,SecureRandomNumberGenerator.java:117,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.apache.shiro.crypto.hash.SimpleHash,SimpleHash,hash,SimpleHash.java:348,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found MD5."
+MessageDigestSpec,org.apache.shiro.crypto.hash.SimpleHash,SimpleHash,hash,SimpleHash.java:345,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.apache.shiro.crypto.hash.SimpleHash,SimpleHash,hash,SimpleHash.java:346,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.apache.shiro.crypto.hash.SimpleHash,SimpleHash,hash,SimpleHash.java:348,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.apache.shiro.crypto.hash.SimpleHash,SimpleHash,hash,SimpleHash.java:352,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.apache.shiro.crypto.hash.SimpleHash,SimpleHash,hash,SimpleHash.java:353,InvalidSequenceOfMethodCalls,unknown
+SecureRandomSpec,org.apache.shiro.crypto.SecureRandomNumberGenerator,SecureRandomNumberGenerator,nextBytes,SecureRandomNumberGenerator.java:117,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,org.apache.shiro.crypto.hash.SimpleHash,SimpleHash,hash,SimpleHash.java:348,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found MD5."
