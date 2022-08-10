@@ -42,6 +42,7 @@ CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00056,BenchmarkTest00056,do
 KeyGeneratorSpec,org.owasp.benchmark.testcode.BenchmarkTest00057,BenchmarkTest00057,doPost,BenchmarkTest00057.java:86,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found DES."
 KeyGeneratorSpec,org.owasp.benchmark.testcode.BenchmarkTest00057,BenchmarkTest00057,doPost,BenchmarkTest00057.java:86,InvalidSequenceOfMethodCalls,unknown
 CipherSpec,org.owasp.benchmark.testcode.BenchmarkTest00057,BenchmarkTest00057,doPost,BenchmarkTest00057.java:106,InvalidSequenceOfMethodCalls,unknown
+SecureRandomSpec,org.bouncycastle.jcajce.provider.symmetric.util.BaseBlockCipher,BaseBlockCipher,engineInit,Unknown Source,InvalidSequenceOfMethodCalls,unknown
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest00070,BenchmarkTest00070,doPost,BenchmarkTest00070.java:88,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found ."
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest00070,BenchmarkTest00070,doPost,BenchmarkTest00070.java:88,InvalidSequenceOfMethodCalls,unknown
 MessageDigestSpec,org.owasp.benchmark.testcode.BenchmarkTest00070,BenchmarkTest00070,doPost,BenchmarkTest00070.java:90,InvalidSequenceOfMethodCalls,unknown

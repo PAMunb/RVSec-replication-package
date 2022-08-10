@@ -1,24 +1,25 @@
 <wicket:panel>
-	<div wicket:id="content"></div>
-	<wicket:fragment wicket:id="contentFrag">
-		<div class="primary font-weight-bold mb-3">
-			<wicket:container wicket:id="numberAndTitle"></wicket:container>
-			<a wicket:id="links" class="link-info font-weight-normal link d-inline-flex align-items-center mr-2"><span wicket:id="label"></span><wicket:svg href="arrow" class="icon icon-sm"/></a>
-			<a wicket:id="showDetail" title="Click to show issue details" class="show-detail"><wicket:svg href="ellipsis" class="icon"/></a>
-		</div>
-		<div class="secondary d-flex flex-wrap align-items-center mb-n2">
-			<div wicket:id="transit" class="state">
-				<span wicket:id="state" class="mb-2 mr-2"></span>
-			</div>
-			<div wicket:id="fields" class="field"></div>
-			<div class="avatars ml-auto d-flex flex-wrap mr-n2">
-				<div wicket:id="avatars" class="avatar"></div>
-			</div>
-		</div>
-		<wicket:enclosure child="linkedIssues">
-		<div class="linked-issues pl-3">
-			<div wicket:id="linkedIssues" class="linked-issue"><div wicket:id="content"></div></div>
-		</div>
-		</wicket:enclosure>
-	</wicket:fragment>
+    <div wicket:id="content"></div>
+    <wicket:fragment wicket:id="contentFrag">
+        <div class="primary font-weight-bold mb-3">
+            <wicket:container wicket:id="numberAndTitle"></wicket:container>
+            <a wicket:id="links" class="link-info font-weight-normal link d-inline-flex align-items-center mr-2"><span wicket:id="label"></span> <wicket:svg href="arrow" class="icon icon-sm" /></a> <a wicket:id="showDetail" title="Click to show issue details" class="show-detail"><wicket:svg href="ellipsis" class="icon" /></a>
+        </div>
+        <div class="secondary d-flex flex-wrap align-items-center mb-n2">
+            <div wicket:id="transit" class="state">
+                <span wicket:id="state" class="mb-2 mr-2"></span>
+            </div>
+            <div wicket:id="fields" class="field"></div>
+            <div class="avatars ml-auto d-flex flex-wrap mr-n2">
+                <div wicket:id="avatars" class="avatar"></div>
+            </div>
+        </div>
+        <wicket:enclosure child="linkedIssues">
+            <div class="linked-issues pl-3">
+                <div wicket:id="linkedIssues" class="linked-issue">
+                    <div wicket:id="content"></div>
+                </div>
+            </div>
+        </wicket:enclosure>
+    </wicket:fragment>
 </wicket:panel>

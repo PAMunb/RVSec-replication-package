@@ -5,6 +5,7 @@ import java.io.OutputStream;
 import java.io.PrintStream;
 import java.lang.reflect.Method;
 import java.util.Arrays;
+import java.util.ArrayList; 
 import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
@@ -29,7 +30,10 @@ public abstract class ReflectionBased {
     private PrintStream original, dummy = null;
     private Logger logger;
     
-    private static final List<String> packagesToExclude = Arrays.asList("CWE256", "CWE319", "CWE321", "CWE506");
+    //    private static final List<String> packagesToExclude = Arrays.asList("CWE256", "CWE319", "CWE321", "CWE506");
+
+    private static final List<String> packagesToExclude = new ArrayList<>(); // Arrays.asList("CWE256", "CWE319", "CWE321", "CWE506");
+
 
     @BeforeClass
     public static void setUp() {

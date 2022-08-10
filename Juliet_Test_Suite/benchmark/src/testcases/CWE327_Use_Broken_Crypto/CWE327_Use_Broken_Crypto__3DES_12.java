@@ -57,7 +57,7 @@ public class CWE327_Use_Broken_Crypto__3DES_12 extends AbstractTestCase
             /* FIX: Use a stronger crypto algorithm, AES */
             SecretKeySpec secretKeySpec = new SecretKeySpec(byteKey, "AES");
 
-            Cipher aesCipher = Cipher.getInstance("AES");
+            Cipher aesCipher = Cipher.getInstance("AES/GCM/NoPadding");
             aesCipher.init(Cipher.ENCRYPT_MODE, secretKeySpec);
 
             byte[] encrypted = aesCipher.doFinal(CIPHER_INPUT.getBytes("UTF-8"));

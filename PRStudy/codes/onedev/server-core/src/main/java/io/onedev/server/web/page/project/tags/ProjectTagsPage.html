@@ -1,58 +1,56 @@
 <wicket:extend>
-	<div class="project-tags card m-2 m-sm-5">
-		<div class="card-body">
-			<div class="head d-flex align-items-center flex-wrap">
-				<div class="clearable-wrapper mr-3 mb-4">
-					<input wicket:id="filterTags" class="form-control search" placeholder="Filter tags...">
-				</div>
-				<div class="mb-4 mr-3">
-					<a wicket:id="createTag" class="btn btn-primary btn-icon" title="Create tag"><wicket:svg href="plus" class="icon"></wicket:svg></a>
-				</div>
-			</div>
-            <div class="body">
-            	<table wicket:id="tags" class="table tags"></table>
+    <div class="project-tags card m-2 m-sm-5">
+        <div class="card-body">
+            <div class="head d-flex align-items-center flex-wrap">
+                <div class="clearable-wrapper mr-3 mb-4">
+                    <input wicket:id="filterTags" class="form-control search" placeholder="Filter tags...">
+                </div>
+                <div class="mb-4 mr-3">
+                    <a wicket:id="createTag" class="btn btn-primary btn-icon" title="Create tag"><wicket:svg href="plus" class="icon"></wicket:svg></a>
+                </div>
             </div>
-		</div>
-	</div>
-	<wicket:fragment wicket:id="tagFrag">
-		<div class="title my-2">
-			<a wicket:id="tagLink" class="name mr-2"><span wicket:id="name"></span></a>
-			<a wicket:id="signature" class="mr-2"></a>
-			<a wicket:id="buildStatus" class="build-status mr-2"></a>
-			<span wicket:id="annotated" class="annotated"></span>
-		</div>
-		<div class="commit-message mb-2">
-			<span wicket:id="message"></span>
-		</div>
-		<div class="commit-contributor mb-3">
-			<span wicket:id="contributor" class="contributor"></span>
-		</div>
-		<div class="actions mb-2">
-			<a wicket:id="download" class="btn btn-light btn-hover-primary btn-sm btn-icon mr-2" title="Download tag archive"><wicket:svg href="download" class="icon"/></a>
-			<a wicket:id="delete" class="btn btn-light btn-hover-danger btn-sm btn-icon" title="Delete this tag"><wicket:svg href="trash" class="icon"></wicket:svg></a>
-		</div>
-	</wicket:fragment>
-	<wicket:fragment wicket:id="annotatedFrag">
-		<wicket:enclosure child="author">
-		By <a wicket:id="author"></a> 
-		</wicket:enclosure>
-		<a wicket:id="messageToggle" class="btn btn-xs h-75 btn-secondary btn-icon ml-1"><wicket:svg href="ellipsis" class="icon"/></a>
-		<pre wicket:id="message" class="message text-break"></pre>
-	</wicket:fragment>
-	<wicket:fragment wicket:id="createTagFrag">
-		<form wicket:id="form" class="create-tag">
-			<div class="modal-header">
-				<h5 class="modal-title">Create Tag</h5>
-				<button wicket:id="close" type="button" class="close"><wicket:svg href="times" class="icon"/></button>
-			</div>
-			<div class="modal-body">
-				<div wicket:id="feedback"></div>
-				<div wicket:id="editor"></div>
-			</div>
-			<div class="modal-footer">
-				<button wicket:id="create" class="btn btn-primary">Create</button>
-				<button wicket:id="cancel" class="btn btn-secondary">Cancel</button>
-			</div>
-		</form>
-	</wicket:fragment>
+            <div class="body">
+                <table wicket:id="tags" class="table tags"></table>
+            </div>
+        </div>
+    </div>
+    <wicket:fragment wicket:id="tagFrag">
+        <div class="title my-2">
+            <a wicket:id="tagLink" class="name mr-2"><span wicket:id="name"></span></a> <a wicket:id="signature" class="mr-2"></a> <a wicket:id="buildStatus" class="build-status mr-2"></a> <span wicket:id="annotated" class="annotated"></span>
+        </div>
+        <div class="commit-message mb-2">
+            <span wicket:id="message"></span>
+        </div>
+        <div class="commit-contributor mb-3">
+            <span wicket:id="contributor" class="contributor"></span>
+        </div>
+        <div class="actions mb-2">
+            <a wicket:id="download" class="btn btn-light btn-hover-primary btn-sm btn-icon mr-2" title="Download tag archive"><wicket:svg href="download" class="icon" /></a> <a wicket:id="delete" class="btn btn-light btn-hover-danger btn-sm btn-icon" title="Delete this tag"><wicket:svg href="trash" class="icon"></wicket:svg></a>
+        </div>
+    </wicket:fragment>
+    <wicket:fragment wicket:id="annotatedFrag">
+        <wicket:enclosure child="author">
+		By <a wicket:id="author"></a>
+        </wicket:enclosure>
+        <a wicket:id="messageToggle" class="btn btn-xs h-75 btn-secondary btn-icon ml-1"><wicket:svg href="ellipsis" class="icon" /></a>
+        <pre wicket:id="message" class="message text-break"></pre>
+    </wicket:fragment>
+    <wicket:fragment wicket:id="createTagFrag">
+        <form wicket:id="form" class="create-tag" action="">
+            <div class="modal-header">
+                <h5 class="modal-title">Create Tag</h5>
+                <button wicket:id="close" type="button" class="close">
+                    <wicket:svg href="times" class="icon" />
+                </button>
+            </div>
+            <div class="modal-body">
+                <div wicket:id="feedback"></div>
+                <div wicket:id="editor"></div>
+            </div>
+            <div class="modal-footer">
+                <button wicket:id="create" class="btn btn-primary">Create</button>
+                <button wicket:id="cancel" class="btn btn-secondary">Cancel</button>
+            </div>
+        </form>
+    </wicket:fragment>
 </wicket:extend>

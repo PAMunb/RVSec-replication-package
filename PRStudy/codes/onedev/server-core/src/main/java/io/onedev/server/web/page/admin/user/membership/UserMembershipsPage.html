@@ -1,18 +1,17 @@
 <wicket:extend>
-	<div class="membership-list">
-		<div class="head">
-			<div wicket:id="externalManagedNote" class="alert alert-notice alert-light-warning mb-4"></div>
-			<div class="d-flex align-items-center flex-wrap">
-				<div class="clearable-wrapper mr-3 mb-4">
-					<input wicket:id="filterGroups" class="form-control search" placeholder="Filter by name...">
-				</div>
-				<input wicket:id="addNew" type="hidden" class="form-control mr-3 mb-4">
-				<a wicket:id="delete" class="btn btn-light-danger mb-4">Delete <wicket:svg href="arrow4" class="icon"/></a>
-			</div>
-		</div>
-		<table wicket:id="memberships" class="memberships table"></table>
-	</div>
-	<wicket:fragment wicket:id="groupFrag">
-		<a wicket:id="group"></a>
-	</wicket:fragment>
+    <div class="membership-list">
+        <div class="head">
+            <div wicket:id="externalManagedNote" class="alert alert-notice alert-light-warning mb-4"></div>
+            <div class="d-flex align-items-center flex-wrap">
+                <div class="clearable-wrapper mr-3 mb-4">
+                    <input wicket:id="filterGroups" class="form-control search" placeholder="Filter by name...">
+                </div>
+                <input wicket:id="addNew" type="hidden" class="form-control mr-3 mb-4"> <a wicket:id="delete" class="btn btn-light-danger mb-4">Delete <wicket:svg href="arrow4" class="icon" /></a>
+            </div>
+        </div>
+        <table wicket:id="memberships" class="memberships table"></table>
+    </div>
+    <wicket:fragment wicket:id="groupFrag">
+        <a wicket:id="group"></a>
+    </wicket:fragment>
 </wicket:extend>

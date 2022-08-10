@@ -1,56 +1,81 @@
-spec,error,class,className,method
-IvParameterSpecSpec,InvalidSequenceOfMethodCalls,br.unb.cic.mop.bench03.iv.stash.StashStaticIV,StashStaticIV,main
-CipherSpec,InvalidSequenceOfMethodCalls,br.unb.cic.mop.bench03.cipher.stringCaseTransform.CipherExample12,CipherExample12,runCipher
-KeyGeneratorSpec,UnsafeAlgorithm,br.unb.cic.mop.bench03.cipher.KeyToAlgoDES.CipherExample10,CipherExample10,main
-MessageDigestSpec,InvalidSequenceOfMethodCalls,br.unb.cic.mop.bench03.md.stringReplace.MD08,MD08,main
-MessageDigestSpec,UnsafeAlgorithm,br.unb.cic.mop.bench03.md.stringCaseTransformation.MD07,MD07,main
-KeyGeneratorSpec,UnsafeAlgorithm,br.unb.cic.mop.bench03.cipher.secureBlowFish.CipherExample11,CipherExample11,main
-CipherSpec,InvalidSequenceOfMethodCalls,br.unb.cic.mop.bench03.cipher.insecureBlowFish.CipherExample08,CipherExample08,main
-SSLContextSpec,InvalidSequenceOfMethodCalls,br.unb.cic.mop.bench03.ssl.context.baseCase.ContextOfSSL,ContextOfSSL,main
-IvParameterSpecSpec,InvalidSequenceOfMethodCalls,br.unb.cic.mop.bench03.iv.baseCase.BaseStaticIV,BaseStaticIV,main
-SecureRandomSpec,InvalidSequenceOfMethodCalls,br.unb.cic.mop.bench03.random.basecase_seedconstructor.SecureRand03,SecureRand03,main
-MessageDigestSpec,InvalidSequenceOfMethodCalls,br.unb.cic.mop.bench03.md.complexCase.MD03,MD03,main
-MessageDigestSpec,InvalidSequenceOfMethodCalls,br.unb.cic.mop.bench03.md.stringCaseTransformation.MD07,MD07,main
-MessageDigestSpec,UnsafeAlgorithm,br.unb.cic.mop.bench03.md.interprocedureCase.MD05,MD05,main
-CipherSpec,UnsafeAlgorithm,br.unb.cic.mop.bench03.cipher.KeyToAlgoAES.CipherExample09,CipherExample09,main
-MessageDigestSpec,UnsafeAlgorithm,br.unb.cic.mop.bench03.md.baseCaseVariable.MD02,MD02,main
-KeyGeneratorSpec,UnsafeAlgorithm,br.unb.cic.mop.bench03.cipher.stringCaseTransform.CipherExample12,CipherExample12,runCipher
-CipherSpec,InvalidSequenceOfMethodCalls,br.unb.cic.mop.bench03.cipher.aesGCMNoPaddingReplaceDES.CipherExample02,CipherExample02,runCipher
-CipherSpec,InvalidSequenceOfMethodCalls,br.unb.cic.mop.bench03.cipher.differentCase.CipherExample07,CipherExample07,runCipher
-CipherSpec,InvalidSequenceOfMethodCalls,br.unb.cic.mop.bench03.cipher.aesStringReplace.CipherExample03,CipherExample03,runCipher
-MessageDigestSpec,InvalidSequenceOfMethodCalls,br.unb.cic.mop.bench03.md.baseCase.MD01,MD01,main
-MessageDigestSpec,UnsafeAlgorithm,br.unb.cic.mop.bench03.md.complexCase.MD03,MD03,main
-CipherSpec,InvalidSequenceOfMethodCalls,br.unb.cic.mop.bench03.cipher.KeyToAlgoDES.CipherExample10,CipherExample10,main
-CipherSpec,InvalidSequenceOfMethodCalls,br.unb.cic.mop.bench03.cipher.baseCaseVariable.CipherExample06,CipherExample06,runCipher
-KeyGeneratorSpec,UnsafeAlgorithm,br.unb.cic.mop.bench03.cipher.baseCaseInterProc.CipherExample05,CipherExample05,runCipher
-KeyGeneratorSpec,InvalidSequenceOfMethodCalls,br.unb.cic.mop.bench03.cipher.insecureBlowFish.CipherExample08,CipherExample08,main
-KeyGeneratorSpec,InvalidSequenceOfMethodCalls,br.unb.cic.mop.bench03.cipher.secureBlowFish.CipherExample11,CipherExample11,main
-KeyGeneratorSpec,InvalidSequenceOfMethodCalls,br.unb.cic.mop.bench03.cipher.stringReplace.CipherExample13,CipherExample13,runCipher
-MessageDigestSpec,UnsafeAlgorithm,br.unb.cic.mop.bench03.md.stringReplace.MD08,MD08,main
-KeyGeneratorSpec,UnsafeAlgorithm,br.unb.cic.mop.bench03.cipher.aesStringReplace.CipherExample03,CipherExample03,runCipher
-MessageDigestSpec,UnsafeAlgorithm,br.unb.cic.mop.bench03.md.differentCase.MD04,MD04,main
-MessageDigestSpec,InvalidSequenceOfMethodCalls,br.unb.cic.mop.bench03.md.baseCaseVariable.MD02,MD02,main
-SecureRandomSpec,InvalidSequenceOfMethodCalls,br.unb.cic.mop.bench03.random.basecase.SecureRand01,SecureRand01,main
-MessageDigestSpec,InvalidSequenceOfMethodCalls,br.unb.cic.mop.bench03.md.interprocedureCase.MD05,MD05,main
-MessageDigestSpec,InvalidSequenceOfMethodCalls,br.unb.cic.mop.bench03.md.replaceSHA256DES.MD06,MD06,main
-CipherSpec,UnsafeAlgorithm,br.unb.cic.mop.bench03.cipher.baseCase.CipherExample04,CipherExample04,runCipher
-KeyGeneratorSpec,InvalidSequenceOfMethodCalls,br.unb.cic.mop.bench03.cipher.aesGCMNoPaddingReplaceDES.CipherExample02,CipherExample02,runCipher
-CipherSpec,InvalidSequenceOfMethodCalls,br.unb.cic.mop.bench03.cipher.stringReplace.CipherExample13,CipherExample13,runCipher
-KeyGeneratorSpec,InvalidSequenceOfMethodCalls,br.unb.cic.mop.bench03.cipher.KeyToAlgoDES.CipherExample10,CipherExample10,main
-KeyGeneratorSpec,InvalidSequenceOfMethodCalls,br.unb.cic.mop.bench03.cipher.differentCase.CipherExample07,CipherExample07,runCipher
-SecureRandomSpec,InvalidSequenceOfMethodCalls,br.unb.cic.mop.bench03.random.basecase_getinstance.SecureRand02,SecureRand02,main
-KeyGeneratorSpec,InvalidSequenceOfMethodCalls,br.unb.cic.mop.bench03.cipher.baseCaseInterProc.CipherExample05,CipherExample05,runCipher
-CipherSpec,InvalidSequenceOfMethodCalls,br.unb.cic.mop.bench03.cipher.baseCaseInterProc.CipherExample05,CipherExample05,runCipher
-KeyGeneratorSpec,UnsafeAlgorithm,br.unb.cic.mop.bench03.cipher.stringReplace.CipherExample13,CipherExample13,runCipher
-CipherSpec,InvalidSequenceOfMethodCalls,br.unb.cic.mop.bench03.cipher.secureBlowFish.CipherExample11,CipherExample11,main
-CipherSpec,UnsafeAlgorithm,br.unb.cic.mop.bench03.cipher.baseCaseVariable.CipherExample06,CipherExample06,runCipher
-KeyGeneratorSpec,InvalidSequenceOfMethodCalls,br.unb.cic.mop.bench03.cipher.stringCaseTransform.CipherExample12,CipherExample12,runCipher
-KeyGeneratorSpec,UnsafeAlgorithm,br.unb.cic.mop.bench03.cipher.insecureBlowFish.CipherExample08,CipherExample08,main
-CipherSpec,InvalidSequenceOfMethodCalls,br.unb.cic.mop.bench03.cipher.KeyToAlgoAES.CipherExample09,CipherExample09,main
-KeyGeneratorSpec,UnsafeAlgorithm,br.unb.cic.mop.bench03.cipher.aesGCMNoPaddingReplaceDES.CipherExample02,CipherExample02,runCipher
-KeyGeneratorSpec,InvalidSequenceOfMethodCalls,br.unb.cic.mop.bench03.cipher.aesStringReplace.CipherExample03,CipherExample03,runCipher
-KeyGeneratorSpec,UnsafeAlgorithm,br.unb.cic.mop.bench03.cipher.differentCase.CipherExample07,CipherExample07,runCipher
-MessageDigestSpec,InvalidSequenceOfMethodCalls,br.unb.cic.mop.bench03.md.differentCase.MD04,MD04,main
-MessageDigestSpec,UnsafeAlgorithm,br.unb.cic.mop.bench03.md.replaceSHA256DES.MD06,MD06,main
-CipherSpec,InvalidSequenceOfMethodCalls,br.unb.cic.mop.bench03.cipher.baseCase.CipherExample04,CipherExample04,runCipher
-MessageDigestSpec,UnsafeAlgorithm,br.unb.cic.mop.bench03.md.baseCase.MD01,MD01,main
+spec,class,className,method,location,error,expecting
+IvParameterSpecSpec,br.unb.cic.mop.bench03.iv.timeCase.CurrentTimeIV,CurrentTimeIV,main,CurrentTimeIV.java:15,UnsatisfiedConstraint,unknown
+IvParameterSpecSpec,br.unb.cic.mop.bench03.iv.timeCase.CurrentTimeIV,CurrentTimeIV,main,CurrentTimeIV.java:15,InvalidSequenceOfMethodCalls,unknown
+IvParameterSpecSpec,br.unb.cic.mop.bench03.iv.baseCase.BaseStaticIV,BaseStaticIV,main,BaseStaticIV.java:8,UnsatisfiedConstraint,unknown
+IvParameterSpecSpec,br.unb.cic.mop.bench03.iv.baseCase.BaseStaticIV,BaseStaticIV,main,BaseStaticIV.java:8,InvalidSequenceOfMethodCalls,unknown
+SecureRandomSpec,br.unb.cic.mop.bench03.random.basecase.SecureRand01,SecureRand01,main,SecureRand01.java:11,UnsatisfiedConstraint,setSeed() expects a randomized byte array.
+SecureRandomSpec,br.unb.cic.mop.bench03.random.basecase.SecureRand01,SecureRand01,main,SecureRand01.java:11,InvalidSequenceOfMethodCalls,unknown
+SecureRandomSpec,br.unb.cic.mop.bench03.random.basecase.SecureRand01,SecureRand01,main,SecureRand01.java:12,UnsatisfiedConstraint,setSeed() expects a randomized byte array.
+SecureRandomSpec,br.unb.cic.mop.bench03.random.basecase.SecureRand01,SecureRand01,main,SecureRand01.java:12,InvalidSequenceOfMethodCalls,unknown
+SecureRandomSpec,br.unb.cic.mop.bench03.random.basecase.SecureRand01,SecureRand01,main,SecureRand01.java:20,InvalidSequenceOfMethodCalls,unknown
+KeyGeneratorSpec,br.unb.cic.mop.bench03.cipher.aesGCMNoPaddingReplaceDES.CipherExample02,CipherExample02,runCipher,CipherExample02.java:14,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found DES."
+KeyGeneratorSpec,br.unb.cic.mop.bench03.cipher.aesGCMNoPaddingReplaceDES.CipherExample02,CipherExample02,runCipher,CipherExample02.java:14,InvalidSequenceOfMethodCalls,unknown
+CipherSpec,br.unb.cic.mop.bench03.cipher.aesGCMNoPaddingReplaceDES.CipherExample02,CipherExample02,runCipher,CipherExample02.java:16,InvalidSequenceOfMethodCalls,unknown
+KeyGeneratorSpec,br.unb.cic.mop.bench03.cipher.aesStringReplace.CipherExample03,CipherExample03,runCipher,CipherExample03.java:14,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found DES."
+KeyGeneratorSpec,br.unb.cic.mop.bench03.cipher.aesStringReplace.CipherExample03,CipherExample03,runCipher,CipherExample03.java:14,InvalidSequenceOfMethodCalls,unknown
+CipherSpec,br.unb.cic.mop.bench03.cipher.aesStringReplace.CipherExample03,CipherExample03,runCipher,CipherExample03.java:16,InvalidSequenceOfMethodCalls,unknown
+CipherSpec,br.unb.cic.mop.bench03.cipher.baseCase.CipherExample04,CipherExample04,runCipher,CipherExample04.java:15,UnsafeAlgorithm,"expecting one of {AES/CBC/PKCS5Padding, AES/PCBC/ISO10126Padding, ...} but found AES."
+CipherSpec,br.unb.cic.mop.bench03.cipher.baseCase.CipherExample04,CipherExample04,runCipher,CipherExample04.java:15,InvalidSequenceOfMethodCalls,unknown
+CipherSpec,br.unb.cic.mop.bench03.cipher.baseCase.CipherExample04,CipherExample04,runCipher,CipherExample04.java:16,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,br.unb.cic.mop.bench03.md.differentCase.MD04,MD04,main,MD04.java:10,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found md5."
+MessageDigestSpec,br.unb.cic.mop.bench03.md.differentCase.MD04,MD04,main,MD04.java:10,InvalidSequenceOfMethodCalls,unknown
+CipherSpec,br.unb.cic.mop.bench03.cipher.baseCaseVariable.CipherExample06,CipherExample06,runCipher,CipherExample06.java:16,UnsafeAlgorithm,"expecting one of {AES/CBC/PKCS5Padding, AES/PCBC/ISO10126Padding, ...} but found AES."
+CipherSpec,br.unb.cic.mop.bench03.cipher.baseCaseVariable.CipherExample06,CipherExample06,runCipher,CipherExample06.java:16,InvalidSequenceOfMethodCalls,unknown
+CipherSpec,br.unb.cic.mop.bench03.cipher.baseCaseVariable.CipherExample06,CipherExample06,runCipher,CipherExample06.java:17,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,br.unb.cic.mop.bench03.md.interprocedureCase.MD05,MD05,main,MD05.java:22,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found MD5."
+MessageDigestSpec,br.unb.cic.mop.bench03.md.interprocedureCase.MD05,MD05,main,MD05.java:22,InvalidSequenceOfMethodCalls,unknown
+SecureRandomSpec,br.unb.cic.mop.bench03.random.basecase_getinstance.SecureRand02,SecureRand02,main,SecureRand02.java:11,UnsatisfiedConstraint,setSeed() expects a randomized byte array.
+SecureRandomSpec,br.unb.cic.mop.bench03.random.basecase_getinstance.SecureRand02,SecureRand02,main,SecureRand02.java:11,InvalidSequenceOfMethodCalls,unknown
+SecureRandomSpec,br.unb.cic.mop.bench03.random.basecase_getinstance.SecureRand02,SecureRand02,main,SecureRand02.java:12,UnsatisfiedConstraint,setSeed() expects a randomized byte array.
+SecureRandomSpec,br.unb.cic.mop.bench03.random.basecase_getinstance.SecureRand02,SecureRand02,main,SecureRand02.java:12,InvalidSequenceOfMethodCalls,unknown
+SecureRandomSpec,br.unb.cic.mop.bench03.random.basecase_getinstance.SecureRand02,SecureRand02,main,SecureRand02.java:20,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,br.unb.cic.mop.bench03.md.baseCase.MD01,MD01,main,MD01.java:11,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found MD5."
+MessageDigestSpec,br.unb.cic.mop.bench03.md.baseCase.MD01,MD01,main,MD01.java:11,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,br.unb.cic.mop.bench03.md.stringCaseTransformation.MD07,MD07,main,MD07.java:11,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found MD5."
+MessageDigestSpec,br.unb.cic.mop.bench03.md.stringCaseTransformation.MD07,MD07,main,MD07.java:11,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,br.unb.cic.mop.bench03.md.complexCase.MD03,MD03,main,MD03.java:10,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found md5."
+MessageDigestSpec,br.unb.cic.mop.bench03.md.complexCase.MD03,MD03,main,MD03.java:10,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,br.unb.cic.mop.bench03.md.stringReplace.MD08,MD08,main,MD08.java:10,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found MD5."
+MessageDigestSpec,br.unb.cic.mop.bench03.md.stringReplace.MD08,MD08,main,MD08.java:10,InvalidSequenceOfMethodCalls,unknown
+IvParameterSpecSpec,br.unb.cic.mop.bench03.iv.complexCase.ComplexStaticIV,ComplexStaticIV,main,ComplexStaticIV.java:14,UnsatisfiedConstraint,unknown
+IvParameterSpecSpec,br.unb.cic.mop.bench03.iv.complexCase.ComplexStaticIV,ComplexStaticIV,main,ComplexStaticIV.java:14,InvalidSequenceOfMethodCalls,unknown
+KeyGeneratorSpec,br.unb.cic.mop.bench03.cipher.secureBlowFish.CipherExample11,CipherExample11,main,CipherExample11.java:18,InvalidSequenceOfMethodCalls,unknown
+KeyGeneratorSpec,br.unb.cic.mop.bench03.cipher.secureBlowFish.CipherExample11,CipherExample11,main,CipherExample11.java:20,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found Blowfish."
+KeyGeneratorSpec,br.unb.cic.mop.bench03.cipher.secureBlowFish.CipherExample11,CipherExample11,main,CipherExample11.java:20,InvalidSequenceOfMethodCalls,unknown
+CipherSpec,br.unb.cic.mop.bench03.cipher.secureBlowFish.CipherExample11,CipherExample11,main,CipherExample11.java:32,InvalidSequenceOfMethodCalls,unknown
+CipherSpec,br.unb.cic.mop.bench03.cipher.secureBlowFish.CipherExample11,CipherExample11,main,CipherExample11.java:41,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,br.unb.cic.mop.bench03.md.baseCaseVariable.MD02,MD02,main,MD02.java:12,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found MD5."
+MessageDigestSpec,br.unb.cic.mop.bench03.md.baseCaseVariable.MD02,MD02,main,MD02.java:12,InvalidSequenceOfMethodCalls,unknown
+KeyGeneratorSpec,br.unb.cic.mop.bench03.cipher.stringCaseTransform.CipherExample12,CipherExample12,runCipher,CipherExample12.java:15,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found DES."
+KeyGeneratorSpec,br.unb.cic.mop.bench03.cipher.stringCaseTransform.CipherExample12,CipherExample12,runCipher,CipherExample12.java:15,InvalidSequenceOfMethodCalls,unknown
+CipherSpec,br.unb.cic.mop.bench03.cipher.stringCaseTransform.CipherExample12,CipherExample12,runCipher,CipherExample12.java:17,InvalidSequenceOfMethodCalls,unknown
+SecureRandomSpec,br.unb.cic.mop.bench03.random.basecase_seedconstructor.SecureRand03,SecureRand03,main,SecureRand03.java:13,InvalidSequenceOfMethodCalls,unknown
+SecureRandomSpec,br.unb.cic.mop.bench03.random.basecase_seedconstructor.SecureRand03,SecureRand03,main,SecureRand03.java:14,InvalidSequenceOfMethodCalls,unknown
+SecureRandomSpec,br.unb.cic.mop.bench03.random.basecase_seedconstructor.SecureRand03,SecureRand03,main,SecureRand03.java:16,InvalidSequenceOfMethodCalls,unknown
+KeyGeneratorSpec,br.unb.cic.mop.bench03.cipher.differentCase.CipherExample07,CipherExample07,runCipher,CipherExample07.java:14,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found DES."
+KeyGeneratorSpec,br.unb.cic.mop.bench03.cipher.differentCase.CipherExample07,CipherExample07,runCipher,CipherExample07.java:14,InvalidSequenceOfMethodCalls,unknown
+CipherSpec,br.unb.cic.mop.bench03.cipher.differentCase.CipherExample07,CipherExample07,runCipher,CipherExample07.java:16,InvalidSequenceOfMethodCalls,unknown
+IvParameterSpecSpec,br.unb.cic.mop.bench03.iv.stash.StashStaticIV,StashStaticIV,main,StashStaticIV.java:21,UnsatisfiedConstraint,unknown
+IvParameterSpecSpec,br.unb.cic.mop.bench03.iv.stash.StashStaticIV,StashStaticIV,main,StashStaticIV.java:21,InvalidSequenceOfMethodCalls,unknown
+IvParameterSpecSpec,br.unb.cic.mop.bench03.iv.stash.StashStaticIV,StashStaticIV,main,StashStaticIV.java:23,UnsatisfiedConstraint,unknown
+IvParameterSpecSpec,br.unb.cic.mop.bench03.iv.stash.StashStaticIV,StashStaticIV,main,StashStaticIV.java:23,InvalidSequenceOfMethodCalls,unknown
+KeyGeneratorSpec,br.unb.cic.mop.bench03.cipher.insecureBlowFish.CipherExample08,CipherExample08,main,CipherExample08.java:18,InvalidSequenceOfMethodCalls,unknown
+KeyGeneratorSpec,br.unb.cic.mop.bench03.cipher.insecureBlowFish.CipherExample08,CipherExample08,main,CipherExample08.java:20,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found Blowfish."
+KeyGeneratorSpec,br.unb.cic.mop.bench03.cipher.insecureBlowFish.CipherExample08,CipherExample08,main,CipherExample08.java:20,InvalidSequenceOfMethodCalls,unknown
+CipherSpec,br.unb.cic.mop.bench03.cipher.insecureBlowFish.CipherExample08,CipherExample08,main,CipherExample08.java:32,InvalidSequenceOfMethodCalls,unknown
+CipherSpec,br.unb.cic.mop.bench03.cipher.insecureBlowFish.CipherExample08,CipherExample08,main,CipherExample08.java:41,InvalidSequenceOfMethodCalls,unknown
+KeyGeneratorSpec,br.unb.cic.mop.bench03.cipher.stringReplace.CipherExample13,CipherExample13,runCipher,CipherExample13.java:14,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found DES."
+KeyGeneratorSpec,br.unb.cic.mop.bench03.cipher.stringReplace.CipherExample13,CipherExample13,runCipher,CipherExample13.java:14,InvalidSequenceOfMethodCalls,unknown
+CipherSpec,br.unb.cic.mop.bench03.cipher.stringReplace.CipherExample13,CipherExample13,runCipher,CipherExample13.java:16,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,br.unb.cic.mop.bench03.md.replaceSHA256DES.MD06,MD06,main,MD06.java:10,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found MD5."
+MessageDigestSpec,br.unb.cic.mop.bench03.md.replaceSHA256DES.MD06,MD06,main,MD06.java:10,InvalidSequenceOfMethodCalls,unknown
+SSLContextSpec,br.unb.cic.mop.bench03.ssl.context.baseCase.ContextOfSSL,ContextOfSSL,main,ContextOfSSL.java:10,InvalidSequenceOfMethodCalls,unknown
+KeyGeneratorSpec,br.unb.cic.mop.bench03.cipher.KeyToAlgoDES.CipherExample10,CipherExample10,main,CipherExample10.java:12,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found DES."
+KeyGeneratorSpec,br.unb.cic.mop.bench03.cipher.KeyToAlgoDES.CipherExample10,CipherExample10,main,CipherExample10.java:12,InvalidSequenceOfMethodCalls,unknown
+CipherSpec,br.unb.cic.mop.bench03.cipher.KeyToAlgoDES.CipherExample10,CipherExample10,main,CipherExample10.java:18,InvalidSequenceOfMethodCalls,unknown
+KeyGeneratorSpec,br.unb.cic.mop.bench03.cipher.baseCaseInterProc.CipherExample05,CipherExample05,runCipher,CipherExample05.java:30,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found DES."
+KeyGeneratorSpec,br.unb.cic.mop.bench03.cipher.baseCaseInterProc.CipherExample05,CipherExample05,runCipher,CipherExample05.java:30,InvalidSequenceOfMethodCalls,unknown
+CipherSpec,br.unb.cic.mop.bench03.cipher.baseCaseInterProc.CipherExample05,CipherExample05,runCipher,CipherExample05.java:32,InvalidSequenceOfMethodCalls,unknown
+CipherSpec,br.unb.cic.mop.bench03.cipher.KeyToAlgoAES.CipherExample09,CipherExample09,main,CipherExample09.java:17,UnsafeAlgorithm,"expecting one of {AES/CBC/PKCS5Padding, AES/PCBC/ISO10126Padding, ...} but found AES."
+CipherSpec,br.unb.cic.mop.bench03.cipher.KeyToAlgoAES.CipherExample09,CipherExample09,main,CipherExample09.java:17,InvalidSequenceOfMethodCalls,unknown
+CipherSpec,br.unb.cic.mop.bench03.cipher.KeyToAlgoAES.CipherExample09,CipherExample09,main,CipherExample09.java:18,InvalidSequenceOfMethodCalls,unknown

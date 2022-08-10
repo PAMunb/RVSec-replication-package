@@ -37,6 +37,22 @@ sqldf("select count(*) from gt where vulnerability = 'true'")
 
 ```
 
+### Lines of Code 
+
+```{r lines-of-code}
+cloc <- read.csv("../results/owasp-loc.csv", head=T, sep=',')
+
+cloc <- sqldf("select ClassName, Code from cloc where Language='Java'")
+
+nrow(cloc)
+sqldf("select sum(code) from cloc")
+
+# filtering the files with vulnerability in our GT
+
+sqldf("select count(distinct className), sum(code) from cloc 
+        where className in (select TestCase from gt)")
+```
+
 ```{r load-mop}
 mop <- read.csv("../results/datasets/mop.csv", head=T, sep=",")
 

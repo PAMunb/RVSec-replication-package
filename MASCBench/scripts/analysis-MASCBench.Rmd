@@ -84,6 +84,7 @@ mop_fp <- sqldf("select count(distinct className) as fp
 
 # compute false-negative  
 
+
 mop_fn <- sqldf("select count(distinct className) as fn
                  from tp 
                  where className not in (select className from bench03mop)")

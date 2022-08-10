@@ -1,14 +1,11 @@
 <wicket:extend>
-	<div class="card ssh-server-key">
-		<div class="card-body">
-			<div class="alert alert-light alert-notice mb-4">
-				Specify the private key (in PEM format) used by SSH server to establish connections with client
-			</div>
-			<form wicket:id="form" class="leave-confirm">
-				<div wicket:id="editor" class="mb-4"></div>
-				<input type="submit" class="btn btn-primary dirty-aware mr-1" value="Save Setting">
-				<a wicket:id="rekey" class="btn btn-light-primary">Regenerate Private Key</a>
-			</form>
-		</div>
-	</div>
+    <div class="card ssh-server-key">
+        <div class="card-body">
+            <div class="alert alert-light alert-notice mb-4">Specify the private key (in PEM format) used by SSH server to establish connections with client</div>
+            <form wicket:id="form" class="leave-confirm" action="">
+                <div wicket:id="editor" class="mb-4"></div>
+                <input type="submit" class="btn btn-primary dirty-aware mr-1" value="Save Setting"> <a wicket:id="rekey" class="btn btn-light-primary">Regenerate Private Key</a>
+            </form>
+        </div>
+    </div>
 </wicket:extend>

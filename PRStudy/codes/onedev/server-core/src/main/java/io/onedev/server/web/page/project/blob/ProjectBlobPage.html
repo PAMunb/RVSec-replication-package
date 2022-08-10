@@ -1,49 +1,37 @@
 <wicket:extend>
-	<div class="project-blob flex-grow-1 d-flex flex-column">
-		<div class="head d-flex align-items-center justify-content-between flex-wrap px-3 flex-shrink-0">
-			<div class="d-flex flex-wrap align-items-center">
-				<a wicket:id="revisionPicker" class="revision-picker mr-3 py-2"></a>
-				<a wicket:id="buildStatus" class="build-status mr-3 py-2"></a>
-				<div wicket:id="blobNavigator" class="blob-navigator mr-3 py-2"></div>
-			</div>
-			<div wicket:id="blobOperations" class="d-flex align-items-center py-2">
-				<a wicket:id="getCode" title="Code clone or download" class="mr-4 font-weight-bolder text-nowrap link-info"><wicket:svg href="download2" class="icon"/> Clone</a>
-				<a wicket:id="add" title="Add files to current directory" class="mr-3 text-nowrap dropdown-toggle">Add</a>
-				<a wicket:id="search" title="Search files, symbols and texts" class="mr-3 text-nowrap dropdown-toggle">Search</a>
-				<a wicket:id="history" title="Commit history of current path" class="text-nowrap">History</a>
-			</div>
-		</div>
-		<div wicket:id="revisionIndexing" class="p-3 revision-indexing text-warning flex-shrink-0">
-			<wicket:svg href="loading" class="icon spin"/>
-			Revision indexing in progress... (search in this revision will be accurate after indexed)
-		</div>
-		<div wicket:id="buildSupportNote" class="build-support-note p-3 flex-shrink-0">
-			<wicket:svg href="bulb" class="icon"/> 
-			Enable build support by <a wicket:id="addFile" class="link-primary"></a>
-		</div>
-		<div wicket:id="blobContent" class="blob-content autofit flex-grow-1 d-flex flex-column"></div>
-		<div wicket:id="searchResult" class="search-result flex-shrink-0 flex-column overflow-hidden">
-			<div id="search-result-resize-handle" class="ui-resizable-handle ui-resizable-n flex-shrink-0"></div>
-			<div wicket:id="content" class="flex-grow-1 d-flex flex-column overflow-hidden"></div>
-		</div>
-	</div>
-	<wicket:fragment wicket:id="binaryFileFrag">
-		<div class="border-bottom d-flex align-items-center px-3 py-2 justify-content-between">
-			<span wicket:id="size"></span>
-			<span>
-				<a wicket:id="download" class="btn btn-icon btn-xs btn-light btn-hover-primary ml-4" title="Download"><wicket:svg href="download" class="icon"/></a>
-				<span wicket:id="delete" class="ml-1">
-					<a wicket:id="link" class="btn btn-icon btn-xs btn-light btn-hover-danger" title="Delete"><wicket:svg href="trash" class="icon"/></a>
-				</span>
-			</span>
-		</div>	
-		<div class="alert alert-notice alert-light-warning m-4">
-			Binary file
-		</div>
-	</wicket:fragment>
-	<wicket:fragment wicket:id="lfsObjectMissingFrag">
-	<div class="alert alert-notice alert-light-warning m-4">
-		This is a Git LFS object, but the storage file is missing
-	</div>
-	</wicket:fragment>
+    <div class="project-blob flex-grow-1 d-flex flex-column">
+        <div class="head d-flex align-items-center justify-content-between flex-wrap px-3 flex-shrink-0">
+            <div class="d-flex flex-wrap align-items-center">
+                <a wicket:id="revisionPicker" class="revision-picker mr-3 py-2"></a> <a wicket:id="buildStatus" class="build-status mr-3 py-2"></a>
+                <div wicket:id="blobNavigator" class="blob-navigator mr-3 py-2"></div>
+            </div>
+            <div wicket:id="blobOperations" class="d-flex align-items-center py-2">
+                <a wicket:id="getCode" title="Code clone or download" class="mr-4 font-weight-bolder text-nowrap link-info"><wicket:svg href="download2" class="icon" /> Clone</a> <a wicket:id="add" title="Add files to current directory" class="mr-3 text-nowrap dropdown-toggle">Add</a> <a wicket:id="search" title="Search files, symbols and texts" class="mr-3 text-nowrap dropdown-toggle">Search</a> <a wicket:id="history" title="Commit history of current path" class="text-nowrap">History</a>
+            </div>
+        </div>
+        <div wicket:id="revisionIndexing" class="p-3 revision-indexing text-warning flex-shrink-0">
+            <wicket:svg href="loading" class="icon spin" />
+            Revision indexing in progress... (search in this revision will be accurate after indexed)
+        </div>
+        <div wicket:id="buildSupportNote" class="build-support-note p-3 flex-shrink-0">
+            <wicket:svg href="bulb" class="icon" />
+            Enable build support by <a wicket:id="addFile" class="link-primary"></a>
+        </div>
+        <div wicket:id="blobContent" class="blob-content autofit flex-grow-1 d-flex flex-column"></div>
+        <div wicket:id="searchResult" class="search-result flex-shrink-0 flex-column overflow-hidden">
+            <div id="search-result-resize-handle" class="ui-resizable-handle ui-resizable-n flex-shrink-0"></div>
+            <div wicket:id="content" class="flex-grow-1 d-flex flex-column overflow-hidden"></div>
+        </div>
+    </div>
+    <wicket:fragment wicket:id="binaryFileFrag">
+        <div class="border-bottom d-flex align-items-center px-3 py-2 justify-content-between">
+            <span wicket:id="size"></span> <span> <a wicket:id="download" class="btn btn-icon btn-xs btn-light btn-hover-primary ml-4" title="Download"><wicket:svg href="download" class="icon" /></a> <span wicket:id="delete" class="ml-1"> <a wicket:id="link" class="btn btn-icon btn-xs btn-light btn-hover-danger" title="Delete"><wicket:svg href="trash" class="icon" /></a>
+            </span>
+            </span>
+        </div>
+        <div class="alert alert-notice alert-light-warning m-4">Binary file</div>
+    </wicket:fragment>
+    <wicket:fragment wicket:id="lfsObjectMissingFrag">
+        <div class="alert alert-notice alert-light-warning m-4">This is a Git LFS object, but the storage file is missing</div>
+    </wicket:fragment>
 </wicket:extend>
