@@ -15,9 +15,9 @@ library(xtable)
 ## Load the datasets
 
 ```{r load}
-bench03mop <- read.csv("../results/mop-report.csv", head=T, sep=",")
-bench03cc  <- read.csv("../results/CogniCrypt-Report.csv", head=T, sep=",")
-bench03cg <- read.csv("../results/CryptoGuard-Report.csv", head=T, sep=",")
+bench03mop <- read.csv("../results/mop.csv", head=T, sep=",")
+bench03cc  <- read.csv("../results/cognicrypt.csv", head=T, sep=",")
+bench03cg <- read.csv("../results/cryptoguard.csv", head=T, sep=",")
 
 gt <- read.csv("../results/gt.csv", head=T, sep=",")
 
