@@ -40,21 +40,6 @@ colnames(gt)
 nrow(gt)
 ```
 
-```{r descriptive}
-sqldf("select distinct spec from bench02mop order by 1")
-sqldf("select distinct spec from bench02cc order by 1")
-sqldf("select distinct spec from bench02cg order by 1")
-
-
-sqldf("select spec, count(*) from bench02mop group by spec")
-sqldf("select spec, count(*) from bench02cc group by spec")
-sqldf("select spec, count(*) from bench02cg group by spec")
-
-
-sqldf("select error, count(*) from bench02mop group by error")
-sqldf("select error, count(*) from bench02cc group by error")
-sqldf("select error, count(*) from bench02cg group by error")
-```
 
 
 ## Ground Truth (MOP)
@@ -76,7 +61,7 @@ mop_tp <- sqldf("select count(distinct className) as tp
                  from bench02mop 
                  where className in (select class from tp)")
 
-# fcompute alse positive 
+# compute false positive 
 mop_fp <- sqldf("select count(distinct className) as fp
                  from bench02mop 
                  where className in (select class from tn)")
@@ -234,14 +219,14 @@ sqldf("select distinct class
 
 ```{r}
 # false positive 
-sqldf("select distinct className
-       from \
-       where className in (select class from tncg)")
+#sqldf("select distinct className
+#       from tpcg
+#       where className in (select class from tncg)")
 
 
 
 # false-negative  
-sqldf("select distinct class
-       from tpcg 
-       where class not in (select className from bench02cg)")
+#sqldf("select distinct class
+#       from tpcg 
+#       where class not in (select className from bench02cg)")
 ```
