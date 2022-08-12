@@ -19,9 +19,9 @@ This is an R Markdown document. Markdown is a simple formatting syntax for autho
 When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
 
 ```{r load}
-bench02mop <- read.csv("../results/MOP-Report.csv", head=T, sep=",")
-bench02cc  <- read.csv("../results/CogniCrypt-Report.csv", head=T, sep=",")
-bench02cg <- read.csv("../results/CryptoGuard-Report.csv", head=T, sep=",")
+bench02mop <- read.csv("../results/mop.csv", head=T, sep=",")
+bench02cc  <- read.csv("../results/cognicrypt.csv", head=T, sep=",")
+bench02cg <- read.csv("../results/cryptoguard.csv", head=T, sep=",")
 
 gt <- read.csv("../results/bench02-gt-converted.csv", head=T, sep=",")
 
@@ -42,7 +42,7 @@ nrow(gt)
 
 
 
-## Ground Truth (MOP)
+## Ground Truth
 
 ```{r}
 gt <- sqldf("select propertyShortName, class, method, vulnerability 
@@ -55,7 +55,11 @@ tn <- gt[gt$vulnerability == "FALSE",]
 
 sqldf("select count(distinct class) from tp")
 sqldf("select count(distinct class) from tn")
+```
 
+## Precision / Recall MOP
+
+```{r}
 # compute true positive 
 mop_tp <- sqldf("select count(distinct className) as tp
                  from bench02mop 
