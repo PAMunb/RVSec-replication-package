@@ -50,8 +50,8 @@ gt <- sqldf("select propertyShortName, class, method, vulnerability
 
 nrow(gt)
 
-tp <- gt[gt$vulnerability == "TRUE",]
-tn <- gt[gt$vulnerability == "FALSE",]
+tp <- sqldf("select distinct class from gt where vulnerability = 'TRUE'")
+tn <- sqldf("select distinct class from gt where vulnerability = 'FALSE'")
 
 sqldf("select count(distinct class) from tp")
 sqldf("select count(distinct class) from tn")
