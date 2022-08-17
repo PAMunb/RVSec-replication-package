@@ -59,7 +59,7 @@
                 <version>${maven-surefire-plugin.version}</version>
                 <configuration>
                     <argLine>-Xmx4096m -XX:MaxPermSize=1024m</argLine>
-                    <argLine>-javaagent:${basedir}/JavaMOPAgent.jar</argLine>
+                    <!-- argLine>-javaagent:${basedir}/JavaMOPAgent.jar</argLine-->
                     <runOrder>alphabetical</runOrder>
                     <testFailureIgnore>false</testFailureIgnore>
                     <trimStackTrace>true</trimStackTrace>

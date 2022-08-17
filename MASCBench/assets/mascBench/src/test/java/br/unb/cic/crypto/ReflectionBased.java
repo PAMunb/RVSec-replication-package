@@ -11,6 +11,7 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.io.PrintStream;
 import java.lang.reflect.Method;
+import java.security.CRYLogger;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.logging.FileHandler;
@@ -58,15 +59,17 @@ public abstract class ReflectionBased {
             Method mainMethod = findMainMethod(c);
 
             classNames.add(c.getName());
-
+            
             try {
                 if (mainMethod != null) {
                     switch (mainMethod.getParameterCount()) {
                         case 0:
+                            CRYLogger.setClassName(c.getName());
                             mainMethod.invoke(null);
                             executions++;
                             break;
                         case 1:
+                            CRYLogger.setClassName(c.getName());
                             mainMethod.invoke(null, (Object) null);
                             executions++;
                             break;
