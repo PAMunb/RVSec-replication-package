@@ -214,6 +214,8 @@ nrow(cc_summary)
 ##  [6] "BC"          "MC"          "RVSec"       "CogniCrypt"  "CryptoGuard"
 ## [11] "diff"
 
+sqldf("select avg(IC), avg(BC) from cc_summary")
+
 xtable(sqldf("select latex, test_cases as TCs, IC, BC, MC 
        from cc_summary"))
 

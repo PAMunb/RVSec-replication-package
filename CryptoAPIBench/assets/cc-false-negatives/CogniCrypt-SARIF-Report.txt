@@ -1,0 +1,1 @@
+{"version":"2.0.0","runs":[{"files":{},"resources":{"rules":{}},"results":[],"tool":{"name":"CogniCrypt","semanticVersion":"1.0.0","fullName":"CogniCrypt (en-US)","language":"en-US","version":"1.0.0"}}]}

@@ -1,0 +1,31 @@
+---
+title: "Execution Time (static analysis)"
+author: "Rodrigo Bonifácio et al."
+date: '2022-08-15'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+require(sqldf)
+require(xtable)
+```
+
+```{r load}
+ds <- read.csv("../results/execution-time.csv", head=T, sep=',')
+
+tools <- sqldf("select tool as Tool, project as Project, avg(time/1000) as Time 
+                from ds 
+                group by tool, project")
+
+xtable(tools)
+
+
+boxplot(tools$Time~tools$Tool)
+
+
+summary(tools[tools$Tool == 'cc',])
+
+summary(tools[tools$Tool == 'cg',])
+
+```
