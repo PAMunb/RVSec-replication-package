@@ -1,0 +1,3 @@
+[MASTER] 00:01:01.774 [main] ERROR ExternalProcessGroupHandler - Class org.apache.spark.rpc.netty.RemoteNettyRpcCallContext. Clients have not finished yet, although a timeout occurred.
+Client-0: ASSERTION_GENERATION
+

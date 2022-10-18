@@ -1,0 +1,3 @@
+[MASTER] 21:01:26.487 [main] ERROR ExternalProcessGroupHandler - Class org.apache.manifoldcf.core.database.BaseTable. Clients have not finished yet, although a timeout occurred.
+Client-0: WRITING_TESTS
+

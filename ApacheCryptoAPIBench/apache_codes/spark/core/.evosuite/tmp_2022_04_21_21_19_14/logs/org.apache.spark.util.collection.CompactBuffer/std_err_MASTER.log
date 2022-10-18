@@ -1,0 +1,3 @@
+[MASTER] 22:06:07.797 [main] ERROR ExternalProcessGroupHandler - Class org.apache.spark.util.collection.CompactBuffer. Clients have not finished yet, although a timeout occurred.
+Client-0: ASSERTION_GENERATION
+

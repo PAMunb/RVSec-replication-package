@@ -1,0 +1,6 @@
+[MASTER] 00:10:53.230 [main] ERROR ExternalProcessGroupHandler - Class org.apache.spark.api.python.TestOutputValueConverter. Clients have not finished yet, although a timeout occurred.
+Client-0: SEARCH
+
+[MASTER] 00:10:53.334 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 00:10:54.337 [main] ERROR SearchStatistics - Not going to write down statistics data, as some are missing
+[MASTER] 00:10:54.440 [main] ERROR TestGeneration - failed to write statistics data

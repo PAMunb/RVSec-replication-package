@@ -1,0 +1,5 @@
+[MASTER] 00:21:56.659 [main] ERROR ExternalProcessGroupHandler - Class org.apache.spark.util.ClosureCleaner. Clients have not finished yet, although a timeout occurred.
+Client-0: SEARCH
+
+[MASTER] 00:21:56.762 [main] ERROR SearchStatistics - No statistics has been saved because EvoSuite failed to generate any test case
+[MASTER] 00:21:56.863 [main] ERROR TestGeneration - failed to write statistics data

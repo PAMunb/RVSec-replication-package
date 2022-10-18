@@ -1,0 +1,6 @@
+[MASTER] 22:09:11.147 [main] ERROR ExternalProcessGroupHandler - Class org.apache.spark.serializer.SerializerManager. Clients have not finished yet, although a timeout occurred.
+Client-0: SEARCH
+
+[MASTER] 22:09:11.251 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 22:09:12.254 [main] ERROR SearchStatistics - Not going to write down statistics data, as some are missing
+[MASTER] 22:09:12.355 [main] ERROR TestGeneration - failed to write statistics data

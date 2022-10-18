@@ -1,0 +1,3 @@
+[MASTER] 23:15:14.024 [main] ERROR ExternalProcessGroupHandler - Class org.apache.spark.scheduler.HighlyCompressedMapStatus. Clients have not finished yet, although a timeout occurred.
+Client-0: JUNIT_CHECK
+

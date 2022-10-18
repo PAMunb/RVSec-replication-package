@@ -1,0 +1,5 @@
+[MASTER] 00:28:47.786 [main] ERROR ExternalProcessGroupHandler - Class org.apache.spark.deploy.master.PersistenceEngine. Clients have not finished yet, although a timeout occurred.
+Client-0: SEARCH
+
+[MASTER] 00:28:47.889 [main] ERROR SearchStatistics - No statistics has been saved because EvoSuite failed to generate any test case
+[MASTER] 00:28:47.990 [main] ERROR TestGeneration - failed to write statistics data

@@ -1,0 +1,5 @@
+spec,class,className,method,location,error,expecting
+CipherSpec,org.apache.shenyu.plugin.cryptor.strategy.RsaStrategy,RsaStrategy,decrypt,RsaStrategy.java:45,InvalidSequenceOfMethodCalls,unknown
+CipherSpec,org.apache.shenyu.plugin.cryptor.strategy.RsaStrategy,RsaStrategy,encrypt,RsaStrategy.java:54,InvalidSequenceOfMethodCalls,unknown
+CipherSpec,org.apache.shenyu.plugin.cryptor.strategy.RsaStrategy,RsaStrategy,decrypt,RsaStrategy.java:45,InvalidSequenceOfMethodCalls,unknown
+CipherSpec,org.apache.shenyu.plugin.cryptor.strategy.RsaStrategy,RsaStrategy,encrypt,RsaStrategy.java:54,InvalidSequenceOfMethodCalls,unknown

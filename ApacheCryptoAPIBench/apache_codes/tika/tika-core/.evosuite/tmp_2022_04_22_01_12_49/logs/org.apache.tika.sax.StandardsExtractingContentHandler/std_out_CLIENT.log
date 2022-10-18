@@ -1,0 +1,4 @@
+[MASTER] 01:40:49.565 [pool-2-thread-1] WARN  TimeController - Phase INITIALIZATION lasted too long, 3 seconds more than allowed.
+[MASTER] 01:41:35.035 [pool-2-thread-1] WARN  TestSuiteMinimizer - Minimization timeout. Roll back to original test suite
+[MASTER] 01:41:35.036 [pool-2-thread-1] WARN  TimeController - Phase MINIMIZATION lasted too long, 2 seconds more than allowed.
+[MASTER] 01:41:43.388 [pool-2-thread-1] WARN  TimeController - Current phase WRITING_TESTS could run up to 5s, but only 3s are left

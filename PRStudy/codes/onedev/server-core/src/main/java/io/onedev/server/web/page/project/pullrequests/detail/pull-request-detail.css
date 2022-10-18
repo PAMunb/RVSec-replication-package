@@ -1,0 +1,105 @@
+.pull-request-detail>.card-body {
+	min-height: fit-content;
+}
+.pull-request-detail>.card-body>.main>.status-bar>.status {
+	font-size: 1rem;
+}
+.pull-request-detail>.card-body>.main>.summary {
+	border: 2px dashed var(--light-gray);
+	padding: 1.2rem 1.5rem;
+	border-radius: 0.42rem;
+}
+.dark-mode .pull-request-detail>.card-body>.main>.summary {
+	border-color: var(--dark-mode-lighter-dark);
+}
+.pull-request-detail>.card-body>.main>.summary>div {
+	margin-bottom: 1rem;
+}
+.pull-request-detail>.card-body>.main>.summary>div:last-child {
+	margin-bottom: 0;
+}
+.pull-request-detail>.card-body>.main>.operations>a {
+	margin-bottom: 1.2rem;
+	margin-right: 0.5rem;
+}
+.pull-request-detail>.card-body>.main>.summary .icon {
+	width: 20px;
+	height: 20px;
+	margin-right: 6px;
+	flex-shrink: 0;
+}
+.pull-request-detail>.card-body>.main>.summary .icon.spin {
+	width: 24px;
+	height: 24px;
+	margin-left: -2px;
+	margin-right: 4px;
+}
+.pull-request-detail>.card-body>.main>.summary>.contribution {
+	border-top: 1px dashed var(--light-gray);
+	padding-top: 1rem;
+	margin-top: 1rem;
+	font-size: 1rem !important;
+}
+.dark-mode .pull-request-detail>.card-body>.main>.summary>.contribution {
+	border-top-color: var(--dark-mode-dark-gray);
+}
+
+ul>li>a.code-comments.new .icon {
+	width: 12px;
+	height: 12px;
+	fill: var(--primary);
+	flex-shrink: 0;
+	display: inline-block !important;
+}
+
+.conflict-resolve-instruction {
+	max-width: 480px;
+}
+.conflict-resolve-instruction ul {
+	padding-left: 0.9rem;
+	list-style: decimal;
+	margin-bottom: 0;
+}
+
+@media(min-width: 1200px) {
+	.pull-request-detail>.card-body>.main>.summary .more-info,
+	.pull-request-detail>.card-body>.main>.summary .more-info:hover,
+	.pull-request-detail>.card-body>.main>.summary .more-info:focus {
+		color: inherit !important;
+		cursor: inherit !important;
+	}
+}
+
+.pull-request-detail>.card-body>.more-info>.body>* {
+	margin-bottom: 1.5rem;
+	border-top: 1px dashed var(--secondary);
+	padding-top: 1.5rem;
+}
+.dark-mode .pull-request-detail>.card-body>.more-info>.body>* {
+	border-top-color: var(--dark-mode-dark-gray);
+}
+.pull-request-detail>.card-body>.more-info>.body>:first-child {
+	border-top: none;
+	padding-top: 0;
+}
+
+.pull-request-detail>.card-body>.more-info>.body>*>.head {
+	font-weight: 600;
+	margin-bottom: 0.8rem;
+}
+.pull-request-detail .more-info .reviews .right, 
+.pull-request-detail .more-info .assignments .right {
+	margin-left: auto;
+}
+.pull-request-detail .more-info .submission td.name {
+	padding-left: 0;
+}
+.pull-request-detail .more-info .submission td.value {
+	padding-right: 0;
+}
+.pull-request-detail .more-info .submission tr:first-child td {
+	padding-top: 0;
+}
+.pull-request-detail .more-info .submission tr:last-child td {
+	padding-bottom: 0;
+}

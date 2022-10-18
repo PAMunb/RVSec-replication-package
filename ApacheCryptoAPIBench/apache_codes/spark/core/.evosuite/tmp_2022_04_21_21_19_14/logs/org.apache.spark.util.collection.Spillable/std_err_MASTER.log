@@ -1,0 +1,5 @@
+[MASTER] 22:36:28.017 [main] ERROR ExternalProcessGroupHandler - Class org.apache.spark.util.collection.Spillable. Clients have not finished yet, although a timeout occurred.
+Client-0: SEARCH
+
+[MASTER] 22:36:28.120 [main] ERROR SearchStatistics - No statistics has been saved because EvoSuite failed to generate any test case
+[MASTER] 22:36:28.221 [main] ERROR TestGeneration - failed to write statistics data

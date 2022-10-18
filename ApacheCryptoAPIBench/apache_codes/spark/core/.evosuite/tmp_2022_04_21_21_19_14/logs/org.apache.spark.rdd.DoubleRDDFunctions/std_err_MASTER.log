@@ -1,0 +1,5 @@
+[MASTER] 00:16:05.304 [main] ERROR ExternalProcessGroupHandler - Class org.apache.spark.rdd.DoubleRDDFunctions. Clients have not finished yet, although a timeout occurred.
+Client-0: SEARCH
+
+[MASTER] 00:16:05.407 [main] ERROR SearchStatistics - No statistics has been saved because EvoSuite failed to generate any test case
+[MASTER] 00:16:05.508 [main] ERROR TestGeneration - failed to write statistics data

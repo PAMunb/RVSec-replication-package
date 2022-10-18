@@ -1,0 +1,6 @@
+[MASTER] 00:03:07.341 [main] ERROR ExternalProcessGroupHandler - Class org.apache.spark.network.netty.SparkTransportConf. Clients have not finished yet, although a timeout occurred.
+Client-0: SEARCH
+
+[MASTER] 00:03:07.444 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 00:03:08.447 [main] ERROR SearchStatistics - Not going to write down statistics data, as some are missing
+[MASTER] 00:03:08.549 [main] ERROR TestGeneration - failed to write statistics data

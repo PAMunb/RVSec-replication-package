@@ -1,0 +1,6 @@
+[MASTER] 00:24:22.537 [main] ERROR ExternalProcessGroupHandler - Class org.apache.spark.storage.memory.DeserializedValuesHolder. Clients have not finished yet, although a timeout occurred.
+Client-0: SEARCH
+
+[MASTER] 00:24:22.640 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 00:24:23.643 [main] ERROR SearchStatistics - Not going to write down statistics data, as some are missing
+[MASTER] 00:24:23.744 [main] ERROR TestGeneration - failed to write statistics data

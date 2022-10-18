@@ -1,0 +1,69 @@
+[INFO] --- evosuite-maven-plugin:1.2.0:info (evosuite-info) @ mcf-core ---
+[INFO] Going to query EvoSuite info on current project
+[INFO] * EvoSuite 1.2.0
+[INFO] Total number of classes in the project: 98
+[INFO] Number of classes in the project that are testable: 98
+[INFO] Number of generated test suites: 93
+[INFO] Overall coverage: 0.7054719387755103
+
+
+Results :
+
+Failed tests: 
+  Messages_ESTest.test25:1510 expected:<14> but was:<13>
+  Messages_ESTest.test09:666 expected:<125> but was:<146>
+  Messages_ESTest.test01:215 expected:<125> but was:<146>
+  BaseLockManager_ESTest.test100:2222 Expecting exception: Exception
+  BaseLockManager_ESTest.test116:2534 Expecting exception: Exception
+  BaseLockManager_ESTest.test114:2493 Exception was not thrown in org.apache.manifoldcf.core.lockmanager.LockObject but in org.apache.manifoldcf.core.lockmanager.BaseLockManager.leaveNonExWrite(BaseLockManager.java:1040): java.lang.NullPointerException
+  BaseLockManager_ESTest.test123:2664 Expecting exception: Exception
+  BaseLockManager_ESTest.test130:2791 Expecting exception: Exception
+  BaseLockManager_ESTest.test132:2822 Expecting exception: Exception
+  BaseLockManager_ESTest.test014:440 Expecting exception: Exception
+  BaseLockManager_ESTest.test022:614 Expecting exception: Exception
+  BaseLockManager_ESTest.test027:716 Expecting exception: Exception
+  BaseLockManager_ESTest.test034:862 Expecting exception: Exception
+  BaseLockManager_ESTest.test033:829 Expecting exception: NullPointerException
+  BaseLockManager_ESTest.test047:1100 Expecting exception: Exception
+  BaseLockManager_ESTest.test046:1080 Expecting exception: Exception
+  BaseLockManager_ESTest.test048:1125 Expecting exception: Exception
+  BaseLockManager_ESTest.test054:1261 Expecting exception: Exception
+  BaseLockManager_ESTest.test070:1617 Expecting exception: Exception
+  BaseLockManager_ESTest.test077:1747 Expecting exception: Exception
+  BaseLockManager_ESTest.test072:1660 Expecting exception: Exception
+  BaseLockManager_ESTest.test071:1635 Expecting exception: Exception
+  BaseLockManager_ESTest.test081:1842 Expecting exception: Exception
+  BaseLockManager_ESTest.test089:1994 Expecting exception: Exception
+  BaseLockManager_ESTest.test088:1975 Expecting exception: Exception
+  BaseLockManager_ESTest.test091:2038 Expecting exception: Exception
+  BaseLockManager_ESTest.test099:2194 Expecting exception: Exception
+  FileLockObjectFactory_ESTest.test0:38 Exception was not thrown in org.evosuite.runtime.System but in org.apache.manifoldcf.core.lockmanager.FileLockObject.<init>(FileLockObject.java:56): java.lang.NullPointerException
+  ManifoldCF_ESTest.test104:2614 null
+  ManifoldCF_ESTest.test103:2566 null
+
+Tests in error: 
+  DBCreate_ESTest.test5:106 » Verify Expecting a stackmap frame at branch target...
+  DBCreate_ESTest.test4:90 » Verify Expecting a stackmap frame at branch target ...
+  DBCreate_ESTest.test3:73 » Verify Expecting a stackmap frame at branch target ...
+  DBInterfaceHSQLDB_ESTest>DBInterfaceHSQLDB_ESTest_scaffolding.doneWithTestCase:66->DBInterfaceHSQLDB_ESTest_scaffolding.resetClasses:114 » ExceptionInInitializer
+  DBInterfaceHSQLDB_ESTest>DBInterfaceHSQLDB_ESTest_scaffolding.initTestCase:54 » IllegalState
+  DBInterfaceHSQLDB_ESTest>DBInterfaceHSQLDB_ESTest_scaffolding.doneWithTestCase:66->DBInterfaceHSQLDB_ESTest_scaffolding.resetClasses:114 » ExceptionInInitializer
+  DBInterfaceHSQLDB_ESTest>DBInterfaceHSQLDB_ESTest_scaffolding.initTestCase:54 » IllegalState
+  DBInterfaceMariaDB_ESTest>DBInterfaceMariaDB_ESTest_scaffolding.doneWithTestCase:66->DBInterfaceMariaDB_ESTest_scaffolding.resetClasses:98 » ExceptionInInitializer
+  DBInterfaceMySQL_ESTest>DBInterfaceMySQL_ESTest_scaffolding.doneWithTestCase:66->DBInterfaceMySQL_ESTest_scaffolding.resetClasses:116 » ExceptionInInitializer
+  DBInterfaceMySQL_ESTest>DBInterfaceMySQL_ESTest_scaffolding.initTestCase:54 » IllegalState
+  DBInterfaceMySQL_ESTest>DBInterfaceMySQL_ESTest_scaffolding.doneWithTestCase:66->DBInterfaceMySQL_ESTest_scaffolding.resetClasses:116 » ExceptionInInitializer
+  DBInterfaceMySQL_ESTest>DBInterfaceMySQL_ESTest_scaffolding.initTestCase:54 » IllegalState
+  DBInterfacePostgreSQL_ESTest>DBInterfacePostgreSQL_ESTest_scaffolding.doneWithTestCase:66->DBInterfacePostgreSQL_ESTest_scaffolding.resetClasses:115 » ExceptionInInitializer
+  DBInterfacePostgreSQL_ESTest>DBInterfacePostgreSQL_ESTest_scaffolding.initTestCase:54 » IllegalState
+  DBInterfacePostgreSQL_ESTest>DBInterfacePostgreSQL_ESTest_scaffolding.doneWithTestCase:66->DBInterfacePostgreSQL_ESTest_scaffolding.resetClasses:115 » ExceptionInInitializer
+  DBInterfacePostgreSQL_ESTest>DBInterfacePostgreSQL_ESTest_scaffolding.initTestCase:54 » IllegalState
+  Database_ESTest>Database_ESTest_scaffolding.doneWithTestCase:68->Database_ESTest_scaffolding.resetClasses:126 » ExceptionInInitializer
+  Database_ESTest>Database_ESTest_scaffolding.initTestCase:56 » IllegalState Try...
+  Database_ESTest>Database_ESTest_scaffolding.doneWithTestCase:68->Database_ESTest_scaffolding.resetClasses:126 » ExceptionInInitializer
+  Database_ESTest>Database_ESTest_scaffolding.initTestCase:56 » IllegalState Try...
+  BaseLockManager_ESTest.test067:1547 » MockRuntime JVM failure: Don't hold lock...
+  BaseLockManager_ESTest.test096:2126 » ManifoldCF Service '@(#)$Id: LockManager...
+  BaseLockManager_ESTest.test095:2097 » MockRuntime JVM error: Don't hold lock f...
+
+Tests run: 2086, Failures: 30, Errors: 23, Skipped: 1

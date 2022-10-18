@@ -1,0 +1,82 @@
+<wicket:panel>
+    <div class="project-list card">
+        <div class="card-body">
+            <div class="d-flex mb-4">
+                <form wicket:id="query" class="clearable-wrapper flex-grow-1" action="">
+                    <div class="input-group">
+                        <input wicket:id="input" spellcheck="false" autocomplete="off" class="form-control" placeholder="Query and order projects here"> <span class="input-group-append">
+                            <button wicket:id="submit" type="submit" class="btn btn-outline-secondary btn-icon" title="Query">
+                                <wicket:svg href="magnify" class="icon"></wicket:svg>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+                <a wicket:id="addProject" class="btn btn-primary btn-icon flex-shrink-0 ml-3" title="Add project"><wicket:svg href="plus" class="icon" /></a>
+            </div>
+            <div class="operations mb-4">
+                <a wicket:id="showSavedQueries" class="show-saved-queries text-gray d-inline-block mb-2 mr-4"> <wicket:svg href="eye" class="icon"></wicket:svg> Show Saved Queries
+                </a> <a wicket:id="saveQuery" class="save-query text-gray d-inline-block mb-2 mr-4"> <wicket:svg href="save" class="icon"></wicket:svg> Save Query
+                </a> <a wicket:id="operations" class="operations d-inline-block mb-2 mr-4 text-gray"> <wicket:svg href="ellipsis-circle" class="icon"></wicket:svg> Operations
+                </a> <a wicket:id="importProjects" class="import-projects d-inline-block mb-2 mr-4 text-gray"> <wicket:svg href="import" class="icon"></wicket:svg> Import
+                </a> <a wicket:id="orderBy" class="order-by text-gray d-inline-block mb-2 mr-4"> <wicket:svg href="sort" class="icon"></wicket:svg> Order By
+                </a>
+            </div>
+            <div wicket:id="body">
+                <div wicket:id="feedback"></div>
+                <table wicket:id="projects" class="table"></table>
+            </div>
+        </div>
+    </div>
+    <wicket:fragment wicket:id="projectFrag">
+        <div class="d-flex flex-wrap font-size-h5">
+            <a wicket:id="path" class="mr-auto text-nowrap"><img wicket:id="avatar" src="" alt=""> <span wicket:id="label" class="mr-3"></span></a> <span wicket:id="lastUpdate" class="text-muted font-size-sm"></span>
+        </div>
+        <div class="d-flex flex-wrap project-summary">
+            <div wicket:id="codeInfo" class="code-info mt-2 d-flex align-items-center flex-wrap mr-3"></div>
+            <div wicket:id="pullRequestInfo" class="pull-request-info mt-2 d-flex align-items-center flex-wrap"></div>
+        </div>
+        <div class="d-flex flex-wrap project-summary">
+            <div wicket:id="issueInfo" class="issue-info mt-2 d-flex align-items-center flex-wrap mr-3"></div>
+            <div wicket:id="buildInfo" class="build-info mt-2 d-flex align-items-center flex-wrap"></div>
+        </div>
+        <div wicket:id="children" class="project-summary"></div>
+    </wicket:fragment>
+    <wicket:fragment wicket:id="codeInfoFrag">
+        <wicket:svg href="files" class="icon mr-2"></wicket:svg>
+        <a wicket:id="commits" class="mr-2"><span wicket:id="label"></span></a>
+        <a wicket:id="branches" class="mr-2"><span wicket:id="label"></span></a>
+        <a wicket:id="tags" class="mr-2"><span wicket:id="label"></span></a>
+    </wicket:fragment>
+    <wicket:fragment wicket:id="issueInfoFrag">
+        <wicket:svg href="bug" class="icon mr-2"></wicket:svg>
+        <a wicket:id="issues" class="mr-2"><span wicket:id="label"></span></a>
+        <wicket:container wicket:id="states">
+            <a wicket:id="link" class="mr-2"><span wicket:id="label"></span></a>
+        </wicket:container>
+    </wicket:fragment>
+    <wicket:fragment wicket:id="buildInfoFrag">
+        <wicket:svg href="play-circle" class="icon mr-2"></wicket:svg>
+        <a wicket:id="builds" class="mr-2"><span wicket:id="label"></span></a>
+        <wicket:container wicket:id="statuses">
+            <a wicket:id="link" class="mr-2"><span wicket:id="label"></span></a>
+        </wicket:container>
+    </wicket:fragment>
+    <wicket:fragment wicket:id="pullRequestInfoFrag">
+        <wicket:svg href="pull-request" class="icon mr-2"></wicket:svg>
+        <a wicket:id="pullRequests" class="mr-2"><span wicket:id="label"></span></a>
+        <wicket:container wicket:id="statuses">
+            <a wicket:id="link" class="mr-2"><span wicket:id="label"></span></a>
+        </wicket:container>
+    </wicket:fragment>
+    <wicket:fragment wicket:id="childrenFrag">
+        <div class="d-flex flex-nowrap align-items-center mt-2">
+            <wicket:svg href="project" class="icon mr-1" />
+            <a wicket:id="toggle" class="toggle-children mr-1"><wicket:svg href="arrow" class="icon" /></a> <a wicket:id="link"><span wicket:id="label"></span></a>
+        </div>
+        <div wicket:id="tree" class="child-projects mt-2"></div>
+    </wicket:fragment>
+    <wicket:fragment wicket:id="childFrag">
+        <a wicket:id="link"> <img wicket:id="avatar" src="" alt=""> <span wicket:id="name"></span>
+        </a>
+    </wicket:fragment>
+</wicket:panel>

@@ -1,0 +1,6 @@
+[MASTER] 23:50:50.780 [main] ERROR ExternalProcessGroupHandler - Class org.apache.spark.scheduler.DirectTaskResult. Clients have not finished yet, although a timeout occurred.
+Client-0: SEARCH
+
+[MASTER] 23:50:50.884 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 23:50:51.886 [main] ERROR SearchStatistics - Not going to write down statistics data, as some are missing
+[MASTER] 23:50:51.990 [main] ERROR TestGeneration - failed to write statistics data

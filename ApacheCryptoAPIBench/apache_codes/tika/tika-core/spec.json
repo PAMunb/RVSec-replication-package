@@ -1,0 +1,35 @@
+[
+{
+	"operation": {
+		"classname": "org.apache.tika.parser.CryptoParser",
+		"name": "parse",
+		"parameterTypes": [
+			"java.io.InputStream",
+			"org.xml.sax.ContentHandler",
+			"org.apache.tika.metadata.Metadata",
+			"org.apache.tika.parser.ParseContext"
+		]
+	},
+	"identifiers": {
+		"parameters": [
+			"stream",
+			"handler",
+			"metadata",
+			"context"
+		],
+		"receiverName": "receiver",
+		"returnName": "result"
+	},
+	"pre": [
+		{
+			"description": "the signalValue must be positive",
+			"guard": {
+				"conditionText": "context != null",
+				"description": "the signalValue must be positive"
+			}
+		}
+	],
+	"post": [],
+	"throws": []
+}
+]

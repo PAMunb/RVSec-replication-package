@@ -2067,8 +2067,8 @@
             <recompileMode>incremental</recompileMode>
             <useZincServer>true</useZincServer>
             <args>
-              <arg>-unchecked</arg>
-              <arg>-deprecation</arg>
+<!--               <arg>-unchecked</arg> -->
+<!--               <arg>-deprecation</arg> -->
               <arg>-feature</arg>
               <arg>-explaintypes</arg>
               <arg>-Yno-adapted-args</arg>

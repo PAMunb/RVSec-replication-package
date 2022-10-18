@@ -1,0 +1,2 @@
+[MASTER] 01:33:05.393 [pool-2-thread-1] WARN  TestCluster - Failed to check cache for java.util.Enumeration<E> : Type points to itself
+[MASTER] 01:34:01.658 [pool-2-thread-1] WARN  TimeController - Phase SEARCH lasted too long, 6 seconds more than allowed.

@@ -19,9 +19,9 @@ This is an R Markdown document. Markdown is a simple formatting syntax for autho
 When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
 
 ```{r load}
-bench02mop <- read.csv("../results/MOP-Report.csv", head=T, sep=",")
-bench02cc  <- read.csv("../results/CogniCrypt-Report.csv", head=T, sep=",")
-bench02cg <- read.csv("../results/CryptoGuard-Report.csv", head=T, sep=",")
+bench02mop <- read.csv("../results/mop.csv", head=T, sep=",")
+bench02cc  <- read.csv("../results/cognicrypt.csv", head=T, sep=",")
+bench02cg <- read.csv("../results/cryptoguard.csv", head=T, sep=",")
 
 gt <- read.csv("../results/bench02-gt-converted.csv", head=T, sep=",")
 
@@ -40,24 +40,9 @@ colnames(gt)
 nrow(gt)
 ```
 
-```{r descriptive}
-sqldf("select distinct spec from bench02mop order by 1")
-sqldf("select distinct spec from bench02cc order by 1")
-sqldf("select distinct spec from bench02cg order by 1")
 
 
-sqldf("select spec, count(*) from bench02mop group by spec")
-sqldf("select spec, count(*) from bench02cc group by spec")
-sqldf("select spec, count(*) from bench02cg group by spec")
-
-
-sqldf("select error, count(*) from bench02mop group by error")
-sqldf("select error, count(*) from bench02cc group by error")
-sqldf("select error, count(*) from bench02cg group by error")
-```
-
-
-## Ground Truth (MOP)
+## Ground Truth
 
 ```{r}
 gt <- sqldf("select propertyShortName, class, method, vulnerability 
@@ -65,18 +50,22 @@ gt <- sqldf("select propertyShortName, class, method, vulnerability
 
 nrow(gt)
 
-tp <- gt[gt$vulnerability == "TRUE",]
-tn <- gt[gt$vulnerability == "FALSE",]
+tp <- sqldf("select distinct class from gt where vulnerability = 'TRUE'")
+tn <- sqldf("select distinct class from gt where vulnerability = 'FALSE'")
 
 sqldf("select count(distinct class) from tp")
 sqldf("select count(distinct class) from tn")
+```
 
+## Precision / Recall MOP
+
+```{r}
 # compute true positive 
 mop_tp <- sqldf("select count(distinct className) as tp
                  from bench02mop 
                  where className in (select class from tp)")
 
-# fcompute alse positive 
+# compute false positive 
 mop_fp <- sqldf("select count(distinct className) as fp
                  from bench02mop 
                  where className in (select class from tn)")
@@ -242,9 +231,9 @@ sqldf("select distinct class
 
 ```{r}
 # false positive 
-sqldf("select distinct className
-       from bench02cg
-       where className in (select class from tncg)")
+#sqldf("select distinct className
+#       from tpcg
+#       where className in (select class from tncg)")
 
 
 sqldf("select count (distinct className)
@@ -257,7 +246,7 @@ sqldf("select count (distinct className)
        where className in (select class from tncg)")
 
 # false-negative  
-sqldf("select distinct class
-       from tpcg 
-       where class not in (select className from bench02cg)")
+#sqldf("select distinct class
+#       from tpcg 
+#       where class not in (select className from bench02cg)")
 ```

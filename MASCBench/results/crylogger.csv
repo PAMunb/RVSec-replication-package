@@ -1,0 +1,25 @@
+spec,class,className,method,location,error
+Cipher,com.minimals.cipher.aesGCMNoPaddingReplaceDES.CipherExample02,CipherExample02,-,-,UnsafeAlgorithm: DES
+Cipher,com.minimals.cipher.KeyToAlgoAES.CipherExample09,CipherExample09,-,-,UnsafeAlgorithm: AES
+Cipher,com.minimals.cipher.KeyToAlgoDES.CipherExample10,CipherExample10,-,-,UnsafeAlgorithm: DES
+Cipher,com.minimals.cipher.stringReplace.CipherExample13,CipherExample13,-,-,UnsafeAlgorithm: DES
+MessageDigest,com.minimals.md.baseCaseVariable.MD02,MD02,-,-,UnsafeAlgorithm: MD5
+MessageDigest,com.minimals.md.baseCase.MD01,MD01,-,-,UnsafeAlgorithm: MD5
+Cipher,com.minimals.cipher.baseCase.CipherExample04,CipherExample04,-,-,UnsafeAlgorithm: AES
+MessageDigest,com.minimals.md.replaceSHA256DES.MD06,MD06,-,-,UnsafeAlgorithm: MD5
+MessageDigest,com.minimals.md.stringCaseTransformation.MD07,MD07,-,-,UnsafeAlgorithm: MD5
+Cipher,com.minimals.cipher.differentCase.CipherExample07,CipherExample07,-,-,UnsafeAlgorithm: des
+MessageDigest,com.minimals.random.basecase.SecureRand01,SecureRand01,-,-,UnsafeAlgorithm: SHA
+MessageDigest,com.minimals.md.complexCase.MD03,MD03,-,-,UnsafeAlgorithm: md5
+Cipher,com.minimals.cipher.aesGCMNoPadding.CipherExample01,CipherExample01,-,-,UnsafeAlgorithm: AES/GCM/NoPadding
+MessageDigest,com.minimals.md.interprocedureCase.MD05,MD05,-,-,UnsafeAlgorithm: MD5
+MessageDigest,com.minimals.random.basecase_getinstance.SecureRand02,SecureRand02,-,-,UnsafeAlgorithm: SHA
+Cipher,com.minimals.cipher.aesStringReplace.CipherExample03,CipherExample03,-,-,UnsafeAlgorithm: DES
+Cipher,com.minimals.cipher.insecureBlowFish.CipherExample08,CipherExample08,-,-,UnsafeAlgorithm: Blowfish/CFB8/NoPadding
+MessageDigest,com.minimals.md.differentCase.MD04,MD04,-,-,UnsafeAlgorithm: md5
+Cipher,com.minimals.cipher.baseCaseVariable.CipherExample06,CipherExample06,-,-,UnsafeAlgorithm: AES
+Cipher,com.minimals.cipher.baseCaseInterProc.CipherExample05,CipherExample05,-,-,UnsafeAlgorithm: DES
+MessageDigest,com.minimals.md.stringReplace.MD08,MD08,-,-,UnsafeAlgorithm: MD5
+Cipher,com.minimals.cipher.stringCaseTransform.CipherExample12,CipherExample12,-,-,UnsafeAlgorithm: DES
+Cipher,com.minimals.cipher.secureBlowFish.CipherExample11,CipherExample11,-,-,UnsafeAlgorithm: Blowfish/CFB8/NoPadding
+MessageDigest,com.minimals.random.basecase_seedconstructor.SecureRand03,SecureRand03,-,-,UnsafeAlgorithm: SHA

@@ -1,0 +1,2 @@
+[MASTER] 01:43:22.590 [pool-2-thread-1] WARN  TimeController - Phase INITIALIZATION lasted too long, 2 seconds more than allowed.
+[MASTER] 01:43:30.429 [pool-2-thread-1] WARN  TestChromosome - Functional mock problem: org.evosuite.ga.ConstructionFailedException: Have no generator for class org.apache.tika.language.detect.LanguageWriter canUseFunctionalMocks=false, canBeMocked: false

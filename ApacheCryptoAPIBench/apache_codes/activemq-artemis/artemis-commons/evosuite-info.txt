@@ -1,0 +1,28 @@
+[INFO] --- evosuite-maven-plugin:1.2.0:info (evosuite-info) @ artemis-commons ---
+[INFO] Going to query EvoSuite info on current project
+[INFO] * EvoSuite 1.2.0
+[INFO] Total number of classes in the project: 111
+[INFO] Number of classes in the project that are testable: 111
+[INFO] Number of generated test suites: 99
+[INFO] Overall coverage: 0.778108108108108
+
+
+Tests not compiling:
+- ConcurrentLongHashMap_ESTest:243: error: method computeIfAbsent in class ConcurrentLongHashMap<V> cannot be applied to given types;
+- FileUtil_ESTest.java:79: error: [TryFailThrowable] Catching Throwable/Error masks failures from fail() or assert*() in the try block
+
+
+Tests run: 2090, Failures: 7, Errors: 80, Skipped: 1
+
+
+[INFO] --- jacoco-maven-plugin:0.8.8:report (report) @ artemis-commons ---
+[INFO] Loading execution data file /pedro/desenvolvimento/workspaces/workspaces-doutorado/workspace-rv/RVSec-replication-package/ApacheCryptoAPIBench/apache_codes/activemq-artemis/artemis-commons/target/jacoco.exec
+[INFO] Analyzed bundle 'ActiveMQ Artemis Commons' with 196 classes
+[WARNING] Classes in bundle 'ActiveMQ Artemis Commons' do not match with execution data. For report generation the same class files must be used as at runtime.
+[WARNING] Execution data for class org/apache/activemq/artemis/utils/UUIDGenerator does not match.
+[WARNING] Execution data for class org/apache/activemq/artemis/utils/NoHashProcessor does not match.
+[WARNING] Execution data for class org/apache/activemq/artemis/utils/DefaultSensitiveStringCodec$PBKDF2Algorithm does not match.
+[WARNING] Execution data for class org/apache/activemq/artemis/utils/ByteUtil does not match.
+[WARNING] Execution data for class org/apache/activemq/artemis/utils/uri/URISupport does not match.
+[WARNING] Execution data for class org/apache/activemq/artemis/utils/DefaultSensitiveStringCodec$BlowfishAlgorithm does not match.
+

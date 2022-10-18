@@ -1,0 +1,5 @@
+[MASTER] 23:30:11.837 [main] ERROR ExternalProcessGroupHandler - Class org.apache.spark.scheduler.ShuffleMapTask. Clients have not finished yet, although a timeout occurred.
+Client-0: SEARCH
+
+[MASTER] 23:30:11.939 [main] ERROR SearchStatistics - No statistics has been saved because EvoSuite failed to generate any test case
+[MASTER] 23:30:12.040 [main] ERROR TestGeneration - failed to write statistics data

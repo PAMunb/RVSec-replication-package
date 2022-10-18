@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>br.unb.cic.crypto</groupId>
+    <artifactId>cryptoAPIBench</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <maven-surefire-plugin.version>3.0.0-M7</maven-surefire-plugin.version>
+        <rv-monitor.version>statistics-1.4</rv-monitor.version>
+        <aspectj.version>1.8.1</aspectj.version>
+        <guava.version>19.0</guava.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.runtimeverification.rvmonitor</groupId>
+            <artifactId>rv-monitor</artifactId>
+            <version>${rv-monitor.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjrt</artifactId>
+            <version>${aspectj.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjtools</artifactId>
+            <version>${aspectj.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>19.0</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.2</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>br.unb.cic</groupId>
+            <artifactId>mop-test-suite</artifactId>
+            <version>1.2.9-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${maven-surefire-plugin.version}</version>
+                <configuration>
+                    <argLine>-Xmx4096m -XX:MaxPermSize=1024m</argLine>
+                    <argLine>-javaagent:${basedir}/JavaMOPAgent.jar</argLine>
+                    <runOrder>alphabetical</runOrder>
+                    <testFailureIgnore>false</testFailureIgnore>
+                    <trimStackTrace>true</trimStackTrace>
+                    <!-- <includes> -->
+                    <!-- <include>br.unb.cic.mop.bench01.MessageDigestTest</include> -->
+                    <!-- <include>br/unb/cic/mop/drivers/Bench01.java</include> -->
+                    <!-- <include>br/unb/cic/mop/drivers/Bench02.java</include> -->
+                    <!-- <include>br/unb/cic/mop/drivers/Bench03.java</include> -->
+                    <!-- </includes> -->
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

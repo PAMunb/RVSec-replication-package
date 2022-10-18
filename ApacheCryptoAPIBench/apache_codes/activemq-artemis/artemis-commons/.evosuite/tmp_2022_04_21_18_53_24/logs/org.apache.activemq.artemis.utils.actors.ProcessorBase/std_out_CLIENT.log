@@ -1,0 +1,6 @@
+[MASTER] 18:55:17.490 [pool-2-thread-1] WARN  TestCluster - Failed to check cache for org.apache.activemq.artemis.utils.actors.Actor<T> : Type points to itself
+[MASTER] 18:55:17.494 [pool-2-thread-1] WARN  TestCluster - Failed to check cache for java.util.concurrent.ForkJoinTask<V> : Type points to itself
+[MASTER] 18:56:50.898 [pool-2-thread-1] WARN  TestChromosome - Functional mock problem: org.evosuite.ga.ConstructionFailedException: Have no generator for class org.apache.activemq.artemis.utils.actors.OrderedExecutor canUseFunctionalMocks=true, canBeMocked: false
+[MASTER] 18:58:05.083 [pool-2-thread-1] WARN  TestSuiteMinimizer - Minimization timeout. Roll back to original test suite
+[MASTER] 18:58:24.608 [pool-2-thread-1] WARN  SimpleMutationAssertionGenerator - Assertion minimization is taking too long (0.8637727272727272% of time used, but only 3/22 tests minimized), falling back to using all assertions
+[MASTER] 18:58:28.077 [pool-2-thread-1] WARN  SimpleMutationAssertionGenerator - Reached maximum time to generate assertions, aborting assertion generation

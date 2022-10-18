@@ -1,0 +1,7 @@
+[MASTER] 01:36:29.675 [pool-2-thread-1] WARN  TimeController - Phase INITIALIZATION lasted too long, 1 seconds more than allowed.
+[MASTER] 01:37:38.090 [pool-2-thread-1] WARN  CoverageArchive - A solution with a timeout/exception result has been added to the archive. The covered goal was [METHOD] org.apache.tika.parser.ParsingReader.<init>(Lorg/apache/tika/parser/Parser;Ljava/io/InputStream;Lorg/apache/tika/metadata/Metadata;Lorg/apache/tika/parser/ParseContext;Ljava/util/concurrent/Executor;)V
+[MASTER] 01:37:38.699 [pool-2-thread-1] WARN  TimeController - Phase SEARCH lasted too long, 25 seconds more than allowed.
+[MASTER] 01:37:46.014 [pool-2-thread-1] WARN  TestSuiteMinimizer - Minimization timeout. Roll back to original test suite
+[MASTER] 01:37:46.232 [pool-2-thread-1] WARN  TimeController - Current phase ASSERTION_GENERATION could run up to 7s, but only 0s are left
+[MASTER] 01:37:46.303 [pool-2-thread-1] WARN  TimeController - Current phase JUNIT_CHECK could run up to 7s, but only 0s are left
+[MASTER] 01:37:46.360 [pool-2-thread-1] WARN  TimeController - Current phase WRITING_TESTS could run up to 7s, but only 0s are left

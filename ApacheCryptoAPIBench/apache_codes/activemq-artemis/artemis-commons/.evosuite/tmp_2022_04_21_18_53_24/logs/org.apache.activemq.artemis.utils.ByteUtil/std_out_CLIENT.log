@@ -1,0 +1,3 @@
+[MASTER] 18:54:39.945 [pool-2-thread-1] WARN  TestCluster - Failed to check cache for java.util.Comparator<T> : Type points to itself
+[MASTER] 18:56:41.045 [pool-2-thread-1] WARN  TestCluster - Failed to check cache for java.util.Enumeration<E> : Type points to itself
+[MASTER] 18:58:46.125 [pool-2-thread-1] WARN  SimpleMutationAssertionGenerator - Reached maximum time to generate assertions, aborting assertion generation

@@ -1,0 +1,6 @@
+[MASTER] 23:10:30.858 [main] ERROR ExternalProcessGroupHandler - Class org.apache.spark.ShuffleStatus. Clients have not finished yet, although a timeout occurred.
+Client-0: COVERAGE_ANALYSIS
+
+[MASTER] 23:10:30.962 [main] ERROR SearchStatistics - No obtained value for output variable: WeakMutationScore
+[MASTER] 23:10:31.965 [main] ERROR SearchStatistics - Not going to write down statistics data, as some are missing
+[MASTER] 23:10:32.066 [main] ERROR TestGeneration - failed to write statistics data

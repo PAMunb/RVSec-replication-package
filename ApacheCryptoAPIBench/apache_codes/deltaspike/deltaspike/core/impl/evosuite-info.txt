@@ -1,0 +1,7 @@
+[INFO] --- evosuite-maven-plugin:1.2.0:info (evosuite-info) @ deltaspike-core-impl ---
+[INFO] Going to query EvoSuite info on current project
+[INFO] * EvoSuite 1.2.0
+[INFO] Total number of classes in the project: 82
+[INFO] Number of classes in the project that are testable: 82
+[INFO] Number of generated test suites: 46
+[INFO] Overall coverage: 0.43765243902439027

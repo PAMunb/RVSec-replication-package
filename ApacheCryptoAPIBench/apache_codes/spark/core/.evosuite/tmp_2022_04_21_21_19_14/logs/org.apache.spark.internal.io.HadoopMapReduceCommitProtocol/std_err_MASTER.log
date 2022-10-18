@@ -1,0 +1,5 @@
+[MASTER] 23:13:57.413 [main] ERROR ExternalProcessGroupHandler - Class org.apache.spark.internal.io.HadoopMapReduceCommitProtocol. Clients have not finished yet, although a timeout occurred.
+Client-0: SEARCH
+
+[MASTER] 23:13:57.515 [main] ERROR SearchStatistics - No statistics has been saved because EvoSuite failed to generate any test case
+[MASTER] 23:13:57.617 [main] ERROR TestGeneration - failed to write statistics data

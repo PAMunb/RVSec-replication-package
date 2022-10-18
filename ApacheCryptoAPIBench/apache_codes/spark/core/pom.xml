@@ -502,7 +502,7 @@
 					<plugin>
 						<groupId>org.jacoco</groupId>
 						<artifactId>jacoco-maven-plugin</artifactId>
-						<version>0.8.7</version>
+						<version>0.8.8</version>
 						<executions>
 							<execution>
 								<goals>
@@ -532,6 +532,208 @@
 						<artifactId>scalatest-maven-plugin</artifactId>
 						<configuration>
 							<skipTests>true</skipTests>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		<profile>
+			<id>FindSecBugs</id>
+			<build>
+				<plugins>
+					<!-- https://spotbugs.github.io/spotbugs-maven-plugin/check-mojo.html -->
+					<!-- mvn clean compile spotbugs:spotbugs -PFindSecBugs -->
+					<!-- mvn spotbugs:gui -PFindSecBugs -->
+					<plugin>
+						<groupId>com.github.spotbugs</groupId>
+						<artifactId>spotbugs-maven-plugin</artifactId>
+						<version>4.6.0.0</version>
+						<configuration>
+							<effort>Max</effort>
+							<threshold>Low</threshold>
+							<xmlOutput>true</xmlOutput>
+							<failOnError>false</failOnError>
+							<maxHeap>8192</maxHeap>
+							<timeout>2700000</timeout>
+							<debug>false</debug>
+							<includeTests>false</includeTests>
+							<spotbugsXmlOutput>true</spotbugsXmlOutput>
+							<includeFilterFile>${session.executionRootDirectory}/spotbugs-security-include.xml</includeFilterFile>
+							<plugins>
+								<plugin>
+									<groupId>com.mebigfatguy.fb-contrib</groupId>
+									<artifactId>fb-contrib</artifactId>
+									<version>7.4.3.sb</version>
+								</plugin>
+								<plugin>
+									<groupId>com.h3xstream.findsecbugs</groupId>
+									<artifactId>findsecbugs-plugin</artifactId>
+									<version>1.12.0</version>
+								</plugin>
+							</plugins>
+						</configuration>
+						<executions>
+							<execution>
+								<goals>
+									<goal>check</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		<profile>
+			<!-- https://www.evosuite.org/documentation/maven-plugin/ -->
+			<!-- mvn clean test -Pevosuite-generate -->
+			<!-- mvn -Dcores=8 -DmemoryInMB=8000 -Pevosuite-generate evosuite:generate evosuite:export test -->
+			<id>evosuite-generate</id>
+			<properties>
+				<evosuiteVersion>1.2.0</evosuiteVersion>
+				<targetFolder>src/test/evosuite</targetFolder>
+				<cores>8</cores>
+				<memoryInMB>16000</memoryInMB>
+			</properties>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.evosuite.plugins</groupId>
+						<artifactId>evosuite-maven-plugin</artifactId>
+						<version>${evosuiteVersion}</version>
+						<executions>
+							<execution>
+								<id>evosuite-prepare</id>
+								<phase>process-test-classes</phase>
+								<goals>
+									<goal>prepare</goal>
+								</goals>
+							</execution>
+							<execution>
+								<id>evosuite-generate</id>
+								<phase>process-test-classes</phase>
+								<goals>
+									<goal>generate</goal>
+								</goals>
+							</execution>
+							<execution>
+								<id>evosuite-info</id>
+								<phase>process-test-classes</phase>
+								<goals>
+									<goal>info</goal>
+								</goals>
+							</execution>
+							<execution>
+								<id>evosuite-export</id>
+								<phase>process-test-classes</phase>
+								<goals>
+									<goal>export</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-surefire-plugin</artifactId>
+						<configuration>
+							<skip>true</skip>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		<profile>
+			<!-- https://www.evosuite.org/documentation/maven-plugin/ -->
+			<!-- mvn clean test -Pevosuite -->
+			<id>evosuite</id>
+			<properties>
+				<evosuiteVersion>1.2.0</evosuiteVersion>
+				<targetFolder>src/test/evosuite</targetFolder>
+			</properties>
+			<dependencies>
+				<dependency>
+					<groupId>org.evosuite</groupId>
+					<artifactId>evosuite-standalone-runtime</artifactId>
+					<version>${evosuiteVersion}</version>
+					<scope>test</scope>
+				</dependency>
+			</dependencies>
+			<build>
+				<!-- <testSourceDirectory>src/test/evosuite</testSourceDirectory> -->
+				<plugins>
+					<plugin>
+						<groupId>org.codehaus.mojo</groupId>
+						<artifactId>build-helper-maven-plugin</artifactId>
+						<version>3.3.0</version>
+						<executions>
+							<execution>
+								<id>add-test-source</id>
+								<phase>generate-test-sources</phase>
+								<goals>
+									<goal>add-test-source</goal>
+								</goals>
+								<configuration>
+									<sources>
+										<source>${targetFolder}</source>
+									</sources>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+					<plugin>
+						<groupId>org.evosuite.plugins</groupId>
+						<artifactId>evosuite-maven-plugin</artifactId>
+						<version>${evosuiteVersion}</version>
+						<executions>
+							<execution>
+								<id>evosuite-prepare</id>
+								<phase>process-test-classes</phase>
+								<goals>
+									<goal>prepare</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+					<plugin>
+						<groupId>org.jacoco</groupId>
+						<artifactId>jacoco-maven-plugin</artifactId>
+						<version>0.8.8</version>
+						<executions>
+							<execution>
+								<goals>
+									<goal>prepare-agent</goal>
+								</goals>
+							</execution>
+							<execution>
+								<id>report</id>
+								<phase>test</phase>
+								<goals>
+									<goal>report</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-surefire-plugin</artifactId>
+						<configuration>
+							<argLine>-Xmx4096m -XX:MaxPermSize=1024m</argLine>
+							<argLine>-javaagent:${basedir}/JavaMOPAgent.jar @{argLine}</argLine>
+							<runOrder>alphabetical</runOrder>
+							<testFailureIgnore>true</testFailureIgnore>
+							<properties>
+								<property>
+									<name>listener</name>
+									<value>org.evosuite.runtime.InitializingListener</value>
+								</property>
+							</properties>
+						</configuration>
+					</plugin>
+					<plugin>
+						<groupId>org.scalatest</groupId>
+						<artifactId>scalatest-maven-plugin</artifactId>
+						<configuration>
+							<skipTests>true</skipTests>
+<!-- 							<argLine>-javaagent:${basedir}/JavaMOPAgent.jar</argLine> -->
 						</configuration>
 					</plugin>
 				</plugins>

@@ -1,0 +1,3 @@
+[MASTER] 23:05:38.152 [main] ERROR ExternalProcessGroupHandler - Class org.apache.spark.util.StatCounter. Clients have not finished yet, although a timeout occurred.
+Client-0: ASSERTION_GENERATION
+

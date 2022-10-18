@@ -1,0 +1,5 @@
+[MASTER] 22:44:38.905 [main] ERROR ExternalProcessGroupHandler - Class org.apache.spark.deploy.history.HistoryServerDiskManager. Clients have not finished yet, although a timeout occurred.
+Client-0: SEARCH
+
+[MASTER] 22:44:39.007 [main] ERROR SearchStatistics - No statistics has been saved because EvoSuite failed to generate any test case
+[MASTER] 22:44:39.108 [main] ERROR TestGeneration - failed to write statistics data

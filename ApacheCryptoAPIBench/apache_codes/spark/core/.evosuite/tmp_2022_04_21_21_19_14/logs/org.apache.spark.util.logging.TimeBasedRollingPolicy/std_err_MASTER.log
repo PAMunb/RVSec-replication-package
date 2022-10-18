@@ -1,0 +1,5 @@
+[MASTER] 23:38:44.873 [main] ERROR ExternalProcessGroupHandler - Class org.apache.spark.util.logging.TimeBasedRollingPolicy. Clients have not finished yet, although a timeout occurred.
+Client-0: SEARCH
+
+[MASTER] 23:38:44.976 [main] ERROR SearchStatistics - No statistics has been saved because EvoSuite failed to generate any test case
+[MASTER] 23:38:45.077 [main] ERROR TestGeneration - failed to write statistics data

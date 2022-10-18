@@ -1,0 +1,2 @@
+[MASTER] 01:26:21.822 [pool-2-thread-1] WARN  TestCluster - Failed to check cache for java.util.AbstractMap<K, V>.SimpleImmutableEntry<K, V> : Type points to itself
+[MASTER] 01:27:40.985 [pool-2-thread-1] WARN  SimpleMutationAssertionGenerator - Assertion minimization is taking too long (0.8858333333333334% of time used, but only 5/26 tests minimized), falling back to using all assertions

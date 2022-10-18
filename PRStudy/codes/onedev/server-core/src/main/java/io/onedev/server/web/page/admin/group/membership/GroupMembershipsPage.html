@@ -1,0 +1,23 @@
+<wicket:extend>
+    <div class="membership-list">
+        <div class="head d-flex flex-wrap">
+            <div class="clearable-wrapper mr-3 mb-4">
+                <input wicket:id="filterUsers" class="form-control search" placeholder="Filter by name...">
+            </div>
+            <div class="mr-3 mb-4">
+                <input wicket:id="addNew" type="hidden" class="form-control">
+            </div>
+            <div class="mb-4">
+                <a wicket:id="delete" class="btn btn-light-danger">Delete <wicket:svg href="arrow4" class="icon" /></a>
+            </div>
+        </div>
+        <table wicket:id="memberships" class="memberships table"></table>
+    </div>
+    <wicket:fragment wicket:id="nameFrag">
+        <a wicket:id="link"><img wicket:id="avatar" src="" alt=""> <span wicket:id="name" class="name"></span></a>
+    </wicket:fragment>
+    <wicket:fragment wicket:id="emailFrag">
+        <span wicket:id="emailAddress"></span>
+        <span wicket:id="verificationStatus" class="ml-1"></span>
+    </wicket:fragment>
+</wicket:extend>

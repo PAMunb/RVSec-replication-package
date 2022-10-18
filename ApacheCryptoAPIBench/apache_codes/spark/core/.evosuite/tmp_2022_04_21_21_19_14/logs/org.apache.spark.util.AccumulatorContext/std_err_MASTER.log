@@ -1,0 +1,6 @@
+[MASTER] 00:04:24.306 [main] ERROR ExternalProcessGroupHandler - Class org.apache.spark.util.AccumulatorContext. Clients have not finished yet, although a timeout occurred.
+Client-0: SEARCH
+
+[MASTER] 00:04:24.409 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 00:04:25.413 [main] ERROR SearchStatistics - Not going to write down statistics data, as some are missing
+[MASTER] 00:04:25.518 [main] ERROR TestGeneration - failed to write statistics data

@@ -1,0 +1,3 @@
+[MASTER] 22:52:14.947 [main] ERROR ExternalProcessGroupHandler - Class org.apache.spark.rdd.RDDOperationScope. Clients have not finished yet, although a timeout occurred.
+Client-0: ASSERTION_GENERATION
+

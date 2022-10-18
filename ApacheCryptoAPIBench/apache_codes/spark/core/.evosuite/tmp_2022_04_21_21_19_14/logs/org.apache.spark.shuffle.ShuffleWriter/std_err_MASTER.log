@@ -1,0 +1,6 @@
+[MASTER] 00:28:39.936 [main] ERROR ExternalProcessGroupHandler - Class org.apache.spark.shuffle.ShuffleWriter. Clients have not finished yet, although a timeout occurred.
+Client-0: SEARCH
+
+[MASTER] 00:28:40.040 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 00:28:41.043 [main] ERROR SearchStatistics - Not going to write down statistics data, as some are missing
+[MASTER] 00:28:41.144 [main] ERROR TestGeneration - failed to write statistics data

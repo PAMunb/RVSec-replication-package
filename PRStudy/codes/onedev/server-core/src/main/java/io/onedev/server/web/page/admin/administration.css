@@ -1,0 +1,24 @@
+.ssh-server-key textarea {
+	font-family: monospace;
+}
+
+.user-authorizations .bean-list td.property-projectName, 
+.group-authorizations .bean-list td.property-projectName {
+	width: 50%;
+}
+
+.job-executor>.card-header .badge {
+	font-size: 0.9rem;
+}
+.job-executors>.body>div>div>.card>.card-header {
+	border-bottom: none;
+}
+
+.logo-preview img, .logo-preview svg {
+	width: 128px;
+	height: 128px;
+	color: var(--dark);
+}
+.dark-mode .logo-preview svg {
+	color: var(--light);
+}

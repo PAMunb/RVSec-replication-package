@@ -1,0 +1,6 @@
+[MASTER] 21:39:09.842 [main] ERROR ExternalProcessGroupHandler - Class org.apache.spark.scheduler.DAGScheduler. Clients have not finished yet, although a timeout occurred.
+Client-0: SEARCH
+
+[MASTER] 21:39:09.954 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 21:39:10.956 [main] ERROR SearchStatistics - Not going to write down statistics data, as some are missing
+[MASTER] 21:39:11.057 [main] ERROR TestGeneration - failed to write statistics data

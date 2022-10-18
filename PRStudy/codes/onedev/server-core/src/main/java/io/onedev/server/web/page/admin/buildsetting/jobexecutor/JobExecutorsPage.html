@@ -1,0 +1,31 @@
+<wicket:extend>
+    <div class="job-executors">
+        <div class="body">
+            <div wicket:id="jobExecutorSetting">
+                <ul class="list-unstyled">
+                    <li wicket:id="executors" class="executor mb-5"><div wicket:id="executor"></div></li>
+                </ul>
+                <div wicket:id="newExecutor"></div>
+            </div>
+        </div>
+    </div>
+    <wicket:fragment wicket:id="editNewFrag">
+        <div class="executor card">
+            <div class="card-header">
+                <div class="card-title">Edit Executor</div>
+            </div>
+            <div class="card-body">
+                <div wicket:id="editor"></div>
+            </div>
+        </div>
+    </wicket:fragment>
+    <wicket:fragment wicket:id="addNewLinkFrag">
+        <div class="card">
+            <div class="card-header">
+                <div class="card-title">
+                    <a wicket:id="link" class="add-new d-flex align-items-center"><wicket:svg href="plus-circle-o" class="icon mr-2"></wicket:svg> <span>Add Executor</span></a>
+                </div>
+            </div>
+        </div>
+    </wicket:fragment>
+</wicket:extend>

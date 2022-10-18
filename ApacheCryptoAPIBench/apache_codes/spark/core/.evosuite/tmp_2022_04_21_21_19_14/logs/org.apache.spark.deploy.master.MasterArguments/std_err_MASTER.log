@@ -1,0 +1,5 @@
+[MASTER] 21:52:28.948 [main] ERROR ExternalProcessGroupHandler - Class org.apache.spark.deploy.master.MasterArguments. Clients have not finished yet, although a timeout occurred.
+Client-0: SEARCH
+
+[MASTER] 21:52:29.050 [main] ERROR SearchStatistics - No statistics has been saved because EvoSuite failed to generate any test case
+[MASTER] 21:52:29.151 [main] ERROR TestGeneration - failed to write statistics data

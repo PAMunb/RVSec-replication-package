@@ -1,0 +1,24 @@
+<wicket:extend>
+    <!-- fit-content is added here to fix the issue that the project div can not 
+	cover its content if content is too long to cause scroll bars to apear in parent
+	div. This happens in safari only
+	-->
+    <div class="project flex-grow-1 d-flex flex-column fit-content">
+        <wicket:child></wicket:child>
+    </div>
+    <wicket:fragment wicket:id="topbarTitleFrag">
+        <a wicket:id="projects" class="d-none d-sm-inline">Projects</a>
+        <span class="dot d-none d-sm-inline"></span>
+        <span class="project-path d-inline-flex align-items-center text-truncate"> <wicket:container wicket:id="pathSegments">
+                <a wicket:id="link" class="text-truncate"><span wicket:id="label"></span></a>
+                <a wicket:id="children" class="dropdown-triangle-indicator mx-1 d-inline-flex flex-shrink-0 align-items-center justify-content-center"><span></span></a>
+                <span wicket:id="dot" class="flex-shrink-0"></span>
+            </wicket:container>
+        </span>
+        <span wicket:id="projectTitle"></span>
+    </wicket:fragment>
+    <wicket:fragment wicket:id="childFrag">
+        <a wicket:id="link"> <img wicket:id="avatar" src="" alt=""> <span wicket:id="name"></span>
+        </a>
+    </wicket:fragment>
+</wicket:extend>

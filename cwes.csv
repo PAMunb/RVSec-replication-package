@@ -1,0 +1,9 @@
+CWE,Description
+CWE760,Use of a One-Way Hash with a Predictable Salt
+CWE338,Use of Cryptographically Weak Pseudo-Random Number Generator
+CWE506,Embedded Malicious Code
+CWE336,Same Seed in Pseudo-Random Number Generator
+CWE325,Missing Cryptographic Step
+CWE321,Use of Hard-coded Cryptographic Key
+CWE328,Use of Weak Hash
+CWE327,Use of a Broken or Risky Cryptographic Algorithm

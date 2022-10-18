@@ -1,0 +1,6 @@
+[MASTER] 23:25:18.142 [main] ERROR ExternalProcessGroupHandler - Class org.apache.spark.network.netty.NettyBlockTransferService. Clients have not finished yet, although a timeout occurred.
+Client-0: SEARCH
+
+[MASTER] 23:25:18.246 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 23:25:19.253 [main] ERROR SearchStatistics - Not going to write down statistics data, as some are missing
+[MASTER] 23:25:19.363 [main] ERROR TestGeneration - failed to write statistics data

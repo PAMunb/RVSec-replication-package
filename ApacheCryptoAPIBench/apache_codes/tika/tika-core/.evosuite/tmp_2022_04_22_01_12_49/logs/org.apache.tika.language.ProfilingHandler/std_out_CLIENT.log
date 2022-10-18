@@ -1,0 +1,3 @@
+[MASTER] 01:41:52.167 [pool-2-thread-1] WARN  TimeController - Phase INITIALIZATION lasted too long, 3 seconds more than allowed.
+[MASTER] 01:41:59.396 [pool-2-thread-1] WARN  TestChromosome - Functional mock problem: org.evosuite.ga.ConstructionFailedException: Have no generator for class java.lang.StackTraceElement canUseFunctionalMocks=true, canBeMocked: false
+[MASTER] 01:42:26.394 [pool-2-thread-1] WARN  TimeController - Phase SEARCH lasted too long, 4 seconds more than allowed.

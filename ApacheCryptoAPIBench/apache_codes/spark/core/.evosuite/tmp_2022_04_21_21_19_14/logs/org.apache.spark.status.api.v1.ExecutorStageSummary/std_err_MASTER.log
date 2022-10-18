@@ -1,0 +1,3 @@
+[MASTER] 00:19:19.346 [main] ERROR ExternalProcessGroupHandler - Class org.apache.spark.status.api.v1.ExecutorStageSummary. Clients have not finished yet, although a timeout occurred.
+Client-0: JUNIT_CHECK
+

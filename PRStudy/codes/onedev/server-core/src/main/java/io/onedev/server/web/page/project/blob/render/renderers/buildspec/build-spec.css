@@ -1,0 +1,73 @@
+.build-spec {
+    padding: 1.5rem;
+}
+.build-spec.not-defined {
+	flex-grow: 0 !important;
+}
+.build-spec.parseable>.body>.content {
+	min-width: 800px;
+}
+.build-spec.parseable>.body {
+	overflow-x: auto !important;
+}
+
+.build-spec.unparseable>.title {
+    font-size: 1.5rem;
+    color: red;
+    margin-bottom: 1.5rem;
+}
+.build-spec.unparseable>.error-message {
+	white-space: pre-wrap;
+    word-wrap: break-word;
+    font-size: 1rem;
+    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+.build-spec.parseable>.head {
+	margin-bottom: 1.5rem;
+	padding-bottom: 0.6rem;
+	border-bottom: 1px solid var(--light-gray);
+}
+.dark-mode .build-spec.parseable>.head {
+	border-bottom-color: var(--dark-mode-lighter-dark);
+}
+
+.build-spec.parseable>.head>a {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 1.2rem;
+    margin-right: 0.6rem;
+}
+.build-spec.parseable>.head>a.active {
+	font-size: 1.5rem;
+	color: var(--primary);
+}
+.build-spec.parseable>.body>.content>.side {
+	min-width: 220px;
+}
+.build-spec.parseable>.body>.content>.side .btn-block:last-child {
+	margin-bottom: 0 !important;
+}
+
+.build-spec-edit.parseable>.body>.content>.side>.navs:not(:empty) {
+    margin-bottom: 1.5rem;
+}
+.build-spec.parseable>.body>.content>.main {
+    border-radius: 0.42rem;
+    border: 1px solid var(--light-gray);
+}
+.build-spec.parseable>.body>.jobs.content>.main {
+	min-width: 550px;
+	flex-shrink: 100000;
+}
+.dark-mode .build-spec.parseable>.body>.content>.main {
+    border-color: var(--dark-mode-lighter-dark);
+}
+
+.build-spec.parseable>.properties>.bean-list {
+	flex-grow: 1;
+}
+
+.build-spec .icon.imported {
+	transform: rotate(135deg);
+	margin-left: 0.5rem;
+}

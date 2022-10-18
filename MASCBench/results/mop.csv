@@ -1,0 +1,81 @@
+spec,class,className,method,location,error,expecting
+KeyGeneratorSpec,com.minimals.cipher.stringCaseTransform.CipherExample12,CipherExample12,runCipher,CipherExample12.java:15,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found DES."
+KeyGeneratorSpec,com.minimals.cipher.stringCaseTransform.CipherExample12,CipherExample12,runCipher,CipherExample12.java:15,InvalidSequenceOfMethodCalls,unknown
+CipherSpec,com.minimals.cipher.stringCaseTransform.CipherExample12,CipherExample12,runCipher,CipherExample12.java:17,InvalidSequenceOfMethodCalls,unknown
+KeyGeneratorSpec,com.minimals.cipher.KeyToAlgoDES.CipherExample10,CipherExample10,main,CipherExample10.java:12,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found DES."
+KeyGeneratorSpec,com.minimals.cipher.KeyToAlgoDES.CipherExample10,CipherExample10,main,CipherExample10.java:12,InvalidSequenceOfMethodCalls,unknown
+CipherSpec,com.minimals.cipher.KeyToAlgoDES.CipherExample10,CipherExample10,main,CipherExample10.java:18,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,com.minimals.md.baseCase.MD01,MD01,main,MD01.java:11,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found MD5."
+MessageDigestSpec,com.minimals.md.baseCase.MD01,MD01,main,MD01.java:11,InvalidSequenceOfMethodCalls,unknown
+SecureRandomSpec,com.minimals.random.basecase_seedconstructor.SecureRand03,SecureRand03,main,SecureRand03.java:13,InvalidSequenceOfMethodCalls,unknown
+SecureRandomSpec,com.minimals.random.basecase_seedconstructor.SecureRand03,SecureRand03,main,SecureRand03.java:14,InvalidSequenceOfMethodCalls,unknown
+SecureRandomSpec,com.minimals.random.basecase_seedconstructor.SecureRand03,SecureRand03,main,SecureRand03.java:16,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,com.minimals.md.stringCaseTransformation.MD07,MD07,main,MD07.java:11,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found MD5."
+MessageDigestSpec,com.minimals.md.stringCaseTransformation.MD07,MD07,main,MD07.java:11,InvalidSequenceOfMethodCalls,unknown
+KeyGeneratorSpec,com.minimals.cipher.stringReplace.CipherExample13,CipherExample13,runCipher,CipherExample13.java:14,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found DES."
+KeyGeneratorSpec,com.minimals.cipher.stringReplace.CipherExample13,CipherExample13,runCipher,CipherExample13.java:14,InvalidSequenceOfMethodCalls,unknown
+CipherSpec,com.minimals.cipher.stringReplace.CipherExample13,CipherExample13,runCipher,CipherExample13.java:16,InvalidSequenceOfMethodCalls,unknown
+SecureRandomSpec,com.minimals.random.basecase_getinstance.SecureRand02,SecureRand02,main,SecureRand02.java:11,UnsatisfiedConstraint,setSeed() expects a randomized byte array.
+SecureRandomSpec,com.minimals.random.basecase_getinstance.SecureRand02,SecureRand02,main,SecureRand02.java:11,InvalidSequenceOfMethodCalls,unknown
+SecureRandomSpec,com.minimals.random.basecase_getinstance.SecureRand02,SecureRand02,main,SecureRand02.java:12,UnsatisfiedConstraint,setSeed() expects a randomized byte array.
+SecureRandomSpec,com.minimals.random.basecase_getinstance.SecureRand02,SecureRand02,main,SecureRand02.java:12,InvalidSequenceOfMethodCalls,unknown
+SecureRandomSpec,com.minimals.random.basecase_getinstance.SecureRand02,SecureRand02,main,SecureRand02.java:20,InvalidSequenceOfMethodCalls,unknown
+IvParameterSpecSpec,com.minimals.iv.timeCase.CurrentTimeIV,CurrentTimeIV,main,CurrentTimeIV.java:15,UnsatisfiedConstraint,unknown
+IvParameterSpecSpec,com.minimals.iv.timeCase.CurrentTimeIV,CurrentTimeIV,main,CurrentTimeIV.java:15,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,com.minimals.md.differentCase.MD04,MD04,main,MD04.java:10,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found md5."
+MessageDigestSpec,com.minimals.md.differentCase.MD04,MD04,main,MD04.java:10,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,com.minimals.md.stringReplace.MD08,MD08,main,MD08.java:10,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found MD5."
+MessageDigestSpec,com.minimals.md.stringReplace.MD08,MD08,main,MD08.java:10,InvalidSequenceOfMethodCalls,unknown
+CipherSpec,com.minimals.cipher.baseCaseVariable.CipherExample06,CipherExample06,runCipher,CipherExample06.java:16,UnsafeAlgorithm,"expecting one of {AES/CBC/PKCS5Padding, AES/PCBC/ISO10126Padding, ...} but found AES."
+CipherSpec,com.minimals.cipher.baseCaseVariable.CipherExample06,CipherExample06,runCipher,CipherExample06.java:16,InvalidSequenceOfMethodCalls,unknown
+CipherSpec,com.minimals.cipher.baseCaseVariable.CipherExample06,CipherExample06,runCipher,CipherExample06.java:17,InvalidSequenceOfMethodCalls,unknown
+KeyGeneratorSpec,com.minimals.cipher.aesStringReplace.CipherExample03,CipherExample03,runCipher,CipherExample03.java:14,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found DES."
+KeyGeneratorSpec,com.minimals.cipher.aesStringReplace.CipherExample03,CipherExample03,runCipher,CipherExample03.java:14,InvalidSequenceOfMethodCalls,unknown
+CipherSpec,com.minimals.cipher.aesStringReplace.CipherExample03,CipherExample03,runCipher,CipherExample03.java:16,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,com.minimals.md.replaceSHA256DES.MD06,MD06,main,MD06.java:10,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found MD5."
+MessageDigestSpec,com.minimals.md.replaceSHA256DES.MD06,MD06,main,MD06.java:10,InvalidSequenceOfMethodCalls,unknown
+KeyGeneratorSpec,com.minimals.cipher.insecureBlowFish.CipherExample08,CipherExample08,main,CipherExample08.java:17,InvalidSequenceOfMethodCalls,unknown
+KeyGeneratorSpec,com.minimals.cipher.insecureBlowFish.CipherExample08,CipherExample08,main,CipherExample08.java:19,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found Blowfish."
+KeyGeneratorSpec,com.minimals.cipher.insecureBlowFish.CipherExample08,CipherExample08,main,CipherExample08.java:19,InvalidSequenceOfMethodCalls,unknown
+CipherSpec,com.minimals.cipher.insecureBlowFish.CipherExample08,CipherExample08,main,CipherExample08.java:31,InvalidSequenceOfMethodCalls,unknown
+CipherSpec,com.minimals.cipher.insecureBlowFish.CipherExample08,CipherExample08,main,CipherExample08.java:40,InvalidSequenceOfMethodCalls,unknown
+SecureRandomSpec,com.minimals.random.basecase.SecureRand01,SecureRand01,main,SecureRand01.java:11,UnsatisfiedConstraint,setSeed() expects a randomized byte array.
+SecureRandomSpec,com.minimals.random.basecase.SecureRand01,SecureRand01,main,SecureRand01.java:11,InvalidSequenceOfMethodCalls,unknown
+SecureRandomSpec,com.minimals.random.basecase.SecureRand01,SecureRand01,main,SecureRand01.java:12,UnsatisfiedConstraint,setSeed() expects a randomized byte array.
+SecureRandomSpec,com.minimals.random.basecase.SecureRand01,SecureRand01,main,SecureRand01.java:12,InvalidSequenceOfMethodCalls,unknown
+SecureRandomSpec,com.minimals.random.basecase.SecureRand01,SecureRand01,main,SecureRand01.java:20,InvalidSequenceOfMethodCalls,unknown
+KeyGeneratorSpec,com.minimals.cipher.aesGCMNoPaddingReplaceDES.CipherExample02,CipherExample02,runCipher,CipherExample02.java:14,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found DES."
+KeyGeneratorSpec,com.minimals.cipher.aesGCMNoPaddingReplaceDES.CipherExample02,CipherExample02,runCipher,CipherExample02.java:14,InvalidSequenceOfMethodCalls,unknown
+CipherSpec,com.minimals.cipher.aesGCMNoPaddingReplaceDES.CipherExample02,CipherExample02,runCipher,CipherExample02.java:16,InvalidSequenceOfMethodCalls,unknown
+CipherSpec,com.minimals.cipher.baseCase.CipherExample04,CipherExample04,runCipher,CipherExample04.java:15,UnsafeAlgorithm,"expecting one of {AES/CBC/PKCS5Padding, AES/PCBC/ISO10126Padding, ...} but found AES."
+CipherSpec,com.minimals.cipher.baseCase.CipherExample04,CipherExample04,runCipher,CipherExample04.java:15,InvalidSequenceOfMethodCalls,unknown
+CipherSpec,com.minimals.cipher.baseCase.CipherExample04,CipherExample04,runCipher,CipherExample04.java:16,InvalidSequenceOfMethodCalls,unknown
+SSLContextSpec,com.minimals.ssl.context.baseCase.ContextOfSSL,ContextOfSSL,main,ContextOfSSL.java:9,InvalidSequenceOfMethodCalls,unknown
+IvParameterSpecSpec,com.minimals.iv.stash.StashStaticIV,StashStaticIV,main,StashStaticIV.java:21,UnsatisfiedConstraint,unknown
+IvParameterSpecSpec,com.minimals.iv.stash.StashStaticIV,StashStaticIV,main,StashStaticIV.java:21,InvalidSequenceOfMethodCalls,unknown
+IvParameterSpecSpec,com.minimals.iv.stash.StashStaticIV,StashStaticIV,main,StashStaticIV.java:23,UnsatisfiedConstraint,unknown
+IvParameterSpecSpec,com.minimals.iv.stash.StashStaticIV,StashStaticIV,main,StashStaticIV.java:23,InvalidSequenceOfMethodCalls,unknown
+KeyGeneratorSpec,com.minimals.cipher.baseCaseInterProc.CipherExample05,CipherExample05,runCipher,CipherExample05.java:30,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found DES."
+KeyGeneratorSpec,com.minimals.cipher.baseCaseInterProc.CipherExample05,CipherExample05,runCipher,CipherExample05.java:30,InvalidSequenceOfMethodCalls,unknown
+CipherSpec,com.minimals.cipher.baseCaseInterProc.CipherExample05,CipherExample05,runCipher,CipherExample05.java:32,InvalidSequenceOfMethodCalls,unknown
+IvParameterSpecSpec,com.minimals.iv.complexCase.ComplexStaticIV,ComplexStaticIV,main,ComplexStaticIV.java:13,UnsatisfiedConstraint,unknown
+IvParameterSpecSpec,com.minimals.iv.complexCase.ComplexStaticIV,ComplexStaticIV,main,ComplexStaticIV.java:13,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,com.minimals.md.interprocedureCase.MD05,MD05,main,MD05.java:22,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found MD5."
+MessageDigestSpec,com.minimals.md.interprocedureCase.MD05,MD05,main,MD05.java:22,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,com.minimals.md.complexCase.MD03,MD03,main,MD03.java:10,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found md5."
+MessageDigestSpec,com.minimals.md.complexCase.MD03,MD03,main,MD03.java:10,InvalidSequenceOfMethodCalls,unknown
+KeyGeneratorSpec,com.minimals.cipher.secureBlowFish.CipherExample11,CipherExample11,main,CipherExample11.java:17,InvalidSequenceOfMethodCalls,unknown
+KeyGeneratorSpec,com.minimals.cipher.secureBlowFish.CipherExample11,CipherExample11,main,CipherExample11.java:19,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found Blowfish."
+KeyGeneratorSpec,com.minimals.cipher.secureBlowFish.CipherExample11,CipherExample11,main,CipherExample11.java:19,InvalidSequenceOfMethodCalls,unknown
+CipherSpec,com.minimals.cipher.secureBlowFish.CipherExample11,CipherExample11,main,CipherExample11.java:31,InvalidSequenceOfMethodCalls,unknown
+CipherSpec,com.minimals.cipher.secureBlowFish.CipherExample11,CipherExample11,main,CipherExample11.java:40,InvalidSequenceOfMethodCalls,unknown
+KeyGeneratorSpec,com.minimals.cipher.differentCase.CipherExample07,CipherExample07,runCipher,CipherExample07.java:14,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found DES."
+KeyGeneratorSpec,com.minimals.cipher.differentCase.CipherExample07,CipherExample07,runCipher,CipherExample07.java:14,InvalidSequenceOfMethodCalls,unknown
+CipherSpec,com.minimals.cipher.differentCase.CipherExample07,CipherExample07,runCipher,CipherExample07.java:16,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,com.minimals.md.baseCaseVariable.MD02,MD02,main,MD02.java:12,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found MD5."
+MessageDigestSpec,com.minimals.md.baseCaseVariable.MD02,MD02,main,MD02.java:12,InvalidSequenceOfMethodCalls,unknown
+IvParameterSpecSpec,com.minimals.iv.baseCase.BaseStaticIV,BaseStaticIV,main,BaseStaticIV.java:8,UnsatisfiedConstraint,unknown
+IvParameterSpecSpec,com.minimals.iv.baseCase.BaseStaticIV,BaseStaticIV,main,BaseStaticIV.java:8,InvalidSequenceOfMethodCalls,unknown
+CipherSpec,com.minimals.cipher.KeyToAlgoAES.CipherExample09,CipherExample09,main,CipherExample09.java:17,UnsafeAlgorithm,"expecting one of {AES/CBC/PKCS5Padding, AES/PCBC/ISO10126Padding, ...} but found AES."
+CipherSpec,com.minimals.cipher.KeyToAlgoAES.CipherExample09,CipherExample09,main,CipherExample09.java:17,InvalidSequenceOfMethodCalls,unknown
+CipherSpec,com.minimals.cipher.KeyToAlgoAES.CipherExample09,CipherExample09,main,CipherExample09.java:18,InvalidSequenceOfMethodCalls,unknown

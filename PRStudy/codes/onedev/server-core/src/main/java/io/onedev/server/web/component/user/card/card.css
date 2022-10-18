@@ -1,0 +1,19 @@
+.user-card {
+    position: relative;
+    font-size: 16px;
+    padding: 12px;
+    line-height: 22px;
+}
+.user-card>.info {
+    padding: 8px 12px 12px 80px;
+}
+.user-card img.avatar {
+    position: absolute;
+    width: 64px;
+    height: 64px;
+}
+.user-card i {
+    color: #888;
+    font-size: 14px;
+    font-style: normal;
+}

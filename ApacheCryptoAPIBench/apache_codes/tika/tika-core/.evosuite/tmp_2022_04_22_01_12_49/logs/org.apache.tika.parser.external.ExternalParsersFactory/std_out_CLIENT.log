@@ -1,0 +1,2 @@
+[MASTER] 01:33:31.630 [TEST_EXECUTION_THREAD_0] WARN  MSecurityManager - SUT asked for a runtime permission that EvoSuite does not recognize: ftpClientProvider
+[MASTER] 01:34:16.743 [pool-2-thread-1] WARN  TestCluster - Failed to check cache for java.util.Enumeration<E> : Type points to itself

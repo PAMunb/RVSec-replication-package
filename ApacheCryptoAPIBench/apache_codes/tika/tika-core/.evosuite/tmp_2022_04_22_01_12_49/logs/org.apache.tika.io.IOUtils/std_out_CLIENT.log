@@ -1,0 +1,6 @@
+[MASTER] 01:13:18.211 [pool-2-thread-1] WARN  TestCluster - Failed to check cache for java.util.Enumeration<E> : Type points to itself
+[MASTER] 01:13:18.533 [pool-2-thread-1] WARN  CoverageArchive - A solution with a timeout/exception result has been added to the archive. The covered goal was [METHOD] org.apache.tika.io.IOUtils.copyLarge(Ljava/io/Reader;Ljava/io/Writer;)J
+[MASTER] 01:13:18.533 [pool-2-thread-1] WARN  CoverageArchive - A solution with a timeout/exception result has been added to the archive. The covered goal was [METHODNOEX] org.apache.tika.io.IOUtils.copyLarge(Ljava/io/Reader;Ljava/io/Writer;)J
+[MASTER] 01:13:20.213 [pool-2-thread-1] WARN  CoverageArchive - A solution with a timeout/exception result has been added to the archive. The covered goal was [METHODNOEX] org.apache.tika.io.IOUtils.toString(Ljava/io/InputStream;Ljava/lang/String;)Ljava/lang/String;
+[MASTER] 01:14:01.479 [pool-2-thread-1] WARN  TestCluster - Failed to check cache for java.util.concurrent.ForkJoinTask<V> : Type points to itself
+[MASTER] 01:14:02.699 [TEST_EXECUTION_THREAD_1] WARN  MSecurityManager - SUT asked for a runtime permission that EvoSuite does not recognize: asynchronousChannelProvider

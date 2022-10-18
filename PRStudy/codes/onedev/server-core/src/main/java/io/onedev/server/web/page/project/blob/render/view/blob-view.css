@@ -1,0 +1,36 @@
+.blob-view>.head {
+	border-bottom: 1px solid var(--light-gray);
+}
+.dark-mode .blob-view>.head {
+	border-bottom-color: var(--dark-mode-lighter-dark);
+}
+.blob-view>.head>.tools>* {
+	margin-left: 1.2rem;
+}
+.blob-view>.head>.tools>.options {
+	padding-left: 1.2rem;
+	border-left: 1px solid var(--light-gray);
+}
+.dark-mode .blob-view>.head>.tools>.options {
+	border-left-color: var(--dark-mode-lighter-dark);
+}
+.blob-view>.head>.tools>.options:empty {
+	display: none !important;
+}
+
+.blob-view>.head>.tools>:first-child {
+	margin-left: 0;
+}
+.blob-view>.head>.tools>.actions>* {
+	margin-right: 0.6rem;
+}
+.blob-view>.head>.tools>.actions>:last-child {
+	margin-right: 0;
+}
+
+.blob-view>.head>.tools>.options>* {
+	margin-right: 1.4rem;
+}
+.blob-view>.head>.tools>.options>:last-child {
+	margin-right: 0;
+}

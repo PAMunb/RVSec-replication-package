@@ -1,0 +1,3 @@
+[MASTER] 00:48:19.411 [main] ERROR ExternalProcessGroupHandler - Class org.apache.spark.api.python.DoubleArrayWritable. Clients have not finished yet, although a timeout occurred.
+Client-0: JUNIT_CHECK
+

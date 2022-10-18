@@ -1,0 +1,6 @@
+[MASTER] 23:59:05.865 [main] ERROR ExternalProcessGroupHandler - Class org.apache.spark.status.api.v1.RDDDataDistribution. Clients have not finished yet, although a timeout occurred.
+Client-0: SEARCH
+
+[MASTER] 23:59:05.969 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 23:59:06.974 [main] ERROR SearchStatistics - Not going to write down statistics data, as some are missing
+[MASTER] 23:59:07.079 [main] ERROR TestGeneration - failed to write statistics data

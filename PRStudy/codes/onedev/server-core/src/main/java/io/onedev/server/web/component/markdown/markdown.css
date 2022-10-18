@@ -1,0 +1,469 @@
+@media(min-width: 992px) {
+	.markdown-editor.compact-mode .normal-mode, 
+	.markdown-editor.normal-mode .compact-mode {
+		display: none !important;
+	}
+}
+.markdown-editor.fullscreen {
+	position: fixed;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 1060;
+	padding: 1.6rem;
+	background: white;
+}
+.dark-mode .markdown-editor.fullscreen {
+	background: var(--dark-mode-darker);
+}
+.markdown-editor>.head>.warning {
+	margin-bottom: 0;
+	padding-top: 0.6rem;
+	padding-bottom: 0.6rem;
+	display: none;
+}
+.markdown-editor>.head>.warning, .markdown-editor>.head>.help, .markdown-editor>.head>.emojis {
+	margin: 0.3rem;
+}
+.markdown-editor>.head {
+	background: white;
+	border: 1px solid var(--light-gray);	
+	border-bottom: none;
+	border-radius: 0.42rem 0.42rem 0 0;
+	padding: 0.3rem;
+}
+.dark-mode .markdown-editor>.head {
+	background: var(--dark-mode-dark);
+	border-color: var(--dark-mode-light-dark);	
+}
+.markdown-editor>.head>.actions>div>a, .markdown-editor>.head>.actions>div>.dropdown>a {
+	padding: 0.15rem;
+	color: var(--gray);
+	border: 1px solid white;
+	border-radius: 0.42rem;
+	display: block;
+	width: 2rem;
+	text-align: center;
+	margin-right: 0.3rem;
+}
+.dark-mode .markdown-editor>.head>.actions>div>a, 
+.dark-mode .markdown-editor>.head>.actions>div>.dropdown>a {
+	color: var(--dark-mode-gray);
+	border-color: var(--dark-mode-dark);
+}
+.markdown-editor.compact-mode>.head .split>.icon {
+	transform: rotate(-90deg);
+}
+
+.markdown-editor>.head>.actions .separator {
+	display: block;
+	border-left: 1px solid var(--light-gray);
+	margin-right: 0.3rem;
+	height: 2rem;
+}
+.dark-mode .markdown-editor>.head>.actions .separator {
+	border-left-color: var(--dark-mode-light-dark);
+}
+.markdown-editor>.head>.actions>div>a:hover, .markdown-editor>.head>.actions>div>a.active, 
+.markdown-editor>.head>.actions>div>.dropdown>a:hover, .markdown-editor>.head>.actions>div>.dropdown>a.active {
+	background: var(--light);
+	border: 1px solid var(--light-gray);
+}
+.dark-mode .markdown-editor>.head>.actions>div>a:hover, 
+.dark-mode .markdown-editor>.head>.actions>div>a.active, 
+.dark-mode .markdown-editor>.head>.actions>div>.dropdown>a:hover, 
+.dark-mode .markdown-editor>.head>.actions>div>.dropdown>a.active {
+	background: var(--dark-mode-light-dark);
+	border-color: var(--dark-mode-lighter-dark);
+}
+
+.markdown-editor .ui-resizable-handle {
+	background: var(--light-gray) url(/icon/grip2.svg) no-repeat scroll center center;
+	background-size: 20px 20px;
+    cursor: s-resize;
+    height: 4px;
+    bottom: 0;
+	border-radius: 0 0 0.42rem 0.42rem;
+}
+.dark-mode .markdown-editor .ui-resizable-handle {
+	background: var(--dark-mode-light-dark) url(/icon/dark-grip2.svg) no-repeat scroll center center;
+	background-size: 20px 20px;
+}
+
+.markdown-editor.fullscreen .ui-resizable-handle {
+	display: none;
+}
+
+.markdown-editor>.head>.emojis {
+	display: none;
+}
+.markdown-editor>.head>.emojis.loaded {
+	font-size: 0.95rem; 
+	line-height: 2rem; 
+	height: 200px; 
+	overflow: auto;
+}
+.markdown-editor>.head>.emojis.loading {
+	font-size: 1.25rem;
+	color: var(--gray-dark);
+}
+.dark-mode .markdown-editor>.head>.emojis.loading {
+	color: var(--dark-mode-gray);
+}
+
+.markdown-editor>.head>.emojis .emoji {
+	margin-right: 0.8rem;
+	font-size: 1.25rem;
+}
+
+.markdown-editor>.head>.help {
+	display: none;
+}
+
+.markdown-editor>.body>.preview>.markdown-rendered {
+	border: 1px solid var(--light-gray);
+	padding: 0.6rem;
+	position: absolute;
+	top: 0;
+	bottom: 4px;
+	left: 0;
+	right: 0;
+	background: white;
+}
+.dark-mode .markdown-editor>.body>.preview>.markdown-rendered {
+	border-color: var(--dark-mode-light-dark);
+	background: var(--dark-mode-dark);
+}
+
+.markdown-editor.preview-mode>.body>.edit, .markdown-editor.edit-mode>.body>.preview {
+	display: none !important;
+}
+.markdown-editor.fullscreen>.body>* {
+	height: 100% !important;
+}
+
+/* 
+ * Do not display header link in preview mode as otherwise we need to reserve a big margin 
+ * at left side 
+ */ 
+.markdown-editor>.body>.preview>.markdown-rendered .header-link {
+	display: none;
+}
+
+.markdown-editor.normal-mode>.body>div {
+	flex: 1;
+}
+.markdown-editor.compact-mode>.body {
+	flex-direction: column;
+}
+.markdown-editor.compact-mode.split-mode>.body>.preview {
+	margin-top: 0.5rem;
+}
+
+.markdown-editor>.body>.edit>textarea {
+	width: 100%;
+	display: block;
+	resize: none;
+	padding: 0.6rem;
+	border-radius: 0;
+	margin-bottom: 4px;
+}
+.markdown-editor>.body>.preview>.markdown-rendered>.message {
+	color: var(--gray);
+}
+.dark-mode .markdown-editor>.body>.preview>.markdown-rendered>.message {
+	color: var(--dark-mode-gray);
+}
+
+.compact-mode.dropdown a {
+	font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+.markdown-editor.compact-mode>.body>.ui-resizable-handle, 
+.markdown-editor.normal-mode>.body>div>.ui-resizable-handle {
+	display: none;
+}
+
+.atwho-view .emoji {
+	display: inline-block; 
+	height: 1.5rem; 
+	width: 1.5rem; 
+	vertical-align: middle; 
+	background-repeat: no-repeat; 
+	background-size: 1.5rem 1.5rem;
+}
+.atwho-view .avatar img {
+	display: inline-block; 
+	width: 1.5rem; 
+	height: 1.5rem; 
+	vertical-align: middle;
+}
+.atwho-view .cur .text-muted {
+	color: inherit;	
+}
+
+.insert-url .blob-picker {
+	padding: 0;
+}
+.insert-url .attachment {
+	margin-bottom: 1.5rem;
+}
+.insert-url .attachment:LAST-CHILD {
+	margin-bottom: 0;
+}
+
+.insert-url .attachment.image {
+	text-align: center;
+}
+.insert-url .attachment.image img {
+	max-width: 100%;
+}
+.insert-url .attachment.image .btn {
+	margin-top: 0.6rem;
+}
+
+.markdown-editor>.body>.edit>textarea>.drag-over {
+	border: 2px solid #187DE4;
+}
+
+.dark-mode .markdown-rendered {
+	color: var(--muted);
+}
+.markdown-rendered li {
+	margin-bottom: 0.5rem;
+}
+.markdown-rendered .emoji {
+	width: 1.5rem; 
+	height: 1.5rem;
+}
+.dark-mode .markdown-rendered table:not('.text-diff') thead {
+	color: var(--light);
+}
+.markdown-rendered table:not('.text-diff') {
+	width: auto; 
+	margin-bottom: 1rem;
+}
+.markdown-rendered table:not('.text-diff') th, 
+.markdown-rendered table:not('.text-diff') td {
+	padding: 0.4rem 0.8rem; 
+	border: 1px solid var(--secondary);
+	word-break: break-word!important;
+    overflow-wrap: break-word!important;
+}
+.dark-mode .markdown-rendered table:not('.text-diff') th, 
+.dark-mode .markdown-rendered table:not('.text-diff') td {
+	border-color: var(--dark-mode-lighter-dark);
+}
+.markdown-rendered table:not('.text-diff') tr:nth-child(even) td {
+	background: var(--light);
+}
+.dark-mode .markdown-rendered table:not('.text-diff') tr:nth-child(even) td {
+	background: #1b1b29;
+}
+.markdown-rendered h1, .markdown-rendered h2, .markdown-rendered h3, 
+.markdown-rendered h4, .markdown-rendered h5, .markdown-rendered h6 {
+	font-weight: bold;
+}
+.markdown-rendered pre.code.suggestion {
+	white-space: normal;
+}
+.markdown-rendered pre.code.suggestion>code>.head {
+	border-bottom: 1px dashed var(--secondary);
+}
+.dark-mode .markdown-rendered pre.code.suggestion>code>.head {
+	border-color: var(--dark-mode-lighter-dark);
+}
+.markdown-rendered pre.code {
+	padding: 0.6rem;
+	border: 1px dashed var(--secondary);
+	position: relative;
+	word-break: normal;
+	border-radius: 0.42rem;
+}
+.dark-mode .markdown-rendered pre.code {
+	border-color: var(--dark-mode-lighter-dark);
+}
+.markdown-rendered pre.code>.actions {
+	position: absolute;
+	right: 10px;
+	top: 8px;
+	display: none;
+}
+.markdown-rendered pre.code.suggestion>.actions {
+	display: block;
+}
+.markdown-rendered pre.code>.actions>a {
+	background: white;
+}
+.dark-mode .markdown-rendered pre.code>.actions>a {
+	background: var(--dark-mode-dark);
+}
+.markdown-rendered pre.code:hover>.actions {
+	display: block;
+}
+.markdown-rendered pre.code>code {
+	background: none;
+}
+.markdown-rendered blockquote {
+	font-size: 1.15rem; 
+	border-left: 0.3rem solid var(--secondary); 
+	color: var(--gray); 
+	padding: 0 1.23rem;
+}
+.dark-mode .markdown-rendered blockquote {
+	border-left-color: var(--dark-mode-lighter-dark); 
+	color: var(--dark-mode-gray); 
+}
+
+.markdown-rendered img {
+	max-width: 100%;
+}
+.markdown-rendered .task-list-item {
+	list-style: none;
+	margin-left: -1rem;
+}
+.markdown-rendered .task-list-item input {
+	margin-right: 0.6rem;
+	vertical-align: middle;
+}
+
+.markdown-rendered h1, .markdown-rendered h2,
+.markdown-rendered h3, .markdown-rendered h4,
+.markdown-rendered h5, .markdown-rendered h6 {
+	margin-top: 1.5rem;
+}
+
+.markdown-rendered .header-link {
+	display: none;
+	position: absolute;
+}
+.markdown-rendered h1:hover .header-link, 
+.markdown-rendered h2:hover .header-link,
+.markdown-rendered h3:hover .header-link,
+.markdown-rendered h4:hover .header-link, 
+.markdown-rendered h5:hover .header-link,
+.markdown-rendered h6:hover .header-link {
+	display: inline;
+}
+
+.markdown-rendered h1, .markdown-rendered h2,
+.markdown-rendered h3, .markdown-rendered h4,
+.markdown-rendered h5, .markdown-rendered h6 {
+	position: relative;
+}
+
+.markdown-rendered h1 .header-link {
+	margin-left: -24px;
+}
+.markdown-rendered h2 .header-link {
+	margin-left: -22px;
+}
+.markdown-rendered h3 .header-link {
+	margin-left: -20px;
+}
+.markdown-rendered h4 .header-link {
+	margin-left: -18px;
+}
+.markdown-rendered h5 .header-link {
+	margin-left: -16px;
+}
+.markdown-rendered h6 .header-link {
+	margin-left: -14px;
+}
+
+.markdown-rendered h1 {
+	margin-left: -24px;
+	padding-left: 24px;
+}
+.markdown-rendered h2 {
+	margin-left: -22px;
+	padding-left: 22px;
+}
+.markdown-rendered h3 {
+	margin-left: -20px;
+	padding-left: 20px;
+}
+.markdown-rendered h4 {
+	margin-left: -18px;
+	padding-left: 18px;
+}
+.markdown-rendered h5 {
+	margin-left: -16px;
+	padding-left: 16px;
+}
+.markdown-rendered h6 {
+	margin-left: -14px;
+	padding-left: 14px;
+}
+.markdown-rendered h1 .header-link .icon {
+	width: 20px;
+	height: 20px;
+}
+.markdown-rendered h2 .header-link .icon {
+	width: 18px;
+	height: 18px;
+}
+.markdown-rendered h3 .header-link .icon {
+	width: 16px;
+	height: 16px;
+}
+.markdown-rendered h4 .header-link .icon {
+	width: 14px;
+	height: 14px;
+}
+.markdown-rendered h5 .header-link .icon {
+	width: 14px;
+	height: 14px;
+}
+.markdown-rendered h6 .header-link .icon {
+	width: 12px;
+	height: 12px;
+}
+
+.markdown-rendered a.header-link {
+	color: var(--gray-dark);
+}
+.dark-mode .markdown-rendered a.header-link {
+	color: var(--dark-mode-light-gray);
+}
+
+#reference-tooltip {
+	z-index: 1000;
+	background-color: var(--light-info); 
+	border-radius: 0.42rem; 
+	color: var(--info);
+	font-size: 12px; 
+	padding: 1rem; 
+	box-shadow: 0px 10px 30px 0px rgba(82, 63, 105, 0.08);
+}
+.dark-mode #reference-tooltip {
+	background-color: var(--dark-mode-light-info); 
+	color: var(--info);
+}
+
+.markdown-image-loading {
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: url("/img/ajax-indicator-big.png") center no-repeat;
+}
+.dark-mode .markdown-image-loading {
+	background: url("/img/dark-ajax-indicator-big.png") center no-repeat;
+}
+
+.reference.mention {
+	text-decoration: none;
+}
+
+.markdown-rendered a {
+	color: var(--primary);
+}
+.markdown-rendered a:hover, .markdown-rendered a:focus {
+	color: #0073e9;
+}
+
+.markdown-rendered .no-color * {
+	color: inherit !important;
+	background-color: inherit !important;
+}

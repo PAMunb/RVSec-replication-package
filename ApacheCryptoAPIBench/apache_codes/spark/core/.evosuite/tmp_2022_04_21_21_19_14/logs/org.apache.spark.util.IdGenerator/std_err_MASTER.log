@@ -1,0 +1,6 @@
+[MASTER] 00:50:19.757 [main] ERROR ExternalProcessGroupHandler - Class org.apache.spark.util.IdGenerator. Clients have not finished yet, although a timeout occurred.
+Client-0: SEARCH
+
+[MASTER] 00:50:19.860 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 00:50:20.863 [main] ERROR SearchStatistics - Not going to write down statistics data, as some are missing
+[MASTER] 00:50:20.966 [main] ERROR TestGeneration - failed to write statistics data

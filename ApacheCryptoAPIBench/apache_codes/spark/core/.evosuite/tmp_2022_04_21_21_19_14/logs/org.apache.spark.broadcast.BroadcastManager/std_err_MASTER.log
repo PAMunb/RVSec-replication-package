@@ -1,0 +1,5 @@
+[MASTER] 23:57:56.332 [main] ERROR ExternalProcessGroupHandler - Class org.apache.spark.broadcast.BroadcastManager. Clients have not finished yet, although a timeout occurred.
+Client-0: SEARCH
+
+[MASTER] 23:57:56.435 [main] ERROR SearchStatistics - No statistics has been saved because EvoSuite failed to generate any test case
+[MASTER] 23:57:56.536 [main] ERROR TestGeneration - failed to write statistics data

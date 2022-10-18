@@ -1,0 +1,52 @@
+[MASTER] 01:13:09.747 [pool-2-thread-1] WARN  TestCluster - Failed to check cache for java.util.AbstractMap<K, V>.SimpleImmutableEntry<K, V> : Type points to itself
+[MASTER] 01:13:14.553 [pool-2-thread-1] WARN  CoverageArchive - A solution with a timeout/exception result has been added to the archive. The covered goal was Branch org.apache.tika.mime.MediaType.isSimpleName(Ljava/lang/String;)Z: I25 Branch 17 IF_ICMPEQ L195 - true in context: 
+[MASTER] 01:13:14.554 [pool-2-thread-1] WARN  CoverageArchive - A solution with a timeout/exception result has been added to the archive. The covered goal was [METHOD] org.apache.tika.mime.MediaType.hashCode()I
+[MASTER] 01:13:14.610 [pool-2-thread-1] WARN  CoverageArchive - A solution with a timeout/exception result has been added to the archive. The covered goal was [METHOD] org.apache.tika.mime.MediaType.equals(Ljava/lang/Object;)Z
+[MASTER] 01:17:15.222 [pool-2-thread-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: expected null, but was:<text/+w!ks>
+[MASTER] 01:17:15.223 [pool-2-thread-1] WARN  JUnitAnalyzer - Failing test:
+ MediaType mediaType0 = MediaType.text("+w!ks");
+assertNull(mediaType0);
+
+
+[MASTER] 01:17:17.219 [pool-2-thread-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalStateException
+[MASTER] 01:17:17.219 [pool-2-thread-1] WARN  JUnitAnalyzer - Failing test:
+ MediaType.parse("?ischarset=\u0000];\u0000]/\u0000]");
+
+[MASTER] 01:17:17.512 [pool-2-thread-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalStateException
+[MASTER] 01:17:17.512 [pool-2-thread-1] WARN  JUnitAnalyzer - Failing test:
+ MediaType.parse("\u0000]/\u0000]$");
+
+[MASTER] 01:17:18.176 [pool-2-thread-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: expected null, but was:<text/org.apache.tika.mime.mediatype>
+[MASTER] 01:17:18.176 [pool-2-thread-1] WARN  JUnitAnalyzer - Failing test:
+ MediaType mediaType0 = MediaType.text("org.apache.tika.mime.MediaType");
+assertNull(mediaType0);
+
+
+[MASTER] 01:17:18.779 [pool-2-thread-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: expected null, but was:<text/~; [s="\=CLXpW\/NS\,#">
+[MASTER] 01:17:18.780 [pool-2-thread-1] WARN  JUnitAnalyzer - Failing test:
+ MediaType mediaType0 = MediaType.text("~;[S==CLXpW/NS,#");
+assertNull(mediaType0);
+
+
+[MASTER] 01:17:21.532 [pool-2-thread-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: expected null, but was:<application/x-empty; charset=UTF-8>
+[MASTER] 01:17:21.532 [pool-2-thread-1] WARN  JUnitAnalyzer - Failing test:
+ MediaType mediaType0 = MediaType.parse("application/x-empty; charset=UTF-8");
+assertNull(mediaType0);
+
+
+[MASTER] 01:17:23.229 [pool-2-thread-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: Expecting exception: IllegalStateException
+[MASTER] 01:17:23.230 [pool-2-thread-1] WARN  JUnitAnalyzer - Failing test:
+ String[] stringArray0 = new String[1];
+stringArray0[0] = "?ischarset=\u0000];\u0000]/\u0000]";
+MediaType.set(stringArray0);
+
+[MASTER] 01:17:24.351 [pool-2-thread-1] WARN  JUnitAnalyzer - Found unstable test named test0 -> class java.lang.AssertionError: expected null, but was:<'/'>
+[MASTER] 01:17:24.351 [pool-2-thread-1] WARN  JUnitAnalyzer - Failing test:
+ HashMap<String, String> hashMap0 = new HashMap<String, String>();
+hashMap0.put("'", "'");
+MediaType mediaType0 = new MediaType("'", "'", hashMap0);
+MediaType mediaType1 = mediaType0.getBaseType();
+assertEquals("'/'; '='", mediaType0.toString());
+assertNull(mediaType1);
+
+

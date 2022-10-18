@@ -1,0 +1,24 @@
+<wicket:panel>
+    <div class="project-info p-4">
+        <div class="d-flex align-items-center justify-content-between">
+            <div class="mr-4">
+                <a wicket:id="path" class="mb-0 h5"></a>
+                <wicket:enclosure child="forkedFrom">
+                    <div class="text-muted">
+                        Forked from <a wicket:id="forkedFrom"></a>
+                    </div>
+                </wicket:enclosure>
+            </div>
+            <div wicket:id="forkInfo" class="btn-group">
+                <a wicket:id="forks" class="btn btn-sm btn-light btn-hover-primary"><span wicket:id="label"></span></a> <a wicket:id="forkNow" class="btn btn-sm btn-light btn-hover-primary btn-icon" title="Fork now"><wicket:svg href="fork" class="icon" /></a>
+            </div>
+        </div>
+        <wicket:enclosure child="serviceDesk">
+            <div class="mt-2">
+                <a wicket:id="serviceDesk"><wicket:svg href="mail" class="icon"></wicket:svg> <span wicket:id="label"></span></a>
+                <div class="font-size-sm mt-1 text-muted">Issues can be created in this project by sending email to this address</div>
+            </div>
+        </wicket:enclosure>
+        <div wicket:id="description" class="mt-4"></div>
+    </div>
+</wicket:panel>

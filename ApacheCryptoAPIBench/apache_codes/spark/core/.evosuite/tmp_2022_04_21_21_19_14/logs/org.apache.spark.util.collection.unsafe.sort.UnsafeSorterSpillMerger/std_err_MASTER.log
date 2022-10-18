@@ -1,0 +1,6 @@
+[MASTER] 23:49:18.703 [main] ERROR ExternalProcessGroupHandler - Class org.apache.spark.util.collection.unsafe.sort.UnsafeSorterSpillMerger. Clients have not finished yet, although a timeout occurred.
+Client-0: SEARCH
+
+[MASTER] 23:49:18.807 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 23:49:19.810 [main] ERROR SearchStatistics - Not going to write down statistics data, as some are missing
+[MASTER] 23:49:19.911 [main] ERROR TestGeneration - failed to write statistics data

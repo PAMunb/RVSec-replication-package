@@ -1,0 +1,6 @@
+[MASTER] 23:26:14.618 [main] ERROR ExternalProcessGroupHandler - Class org.apache.spark.ui.storage.RDDPage. Clients have not finished yet, although a timeout occurred.
+Client-0: SEARCH
+
+[MASTER] 23:26:14.722 [main] ERROR SearchStatistics - No obtained value for output variable: LineCoverage
+[MASTER] 23:26:15.725 [main] ERROR SearchStatistics - Not going to write down statistics data, as some are missing
+[MASTER] 23:26:15.828 [main] ERROR TestGeneration - failed to write statistics data

@@ -1,0 +1,117 @@
+.cm-identifierhighlight {
+	background: #D1D3E0;
+}
+.dark-mode .cm-identifierhighlight {
+	color: var(--light) !important;
+	background: var(--dark-mode-gray);
+}
+
+.cm-searching {
+	background: rgb(248, 234, 148);
+}
+.dark-mode .cm-searching {
+    background: rgb(179, 117, 3);
+}
+.CodeMirror-mark {
+	background: #8950FC;
+}
+.cm-identifierhighlight.CodeMirror-mark {
+	background: var(--dark);	
+}
+.dark-mode .cm-identifierhighlight.CodeMirror-mark {
+	color: var(--dark-mode-darker) !important;
+	background: white;	
+}
+.cm-searching.CodeMirror-mark {
+	background: var(--warning);
+}
+.cm-searching.cm-identifierhighlight {
+    background: rgb(218, 143, 3);
+}
+.dark-mode .cm-searching.cm-identifierhighlight {
+    background: rgb(125, 82, 1);
+}
+
+.cm-searching.cm-identifierhighlight.CodeMirror-mark {
+	background: #b89ce0;
+}
+
+.CodeMirror-mark:not(.CodeMirror-selectedtext) {
+	color: white !important;
+}
+.CodeMirror {
+	font-size: 12px;
+	line-height: 1.5;
+	font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+.CodeMirror-gutters {
+	background: white;
+	border-right-color: var(--secondary);
+}
+.CodeMirror-selected {
+	background-color: #b4d7ff !important;
+}
+.dark-mode .CodeMirror-selected {
+	background-color: #1e496c !important;
+}
+.CodeMirror-simplescroll-horizontal div, .CodeMirror-simplescroll-vertical div {
+	background: none repeat scroll 0 0 var(--light-dark); 
+	border: 1px solid var(--light-dark);
+}
+.CodeMirror-search-match {
+  background: var(--warning);
+  border-top: 1px solid var(--warning);
+  border-bottom: 1px solid var(--warning);
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  opacity: .5;
+}
+.CodeMirror-search-match2 {
+  background: #666;
+  border-top: 1px solid #666;
+  border-bottom: 1px solid #666;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  opacity: .5;
+}
+.dark-mode .CodeMirror-search-match2 {
+  background: var(--dark-mode-light-gray);
+  border-top-color: var(--dark-mode-light-gray);
+  border-bottom-color: var(--dark-mode-light-gray);
+}
+.CodeMirror-fullscreen {
+	z-index: 210;
+}
+.CodeMirror-hints {
+	z-index: 10000;
+}
+.dark-mode .CodeMirror-dialog-top {
+    border-bottom-color: var(--dark-mode-lighter-dark);
+}
+.dark-mode .CodeMirror-hints {
+	background: var(--dark-mode-dark);
+	border-color: var(--dark-mode-light-dark);
+	box-shadow: 0 0 30px rgb(0 0 0 / 50%);	
+}
+.dark-mode .CodeMirror-hint {
+	color: var(--muted);
+}
+.dark-mode li.CodeMirror-hint-active {
+    background: var(--dark-mode-light-primary);
+    color: var(--primary);
+}
+
+.cm-s-eclipse span.cm-meta {
+	color: #888;
+}
+.dark-mode .cm-s-eclipse span.cm-meta {
+	color: #9899ac;
+}
+
+.cm-s-eclipse .CodeMirror-matchingbracket {
+	outline: none;
+	background: #69B7F7;
+}
+.dark-mode .cm-s-eclipse .CodeMirror-matchingbracket {
+	background: var(--primary);
+}

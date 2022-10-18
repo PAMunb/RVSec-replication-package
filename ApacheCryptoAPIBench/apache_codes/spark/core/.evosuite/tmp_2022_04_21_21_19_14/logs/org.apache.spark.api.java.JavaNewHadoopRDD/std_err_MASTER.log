@@ -1,0 +1,5 @@
+[MASTER] 00:07:32.072 [main] ERROR ExternalProcessGroupHandler - Class org.apache.spark.api.java.JavaNewHadoopRDD. Clients have not finished yet, although a timeout occurred.
+Client-0: SEARCH
+
+[MASTER] 00:07:32.175 [main] ERROR SearchStatistics - No statistics has been saved because EvoSuite failed to generate any test case
+[MASTER] 00:07:32.279 [main] ERROR TestGeneration - failed to write statistics data

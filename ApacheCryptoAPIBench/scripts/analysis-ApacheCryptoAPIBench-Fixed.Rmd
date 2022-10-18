@@ -15,7 +15,6 @@ library(xtable)
 library(lattice)
 library(ggvenn)
 library(corrplot)
-
 ```
 
 ## R Markdown
@@ -102,7 +101,6 @@ tp = sqldf("select distinct Project, Spec, Class, Method
             where Vulnerability = 'TRUE'
             order by 1,2,3,4")
 
-
 sqldf("select count(distinct class) from tp")
 
 nrow(tp)
@@ -171,9 +169,9 @@ cg_fp = sqldf("select distinct Project, Spec, Class, Method
 
 cg_fn = setdiff(tp, cg_tp)
 
- nrow(cg_tp)
- nrow(cg_fp)
- nrow(cg_fn)
+nrow(cg_tp)
+nrow(cg_fp)
+nrow(cg_fn)
 
 
 cg_precision = nrow(cg_tp) / (nrow(cg_tp) + nrow(cg_fp))
@@ -218,7 +216,7 @@ x <- list(
 ggvenn(
  x,
  fill_color = c("#0073C2FF", "#EFC000FF", "#868686FF", "#CD534CFF"),
-   stroke_size = 0.5, set_name_size = 3, text_size=2
+   stroke_size = 0.7, set_name_size = 3.5, text_size=3
 )
 
 ```
@@ -318,7 +316,6 @@ cc_summary <- sqldf("select project, module, latex, test_cases,
         group by project, module, latex, test_cases")
 
 cc_summary
-
 
 module_name = c("ArtemisCommons", "DeltaSpikeCore", "ApachedsKerberosCodec", "SparkCore", "WicketUtil")
 accuracy = c(1.0, 1.0, 0.84, 0.90, 0.85)

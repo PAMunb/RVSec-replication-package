@@ -1,0 +1,54 @@
+.code-comment-list .new-indicator {
+	width: 4px;
+	padding: 0;
+}
+.code-comment-list tr.comment.new td.new-indicator {
+	background: var(--primary);
+}
+@media(max-width: 767px) {
+	.code-comment-list table>thead {
+		display: none;
+	}
+}
+.code-comment>div {
+	border-left: 4px solid white;
+	border-bottom: 1px solid var(--light);
+}
+.code-comment>div:last-child {
+	border-bottom: none;
+}
+.dark-mode .code-comment>div {
+	border-left-color: var(--dark-mode-dark);
+	border-bottom-color: var(--dark-mode-light-dark);
+}
+
+.code-comment>.status-change>.detail {
+	margin-top: 0.25rem;
+}
+.code-comment>div.new {
+	border-left: 4px solid var(--primary);
+}
+.code-comment>div>.user-avatar img {
+	width: 32px;
+	height: 32px;
+}
+.code-comment>div>.detail>.body {
+	padding-top: 0.5rem;
+}
+.code-comment>div .reply-anchor {
+	display: none;
+}
+.code-comment>div:hover .reply-anchor {
+	display: inline;
+}
+
+.code-comment>div>.detail>.body>.feedback .alert {
+	margin-bottom: 0;
+}
+.code-comment .markdown-rendered {
+	font-size: inherit;
+	line-height: inherit;
+}
+.code-comment-status-change-option .form-group {
+	margin-bottom: 0;
+}

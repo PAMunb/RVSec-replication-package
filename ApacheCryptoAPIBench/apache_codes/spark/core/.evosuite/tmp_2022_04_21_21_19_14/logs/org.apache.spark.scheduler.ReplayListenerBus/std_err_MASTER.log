@@ -1,0 +1,5 @@
+[MASTER] 23:10:08.351 [main] ERROR ExternalProcessGroupHandler - Class org.apache.spark.scheduler.ReplayListenerBus. Clients have not finished yet, although a timeout occurred.
+Client-0: SEARCH
+
+[MASTER] 23:10:08.454 [main] ERROR SearchStatistics - No statistics has been saved because EvoSuite failed to generate any test case
+[MASTER] 23:10:08.555 [main] ERROR TestGeneration - failed to write statistics data
