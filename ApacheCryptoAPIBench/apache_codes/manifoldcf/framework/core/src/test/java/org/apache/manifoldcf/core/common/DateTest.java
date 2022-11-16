@@ -28,11 +28,11 @@ import org.junit.Test;
 
 public class DateTest {
 
-    @Test
-    public void testHash() throws Exception {
-        ManifoldCF.hash("test");
-        ManifoldCF.encrypt("123", "123", "test");
-    }
+//    @Test
+//    public void testHash() throws Exception {
+//        ManifoldCF.hash("test");
+//        ManifoldCF.encrypt("123", "123", "test");
+//    }
 
     @Test
     public void iso8601() throws Exception {
