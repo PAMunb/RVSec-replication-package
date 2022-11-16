@@ -87,9 +87,9 @@
 	<modules>
 		<!-- wicket-eclipse-settings is separate released -->
 		<module>wicket</module>
-		<module>wicket-core</module>
 		<module>wicket-util</module>
-<!-- 		<module>wicket-request</module> -->
+ 		<module>wicket-request</module> 
+		<module>wicket-core</module>		
 <!-- 		<module>wicket-devutils</module> -->
 <!-- 		<module>wicket-extensions</module> -->
 <!-- 		<module>wicket-ioc</module> -->
