@@ -31,7 +31,7 @@ public abstract class ReflectionBased {
 
     @AfterClass
     public static void tearDown() throws Exception {
-        ErrorCollector.instance().printErrors();
+        //ErrorCollector.instance().printErrors();
     }
 
 
