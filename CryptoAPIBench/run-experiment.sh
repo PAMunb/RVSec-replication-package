@@ -1,10 +1,21 @@
+if [[ -z "${JAVA_HOME}" ]]; then
+	echo "Please set JAVA_HOME path before running the script."
+	exit -1
+fi
+
+PATH_RVSEC=$(mvn help:evaluate -Dexpression=settings.localRepository -q -DforceStdout)/br/unb/cic
+
+if [[ ! -d $PATH_RVSEC ]]; then
+	../scripts/build_rvsec.sh
+fi
+
 echo "Running RVSec"
 
 cd assets/cryptoAPIBench
 
 rm -f output/*.*
 
-mvn package --q
+mvn package 
 
 mv output/summary.csv ../../results/mop.csv
 
