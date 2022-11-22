@@ -15,7 +15,7 @@ rm -f output/*.*
 
 echo "Running RVSec"
 mvn package -q 
-sort output/summary.csv > ../../results/mop.csv
+sort output/summary.csv -o ../../results/mop.csv
 cd target
 
 echo "Running CogniCrypt"
@@ -32,9 +32,9 @@ mv CryptoGuard-Report.json ../../../results
 echo "Standardizing CongniCrypt and CryptoGuard output"
 cd ../../../results
 python3 ../../scripts/process-cc-report.py CryptoAnalysis-Report.json cognicrypt.csv
-sort cognicrypt.csv > cognicrypt.csv
+sort cognicrypt.csv -o cognicrypt.csv
 python3 ../../scripts/process-cg-report.py CryptoGuard-Report.json cryptoguard.csv
-sort cryptoguard.csv > cryptoguard.csv
+sort cryptoguard.csv -o cryptoguard.csv
 rm CryptoAnalysis-Report.json
 rm CryptoGuard-Report.json
 
