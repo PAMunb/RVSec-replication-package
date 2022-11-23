@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.io.PrintStream;
 import java.lang.reflect.Method;
-import java.security.CRYLogger;
+// import java.security.CRYLogger;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.logging.FileHandler;
@@ -32,7 +32,7 @@ public abstract class ReflectionBased {
 
     @AfterClass
     public static void tearDown() throws Exception {
-        ErrorCollector.instance().printErrors();
+        // ErrorCollector.instance().printErrors();
     }
 
     @Test
@@ -64,12 +64,12 @@ public abstract class ReflectionBased {
                 if (mainMethod != null) {
                     switch (mainMethod.getParameterCount()) {
                         case 0:
-                            CRYLogger.setClassName(c.getName());
+                            // CRYLogger.setClassName(c.getName());
                             mainMethod.invoke(null);
                             executions++;
                             break;
                         case 1:
-                            CRYLogger.setClassName(c.getName());
+                            // CRYLogger.setClassName(c.getName());
                             mainMethod.invoke(null, (Object) null);
                             executions++;
                             break;
