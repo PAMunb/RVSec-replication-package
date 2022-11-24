@@ -4,7 +4,7 @@ if [ ! -d rvsec ];then
 	git clone https://github.com/PAMunb/rvsec.git
 fi
 cd rvsec
-git checkout develop
+git checkout 0.2.0 --
 
 echo "Linking javac to JRE"
 if [[ ! -f "$JAVA_HOME/jre/bin/javac" ]]; then
