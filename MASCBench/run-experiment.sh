@@ -19,7 +19,7 @@ sort output/summary.csv -o ../../results/mop.csv
 cd target
 
 echo "Running CogniCrypt"
-java -Xss4096m -Xmx12000m -Xms4096m \ 
+java -Xss4096m -Xmx12000m -Xms4096m \
      -cp ../../../../tools/CryptoAnalysis-3a78193.jar crypto.HeadlessCryptoScanner \
      --reportFormat SARIF --reportPath . \
      --rulesDir ../../../../tools/rules \
