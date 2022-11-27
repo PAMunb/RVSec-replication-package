@@ -12,16 +12,39 @@
 		<java.version>8</java.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<rvsec.version>0.2.0</rvsec.version>
+		<aspectj.version>1.8.1</aspectj.version>
 		<maven.compiler.source>${java.version}</maven.compiler.source>
 		<maven.compiler.target>${java.version}</maven.compiler.target>
 	</properties>
 
 	<dependencies>
 		<dependency>
-			<groupId>br.unb.cic</groupId>
-			<artifactId>mop-test-suite</artifactId>
-			<version>1.2.9-SNAPSHOT</version>
+            <groupId>br.unb.cic.rvmonitor</groupId>
+	        <artifactId>rv-monitor</artifactId>
+            <version>${rvsec.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjrt</artifactId>
+            <version>${aspectj.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjtools</artifactId>
+            <version>${aspectj.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>br.unb.cic</groupId>
+	        <artifactId>rvsec-core</artifactId>
+             <version>${rvsec.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>br.unb.cic</groupId>
+	        <artifactId>rvsec-logger-csv</artifactId>
+	        <version>${rvsec.version}</version>
 		</dependency>
+
 
 		<dependency>
 		  <groupId>com.google.guava</groupId>

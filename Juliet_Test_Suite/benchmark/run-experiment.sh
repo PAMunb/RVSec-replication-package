@@ -1,13 +1,22 @@
+if [[ -z "${JAVA_HOME}" ]]; then
+	echo "Please set JAVA_HOME path before running the script."
+	exit -1
+fi
+
+PATH_RVSEC=$(mvn help:evaluate -Dexpression=settings.localRepository -q -DforceStdout)/br/unb/cic
+if [[ ! -d $PATH_RVSEC ]]; then
+	../../scripts/build_rvsec.sh
+fi
+
 echo "(a) Building the JAR file of the benchmark"
 mvn clean package -q
 cd target
 
 echo "(b) Running CryptoGuard"
 
-java -jar ../../../tools/cryptoguard-develop.jar -m CSV -o cryptoguard.csv \
+java -jar ../../../tools/cryptoguard-develop.jar -o CryptoGuard-Report.json \
      -in jar -s julia-test-suite-1.3.jar
-
-mv cryptoguard.csv ../../results/cryptoguard.csv
+mv CryptoGuard-Report.json ../../results/CryptoGuard-Report.json
 
 echo "(c) Running CogniCrypt (CryptoAnalysis Component)"
 
@@ -16,22 +25,26 @@ java -Xss4096m -Xmx12000m -Xms4096m -cp \
      --reportFormat SARIF --reportPath . \
      --rulesDir ../../../tools/rules \
      --appPath julia-test-suite-1.3.jar
-
 mv CryptoAnalysis-Report.json ../../results/CogniCrypt-Report.json
 
+echo "Standardizing CongniCrypt and CryptoGuard output"
 cd ../../results
+python3 ../../scripts/process-cc-report.py CogniCrypt-Report.json cc.csv
+(head -n1 cc.csv && tail -n+2 cc.csv | sort) > cognicrypt.csv 
+rm cc.csv
 
-python3 ../../scripts/process-cc-report.py CogniCrypt-Report.json cognicrypt.csv
-
+python3 ../../scripts/process-cg-report.py CryptoGuard-Report.json cg.csv
+(head -n1 cg.csv && tail -n+2 cg.csv | sort) > cryptoguard.csv
+rm cg.csv
+rm CogniCrypt-Report.json
+rm CryptoGuard-Report.json
 
 cd ../benchmark
 
 echo "(d) Running the test suite with RVSec enabled"
 
 rm -f output/summary.csv
-
 mvn clean test -Pmop -q
+(head -n1 output/summary.csv && tail -n+2 output/summary.csv | sort) > ../results/mop.csv 
 
-cp output/summary.csv ../results/mop.csv
-
-echo "done. The results have been exported to the ./results folder"
+echo "Done. The results have been exported to the ../results folder"
