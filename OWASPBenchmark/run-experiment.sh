@@ -19,8 +19,11 @@ mv CryptoGuard-Report.json ../results
 cd ../results
 
 python3 ../../scripts/process-cc-report.py CryptoAnalysis-Report.json cognicrypt.csv
+(head -n1 cognicrypt.csv && tail -n+2 cognicrypt.csv | sort) > datasets/cognicrypt.csv 
 
 python3 ../../scripts/process-cg-report.py CryptoGuard-Report.json cryptoguard.csv
+(head -n1 cryptoguard.csv && tail -n+2 cryptoguard.csv | sort) > datasets/cryptoguard.csv
+
 
 rm CryptoAnalysis-Report.json
 rm CryptoGuard-Report.json
