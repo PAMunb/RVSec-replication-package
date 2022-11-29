@@ -1,3 +1,9 @@
+rm results/cognicrypt.csv
+rm results/cryptoguard.csv
+rm results/mop.csv
+
+cd benchmark
+
 if [[ -z "${JAVA_HOME}" ]]; then
 	echo "Please set JAVA_HOME path before running the script."
 	exit -1
@@ -47,4 +53,4 @@ rm -f output/summary.csv
 mvn clean test -Pmop -q
 (head -n1 output/summary.csv && tail -n+2 output/summary.csv | sort) > ../results/mop.csv 
 
-echo "Done. The results have been exported to the ../results folder"
+echo "Done. The outputs of the tools have been exported to the results folder"
