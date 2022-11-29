@@ -1,48 +1,28 @@
-### CrySL
 
-In order to reproduce the CrySL results, execute the following steps.
+### **RV-Sec and Static Analysis tools**
 
-   * Running CrypotAnalysis (CrySL) 
+In order to reproduce the RV-Sec, CogniCrypt and CryptoGuard results, execute the following steps.
 
-```{shell}
-$ cd tools
-
-$ java -cp CryptoAnalysis.jar crypto.HeadlessCryptoScanner \
-           --sarifReport --reportDir ../results \
-           --rulesDir ./rules \
-           --applicationCp ../assets/../asset/rigorityj-samples-1.0-SNAPSHOT.jar
-```
-
-   * Converting the CryptoAnalysis outcomes to a CSV file
+   * In a new shell, execute the *run-experiment.sh* script:
 
 ```{shell}
-$ cd ../results
-
-$ mv CogniCrypt-SARIF-Report.txt CogniCrypt-Report.json
-
-$ python3 ../scripts/process-cc-report.py ./CogniCrypt-Report.json CogniCrypt-Report.csv
-
+$ ./run-experiment.sh
 ```
+   * The RV-Sec output will be exported to:  **results/mop.csv**
+
+   * The CogniCrypt output will be exported to:  **results/cognicrypt.csv** 
+   
+   * The CryptoGuard output will be exported to:  **results/cryptoguard.csv** 
 
 
-### CryptoGuard
 
-In order to reproduce the CryptoGuard results, execute the following steps.
+### **Calculate Metrics (Precision, Recall and F-measure)**
 
-   * Running CrypotGuard
+   * In order to reproduce all metrics reported on the paper, execute the **analysis-NISTBench.Rmd** manualy using RStudio or running the script **analysis.sh**:
 
 ```{shell}
-$ cd tools
-
-$ java -jar CryptoGuard.jar -in jar \
-            -s ../asset/rigorityj-samples-1.0-SNAPSHOT.jar \
-	    -o ../results/CryptoGuard-Report.json
+$ cd scripts
+$ ./analysis.sh
 ```
-
-   * Converting the CryptoGuard outcomes to a CSV file
-
-```{shell}
-$ cd ../results
-
-$ python3 ../scripts/process-cg-report.py ./CryptoGuard-Report.json CryptoGuard-Report.csv
-```
+   * The output of **analysis.sh** script is the file **analysis-CryptoAPIBench.html** and you can open it on your browser. 
+   
