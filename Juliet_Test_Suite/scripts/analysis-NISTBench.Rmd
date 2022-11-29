@@ -1,0 +1,244 @@
+---
+title: "analysis-OWASPBench"
+author: "Rodrigo Bonifácio et al."
+date: '2022-06-17'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+setwd(".")
+library(sqldf)
+library(xtable)
+```
+
+## Load the datasets
+
+
+```{r load-mop}
+mop <- read.csv("../results/mop.csv", head=T, sep=",")
+
+colnames(mop)
+nrow(mop)
+
+sqldf("select spec, method, count(*) from mop  group by spec, method")
+
+head(mop$className)
+
+cmMop <- sqldf("select className, method, count(*) from mop group by className, method")
+
+``` 
+
+
+```{r load-cc}
+cc <- read.csv("../results/cognicrypt.csv", head=T, sep=",")
+
+nrow(cc)
+colnames(cc)
+
+sqldf("select spec, method, count(*) from cc group by spec, method")
+
+cmCC <- sqldf("select className, method, count(*) from cc group by className, method")
+```
+
+```{r load-cg}
+cg <- read.csv("../results/cryptoguard.csv", head=T, sep=",")
+
+nrow(cg)
+colnames(cg)
+
+sqldf("select IssueRuleNumber, Method, count(*) from cg group by IssueRuleNumber, Method")
+
+cg$ClassName <- substr(cg$ClassName, sapply(gregexpr("\\.", cg$ClassName), tail, 1) + 1, nchar(cg$ClassName))
+
+cmCG <- sqldf("select ClassName as className, method as method, count(*) from cg group by className, method")
+```
+
+### FullDataset
+
+```{r merge-warnings}
+warnings <- sqldf("select className, method, 'mop' as tool from cmMop") 
+
+warnings <- rbind(warnings, sqldf("select className, method, 'cc' as tool from cmCC") )
+
+warnings <- rbind(warnings, sqldf("select className, method, 'cg' as tool from cmCG") )
+
+warnings["CWE"] <- substring(warnings$className, 1, 6)
+
+sqldf("select * from warnings where CWE not like 'CWE%'")
+
+warnings <- sqldf("select * from warnings where CWE like 'CWE%'")
+
+sqldf("select tool, count(*) from warnings group by tool")
+
+cwes <- read.csv("../../cwes.csv", head=T, sep=',') 
+
+cwes <- sqldf("select c.CWE, c.Description, count(distinct w.className) as total 
+               from warnings w, cwes c 
+               where c.cwe = w.cwe  and w.method like '%bad%'
+               group by c.cwe, c.description 
+               order by total")
+
+xtable(cwes)
+
+barplot(cwes$total, names=cwes$CWE)
+
+# sqldf("select count(distinct className) from warnings")
+```
+
+### Ground Truth
+
+```{r tp}
+gt <- sqldf("select distinct CWE, className, method from warnings where method like '%bad%'")
+nrow(gt)
+```
+
+### MOP
+
+```{r mop}
+tp = sqldf("select * 
+            from warnings w
+            where tool = 'mop' 
+              and (w.className, w.method) in (select className, method from gt)")
+
+fp = sqldf("select * 
+            from warnings w
+            where tool = 'mop' 
+              and (w.className, w.method) not in (select className, method from gt)")
+
+
+fn = sqldf("select CWE, className, method 
+            from gt 
+            where (className, method) not in (select className, method from warnings where tool = 'mop')")
+
+nrow(tp)
+nrow(fp)
+nrow(fn)
+
+
+precision_mop = nrow(tp) / (nrow(tp) + nrow(fp))
+
+recall_mop = nrow(tp) / (nrow(tp) + nrow(fn))
+
+fmeasure_mop = 2 * ((precision_mop * recall_mop) / (precision_mop + recall_mop))
+
+
+precision_mop
+
+recall_mop
+
+fmeasure_mop
+
+sqldf("select CWE, count(*) from fn group by CWE")
+
+
+sqldf("select ClassName from fn")
+sqldf("select ClassName, method from fp")
+
+```
+
+
+### CogniCrypt
+
+
+```{r cc}
+tp = sqldf("select * 
+            from warnings w
+            where tool = 'cc' 
+              and (w.className, w.method) in (select className, method from gt)")
+
+fp = sqldf("select * 
+            from warnings w
+            where tool = 'cc' 
+              and (w.className, w.method) not in (select className, method from gt)")
+
+
+fn = sqldf("select className, method 
+            from gt 
+            where (className, method) not in (select className, method from warnings where tool = 'cc')")
+
+
+nrow(tp)
+nrow(fp)
+nrow(fn)
+
+sqldf("select ClassName from fp")
+
+precision_cc = nrow(tp) / (nrow(tp) + nrow(fp))
+
+recall_cc = nrow(tp) / (nrow(tp) + nrow(fn))
+
+fmeasure_cc = 2 * ((precision_cc * recall_cc) / (precision_cc + recall_cc))
+
+
+precision_cc
+
+recall_cc
+
+fmeasure_cc
+
+sqldf("select ClassName from fn")
+sqldf("select ClassName, method from fp")
+
+```
+
+
+### CryptoGuard
+
+
+```{r cg}
+
+sqldf("select count(*) 
+            from warnings w
+            where tool = 'cg'")
+
+tp = sqldf("select * 
+            from warnings w
+            where tool = 'cg' 
+              and (w.className, w.method) in (select className, method from gt)")
+
+fp = sqldf("select * 
+            from warnings w
+            where tool = 'cg' 
+              and (w.className, w.method) not in (select className, method from gt)")
+
+
+fn = sqldf("select className, method 
+            from gt 
+            where (className, method) not in (select className, method from warnings where tool = 'cg')")
+
+
+nrow(tp)
+nrow(fp)
+nrow(fn)
+
+sqldf("select ClassName from fn")
+
+
+precision_cg = nrow(tp) / (nrow(tp) + nrow(fp))
+
+recall_cg = nrow(tp) / (nrow(tp) + nrow(fn))
+
+fmeasure_cg = 2 * ((precision_cg * recall_cg) / (precision_cg + recall_cg))
+
+
+precision_cg
+
+recall_cg
+
+fmeasure_cg
+
+```
+
+```{r table}
+
+Tools = c("MOP", "CogniCrypt", "CryptoGuard")
+Precision = c(precision_mop, precision_cc, precision_cg)
+Recall = c(recall_mop, recall_cc, recall_cg)
+FMeasure = c(fmeasure_mop, fmeasure_cc, fmeasure_cg)
+
+analysis_ds = data.frame(Tools, Precision, Recall, FMeasure)
+
+analysis_ds
+
+```
