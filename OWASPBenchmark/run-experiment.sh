@@ -27,5 +27,7 @@ python3 ../../scripts/process-cg-report.py CryptoGuard-Report.json cryptoguard.c
 
 rm CryptoAnalysis-Report.json
 rm CryptoGuard-Report.json
+rm cryptoguard.csv
+rm cognicrypt.csv
 
 echo "The outputs have been exported to the results folder"
