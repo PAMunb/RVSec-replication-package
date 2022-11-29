@@ -56,6 +56,7 @@ mvn clean install -DskipTests -pl container/openejb-core -am
 #cd container/openejb-core
 #mvn test
 #cd ../../..
+cd ..
 
 
 ##### WICKET #############################################################

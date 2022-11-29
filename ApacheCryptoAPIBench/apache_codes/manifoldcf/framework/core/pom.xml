@@ -76,6 +76,7 @@
 						<configuration>
 							<excludes>
 								<exclude>**/*Postgresql*.java</exclude>
+								<exclude>randoop/**</exclude>
 							</excludes>
 							<argLine>-Xmx4096m -XX:MaxPermSize=1024m</argLine>
 							<argLine>-javaagent:${basedir}/JavaMOPAgent.jar</argLine>
