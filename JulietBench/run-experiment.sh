@@ -20,9 +20,10 @@ cd target
 
 echo "(b) Running CryptoGuard"
 
-java -jar ../../../tools/cryptoguard-develop.jar -o CryptoGuard-Report.json \
+java -jar ../../../tools/cryptoguard-develop.jar -m CSV -o cryptoguard.csv \
      -in jar -s julia-test-suite-1.3.jar
-mv CryptoGuard-Report.json ../../results/CryptoGuard-Report.json
+
+mv cryptoguard.csv ../../results/cryptoguard.csv
 
 echo "(c) Running CogniCrypt (CryptoAnalysis Component)"
 
@@ -33,17 +34,13 @@ java -Xss4096m -Xmx12000m -Xms4096m -cp \
      --appPath julia-test-suite-1.3.jar
 mv CryptoAnalysis-Report.json ../../results/CogniCrypt-Report.json
 
-echo "Standardizing CongniCrypt and CryptoGuard output"
+echo "Standardizing CongniCrypt output"
 cd ../../results
 python3 ../../scripts/process-cc-report.py CogniCrypt-Report.json cc.csv
 (head -n1 cc.csv && tail -n+2 cc.csv | sort) > cognicrypt.csv 
 rm cc.csv
-
-python3 ../../scripts/process-cg-report.py CryptoGuard-Report.json cg.csv
-(head -n1 cg.csv && tail -n+2 cg.csv | sort) > cryptoguard.csv
-rm cg.csv
 rm CogniCrypt-Report.json
-rm CryptoGuard-Report.json
+
 
 cd ../benchmark
 

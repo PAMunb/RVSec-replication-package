@@ -16,18 +16,11 @@ $ ./run-experiment.sh
 
 
 
-<!-- ### **Calculate Metrics (Precision, Recall and F-measure)**
+### **Calculate Metrics (Precision, Recall and F-measure)**
 
-   * In order to reproduce the metrics reported on the paper:
+   * In order to reproduce all metrics reported on the paper, execute the **analysis-NISTBench.Rmd** on the script folder:
 
 ```{shell}
 $ cd scripts
 ```
 
-   * The script *analysis.py* calculates the precision and recall of the three tools:
-
-```{shell}
-$ python3 analysis.py
-```
-
-   * To reproduce all metrics in a deep way, use the analysis-OWASPBench.Rmd script -->
