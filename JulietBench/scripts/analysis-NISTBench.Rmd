@@ -230,6 +230,8 @@ fmeasure_cg
 
 ```
 
+## Accuracy Results for JulietBench
+
 ```{r table}
 
 Tools = c("MOP", "CogniCrypt", "CryptoGuard")

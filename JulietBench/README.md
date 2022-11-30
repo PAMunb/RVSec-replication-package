@@ -18,9 +18,11 @@ $ ./run-experiment.sh
 
 ### **Calculate Metrics (Precision, Recall and F-measure)**
 
-   * In order to reproduce all metrics reported on the paper, execute the **analysis-NISTBench.Rmd** on the script folder:
+   * In order to reproduce all metrics reported on the paper, execute the **analysis-NISTBench.Rmd** manualy using RStudio or running the script **analysis.sh**:
 
 ```{shell}
 $ cd scripts
+$ ./analysis.sh
 ```
-
+   * The output of **analysis.sh** script is the file **analysis-NISTBench.html** and you can open it on your browser. 
+   

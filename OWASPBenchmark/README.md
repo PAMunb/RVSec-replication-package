@@ -27,7 +27,6 @@ $ ./runCrawler.sh
    * The RV-Sec output will be exported to:  **../results/datasets/mop.csv** 
  
   
-
 ### **Static Analysis tools**
 
 In order to reproduce the CogniCrypt and CryptoGuard results, execute the following steps.
@@ -46,16 +45,17 @@ $ ./run-experiment.sh
 
 ### **Calculate Metrics (Precision, Recall and Fmeasure)**
 
-   * In order to reproduce the metrics reported on the paper:
+   * In order to reproduce all metrics reported on the paper, execute the **analysis-OWASPBench.Rmd** manualy using RStudio or running the script **analysis.sh**:
 
 ```{shell}
 $ cd scripts
+$ ./analysis.sh
 ```
+   * The output of **analysis.sh** script is the file **analysis-OWASPBench.html** and you can open it on your browser. 
+   
 
-   * The script *analysis.py* calculates the precision and recall of the three tools:
+   * The script **analysis.py** calculates the precision and recall of the three tools:
 
 ```{shell}
 $ python3 analysis.py
 ```
-
-   * To reproduce all metrics in a deep way, use the analysis-OWASPBench.Rmd script
