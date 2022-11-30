@@ -230,3 +230,16 @@ sqldf("select distinct className as fn
 
 
 ```
+
+```{r table}
+
+Tools = c("MOP", "CogniCrypt", "CryptoGuard")
+Precision = c(precision_mop, precision_cc, precision_cg)
+Recall = c(recall_mop, recall_cc, recall_cg)
+FMeasure = c(fmeasure_mop, fmeasure_cc, fmeasure_cg)
+
+analysis_ds = data.frame(Tools, Precision, Recall, FMeasure)
+
+analysis_ds
+
+```

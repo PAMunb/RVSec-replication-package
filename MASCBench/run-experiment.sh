@@ -1,3 +1,7 @@
+rm results/cognicrypt.csv
+rm results/cryptoguard.csv
+rm results/mop.csv
+
 if [[ -z "${JAVA_HOME}" ]]; then
 	echo "Please set JAVA_HOME path before running the script."
 	exit -1
