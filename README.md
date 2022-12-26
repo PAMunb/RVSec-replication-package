@@ -30,12 +30,5 @@ Detailed description of our benchmarks, tools, and datasets are available in wha
    * BenchMark 04: [NISTBench](https://github.com/PAMunb/RVSec-replication-package/tree/master/Juliet_Test_Suite)
    * BenchMark 05: [ApacheCryptoAPIBench](https://github.com/PAMunb/RVSec-replication-package/tree/master/ApacheCryptoAPIBench)
    
-%%   is more accurate than static analyzers, with up to \raw{16}, \raw{25}, and \raw{16} percentage points higher precision, recall, and
-%%   F-measure, respectively  
-  
-%%   Lastly, we evaluate overhead  and coverage
-%%   \RV overhead is between \raw{9.9\%} and
-%%   \raw{54\%}, but we did not yet apply recent optimizations that speed up
-%%   \RV by \raw{5\x}.
-%
+
 
