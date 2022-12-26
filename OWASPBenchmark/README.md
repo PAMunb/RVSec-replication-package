@@ -1,47 +1,61 @@
-### CrySL
+### **RV-Sec**
 
-In order to reproduce the CrySL results, execute the following steps.
+In order to reproduce the RV-Sec results, execute the following steps:
 
-   * Running CrypotAnalysis (CrySL) 
+   * Install the Benchmark Plugin:
 
 ```{shell}
-$ cp benchmark.war benchmark.jar
-$ java -Xmx8g -Xss60m -cp ../tools/CryptoAnalysis.jar crypto.HeadlessCryptoScanner \
-           --sarifReport --reportDir ./results \
-           --rulesDir ../tools/rules \
-           --applicationCp ./assets/benchmark.jar
+$ cd BenchmarkUtils 
+$ mvn install
+$ cd ..
+```
+   * Execute the Benchmark:
+
+```{shell}
+$ cd BenchmarkJava 
+$ ./runBenchmark.sh
 ```
 
-   * Converting the CryptoAnalysis outcomes to a CSV file
+   * Verify if the Benchmark is running on: [https://localhost:8443/benchmark/](https://localhost:8443/benchmark/)
+
+   * In a new shell, execute the crawler:
 
 ```{shell}
-$ cd results
-
-$ mv CogniCrypt-SARIF-Report.txt CogniCrypt-Report.json
-
-$ python3 ../../scripts/process-cc-report.py ./CogniCrypt-Report.json CogniCrypt-Report.csv
-
+$ ./runCrawler.sh
 ```
 
+   * The RV-Sec output will be exported to:  **../results/datasets/mop.csv** 
+ 
+  
+### **Static Analysis tools**
 
-### CryptoGuard
+In order to reproduce the CogniCrypt and CryptoGuard results, execute the following steps.
 
-In order to reproduce the CryptoGuard results, execute the following steps.
-
-   * Running CrypotGuard
-
-```{shell}
-$ cp benchmark.war benchmark.jar
-
-$ java -jar ../tools/CryptoGuard.jar -in jar \
-		-s assets/benchmark.jar \
-		-o results/CryptoGuard-Report.json
-```   
-
-* Converting the CryptoGuard outcomes to a CSV file
+   * In a new shell, execute the *run-experiment.sh* script:
 
 ```{shell}
-$ cd results
+$ ./run-experiment.sh
+```
+   * The CogniCrypt output will be exported to:  **../results/datasets/cognicrypt.csv** 
+   
+   * The CryptoGuard output will be exported to:  **../results/datasets/cryptoguard.csv** 
 
-$ python3 ../../scripts/process-cg-report.py ./CryptoGuard-Report.json CryptoGuard-Report.csv
+
+
+
+### **Calculate Metrics (Precision, Recall and Fmeasure)**
+
+   * In order to reproduce all metrics reported on the paper, execute the **analysis-OWASPBench.Rmd** manualy using RStudio or running the script **analysis.sh**:
+
+```{shell}
+$ cd scripts
+$ ./analysis.sh
+```
+   * The output of **analysis.sh** script is the file **analysis-OWASPBench.html** and you can open it on your browser. 
+   
+
+   * The script **analysis.py** calculates the precision and recall of the three tools:
+
+```{shell}
+$ python3 analysis.py
 ```

@@ -11,3 +11,5 @@ else
     echo "To run the Crawler for remote host, execute runCrawler.sh with only 2 arguments, proxy-host and proxy-port."
     echo "Example: ./runCrawler.sh 192.168.0.1 53452"
 fi
+
+(head -n1 target/tomcat8x/output/summary.csv && tail -n+2 target/tomcat8x/output/summary.csv  | sort) > ../results/datasets/mop.csv 

@@ -44,7 +44,7 @@ def print_results(ground_truth_file, result_files):
 if __name__ == '__main__':
 	ground_truth = '../ground_truth.csv'
 	test_suites = {
-		'cogni_crypt': '../results/CogniCrypt-Report.csv',
-		'crypto_guard': '../results/CryptoGuard-Report.csv',
-		'java_mop': '../results/summary.csv'}
+		'cogni_crypt': '../results/datasets/cognicrypt.csv',
+		'crypto_guard': '../results/datasets/cryptoguard.csv',
+		'java_mop': '../results/datasets/mop.csv'}
 	print_results(ground_truth, test_suites)

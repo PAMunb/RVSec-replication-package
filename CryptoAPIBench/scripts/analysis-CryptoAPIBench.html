@@ -168,236 +168,305 @@ pre code {
 </div>
 
 
-<div id="load-the-datasets" class="section level2">
-<h2>Load the datasets</h2>
-<pre class="r"><code>bench03mop &lt;- read.csv(&quot;../results/mop.csv&quot;, head=T, sep=&quot;,&quot;)
-bench03cc  &lt;- read.csv(&quot;../results/cognicrypt.csv&quot;, head=T, sep=&quot;,&quot;)
-bench03cg &lt;- read.csv(&quot;../results/cryptoguard.csv&quot;, head=T, sep=&quot;,&quot;)
+<div id="r-markdown" class="section level2">
+<h2>R Markdown</h2>
+<p>This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <a href="http://rmarkdown.rstudio.com" class="uri">http://rmarkdown.rstudio.com</a>.</p>
+<p>When you click the <strong>Knit</strong> button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:</p>
+<pre class="r"><code>bench02mop &lt;- read.csv(&quot;../results/mop.csv&quot;, head=T, sep=&quot;,&quot;)
+bench02cc  &lt;- read.csv(&quot;../results/cognicrypt.csv&quot;, head=T, sep=&quot;,&quot;)
+bench02cg &lt;- read.csv(&quot;../results/cryptoguard.csv&quot;, head=T, sep=&quot;,&quot;)
 
-gt &lt;- read.csv(&quot;../results/gt.csv&quot;, head=T, sep=&quot;,&quot;)
+gt &lt;- read.csv(&quot;../results/bench02-gt-converted.csv&quot;, head=T, sep=&quot;,&quot;)
 
 gt &lt;- na.omit(gt)
 
-nrow(bench03mop)</code></pre>
-<pre><code>## [1] 80</code></pre>
-<pre class="r"><code>colnames(bench03mop)</code></pre>
+nrow(bench02mop)</code></pre>
+<pre><code>## [1] 312</code></pre>
+<pre class="r"><code>colnames(bench02mop)</code></pre>
 <pre><code>## [1] &quot;spec&quot;      &quot;class&quot;     &quot;className&quot; &quot;method&quot;    &quot;location&quot;  &quot;error&quot;    
 ## [7] &quot;expecting&quot;</code></pre>
-<pre class="r"><code>nrow(bench03cc)</code></pre>
-<pre><code>## [1] 37</code></pre>
-<pre class="r"><code>colnames(bench03cc)</code></pre>
+<pre class="r"><code>nrow(bench02cc)</code></pre>
+<pre><code>## [1] 229</code></pre>
+<pre class="r"><code>colnames(bench02cc)</code></pre>
 <pre><code>## [1] &quot;spec&quot;      &quot;error&quot;     &quot;class&quot;     &quot;className&quot; &quot;method&quot;</code></pre>
-<pre class="r"><code>nrow(bench03cg)</code></pre>
-<pre><code>## [1] 21</code></pre>
-<pre class="r"><code>colnames(bench03cg)</code></pre>
+<pre class="r"><code>nrow(bench02cg)</code></pre>
+<pre><code>## [1] 184</code></pre>
+<pre class="r"><code>colnames(bench02cg)</code></pre>
 <pre><code>## [1] &quot;spec&quot;      &quot;error&quot;     &quot;class&quot;     &quot;className&quot; &quot;method&quot;</code></pre>
 <pre class="r"><code>colnames(gt)</code></pre>
-<pre><code>## [1] &quot;className&quot;     &quot;vulnerability&quot; &quot;Description&quot;</code></pre>
+<pre><code>## [1] &quot;propertyShortName&quot;   &quot;propertyName&quot;        &quot;class&quot;              
+## [4] &quot;method&quot;              &quot;code&quot;                &quot;vulnerability&quot;      
+## [7] &quot;typeOfVulnerability&quot; &quot;lineNumber&quot;</code></pre>
 <pre class="r"><code>nrow(gt)</code></pre>
-<pre><code>## [1] 31</code></pre>
-<div id="filter-out-irrelevant-warnings-for-the-stud" class="section level3">
-<h3>Filter out irrelevant warnings for the stud</h3>
-<p>This is necessary because we have enriched the test cases for more complete scenarios, instead of just instantiating cryptographic primitives and then doing nothing with them. To solve this issue, we introduce the usege of Keys.</p>
-<pre class="r"><code>bench03mop &lt;- sqldf(&quot;select * from bench03mop where spec != &#39;KeyGeneratorSpec&#39;&quot;)
-nrow(bench03mop)</code></pre>
-<pre><code>## [1] 60</code></pre>
-<pre class="r"><code>bench03cc &lt;- sqldf(&quot;select * from bench03cc  where spec != &#39;KeyGeneratorSpec&#39;&quot;)
-nrow(bench03cc)</code></pre>
-<pre><code>## [1] 28</code></pre>
+<pre><code>## [1] 199</code></pre>
 </div>
-</div>
-<div id="ground-truth-mop" class="section level2">
-<h2>Ground Truth (MOP)</h2>
-<pre class="r"><code>tp &lt;- gt[gt$vulnerability == &quot;True&quot;,]
-tn &lt;- gt[gt$vulnerability == &quot;False&quot;,]
+<div id="ground-truth" class="section level2">
+<h2>Ground Truth</h2>
+<pre class="r"><code>gt &lt;- sqldf(&quot;select propertyShortName, class, method, vulnerability 
+            from gt&quot;)
 
-sqldf(&quot;select count(distinct className) from tp&quot;)</code></pre>
-<pre><code>##   count(distinct className)
-## 1                        28</code></pre>
-<pre class="r"><code>sqldf(&quot;select count(distinct className) from tn&quot;)</code></pre>
-<pre><code>##   count(distinct className)
-## 1                         1</code></pre>
+nrow(gt)</code></pre>
+<pre><code>## [1] 199</code></pre>
+<pre class="r"><code>tp &lt;- sqldf(&quot;select distinct class from gt where vulnerability = &#39;TRUE&#39;&quot;)
+tn &lt;- sqldf(&quot;select distinct class from gt where vulnerability = &#39;FALSE&#39;&quot;)
+
+sqldf(&quot;select count(distinct class) from tp&quot;)</code></pre>
+<pre><code>##   count(distinct class)
+## 1                   130</code></pre>
+<pre class="r"><code>sqldf(&quot;select count(distinct class) from tn&quot;)</code></pre>
+<pre><code>##   count(distinct class)
+## 1                    35</code></pre>
 </div>
-<div id="compute-precision-and-recall-mop" class="section level2">
-<h2>Compute Precision and Recall (MOP)</h2>
+<div id="precision-recall-mop" class="section level2">
+<h2>Precision / Recall MOP</h2>
 <pre class="r"><code># compute true positive 
-
 mop_tp &lt;- sqldf(&quot;select count(distinct className) as tp
-                 from bench03mop 
-                 where className in (select className from tp)&quot;)
+                 from bench02mop 
+                 where className in (select class from tp)&quot;)
 
 # compute false positive 
-
 mop_fp &lt;- sqldf(&quot;select count(distinct className) as fp
-                 from bench03mop 
-                 where className in (select className from tn)&quot;)
+                 from bench02mop 
+                 where className in (select class from tn)&quot;)
 
 
 
 # compute false-negative  
-
-
-mop_fn &lt;- sqldf(&quot;select count(distinct className) as fn
+mop_fn &lt;- sqldf(&quot;select count(distinct class) as fn
                  from tp 
-                 where className not in (select className from bench03mop)&quot;)
+                 where class not in (select className from bench02mop)&quot;)
 
 # MOP true positives
 mop_tp</code></pre>
-<pre><code>##   tp
-## 1 28</code></pre>
+<pre><code>##    tp
+## 1 122</code></pre>
 <pre class="r"><code># MOP false positives
 mop_fp</code></pre>
 <pre><code>##   fp
-## 1  0</code></pre>
+## 1  6</code></pre>
 <pre class="r"><code># MOP false negatives
 mop_fn</code></pre>
 <pre><code>##   fn
-## 1  0</code></pre>
+## 1  8</code></pre>
 <pre class="r"><code>precision_mop &lt;- mop_tp$tp / (mop_tp$tp + mop_fp$fp)
 precision_mop</code></pre>
-<pre><code>## [1] 1</code></pre>
+<pre><code>## [1] 0.953125</code></pre>
 <pre class="r"><code>recall_mop &lt;- mop_tp$tp / (mop_tp$tp + mop_fn$fn)
 recall_mop</code></pre>
-<pre><code>## [1] 1</code></pre>
+<pre><code>## [1] 0.9384615</code></pre>
 <pre class="r"><code>fmeasure_mop = (2 * precision_mop * recall_mop) / (precision_mop + recall_mop)
 fmeasure_mop</code></pre>
-<pre><code>## [1] 1</code></pre>
+<pre><code>## [1] 0.9457364</code></pre>
 </div>
-<div id="compute-precision-and-recall-cc" class="section level2">
-<h2>Compute Precision and Recall (CC)</h2>
+<div id="ground-truth-cc" class="section level2">
+<h2>Ground Truth (CC)</h2>
 <pre class="r"><code># compute true positive 
-
 cc_tp &lt;- sqldf(&quot;select count(distinct className) as tp
-                 from bench03cc 
-                 where className in (select className from tp)&quot;)
+                from bench02cc
+                where className in (select class from tp)&quot;)
 
 # compute false positive 
-
 cc_fp &lt;- sqldf(&quot;select count(distinct className) as fp
-                 from bench03cc
-                 where className in (select className from tn)&quot;)
-
-
+                from bench02cc
+                where className in (select class from tn)&quot;)
 
 # compute false-negative  
+cc_fn &lt;- sqldf(&quot;select count(distinct class) as fn
+                from tp 
+                where class not in (select className from bench02cc)&quot;)
 
-cc_fn &lt;- sqldf(&quot;select count(distinct className) as fn
-                 from tp 
-                 where className not in (select className from bench03cc)&quot;)
 
-# MOP true positives
+# CC true positives
 cc_tp</code></pre>
-<pre><code>##   tp
-## 1 23</code></pre>
-<pre class="r"><code># MOP false positives
+<pre><code>##    tp
+## 1 106</code></pre>
+<pre class="r"><code># CC false positives
 cc_fp</code></pre>
 <pre><code>##   fp
-## 1  0</code></pre>
-<pre class="r"><code># MOP false negatives
+## 1 24</code></pre>
+<pre class="r"><code># CC false negatives
 cc_fn</code></pre>
 <pre><code>##   fn
-## 1  5</code></pre>
+## 1 24</code></pre>
 <pre class="r"><code>precision_cc &lt;- cc_tp$tp / (cc_tp$tp + cc_fp$fp)
 precision_cc</code></pre>
-<pre><code>## [1] 1</code></pre>
+<pre><code>## [1] 0.8153846</code></pre>
 <pre class="r"><code>recall_cc &lt;- cc_tp$tp / (cc_tp$tp + cc_fn$fn)
 recall_cc</code></pre>
-<pre><code>## [1] 0.8214286</code></pre>
+<pre><code>## [1] 0.8153846</code></pre>
 <pre class="r"><code>fmeasure_cc = (2 * precision_cc * recall_cc) / (precision_cc + recall_cc)
 fmeasure_cc</code></pre>
-<pre><code>## [1] 0.9019608</code></pre>
+<pre><code>## [1] 0.8153846</code></pre>
 </div>
-<div id="compute-precision-and-recall-cg" class="section level2">
-<h2>Compute Precision and Recall (CG)</h2>
-<pre class="r"><code># compute true positive 
+<div id="ground-truth-cg" class="section level2">
+<h2>Ground Truth (CG)</h2>
+<pre class="r"><code>gtcg &lt;- read.csv(&quot;../results/bench02-gt-cg-converted.csv&quot;, head=T, sep=&quot;,&quot;)
 
+gtcg &lt;- na.omit(gtcg)
+
+gtcg &lt;- sqldf(&quot;select propertyShortName, class, method, vulnerability 
+            from gtcg&quot;)
+
+nrow(gtcg)</code></pre>
+<pre><code>## [1] 198</code></pre>
+<pre class="r"><code>tpcg &lt;- gtcg[gtcg$vulnerability == &quot;TRUE&quot;,]
+tncg &lt;- gtcg[gtcg$vulnerability == &quot;FALSE&quot;,]
+
+# compute true positive 
 cg_tp &lt;- sqldf(&quot;select count(distinct className) as tp
-                 from bench03cg
-                 where className in (select className from tp)&quot;)
+                from bench02cg
+                where className in (select class from tpcg)&quot;)
 
 # compute false positive 
-
 cg_fp &lt;- sqldf(&quot;select count(distinct className) as fp
-                 from bench03cg
-                 where className in (select className from tn)&quot;)
-
-
+                from bench02cg
+                where className in (select class from tncg)&quot;)
 
 # compute false-negative  
+cg_fn &lt;- sqldf(&quot;select count(distinct class) as fn
+                from tpcg 
+                where class not in (select className from bench02cg)&quot;)
 
-cg_fn &lt;- sqldf(&quot;select count(distinct className) as fn
-                 from tp 
-                 where className not in (select className from bench03cg)&quot;)
 
-# MOP true positives
+# CG true positives
 cg_tp</code></pre>
-<pre><code>##   tp
-## 1 19</code></pre>
-<pre class="r"><code># MOP false positives
+<pre><code>##    tp
+## 1 114</code></pre>
+<pre class="r"><code># CC false positives
 cg_fp</code></pre>
 <pre><code>##   fp
-## 1  0</code></pre>
-<pre class="r"><code># MOP false negatives
+## 1 18</code></pre>
+<pre class="r"><code># CC false negatives
 cg_fn</code></pre>
 <pre><code>##   fn
-## 1  9</code></pre>
+## 1 17</code></pre>
 <pre class="r"><code>precision_cg &lt;- cg_tp$tp / (cg_tp$tp + cg_fp$fp)
 precision_cg</code></pre>
-<pre><code>## [1] 1</code></pre>
+<pre><code>## [1] 0.8636364</code></pre>
 <pre class="r"><code>recall_cg &lt;- cg_tp$tp / (cg_tp$tp + cg_fn$fn)
 recall_cg</code></pre>
-<pre><code>## [1] 0.6785714</code></pre>
+<pre><code>## [1] 0.870229</code></pre>
 <pre class="r"><code>fmeasure_cg = (2 * precision_cg * recall_cg) / (precision_cg + recall_cg)
 fmeasure_cg</code></pre>
-<pre><code>## [1] 0.8085106</code></pre>
+<pre><code>## [1] 0.8669202</code></pre>
 </div>
-<div id="examples-of-false-positives" class="section level2">
-<h2>Examples of False Positives</h2>
-<pre class="r"><code>sqldf(&quot;select distinct className as fp
-       from bench03mop
-       where className not in (select className from tp)&quot;)</code></pre>
-<pre><code>## [1] fp
-## &lt;0 rows&gt; (or 0-length row.names)</code></pre>
-<pre class="r"><code>sqldf(&quot;select distinct className as fp
-       from bench03cc
-       where className not in (select className from  tp)&quot;)</code></pre>
-<pre><code>## [1] fp
-## &lt;0 rows&gt; (or 0-length row.names)</code></pre>
-<pre class="r"><code>sqldf(&quot;select distinct className as fp
-       from bench03cg 
-       where className not in (select className from tp)&quot;)</code></pre>
-<pre><code>## [1] fp
-## &lt;0 rows&gt; (or 0-length row.names)</code></pre>
+<div id="examples-of-fp-and-fn" class="section level2">
+<h2>Examples of FP and FN</h2>
+<pre class="r"><code># false positive 
+sqldf(&quot;select distinct className
+       from bench02mop 
+       where className in (select class from tn)&quot;)</code></pre>
+<pre><code>##                           className
+## 1 LessThan1000IterationPBECorrected
+## 2              StaticSaltsCorrected
+## 3 LessThan1000IterationPBEABPSCase1
+## 4   PredictablePBEPasswordCorrected
+## 5 InsecureAsymmetricCipherABPSCase1
+## 6              StaticSaltsABPSCase1</code></pre>
+<pre class="r"><code># false-negative  
+sqldf(&quot;select distinct class
+       from tp 
+       where class not in (select className from bench02mop)&quot;)</code></pre>
+<pre><code>##                                         class
+## 1          PredictableKeyStorePasswordBBCase1
+## 2         PredictableKeyStorePasswordABICase1
+## 3         PredictableKeyStorePasswordABICase3
+## 4 PredictableCryptographicKeyABSCase1Internal
+## 5          CryptoPredictableKeyStorePassword1
+## 6         PredictableKeyStorePasswordABHCase2
+## 7         PredictableKeyStorePasswordABICase2
+## 8            PredictableKeyStorePasswordABMC1</code></pre>
+<pre class="r"><code># false positive 
+sqldf(&quot;select distinct className
+       from bench02cc
+       where className in (select class from tn)&quot;)</code></pre>
+<pre><code>##                               className
+## 1                 BrokenCryptoABPSCase2
+## 2                 BrokenCryptoABPSCase4
+## 3                 BrokenCryptoABPSCase3
+## 4                 BrokenCryptoABPSCase1
+## 5                 BrokenCryptoABPSCase5
+## 6              EcbInSymmCryptoABPSCase1
+## 7   PredictableKeyStorePasswordABHCase1
+## 8  PredictableKeyStorePasswordCorrected
+## 9  PredictableKeyStorePasswordABPSCase1
+## 10    InsecureAsymmetricCipherABPSCase1
+## 11          CredentialInStringCorrected
+## 12 PredictableCryptographicKeyCorrected
+## 13    LessThan1000IterationPBECorrected
+## 14    LessThan1000IterationPBEABPSCase1
+## 15                 StaticSaltsCorrected
+## 16                 StaticSaltsABPSCase1
+## 17                  BrokenHashABPSCase3
+## 18                  BrokenHashABPSCase1
+## 19                  BrokenHashABPSCase2
+## 20                  BrokenHashABPSCase4
+## 21       PredictablePBEPasswordABHCase1
+## 22      PredictablePBEPasswordABPSCase1
+## 23      PredictablePBEPasswordCorrected
+## 24 PredictableCryptographicKeyABPSCase1</code></pre>
+<pre class="r"><code>sqldf(&quot;select count (distinct className)
+       from bench02cc
+       where className in (select class from tn) and className like &#39;%ABPS%&#39;&quot;)</code></pre>
+<pre><code>##   count (distinct className)
+## 1                         16</code></pre>
+<pre class="r"><code>sqldf(&quot;select count (distinct className)
+       from bench02cc
+       where className in (select class from tn)&quot;)</code></pre>
+<pre><code>##   count (distinct className)
+## 1                         24</code></pre>
+<pre class="r"><code># false-negative  
+sqldf(&quot;select distinct class
+       from tp
+       where class not in (select className from bench02cc)&quot;)</code></pre>
+<pre><code>##                               class
+## 1           PredictableSeedsBBCase1
+## 2           PredictableSeedsBBCase2
+## 3          PredictableSeedsABICase1
+## 4          PredictableSeedsABICase2
+## 5          PredictableSeedsABICase5
+## 6          PredictableSeedsABICase6
+## 7            CryptoPredictableSeed1
+## 8            CryptoPredictableSeed2
+## 9          PredictableSeedsABHCase2
+## 10         PredictableSeedsABHCase4
+## 11 LessThan1000IterationPBEABHCase1
+## 12         PredictableSeedsABICase3
+## 13         PredictableSeedsABICase4
+## 14          EcbInSymmCryptoABICase2
+## 15             BrokenCryptoABICase5
+## 16             BrokenCryptoABICase6
+## 17             BrokenCryptoABICase7
+## 18             BrokenCryptoABICase8
+## 19            BrokenCryptoABICase10
+## 20               BrokenHashABICase5
+## 21               BrokenHashABICase6
+## 22               BrokenHashABICase7
+## 23               BrokenHashABICase8
+## 24            PredictableSeedsABMC1</code></pre>
+<pre class="r"><code># false positive 
+#sqldf(&quot;select distinct className
+#       from tpcg
+#       where className in (select class from tncg)&quot;)
+
+
+sqldf(&quot;select count (distinct className)
+       from bench02cg
+       where className in (select class from tncg) and className like &#39;%ABPS%&#39;&quot;)</code></pre>
+<pre><code>##   count (distinct className)
+## 1                         18</code></pre>
+<pre class="r"><code>sqldf(&quot;select count (distinct className)
+       from bench02cg
+       where className in (select class from tncg)&quot;)</code></pre>
+<pre><code>##   count (distinct className)
+## 1                         18</code></pre>
+<pre class="r"><code># false-negative  
+#sqldf(&quot;select distinct class
+#       from tpcg 
+#       where class not in (select className from bench02cg)&quot;)</code></pre>
 </div>
-<div id="examples-of-false-negative" class="section level2">
-<h2>Examples of False Negative</h2>
-<pre class="r"><code>sqldf(&quot;select distinct className as fn
-       from tp 
-       where className not in (select className from bench03mop)&quot;)</code></pre>
-<pre><code>## [1] fn
-## &lt;0 rows&gt; (or 0-length row.names)</code></pre>
-<pre class="r"><code>sqldf(&quot;select distinct className as fn
-       from tp 
-       where className not in (select className from bench03cc)&quot;)</code></pre>
-<pre><code>##                fn
-## 1 CipherExample09
-## 2            MD03
-## 3            MD06
-## 4            MD07
-## 5            MD08</code></pre>
-<pre class="r"><code>sqldf(&quot;select distinct className as fn
-       from tp 
-       where className not in (select className from bench03cg)&quot;)</code></pre>
-<pre><code>##                fn
-## 1 CipherExample05
-## 2 CipherExample09
-## 3 CipherExample10
-## 4 CipherExample13
-## 5 ComplexStaticIV
-## 6   CurrentTimeIV
-## 7            MD05
-## 8            MD08
-## 9    ContextOfSSL</code></pre>
+<div id="accuracy-results-for-cryptoapibench" class="section level2">
+<h2>Accuracy Results for CryptoAPIBench</h2>
 <pre class="r"><code>Tools = c(&quot;MOP&quot;, &quot;CogniCrypt&quot;, &quot;CryptoGuard&quot;)
 Precision = c(precision_mop, precision_cc, precision_cg)
 Recall = c(recall_mop, recall_cc, recall_cg)
@@ -407,9 +476,9 @@ analysis_ds = data.frame(Tools, Precision, Recall, FMeasure)
 
 analysis_ds</code></pre>
 <pre><code>##         Tools Precision    Recall  FMeasure
-## 1         MOP         1 1.0000000 1.0000000
-## 2  CogniCrypt         1 0.8214286 0.9019608
-## 3 CryptoGuard         1 0.6785714 0.8085106</code></pre>
+## 1         MOP 0.9531250 0.9384615 0.9457364
+## 2  CogniCrypt 0.8153846 0.8153846 0.8153846
+## 3 CryptoGuard 0.8636364 0.8702290 0.8669202</code></pre>
 </div>
 
 

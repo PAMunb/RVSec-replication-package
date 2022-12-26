@@ -24,5 +24,5 @@ $ ./run-experiment.sh
 $ cd scripts
 $ ./analysis.sh
 ```
-   * The output of **analysis.sh** script is the file **analysis-CryptoAPIBench.html** and you can open it on your browser. 
+   * The output of **analysis.sh** script is the file **analysis-NISTBench.html** and you can open it on your browser. 
    

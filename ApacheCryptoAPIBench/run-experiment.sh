@@ -1,26 +1,32 @@
-import os
-from os import walk
+if [[ -z "${JAVA_HOME}" ]]; then
+	echo "Please set JAVA_HOME path before running the script."
+	exit -1
+fi
 
-import time
+PATH_RVSEC=$(mvn help:evaluate -Dexpression=settings.localRepository -q -DforceStdout)/br/unb/cic
+if [[ ! -d $PATH_RVSEC ]]; then
+	../scripts/build_rvsec.sh
+fi
+
+#echo "Running RVSec"
 
 
-cmd01 = """java -Xss4096m -Xmx12000m -Xms4096m -cp ../tools/CryptoAnalysis-3a78193.jar crypto.HeadlessCryptoScanner --rulesDir ../tools/rules/ --appPath ./assets/{} --reportFormat SARIF""" 
+echo "Running CogniCrypt"
+./run_ca.sh
 
-cmd02= """java -Xss4096m -Xmx12000m -Xms4096m -jar ../tools/cryptoguard-develop.jar -in jar -s ./assets/{} -o CryptoGuard-Report.json"""
+echo "Running CryptoGuard"
+./run_cg.sh
 
-h = open("results.csv", 'w')
+#echo "Standardizing CogniCrypt and CryptoGuard output"
+#cd results
+#python3 ../scripts/process-cc-report.py CryptoAnalysis-Report.json cc.csv
+#(head -n1 cc.csv && tail -n+2 cc.csv | sort) > cognicrypt.csv 
+#rm cc.csv
 
-def runAnalysis(tool, cmd, idx, program):
-  start = round(time.time() * 1000)
-  os.system(cmd.format(program))
-  # print(cmd.format(program))
-  end = round(time.time() * 1000)
-  h.write(f'{tool},{idx},{f},{end-start}\n') 
-    
-for (dirpath, dirnames, filenames) in walk("./assets"):
-  for f in filenames:					       
-    for idx in range(1,11):					       
-      runAnalysis('cc', cmd01, idx, f)
-      runAnalysis('cg', cmd02, idx, f)
+#python3 ../../scripts/process-cg-report.py CryptoGuard-Report.json cg.csv
+#(head -n1 cg.csv && tail -n+2 cg.csv | sort) > cryptoguard.csv
+#rm cg.csv
+#rm CryptoAnalysis-Report.json
+#rm CryptoGuard-Report.json
 
-h.close()      
+#echo "The outputs have been exported to the results folder"
