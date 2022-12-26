@@ -1,23 +1,41 @@
-# RVSec (replication package)
+# Runtime Verification of Crypto APIs: An Empirical Study
 
-### MASCBench
+## Abstract
 
-   * Description: 
+Misuse of cryptographic (crypto) APIs is a noteworthy cause 
+of security vulnerabilities. For this reason, static analyzers
+were recently proposed for detecting crypto API misuses. They differ in strengths and
+weaknesses, and they might miss bugs. Motivated by the inherent limitations of static analyzers,
+this paper reports on a study of Runtime Verification (RV) as a dynamic-analysis-based
+alternative for crypto API misuse detection. RV monitors program runs
+against formal specifications; it was shown to
+be effective and efficient for amplifying the bug-finding ability
+of software tests.
+We focus on the popular JCA crypto API
+and write 22 RV specs based on expert-validated rules in a static
+analyzer. We monitor these specs while running
+tests in five benchmarks. Lastly, we compare RV accuracy with those of state-of-the-art 
+static analyzers---CogniCrypt and CryptoGuard. Results show that RV has higher accuracy in
+four benchmarks and is on par with CryptoGuard in the fifth. Overall, RV achieves an average F1 measure
+of 95%, compared with 83% and 78% for CogniCrypt and CryptoGuard, respectively. These results are encouraging, and show that RV can complement static analysis tools for
+detecting crypto API misuses.
 
-### CryptoAPIBench
+## Replication Package
 
-   * Description: This is a micro-benchmark we build on top of the
-   CryptoAPI-Bench. From the original benchmark (CryptoAPI-Bench), we
-   removed the non JCA test cases and fixed several test cases that
-   throw exceptions at runtime. The following table summarizes the
-   runtime problems that we faced from the original CryptoAPI-Bench. 
+Detailed description of our benchmarks, tools, and datasets are available in what follows.
 
-
-   * Tools:
+   * BenchMark 01: [MASCBench](https://github.com/PAMunb/RVSec-replication-package/tree/master/MASCBench)
+   * BenchMark 02: [CryptoAPIBench](https://github.com/PAMunb/RVSec-replication-package/tree/master/OWASPBenchmark)
+   * BenchMark 03: [OwaspBench](https://github.com/PAMunb/RVSec-replication-package/tree/master/OWASPBenchmark)
+   * BenchMark 04: [NISTBench](https://github.com/PAMunb/RVSec-replication-package/tree/master/Juliet_Test_Suite)
+   * BenchMark 05: [ApacheCryptoAPIBench](https://github.com/PAMunb/RVSec-replication-package/tree/master/ApacheCryptoAPIBench)
    
-      * CryptoGuard (rev 92551eeb)
-      * CogniCrypt (rev 3fc611d0)
-      * RVSec (rev 0d3c1f32)
+%%   is more accurate than static analyzers, with up to \raw{16}, \raw{25}, and \raw{16} percentage points higher precision, recall, and
+%%   F-measure, respectively  
+  
+%%   Lastly, we evaluate overhead  and coverage
+%%   \RV overhead is between \raw{9.9\%} and
+%%   \raw{54\%}, but we did not yet apply recent optimizations that speed up
+%%   \RV by \raw{5\x}.
+%
 
-
-### ApacheCryptoAPIBench
