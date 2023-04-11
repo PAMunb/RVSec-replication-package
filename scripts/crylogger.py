@@ -10,7 +10,7 @@ if(len(sys.argv) != 4):
 errorFile = sys.argv[1]
 gtFile = sys.argv[2]
 nameOption = sys.argv[3]
-outfile = "out.csv"
+outfile = "crylogger.csv"
 
 def splitClassAndMethodName(name):
     names = name.split(".")

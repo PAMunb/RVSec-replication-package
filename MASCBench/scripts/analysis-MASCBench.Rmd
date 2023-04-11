@@ -18,6 +18,8 @@ library(xtable)
 bench03mop <- read.csv("../results/mop.csv", head=T, sep=",")
 bench03cc  <- read.csv("../results/cognicrypt.csv", head=T, sep=",")
 bench03cg <- read.csv("../results/cryptoguard.csv", head=T, sep=",")
+bench03cy <- read.csv("../results/crylogger.csv", head=T, sep=",")
+
 
 gt <- read.csv("../results/gt.csv", head=T, sep=",")
 
@@ -36,9 +38,9 @@ colnames(gt)
 nrow(gt)
 ```
 
-### Filter out irrelevant warnings for the stud
+### Filter out irrelevant warnings for the study
 
-This is necessary because we have enriched the test cases for more complete scenarios, instead of just instantiating cryptographic primitives and then doing nothing with them. To solve this issue, we introduce the usege of Keys. 
+This is necessary because we have enriched the test cases for more complete scenarios, instead of just instantiating cryptographic primitives and then doing nothing with them. To solve this issue, we introduce the usage of Keys. 
 
 ```{r}
 bench03mop <- sqldf("select * from bench03mop where spec != 'KeyGeneratorSpec'")
@@ -195,6 +197,54 @@ fmeasure_cg = (2 * precision_cg * recall_cg) / (precision_cg + recall_cg)
 fmeasure_cg
 ```
 
+
+## Compute Precision and Recall (CryLogger)
+
+```{r}
+
+# compute true positive 
+
+crylogger_tp <- sqldf("select count(distinct className) as tp
+                 from bench03cy 
+                 where className in (select className from tp)")
+
+# compute false positive 
+
+crylogger_fp <- sqldf("select count(distinct className) as fp
+                 from bench03cy 
+                 where className in (select className from tn)")
+
+
+
+# compute false-negative  
+
+crylogger_fn <- sqldf("select count(distinct className) as fn
+                 from tp 
+                 where className not in (select className from bench03cy)")
+
+# crylogger true positives
+crylogger_tp
+
+# crylogger false positives
+crylogger_fp
+
+# crylogger false negatives
+crylogger_fn
+
+
+precision_cy <- crylogger_tp$tp / (crylogger_tp$tp + crylogger_fp$fp)
+precision_cy
+
+recall_cy <- crylogger_tp$tp / (crylogger_tp$tp + crylogger_fn$fn)
+recall_cy
+
+fmeasure_cy = (2 * precision_cy * recall_cy) / (precision_cy + recall_cy)
+fmeasure_cy
+
+```
+
+
+
 ## Examples of False Positives
 
 ```{r}
@@ -235,10 +285,10 @@ sqldf("select distinct className as fn
 
 ```{r table}
 
-Tools = c("MOP", "CogniCrypt", "CryptoGuard")
-Precision = c(precision_mop, precision_cc, precision_cg)
-Recall = c(recall_mop, recall_cc, recall_cg)
-FMeasure = c(fmeasure_mop, fmeasure_cc, fmeasure_cg)
+Tools = c("MOP", "CogniCrypt", "CryptoGuard", "CryLogger")
+Precision = c(precision_mop, precision_cc, precision_cg, precision_cy)
+Recall = c(recall_mop, recall_cc, recall_cg, recall_cy)
+FMeasure = c(fmeasure_mop, fmeasure_cc, fmeasure_cg, fmeasure_cy)
 
 analysis_ds = data.frame(Tools, Precision, Recall, FMeasure)
 
