@@ -22,6 +22,7 @@ When you click the **Knit** button a document will be generated that includes bo
 bench02mop <- read.csv("../results/mop.csv", head=T, sep=",")
 bench02cc  <- read.csv("../results/cognicrypt.csv", head=T, sep=",")
 bench02cg <- read.csv("../results/cryptoguard.csv", head=T, sep=",")
+bench02crylogger <- read.csv("../results/crylogger.csv", head=T, sep=",")
 
 gt <- read.csv("../results/bench02-gt-converted.csv", head=T, sep=",")
 
@@ -35,6 +36,10 @@ colnames(bench02cc)
 
 nrow(bench02cg)
 colnames(bench02cg)
+
+nrow(bench02cg)
+colnames(bench02crylogger)
+
 
 colnames(gt)
 nrow(gt)
@@ -188,6 +193,50 @@ fmeasure_cg = (2 * precision_cg * recall_cg) / (precision_cg + recall_cg)
 fmeasure_cg
 ```
 
+
+## Precision / Recall CryLogger
+
+```{r}
+# compute true positive 
+crylogger_tp <- sqldf("select count(distinct className) as tp
+                 from bench02crylogger 
+                 where className in (select class from tp)")
+
+# compute false positive 
+crylogger_fp <- sqldf("select count(distinct className) as fp
+                 from bench02crylogger 
+                 where className in (select class from tn)")
+
+
+
+# compute false-negative  
+crylogger_fn <- sqldf("select count(distinct class) as fn
+                 from tp 
+                 where class not in (select className from bench02crylogger)")
+
+# MOP true positives
+crylogger_tp
+
+# MOP false positives
+crylogger_fp
+
+# MOP false negatives
+crylogger_fn
+
+
+
+precision_crylogger <- crylogger_tp$tp / (crylogger_tp$tp + crylogger_fp$fp)
+precision_crylogger
+
+recall_crylogger <- crylogger_tp$tp / (crylogger_tp$tp + crylogger_fn$fn)
+recall_crylogger
+
+fmeasure_crylogger = (2 * precision_crylogger * recall_crylogger) / (precision_crylogger + recall_crylogger)
+fmeasure_crylogger
+```
+
+
+
 ## Examples of FP and FN 
 
 ```{r}
@@ -254,10 +303,10 @@ sqldf("select count (distinct className)
 ## Accuracy Results for CryptoAPIBench
 ```{r table}
 
-Tools = c("MOP", "CogniCrypt", "CryptoGuard")
-Precision = c(precision_mop, precision_cc, precision_cg)
-Recall = c(recall_mop, recall_cc, recall_cg)
-FMeasure = c(fmeasure_mop, fmeasure_cc, fmeasure_cg)
+Tools = c("MOP", "CogniCrypt", "CryptoGuard", "CryLogger")
+Precision = c(precision_mop, precision_cc, precision_cg, precision_crylogger)
+Recall = c(recall_mop, recall_cc, recall_cg, recall_crylogger)
+FMeasure = c(fmeasure_mop, fmeasure_cc, fmeasure_cg, fmeasure_crylogger)
 
 analysis_ds = data.frame(Tools, Precision, Recall, FMeasure)
 
