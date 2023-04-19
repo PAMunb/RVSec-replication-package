@@ -2,14 +2,13 @@ import re
 import sys
 import csv
 
-if(len(sys.argv) != 4): 
-    print("Invalid number of arguments. Try python3 crylogger.py <application.errors> <ground_truth file> --(NAME | QUALIFIED_NAME | Method)")
+if(len(sys.argv) != 3): 
+    print("Invalid number of arguments. Try python3 crylogger.py <application.errors> --(NAME | QUALIFIED_NAME | Method)")
     quit()
 
 
 errorFile = sys.argv[1]
-gtFile = sys.argv[2]
-nameOption = sys.argv[3]
+nameOption = sys.argv[2]
 outfile = "crylogger.csv"
 
 def splitClassAndMethodName(name):
@@ -61,15 +60,6 @@ with open(errorFile) as fh:
     for match in matches:
         warnings.add(match)
 
-with open(gtFile) as fh:
-    rows = fh.readlines()
-    header = 0
-    for row in rows:
-        if(header):
-            values = row.split(",")
-            gt.add((values[0], values[1]))
-        header = header+1    
-
 with open(outfile, "w") as fh:        
     for warning in warnings:
         (rule, primitive, message, stackTrace) = warning
@@ -78,7 +68,5 @@ with open(outfile, "w") as fh:
         classWithError = '-'
         for method in methodCalls:
             (qualifiedClassName, className, methodName) = splitClassAndMethodName(method)
-            for error in gt:
-                (name, truePositive) = error
-                if truePositive == 'True' and className == name:
-                    fh.write(f"{rule},{qualifiedClassName},{className},{methodName},{message}\n")
+            if methodName in ['bad', 'good']:
+                fh.write(f"{rule},{qualifiedClassName},{className},{methodName},{message}\n")

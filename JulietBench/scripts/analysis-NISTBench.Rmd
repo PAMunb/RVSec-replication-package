@@ -54,6 +54,22 @@ cg$ClassName <- substr(cg$ClassName, sapply(gregexpr("\\.", cg$ClassName), tail,
 cmCG <- sqldf("select ClassName as className, method as method, count(*) from cg group by className, method")
 ```
 
+```{r load-crylogger}
+clogger <- read.csv("../results/crylogger.csv", head=T, sep=",")
+
+colnames(clogger)
+nrow(clogger)
+
+sqldf("select spec, method, count(*) from clogger  group by spec, method")
+
+head(clogger$className)
+
+cmCrylogger <- sqldf("select className, method, count(*) from clogger group by className, method")
+
+``` 
+
+
+
 ### FullDataset
 
 ```{r merge-warnings}
@@ -62,6 +78,8 @@ warnings <- sqldf("select className, method, 'mop' as tool from cmMop")
 warnings <- rbind(warnings, sqldf("select className, method, 'cc' as tool from cmCC") )
 
 warnings <- rbind(warnings, sqldf("select className, method, 'cg' as tool from cmCG") )
+
+warnings <- rbind(warnings, sqldf("select className, method, 'crylogger' as tool from cmCrylogger") )
 
 warnings["CWE"] <- substring(warnings$className, 1, 6)
 
@@ -230,14 +248,59 @@ fmeasure_cg
 
 ```
 
+
+
+```{r crylogger}
+tp = sqldf("select * 
+            from warnings w
+            where tool = 'crylogger' 
+              and (w.className, w.method) in (select className, method from gt)")
+
+fp = sqldf("select * 
+            from warnings w
+            where tool = 'crylogger' 
+              and (w.className, w.method) not in (select className, method from gt)")
+
+
+fn = sqldf("select CWE, className, method 
+            from gt 
+            where (className, method) not in (select className, method from warnings where tool = 'crylogger')")
+
+nrow(tp)
+nrow(fp)
+nrow(fn)
+
+
+precision_crylogger = nrow(tp) / (nrow(tp) + nrow(fp))
+
+recall_crylogger = nrow(tp) / (nrow(tp) + nrow(fn))
+
+fmeasure_crylogger = 2 * ((precision_crylogger * recall_crylogger) / (precision_crylogger + recall_crylogger))
+
+
+precision_crylogger
+
+recall_crylogger
+
+fmeasure_crylogger
+
+sqldf("select CWE, count(*) from fn group by CWE")
+
+
+sqldf("select ClassName from fn")
+sqldf("select ClassName, method from fp")
+
+```
+
+
 ## Accuracy Results for JulietBench
 
 ```{r table}
 
-Tools = c("MOP", "CogniCrypt", "CryptoGuard")
-Precision = c(precision_mop, precision_cc, precision_cg)
-Recall = c(recall_mop, recall_cc, recall_cg)
-FMeasure = c(fmeasure_mop, fmeasure_cc, fmeasure_cg)
+Tools = c("MOP", "CogniCrypt", "CryptoGuard", "CryLogger")
+Precision = c(precision_mop, precision_cc, precision_cg, precision_crylogger)
+Recall = c(recall_mop, recall_cc, recall_cg, recall_crylogger)
+FMeasure = c(fmeasure_mop, fmeasure_cc, fmeasure_cg, fmeasure_crylogger)
 
 analysis_ds = data.frame(Tools, Precision, Recall, FMeasure)
 
