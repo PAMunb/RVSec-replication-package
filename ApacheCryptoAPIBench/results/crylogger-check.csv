@@ -1,0 +1,13 @@
+Benchmark,Project, Time (s)
+apache,artemis-commons-2.5.0,0
+apache,deltaspike,"118,393"
+apache,directory-server,"5,399"
+apache,manifoldcf,"1862,867"
+apache,openwebbeans-meecrowave,"187,394"
+apache,spark,0
+apache,tika,"11,764"
+apache,wicket,0
+CryptoAPIBench,,"325,926"
+JulietBench,,"53,311"
+MASCBench,,"10,381"
+OWASPBenchmark,,"34001,876"
