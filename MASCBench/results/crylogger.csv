@@ -1,35 +1,35 @@
-Rule,qualifiedName,className,method, message
-rule_R01,com.minimals.md.baseCase.MD01,MD01,main,algorithm: MD5
-rule_R01,com.minimals.md.baseCaseVariable.MD02,MD02,main,algorithm: MD5
+spec,class,className,method,message
+rule_R01,com.minimals.md.stringCaseTransformation.MD07,MD07,main,algorithm: MD5
 rule_R02,com.minimals.cipher.secureBlowFish.CipherExample11,CipherExample11,main,algorithm: Blowfish/CFB8/NoPadding
-rule_R02,com.minimals.cipher.stringCaseTransform.CipherExample12,CipherExample12,runCipher,algorithm: DES
-rule_R02,com.minimals.cipher.stringCaseTransform.CipherExample12,CipherExample12,main,algorithm: DES
-rule_R02,com.minimals.cipher.insecureBlowFish.CipherExample08,CipherExample08,main,algorithm: Blowfish/CFB8/NoPadding
-rule_R01,com.minimals.md.differentCase.MD04,MD04,main,algorithm: md5
-rule_R01,com.minimals.md.complexCase.MD03,MD03,main,algorithm: md5
+rule_R02,com.minimals.cipher.differentCase.CipherExample07,CipherExample07,runCipher,algorithm: des
+rule_R02,com.minimals.cipher.differentCase.CipherExample07,CipherExample07,main,algorithm: des
+rule_R01,com.minimals.md.interprocedureCase.MD05,MD05,main,algorithm: MD5
 rule_R02,com.minimals.cipher.aesStringReplace.CipherExample03,CipherExample03,runCipher,algorithm: DES
 rule_R02,com.minimals.cipher.aesStringReplace.CipherExample03,CipherExample03,main,algorithm: DES
+rule_R02,com.minimals.cipher.insecureBlowFish.CipherExample08,CipherExample08,main,algorithm: Blowfish/CFB8/NoPadding
 rule_R09,com.minimals.cipher.insecureBlowFish.CipherExample08,CipherExample08,main,key.iv: c7485c9946e87f3a
 rule_R02,com.minimals.cipher.baseCaseInterProc.CipherExample05,CipherExample05,runCipher,algorithm: DES
 rule_R02,com.minimals.cipher.baseCaseInterProc.CipherExample05,CipherExample05,main,algorithm: DES
-rule_R02,com.minimals.cipher.aesGCMNoPaddingReplaceDES.CipherExample02,CipherExample02,runCipher,algorithm: DES
-rule_R02,com.minimals.cipher.aesGCMNoPaddingReplaceDES.CipherExample02,CipherExample02,main,algorithm: DES
-rule_R01,com.minimals.md.interprocedureCase.MD05,MD05,main,algorithm: MD5
-rule_R02,com.minimals.cipher.baseCaseVariable.CipherExample06,CipherExample06,runCipher,algorithm: AES - Encr AES missing mode
-rule_R02,com.minimals.cipher.baseCaseVariable.CipherExample06,CipherExample06,main,algorithm: AES - Encr AES missing mode
-rule_R09,com.minimals.cipher.secureBlowFish.CipherExample11,CipherExample11,main,key.iv: 8d0c792fb364bc2e
-rule_R22,com.minimals.cipher.differentCase.CipherExample07,CipherExample07,main,protocol: http://null.oracle.com/
-rule_R01,com.minimals.md.stringReplace.MD08,MD08,main,algorithm: MD5
-rule_R01,com.minimals.md.replaceSHA256DES.MD06,MD06,main,algorithm: MD5
-rule_R02,com.minimals.cipher.baseCase.CipherExample04,CipherExample04,runCipher,algorithm: AES - Encr AES missing mode
-rule_R02,com.minimals.cipher.baseCase.CipherExample04,CipherExample04,main,algorithm: AES - Encr AES missing mode
-rule_R02,com.minimals.cipher.KeyToAlgoAES.CipherExample09,CipherExample09,main,algorithm: AES - Encr AES missing mode
-rule_R02,com.minimals.cipher.KeyToAlgoDES.CipherExample10,CipherExample10,main,algorithm: DES
-rule_R01,com.minimals.md.stringCaseTransformation.MD07,MD07,main,algorithm: MD5
-rule_R09,com.minimals.cipher.insecureBlowFish.CipherExample08,CipherExample08,main,key.iv: 5f60fdccfeeb8378
+rule_R02,com.minimals.cipher.stringCaseTransform.CipherExample12,CipherExample12,runCipher,algorithm: DES
+rule_R02,com.minimals.cipher.stringCaseTransform.CipherExample12,CipherExample12,main,algorithm: DES
 rule_R02,com.minimals.cipher.stringReplace.CipherExample13,CipherExample13,runCipher,algorithm: DES
 rule_R02,com.minimals.cipher.stringReplace.CipherExample13,CipherExample13,main,algorithm: DES
-rule_R09,com.minimals.cipher.secureBlowFish.CipherExample11,CipherExample11,main,key.iv: 604ec883a9296f79
+rule_R01,com.minimals.md.baseCase.MD01,MD01,main,algorithm: MD5
 rule_R22,com.minimals.cipher.KeyToAlgoDES.CipherExample10,CipherExample10,main,protocol: http://null.oracle.com/
-rule_R02,com.minimals.cipher.differentCase.CipherExample07,CipherExample07,runCipher,algorithm: des
-rule_R02,com.minimals.cipher.differentCase.CipherExample07,CipherExample07,main,algorithm: des
+rule_R09,com.minimals.cipher.secureBlowFish.CipherExample11,CipherExample11,main,key.iv: 604ec883a9296f79
+rule_R02,com.minimals.cipher.KeyToAlgoDES.CipherExample10,CipherExample10,main,algorithm: DES
+rule_R02,com.minimals.cipher.baseCaseVariable.CipherExample06,CipherExample06,runCipher,algorithm: AES - Encr AES missing mode
+rule_R02,com.minimals.cipher.baseCaseVariable.CipherExample06,CipherExample06,main,algorithm: AES - Encr AES missing mode
+rule_R01,com.minimals.md.replaceSHA256DES.MD06,MD06,main,algorithm: MD5
+rule_R09,com.minimals.cipher.secureBlowFish.CipherExample11,CipherExample11,main,key.iv: 8d0c792fb364bc2e
+rule_R01,com.minimals.md.complexCase.MD03,MD03,main,algorithm: md5
+rule_R02,com.minimals.cipher.aesGCMNoPaddingReplaceDES.CipherExample02,CipherExample02,runCipher,algorithm: DES
+rule_R02,com.minimals.cipher.aesGCMNoPaddingReplaceDES.CipherExample02,CipherExample02,main,algorithm: DES
+rule_R22,com.minimals.cipher.differentCase.CipherExample07,CipherExample07,main,protocol: http://null.oracle.com/
+rule_R01,com.minimals.md.baseCaseVariable.MD02,MD02,main,algorithm: MD5
+rule_R01,com.minimals.md.stringReplace.MD08,MD08,main,algorithm: MD5
+rule_R02,com.minimals.cipher.KeyToAlgoAES.CipherExample09,CipherExample09,main,algorithm: AES - Encr AES missing mode
+rule_R01,com.minimals.md.differentCase.MD04,MD04,main,algorithm: md5
+rule_R02,com.minimals.cipher.baseCase.CipherExample04,CipherExample04,runCipher,algorithm: AES - Encr AES missing mode
+rule_R02,com.minimals.cipher.baseCase.CipherExample04,CipherExample04,main,algorithm: AES - Encr AES missing mode
+rule_R09,com.minimals.cipher.insecureBlowFish.CipherExample08,CipherExample08,main,key.iv: 5f60fdccfeeb8378
