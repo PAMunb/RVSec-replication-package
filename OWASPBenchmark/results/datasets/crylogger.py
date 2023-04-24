@@ -80,5 +80,5 @@ with open(outfile, "w") as fh:
             (qualifiedClassName, className, methodName) = splitClassAndMethodName(method)
             for error in gt:
                 (name, truePositive) = error
-                if truePositive == 'true' and className == name:
+                if className == name:
                     fh.write(f"{rule},{qualifiedClassName},{className},{methodName},{message}\n")
