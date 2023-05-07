@@ -1,8 +1,11 @@
 ---
-title: "JavaMOP"
+title: "SmallCryptoAPIBench"
 author: "Rodrigo Bonifácio et al."
 date: "1/26/2022"
-output: html_document
+output: 
+  html_document:
+    theme: cerulean
+    highlight: kate
 ---
 
 ```{r setup, include=FALSE}
@@ -12,11 +15,7 @@ library(sqldf)
 library(xtable)
 ```
 
-## R Markdown
-
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+## Load the datasets (including the ground truth for MASCBench)
 
 ```{r load}
 bench02mop <- read.csv("../results/mop.csv", head=T, sep=",")
@@ -28,26 +27,10 @@ gt <- read.csv("../results/bench02-gt-converted.csv", head=T, sep=",")
 
 gt <- na.omit(gt)
 
-nrow(bench02mop)
-colnames(bench02mop)
-
-nrow(bench02cc)
-colnames(bench02cc)
-
-nrow(bench02cg)
-colnames(bench02cg)
-
-nrow(bench02cg)
-colnames(bench02crylogger)
-
-
-colnames(gt)
-nrow(gt)
 ```
 
 
-
-## Ground Truth
+## Identifying the sets of TPs and TNs
 
 ```{r}
 gt <- sqldf("select propertyShortName, class, method, vulnerability 
@@ -62,7 +45,7 @@ sqldf("select count(distinct class) from tp")
 sqldf("select count(distinct class) from tn")
 ```
 
-## Precision / Recall MOP
+## Computing Precision and Recall for MOP
 
 ```{r}
 # compute true positive 
@@ -104,7 +87,7 @@ fmeasure_mop
 ```
 
 
-## Ground Truth (CC)
+## Computing Precision and Recall for CC
 
 ```{r}
 # compute true positive 
@@ -142,7 +125,7 @@ fmeasure_cc = (2 * precision_cc * recall_cc) / (precision_cc + recall_cc)
 fmeasure_cc
 ```
 
-## Ground Truth (CG)
+## Computing Precision and Recall for CG
 
 ```{r}
 
@@ -194,7 +177,7 @@ fmeasure_cg
 ```
 
 
-## Precision / Recall CryLogger
+## Computing Precision and Recall for CryLogger
 
 ```{r}
 # compute true positive 
@@ -236,71 +219,8 @@ fmeasure_crylogger
 ```
 
 
+## Accuracy Results for SmallCryptoAPIBench
 
-## Examples of FP and FN 
-
-```{r}
-# false positive 
-sqldf("select distinct className
-       from bench02mop 
-       where className in (select class from tn)")
-
-
-
-# false-negative  
-sqldf("select distinct class
-       from tp 
-       where class not in (select className from bench02mop)")
-```
-
-
-```{r}
-# false positive 
-sqldf("select distinct className
-       from bench02cc
-       where className in (select class from tn)")
-
-sqldf("select count (distinct className)
-       from bench02cc
-       where className in (select class from tn) and className like '%ABPS%'")
-
-
-sqldf("select count (distinct className)
-       from bench02cc
-       where className in (select class from tn)")
-
-
-# false-negative  
-sqldf("select distinct class
-       from tp
-       where class not in (select className from bench02cc)")
-```
-
-
-
-```{r}
-# false positive 
-#sqldf("select distinct className
-#       from tpcg
-#       where className in (select class from tncg)")
-
-
-sqldf("select count (distinct className)
-       from bench02cg
-       where className in (select class from tncg) and className like '%ABPS%'")
-
-
-sqldf("select count (distinct className)
-       from bench02cg
-       where className in (select class from tncg)")
-
-# false-negative  
-#sqldf("select distinct class
-#       from tpcg 
-#       where class not in (select className from bench02cg)")
-```
-
-## Accuracy Results for CryptoAPIBench
 ```{r table}
 
 Tools = c("MOP", "CogniCrypt", "CryptoGuard", "CryLogger")
@@ -312,4 +232,11 @@ analysis_ds = data.frame(Tools, Precision, Recall, FMeasure)
 
 analysis_ds
 
+```
+
+
+```{r}
+sqldf("select distinct class as fn
+                 from tp 
+                 where class not in (select className from bench02crylogger)")
 ```

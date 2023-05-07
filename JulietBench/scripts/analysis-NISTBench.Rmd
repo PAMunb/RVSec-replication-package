@@ -1,8 +1,11 @@
 ---
-title: "analysis-OWASPBench"
+title: "JULIETBench"
 author: "Rodrigo Bonifácio et al."
-date: '2022-06-17'
-output: html_document
+date: "1/26/2022"
+output: 
+  html_document:
+    theme: cerulean
+    highlight: kate
 ---
 
 ```{r setup, include=FALSE}
@@ -13,7 +16,6 @@ library(xtable)
 ```
 
 ## Load the datasets
-
 
 ```{r load-mop}
 mop <- read.csv("../results/mop.csv", head=T, sep=",")
@@ -27,10 +29,6 @@ head(mop$className)
 
 cmMop <- sqldf("select className, method, count(*) from mop group by className, method")
 
-``` 
-
-
-```{r load-cc}
 cc <- read.csv("../results/cognicrypt.csv", head=T, sep=",")
 
 nrow(cc)
@@ -39,9 +37,7 @@ colnames(cc)
 sqldf("select spec, method, count(*) from cc group by spec, method")
 
 cmCC <- sqldf("select className, method, count(*) from cc group by className, method")
-```
 
-```{r load-cg}
 cg <- read.csv("../results/cryptoguard.csv", head=T, sep=",")
 
 nrow(cg)
@@ -52,9 +48,7 @@ sqldf("select IssueRuleNumber, Method, count(*) from cg group by IssueRuleNumber
 cg$ClassName <- substr(cg$ClassName, sapply(gregexpr("\\.", cg$ClassName), tail, 1) + 1, nchar(cg$ClassName))
 
 cmCG <- sqldf("select ClassName as className, method as method, count(*) from cg group by className, method")
-```
 
-```{r load-crylogger}
 clogger <- read.csv("../results/crylogger.csv", head=T, sep=",")
 
 colnames(clogger)
@@ -70,7 +64,7 @@ cmCrylogger <- sqldf("select className, method, count(*) from clogger group by c
 
 
 
-### FullDataset
+### Generate the Complete Dataset
 
 ```{r merge-warnings}
 warnings <- sqldf("select className, method, 'mop' as tool from cmMop") 
@@ -111,7 +105,8 @@ gt <- sqldf("select distinct CWE, className, method from warnings where method l
 nrow(gt)
 ```
 
-### MOP
+## Computing Precision and Recall for MOP
+
 
 ```{r mop}
 tp = sqldf("select * 
@@ -147,16 +142,10 @@ recall_mop
 
 fmeasure_mop
 
-sqldf("select CWE, count(*) from fn group by CWE")
-
-
-sqldf("select ClassName from fn")
-sqldf("select ClassName, method from fp")
-
 ```
 
 
-### CogniCrypt
+## Computing Precision and Recall for CC
 
 
 ```{r cc}
@@ -180,8 +169,6 @@ nrow(tp)
 nrow(fp)
 nrow(fn)
 
-sqldf("select ClassName from fp")
-
 precision_cc = nrow(tp) / (nrow(tp) + nrow(fp))
 
 recall_cc = nrow(tp) / (nrow(tp) + nrow(fn))
@@ -195,13 +182,10 @@ recall_cc
 
 fmeasure_cc
 
-sqldf("select ClassName from fn")
-sqldf("select ClassName, method from fp")
-
 ```
 
 
-### CryptoGuard
+## Computing Precision and Recall for CG
 
 
 ```{r cg}
@@ -230,9 +214,6 @@ nrow(tp)
 nrow(fp)
 nrow(fn)
 
-sqldf("select ClassName from fn")
-
-
 precision_cg = nrow(tp) / (nrow(tp) + nrow(fp))
 
 recall_cg = nrow(tp) / (nrow(tp) + nrow(fn))
@@ -248,6 +229,7 @@ fmeasure_cg
 
 ```
 
+## Computing Precision and Recall for CryLogger
 
 
 ```{r crylogger}
@@ -284,12 +266,6 @@ recall_crylogger
 
 fmeasure_crylogger
 
-sqldf("select CWE, count(*) from fn group by CWE")
-
-
-sqldf("select ClassName from fn")
-sqldf("select ClassName, method from fp")
-
 ```
 
 
@@ -306,4 +282,13 @@ analysis_ds = data.frame(Tools, Precision, Recall, FMeasure)
 
 analysis_ds
 
+```
+
+
+```{r}
+sqldf("select CWE, count(*) from fn group by CWE")
+
+
+sqldf("select ClassName from fn")
+sqldf("select ClassName, method from fp")
 ```

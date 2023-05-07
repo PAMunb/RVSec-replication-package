@@ -1,8 +1,11 @@
 ---
-title: "analysis-OWASPBench"
+title: "OWASPBench"
 author: "Rodrigo Bonifácio et al."
-date: '2022-06-17'
-output: html_document
+date: "1/26/2022"
+output: 
+  html_document:
+    theme: cerulean
+    highlight: kate
 ---
 
 ```{r setup, include=FALSE}
@@ -11,8 +14,7 @@ setwd(".")
 library(sqldf)
 ```
 
-## Load the datasets
-
+## LoadING the base datasets (including the ground truth for LOC)
 
 
 ```{r load-gt}
@@ -35,16 +37,13 @@ sqldf("select CWE, Category, count(*) from gt group by CWE, Vulnerability")
 
 sqldf("select count(*) from gt where vulnerability = 'true'")
 
-```
 
-### Lines of Code 
-
-```{r lines-of-code}
 cloc <- read.csv("../results/owasp-loc.csv", head=T, sep=',')
 
 cloc <- sqldf("select ClassName, Code from cloc where Language='Java'")
 
 nrow(cloc)
+
 sqldf("select sum(code) from cloc")
 
 # filtering the files with vulnerability in our GT
@@ -52,6 +51,8 @@ sqldf("select sum(code) from cloc")
 sqldf("select count(distinct className), sum(code) from cloc 
         where className in (select TestCase from gt)")
 ```
+
+## MOP Analysis
 
 ```{r load-mop}
 mop <- read.csv("../results/datasets/mop.csv", head=T, sep=",")
@@ -68,10 +69,6 @@ mop <- sqldf("select spec, className, count(*) warnings
               group by spec, className")
 
 
-
-``` 
-
-```{r mop-recall} 
 tp = sqldf("select * 
             from mop m
             where m.className in (select TestCase from gt where vulnerability = 'true')")
@@ -84,11 +81,9 @@ fn = sqldf("select TestCase
             from gt 
             where vulnerability = 'true' and TestCase not in (select className from mop)")
 
-
 nrow(tp)
 nrow(fp)
 nrow(fn)
-
 
 precision_mop = nrow(tp) / (nrow(tp) + nrow(fp))
 
@@ -96,18 +91,9 @@ recall_mop = nrow(tp) / (nrow(tp) + nrow(fn))
 
 fmeasure_mop = 2 * ((precision_mop * recall_mop) / (precision_mop + recall_mop))
 
-
-precision_mop
-
-recall_mop
-
-fmeasure_mop
-
-fp
-fn
-
 ```
 
+## CC Analysis
 
 ```{r load-cc}
 cc <- read.csv("../results/datasets/cognicrypt.csv", head=T, sep=",")
@@ -125,10 +111,6 @@ cc <- sqldf("select spec, className, count(*) warnings
 
 nrow(cc)
 
-``` 
-
-
-```{r cc-precision-recall} 
 tp = sqldf("select * 
             from cc c
             where c.className in (select TestCase from gt where vulnerability = 'true')")
@@ -141,7 +123,6 @@ fn = sqldf("select TestCase
             from gt 
             where vulnerability = 'true' and TestCase not in (select className from cc)")
 
-
 nrow(tp)
 nrow(fp)
 nrow(fn)
@@ -152,18 +133,9 @@ recall_cc = nrow(tp) / (nrow(tp) + nrow(fn))
 
 fmeasure_cc = 2 * ((precision_cc * recall_cc) / (precision_cc + recall_cc))
 
-precision_cc
-
-recall_cc
-
-fmeasure_cc
-
-fp
-
-set.seed(5) # random number will generate from 5
-randSample <- sort(sample.int(201, 20))
-randSample
 ```
+
+## CG Analysis
 
 ```{r load-cg}
 cg <- read.csv("../results/datasets/cryptoguard.csv", head=T, sep=",")
@@ -181,10 +153,6 @@ cg <- sqldf("select spec, className, count(*) warnings
 
 nrow(cg)
 
-``` 
-
-
-```{r cg-precision-recall} 
 tp = sqldf("select * 
             from cg c
             where c.className in (select TestCase from gt where vulnerability = 'true')")
@@ -208,63 +176,10 @@ recall_cg = nrow(tp) / (nrow(tp) + nrow(fn))
 
 fmeasure_cg = 2 * ((precision_cg * recall_cg) / (precision_cg + recall_cg))
 
-precision_cg
-
-recall_cg
-
-fmeasure_cg
-
-fp
 ```
 
 
-
-```{r cc-details}
-cc <- read.csv("../results/datasets/cognicrypt.csv", head=T, sep=",")
-
-cc <- sqldf("select *
-              from cc as c
-              where c.spec in ('CipherSpec', 'MessageDigestSpec')
-                    and c.className not in (select TestCase from gt where vulnerability = 'true')")
-
-nrow(cc)
-
-sqldf("select error, count(*) total from cc group by error order by 2")
-
-```
-
-
-
-```{r cg-details}
-cg <- read.csv("../results/datasets/cryptoguard.csv", head=T, sep=",")
-
-colnames(cg)
-nrow(cg)
-
-# lets prune the cc dataset, since we are only interested in 
-# the categories crypto (1) and hash (2) 
- 
-cg <- sqldf("select spec, className, error
-              from cg
-              where spec in (1, 2)")
-
-nrow(cg)
-
-fp = sqldf("select * 
-            from cg c
-            where c.className not in (select TestCase from gt where vulnerability = 'true')")
-
-fn = sqldf("select TestCase 
-            from gt 
-            where vulnerability = 'true' and TestCase not in (select className from cg)")
-
-fp
-
-fn
-
-``` 
-
-### Load CryLogger
+## CryLogger Analysis
 
 ```{r load-crylogger}
 crylogger <- read.csv("../results/datasets/crylogger.csv", head=T, sep=",")
@@ -272,18 +187,13 @@ crylogger <- read.csv("../results/datasets/crylogger.csv", head=T, sep=",")
 colnames(crylogger)
 nrow(crylogger)
 
-# lets prune the mop dataset, since we are only interested in 
+# lets prune the crylogger dataset, since we are only interested in 
 # the categories crypto and hash
 
 crylogger <- sqldf("select * 
                    from crylogger 
                    where Spec in ('rule_R01', 'rule_R02', 'rule_R03')")
 
-``` 
-
-### CryLogger Precision and Recall
-
-```{r crylogger-recall} 
 tp = sqldf("select * 
             from crylogger c
             where c.className in (select TestCase from gt where vulnerability = 'true')")
@@ -308,22 +218,11 @@ recall_crylogger = nrow(tp) / (nrow(tp) + nrow(fn))
 
 fmeasure_crylogger = 2 * ((precision_crylogger * recall_crylogger) / (precision_crylogger + recall_crylogger))
 
-
-precision_crylogger
-
-recall_crylogger
-
-fmeasure_crylogger
-
-tp 
-fp
-
 ```
 
 ## Accuracy Results for OWASPBench
 
 ```{r table}
-
 Tools = c("MOP", "CogniCrypt", "CryptoGuard", "CryLogger")
 Precision = c(precision_mop, precision_cc, precision_cg, precision_crylogger)
 Recall = c(recall_mop, recall_cc, recall_cg, recall_crylogger)
@@ -333,4 +232,11 @@ analysis_ds = data.frame(Tools, Precision, Recall, FMeasure)
 
 analysis_ds
 
+```
+
+
+```{r}
+sqldf("select c.className, c.spec 
+       from crylogger c
+       where c.className not in (select TestCase from gt where vulnerability = 'true')")
 ```

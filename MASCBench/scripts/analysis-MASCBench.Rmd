@@ -1,8 +1,11 @@
 ---
-title: "JavaMOP"
+title: "MASCBench"
 author: "Rodrigo Bonifácio et al."
 date: "1/26/2022"
-output: html_document
+output: 
+  html_document:
+    theme: cerulean
+    highlight: kate
 ---
 
 ```{r setup, include=FALSE}
@@ -12,7 +15,7 @@ library(sqldf)
 library(xtable)
 ```
 
-## Load the datasets
+## Load the datasets (including the ground truth for MASCBench)
 
 ```{r load}
 bench03mop <- read.csv("../results/mop.csv", head=T, sep=",")
@@ -25,17 +28,6 @@ gt <- read.csv("../results/gt.csv", head=T, sep=",")
 
 gt <- na.omit(gt)
 
-nrow(bench03mop)
-colnames(bench03mop)
-
-nrow(bench03cc)
-colnames(bench03cc)
-
-nrow(bench03cg)
-colnames(bench03cg)
-
-colnames(gt)
-nrow(gt)
 ```
 
 ### Filter out irrelevant warnings for the study
@@ -52,8 +44,7 @@ nrow(bench03cc)
 ```
 
 
-
-## Ground Truth (MOP)
+## Identifying the sets of TPs and TNs
 
 ```{r}
 tp <- gt[gt$vulnerability == "True",]
@@ -61,12 +52,10 @@ tn <- gt[gt$vulnerability == "False",]
 
 sqldf("select count(distinct className) from tp")
 sqldf("select count(distinct className) from tn")
-
-
 ```
 
 
-## Compute Precision and Recall (MOP)
+## Computing Precision and Recall for MOP
 
 ```{r}
 
@@ -82,10 +71,7 @@ mop_fp <- sqldf("select count(distinct className) as fp
                  from bench03mop 
                  where className in (select className from tn)")
 
-
-
 # compute false-negative  
-
 
 mop_fn <- sqldf("select count(distinct className) as fn
                  from tp 
@@ -110,7 +96,7 @@ fmeasure_mop = (2 * precision_mop * recall_mop) / (precision_mop + recall_mop)
 fmeasure_mop
 ```
 
-## Compute Precision and Recall (CC)
+## Computing Precision and Recall for CC
 
 ```{r}
 
@@ -154,7 +140,7 @@ fmeasure_cc
 ```
 
 
-## Compute Precision and Recall (CG)
+## Computing Precision and Recall for CG
 
 ```{r}
 
@@ -198,7 +184,7 @@ fmeasure_cg
 ```
 
 
-## Compute Precision and Recall (CryLogger)
+## Computing Precision and Recall for CryLogger
 
 ```{r}
 
@@ -245,42 +231,6 @@ fmeasure_cy
 
 
 
-## Examples of False Positives
-
-```{r}
-sqldf("select distinct className as fp
-       from bench03mop
-       where className not in (select className from tp)")
-
-sqldf("select distinct className as fp
-       from bench03cc
-       where className not in (select className from  tp)")
-
-sqldf("select distinct className as fp
-       from bench03cg 
-       where className not in (select className from tp)")
-
-
-```
-
-## Examples of False Negative
-
-```{r}
-sqldf("select distinct className as fn
-       from tp 
-       where className not in (select className from bench03mop)")
-
-sqldf("select distinct className as fn
-       from tp 
-       where className not in (select className from bench03cc)")
-
-sqldf("select distinct className as fn
-       from tp 
-       where className not in (select className from bench03cg)")
-
-
-```
-
 ## Accuracy Results for MASCBench
 
 ```{r table}
@@ -293,5 +243,10 @@ FMeasure = c(fmeasure_mop, fmeasure_cc, fmeasure_cg, fmeasure_cy)
 analysis_ds = data.frame(Tools, Precision, Recall, FMeasure)
 
 analysis_ds
+```
 
+```{r}
+sqldf("select classname as fn
+                 from tp 
+                 where className not in (select className from bench03cy)")
 ```
