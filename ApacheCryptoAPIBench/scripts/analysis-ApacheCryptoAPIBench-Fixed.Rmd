@@ -17,9 +17,7 @@ library(ggvenn)
 library(corrplot)
 ```
 
-## R Markdown
-
-
+## Load the ApacheBench DataSet
 
 ```{r load}
 final_ds <- read.csv("../results/gt-FIXED.csv", head=T, sep=',')
@@ -30,13 +28,15 @@ colnames(final_ds)
 ##  [9] "ExternalClass"   "Observation"
 ```
 
+## Data CleanUp
+
 ### Remove duplicated records
 
 ```{r remove-dups}
 final_ds = distinct(final_ds)
 ```
 
-### Count the number of rows in `final_ds`
+### Count the number of warnings and group them by tool 
 
 ```{r total-rows}
 nrow(final_ds)
@@ -60,7 +60,7 @@ final_ds = sqldf("select *
 nrow(final_ds)
 ```
 
-### Count warnings from tests (and remove them from our analysis)
+### Removing warnings from test cases 
 
 ```{r remove-test-observations}
 sqldf("select TestClass, count(*) 
@@ -82,6 +82,9 @@ t2 = sqldf("select Tool, count(*) as CuratedDataSet
 xtable(merge(t1, t2))
 ```
 
+## Exploratory Data Analysis 
+
+### Total Warnings (grouped by Project and tool)
 ```{r warnings-projects}
 warnings_projects = sqldf("select Project, Tool, count(*) as Warnings
                            from final_ds group by Project, Tool")
@@ -93,7 +96,7 @@ barchart(Warnings ~ Tool | Project,
 )
 ```
 
-### Compute the set of True Positives
+## Compute the set of True Positives
 
 ```{r true-positives}
 tp = sqldf("select distinct Project, Spec, Class, Method 
@@ -106,7 +109,7 @@ sqldf("select count(distinct class) from tp")
 nrow(tp)
 ```
 
-### MOP Precision and Recal
+## MOP Precision and Recal
 
 ```{r mop-assessment}
 mop_tp = sqldf("select distinct Project, Spec, Class, Method 
@@ -183,6 +186,8 @@ cg_recall
 
 cg_fmeasure
 ```
+
+
 
 ### Venn Diagram
 

@@ -14,7 +14,7 @@ setwd(".")
 library(sqldf)
 ```
 
-## LoadING the base datasets (including the ground truth for LOC)
+## Loading the base datasets (including the ground truth for LOC)
 
 
 ```{r load-gt}
