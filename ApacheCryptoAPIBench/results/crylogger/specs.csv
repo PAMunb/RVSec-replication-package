@@ -1,0 +1,13 @@
+rule,spec
+rule_R01,MessageDigestSpec
+rule_R02,CipherSpec
+rule_R03,CipherSpec
+rule_R04,CipherSpec
+rule_R05,SecretKeySpecSpec
+rule_R05,CipherSpec
+rule_R06,SecretKeySpecSpec
+rule_R06,CipherSpec
+rule_R07,IvParameterSpecSpec
+rule_R07,CipherSpec
+rule_R08,IvParameterSpecSpec
+rule_R09,IvParameterSpecSpec

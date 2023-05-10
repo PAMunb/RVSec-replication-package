@@ -1,0 +1,41 @@
+Spec,Class,ClassName,method,message
+rule_R02,org.apache.deltaspike.core.impl.crypto.DefaultCipherService,DefaultCipherService,aesEncrypt,algorithm: AES - Encr AES missing mode
+rule_R02,org.apache.deltaspike.core.impl.crypto.DefaultCipherService,DefaultCipherService,setMasterHash,algorithm: AES - Encr AES missing mode
+rule_R02,org.apache.deltaspike.core.impl.crypto.DefaultCipherService,DefaultCipherService,aesDecrypt,algorithm: AES - Encr AES missing mode
+rule_R02,org.apache.deltaspike.core.impl.crypto.DefaultCipherService,DefaultCipherService,decrypt,algorithm: AES - Encr AES missing mode
+rule_R05,org.apache.deltaspike.core.impl.crypto.DefaultCipherService,DefaultCipherService,aesEncrypt,key.encoded: c73b686a4645d107ea9eed0f0bc473b9
+rule_R05,org.apache.deltaspike.core.impl.crypto.DefaultCipherService,DefaultCipherService,setMasterHash,key.encoded: c73b686a4645d107ea9eed0f0bc473b9
+rule_R05,org.apache.deltaspike.core.impl.crypto.DefaultCipherService,DefaultCipherService,aesEncrypt,key.encoded: c73b686a4645d107ea9eed0f0bc473b9
+rule_R05,org.apache.deltaspike.core.impl.crypto.DefaultCipherService,DefaultCipherService,setMasterHash,key.encoded: c73b686a4645d107ea9eed0f0bc473b9
+rule_R05,org.apache.deltaspike.core.impl.crypto.DefaultCipherService,DefaultCipherService,aesDecrypt,key.encoded: acc791bd58d7d7b2ff0c6733105a79cf
+rule_R05,org.apache.deltaspike.core.impl.crypto.DefaultCipherService,DefaultCipherService,decrypt,key.encoded: acc791bd58d7d7b2ff0c6733105a79cf
+rule_R09,org.apache.deltaspike.core.impl.crypto.DefaultCipherService,DefaultCipherService,aesDecrypt,key.iv: null
+rule_R09,org.apache.deltaspike.core.impl.crypto.DefaultCipherService,DefaultCipherService,decrypt,key.iv: null
+rule_R02,org.apache.deltaspike.core.impl.crypto.DefaultCipherService,DefaultCipherService,aesEncrypt,algorithm: AES - Encr AES missing mode
+rule_R02,org.apache.deltaspike.core.impl.crypto.DefaultCipherService,DefaultCipherService,setMasterHash,algorithm: AES - Encr AES missing mode
+rule_R22,org.apache.deltaspike.core.impl.crypto.DefaultCipherService,DefaultCipherService,aesEncrypt,protocol: http://null.oracle.com/
+rule_R22,org.apache.deltaspike.core.impl.crypto.DefaultCipherService,DefaultCipherService,setMasterHash,protocol: http://null.oracle.com/
+rule_R09,org.apache.deltaspike.core.impl.crypto.DefaultCipherService,DefaultCipherService,aesEncrypt,key.iv: null
+rule_R09,org.apache.deltaspike.core.impl.crypto.DefaultCipherService,DefaultCipherService,setMasterHash,key.iv: null
+rule_R05,org.apache.deltaspike.core.impl.crypto.DefaultCipherService,DefaultCipherService,aesDecrypt,key.encoded: c73b686a4645d107ea9eed0f0bc473b9
+rule_R05,org.apache.deltaspike.core.impl.crypto.DefaultCipherService,DefaultCipherService,getMasterKey,key.encoded: c73b686a4645d107ea9eed0f0bc473b9
+rule_R05,org.apache.deltaspike.core.impl.crypto.DefaultCipherService,DefaultCipherService,encrypt,key.encoded: c73b686a4645d107ea9eed0f0bc473b9
+rule_R05,org.apache.deltaspike.core.impl.crypto.DefaultCipherService,DefaultCipherService,aesEncrypt,key.encoded: acc791bd58d7d7b2ff0c6733105a79cf
+rule_R05,org.apache.deltaspike.core.impl.crypto.DefaultCipherService,DefaultCipherService,encrypt,key.encoded: acc791bd58d7d7b2ff0c6733105a79cf
+rule_R05,org.apache.deltaspike.core.impl.crypto.DefaultCipherService,DefaultCipherService,aesDecrypt,key.encoded: c73b686a4645d107ea9eed0f0bc473b9
+rule_R05,org.apache.deltaspike.core.impl.crypto.DefaultCipherService,DefaultCipherService,getMasterKey,key.encoded: c73b686a4645d107ea9eed0f0bc473b9
+rule_R05,org.apache.deltaspike.core.impl.crypto.DefaultCipherService,DefaultCipherService,decrypt,key.encoded: c73b686a4645d107ea9eed0f0bc473b9
+rule_R02,org.apache.deltaspike.core.impl.crypto.DefaultCipherService,DefaultCipherService,aesDecrypt,algorithm: AES - Encr AES missing mode
+rule_R02,org.apache.deltaspike.core.impl.crypto.DefaultCipherService,DefaultCipherService,getMasterKey,algorithm: AES - Encr AES missing mode
+rule_R02,org.apache.deltaspike.core.impl.crypto.DefaultCipherService,DefaultCipherService,encrypt,algorithm: AES - Encr AES missing mode
+rule_R02,org.apache.deltaspike.core.impl.crypto.DefaultCipherService,DefaultCipherService,aesDecrypt,algorithm: AES - Encr AES missing mode
+rule_R02,org.apache.deltaspike.core.impl.crypto.DefaultCipherService,DefaultCipherService,getMasterKey,algorithm: AES - Encr AES missing mode
+rule_R02,org.apache.deltaspike.core.impl.crypto.DefaultCipherService,DefaultCipherService,decrypt,algorithm: AES - Encr AES missing mode
+rule_R09,org.apache.deltaspike.core.impl.crypto.DefaultCipherService,DefaultCipherService,aesDecrypt,key.iv: null
+rule_R09,org.apache.deltaspike.core.impl.crypto.DefaultCipherService,DefaultCipherService,getMasterKey,key.iv: null
+rule_R09,org.apache.deltaspike.core.impl.crypto.DefaultCipherService,DefaultCipherService,decrypt,key.iv: null
+rule_R09,org.apache.deltaspike.core.impl.crypto.DefaultCipherService,DefaultCipherService,aesDecrypt,key.iv: null
+rule_R09,org.apache.deltaspike.core.impl.crypto.DefaultCipherService,DefaultCipherService,getMasterKey,key.iv: null
+rule_R09,org.apache.deltaspike.core.impl.crypto.DefaultCipherService,DefaultCipherService,encrypt,key.iv: null
+rule_R02,org.apache.deltaspike.core.impl.crypto.DefaultCipherService,DefaultCipherService,aesEncrypt,algorithm: AES - Encr AES missing mode
+rule_R02,org.apache.deltaspike.core.impl.crypto.DefaultCipherService,DefaultCipherService,encrypt,algorithm: AES - Encr AES missing mode

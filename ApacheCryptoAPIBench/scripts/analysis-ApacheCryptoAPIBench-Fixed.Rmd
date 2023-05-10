@@ -80,6 +80,15 @@ t2 = sqldf("select Tool, count(*) as CuratedDataSet
 
 
 xtable(merge(t1, t2))
+
+sqldf("select spec, count(*) total 
+       from final_ds
+       group by spec")
+
+sqldf("select Project, count(*) 
+       from final_ds 
+       group by project")
+
 ```
 
 ## Exploratory Data Analysis 
@@ -187,8 +196,76 @@ cg_recall
 cg_fmeasure
 ```
 
+### Load the CryLogger datasets  
+
+```{r load-crylogger}
+clogger_deltaspyke <- read.csv("../results/crylogger/CryLogger-deltaspyke.csv", head=T, sep=",")
+clogger_mcf <- read.csv("../results/crylogger/CryLogger-mcf-core.csv", head=T, sep=",")
+clogger_meecrowave <- read.csv("../results/crylogger/CryLogger-meecrowave-core.csv", head=T, sep=",")
+clogger_ds_kerberos_codec <- read.csv("../results/crylogger/CryLogger-apacheds-kerberos-codec.csv", head=T, sep=",")
+clogger_tika <- read.csv("../results/crylogger/CryLogger-tika-core.csv", head=T, sep=",")
 
 
+clogger_deltaspyke <- sqldf("select distinct spec, class, classname, method from clogger_deltaspyke")
+clogger_mcf <- sqldf("select distinct spec, class, classname, method from clogger_mcf")
+clogger_meecrowave <- sqldf("select distinct spec, class, classname, method from clogger_meecrowave")
+clogger_ds_kerberos_codec <- sqldf("select distinct spec, class, classname, method from clogger_ds_kerberos_codec")
+clogger_tika <- sqldf("select distinct spec, class, classname, method from clogger_tika")
+
+
+clogger <- rbind(clogger_mcf, clogger_meecrowave)
+clogger <- rbind(clogger, clogger_ds_kerberos_codec)
+clogger <- rbind(clogger, clogger_tika)
+clogger <- rbind(clogger,clogger_deltaspyke)
+
+
+```
+
+### Approximate the CryLogger outcomes with the ground truth
+
+```{r}
+gt_clogger <- sqldf("select distinct class, method, vulnerability 
+                     from final_ds")
+
+nrow(final_ds)
+nrow(gt_clogger)
+
+head(gt_clogger)
+
+tp <- sqldf("select count(distinct (c.className || ' - ' || c.method))
+             from clogger c, gt_clogger cgt 
+             where c.className = cgt.class 
+               and c.method = cgt.method
+               and vulnerability =  'TRUE'")
+
+fp <- sqldf("select count(distinct (c.className || ' - ' || c.method))
+             from clogger c 
+             where (c.className, c.method) not in 
+               (select cgt.class, cgt.method 
+                from gt_clogger cgt
+                 where vulnerability =  'TRUE')")
+
+fn <- sqldf("select count(distinct (cgt.class || ' - ' || cgt.method))
+             from gt_clogger cgt
+             where vulnerability =  'TRUE' 
+               and (cgt.class, cgt.method) not in 
+                     (select c.className, c.method 
+                      from clogger c)")
+
+tp 
+fp 
+fn
+
+
+sqldf("select distinct (c.className || ' - ' || c.method)
+             from clogger c 
+             where (c.className, c.method) not in 
+               (select cgt.class, cgt.method 
+                from gt_clogger cgt
+                 where vulnerability =  'TRUE')")
+
+
+```
 ### Venn Diagram
 
 ```{r vd}

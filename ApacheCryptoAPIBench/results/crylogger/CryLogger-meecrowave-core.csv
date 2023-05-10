@@ -1,0 +1,17 @@
+Spec,Class,ClassName,method,message
+rule_R22,org.apache.meecrowave.Meecrowave$ValueTransformers$1,Meecrowave$ValueTransformers$1,apply,protocol: http://null.oracle.com/
+rule_R22,org.apache.meecrowave.Meecrowave$ValueTransformers$1,Meecrowave$ValueTransformers$1,apply,protocol: http://null.oracle.com/
+rule_R18,org.apache.catalina.util.SessionIdGeneratorBase,SessionIdGeneratorBase,createSecureRandom,Random() called
+rule_R18,org.apache.catalina.util.SessionIdGeneratorBase,SessionIdGeneratorBase,getRandomBytes,Random() called
+rule_R18,org.apache.catalina.util.SessionIdGeneratorBase,SessionIdGeneratorBase,generateSessionId,Random() called
+rule_R18,org.apache.catalina.util.SessionIdGeneratorBase,SessionIdGeneratorBase,startInternal,Random() called
+rule_R09,org.apache.meecrowave.Meecrowave$ValueTransformers$1,Meecrowave$ValueTransformers$1,apply,key.iv: null
+rule_R09,org.apache.meecrowave.Meecrowave$ValueTransformers$1,Meecrowave$ValueTransformers$1,apply,key.iv: null
+rule_R05,org.apache.meecrowave.Meecrowave$ValueTransformers$1,Meecrowave$ValueTransformers$1,apply,key.encoded: 766fba39312f0d4aa39055fe5565611334821217ac773919
+rule_R05,org.apache.meecrowave.Meecrowave$ValueTransformers$1,Meecrowave$ValueTransformers$1,apply,key.encoded: 766fba39312f0d4aa39055fe5565611334821217ac773919
+rule_R02,org.apache.meecrowave.Meecrowave$ValueTransformers$1,Meecrowave$ValueTransformers$1,apply,algorithm: DESede
+rule_R02,org.apache.meecrowave.Meecrowave$ValueTransformers$1,Meecrowave$ValueTransformers$1,apply,algorithm: DESede
+rule_R05,org.apache.meecrowave.Meecrowave$ValueTransformers$1,Meecrowave$ValueTransformers$1,apply,key.encoded: 766fba39312f0d4aa39055fe5565611334821217ac773919
+rule_R05,org.apache.meecrowave.Meecrowave$ValueTransformers$1,Meecrowave$ValueTransformers$1,apply,key.encoded: 766fba39312f0d4aa39055fe5565611334821217ac773919
+rule_R02,org.apache.meecrowave.Meecrowave$ValueTransformers$1,Meecrowave$ValueTransformers$1,apply,algorithm: DESede
+rule_R02,org.apache.meecrowave.Meecrowave$ValueTransformers$1,Meecrowave$ValueTransformers$1,apply,algorithm: DESede

@@ -1,0 +1,2 @@
+Spec,Class,ClassName,method,message
+rule_R02,org.apache.tika.parser.CryptoParser,CryptoParser,parse,algorithm: DES
