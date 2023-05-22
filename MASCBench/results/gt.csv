@@ -1,30 +1,30 @@
-className,vulnerability,Description
-CipherExample01,False,Correct use of AES/GCM/NoPadding
-CipherExample02,True,Replace AES/GCM/NoPadding by DES
-CipherExample03,True,Replace AESS by DES
-CipherExample04,True,AES without mode
-CipherExample05,True,Call to method B changes the cipher to DES
-CipherExample06,True,AES without mode using a variable
-CipherExample07,True,Use of des (lower case)
-CipherExample08,True,Use of Blowfish/CFB8/NoPadding
-CipherExample09,True,Use of AES without mode (via KeyGen)
-CipherExample10,True,Use of DES (via KeyGen)
-CipherExample11,True,Use of Blowfish/CFB8/NoPadding (via KeyGen)
-CipherExample12,True,Use of "des".toUpperCase()
-CipherExample13,True,Use of "DE$S".replace("$", "")
-BaseStaticIV,True,IV initialized without a random array of bytes
-ComplexStaticIV,True,IV initialized without a random array of bytes
-StashStaticIV,True,IV initialized without a random array of bytes
-CurrentTimeIV,True,IV initialized without a random array of bytes
-MD01,True,Message Digest using MD5
-MD02,True,Message Digest using MD5 (via variable)
-MD03,True,Message Digest using MD5 (SHA-256 replaced by md5)
-MD04,True,Message Digest using md5
-MD05,True,Call to method B changes the cipher to MD5
-MD06,True,Message Digest using MD5 (SHA-256 replaced by MD5)
-MD07,True,Use of "md5".toUpperCase
-MD08,True,Use of "MD$5".replace("$", "")
-SecureRand01,True,Use of hard-coded seed in the setSeed method
-SecureRand02,True,Use of hard-coded seed (NativePRNG instance)
-SecureRand03,True,Use of hard-coded seed in the SecureRandom constructor
-ContextOfSSL,True,Use of insecure "SSL" algorithm
+className,vulnerability,Description,CWE,Detail
+CipherExample01,False,Correct use of AES/GCM/NoPadding,CWE-326,Valid crypto-schema
+CipherExample02,True,Replace AES/GCM/NoPadding by DES,CWE-326,String manipulation 
+CipherExample03,True,Replace AESS by DES,CWE-326,String manipulation
+CipherExample04,True,AES without mode,CWE-326,AES without mode
+CipherExample05,True,Call to method B changes the cipher to DES,CWE-326,Interprocedural analysis
+CipherExample06,True,AES without mode using a variable,CWE-326,AES without mode using a variable
+CipherExample07,True,Use of des (lower case),CWE-326 ,Use of des (lower case)
+CipherExample08,True,Use of Blowfish/CFB8/NoPadding,CWE-326,Invalid crypto-schema
+CipherExample09,True,Use of AES without mode (via KeyGen),CWE-326,Use of AES without mode (via KeyGen)
+CipherExample10,True,Use of DES (via KeyGen),CWE-326,Use of DES (via KeyGen)
+CipherExample11,True,Use of Blowfish/CFB8/NoPadding (via KeyGen),CWE-326,Invalid crypto-schema
+CipherExample12,True,Use of "des".toUpperCase(),CWE-326,String manipulation 
+CipherExample13,True,Use of "DE$S".replace("$", ""),CWE-326,String manipulation 
+BaseStaticIV,True,IV initialized without a random array of bytes,CWE-1204,IV initialized without a random array of bytes
+ComplexStaticIV,True,IV initialized without a random array of bytes,CWE-1204,IV initialized without a random array of bytes
+StashStaticIV,True,IV initialized without a random array of bytes,CWE-1204,IV initialized without a random array of bytes
+CurrentTimeIV,True,IV initialized without a random array of bytes,CWE-1204,IV initialized without a random array of bytes
+MD01,True,Message Digest using MD5,CWE-328,Message Digest using MD5
+MD02,True,Message Digest using MD5 (via variable),CWE-328,Message Digest using MD5 (via variable)
+MD03,True,Message Digest using MD5 (SHA-256 replaced by md5),CWE-328,String manipulation
+MD04,True,Message Digest using md5,CWE-328,Message Digest using md5
+MD05,True,Call to method B changes the cipher to MD5,CWE-328,Interprocedural analysis
+MD06,True,Message Digest using MD5 (SHA-256 replaced by MD5),CWE-328,Interprocedural analysis
+MD07,True,Use of "md5".toUpperCase,CWE-328,String manipulation
+MD08,True,Use of "MD$5".replace("$", ""),CWE-328,String manipulation
+SecureRand01,True,Use of hard-coded seed in the setSeed method,CWE-330,hard-coded seed
+SecureRand02,True,Use of hard-coded seed (NativePRNG instance),CWE-330,hard-coded seed
+SecureRand03,True,Use of hard-coded seed in the SecureRandom constructor,CWE-330,hard-coded seed
+ContextOfSSL,True,Use of insecure "SSL" algorithm,CWE-326,Use of insecure "SSL" algorithm
