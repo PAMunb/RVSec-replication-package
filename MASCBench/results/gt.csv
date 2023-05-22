@@ -12,10 +12,10 @@ CipherExample10,True,Use of DES (via KeyGen),CWE-326,Use of DES (via KeyGen)
 CipherExample11,True,Use of Blowfish/CFB8/NoPadding (via KeyGen),CWE-326,Invalid crypto-schema
 CipherExample12,True,Use of "des".toUpperCase(),CWE-326,String manipulation 
 CipherExample13,True,Use of "DE$S".replace("$", ""),CWE-326,String manipulation 
-BaseStaticIV,True,IV initialized without a random array of bytes,CWE-1204,IV initialized without a random array of bytes
-ComplexStaticIV,True,IV initialized without a random array of bytes,CWE-1204,IV initialized without a random array of bytes
-StashStaticIV,True,IV initialized without a random array of bytes,CWE-1204,IV initialized without a random array of bytes
-CurrentTimeIV,True,IV initialized without a random array of bytes,CWE-1204,IV initialized without a random array of bytes
+BaseStaticIV,True,IV initialized without a random array of bytes,CWE-329,IV initialized without a random array of bytes
+ComplexStaticIV,True,IV initialized without a random array of bytes,CWE-329,IV initialized without a random array of bytes
+StashStaticIV,True,IV initialized without a random array of bytes,CWE-329,IV initialized without a random array of bytes
+CurrentTimeIV,True,IV initialized without a random array of bytes,CWE-329,IV initialized without a random array of bytes
 MD01,True,Message Digest using MD5,CWE-328,Message Digest using MD5
 MD02,True,Message Digest using MD5 (via variable),CWE-328,Message Digest using MD5 (via variable)
 MD03,True,Message Digest using MD5 (SHA-256 replaced by md5),CWE-328,String manipulation

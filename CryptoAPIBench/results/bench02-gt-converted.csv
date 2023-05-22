@@ -128,73 +128,73 @@ FS,Field sensitive,CryptoHash1,encrypt,16.4.1,TRUE,SHA1 used,[14/30],CWE-328
 FS,Field sensitive,CryptoHash2,encrypt,16.4.2,TRUE,MD5 used,[14/30],CWE-328
 FS,Field sensitive,CryptoHash3,encrypt,16.4.3,TRUE,MD4 used,[14/30],CWE-328
 FS,Field sensitive,CryptoHash4,encrypt,16.4.4,TRUE,MD2 used,[14/30],CWE-328
-AFPTC,Advanced False Positive Test Cases,CredentialInStringABHCase1,main,18.5.1,TRUE,Credential in String,[11]
-AFPTC,Advanced False Positive Test Cases,PredictableCryptographicKeyABHCase2,main,1.5.2,TRUE,Static/Contant Key,[13/18/22]
-AFPTC,Advanced False Positive Test Cases,PredictablePBEPasswordABHCase1,---,2.5.1,FALSE,---,[---]
-AFPTC,Advanced False Positive Test Cases,PredictablePBEPasswordABHCase2,main,2.5.2,TRUE,Static/Contant password,[16/ 21/ 30]
-AFPTC,Advanced False Positive Test Cases,PredictableKeyStorePasswordABHCase1,---,3.5.1,FALSE,---,[---]
-AFPTC,Advanced False Positive Test Cases,PredictableKeyStorePasswordABHCase2,go,3.5.2,TRUE,Static/Constant Password,[22/27/31]
-AFPTC,Advanced False Positive Test Cases,PredictableSeedsABHCase2,main,9.5.1,TRUE,Constant Seed,[16/19]
-AFPTC,Advanced False Positive Test Cases,PredictableSeedsABHCase4,main,9.5.2,TRUE,Constant Seed,[20/22]
-AFPTC,Advanced False Positive Test Cases,StaticSaltsABHCase1,key2,10.5.2,TRUE,Static/Constant Salt,[15/ 20/ 25]
-AFPTC,Advanced False Positive Test Cases,StaticInitializationVectorABHCase1,go,12.5.1,TRUE,Static/Constant IV,[19/ 21]
-AFPTC,Advanced False Positive Test Cases,StaticInitializationVectorABHCase2,go,12.5.2,TRUE,Static/Constant IV,[22/ 31]
-AFPTC,Advanced False Positive Test Cases,LessThan1000IterationPBEABHCase1,key2,13.5.1,TRUE,PBE iteration < 1000,[20/27]
-IFS,Interprocedural + Field Sensitive,PredictableCryptographicKeyABICase2,go,1.6.1,TRUE,Static/Contant Key,[8/27]
-IFS,Interprocedural + Field Sensitive,CredentialInStringABICase2,---,18.6.1,TRUE,Credential in String,[8]
-IFS,Interprocedural + Field Sensitive,PredictablePBEPasswordABICase2,go,2.6.1,TRUE,Static/Contant password,[10/33]
-IFS,Interprocedural + Field Sensitive,PredictableKeyStorePasswordABICase2,go,3.6.1,TRUE,Static/Constant Password,[14/ 33]
-IFS,Interprocedural + Field Sensitive,PredictableSeedsABICase3,go,9.6.1,TRUE,Constant Seed,[7/25]
-IFS,Interprocedural + Field Sensitive,PredictableSeedsABICase4,go,9.6.2,TRUE,Constant Seed,[6/24]
-IFS,Interprocedural + Field Sensitive,StaticSaltsABICase2,key2,10.6.1,TRUE,Static/Constant Salt,[6/27]
-IFS,Interprocedural + Field Sensitive,EcbInSymmCryptoABICase2,go,11.6.1,TRUE,Usage of ECB,[11/18]
-IFS,Interprocedural + Field Sensitive,StaticInitializationVectorABICase2,go,12.6.1,TRUE,Static/Constant IV,[13/17]
-IFS,Interprocedural + Field Sensitive,LessThan1000IterationPBEABICase2,key2,13.6.1,TRUE,PBE iteration < 1000,[7/ 28]
-IFS,Interprocedural + Field Sensitive,BrokenCryptoABICase5,go,14.6.1,TRUE,DES used,[11/15/20/22]
-IFS,Interprocedural + Field Sensitive,BrokenCryptoABICase6,go,14.6.2,TRUE,Blowfish used,[11/15/17]
-IFS,Interprocedural + Field Sensitive,BrokenCryptoABICase7,go,14.6.3,TRUE,RC4 used,[11/15/17]
-IFS,Interprocedural + Field Sensitive,BrokenCryptoABICase8,go,14.6.4,TRUE,RC2 used,[11/15/17]
-IFS,Interprocedural + Field Sensitive,BrokenCryptoABICase10,go,14.6.5,TRUE,IDEA used,[11/15/17]
-IFS,Interprocedural + Field Sensitive,InsecureAsymmetricCipherABICase2,main,15.6.1,TRUE,RSA keysize 1024 bits,[11/ 42]
-IFS,Interprocedural + Field Sensitive,BrokenHashABICase5,go,16.6.1,TRUE,SHA1 used,[7/25]
-IFS,Interprocedural + Field Sensitive,BrokenHashABICase6,go,16.6.2,TRUE,MD5 used,[7/25]
-IFS,Interprocedural + Field Sensitive,BrokenHashABICase7,go,16.6.3,TRUE,MD4 used,[7/25]
-IFS,Interprocedural + Field Sensitive,BrokenHashABICase8,go,16.6.4,TRUE,MD2 used,[7/25]
-PSC,Path sensitive cases,PredictableCryptographicKeyABPSCase1,---,1.7.1,FALSE,---,[---]
-PSC,Path sensitive cases,PredictablePBEPasswordABPSCase1,---,2.7.1,FALSE,---,[---]
-PSC,Path sensitive cases,PredictableKeyStorePasswordABPSCase1,---,3.7.1,FALSE,---,[---]
-PSC,Path sensitive cases,PredictableSeedsABPSCase1,---,9.7.1,FALSE,---,[---]
-PSC,Path sensitive cases,PredictableSeedsABPSCase2,---,9.7.2,FALSE,---,[---]
-PSC,Path sensitive cases,StaticSaltsABPSCase1,---,10.7.1,FALSE,---,[---]
-PSC,Path sensitive cases,EcbInSymmCryptoABPSCase1,---,11.7.1,FALSE,---,[---]
-PSC,Path sensitive cases,StaticInitializationVectorABPSCase1,---,12.7.1,FALSE,---,[---]
-PSC,Path sensitive cases,LessThan1000IterationPBEABPSCase1,---,13.7.1,FALSE,---,[---]
-PSC,Path sensitive cases,BrokenCryptoABPSCase1,---,14.7.1,FALSE,---,[---]
-PSC,Path sensitive cases,BrokenCryptoABPSCase2,---,14.7.2,FALSE,---,[---]
-PSC,Path sensitive cases,BrokenCryptoABPSCase3,---,14.7.3,FALSE,---,[---]
-PSC,Path sensitive cases,BrokenCryptoABPSCase4,---,14.7.4,FALSE,---,[---]
-PSC,Path sensitive cases,BrokenCryptoABPSCase5,---,14.7.5,FALSE,---,[---]
-PSC,Path sensitive cases,InsecureAsymmetricCipherABPSCase1,---,15.7.1,FALSE,---,[---]
-PSC,Path sensitive cases,BrokenHashABPSCase1,---,16.7.1,FALSE,---,[---]
-PSC,Path sensitive cases,BrokenHashABPSCase2,---,16.7.2,FALSE,---,[---]
-PSC,Path sensitive cases,BrokenHashABPSCase3,---,16.7.3,FALSE,---,[---]
-PSC,Path sensitive cases,BrokenHashABPSCase4,---,16.7.4,FALSE,---,[---]
-MJC,Multiple java classes,PredictableCryptographicKeyABMC1,go,1.8.1,TRUE,Static/Contant Key,[6/ 10]
-MJC,Multiple java classes,CredentialInStringABMC1,main,18.8.1,TRUE,Credential in String,[6]
-MJC,Multiple java classes,PredictablePBEPasswordABMC1,go,2.8.1,TRUE,Static/Contant password,[6/ 16]
-MJC,Multiple java classes,PredictableKeyStorePasswordABMC1,go,3.8.1,TRUE,Static/Constant Password,[11/ 17]
-MJC,Multiple java classes,PredictableSeedsABMC1,go,9.8.1,TRUE,Constant Seed,[7/8]
-MJC,Multiple java classes,StaticSaltsABMC1,go,10.8.1,TRUE,Static/Constant Salt,[6/ 8]
-MJC,Multiple java classes,EcbInSymmCryptoABMC1,go,11.8.1,TRUE,Usage of ECB,[10/16]
-MJC,Multiple java classes,StaticInitializationVectorABMC1,go,12.8.1,TRUE,Static/Constant IV,[12/14]
-MJC,Multiple java classes,LessThan1000IterationPBEABMC1,go,13.8.1,TRUE,PBE iteration < 1000,[6/ 13]
-MJC,Multiple java classes,BrokenCryptoABMC1,go,14.8.1,TRUE,DES used,[(10/ 11)/ (12/ 14)]
-MJC,Multiple java classes,BrokenCryptoABMC2,go,14.8.2,TRUE,Blowfish used,[10/ (12/ 14)]
-MJC,Multiple java classes,BrokenCryptoABMC3,go,14.8.3,TRUE,RC4 used,[11/ (12/ 14)]
-MJC,Multiple java classes,BrokenCryptoABMC4,go,14.8.4,TRUE,RC2 used,[13/ (12/ 14)]
-MJC,Multiple java classes,BrokenCryptoABMC5,go,14.8.5,TRUE,IDEA used,[13/ (12/ 14)]
-MJC,Multiple java classes,InsecureAsymmetricCipherABMC1,go,15.8.1,TRUE,RSA keysize 1024 bits,[16/ 14]
-MJC,Multiple java classes,BrokenHashABMC1,go,16.8.1,TRUE,SHA1 used,[9/ 9]
-MJC,Multiple java classes,BrokenHashABMC2,go,16.8.2,TRUE,MD5 used,[9/ 10]
-MJC,Multiple java classes,BrokenHashABMC3,go,16.8.3,TRUE,MD4 used,[9/ 11]
-MJC,Multiple java classes,BrokenHashABMC4,main,16.8.4,TRUE,MD2 used,[9/ 12]
+AFPTC,Advanced False Positive Test Cases,CredentialInStringABHCase1,main,18.5.1,TRUE,Credential in String,[11],CWE-1391
+AFPTC,Advanced False Positive Test Cases,PredictableCryptographicKeyABHCase2,main,1.5.2,TRUE,Static/Contant Key,[13/18/22],CWE-341
+AFPTC,Advanced False Positive Test Cases,PredictablePBEPasswordABHCase1,---,2.5.1,FALSE,---,[---],CWE-1391
+AFPTC,Advanced False Positive Test Cases,PredictablePBEPasswordABHCase2,main,2.5.2,TRUE,Static/Contant password,[16/ 21/ 30],CWE-1391
+AFPTC,Advanced False Positive Test Cases,PredictableKeyStorePasswordABHCase1,---,3.5.1,FALSE,---,[---],CWE-1391
+AFPTC,Advanced False Positive Test Cases,PredictableKeyStorePasswordABHCase2,go,3.5.2,TRUE,Static/Constant Password,[22/27/31],CWE-1391
+AFPTC,Advanced False Positive Test Cases,PredictableSeedsABHCase2,main,9.5.1,TRUE,Constant Seed,[16/19],CWE-337
+AFPTC,Advanced False Positive Test Cases,PredictableSeedsABHCase4,main,9.5.2,TRUE,Constant Seed,[20/22],CWE-337
+AFPTC,Advanced False Positive Test Cases,StaticSaltsABHCase1,key2,10.5.2,TRUE,Static/Constant Salt,[15/ 20/ 25],CWE-798
+AFPTC,Advanced False Positive Test Cases,StaticInitializationVectorABHCase1,go,12.5.1,TRUE,Static/Constant IV,[19/ 21],CWE-329
+AFPTC,Advanced False Positive Test Cases,StaticInitializationVectorABHCase2,go,12.5.2,TRUE,Static/Constant IV,[22/ 31],CWE-329
+AFPTC,Advanced False Positive Test Cases,LessThan1000IterationPBEABHCase1,key2,13.5.1,TRUE,PBE iteration < 1000,[20/27],CWE-916
+IFS,Interprocedural + Field Sensitive,PredictableCryptographicKeyABICase2,go,1.6.1,TRUE,Static/Contant Key,[8/27],CWE-341
+IFS,Interprocedural + Field Sensitive,CredentialInStringABICase2,---,18.6.1,TRUE,Credential in String,[8],CWE-1391
+IFS,Interprocedural + Field Sensitive,PredictablePBEPasswordABICase2,go,2.6.1,TRUE,Static/Contant password,[10/33],CWE-1391
+IFS,Interprocedural + Field Sensitive,PredictableKeyStorePasswordABICase2,go,3.6.1,TRUE,Static/Constant Password,[14/ 33],CWE-1391
+IFS,Interprocedural + Field Sensitive,PredictableSeedsABICase3,go,9.6.1,TRUE,Constant Seed,[7/25],CWE-337
+IFS,Interprocedural + Field Sensitive,PredictableSeedsABICase4,go,9.6.2,TRUE,Constant Seed,[6/24],CWE-337
+IFS,Interprocedural + Field Sensitive,StaticSaltsABICase2,key2,10.6.1,TRUE,Static/Constant Salt,[6/27],CWE-798
+IFS,Interprocedural + Field Sensitive,EcbInSymmCryptoABICase2,go,11.6.1,TRUE,Usage of ECB,[11/18],CWE-327
+IFS,Interprocedural + Field Sensitive,StaticInitializationVectorABICase2,go,12.6.1,TRUE,Static/Constant IV,[13/17],CWE-329
+IFS,Interprocedural + Field Sensitive,LessThan1000IterationPBEABICase2,key2,13.6.1,TRUE,PBE iteration < 1000,[7/ 28],CWE-916
+IFS,Interprocedural + Field Sensitive,BrokenCryptoABICase5,go,14.6.1,TRUE,DES used,[11/15/20/22],CWE-327
+IFS,Interprocedural + Field Sensitive,BrokenCryptoABICase6,go,14.6.2,TRUE,Blowfish used,[11/15/17],CWE-327
+IFS,Interprocedural + Field Sensitive,BrokenCryptoABICase7,go,14.6.3,TRUE,RC4 used,[11/15/17],CWE-327
+IFS,Interprocedural + Field Sensitive,BrokenCryptoABICase8,go,14.6.4,TRUE,RC2 used,[11/15/17],CWE-327
+IFS,Interprocedural + Field Sensitive,BrokenCryptoABICase10,go,14.6.5,TRUE,IDEA used,[11/15/17],CWE-327
+IFS,Interprocedural + Field Sensitive,InsecureAsymmetricCipherABICase2,main,15.6.1,TRUE,RSA keysize 1024 bits,[11/ 42],CWE-327
+IFS,Interprocedural + Field Sensitive,BrokenHashABICase5,go,16.6.1,TRUE,SHA1 used,[7/25],CWE-328
+IFS,Interprocedural + Field Sensitive,BrokenHashABICase6,go,16.6.2,TRUE,MD5 used,[7/25],CWE-328
+IFS,Interprocedural + Field Sensitive,BrokenHashABICase7,go,16.6.3,TRUE,MD4 used,[7/25],CWE-328
+IFS,Interprocedural + Field Sensitive,BrokenHashABICase8,go,16.6.4,TRUE,MD2 used,[7/25],CWE-328
+PSC,Path sensitive cases,PredictableCryptographicKeyABPSCase1,---,1.7.1,FALSE,---,[---],CWE-349
+PSC,Path sensitive cases,PredictablePBEPasswordABPSCase1,---,2.7.1,FALSE,---,[---],,CWE-1391
+PSC,Path sensitive cases,PredictableKeyStorePasswordABPSCase1,---,3.7.1,FALSE,---,[---],CWE-1391
+PSC,Path sensitive cases,PredictableSeedsABPSCase1,---,9.7.1,FALSE,---,[---],CWE-337
+PSC,Path sensitive cases,PredictableSeedsABPSCase2,---,9.7.2,FALSE,---,[---],CWE-337
+PSC,Path sensitive cases,StaticSaltsABPSCase1,---,10.7.1,FALSE,---,[---],CWE-798
+PSC,Path sensitive cases,EcbInSymmCryptoABPSCase1,---,11.7.1,FALSE,---,[---],CWE-327
+PSC,Path sensitive cases,StaticInitializationVectorABPSCase1,---,12.7.1,FALSE,---,[---],CWE-329
+PSC,Path sensitive cases,LessThan1000IterationPBEABPSCase1,---,13.7.1,FALSE,---,[---],CWE-916
+PSC,Path sensitive cases,BrokenCryptoABPSCase1,---,14.7.1,FALSE,---,[---],CWE-327
+PSC,Path sensitive cases,BrokenCryptoABPSCase2,---,14.7.2,FALSE,---,[---],CWE-327
+PSC,Path sensitive cases,BrokenCryptoABPSCase3,---,14.7.3,FALSE,---,[---],CWE-327
+PSC,Path sensitive cases,BrokenCryptoABPSCase4,---,14.7.4,FALSE,---,[---],CWE-327
+PSC,Path sensitive cases,BrokenCryptoABPSCase5,---,14.7.5,FALSE,---,[---],CWE-327
+PSC,Path sensitive cases,InsecureAsymmetricCipherABPSCase1,---,15.7.1,FALSE,---,[---],CWE-327
+PSC,Path sensitive cases,BrokenHashABPSCase1,---,16.7.1,FALSE,---,[---],CWE-328
+PSC,Path sensitive cases,BrokenHashABPSCase2,---,16.7.2,FALSE,---,[---],CWE-328
+PSC,Path sensitive cases,BrokenHashABPSCase3,---,16.7.3,FALSE,---,[---],CWE-328
+PSC,Path sensitive cases,BrokenHashABPSCase4,---,16.7.4,FALSE,---,[---],CWE-328
+MJC,Multiple java classes,PredictableCryptographicKeyABMC1,go,1.8.1,TRUE,Static/Contant Key,[6/ 10],CWE-341
+MJC,Multiple java classes,CredentialInStringABMC1,main,18.8.1,TRUE,Credential in String,[6],CWE-1391
+MJC,Multiple java classes,PredictablePBEPasswordABMC1,go,2.8.1,TRUE,Static/Contant password,[6/ 16],CWE-1391
+MJC,Multiple java classes,PredictableKeyStorePasswordABMC1,go,3.8.1,TRUE,Static/Constant Password,[11/ 17],CWE-1391
+MJC,Multiple java classes,PredictableSeedsABMC1,go,9.8.1,TRUE,Constant Seed,[7/8],CWE-337
+MJC,Multiple java classes,StaticSaltsABMC1,go,10.8.1,TRUE,Static/Constant Salt,[6/ 8],CWE-798
+MJC,Multiple java classes,EcbInSymmCryptoABMC1,go,11.8.1,TRUE,Usage of ECB,[10/16],CWE-327
+MJC,Multiple java classes,StaticInitializationVectorABMC1,go,12.8.1,TRUE,Static/Constant IV,[12/14],CWE-329
+MJC,Multiple java classes,LessThan1000IterationPBEABMC1,go,13.8.1,TRUE,PBE iteration < 1000,[6/ 13],CWE-916
+MJC,Multiple java classes,BrokenCryptoABMC1,go,14.8.1,TRUE,DES used,[(10/ 11)/ (12/ 14)],CWE-327
+MJC,Multiple java classes,BrokenCryptoABMC2,go,14.8.2,TRUE,Blowfish used,[10/ (12/ 14)],CWE-327
+MJC,Multiple java classes,BrokenCryptoABMC3,go,14.8.3,TRUE,RC4 used,[11/ (12/ 14)],CWE-327
+MJC,Multiple java classes,BrokenCryptoABMC4,go,14.8.4,TRUE,RC2 used,[13/ (12/ 14)],CWE-327
+MJC,Multiple java classes,BrokenCryptoABMC5,go,14.8.5,TRUE,IDEA used,[13/ (12/ 14)],CWE-327
+MJC,Multiple java classes,InsecureAsymmetricCipherABMC1,go,15.8.1,TRUE,RSA keysize 1024 bits,[16/ 14],CWE-327
+MJC,Multiple java classes,BrokenHashABMC1,go,16.8.1,TRUE,SHA1 used,[9/ 9],CWE-328
+MJC,Multiple java classes,BrokenHashABMC2,go,16.8.2,TRUE,MD5 used,[9/ 10],CWE-328
+MJC,Multiple java classes,BrokenHashABMC3,go,16.8.3,TRUE,MD4 used,[9/ 11],CWE-328
+MJC,Multiple java classes,BrokenHashABMC4,main,16.8.4,TRUE,MD2 used,[9/ 12],CWE-328

@@ -647,9 +647,26 @@ display: none;
 ## 2  CogniCrypt 0.8153846 0.8153846 0.8153846
 ## 3 CryptoGuard 0.8636364 0.8702290 0.8669202
 ## 4   CryLogger 0.8828829 0.7538462 0.8132780</code></pre>
-<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1" tabindex="-1"></a><span class="fu">sqldf</span>(<span class="st">&quot;select distinct class as fn</span></span>
-<span id="cb60-2"><a href="#cb60-2" tabindex="-1"></a><span class="st">                 from tp </span></span>
-<span id="cb60-3"><a href="#cb60-3" tabindex="-1"></a><span class="st">                 where class not in (select className from bench02crylogger)&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1" tabindex="-1"></a><span class="fu">sqldf</span>(<span class="st">&quot;select distinct className as fp</span></span>
+<span id="cb60-2"><a href="#cb60-2" tabindex="-1"></a><span class="st">                 from bench02crylogger </span></span>
+<span id="cb60-3"><a href="#cb60-3" tabindex="-1"></a><span class="st">                 where className in (select class from tn)&quot;</span>)</span></code></pre></div>
+<pre><code>##                                      fp
+## 1   StaticInitializationVectorABPSCase1
+## 2                  StaticSaltsABPSCase1
+## 3           CredentialInStringCorrected
+## 4                 BrokenCryptoABPSCase1
+## 5                 BrokenCryptoABPSCase5
+## 6   PredictableKeyStorePasswordABHCase1
+## 7                 BrokenCryptoCorrected
+## 8  PredictableCryptographicKeyCorrected
+## 9                 BrokenCryptoABPSCase4
+## 10             EcbInSymmCryptoABPSCase1
+## 11                BrokenCryptoABPSCase2
+## 12  StaticInitializationVectorCorrected
+## 13                BrokenCryptoABPSCase3</code></pre>
+<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1" tabindex="-1"></a><span class="fu">sqldf</span>(<span class="st">&quot;select distinct class as fn</span></span>
+<span id="cb62-2"><a href="#cb62-2" tabindex="-1"></a><span class="st">                 from tp </span></span>
+<span id="cb62-3"><a href="#cb62-3" tabindex="-1"></a><span class="st">                 where class not in (select className from bench02crylogger)&quot;</span>)</span></code></pre></div>
 <pre><code>##                                             fn
 ## 1           PredictableCryptographicKeyBBCase1
 ## 2                      PredictableSeedsBBCase1
@@ -683,6 +700,76 @@ display: none;
 ## 30            PredictableKeyStorePasswordABMC1
 ## 31                       PredictableSeedsABMC1
 ## 32                        EcbInSymmCryptoABMC1</code></pre>
+<div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb64-1"><a href="#cb64-1" tabindex="-1"></a><span class="fu">sqldf</span>(<span class="st">&quot;select * </span></span>
+<span id="cb64-2"><a href="#cb64-2" tabindex="-1"></a><span class="st">                 from bench02mop </span></span>
+<span id="cb64-3"><a href="#cb64-3" tabindex="-1"></a><span class="st">                 where className in (select class from tn)&quot;</span>)</span></code></pre></div>
+<pre><code>##                spec
+## 1  PBEParameterSpec
+## 2  PBEParameterSpec
+## 3  PBEParameterSpec
+## 4  PBEParameterSpec
+## 5  PBEParameterSpec
+## 6  PBEParameterSpec
+## 7  SecureRandomSpec
+## 8       KeyPairSpec
+## 9  PBEParameterSpec
+## 10 PBEParameterSpec
+##                                                                             class
+## 1              org.cryptoapi.bench.pbeiteration.LessThan1000IterationPBECorrected
+## 2              org.cryptoapi.bench.pbeiteration.LessThan1000IterationPBECorrected
+## 3                            org.cryptoapi.bench.staticsalts.StaticSaltsCorrected
+## 4                            org.cryptoapi.bench.staticsalts.StaticSaltsCorrected
+## 5              org.cryptoapi.bench.pbeiteration.LessThan1000IterationPBEABPSCase1
+## 6              org.cryptoapi.bench.pbeiteration.LessThan1000IterationPBEABPSCase1
+## 7      org.cryptoapi.bench.predictablepbepassword.PredictablePBEPasswordCorrected
+## 8  org.cryptoapi.bench.insecureasymmetriccrypto.InsecureAsymmetricCipherABPSCase1
+## 9                            org.cryptoapi.bench.staticsalts.StaticSaltsABPSCase1
+## 10                           org.cryptoapi.bench.staticsalts.StaticSaltsABPSCase1
+##                            className method
+## 1  LessThan1000IterationPBECorrected   key2
+## 2  LessThan1000IterationPBECorrected   key2
+## 3               StaticSaltsCorrected   key2
+## 4               StaticSaltsCorrected   key2
+## 5  LessThan1000IterationPBEABPSCase1   main
+## 6  LessThan1000IterationPBEABPSCase1   main
+## 7    PredictablePBEPasswordCorrected    key
+## 8  InsecureAsymmetricCipherABPSCase1     go
+## 9               StaticSaltsABPSCase1   key2
+## 10              StaticSaltsABPSCase1   key2
+##                                     location                        error
+## 1  LessThan1000IterationPBECorrected.java:17              UnsafeAlgorithm
+## 2  LessThan1000IterationPBECorrected.java:17 InvalidSequenceOfMethodCalls
+## 3               StaticSaltsCorrected.java:17              UnsafeAlgorithm
+## 4               StaticSaltsCorrected.java:17 InvalidSequenceOfMethodCalls
+## 5  LessThan1000IterationPBEABPSCase1.java:17              UnsafeAlgorithm
+## 6  LessThan1000IterationPBEABPSCase1.java:17 InvalidSequenceOfMethodCalls
+## 7    PredictablePBEPasswordCorrected.java:19 InvalidSequenceOfMethodCalls
+## 8  InsecureAsymmetricCipherABPSCase1.java:25 InvalidSequenceOfMethodCalls
+## 9               StaticSaltsABPSCase1.java:19              UnsafeAlgorithm
+## 10              StaticSaltsABPSCase1.java:19 InvalidSequenceOfMethodCalls
+##                                                    expecting
+## 1  expecting at least 1000 iterations and a randomized salt.
+## 2                                                    unknown
+## 3  expecting at least 1000 iterations and a randomized salt.
+## 4                                                    unknown
+## 5  expecting at least 1000 iterations and a randomized salt.
+## 6                                                    unknown
+## 7                                                    unknown
+## 8                                                    unknown
+## 9  expecting at least 1000 iterations and a randomized salt.
+## 10                                                   unknown</code></pre>
+<div class="sourceCode" id="cb66"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1" tabindex="-1"></a><span class="fu">sqldf</span>(<span class="st">&quot;select *</span></span>
+<span id="cb66-2"><a href="#cb66-2" tabindex="-1"></a><span class="st">                 from tp </span></span>
+<span id="cb66-3"><a href="#cb66-3" tabindex="-1"></a><span class="st">                 where class not in (select className from bench02mop)&quot;</span>)</span></code></pre></div>
+<pre><code>##                                         class
+## 1          PredictableKeyStorePasswordBBCase1
+## 2         PredictableKeyStorePasswordABICase1
+## 3         PredictableKeyStorePasswordABICase3
+## 4 PredictableCryptographicKeyABSCase1Internal
+## 5          CryptoPredictableKeyStorePassword1
+## 6         PredictableKeyStorePasswordABHCase2
+## 7         PredictableKeyStorePasswordABICase2
+## 8            PredictableKeyStorePasswordABMC1</code></pre>
 </div>
 
 

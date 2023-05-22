@@ -236,7 +236,21 @@ analysis_ds
 
 
 ```{r}
+sqldf("select distinct className as fp
+                 from bench02crylogger 
+                 where className in (select class from tn)")
+
+
 sqldf("select distinct class as fn
                  from tp 
                  where class not in (select className from bench02crylogger)")
+
+sqldf("select * 
+                 from bench02mop 
+                 where className in (select class from tn)")
+
+sqldf("select *
+                 from tp 
+                 where class not in (select className from bench02mop)")
+
 ```

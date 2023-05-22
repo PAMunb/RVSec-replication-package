@@ -190,7 +190,7 @@ nrow(crylogger)
 # lets prune the crylogger dataset, since we are only interested in 
 # the categories crypto and hash
 
-crylogger <- sqldf("select * 
+crylogger <- sqldf("select distinct spec, className, method, message
                    from crylogger 
                    where Spec in ('rule_R01', 'rule_R02', 'rule_R03')")
 
@@ -236,7 +236,7 @@ analysis_ds
 
 
 ```{r}
-sqldf("select c.className, c.spec 
+sqldf("select c.className, c.spec, c.message
        from crylogger c
        where c.className not in (select TestCase from gt where vulnerability = 'true')")
 ```

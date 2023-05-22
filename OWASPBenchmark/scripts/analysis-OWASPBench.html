@@ -431,7 +431,7 @@ display: none;
 
 
 <div id="loading-the-base-datasets-including-the-ground-truth-for-loc" class="section level2">
-<h2>LoadING the base datasets (including the ground truth for LOC)</h2>
+<h2>Loading the base datasets (including the ground truth for LOC)</h2>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a>gt <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;../results/datasets/gt.csv&quot;</span>, <span class="at">head=</span>T, <span class="at">sep=</span><span class="st">&quot;,&quot;</span>)</span>
 <span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a><span class="fu">colnames</span>(gt)</span></code></pre></div>
@@ -610,7 +610,7 @@ display: none;
 <div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" tabindex="-1"></a><span class="co"># lets prune the crylogger dataset, since we are only interested in </span></span>
 <span id="cb58-2"><a href="#cb58-2" tabindex="-1"></a><span class="co"># the categories crypto and hash</span></span>
 <span id="cb58-3"><a href="#cb58-3" tabindex="-1"></a></span>
-<span id="cb58-4"><a href="#cb58-4" tabindex="-1"></a>crylogger <span class="ot">&lt;-</span> <span class="fu">sqldf</span>(<span class="st">&quot;select * </span></span>
+<span id="cb58-4"><a href="#cb58-4" tabindex="-1"></a>crylogger <span class="ot">&lt;-</span> <span class="fu">sqldf</span>(<span class="st">&quot;select distinct spec, className, method, message</span></span>
 <span id="cb58-5"><a href="#cb58-5" tabindex="-1"></a><span class="st">                   from crylogger </span></span>
 <span id="cb58-6"><a href="#cb58-6" tabindex="-1"></a><span class="st">                   where Spec in (&#39;rule_R01&#39;, &#39;rule_R02&#39;, &#39;rule_R03&#39;)&quot;</span>)</span>
 <span id="cb58-7"><a href="#cb58-7" tabindex="-1"></a></span>
@@ -630,7 +630,7 @@ display: none;
 <span id="cb58-21"><a href="#cb58-21" tabindex="-1"></a><span class="fu">nrow</span>(tp)</span></code></pre></div>
 <pre><code>## [1] 317</code></pre>
 <div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1" tabindex="-1"></a><span class="fu">nrow</span>(fp)</span></code></pre></div>
-<pre><code>## [1] 114</code></pre>
+<pre><code>## [1] 53</code></pre>
 <div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1" tabindex="-1"></a><span class="fu">nrow</span>(fn)</span></code></pre></div>
 <pre><code>## [1] 0</code></pre>
 <div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb64-1"><a href="#cb64-1" tabindex="-1"></a>precision_crylogger <span class="ot">=</span> <span class="fu">nrow</span>(tp) <span class="sc">/</span> (<span class="fu">nrow</span>(tp) <span class="sc">+</span> <span class="fu">nrow</span>(fp))</span>
@@ -653,125 +653,118 @@ display: none;
 ## 1         MOP 0.9961538 1.0000000 0.9980732
 ## 2  CogniCrypt 0.5630435 1.0000000 0.7204451
 ## 3 CryptoGuard 0.8902439 0.8455598 0.8673267
-## 4   CryLogger 0.7354988 1.0000000 0.8475936</code></pre>
-<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="#cb67-1" tabindex="-1"></a><span class="fu">sqldf</span>(<span class="st">&quot;select c.className, c.spec </span></span>
+## 4   CryLogger 0.8567568 1.0000000 0.9228530</code></pre>
+<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="#cb67-1" tabindex="-1"></a><span class="fu">sqldf</span>(<span class="st">&quot;select c.className, c.spec, c.message</span></span>
 <span id="cb67-2"><a href="#cb67-2" tabindex="-1"></a><span class="st">       from crylogger c</span></span>
 <span id="cb67-3"><a href="#cb67-3" tabindex="-1"></a><span class="st">       where c.className not in (select TestCase from gt where vulnerability = &#39;true&#39;)&quot;</span>)</span></code></pre></div>
-<pre><code>##              className     Spec
-## 1   BenchmarkTest00943 rule_R03
-## 2   BenchmarkTest02372 rule_R03
-## 3   BenchmarkTest02372 rule_R03
-## 4   BenchmarkTest00058 rule_R01
-## 5   BenchmarkTest00058 rule_R01
-## 6   BenchmarkTest00444 rule_R01
-## 7   BenchmarkTest00058 rule_R01
-## 8   BenchmarkTest00613 rule_R01
-## 9   BenchmarkTest00689 rule_R03
-## 10  BenchmarkTest00689 rule_R03
-## 11  BenchmarkTest00780 rule_R01
-## 12  BenchmarkTest00780 rule_R01
-## 13  BenchmarkTest00209 rule_R01
-## 14  BenchmarkTest00058 rule_R01
-## 15  BenchmarkTest01896 rule_R03
-## 16  BenchmarkTest00058 rule_R01
-## 17  BenchmarkTest00444 rule_R03
-## 18  BenchmarkTest00058 rule_R01
-## 19  BenchmarkTest00058 rule_R01
-## 20  BenchmarkTest00058 rule_R01
-## 21  BenchmarkTest01100 rule_R03
-## 22  BenchmarkTest00058 rule_R01
-## 23  BenchmarkTest00690 rule_R01
-## 24  BenchmarkTest00690 rule_R03
-## 25  BenchmarkTest00058 rule_R01
-## 26  BenchmarkTest00058 rule_R01
-## 27  BenchmarkTest00058 rule_R01
-## 28  BenchmarkTest00058 rule_R01
-## 29  BenchmarkTest00350 rule_R01
-## 30  BenchmarkTest01738 rule_R01
-## 31  BenchmarkTest00058 rule_R01
-## 32  BenchmarkTest00259 rule_R03
-## 33  BenchmarkTest00260 rule_R01
-## 34  BenchmarkTest01101 rule_R03
-## 35  BenchmarkTest01485 rule_R03
-## 36  BenchmarkTest00058 rule_R01
-## 37  BenchmarkTest00058 rule_R01
-## 38  BenchmarkTest00058 rule_R01
-## 39  BenchmarkTest00780 rule_R03
-## 40  BenchmarkTest00780 rule_R03
-## 41  BenchmarkTest00058 rule_R01
-## 42  BenchmarkTest00058 rule_R01
-## 43  BenchmarkTest00058 rule_R01
-## 44  BenchmarkTest00351 rule_R03
-## 45  BenchmarkTest00058 rule_R01
-## 46  BenchmarkTest00351 rule_R01
-## 47  BenchmarkTest00058 rule_R01
-## 48  BenchmarkTest00058 rule_R01
-## 49  BenchmarkTest00058 rule_R01
-## 50  BenchmarkTest00058 rule_R01
-## 51  BenchmarkTest00058 rule_R01
-## 52  BenchmarkTest01399 rule_R03
-## 53  BenchmarkTest01738 rule_R03
-## 54  BenchmarkTest01321 rule_R01
-## 55  BenchmarkTest01828 rule_R03
-## 56  BenchmarkTest01739 rule_R01
-## 57  BenchmarkTest00613 rule_R03
-## 58  BenchmarkTest01399 rule_R01
-## 59  BenchmarkTest01739 rule_R03
-## 60  BenchmarkTest00058 rule_R01
-## 61  BenchmarkTest01321 rule_R03
-## 62  BenchmarkTest00058 rule_R01
-## 63  BenchmarkTest00259 rule_R01
-## 64  BenchmarkTest00058 rule_R01
-## 65  BenchmarkTest01101 rule_R01
-## 66  BenchmarkTest01100 rule_R01
-## 67  BenchmarkTest00943 rule_R01
-## 68  BenchmarkTest00058 rule_R01
-## 69  BenchmarkTest00058 rule_R01
-## 70  BenchmarkTest00058 rule_R01
-## 71  BenchmarkTest00058 rule_R01
-## 72  BenchmarkTest00058 rule_R01
-## 73  BenchmarkTest00058 rule_R01
-## 74  BenchmarkTest00058 rule_R01
-## 75  BenchmarkTest00260 rule_R03
-## 76  BenchmarkTest00058 rule_R01
-## 77  BenchmarkTest00058 rule_R01
-## 78  BenchmarkTest00058 rule_R01
-## 79  BenchmarkTest00350 rule_R03
-## 80  BenchmarkTest00058 rule_R01
-## 81  BenchmarkTest00209 rule_R03
-## 82  BenchmarkTest00058 rule_R01
-## 83  BenchmarkTest01896 rule_R01
-## 84  BenchmarkTest02102 rule_R01
-## 85  BenchmarkTest00523 rule_R03
-## 86  BenchmarkTest00058 rule_R01
-## 87  BenchmarkTest01828 rule_R01
-## 88  BenchmarkTest02102 rule_R03
-## 89  BenchmarkTest00058 rule_R01
-## 90  BenchmarkTest00058 rule_R01
-## 91  BenchmarkTest00058 rule_R01
-## 92  BenchmarkTest00058 rule_R01
-## 93  BenchmarkTest00058 rule_R01
-## 94  BenchmarkTest00058 rule_R01
-## 95  BenchmarkTest00058 rule_R01
-## 96  BenchmarkTest00523 rule_R01
-## 97  BenchmarkTest00058 rule_R01
-## 98  BenchmarkTest00058 rule_R01
-## 99  BenchmarkTest00058 rule_R01
-## 100 BenchmarkTest00058 rule_R01
-## 101 BenchmarkTest00058 rule_R01
-## 102 BenchmarkTest00058 rule_R01
-## 103 BenchmarkTest00058 rule_R01
-## 104 BenchmarkTest00058 rule_R01
-## 105 BenchmarkTest02372 rule_R01
-## 106 BenchmarkTest02372 rule_R01
-## 107 BenchmarkTest00058 rule_R01
-## 108 BenchmarkTest00058 rule_R01
-## 109 BenchmarkTest01485 rule_R01
-## 110 BenchmarkTest00058 rule_R01
-## 111 BenchmarkTest00058 rule_R01
-## 112 BenchmarkTest00689 rule_R01
-## 113 BenchmarkTest00689 rule_R01
-## 114 BenchmarkTest00058 rule_R01</code></pre>
+<pre><code>##             className     Spec
+## 1  BenchmarkTest00943 rule_R03
+## 2  BenchmarkTest02372 rule_R03
+## 3  BenchmarkTest02372 rule_R03
+## 4  BenchmarkTest00058 rule_R01
+## 5  BenchmarkTest00444 rule_R01
+## 6  BenchmarkTest00613 rule_R01
+## 7  BenchmarkTest00689 rule_R03
+## 8  BenchmarkTest00689 rule_R03
+## 9  BenchmarkTest00780 rule_R01
+## 10 BenchmarkTest00780 rule_R01
+## 11 BenchmarkTest00209 rule_R01
+## 12 BenchmarkTest01896 rule_R03
+## 13 BenchmarkTest00444 rule_R03
+## 14 BenchmarkTest01100 rule_R03
+## 15 BenchmarkTest00690 rule_R01
+## 16 BenchmarkTest00690 rule_R03
+## 17 BenchmarkTest00350 rule_R01
+## 18 BenchmarkTest01738 rule_R01
+## 19 BenchmarkTest00259 rule_R03
+## 20 BenchmarkTest00260 rule_R01
+## 21 BenchmarkTest01101 rule_R03
+## 22 BenchmarkTest01485 rule_R03
+## 23 BenchmarkTest00780 rule_R03
+## 24 BenchmarkTest00780 rule_R03
+## 25 BenchmarkTest00351 rule_R03
+## 26 BenchmarkTest00351 rule_R01
+## 27 BenchmarkTest01399 rule_R03
+## 28 BenchmarkTest01738 rule_R03
+## 29 BenchmarkTest01321 rule_R01
+## 30 BenchmarkTest01828 rule_R03
+## 31 BenchmarkTest01739 rule_R01
+## 32 BenchmarkTest00613 rule_R03
+## 33 BenchmarkTest01399 rule_R01
+## 34 BenchmarkTest01739 rule_R03
+## 35 BenchmarkTest01321 rule_R03
+## 36 BenchmarkTest00259 rule_R01
+## 37 BenchmarkTest01101 rule_R01
+## 38 BenchmarkTest01100 rule_R01
+## 39 BenchmarkTest00943 rule_R01
+## 40 BenchmarkTest00260 rule_R03
+## 41 BenchmarkTest00350 rule_R03
+## 42 BenchmarkTest00209 rule_R03
+## 43 BenchmarkTest01896 rule_R01
+## 44 BenchmarkTest02102 rule_R01
+## 45 BenchmarkTest00523 rule_R03
+## 46 BenchmarkTest01828 rule_R01
+## 47 BenchmarkTest02102 rule_R03
+## 48 BenchmarkTest00523 rule_R01
+## 49 BenchmarkTest02372 rule_R01
+## 50 BenchmarkTest02372 rule_R01
+## 51 BenchmarkTest01485 rule_R01
+## 52 BenchmarkTest00689 rule_R01
+## 53 BenchmarkTest00689 rule_R01
+##                                                      message
+## 1  out bytes: 512 with RSA/ECB/OAEPWithSHA-512AndMGF1Padding
+## 2  out bytes: 512 with RSA/ECB/OAEPWithSHA-512AndMGF1Padding
+## 3  out bytes: 512 with RSA/ECB/OAEPWithSHA-512AndMGF1Padding
+## 4                                           algorithm: SHA-1
+## 5                                           algorithm: SHA-1
+## 6                                           algorithm: SHA-1
+## 7  out bytes: 512 with RSA/ECB/OAEPWithSHA-512AndMGF1Padding
+## 8  out bytes: 512 with RSA/ECB/OAEPWithSHA-512AndMGF1Padding
+## 9                                           algorithm: SHA-1
+## 10                                          algorithm: SHA-1
+## 11                                          algorithm: SHA-1
+## 12 out bytes: 512 with RSA/ECB/OAEPWithSHA-512AndMGF1Padding
+## 13 out bytes: 512 with RSA/ECB/OAEPWithSHA-512AndMGF1Padding
+## 14 out bytes: 512 with RSA/ECB/OAEPWithSHA-512AndMGF1Padding
+## 15                                          algorithm: SHA-1
+## 16 out bytes: 512 with RSA/ECB/OAEPWithSHA-512AndMGF1Padding
+## 17                                          algorithm: SHA-1
+## 18                                          algorithm: SHA-1
+## 19 out bytes: 512 with RSA/ECB/OAEPWithSHA-512AndMGF1Padding
+## 20                                          algorithm: SHA-1
+## 21 out bytes: 512 with RSA/ECB/OAEPWithSHA-512AndMGF1Padding
+## 22 out bytes: 512 with RSA/ECB/OAEPWithSHA-512AndMGF1Padding
+## 23 out bytes: 512 with RSA/ECB/OAEPWithSHA-512AndMGF1Padding
+## 24 out bytes: 512 with RSA/ECB/OAEPWithSHA-512AndMGF1Padding
+## 25 out bytes: 512 with RSA/ECB/OAEPWithSHA-512AndMGF1Padding
+## 26                                          algorithm: SHA-1
+## 27 out bytes: 512 with RSA/ECB/OAEPWithSHA-512AndMGF1Padding
+## 28 out bytes: 512 with RSA/ECB/OAEPWithSHA-512AndMGF1Padding
+## 29                                          algorithm: SHA-1
+## 30 out bytes: 512 with RSA/ECB/OAEPWithSHA-512AndMGF1Padding
+## 31                                          algorithm: SHA-1
+## 32 out bytes: 512 with RSA/ECB/OAEPWithSHA-512AndMGF1Padding
+## 33                                          algorithm: SHA-1
+## 34 out bytes: 512 with RSA/ECB/OAEPWithSHA-512AndMGF1Padding
+## 35 out bytes: 512 with RSA/ECB/OAEPWithSHA-512AndMGF1Padding
+## 36                                          algorithm: SHA-1
+## 37                                          algorithm: SHA-1
+## 38                                          algorithm: SHA-1
+## 39                                          algorithm: SHA-1
+## 40 out bytes: 512 with RSA/ECB/OAEPWithSHA-512AndMGF1Padding
+## 41 out bytes: 512 with RSA/ECB/OAEPWithSHA-512AndMGF1Padding
+## 42 out bytes: 512 with RSA/ECB/OAEPWithSHA-512AndMGF1Padding
+## 43                                          algorithm: SHA-1
+## 44                                          algorithm: SHA-1
+## 45 out bytes: 512 with RSA/ECB/OAEPWithSHA-512AndMGF1Padding
+## 46                                          algorithm: SHA-1
+## 47 out bytes: 512 with RSA/ECB/OAEPWithSHA-512AndMGF1Padding
+## 48                                          algorithm: SHA-1
+## 49                                          algorithm: SHA-1
+## 50                                          algorithm: SHA-1
+## 51                                          algorithm: SHA-1
+## 52                                          algorithm: SHA-1
+## 53                                          algorithm: SHA-1</code></pre>
 </div>
 
 
