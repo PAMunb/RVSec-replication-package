@@ -14,3 +14,4 @@ CWE329,Generation of Predictable IV with CBC Mode
 1391,Use of Weak Credentials
 798,Use of Hard-coded Credentials
 916,Use of Password Hash With Insufficient Computational Effort
+341,Predictable from Observable State
