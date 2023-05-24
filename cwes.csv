@@ -11,3 +11,6 @@ CWE327,Use of a Broken or Risky Cryptographic Algorithm
 CWE1204,Generation of Weak Initialization Vector (IV)
 CWE1240,Use of a Cryptographic Primitive with a Risky Implementation
 CWE329,Generation of Predictable IV with CBC Mode
+1391,Use of Weak Credentials
+798,Use of Hard-coded Credentials
+916,Use of Password Hash With Insufficient Computational Effort
