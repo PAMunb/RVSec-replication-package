@@ -63,10 +63,10 @@ nrow(mop)
 # lets prune the mop dataset, since we are only interested in 
 # the categories crypto and hash
 
-mop <- sqldf("select spec, className, count(*) warnings 
+mop <- sqldf("select spec, className, cwe, count(*) warnings 
               from mop 
               where spec in ('CipherSpec', 'MessageDigestSpec')
-              group by spec, className")
+              group by spec, className, cwe")
 
 
 tp = sqldf("select * 
@@ -104,7 +104,7 @@ nrow(cc)
 # lets prune the cc dataset, since we are only interested in 
 # the categories crypto and hash
 
-cc <- sqldf("select spec, className, count(*) warnings 
+cc <- sqldf("select spec, className, cwe, count(*) warnings 
               from cc 
               where spec in ('CipherSpec', 'MessageDigestSpec')
               group by spec, className")
@@ -146,10 +146,10 @@ nrow(cg)
 # lets prune the cc dataset, since we are only interested in 
 # the categories crypto (1) and hash (2) 
  
-cg <- sqldf("select spec, className, count(*) warnings 
+cg <- sqldf("select spec, className, cwe, count(*) warnings 
               from cg
               where spec in (1, 2)   
-              group by spec, className")
+              group by spec, className, cwe")
 
 nrow(cg)
 
@@ -190,7 +190,7 @@ nrow(crylogger)
 # lets prune the crylogger dataset, since we are only interested in 
 # the categories crypto and hash
 
-crylogger <- sqldf("select distinct spec, className, method, message
+crylogger <- sqldf("select distinct spec, className, method, message, cwe
                    from crylogger 
                    where Spec in ('rule_R01', 'rule_R02', 'rule_R03')")
 
@@ -235,8 +235,102 @@ analysis_ds
 ```
 
 
+
+# CWE integration
+
 ```{r}
-sqldf("select c.className, c.spec, c.message
-       from crylogger c
-       where c.className not in (select TestCase from gt where vulnerability = 'true')")
+nrow(gt)
+colnames(gt)
+sqldf("select CWE, VULNERABILITY, count(*) 
+       from gt
+       group by CWE, VULNERABILITY")
+
+nrow(mop)
+colnames(mop)
+
+sqldf("select distinct spec from mop")
+
+tp = sqldf("select g.CWE as 'cwe', g.TestCase as 'ClassName', 'RVSec' as Tool, 'TP' as 'Warning' 
+            from mop m, gt g
+            where m.className = g.TestCase and 
+                  g.vulnerability = 'true'")
+
+fp = sqldf("select m.cwe as 'cwe', m.className as 'ClassName', 'RVSec' as Tool, 'FP' as 'Warning' 
+            from mop m
+            where m.className not in (select TestCase from gt where vulnerability = 'true')")
+
+fn = sqldf("select g.CWE as 'cwe', g.TestCase as 'ClassName', 'RVSec' as Tool, 'FN' as 'Warning' 
+            from gt g
+            where vulnerability = 'true' and TestCase not in (select className from mop)")
+
+ds <- rbind(tp, fp)
+ds <- rbind(ds, fn)
+## CogniCrypt 
+
+tp = sqldf("select g.CWE as 'cwe', g.TestCase as 'ClassName', 'CogniCrypt' as Tool, 'TP' as 'Warning' 
+            from cc c, gt g 
+            where c.className = TestCase and 
+                  vulnerability = 'true'")
+
+fp = sqldf("select c.CWE as 'cwe', c.className as 'ClassName', 'CogniCrypt' as Tool, 'FP' as 'Warning' 
+            from cc c
+            where c.className not in (select TestCase from gt where vulnerability = 'true')")
+
+
+fn = sqldf("select g.CWE as 'cwe', g.TestCase as 'ClassName', 'CogniCrypt' as Tool, 'FN' as 'Warning' 
+            from gt g
+            where vulnerability = 'true' and TestCase not in (select className from cc)")
+
+ds <- rbind(ds, tp)
+ds <- rbind(ds, fp)
+ds <- rbind(ds, fn)
+
+## CryptoGuard 
+
+tp = sqldf("select g.CWE as 'cwe', g.TestCase as 'ClassName', 'CryptoGuard' as Tool, 'TP' as 'Warning' 
+            from cg c, gt g
+            where c.className = TestCase and 
+                  vulnerability = 'true'")
+
+fp = sqldf("select c.CWE as 'cwe', c.className as 'ClassName', 'CryptoGuard' as Tool, 'FP' as 'Warning' 
+            from cg c
+            where c.className not in (select TestCase from gt where vulnerability = 'true')")
+
+
+fn = sqldf("select g.CWE as 'cwe', g.TestCase as 'ClassName', 'CryptoGuard' as Tool, 'FN' as 'Warning' 
+            from gt g
+            where vulnerability = 'true' and TestCase not in (select className from cg)")
+
+ds <- rbind(ds, tp)
+ds <- rbind(ds, fp)
+ds <- rbind(ds, fn)
+
+## CryLogger 
+
+tp = sqldf("select g.CWE as 'cwe', g.TestCase as 'ClassName', 'CryLogger' as Tool, 'TP' as 'Warning' 
+            from crylogger c, gt g
+            where c.className = TestCase and 
+                  vulnerability = 'true'")
+
+fp = sqldf("select c.cwe as 'cwe', c.className as 'ClassName', 'CryLogger' as Tool, 'FP' as 'Warning' 
+            from crylogger c
+            where c.className not in (select TestCase from gt where vulnerability = 'true')")
+
+fn = sqldf("select g.CWE as 'cwe', g.TestCase as 'ClassName', 'CryLogger' as Tool, 'FN' as 'Warning'
+            from gt g
+            where vulnerability = 'true' and TestCase not in (select className from crylogger)")
+
+
+ds <- rbind(ds, tp)
+ds <- rbind(ds, fp)
+ds <- rbind(ds, fn)
+
+sqldf("select tool, warning, count(*) from ds group by tool, warning")
+
+write.csv(ds, "../results/datasets/gt-cwes.csv",  row.names = FALSE)
+
+sqldf("select tool, cwe, warning, count(*) 
+       from ds 
+       group by tool, cwe, warning")
+
 ```

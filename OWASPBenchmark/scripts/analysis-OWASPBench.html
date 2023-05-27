@@ -477,17 +477,17 @@ display: none;
 <div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" tabindex="-1"></a>mop <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;../results/datasets/mop.csv&quot;</span>, <span class="at">head=</span>T, <span class="at">sep=</span><span class="st">&quot;,&quot;</span>)</span>
 <span id="cb17-2"><a href="#cb17-2" tabindex="-1"></a></span>
 <span id="cb17-3"><a href="#cb17-3" tabindex="-1"></a><span class="fu">colnames</span>(mop)</span></code></pre></div>
-<pre><code>## [1] &quot;spec&quot;      &quot;class&quot;     &quot;className&quot; &quot;method&quot;    &quot;location&quot;  &quot;error&quot;    
-## [7] &quot;expecting&quot;</code></pre>
+<pre><code>## [1] &quot;spec&quot;      &quot;CWE&quot;       &quot;class&quot;     &quot;className&quot; &quot;method&quot;    &quot;location&quot; 
+## [7] &quot;error&quot;     &quot;expecting&quot;</code></pre>
 <div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" tabindex="-1"></a><span class="fu">nrow</span>(mop)</span></code></pre></div>
-<pre><code>## [1] 786</code></pre>
+<pre><code>## [1] 1048</code></pre>
 <div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" tabindex="-1"></a><span class="co"># lets prune the mop dataset, since we are only interested in </span></span>
 <span id="cb21-2"><a href="#cb21-2" tabindex="-1"></a><span class="co"># the categories crypto and hash</span></span>
 <span id="cb21-3"><a href="#cb21-3" tabindex="-1"></a></span>
-<span id="cb21-4"><a href="#cb21-4" tabindex="-1"></a>mop <span class="ot">&lt;-</span> <span class="fu">sqldf</span>(<span class="st">&quot;select spec, className, count(*) warnings </span></span>
+<span id="cb21-4"><a href="#cb21-4" tabindex="-1"></a>mop <span class="ot">&lt;-</span> <span class="fu">sqldf</span>(<span class="st">&quot;select spec, className, cwe, count(*) warnings </span></span>
 <span id="cb21-5"><a href="#cb21-5" tabindex="-1"></a><span class="st">              from mop </span></span>
 <span id="cb21-6"><a href="#cb21-6" tabindex="-1"></a><span class="st">              where spec in (&#39;CipherSpec&#39;, &#39;MessageDigestSpec&#39;)</span></span>
-<span id="cb21-7"><a href="#cb21-7" tabindex="-1"></a><span class="st">              group by spec, className&quot;</span>)</span>
+<span id="cb21-7"><a href="#cb21-7" tabindex="-1"></a><span class="st">              group by spec, className, cwe&quot;</span>)</span>
 <span id="cb21-8"><a href="#cb21-8" tabindex="-1"></a></span>
 <span id="cb21-9"><a href="#cb21-9" tabindex="-1"></a></span>
 <span id="cb21-10"><a href="#cb21-10" tabindex="-1"></a>tp <span class="ot">=</span> <span class="fu">sqldf</span>(<span class="st">&quot;select * </span></span>
@@ -519,13 +519,13 @@ display: none;
 <div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" tabindex="-1"></a>cc <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;../results/datasets/cognicrypt.csv&quot;</span>, <span class="at">head=</span>T, <span class="at">sep=</span><span class="st">&quot;,&quot;</span>)</span>
 <span id="cb28-2"><a href="#cb28-2" tabindex="-1"></a></span>
 <span id="cb28-3"><a href="#cb28-3" tabindex="-1"></a><span class="fu">colnames</span>(cc)</span></code></pre></div>
-<pre><code>## [1] &quot;spec&quot;      &quot;error&quot;     &quot;class&quot;     &quot;className&quot; &quot;method&quot;</code></pre>
+<pre><code>## [1] &quot;spec&quot;      &quot;cwe&quot;       &quot;error&quot;     &quot;class&quot;     &quot;className&quot; &quot;method&quot;</code></pre>
 <div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" tabindex="-1"></a><span class="fu">nrow</span>(cc)</span></code></pre></div>
 <pre><code>## [1] 1073</code></pre>
 <div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" tabindex="-1"></a><span class="co"># lets prune the cc dataset, since we are only interested in </span></span>
 <span id="cb32-2"><a href="#cb32-2" tabindex="-1"></a><span class="co"># the categories crypto and hash</span></span>
 <span id="cb32-3"><a href="#cb32-3" tabindex="-1"></a></span>
-<span id="cb32-4"><a href="#cb32-4" tabindex="-1"></a>cc <span class="ot">&lt;-</span> <span class="fu">sqldf</span>(<span class="st">&quot;select spec, className, count(*) warnings </span></span>
+<span id="cb32-4"><a href="#cb32-4" tabindex="-1"></a>cc <span class="ot">&lt;-</span> <span class="fu">sqldf</span>(<span class="st">&quot;select spec, className, cwe, count(*) warnings </span></span>
 <span id="cb32-5"><a href="#cb32-5" tabindex="-1"></a><span class="st">              from cc </span></span>
 <span id="cb32-6"><a href="#cb32-6" tabindex="-1"></a><span class="st">              where spec in (&#39;CipherSpec&#39;, &#39;MessageDigestSpec&#39;)</span></span>
 <span id="cb32-7"><a href="#cb32-7" tabindex="-1"></a><span class="st">              group by spec, className&quot;</span>)</span>
@@ -561,16 +561,16 @@ display: none;
 <div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" tabindex="-1"></a>cg <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;../results/datasets/cryptoguard.csv&quot;</span>, <span class="at">head=</span>T, <span class="at">sep=</span><span class="st">&quot;,&quot;</span>)</span>
 <span id="cb41-2"><a href="#cb41-2" tabindex="-1"></a></span>
 <span id="cb41-3"><a href="#cb41-3" tabindex="-1"></a><span class="fu">colnames</span>(cg)</span></code></pre></div>
-<pre><code>## [1] &quot;spec&quot;      &quot;error&quot;     &quot;class&quot;     &quot;className&quot; &quot;method&quot;</code></pre>
+<pre><code>## [1] &quot;spec&quot;      &quot;error&quot;     &quot;class&quot;     &quot;className&quot; &quot;method&quot;    &quot;cwe&quot;</code></pre>
 <div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" tabindex="-1"></a><span class="fu">nrow</span>(cg)</span></code></pre></div>
 <pre><code>## [1] 493</code></pre>
 <div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" tabindex="-1"></a><span class="co"># lets prune the cc dataset, since we are only interested in </span></span>
 <span id="cb45-2"><a href="#cb45-2" tabindex="-1"></a><span class="co"># the categories crypto (1) and hash (2) </span></span>
 <span id="cb45-3"><a href="#cb45-3" tabindex="-1"></a> </span>
-<span id="cb45-4"><a href="#cb45-4" tabindex="-1"></a>cg <span class="ot">&lt;-</span> <span class="fu">sqldf</span>(<span class="st">&quot;select spec, className, count(*) warnings </span></span>
+<span id="cb45-4"><a href="#cb45-4" tabindex="-1"></a>cg <span class="ot">&lt;-</span> <span class="fu">sqldf</span>(<span class="st">&quot;select spec, className, cwe, count(*) warnings </span></span>
 <span id="cb45-5"><a href="#cb45-5" tabindex="-1"></a><span class="st">              from cg</span></span>
 <span id="cb45-6"><a href="#cb45-6" tabindex="-1"></a><span class="st">              where spec in (1, 2)   </span></span>
-<span id="cb45-7"><a href="#cb45-7" tabindex="-1"></a><span class="st">              group by spec, className&quot;</span>)</span>
+<span id="cb45-7"><a href="#cb45-7" tabindex="-1"></a><span class="st">              group by spec, className, cwe&quot;</span>)</span>
 <span id="cb45-8"><a href="#cb45-8" tabindex="-1"></a></span>
 <span id="cb45-9"><a href="#cb45-9" tabindex="-1"></a><span class="fu">nrow</span>(cg)</span></code></pre></div>
 <pre><code>## [1] 246</code></pre>
@@ -604,13 +604,13 @@ display: none;
 <div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" tabindex="-1"></a>crylogger <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;../results/datasets/crylogger.csv&quot;</span>, <span class="at">head=</span>T, <span class="at">sep=</span><span class="st">&quot;,&quot;</span>)</span>
 <span id="cb54-2"><a href="#cb54-2" tabindex="-1"></a></span>
 <span id="cb54-3"><a href="#cb54-3" tabindex="-1"></a><span class="fu">colnames</span>(crylogger)</span></code></pre></div>
-<pre><code>## [1] &quot;Spec&quot;      &quot;class&quot;     &quot;className&quot; &quot;method&quot;    &quot;message&quot;</code></pre>
+<pre><code>## [1] &quot;Spec&quot;      &quot;class&quot;     &quot;className&quot; &quot;method&quot;    &quot;message&quot;   &quot;cwe&quot;</code></pre>
 <div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" tabindex="-1"></a><span class="fu">nrow</span>(crylogger)</span></code></pre></div>
 <pre><code>## [1] 659</code></pre>
 <div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" tabindex="-1"></a><span class="co"># lets prune the crylogger dataset, since we are only interested in </span></span>
 <span id="cb58-2"><a href="#cb58-2" tabindex="-1"></a><span class="co"># the categories crypto and hash</span></span>
 <span id="cb58-3"><a href="#cb58-3" tabindex="-1"></a></span>
-<span id="cb58-4"><a href="#cb58-4" tabindex="-1"></a>crylogger <span class="ot">&lt;-</span> <span class="fu">sqldf</span>(<span class="st">&quot;select distinct spec, className, method, message</span></span>
+<span id="cb58-4"><a href="#cb58-4" tabindex="-1"></a>crylogger <span class="ot">&lt;-</span> <span class="fu">sqldf</span>(<span class="st">&quot;select distinct spec, className, method, message, cwe</span></span>
 <span id="cb58-5"><a href="#cb58-5" tabindex="-1"></a><span class="st">                   from crylogger </span></span>
 <span id="cb58-6"><a href="#cb58-6" tabindex="-1"></a><span class="st">                   where Spec in (&#39;rule_R01&#39;, &#39;rule_R02&#39;, &#39;rule_R03&#39;)&quot;</span>)</span>
 <span id="cb58-7"><a href="#cb58-7" tabindex="-1"></a></span>
@@ -654,117 +654,136 @@ display: none;
 ## 2  CogniCrypt 0.5630435 1.0000000 0.7204451
 ## 3 CryptoGuard 0.8902439 0.8455598 0.8673267
 ## 4   CryLogger 0.8567568 1.0000000 0.9228530</code></pre>
-<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="#cb67-1" tabindex="-1"></a><span class="fu">sqldf</span>(<span class="st">&quot;select c.className, c.spec, c.message</span></span>
-<span id="cb67-2"><a href="#cb67-2" tabindex="-1"></a><span class="st">       from crylogger c</span></span>
-<span id="cb67-3"><a href="#cb67-3" tabindex="-1"></a><span class="st">       where c.className not in (select TestCase from gt where vulnerability = &#39;true&#39;)&quot;</span>)</span></code></pre></div>
-<pre><code>##             className     Spec
-## 1  BenchmarkTest00943 rule_R03
-## 2  BenchmarkTest02372 rule_R03
-## 3  BenchmarkTest02372 rule_R03
-## 4  BenchmarkTest00058 rule_R01
-## 5  BenchmarkTest00444 rule_R01
-## 6  BenchmarkTest00613 rule_R01
-## 7  BenchmarkTest00689 rule_R03
-## 8  BenchmarkTest00689 rule_R03
-## 9  BenchmarkTest00780 rule_R01
-## 10 BenchmarkTest00780 rule_R01
-## 11 BenchmarkTest00209 rule_R01
-## 12 BenchmarkTest01896 rule_R03
-## 13 BenchmarkTest00444 rule_R03
-## 14 BenchmarkTest01100 rule_R03
-## 15 BenchmarkTest00690 rule_R01
-## 16 BenchmarkTest00690 rule_R03
-## 17 BenchmarkTest00350 rule_R01
-## 18 BenchmarkTest01738 rule_R01
-## 19 BenchmarkTest00259 rule_R03
-## 20 BenchmarkTest00260 rule_R01
-## 21 BenchmarkTest01101 rule_R03
-## 22 BenchmarkTest01485 rule_R03
-## 23 BenchmarkTest00780 rule_R03
-## 24 BenchmarkTest00780 rule_R03
-## 25 BenchmarkTest00351 rule_R03
-## 26 BenchmarkTest00351 rule_R01
-## 27 BenchmarkTest01399 rule_R03
-## 28 BenchmarkTest01738 rule_R03
-## 29 BenchmarkTest01321 rule_R01
-## 30 BenchmarkTest01828 rule_R03
-## 31 BenchmarkTest01739 rule_R01
-## 32 BenchmarkTest00613 rule_R03
-## 33 BenchmarkTest01399 rule_R01
-## 34 BenchmarkTest01739 rule_R03
-## 35 BenchmarkTest01321 rule_R03
-## 36 BenchmarkTest00259 rule_R01
-## 37 BenchmarkTest01101 rule_R01
-## 38 BenchmarkTest01100 rule_R01
-## 39 BenchmarkTest00943 rule_R01
-## 40 BenchmarkTest00260 rule_R03
-## 41 BenchmarkTest00350 rule_R03
-## 42 BenchmarkTest00209 rule_R03
-## 43 BenchmarkTest01896 rule_R01
-## 44 BenchmarkTest02102 rule_R01
-## 45 BenchmarkTest00523 rule_R03
-## 46 BenchmarkTest01828 rule_R01
-## 47 BenchmarkTest02102 rule_R03
-## 48 BenchmarkTest00523 rule_R01
-## 49 BenchmarkTest02372 rule_R01
-## 50 BenchmarkTest02372 rule_R01
-## 51 BenchmarkTest01485 rule_R01
-## 52 BenchmarkTest00689 rule_R01
-## 53 BenchmarkTest00689 rule_R01
-##                                                      message
-## 1  out bytes: 512 with RSA/ECB/OAEPWithSHA-512AndMGF1Padding
-## 2  out bytes: 512 with RSA/ECB/OAEPWithSHA-512AndMGF1Padding
-## 3  out bytes: 512 with RSA/ECB/OAEPWithSHA-512AndMGF1Padding
-## 4                                           algorithm: SHA-1
-## 5                                           algorithm: SHA-1
-## 6                                           algorithm: SHA-1
-## 7  out bytes: 512 with RSA/ECB/OAEPWithSHA-512AndMGF1Padding
-## 8  out bytes: 512 with RSA/ECB/OAEPWithSHA-512AndMGF1Padding
-## 9                                           algorithm: SHA-1
-## 10                                          algorithm: SHA-1
-## 11                                          algorithm: SHA-1
-## 12 out bytes: 512 with RSA/ECB/OAEPWithSHA-512AndMGF1Padding
-## 13 out bytes: 512 with RSA/ECB/OAEPWithSHA-512AndMGF1Padding
-## 14 out bytes: 512 with RSA/ECB/OAEPWithSHA-512AndMGF1Padding
-## 15                                          algorithm: SHA-1
-## 16 out bytes: 512 with RSA/ECB/OAEPWithSHA-512AndMGF1Padding
-## 17                                          algorithm: SHA-1
-## 18                                          algorithm: SHA-1
-## 19 out bytes: 512 with RSA/ECB/OAEPWithSHA-512AndMGF1Padding
-## 20                                          algorithm: SHA-1
-## 21 out bytes: 512 with RSA/ECB/OAEPWithSHA-512AndMGF1Padding
-## 22 out bytes: 512 with RSA/ECB/OAEPWithSHA-512AndMGF1Padding
-## 23 out bytes: 512 with RSA/ECB/OAEPWithSHA-512AndMGF1Padding
-## 24 out bytes: 512 with RSA/ECB/OAEPWithSHA-512AndMGF1Padding
-## 25 out bytes: 512 with RSA/ECB/OAEPWithSHA-512AndMGF1Padding
-## 26                                          algorithm: SHA-1
-## 27 out bytes: 512 with RSA/ECB/OAEPWithSHA-512AndMGF1Padding
-## 28 out bytes: 512 with RSA/ECB/OAEPWithSHA-512AndMGF1Padding
-## 29                                          algorithm: SHA-1
-## 30 out bytes: 512 with RSA/ECB/OAEPWithSHA-512AndMGF1Padding
-## 31                                          algorithm: SHA-1
-## 32 out bytes: 512 with RSA/ECB/OAEPWithSHA-512AndMGF1Padding
-## 33                                          algorithm: SHA-1
-## 34 out bytes: 512 with RSA/ECB/OAEPWithSHA-512AndMGF1Padding
-## 35 out bytes: 512 with RSA/ECB/OAEPWithSHA-512AndMGF1Padding
-## 36                                          algorithm: SHA-1
-## 37                                          algorithm: SHA-1
-## 38                                          algorithm: SHA-1
-## 39                                          algorithm: SHA-1
-## 40 out bytes: 512 with RSA/ECB/OAEPWithSHA-512AndMGF1Padding
-## 41 out bytes: 512 with RSA/ECB/OAEPWithSHA-512AndMGF1Padding
-## 42 out bytes: 512 with RSA/ECB/OAEPWithSHA-512AndMGF1Padding
-## 43                                          algorithm: SHA-1
-## 44                                          algorithm: SHA-1
-## 45 out bytes: 512 with RSA/ECB/OAEPWithSHA-512AndMGF1Padding
-## 46                                          algorithm: SHA-1
-## 47 out bytes: 512 with RSA/ECB/OAEPWithSHA-512AndMGF1Padding
-## 48                                          algorithm: SHA-1
-## 49                                          algorithm: SHA-1
-## 50                                          algorithm: SHA-1
-## 51                                          algorithm: SHA-1
-## 52                                          algorithm: SHA-1
-## 53                                          algorithm: SHA-1</code></pre>
+</div>
+<div id="cwe-integration" class="section level1">
+<h1>CWE integration</h1>
+<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="#cb67-1" tabindex="-1"></a><span class="fu">nrow</span>(gt)</span></code></pre></div>
+<pre><code>## [1] 482</code></pre>
+<div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb69-1"><a href="#cb69-1" tabindex="-1"></a><span class="fu">colnames</span>(gt)</span></code></pre></div>
+<pre><code>## [1] &quot;TestCase&quot;      &quot;Category&quot;      &quot;Vulnerability&quot; &quot;CWE&quot;</code></pre>
+<div class="sourceCode" id="cb71"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb71-1"><a href="#cb71-1" tabindex="-1"></a><span class="fu">sqldf</span>(<span class="st">&quot;select CWE, VULNERABILITY, count(*) </span></span>
+<span id="cb71-2"><a href="#cb71-2" tabindex="-1"></a><span class="st">       from gt</span></span>
+<span id="cb71-3"><a href="#cb71-3" tabindex="-1"></a><span class="st">       group by CWE, VULNERABILITY&quot;</span>)</span></code></pre></div>
+<pre><code>##   CWE Vulnerability count(*)
+## 1 327         false      116
+## 2 327          true      130
+## 3 328         false      107
+## 4 328          true      129</code></pre>
+<div class="sourceCode" id="cb73"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb73-1"><a href="#cb73-1" tabindex="-1"></a><span class="fu">nrow</span>(mop)</span></code></pre></div>
+<pre><code>## [1] 260</code></pre>
+<div class="sourceCode" id="cb75"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb75-1"><a href="#cb75-1" tabindex="-1"></a><span class="fu">colnames</span>(mop)</span></code></pre></div>
+<pre><code>## [1] &quot;spec&quot;      &quot;className&quot; &quot;CWE&quot;       &quot;warnings&quot;</code></pre>
+<div class="sourceCode" id="cb77"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb77-1"><a href="#cb77-1" tabindex="-1"></a><span class="fu">sqldf</span>(<span class="st">&quot;select distinct spec from mop&quot;</span>)</span></code></pre></div>
+<pre><code>##                spec
+## 1        CipherSpec
+## 2 MessageDigestSpec</code></pre>
+<div class="sourceCode" id="cb79"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb79-1"><a href="#cb79-1" tabindex="-1"></a>tp <span class="ot">=</span> <span class="fu">sqldf</span>(<span class="st">&quot;select g.CWE as &#39;cwe&#39;, g.TestCase as &#39;ClassName&#39;, &#39;RVSec&#39; as Tool, &#39;TP&#39; as &#39;Warning&#39; </span></span>
+<span id="cb79-2"><a href="#cb79-2" tabindex="-1"></a><span class="st">            from mop m, gt g</span></span>
+<span id="cb79-3"><a href="#cb79-3" tabindex="-1"></a><span class="st">            where m.className = g.TestCase and </span></span>
+<span id="cb79-4"><a href="#cb79-4" tabindex="-1"></a><span class="st">                  g.vulnerability = &#39;true&#39;&quot;</span>)</span>
+<span id="cb79-5"><a href="#cb79-5" tabindex="-1"></a></span>
+<span id="cb79-6"><a href="#cb79-6" tabindex="-1"></a>fp <span class="ot">=</span> <span class="fu">sqldf</span>(<span class="st">&quot;select m.cwe as &#39;cwe&#39;, m.className as &#39;ClassName&#39;, &#39;RVSec&#39; as Tool, &#39;FP&#39; as &#39;Warning&#39; </span></span>
+<span id="cb79-7"><a href="#cb79-7" tabindex="-1"></a><span class="st">            from mop m</span></span>
+<span id="cb79-8"><a href="#cb79-8" tabindex="-1"></a><span class="st">            where m.className not in (select TestCase from gt where vulnerability = &#39;true&#39;)&quot;</span>)</span>
+<span id="cb79-9"><a href="#cb79-9" tabindex="-1"></a></span>
+<span id="cb79-10"><a href="#cb79-10" tabindex="-1"></a>fn <span class="ot">=</span> <span class="fu">sqldf</span>(<span class="st">&quot;select g.CWE as &#39;cwe&#39;, g.TestCase as &#39;ClassName&#39;, &#39;RVSec&#39; as Tool, &#39;FN&#39; as &#39;Warning&#39; </span></span>
+<span id="cb79-11"><a href="#cb79-11" tabindex="-1"></a><span class="st">            from gt g</span></span>
+<span id="cb79-12"><a href="#cb79-12" tabindex="-1"></a><span class="st">            where vulnerability = &#39;true&#39; and TestCase not in (select className from mop)&quot;</span>)</span>
+<span id="cb79-13"><a href="#cb79-13" tabindex="-1"></a></span>
+<span id="cb79-14"><a href="#cb79-14" tabindex="-1"></a>ds <span class="ot">&lt;-</span> <span class="fu">rbind</span>(tp, fp)</span>
+<span id="cb79-15"><a href="#cb79-15" tabindex="-1"></a>ds <span class="ot">&lt;-</span> <span class="fu">rbind</span>(ds, fn)</span>
+<span id="cb79-16"><a href="#cb79-16" tabindex="-1"></a><span class="do">## CogniCrypt </span></span>
+<span id="cb79-17"><a href="#cb79-17" tabindex="-1"></a></span>
+<span id="cb79-18"><a href="#cb79-18" tabindex="-1"></a>tp <span class="ot">=</span> <span class="fu">sqldf</span>(<span class="st">&quot;select g.CWE as &#39;cwe&#39;, g.TestCase as &#39;ClassName&#39;, &#39;CogniCrypt&#39; as Tool, &#39;TP&#39; as &#39;Warning&#39; </span></span>
+<span id="cb79-19"><a href="#cb79-19" tabindex="-1"></a><span class="st">            from cc c, gt g </span></span>
+<span id="cb79-20"><a href="#cb79-20" tabindex="-1"></a><span class="st">            where c.className = TestCase and </span></span>
+<span id="cb79-21"><a href="#cb79-21" tabindex="-1"></a><span class="st">                  vulnerability = &#39;true&#39;&quot;</span>)</span>
+<span id="cb79-22"><a href="#cb79-22" tabindex="-1"></a></span>
+<span id="cb79-23"><a href="#cb79-23" tabindex="-1"></a>fp <span class="ot">=</span> <span class="fu">sqldf</span>(<span class="st">&quot;select c.CWE as &#39;cwe&#39;, c.className as &#39;ClassName&#39;, &#39;CogniCrypt&#39; as Tool, &#39;FP&#39; as &#39;Warning&#39; </span></span>
+<span id="cb79-24"><a href="#cb79-24" tabindex="-1"></a><span class="st">            from cc c</span></span>
+<span id="cb79-25"><a href="#cb79-25" tabindex="-1"></a><span class="st">            where c.className not in (select TestCase from gt where vulnerability = &#39;true&#39;)&quot;</span>)</span>
+<span id="cb79-26"><a href="#cb79-26" tabindex="-1"></a></span>
+<span id="cb79-27"><a href="#cb79-27" tabindex="-1"></a></span>
+<span id="cb79-28"><a href="#cb79-28" tabindex="-1"></a>fn <span class="ot">=</span> <span class="fu">sqldf</span>(<span class="st">&quot;select g.CWE as &#39;cwe&#39;, g.TestCase as &#39;ClassName&#39;, &#39;CogniCrypt&#39; as Tool, &#39;FN&#39; as &#39;Warning&#39; </span></span>
+<span id="cb79-29"><a href="#cb79-29" tabindex="-1"></a><span class="st">            from gt g</span></span>
+<span id="cb79-30"><a href="#cb79-30" tabindex="-1"></a><span class="st">            where vulnerability = &#39;true&#39; and TestCase not in (select className from cc)&quot;</span>)</span>
+<span id="cb79-31"><a href="#cb79-31" tabindex="-1"></a></span>
+<span id="cb79-32"><a href="#cb79-32" tabindex="-1"></a>ds <span class="ot">&lt;-</span> <span class="fu">rbind</span>(ds, tp)</span>
+<span id="cb79-33"><a href="#cb79-33" tabindex="-1"></a>ds <span class="ot">&lt;-</span> <span class="fu">rbind</span>(ds, fp)</span>
+<span id="cb79-34"><a href="#cb79-34" tabindex="-1"></a>ds <span class="ot">&lt;-</span> <span class="fu">rbind</span>(ds, fn)</span>
+<span id="cb79-35"><a href="#cb79-35" tabindex="-1"></a></span>
+<span id="cb79-36"><a href="#cb79-36" tabindex="-1"></a><span class="do">## CryptoGuard </span></span>
+<span id="cb79-37"><a href="#cb79-37" tabindex="-1"></a></span>
+<span id="cb79-38"><a href="#cb79-38" tabindex="-1"></a>tp <span class="ot">=</span> <span class="fu">sqldf</span>(<span class="st">&quot;select g.CWE as &#39;cwe&#39;, g.TestCase as &#39;ClassName&#39;, &#39;CryptoGuard&#39; as Tool, &#39;TP&#39; as &#39;Warning&#39; </span></span>
+<span id="cb79-39"><a href="#cb79-39" tabindex="-1"></a><span class="st">            from cg c, gt g</span></span>
+<span id="cb79-40"><a href="#cb79-40" tabindex="-1"></a><span class="st">            where c.className = TestCase and </span></span>
+<span id="cb79-41"><a href="#cb79-41" tabindex="-1"></a><span class="st">                  vulnerability = &#39;true&#39;&quot;</span>)</span>
+<span id="cb79-42"><a href="#cb79-42" tabindex="-1"></a></span>
+<span id="cb79-43"><a href="#cb79-43" tabindex="-1"></a>fp <span class="ot">=</span> <span class="fu">sqldf</span>(<span class="st">&quot;select c.CWE as &#39;cwe&#39;, c.className as &#39;ClassName&#39;, &#39;CryptoGuard&#39; as Tool, &#39;FP&#39; as &#39;Warning&#39; </span></span>
+<span id="cb79-44"><a href="#cb79-44" tabindex="-1"></a><span class="st">            from cg c</span></span>
+<span id="cb79-45"><a href="#cb79-45" tabindex="-1"></a><span class="st">            where c.className not in (select TestCase from gt where vulnerability = &#39;true&#39;)&quot;</span>)</span>
+<span id="cb79-46"><a href="#cb79-46" tabindex="-1"></a></span>
+<span id="cb79-47"><a href="#cb79-47" tabindex="-1"></a></span>
+<span id="cb79-48"><a href="#cb79-48" tabindex="-1"></a>fn <span class="ot">=</span> <span class="fu">sqldf</span>(<span class="st">&quot;select g.CWE as &#39;cwe&#39;, g.TestCase as &#39;ClassName&#39;, &#39;CryptoGuard&#39; as Tool, &#39;FN&#39; as &#39;Warning&#39; </span></span>
+<span id="cb79-49"><a href="#cb79-49" tabindex="-1"></a><span class="st">            from gt g</span></span>
+<span id="cb79-50"><a href="#cb79-50" tabindex="-1"></a><span class="st">            where vulnerability = &#39;true&#39; and TestCase not in (select className from cg)&quot;</span>)</span>
+<span id="cb79-51"><a href="#cb79-51" tabindex="-1"></a></span>
+<span id="cb79-52"><a href="#cb79-52" tabindex="-1"></a>ds <span class="ot">&lt;-</span> <span class="fu">rbind</span>(ds, tp)</span>
+<span id="cb79-53"><a href="#cb79-53" tabindex="-1"></a>ds <span class="ot">&lt;-</span> <span class="fu">rbind</span>(ds, fp)</span>
+<span id="cb79-54"><a href="#cb79-54" tabindex="-1"></a>ds <span class="ot">&lt;-</span> <span class="fu">rbind</span>(ds, fn)</span>
+<span id="cb79-55"><a href="#cb79-55" tabindex="-1"></a></span>
+<span id="cb79-56"><a href="#cb79-56" tabindex="-1"></a><span class="do">## CryLogger </span></span>
+<span id="cb79-57"><a href="#cb79-57" tabindex="-1"></a></span>
+<span id="cb79-58"><a href="#cb79-58" tabindex="-1"></a>tp <span class="ot">=</span> <span class="fu">sqldf</span>(<span class="st">&quot;select g.CWE as &#39;cwe&#39;, g.TestCase as &#39;ClassName&#39;, &#39;CryLogger&#39; as Tool, &#39;TP&#39; as &#39;Warning&#39; </span></span>
+<span id="cb79-59"><a href="#cb79-59" tabindex="-1"></a><span class="st">            from crylogger c, gt g</span></span>
+<span id="cb79-60"><a href="#cb79-60" tabindex="-1"></a><span class="st">            where c.className = TestCase and </span></span>
+<span id="cb79-61"><a href="#cb79-61" tabindex="-1"></a><span class="st">                  vulnerability = &#39;true&#39;&quot;</span>)</span>
+<span id="cb79-62"><a href="#cb79-62" tabindex="-1"></a></span>
+<span id="cb79-63"><a href="#cb79-63" tabindex="-1"></a>fp <span class="ot">=</span> <span class="fu">sqldf</span>(<span class="st">&quot;select c.cwe as &#39;cwe&#39;, c.className as &#39;ClassName&#39;, &#39;CryLogger&#39; as Tool, &#39;FP&#39; as &#39;Warning&#39; </span></span>
+<span id="cb79-64"><a href="#cb79-64" tabindex="-1"></a><span class="st">            from crylogger c</span></span>
+<span id="cb79-65"><a href="#cb79-65" tabindex="-1"></a><span class="st">            where c.className not in (select TestCase from gt where vulnerability = &#39;true&#39;)&quot;</span>)</span>
+<span id="cb79-66"><a href="#cb79-66" tabindex="-1"></a></span>
+<span id="cb79-67"><a href="#cb79-67" tabindex="-1"></a>fn <span class="ot">=</span> <span class="fu">sqldf</span>(<span class="st">&quot;select g.CWE as &#39;cwe&#39;, g.TestCase as &#39;ClassName&#39;, &#39;CryLogger&#39; as Tool, &#39;FN&#39; as &#39;Warning&#39;</span></span>
+<span id="cb79-68"><a href="#cb79-68" tabindex="-1"></a><span class="st">            from gt g</span></span>
+<span id="cb79-69"><a href="#cb79-69" tabindex="-1"></a><span class="st">            where vulnerability = &#39;true&#39; and TestCase not in (select className from crylogger)&quot;</span>)</span>
+<span id="cb79-70"><a href="#cb79-70" tabindex="-1"></a></span>
+<span id="cb79-71"><a href="#cb79-71" tabindex="-1"></a></span>
+<span id="cb79-72"><a href="#cb79-72" tabindex="-1"></a>ds <span class="ot">&lt;-</span> <span class="fu">rbind</span>(ds, tp)</span>
+<span id="cb79-73"><a href="#cb79-73" tabindex="-1"></a>ds <span class="ot">&lt;-</span> <span class="fu">rbind</span>(ds, fp)</span>
+<span id="cb79-74"><a href="#cb79-74" tabindex="-1"></a>ds <span class="ot">&lt;-</span> <span class="fu">rbind</span>(ds, fn)</span>
+<span id="cb79-75"><a href="#cb79-75" tabindex="-1"></a></span>
+<span id="cb79-76"><a href="#cb79-76" tabindex="-1"></a><span class="fu">sqldf</span>(<span class="st">&quot;select tool, warning, count(*) from ds group by tool, warning&quot;</span>)</span></code></pre></div>
+<pre><code>##          Tool Warning count(*)
+## 1  CogniCrypt      FP      201
+## 2  CogniCrypt      TP      259
+## 3   CryLogger      FP       53
+## 4   CryLogger      TP      317
+## 5 CryptoGuard      FN       40
+## 6 CryptoGuard      FP       27
+## 7 CryptoGuard      TP      219
+## 8       RVSec      FP        1
+## 9       RVSec      TP      259</code></pre>
+<div class="sourceCode" id="cb81"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb81-1"><a href="#cb81-1" tabindex="-1"></a><span class="fu">write.csv</span>(ds, <span class="st">&quot;../results/datasets/gt-cwes.csv&quot;</span>,  <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb81-2"><a href="#cb81-2" tabindex="-1"></a></span>
+<span id="cb81-3"><a href="#cb81-3" tabindex="-1"></a><span class="fu">sqldf</span>(<span class="st">&quot;select tool, cwe, warning, count(*) </span></span>
+<span id="cb81-4"><a href="#cb81-4" tabindex="-1"></a><span class="st">       from ds </span></span>
+<span id="cb81-5"><a href="#cb81-5" tabindex="-1"></a><span class="st">       group by tool, cwe, warning&quot;</span>)</span></code></pre></div>
+<pre><code>##           Tool cwe Warning count(*)
+## 1   CogniCrypt 327      FP       94
+## 2   CogniCrypt 327      TP      130
+## 3   CogniCrypt 328      FP      107
+## 4   CogniCrypt 328      TP      129
+## 5    CryLogger 327      FP       26
+## 6    CryLogger 327      TP      159
+## 7    CryLogger 328      FP       27
+## 8    CryLogger 328      TP      158
+## 9  CryptoGuard 327      FP       27
+## 10 CryptoGuard 327      TP      130
+## 11 CryptoGuard 328      FN       40
+## 12 CryptoGuard 328      TP       89
+## 13       RVSec 327      TP      130
+## 14       RVSec 328      FP        1
+## 15       RVSec 328      TP      129</code></pre>
 </div>
 
 
