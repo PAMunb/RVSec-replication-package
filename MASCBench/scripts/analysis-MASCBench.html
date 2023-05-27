@@ -440,252 +440,337 @@ display: none;
 <span id="cb1-6"><a href="#cb1-6" tabindex="-1"></a></span>
 <span id="cb1-7"><a href="#cb1-7" tabindex="-1"></a>gt <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;../results/gt.csv&quot;</span>, <span class="at">head=</span>T, <span class="at">sep=</span><span class="st">&quot;,&quot;</span>)</span>
 <span id="cb1-8"><a href="#cb1-8" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" tabindex="-1"></a>gt <span class="ot">&lt;-</span> <span class="fu">na.omit</span>(gt)</span>
-<span id="cb1-10"><a href="#cb1-10" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" tabindex="-1"></a><span class="fu">nrow</span>(bench03mop)</span></code></pre></div>
-<pre><code>## [1] 80</code></pre>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="fu">colnames</span>(bench03mop)</span></code></pre></div>
-<pre><code>## [1] &quot;spec&quot;      &quot;class&quot;     &quot;className&quot; &quot;method&quot;    &quot;location&quot;  &quot;error&quot;    
-## [7] &quot;expecting&quot;</code></pre>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="fu">nrow</span>(bench03cc)</span></code></pre></div>
-<pre><code>## [1] 37</code></pre>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="fu">colnames</span>(bench03cc)</span></code></pre></div>
-<pre><code>## [1] &quot;spec&quot;      &quot;error&quot;     &quot;class&quot;     &quot;className&quot; &quot;method&quot;</code></pre>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="fu">nrow</span>(bench03cg)</span></code></pre></div>
-<pre><code>## [1] 21</code></pre>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="fu">colnames</span>(bench03cg)</span></code></pre></div>
-<pre><code>## [1] &quot;spec&quot;      &quot;error&quot;     &quot;class&quot;     &quot;className&quot; &quot;method&quot;</code></pre>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a><span class="fu">colnames</span>(gt)</span></code></pre></div>
-<pre><code>## [1] &quot;className&quot;     &quot;vulnerability&quot; &quot;Description&quot;</code></pre>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" tabindex="-1"></a><span class="fu">nrow</span>(gt)</span></code></pre></div>
-<pre><code>## [1] 31</code></pre>
+<span id="cb1-9"><a href="#cb1-9" tabindex="-1"></a>gt <span class="ot">&lt;-</span> <span class="fu">na.omit</span>(gt)</span></code></pre></div>
 <div id="filter-out-irrelevant-warnings-for-the-study" class="section level3">
 <h3>Filter out irrelevant warnings for the study</h3>
 <p>This is necessary because we have enriched the test cases for more
 complete scenarios, instead of just instantiating cryptographic
 primitives and then doing nothing with them. To solve this issue, we
 introduce the usage of Keys.</p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" tabindex="-1"></a>bench03mop <span class="ot">&lt;-</span> <span class="fu">sqldf</span>(<span class="st">&quot;select * from bench03mop where spec != &#39;KeyGeneratorSpec&#39;&quot;</span>)</span>
-<span id="cb17-2"><a href="#cb17-2" tabindex="-1"></a><span class="fu">nrow</span>(bench03mop)</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a>bench03mop <span class="ot">&lt;-</span> <span class="fu">sqldf</span>(<span class="st">&quot;select * from bench03mop where spec != &#39;KeyGeneratorSpec&#39;&quot;</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a><span class="fu">nrow</span>(bench03mop)</span></code></pre></div>
 <pre><code>## [1] 60</code></pre>
-<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" tabindex="-1"></a>bench03cc <span class="ot">&lt;-</span> <span class="fu">sqldf</span>(<span class="st">&quot;select * from bench03cc  where spec != &#39;KeyGeneratorSpec&#39;&quot;</span>)</span>
-<span id="cb19-2"><a href="#cb19-2" tabindex="-1"></a><span class="fu">nrow</span>(bench03cc)</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a>bench03cc <span class="ot">&lt;-</span> <span class="fu">sqldf</span>(<span class="st">&quot;select * from bench03cc  where spec != &#39;KeyGeneratorSpec&#39;&quot;</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a><span class="fu">nrow</span>(bench03cc)</span></code></pre></div>
+<pre><code>## [1] 28</code></pre>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a>bench03cy <span class="ot">&lt;-</span> <span class="fu">sqldf</span>(<span class="st">&quot;select * from bench03cy  where spec in (&#39;rule_R01&#39;, &#39;rule_R02&#39;)&quot;</span>)</span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a><span class="fu">nrow</span>(bench03cy)</span></code></pre></div>
 <pre><code>## [1] 28</code></pre>
 </div>
 </div>
-<div id="identifying-the-set-of-tps-and-tns" class="section level2">
-<h2>Identifying the set of TPs and TNs</h2>
-<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" tabindex="-1"></a>tp <span class="ot">&lt;-</span> gt[gt<span class="sc">$</span>vulnerability <span class="sc">==</span> <span class="st">&quot;True&quot;</span>,]</span>
-<span id="cb21-2"><a href="#cb21-2" tabindex="-1"></a>tn <span class="ot">&lt;-</span> gt[gt<span class="sc">$</span>vulnerability <span class="sc">==</span> <span class="st">&quot;False&quot;</span>,]</span>
-<span id="cb21-3"><a href="#cb21-3" tabindex="-1"></a></span>
-<span id="cb21-4"><a href="#cb21-4" tabindex="-1"></a><span class="fu">sqldf</span>(<span class="st">&quot;select count(distinct className) from tp&quot;</span>)</span></code></pre></div>
+<div id="identifying-the-sets-of-tps-and-tns" class="section level2">
+<h2>Identifying the sets of TPs and TNs</h2>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a>tp <span class="ot">&lt;-</span> gt[gt<span class="sc">$</span>vulnerability <span class="sc">==</span> <span class="st">&quot;True&quot;</span>,]</span>
+<span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a>tn <span class="ot">&lt;-</span> gt[gt<span class="sc">$</span>vulnerability <span class="sc">==</span> <span class="st">&quot;False&quot;</span>,]</span>
+<span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a></span>
+<span id="cb8-4"><a href="#cb8-4" tabindex="-1"></a><span class="fu">sqldf</span>(<span class="st">&quot;select count(distinct className) from tp&quot;</span>)</span></code></pre></div>
 <pre><code>##   count(distinct className)
 ## 1                        28</code></pre>
-<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" tabindex="-1"></a><span class="fu">sqldf</span>(<span class="st">&quot;select count(distinct className) from tn&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a><span class="fu">sqldf</span>(<span class="st">&quot;select count(distinct className) from tn&quot;</span>)</span></code></pre></div>
 <pre><code>##   count(distinct className)
 ## 1                         1</code></pre>
 </div>
 <div id="computing-precision-and-recall-for-mop" class="section level2">
 <h2>Computing Precision and Recall for MOP</h2>
-<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" tabindex="-1"></a><span class="co"># compute true positive </span></span>
-<span id="cb25-2"><a href="#cb25-2" tabindex="-1"></a></span>
-<span id="cb25-3"><a href="#cb25-3" tabindex="-1"></a>mop_tp <span class="ot">&lt;-</span> <span class="fu">sqldf</span>(<span class="st">&quot;select count(distinct className) as tp</span></span>
-<span id="cb25-4"><a href="#cb25-4" tabindex="-1"></a><span class="st">                 from bench03mop </span></span>
-<span id="cb25-5"><a href="#cb25-5" tabindex="-1"></a><span class="st">                 where className in (select className from tp)&quot;</span>)</span>
-<span id="cb25-6"><a href="#cb25-6" tabindex="-1"></a></span>
-<span id="cb25-7"><a href="#cb25-7" tabindex="-1"></a><span class="co"># compute false positive </span></span>
-<span id="cb25-8"><a href="#cb25-8" tabindex="-1"></a></span>
-<span id="cb25-9"><a href="#cb25-9" tabindex="-1"></a>mop_fp <span class="ot">&lt;-</span> <span class="fu">sqldf</span>(<span class="st">&quot;select count(distinct className) as fp</span></span>
-<span id="cb25-10"><a href="#cb25-10" tabindex="-1"></a><span class="st">                 from bench03mop </span></span>
-<span id="cb25-11"><a href="#cb25-11" tabindex="-1"></a><span class="st">                 where className in (select className from tn)&quot;</span>)</span>
-<span id="cb25-12"><a href="#cb25-12" tabindex="-1"></a></span>
-<span id="cb25-13"><a href="#cb25-13" tabindex="-1"></a><span class="co"># compute false-negative  </span></span>
-<span id="cb25-14"><a href="#cb25-14" tabindex="-1"></a></span>
-<span id="cb25-15"><a href="#cb25-15" tabindex="-1"></a>mop_fn <span class="ot">&lt;-</span> <span class="fu">sqldf</span>(<span class="st">&quot;select count(distinct className) as fn</span></span>
-<span id="cb25-16"><a href="#cb25-16" tabindex="-1"></a><span class="st">                 from tp </span></span>
-<span id="cb25-17"><a href="#cb25-17" tabindex="-1"></a><span class="st">                 where className not in (select className from bench03mop)&quot;</span>)</span>
-<span id="cb25-18"><a href="#cb25-18" tabindex="-1"></a></span>
-<span id="cb25-19"><a href="#cb25-19" tabindex="-1"></a><span class="co"># MOP true positives</span></span>
-<span id="cb25-20"><a href="#cb25-20" tabindex="-1"></a>mop_tp</span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a><span class="co"># compute true positive </span></span>
+<span id="cb12-2"><a href="#cb12-2" tabindex="-1"></a></span>
+<span id="cb12-3"><a href="#cb12-3" tabindex="-1"></a>mop_tp <span class="ot">&lt;-</span> <span class="fu">sqldf</span>(<span class="st">&quot;select count(distinct className) as tp</span></span>
+<span id="cb12-4"><a href="#cb12-4" tabindex="-1"></a><span class="st">                 from bench03mop </span></span>
+<span id="cb12-5"><a href="#cb12-5" tabindex="-1"></a><span class="st">                 where className in (select className from tp)&quot;</span>)</span>
+<span id="cb12-6"><a href="#cb12-6" tabindex="-1"></a></span>
+<span id="cb12-7"><a href="#cb12-7" tabindex="-1"></a><span class="co"># compute false positive </span></span>
+<span id="cb12-8"><a href="#cb12-8" tabindex="-1"></a></span>
+<span id="cb12-9"><a href="#cb12-9" tabindex="-1"></a>mop_fp <span class="ot">&lt;-</span> <span class="fu">sqldf</span>(<span class="st">&quot;select count(distinct className) as fp</span></span>
+<span id="cb12-10"><a href="#cb12-10" tabindex="-1"></a><span class="st">                 from bench03mop </span></span>
+<span id="cb12-11"><a href="#cb12-11" tabindex="-1"></a><span class="st">                 where className in (select className from tn)&quot;</span>)</span>
+<span id="cb12-12"><a href="#cb12-12" tabindex="-1"></a></span>
+<span id="cb12-13"><a href="#cb12-13" tabindex="-1"></a><span class="co"># compute false-negative  </span></span>
+<span id="cb12-14"><a href="#cb12-14" tabindex="-1"></a></span>
+<span id="cb12-15"><a href="#cb12-15" tabindex="-1"></a>mop_fn <span class="ot">&lt;-</span> <span class="fu">sqldf</span>(<span class="st">&quot;select count(distinct className) as fn</span></span>
+<span id="cb12-16"><a href="#cb12-16" tabindex="-1"></a><span class="st">                 from tp </span></span>
+<span id="cb12-17"><a href="#cb12-17" tabindex="-1"></a><span class="st">                 where className not in (select className from bench03mop)&quot;</span>)</span>
+<span id="cb12-18"><a href="#cb12-18" tabindex="-1"></a></span>
+<span id="cb12-19"><a href="#cb12-19" tabindex="-1"></a><span class="co"># MOP true positives</span></span>
+<span id="cb12-20"><a href="#cb12-20" tabindex="-1"></a>mop_tp</span></code></pre></div>
 <pre><code>##   tp
 ## 1 28</code></pre>
-<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" tabindex="-1"></a><span class="co"># MOP false positives</span></span>
-<span id="cb27-2"><a href="#cb27-2" tabindex="-1"></a>mop_fp</span></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a><span class="co"># MOP false positives</span></span>
+<span id="cb14-2"><a href="#cb14-2" tabindex="-1"></a>mop_fp</span></code></pre></div>
 <pre><code>##   fp
 ## 1  0</code></pre>
-<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" tabindex="-1"></a><span class="co"># MOP false negatives</span></span>
-<span id="cb29-2"><a href="#cb29-2" tabindex="-1"></a>mop_fn</span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" tabindex="-1"></a><span class="co"># MOP false negatives</span></span>
+<span id="cb16-2"><a href="#cb16-2" tabindex="-1"></a>mop_fn</span></code></pre></div>
 <pre><code>##   fn
 ## 1  0</code></pre>
-<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" tabindex="-1"></a>precision_mop <span class="ot">&lt;-</span> mop_tp<span class="sc">$</span>tp <span class="sc">/</span> (mop_tp<span class="sc">$</span>tp <span class="sc">+</span> mop_fp<span class="sc">$</span>fp)</span>
-<span id="cb31-2"><a href="#cb31-2" tabindex="-1"></a>precision_mop</span></code></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" tabindex="-1"></a>precision_mop <span class="ot">&lt;-</span> mop_tp<span class="sc">$</span>tp <span class="sc">/</span> (mop_tp<span class="sc">$</span>tp <span class="sc">+</span> mop_fp<span class="sc">$</span>fp)</span>
+<span id="cb18-2"><a href="#cb18-2" tabindex="-1"></a>precision_mop</span></code></pre></div>
 <pre><code>## [1] 1</code></pre>
-<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" tabindex="-1"></a>recall_mop <span class="ot">&lt;-</span> mop_tp<span class="sc">$</span>tp <span class="sc">/</span> (mop_tp<span class="sc">$</span>tp <span class="sc">+</span> mop_fn<span class="sc">$</span>fn)</span>
-<span id="cb33-2"><a href="#cb33-2" tabindex="-1"></a>recall_mop</span></code></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" tabindex="-1"></a>recall_mop <span class="ot">&lt;-</span> mop_tp<span class="sc">$</span>tp <span class="sc">/</span> (mop_tp<span class="sc">$</span>tp <span class="sc">+</span> mop_fn<span class="sc">$</span>fn)</span>
+<span id="cb20-2"><a href="#cb20-2" tabindex="-1"></a>recall_mop</span></code></pre></div>
 <pre><code>## [1] 1</code></pre>
-<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" tabindex="-1"></a>fmeasure_mop <span class="ot">=</span> (<span class="dv">2</span> <span class="sc">*</span> precision_mop <span class="sc">*</span> recall_mop) <span class="sc">/</span> (precision_mop <span class="sc">+</span> recall_mop)</span>
-<span id="cb35-2"><a href="#cb35-2" tabindex="-1"></a>fmeasure_mop</span></code></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" tabindex="-1"></a>fmeasure_mop <span class="ot">=</span> (<span class="dv">2</span> <span class="sc">*</span> precision_mop <span class="sc">*</span> recall_mop) <span class="sc">/</span> (precision_mop <span class="sc">+</span> recall_mop)</span>
+<span id="cb22-2"><a href="#cb22-2" tabindex="-1"></a>fmeasure_mop</span></code></pre></div>
 <pre><code>## [1] 1</code></pre>
 </div>
 <div id="computing-precision-and-recall-for-cc" class="section level2">
 <h2>Computing Precision and Recall for CC</h2>
-<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" tabindex="-1"></a><span class="co"># compute true positive </span></span>
-<span id="cb37-2"><a href="#cb37-2" tabindex="-1"></a></span>
-<span id="cb37-3"><a href="#cb37-3" tabindex="-1"></a>cc_tp <span class="ot">&lt;-</span> <span class="fu">sqldf</span>(<span class="st">&quot;select count(distinct className) as tp</span></span>
-<span id="cb37-4"><a href="#cb37-4" tabindex="-1"></a><span class="st">                 from bench03cc </span></span>
-<span id="cb37-5"><a href="#cb37-5" tabindex="-1"></a><span class="st">                 where className in (select className from tp)&quot;</span>)</span>
-<span id="cb37-6"><a href="#cb37-6" tabindex="-1"></a></span>
-<span id="cb37-7"><a href="#cb37-7" tabindex="-1"></a><span class="co"># compute false positive </span></span>
-<span id="cb37-8"><a href="#cb37-8" tabindex="-1"></a></span>
-<span id="cb37-9"><a href="#cb37-9" tabindex="-1"></a>cc_fp <span class="ot">&lt;-</span> <span class="fu">sqldf</span>(<span class="st">&quot;select count(distinct className) as fp</span></span>
-<span id="cb37-10"><a href="#cb37-10" tabindex="-1"></a><span class="st">                 from bench03cc</span></span>
-<span id="cb37-11"><a href="#cb37-11" tabindex="-1"></a><span class="st">                 where className in (select className from tn)&quot;</span>)</span>
-<span id="cb37-12"><a href="#cb37-12" tabindex="-1"></a></span>
-<span id="cb37-13"><a href="#cb37-13" tabindex="-1"></a></span>
-<span id="cb37-14"><a href="#cb37-14" tabindex="-1"></a></span>
-<span id="cb37-15"><a href="#cb37-15" tabindex="-1"></a><span class="co"># compute false-negative  </span></span>
-<span id="cb37-16"><a href="#cb37-16" tabindex="-1"></a></span>
-<span id="cb37-17"><a href="#cb37-17" tabindex="-1"></a>cc_fn <span class="ot">&lt;-</span> <span class="fu">sqldf</span>(<span class="st">&quot;select count(distinct className) as fn</span></span>
-<span id="cb37-18"><a href="#cb37-18" tabindex="-1"></a><span class="st">                 from tp </span></span>
-<span id="cb37-19"><a href="#cb37-19" tabindex="-1"></a><span class="st">                 where className not in (select className from bench03cc)&quot;</span>)</span>
-<span id="cb37-20"><a href="#cb37-20" tabindex="-1"></a></span>
-<span id="cb37-21"><a href="#cb37-21" tabindex="-1"></a><span class="co"># MOP true positives</span></span>
-<span id="cb37-22"><a href="#cb37-22" tabindex="-1"></a>cc_tp</span></code></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" tabindex="-1"></a><span class="co"># compute true positive </span></span>
+<span id="cb24-2"><a href="#cb24-2" tabindex="-1"></a></span>
+<span id="cb24-3"><a href="#cb24-3" tabindex="-1"></a>cc_tp <span class="ot">&lt;-</span> <span class="fu">sqldf</span>(<span class="st">&quot;select count(distinct className) as tp</span></span>
+<span id="cb24-4"><a href="#cb24-4" tabindex="-1"></a><span class="st">                 from bench03cc </span></span>
+<span id="cb24-5"><a href="#cb24-5" tabindex="-1"></a><span class="st">                 where className in (select className from tp)&quot;</span>)</span>
+<span id="cb24-6"><a href="#cb24-6" tabindex="-1"></a></span>
+<span id="cb24-7"><a href="#cb24-7" tabindex="-1"></a><span class="co"># compute false positive </span></span>
+<span id="cb24-8"><a href="#cb24-8" tabindex="-1"></a></span>
+<span id="cb24-9"><a href="#cb24-9" tabindex="-1"></a>cc_fp <span class="ot">&lt;-</span> <span class="fu">sqldf</span>(<span class="st">&quot;select count(distinct className) as fp</span></span>
+<span id="cb24-10"><a href="#cb24-10" tabindex="-1"></a><span class="st">                 from bench03cc</span></span>
+<span id="cb24-11"><a href="#cb24-11" tabindex="-1"></a><span class="st">                 where className in (select className from tn)&quot;</span>)</span>
+<span id="cb24-12"><a href="#cb24-12" tabindex="-1"></a></span>
+<span id="cb24-13"><a href="#cb24-13" tabindex="-1"></a></span>
+<span id="cb24-14"><a href="#cb24-14" tabindex="-1"></a></span>
+<span id="cb24-15"><a href="#cb24-15" tabindex="-1"></a><span class="co"># compute false-negative  </span></span>
+<span id="cb24-16"><a href="#cb24-16" tabindex="-1"></a></span>
+<span id="cb24-17"><a href="#cb24-17" tabindex="-1"></a>cc_fn <span class="ot">&lt;-</span> <span class="fu">sqldf</span>(<span class="st">&quot;select count(distinct className) as fn</span></span>
+<span id="cb24-18"><a href="#cb24-18" tabindex="-1"></a><span class="st">                 from tp </span></span>
+<span id="cb24-19"><a href="#cb24-19" tabindex="-1"></a><span class="st">                 where className not in (select className from bench03cc)&quot;</span>)</span>
+<span id="cb24-20"><a href="#cb24-20" tabindex="-1"></a></span>
+<span id="cb24-21"><a href="#cb24-21" tabindex="-1"></a><span class="co"># MOP true positives</span></span>
+<span id="cb24-22"><a href="#cb24-22" tabindex="-1"></a>cc_tp</span></code></pre></div>
 <pre><code>##   tp
 ## 1 23</code></pre>
-<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" tabindex="-1"></a><span class="co"># MOP false positives</span></span>
-<span id="cb39-2"><a href="#cb39-2" tabindex="-1"></a>cc_fp</span></code></pre></div>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" tabindex="-1"></a><span class="co"># MOP false positives</span></span>
+<span id="cb26-2"><a href="#cb26-2" tabindex="-1"></a>cc_fp</span></code></pre></div>
 <pre><code>##   fp
 ## 1  0</code></pre>
-<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" tabindex="-1"></a><span class="co"># MOP false negatives</span></span>
-<span id="cb41-2"><a href="#cb41-2" tabindex="-1"></a>cc_fn</span></code></pre></div>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" tabindex="-1"></a><span class="co"># MOP false negatives</span></span>
+<span id="cb28-2"><a href="#cb28-2" tabindex="-1"></a>cc_fn</span></code></pre></div>
 <pre><code>##   fn
 ## 1  5</code></pre>
-<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" tabindex="-1"></a>precision_cc <span class="ot">&lt;-</span> cc_tp<span class="sc">$</span>tp <span class="sc">/</span> (cc_tp<span class="sc">$</span>tp <span class="sc">+</span> cc_fp<span class="sc">$</span>fp)</span>
-<span id="cb43-2"><a href="#cb43-2" tabindex="-1"></a>precision_cc</span></code></pre></div>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" tabindex="-1"></a>precision_cc <span class="ot">&lt;-</span> cc_tp<span class="sc">$</span>tp <span class="sc">/</span> (cc_tp<span class="sc">$</span>tp <span class="sc">+</span> cc_fp<span class="sc">$</span>fp)</span>
+<span id="cb30-2"><a href="#cb30-2" tabindex="-1"></a>precision_cc</span></code></pre></div>
 <pre><code>## [1] 1</code></pre>
-<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" tabindex="-1"></a>recall_cc <span class="ot">&lt;-</span> cc_tp<span class="sc">$</span>tp <span class="sc">/</span> (cc_tp<span class="sc">$</span>tp <span class="sc">+</span> cc_fn<span class="sc">$</span>fn)</span>
-<span id="cb45-2"><a href="#cb45-2" tabindex="-1"></a>recall_cc</span></code></pre></div>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" tabindex="-1"></a>recall_cc <span class="ot">&lt;-</span> cc_tp<span class="sc">$</span>tp <span class="sc">/</span> (cc_tp<span class="sc">$</span>tp <span class="sc">+</span> cc_fn<span class="sc">$</span>fn)</span>
+<span id="cb32-2"><a href="#cb32-2" tabindex="-1"></a>recall_cc</span></code></pre></div>
 <pre><code>## [1] 0.8214286</code></pre>
-<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" tabindex="-1"></a>fmeasure_cc <span class="ot">=</span> (<span class="dv">2</span> <span class="sc">*</span> precision_cc <span class="sc">*</span> recall_cc) <span class="sc">/</span> (precision_cc <span class="sc">+</span> recall_cc)</span>
-<span id="cb47-2"><a href="#cb47-2" tabindex="-1"></a>fmeasure_cc</span></code></pre></div>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" tabindex="-1"></a>fmeasure_cc <span class="ot">=</span> (<span class="dv">2</span> <span class="sc">*</span> precision_cc <span class="sc">*</span> recall_cc) <span class="sc">/</span> (precision_cc <span class="sc">+</span> recall_cc)</span>
+<span id="cb34-2"><a href="#cb34-2" tabindex="-1"></a>fmeasure_cc</span></code></pre></div>
 <pre><code>## [1] 0.9019608</code></pre>
 </div>
 <div id="computing-precision-and-recall-for-cg" class="section level2">
 <h2>Computing Precision and Recall for CG</h2>
-<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" tabindex="-1"></a><span class="co"># compute true positive </span></span>
-<span id="cb49-2"><a href="#cb49-2" tabindex="-1"></a></span>
-<span id="cb49-3"><a href="#cb49-3" tabindex="-1"></a>cg_tp <span class="ot">&lt;-</span> <span class="fu">sqldf</span>(<span class="st">&quot;select count(distinct className) as tp</span></span>
-<span id="cb49-4"><a href="#cb49-4" tabindex="-1"></a><span class="st">                 from bench03cg</span></span>
-<span id="cb49-5"><a href="#cb49-5" tabindex="-1"></a><span class="st">                 where className in (select className from tp)&quot;</span>)</span>
-<span id="cb49-6"><a href="#cb49-6" tabindex="-1"></a></span>
-<span id="cb49-7"><a href="#cb49-7" tabindex="-1"></a><span class="co"># compute false positive </span></span>
-<span id="cb49-8"><a href="#cb49-8" tabindex="-1"></a></span>
-<span id="cb49-9"><a href="#cb49-9" tabindex="-1"></a>cg_fp <span class="ot">&lt;-</span> <span class="fu">sqldf</span>(<span class="st">&quot;select count(distinct className) as fp</span></span>
-<span id="cb49-10"><a href="#cb49-10" tabindex="-1"></a><span class="st">                 from bench03cg</span></span>
-<span id="cb49-11"><a href="#cb49-11" tabindex="-1"></a><span class="st">                 where className in (select className from tn)&quot;</span>)</span>
-<span id="cb49-12"><a href="#cb49-12" tabindex="-1"></a></span>
-<span id="cb49-13"><a href="#cb49-13" tabindex="-1"></a></span>
-<span id="cb49-14"><a href="#cb49-14" tabindex="-1"></a></span>
-<span id="cb49-15"><a href="#cb49-15" tabindex="-1"></a><span class="co"># compute false-negative  </span></span>
-<span id="cb49-16"><a href="#cb49-16" tabindex="-1"></a></span>
-<span id="cb49-17"><a href="#cb49-17" tabindex="-1"></a>cg_fn <span class="ot">&lt;-</span> <span class="fu">sqldf</span>(<span class="st">&quot;select count(distinct className) as fn</span></span>
-<span id="cb49-18"><a href="#cb49-18" tabindex="-1"></a><span class="st">                 from tp </span></span>
-<span id="cb49-19"><a href="#cb49-19" tabindex="-1"></a><span class="st">                 where className not in (select className from bench03cg)&quot;</span>)</span>
-<span id="cb49-20"><a href="#cb49-20" tabindex="-1"></a></span>
-<span id="cb49-21"><a href="#cb49-21" tabindex="-1"></a><span class="co"># MOP true positives</span></span>
-<span id="cb49-22"><a href="#cb49-22" tabindex="-1"></a>cg_tp</span></code></pre></div>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" tabindex="-1"></a><span class="co"># compute true positive </span></span>
+<span id="cb36-2"><a href="#cb36-2" tabindex="-1"></a></span>
+<span id="cb36-3"><a href="#cb36-3" tabindex="-1"></a>cg_tp <span class="ot">&lt;-</span> <span class="fu">sqldf</span>(<span class="st">&quot;select count(distinct className) as tp</span></span>
+<span id="cb36-4"><a href="#cb36-4" tabindex="-1"></a><span class="st">                 from bench03cg</span></span>
+<span id="cb36-5"><a href="#cb36-5" tabindex="-1"></a><span class="st">                 where className in (select className from tp)&quot;</span>)</span>
+<span id="cb36-6"><a href="#cb36-6" tabindex="-1"></a></span>
+<span id="cb36-7"><a href="#cb36-7" tabindex="-1"></a><span class="co"># compute false positive </span></span>
+<span id="cb36-8"><a href="#cb36-8" tabindex="-1"></a></span>
+<span id="cb36-9"><a href="#cb36-9" tabindex="-1"></a>cg_fp <span class="ot">&lt;-</span> <span class="fu">sqldf</span>(<span class="st">&quot;select count(distinct className) as fp</span></span>
+<span id="cb36-10"><a href="#cb36-10" tabindex="-1"></a><span class="st">                 from bench03cg</span></span>
+<span id="cb36-11"><a href="#cb36-11" tabindex="-1"></a><span class="st">                 where className in (select className from tn)&quot;</span>)</span>
+<span id="cb36-12"><a href="#cb36-12" tabindex="-1"></a></span>
+<span id="cb36-13"><a href="#cb36-13" tabindex="-1"></a></span>
+<span id="cb36-14"><a href="#cb36-14" tabindex="-1"></a></span>
+<span id="cb36-15"><a href="#cb36-15" tabindex="-1"></a><span class="co"># compute false-negative  </span></span>
+<span id="cb36-16"><a href="#cb36-16" tabindex="-1"></a></span>
+<span id="cb36-17"><a href="#cb36-17" tabindex="-1"></a>cg_fn <span class="ot">&lt;-</span> <span class="fu">sqldf</span>(<span class="st">&quot;select count(distinct className) as fn</span></span>
+<span id="cb36-18"><a href="#cb36-18" tabindex="-1"></a><span class="st">                 from tp </span></span>
+<span id="cb36-19"><a href="#cb36-19" tabindex="-1"></a><span class="st">                 where className not in (select className from bench03cg)&quot;</span>)</span>
+<span id="cb36-20"><a href="#cb36-20" tabindex="-1"></a></span>
+<span id="cb36-21"><a href="#cb36-21" tabindex="-1"></a><span class="co"># MOP true positives</span></span>
+<span id="cb36-22"><a href="#cb36-22" tabindex="-1"></a>cg_tp</span></code></pre></div>
 <pre><code>##   tp
 ## 1 19</code></pre>
-<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" tabindex="-1"></a><span class="co"># MOP false positives</span></span>
-<span id="cb51-2"><a href="#cb51-2" tabindex="-1"></a>cg_fp</span></code></pre></div>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" tabindex="-1"></a><span class="co"># MOP false positives</span></span>
+<span id="cb38-2"><a href="#cb38-2" tabindex="-1"></a>cg_fp</span></code></pre></div>
 <pre><code>##   fp
 ## 1  0</code></pre>
-<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" tabindex="-1"></a><span class="co"># MOP false negatives</span></span>
-<span id="cb53-2"><a href="#cb53-2" tabindex="-1"></a>cg_fn</span></code></pre></div>
+<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" tabindex="-1"></a><span class="co"># MOP false negatives</span></span>
+<span id="cb40-2"><a href="#cb40-2" tabindex="-1"></a>cg_fn</span></code></pre></div>
 <pre><code>##   fn
 ## 1  9</code></pre>
-<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1" tabindex="-1"></a>precision_cg <span class="ot">&lt;-</span> cg_tp<span class="sc">$</span>tp <span class="sc">/</span> (cg_tp<span class="sc">$</span>tp <span class="sc">+</span> cg_fp<span class="sc">$</span>fp)</span>
-<span id="cb55-2"><a href="#cb55-2" tabindex="-1"></a>precision_cg</span></code></pre></div>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" tabindex="-1"></a>precision_cg <span class="ot">&lt;-</span> cg_tp<span class="sc">$</span>tp <span class="sc">/</span> (cg_tp<span class="sc">$</span>tp <span class="sc">+</span> cg_fp<span class="sc">$</span>fp)</span>
+<span id="cb42-2"><a href="#cb42-2" tabindex="-1"></a>precision_cg</span></code></pre></div>
 <pre><code>## [1] 1</code></pre>
-<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1" tabindex="-1"></a>recall_cg <span class="ot">&lt;-</span> cg_tp<span class="sc">$</span>tp <span class="sc">/</span> (cg_tp<span class="sc">$</span>tp <span class="sc">+</span> cg_fn<span class="sc">$</span>fn)</span>
-<span id="cb57-2"><a href="#cb57-2" tabindex="-1"></a>recall_cg</span></code></pre></div>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" tabindex="-1"></a>recall_cg <span class="ot">&lt;-</span> cg_tp<span class="sc">$</span>tp <span class="sc">/</span> (cg_tp<span class="sc">$</span>tp <span class="sc">+</span> cg_fn<span class="sc">$</span>fn)</span>
+<span id="cb44-2"><a href="#cb44-2" tabindex="-1"></a>recall_cg</span></code></pre></div>
 <pre><code>## [1] 0.6785714</code></pre>
-<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1" tabindex="-1"></a>fmeasure_cg <span class="ot">=</span> (<span class="dv">2</span> <span class="sc">*</span> precision_cg <span class="sc">*</span> recall_cg) <span class="sc">/</span> (precision_cg <span class="sc">+</span> recall_cg)</span>
-<span id="cb59-2"><a href="#cb59-2" tabindex="-1"></a>fmeasure_cg</span></code></pre></div>
+<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" tabindex="-1"></a>fmeasure_cg <span class="ot">=</span> (<span class="dv">2</span> <span class="sc">*</span> precision_cg <span class="sc">*</span> recall_cg) <span class="sc">/</span> (precision_cg <span class="sc">+</span> recall_cg)</span>
+<span id="cb46-2"><a href="#cb46-2" tabindex="-1"></a>fmeasure_cg</span></code></pre></div>
 <pre><code>## [1] 0.8085106</code></pre>
 </div>
 <div id="computing-precision-and-recall-for-crylogger" class="section level2">
 <h2>Computing Precision and Recall for CryLogger</h2>
-<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="#cb61-1" tabindex="-1"></a><span class="co"># compute true positive </span></span>
-<span id="cb61-2"><a href="#cb61-2" tabindex="-1"></a></span>
-<span id="cb61-3"><a href="#cb61-3" tabindex="-1"></a>crylogger_tp <span class="ot">&lt;-</span> <span class="fu">sqldf</span>(<span class="st">&quot;select count(distinct className) as tp</span></span>
-<span id="cb61-4"><a href="#cb61-4" tabindex="-1"></a><span class="st">                 from bench03cy </span></span>
-<span id="cb61-5"><a href="#cb61-5" tabindex="-1"></a><span class="st">                 where className in (select className from tp)&quot;</span>)</span>
-<span id="cb61-6"><a href="#cb61-6" tabindex="-1"></a></span>
-<span id="cb61-7"><a href="#cb61-7" tabindex="-1"></a><span class="co"># compute false positive </span></span>
-<span id="cb61-8"><a href="#cb61-8" tabindex="-1"></a></span>
-<span id="cb61-9"><a href="#cb61-9" tabindex="-1"></a>crylogger_fp <span class="ot">&lt;-</span> <span class="fu">sqldf</span>(<span class="st">&quot;select count(distinct className) as fp</span></span>
-<span id="cb61-10"><a href="#cb61-10" tabindex="-1"></a><span class="st">                 from bench03cy </span></span>
-<span id="cb61-11"><a href="#cb61-11" tabindex="-1"></a><span class="st">                 where className in (select className from tn)&quot;</span>)</span>
-<span id="cb61-12"><a href="#cb61-12" tabindex="-1"></a></span>
-<span id="cb61-13"><a href="#cb61-13" tabindex="-1"></a></span>
-<span id="cb61-14"><a href="#cb61-14" tabindex="-1"></a></span>
-<span id="cb61-15"><a href="#cb61-15" tabindex="-1"></a><span class="co"># compute false-negative  </span></span>
-<span id="cb61-16"><a href="#cb61-16" tabindex="-1"></a></span>
-<span id="cb61-17"><a href="#cb61-17" tabindex="-1"></a>crylogger_fn <span class="ot">&lt;-</span> <span class="fu">sqldf</span>(<span class="st">&quot;select count(distinct className) as fn</span></span>
-<span id="cb61-18"><a href="#cb61-18" tabindex="-1"></a><span class="st">                 from tp </span></span>
-<span id="cb61-19"><a href="#cb61-19" tabindex="-1"></a><span class="st">                 where className not in (select className from bench03cy)&quot;</span>)</span>
-<span id="cb61-20"><a href="#cb61-20" tabindex="-1"></a></span>
-<span id="cb61-21"><a href="#cb61-21" tabindex="-1"></a><span class="co"># crylogger true positives</span></span>
-<span id="cb61-22"><a href="#cb61-22" tabindex="-1"></a>crylogger_tp</span></code></pre></div>
+<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" tabindex="-1"></a><span class="co"># compute true positive </span></span>
+<span id="cb48-2"><a href="#cb48-2" tabindex="-1"></a></span>
+<span id="cb48-3"><a href="#cb48-3" tabindex="-1"></a>crylogger_tp <span class="ot">&lt;-</span> <span class="fu">sqldf</span>(<span class="st">&quot;select count(distinct className) as tp</span></span>
+<span id="cb48-4"><a href="#cb48-4" tabindex="-1"></a><span class="st">                 from bench03cy </span></span>
+<span id="cb48-5"><a href="#cb48-5" tabindex="-1"></a><span class="st">                 where className in (select className from tp)&quot;</span>)</span>
+<span id="cb48-6"><a href="#cb48-6" tabindex="-1"></a></span>
+<span id="cb48-7"><a href="#cb48-7" tabindex="-1"></a><span class="co"># compute false positive </span></span>
+<span id="cb48-8"><a href="#cb48-8" tabindex="-1"></a></span>
+<span id="cb48-9"><a href="#cb48-9" tabindex="-1"></a>crylogger_fp <span class="ot">&lt;-</span> <span class="fu">sqldf</span>(<span class="st">&quot;select count(distinct className) as fp</span></span>
+<span id="cb48-10"><a href="#cb48-10" tabindex="-1"></a><span class="st">                 from bench03cy </span></span>
+<span id="cb48-11"><a href="#cb48-11" tabindex="-1"></a><span class="st">                 where className in (select className from tn)&quot;</span>)</span>
+<span id="cb48-12"><a href="#cb48-12" tabindex="-1"></a></span>
+<span id="cb48-13"><a href="#cb48-13" tabindex="-1"></a></span>
+<span id="cb48-14"><a href="#cb48-14" tabindex="-1"></a></span>
+<span id="cb48-15"><a href="#cb48-15" tabindex="-1"></a><span class="co"># compute false-negative  </span></span>
+<span id="cb48-16"><a href="#cb48-16" tabindex="-1"></a></span>
+<span id="cb48-17"><a href="#cb48-17" tabindex="-1"></a>crylogger_fn <span class="ot">&lt;-</span> <span class="fu">sqldf</span>(<span class="st">&quot;select count(distinct className) as fn</span></span>
+<span id="cb48-18"><a href="#cb48-18" tabindex="-1"></a><span class="st">                 from tp </span></span>
+<span id="cb48-19"><a href="#cb48-19" tabindex="-1"></a><span class="st">                 where className not in (select className from bench03cy)&quot;</span>)</span>
+<span id="cb48-20"><a href="#cb48-20" tabindex="-1"></a></span>
+<span id="cb48-21"><a href="#cb48-21" tabindex="-1"></a><span class="co"># crylogger true positives</span></span>
+<span id="cb48-22"><a href="#cb48-22" tabindex="-1"></a>crylogger_tp</span></code></pre></div>
 <pre><code>##   tp
 ## 1 20</code></pre>
-<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="#cb63-1" tabindex="-1"></a><span class="co"># crylogger false positives</span></span>
-<span id="cb63-2"><a href="#cb63-2" tabindex="-1"></a>crylogger_fp</span></code></pre></div>
+<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" tabindex="-1"></a><span class="co"># crylogger false positives</span></span>
+<span id="cb50-2"><a href="#cb50-2" tabindex="-1"></a>crylogger_fp</span></code></pre></div>
 <pre><code>##   fp
 ## 1  0</code></pre>
-<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="#cb65-1" tabindex="-1"></a><span class="co"># crylogger false negatives</span></span>
-<span id="cb65-2"><a href="#cb65-2" tabindex="-1"></a>crylogger_fn</span></code></pre></div>
+<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" tabindex="-1"></a><span class="co"># crylogger false negatives</span></span>
+<span id="cb52-2"><a href="#cb52-2" tabindex="-1"></a>crylogger_fn</span></code></pre></div>
 <pre><code>##   fn
 ## 1  8</code></pre>
-<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="#cb67-1" tabindex="-1"></a>precision_cy <span class="ot">&lt;-</span> crylogger_tp<span class="sc">$</span>tp <span class="sc">/</span> (crylogger_tp<span class="sc">$</span>tp <span class="sc">+</span> crylogger_fp<span class="sc">$</span>fp)</span>
-<span id="cb67-2"><a href="#cb67-2" tabindex="-1"></a>precision_cy</span></code></pre></div>
+<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" tabindex="-1"></a>precision_cy <span class="ot">&lt;-</span> crylogger_tp<span class="sc">$</span>tp <span class="sc">/</span> (crylogger_tp<span class="sc">$</span>tp <span class="sc">+</span> crylogger_fp<span class="sc">$</span>fp)</span>
+<span id="cb54-2"><a href="#cb54-2" tabindex="-1"></a>precision_cy</span></code></pre></div>
 <pre><code>## [1] 1</code></pre>
-<div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb69-1"><a href="#cb69-1" tabindex="-1"></a>recall_cy <span class="ot">&lt;-</span> crylogger_tp<span class="sc">$</span>tp <span class="sc">/</span> (crylogger_tp<span class="sc">$</span>tp <span class="sc">+</span> crylogger_fn<span class="sc">$</span>fn)</span>
-<span id="cb69-2"><a href="#cb69-2" tabindex="-1"></a>recall_cy</span></code></pre></div>
+<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" tabindex="-1"></a>recall_cy <span class="ot">&lt;-</span> crylogger_tp<span class="sc">$</span>tp <span class="sc">/</span> (crylogger_tp<span class="sc">$</span>tp <span class="sc">+</span> crylogger_fn<span class="sc">$</span>fn)</span>
+<span id="cb56-2"><a href="#cb56-2" tabindex="-1"></a>recall_cy</span></code></pre></div>
 <pre><code>## [1] 0.7142857</code></pre>
-<div class="sourceCode" id="cb71"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb71-1"><a href="#cb71-1" tabindex="-1"></a>fmeasure_cy <span class="ot">=</span> (<span class="dv">2</span> <span class="sc">*</span> precision_cy <span class="sc">*</span> recall_cy) <span class="sc">/</span> (precision_cy <span class="sc">+</span> recall_cy)</span>
-<span id="cb71-2"><a href="#cb71-2" tabindex="-1"></a>fmeasure_cy</span></code></pre></div>
+<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" tabindex="-1"></a>fmeasure_cy <span class="ot">=</span> (<span class="dv">2</span> <span class="sc">*</span> precision_cy <span class="sc">*</span> recall_cy) <span class="sc">/</span> (precision_cy <span class="sc">+</span> recall_cy)</span>
+<span id="cb58-2"><a href="#cb58-2" tabindex="-1"></a>fmeasure_cy</span></code></pre></div>
 <pre><code>## [1] 0.8333333</code></pre>
 </div>
 <div id="accuracy-results-for-mascbench" class="section level2">
 <h2>Accuracy Results for MASCBench</h2>
-<div class="sourceCode" id="cb73"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb73-1"><a href="#cb73-1" tabindex="-1"></a>Tools <span class="ot">=</span> <span class="fu">c</span>(<span class="st">&quot;MOP&quot;</span>, <span class="st">&quot;CogniCrypt&quot;</span>, <span class="st">&quot;CryptoGuard&quot;</span>, <span class="st">&quot;CryLogger&quot;</span>)</span>
-<span id="cb73-2"><a href="#cb73-2" tabindex="-1"></a>Precision <span class="ot">=</span> <span class="fu">c</span>(precision_mop, precision_cc, precision_cg, precision_cy)</span>
-<span id="cb73-3"><a href="#cb73-3" tabindex="-1"></a>Recall <span class="ot">=</span> <span class="fu">c</span>(recall_mop, recall_cc, recall_cg, recall_cy)</span>
-<span id="cb73-4"><a href="#cb73-4" tabindex="-1"></a>FMeasure <span class="ot">=</span> <span class="fu">c</span>(fmeasure_mop, fmeasure_cc, fmeasure_cg, fmeasure_cy)</span>
-<span id="cb73-5"><a href="#cb73-5" tabindex="-1"></a></span>
-<span id="cb73-6"><a href="#cb73-6" tabindex="-1"></a>analysis_ds <span class="ot">=</span> <span class="fu">data.frame</span>(Tools, Precision, Recall, FMeasure)</span>
-<span id="cb73-7"><a href="#cb73-7" tabindex="-1"></a></span>
-<span id="cb73-8"><a href="#cb73-8" tabindex="-1"></a>analysis_ds</span></code></pre></div>
+<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1" tabindex="-1"></a>Tools <span class="ot">=</span> <span class="fu">c</span>(<span class="st">&quot;MOP&quot;</span>, <span class="st">&quot;CogniCrypt&quot;</span>, <span class="st">&quot;CryptoGuard&quot;</span>, <span class="st">&quot;CryLogger&quot;</span>)</span>
+<span id="cb60-2"><a href="#cb60-2" tabindex="-1"></a>Precision <span class="ot">=</span> <span class="fu">c</span>(precision_mop, precision_cc, precision_cg, precision_cy)</span>
+<span id="cb60-3"><a href="#cb60-3" tabindex="-1"></a>Recall <span class="ot">=</span> <span class="fu">c</span>(recall_mop, recall_cc, recall_cg, recall_cy)</span>
+<span id="cb60-4"><a href="#cb60-4" tabindex="-1"></a>FMeasure <span class="ot">=</span> <span class="fu">c</span>(fmeasure_mop, fmeasure_cc, fmeasure_cg, fmeasure_cy)</span>
+<span id="cb60-5"><a href="#cb60-5" tabindex="-1"></a></span>
+<span id="cb60-6"><a href="#cb60-6" tabindex="-1"></a>analysis_ds <span class="ot">=</span> <span class="fu">data.frame</span>(Tools, Precision, Recall, FMeasure)</span>
+<span id="cb60-7"><a href="#cb60-7" tabindex="-1"></a></span>
+<span id="cb60-8"><a href="#cb60-8" tabindex="-1"></a>analysis_ds</span></code></pre></div>
 <pre><code>##         Tools Precision    Recall  FMeasure
 ## 1         MOP         1 1.0000000 1.0000000
 ## 2  CogniCrypt         1 0.8214286 0.9019608
 ## 3 CryptoGuard         1 0.6785714 0.8085106
 ## 4   CryLogger         1 0.7142857 0.8333333</code></pre>
-<div class="sourceCode" id="cb75"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb75-1"><a href="#cb75-1" tabindex="-1"></a><span class="fu">sqldf</span>(<span class="st">&quot;select classname as fn</span></span>
-<span id="cb75-2"><a href="#cb75-2" tabindex="-1"></a><span class="st">                 from tp </span></span>
-<span id="cb75-3"><a href="#cb75-3" tabindex="-1"></a><span class="st">                 where className not in (select className from bench03cy)&quot;</span>)</span></code></pre></div>
-<pre><code>##                fn
-## 1    BaseStaticIV
-## 2 ComplexStaticIV
-## 3   StashStaticIV
-## 4   CurrentTimeIV
-## 5    SecureRand01
-## 6    SecureRand02
-## 7    SecureRand03
-## 8    ContextOfSSL</code></pre>
+</div>
+<div id="cwes-assessment" class="section level2">
+<h2>CWEs assessment</h2>
+<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1" tabindex="-1"></a><span class="co"># RVSec</span></span>
+<span id="cb62-2"><a href="#cb62-2" tabindex="-1"></a></span>
+<span id="cb62-3"><a href="#cb62-3" tabindex="-1"></a>mop_tp <span class="ot">&lt;-</span> <span class="fu">sqldf</span>(<span class="st">&quot;select distinct m.cwe as &#39;cwe&#39;, m.className as&#39;ClassName&#39;, &#39;RVSec&#39; as &#39;Tool&#39;, &#39;TP&#39; as &#39;Warning&#39;</span></span>
+<span id="cb62-4"><a href="#cb62-4" tabindex="-1"></a><span class="st">                 from bench03mop m</span></span>
+<span id="cb62-5"><a href="#cb62-5" tabindex="-1"></a><span class="st">                 where className in (select className from tp)&quot;</span>)</span>
+<span id="cb62-6"><a href="#cb62-6" tabindex="-1"></a></span>
+<span id="cb62-7"><a href="#cb62-7" tabindex="-1"></a><span class="co"># compute false positive </span></span>
+<span id="cb62-8"><a href="#cb62-8" tabindex="-1"></a></span>
+<span id="cb62-9"><a href="#cb62-9" tabindex="-1"></a>mop_fp <span class="ot">&lt;-</span> <span class="fu">sqldf</span>(<span class="st">&quot;select distinct m.cwe as &#39;cwe&#39;, m.className as&#39;ClassName&#39;, &#39;RVSec&#39; as &#39;Tool&#39;, &#39;FP&#39; as &#39;Warning&#39;</span></span>
+<span id="cb62-10"><a href="#cb62-10" tabindex="-1"></a><span class="st">                 from bench03mop m</span></span>
+<span id="cb62-11"><a href="#cb62-11" tabindex="-1"></a><span class="st">                 where className in (select className from tn)&quot;</span>)</span>
+<span id="cb62-12"><a href="#cb62-12" tabindex="-1"></a></span>
+<span id="cb62-13"><a href="#cb62-13" tabindex="-1"></a><span class="co"># compute false-negative  </span></span>
+<span id="cb62-14"><a href="#cb62-14" tabindex="-1"></a></span>
+<span id="cb62-15"><a href="#cb62-15" tabindex="-1"></a>mop_fn <span class="ot">&lt;-</span> <span class="fu">sqldf</span>(<span class="st">&quot;select distinct t.cwe as &#39;cwe&#39;, t.className as&#39;ClassName&#39;, &#39;RVSec&#39; as &#39;Tool&#39;, &#39;FN&#39; as &#39;Warning&#39;</span></span>
+<span id="cb62-16"><a href="#cb62-16" tabindex="-1"></a><span class="st">                 from tp t</span></span>
+<span id="cb62-17"><a href="#cb62-17" tabindex="-1"></a><span class="st">                 where className not in (select className from bench03mop)&quot;</span>)</span>
+<span id="cb62-18"><a href="#cb62-18" tabindex="-1"></a></span>
+<span id="cb62-19"><a href="#cb62-19" tabindex="-1"></a><span class="fu">nrow</span>(mop_tp)</span></code></pre></div>
+<pre><code>## [1] 28</code></pre>
+<div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb64-1"><a href="#cb64-1" tabindex="-1"></a>ds <span class="ot">&lt;-</span> <span class="fu">rbind</span>(mop_tp, mop_fp)</span>
+<span id="cb64-2"><a href="#cb64-2" tabindex="-1"></a>ds <span class="ot">&lt;-</span> <span class="fu">rbind</span>(ds, mop_fn)</span>
+<span id="cb64-3"><a href="#cb64-3" tabindex="-1"></a></span>
+<span id="cb64-4"><a href="#cb64-4" tabindex="-1"></a></span>
+<span id="cb64-5"><a href="#cb64-5" tabindex="-1"></a><span class="co"># compute true positive </span></span>
+<span id="cb64-6"><a href="#cb64-6" tabindex="-1"></a></span>
+<span id="cb64-7"><a href="#cb64-7" tabindex="-1"></a>cc_tp <span class="ot">&lt;-</span> <span class="fu">sqldf</span>(<span class="st">&quot;select distinct c.cwe as &#39;cwe&#39;, c.className as&#39;ClassName&#39;, &#39;CogniCrypt&#39; as &#39;Tool&#39;, &#39;TP&#39; as &#39;Warning&#39;</span></span>
+<span id="cb64-8"><a href="#cb64-8" tabindex="-1"></a><span class="st">                 from bench03cc c</span></span>
+<span id="cb64-9"><a href="#cb64-9" tabindex="-1"></a><span class="st">                 where className in (select className from tp)&quot;</span>)</span>
+<span id="cb64-10"><a href="#cb64-10" tabindex="-1"></a></span>
+<span id="cb64-11"><a href="#cb64-11" tabindex="-1"></a><span class="co"># compute false positive </span></span>
+<span id="cb64-12"><a href="#cb64-12" tabindex="-1"></a></span>
+<span id="cb64-13"><a href="#cb64-13" tabindex="-1"></a>cc_fp <span class="ot">&lt;-</span> <span class="fu">sqldf</span>(<span class="st">&quot;select distinct c.cwe as &#39;cwe&#39;, c.className as&#39;ClassName&#39;, &#39;CogniCrypt&#39; as &#39;Tool&#39;, &#39;FP&#39; as &#39;Warning&#39;</span></span>
+<span id="cb64-14"><a href="#cb64-14" tabindex="-1"></a><span class="st">                 from bench03cc c</span></span>
+<span id="cb64-15"><a href="#cb64-15" tabindex="-1"></a><span class="st">                 where className in (select className from tn)&quot;</span>)</span>
+<span id="cb64-16"><a href="#cb64-16" tabindex="-1"></a></span>
+<span id="cb64-17"><a href="#cb64-17" tabindex="-1"></a></span>
+<span id="cb64-18"><a href="#cb64-18" tabindex="-1"></a></span>
+<span id="cb64-19"><a href="#cb64-19" tabindex="-1"></a><span class="co"># compute false-negative  </span></span>
+<span id="cb64-20"><a href="#cb64-20" tabindex="-1"></a></span>
+<span id="cb64-21"><a href="#cb64-21" tabindex="-1"></a>cc_fn <span class="ot">&lt;-</span> <span class="fu">sqldf</span>(<span class="st">&quot;select distinct t.cwe as &#39;cwe&#39;, t.className as&#39;ClassName&#39;, &#39;CogniCrypt&#39; as &#39;Tool&#39;, &#39;FN&#39; as &#39;Warning&#39;</span></span>
+<span id="cb64-22"><a href="#cb64-22" tabindex="-1"></a><span class="st">                 from tp t</span></span>
+<span id="cb64-23"><a href="#cb64-23" tabindex="-1"></a><span class="st">                 where className not in (select className from bench03cc)&quot;</span>)</span>
+<span id="cb64-24"><a href="#cb64-24" tabindex="-1"></a></span>
+<span id="cb64-25"><a href="#cb64-25" tabindex="-1"></a>ds <span class="ot">&lt;-</span> <span class="fu">rbind</span>(ds, cc_tp)</span>
+<span id="cb64-26"><a href="#cb64-26" tabindex="-1"></a>ds <span class="ot">&lt;-</span> <span class="fu">rbind</span>(ds, cc_fp)</span>
+<span id="cb64-27"><a href="#cb64-27" tabindex="-1"></a>ds <span class="ot">&lt;-</span> <span class="fu">rbind</span>(ds, cc_fn)</span>
+<span id="cb64-28"><a href="#cb64-28" tabindex="-1"></a></span>
+<span id="cb64-29"><a href="#cb64-29" tabindex="-1"></a><span class="co"># compute true positive </span></span>
+<span id="cb64-30"><a href="#cb64-30" tabindex="-1"></a></span>
+<span id="cb64-31"><a href="#cb64-31" tabindex="-1"></a>cg_tp <span class="ot">&lt;-</span> <span class="fu">sqldf</span>(<span class="st">&quot;select distinct c.cwe as &#39;cwe&#39;, c.className as&#39;ClassName&#39;, &#39;CryptoGuard&#39; as &#39;Tool&#39;, &#39;TP&#39; as &#39;Warning&#39;</span></span>
+<span id="cb64-32"><a href="#cb64-32" tabindex="-1"></a><span class="st">                 from bench03cg c</span></span>
+<span id="cb64-33"><a href="#cb64-33" tabindex="-1"></a><span class="st">                 where className in (select className from tp)&quot;</span>)</span>
+<span id="cb64-34"><a href="#cb64-34" tabindex="-1"></a></span>
+<span id="cb64-35"><a href="#cb64-35" tabindex="-1"></a><span class="co"># compute false positive </span></span>
+<span id="cb64-36"><a href="#cb64-36" tabindex="-1"></a></span>
+<span id="cb64-37"><a href="#cb64-37" tabindex="-1"></a>cg_fp <span class="ot">&lt;-</span> <span class="fu">sqldf</span>(<span class="st">&quot;select distinct c.cwe as &#39;cwe&#39;, c.className as&#39;ClassName&#39;, &#39;CryptoGuard&#39; as &#39;Tool&#39;, &#39;FP&#39; as &#39;Warning&#39;</span></span>
+<span id="cb64-38"><a href="#cb64-38" tabindex="-1"></a><span class="st">                 from bench03cg c</span></span>
+<span id="cb64-39"><a href="#cb64-39" tabindex="-1"></a><span class="st">                 where className in (select className from tn)&quot;</span>)</span>
+<span id="cb64-40"><a href="#cb64-40" tabindex="-1"></a></span>
+<span id="cb64-41"><a href="#cb64-41" tabindex="-1"></a></span>
+<span id="cb64-42"><a href="#cb64-42" tabindex="-1"></a></span>
+<span id="cb64-43"><a href="#cb64-43" tabindex="-1"></a><span class="co"># compute false-negative  </span></span>
+<span id="cb64-44"><a href="#cb64-44" tabindex="-1"></a></span>
+<span id="cb64-45"><a href="#cb64-45" tabindex="-1"></a>cg_fn <span class="ot">&lt;-</span> <span class="fu">sqldf</span>(<span class="st">&quot;select distinct t.cwe as &#39;cwe&#39;, t.className as&#39;ClassName&#39;, &#39;CryptoGuard&#39; as &#39;Tool&#39;, &#39;FN&#39; as &#39;Warning&#39;</span></span>
+<span id="cb64-46"><a href="#cb64-46" tabindex="-1"></a><span class="st">                 from tp t</span></span>
+<span id="cb64-47"><a href="#cb64-47" tabindex="-1"></a><span class="st">                 where className not in (select className from bench03cg)&quot;</span>)</span>
+<span id="cb64-48"><a href="#cb64-48" tabindex="-1"></a></span>
+<span id="cb64-49"><a href="#cb64-49" tabindex="-1"></a>ds <span class="ot">&lt;-</span> <span class="fu">rbind</span>(ds, cg_tp)</span>
+<span id="cb64-50"><a href="#cb64-50" tabindex="-1"></a>ds <span class="ot">&lt;-</span> <span class="fu">rbind</span>(ds, cg_fp)</span>
+<span id="cb64-51"><a href="#cb64-51" tabindex="-1"></a>ds <span class="ot">&lt;-</span> <span class="fu">rbind</span>(ds, cg_fn)</span>
+<span id="cb64-52"><a href="#cb64-52" tabindex="-1"></a></span>
+<span id="cb64-53"><a href="#cb64-53" tabindex="-1"></a><span class="co"># compute true positive </span></span>
+<span id="cb64-54"><a href="#cb64-54" tabindex="-1"></a></span>
+<span id="cb64-55"><a href="#cb64-55" tabindex="-1"></a>crylogger_tp <span class="ot">&lt;-</span> <span class="fu">sqldf</span>(<span class="st">&quot;select distinct c.cwe as &#39;cwe&#39;, c.className as&#39;ClassName&#39;, &#39;CryLogger&#39; as &#39;Tool&#39;, &#39;TP&#39; as &#39;Warning&#39;</span></span>
+<span id="cb64-56"><a href="#cb64-56" tabindex="-1"></a><span class="st">                 from bench03cy c</span></span>
+<span id="cb64-57"><a href="#cb64-57" tabindex="-1"></a><span class="st">                 where className in (select className from tp)&quot;</span>)</span>
+<span id="cb64-58"><a href="#cb64-58" tabindex="-1"></a></span>
+<span id="cb64-59"><a href="#cb64-59" tabindex="-1"></a><span class="fu">nrow</span>(crylogger_tp)</span></code></pre></div>
+<pre><code>## [1] 20</code></pre>
+<div class="sourceCode" id="cb66"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1" tabindex="-1"></a><span class="co"># compute false positive </span></span>
+<span id="cb66-2"><a href="#cb66-2" tabindex="-1"></a></span>
+<span id="cb66-3"><a href="#cb66-3" tabindex="-1"></a>crylogger_fp <span class="ot">&lt;-</span> <span class="fu">sqldf</span>(<span class="st">&quot;select distinct c.cwe as &#39;cwe&#39;, c.className as&#39;ClassName&#39;, &#39;CryLogger&#39; as &#39;Tool&#39;, &#39;FP&#39; as &#39;Warning&#39;</span></span>
+<span id="cb66-4"><a href="#cb66-4" tabindex="-1"></a><span class="st">                 from bench03cy c</span></span>
+<span id="cb66-5"><a href="#cb66-5" tabindex="-1"></a><span class="st">                 where className in (select className from tn)&quot;</span>)</span>
+<span id="cb66-6"><a href="#cb66-6" tabindex="-1"></a></span>
+<span id="cb66-7"><a href="#cb66-7" tabindex="-1"></a></span>
+<span id="cb66-8"><a href="#cb66-8" tabindex="-1"></a></span>
+<span id="cb66-9"><a href="#cb66-9" tabindex="-1"></a><span class="co"># compute false-negative  </span></span>
+<span id="cb66-10"><a href="#cb66-10" tabindex="-1"></a></span>
+<span id="cb66-11"><a href="#cb66-11" tabindex="-1"></a>crylogger_fn <span class="ot">&lt;-</span> <span class="fu">sqldf</span>(<span class="st">&quot;select distinct t.cwe as &#39;cwe&#39;, t.className as&#39;ClassName&#39;, &#39;CryLogger&#39; as &#39;Tool&#39;, &#39;FN&#39; as &#39;Warning&#39;</span></span>
+<span id="cb66-12"><a href="#cb66-12" tabindex="-1"></a><span class="st">                 from tp t</span></span>
+<span id="cb66-13"><a href="#cb66-13" tabindex="-1"></a><span class="st">                 where className not in (select className from bench03cy)&quot;</span>)</span>
+<span id="cb66-14"><a href="#cb66-14" tabindex="-1"></a></span>
+<span id="cb66-15"><a href="#cb66-15" tabindex="-1"></a>ds <span class="ot">&lt;-</span> <span class="fu">rbind</span>(ds, crylogger_tp)</span>
+<span id="cb66-16"><a href="#cb66-16" tabindex="-1"></a>ds <span class="ot">&lt;-</span> <span class="fu">rbind</span>(ds, crylogger_fp)</span>
+<span id="cb66-17"><a href="#cb66-17" tabindex="-1"></a>ds <span class="ot">&lt;-</span> <span class="fu">rbind</span>(ds, crylogger_fn)</span>
+<span id="cb66-18"><a href="#cb66-18" tabindex="-1"></a></span>
+<span id="cb66-19"><a href="#cb66-19" tabindex="-1"></a></span>
+<span id="cb66-20"><a href="#cb66-20" tabindex="-1"></a><span class="fu">sqldf</span>(<span class="st">&quot;select tool, warning, count(*) from ds group by tool, warning&quot;</span>)</span></code></pre></div>
+<pre><code>##          Tool Warning count(*)
+## 1  CogniCrypt      FN        5
+## 2  CogniCrypt      TP       23
+## 3   CryLogger      FN        8
+## 4   CryLogger      TP       20
+## 5 CryptoGuard      FN        9
+## 6 CryptoGuard      TP       19
+## 7       RVSec      TP       28</code></pre>
+<div class="sourceCode" id="cb68"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb68-1"><a href="#cb68-1" tabindex="-1"></a><span class="fu">write.csv</span>(ds, <span class="st">&quot;../results/gt-cwes.csv&quot;</span>,  <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
 </div>
 
 

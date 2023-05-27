@@ -10,9 +10,18 @@ def printRow(cwe, values):
     
 
 def accuracy(tp, fp, fn):
-    precision = tp /(tp + fp)
-    recall = tp / (tp + fn)
+    precision = 0
+    recall = 0
+    
+    if (tp + fp) != 0:
+        precision = tp /(tp + fp)
 
+    if (tp + fn) != 0:
+        recall = tp / (tp + fn)
+
+    if (precision + recall) == 0:
+        return 0
+    
     return 2 * ((precision * recall)/(precision + recall))
     
     
@@ -21,7 +30,7 @@ cweFinal = {}
 toolIds = {'RVSec' : 0, 'CryLogger' : 1, 'CogniCrypt' : 2, 'CryptoGuard' : 3}
 warningIds = {'TP' : 0, 'FP' : 1, 'FN' : 2}
 
-with open('gt-cwes.csv') as csvfile:
+with open('benchmarks.csv') as csvfile:
     cwes = csv.reader(csvfile, delimiter = ',')
     count = 0
     for row in cwes:
