@@ -33,13 +33,13 @@ gt <- na.omit(gt)
 ## Identifying the sets of TPs and TNs
 
 ```{r}
-gt <- sqldf("select propertyShortName, class, method, vulnerability 
+gt <- sqldf("select propertyShortName, class, method, vulnerability, cwe
             from gt")
 
 nrow(gt)
 
-tp <- sqldf("select distinct class from gt where vulnerability = 'TRUE'")
-tn <- sqldf("select distinct class from gt where vulnerability = 'FALSE'")
+tp <- sqldf("select distinct class, cwe from gt where vulnerability = 'TRUE'")
+tn <- sqldf("select distinct class, cwe from gt where vulnerability = 'FALSE'")
 
 sqldf("select count(distinct class) from tp")
 sqldf("select count(distinct class) from tn")
@@ -133,7 +133,7 @@ gtcg <- read.csv("../results/bench02-gt-cg-converted.csv", head=T, sep=",")
 
 gtcg <- na.omit(gtcg)
 
-gtcg <- sqldf("select propertyShortName, class, method, vulnerability 
+gtcg <- sqldf("select propertyShortName, class, method, vulnerability, cwe
             from gtcg")
 
 nrow(gtcg)
@@ -253,4 +253,91 @@ sqldf("select *
                  from tp 
                  where class not in (select className from bench02mop)")
 
+```
+
+
+## CWEs assessment 
+
+```{r}
+mop_tp <- sqldf("select distinct m.cwe as 'cwe', m.className as 'className', 'RVSec' as 'tool', 'TP' as 'Warning'
+                 from bench02mop m  
+                 where className in (select class from tp)")
+
+# compute false positive 
+mop_fp <- sqldf("select distinct m.cwe as 'cwe', m.className as 'className', 'RVSec' as 'tool', 'FP' as 'Warning'
+                 from bench02mop m
+                 where className in (select class from tn)")
+
+
+
+# compute false-negative  
+mop_fn <- sqldf("select distinct t.cwe as 'cwe', t.class as 'className', 'RVSec' as 'tool', 'FN' as 'Warning'
+                 from tp t
+                 where class not in (select className from bench02mop)")
+
+ds <- rbind(mop_tp, mop_fp)
+ds <- rbind(ds, mop_fn)
+
+
+cc_tp <- sqldf("select distinct c.cwe as 'cwe', c.className as 'className', 'CogniCrypt' as 'tool', 'TP' as 'Warning'
+                from bench02cc c
+                where className in (select class from tp)")
+
+# compute false positive 
+cc_fp <- sqldf("select distinct c.cwe as 'cwe', c.className as 'className', 'CogniCrypt' as 'tool', 'FP' as 'Warning'
+                from bench02cc c
+                where className in (select class from tn)")
+
+# compute false-negative  
+cc_fn <- sqldf("select distinct t.cwe as 'cwe', t.class as 'className', 'CogniCrypt' as 'tool', 'FN' as 'Warning'
+                from tp t
+                where class not in (select className from bench02cc)")
+
+ds <- rbind(ds, cc_tp)
+ds <- rbind(ds, cc_fp)
+ds <- rbind(ds, cc_fn)
+
+
+# compute true positive 
+cg_tp <- sqldf("select distinct c.cwe as 'cwe', c.className as 'className', 'CryptoGuard' as 'tool', 'TP' as 'Warning'
+                from bench02cg c
+                where className in (select class from tpcg)")
+
+# compute false positive 
+cg_fp <- sqldf("select  distinct c.cwe as 'cwe', c.className as 'className', 'CryptoGuard' as 'tool', 'FP' as 'Warning'
+                from bench02cg c
+                where className in (select class from tncg)")
+
+# compute false-negative  
+cg_fn <- sqldf("select  distinct t.cwe as 'cwe', t.class as 'className', 'CryptoGuard' as 'tool', 'FN' as 'Warning'
+                from tpcg t
+                where class not in (select className from bench02cg)")
+
+ds <- rbind(ds, cg_tp)
+ds <- rbind(ds, cg_fp)
+ds <- rbind(ds, cg_fn)
+
+crylogger_tp <- sqldf("select distinct c.cwe as 'cwe', c.className as 'className', 'CryLogger' as 'tool', 'TP' as 'Warning'
+                 from bench02crylogger c
+                 where className in (select class from tp)")
+
+# compute false positive 
+crylogger_fp <- sqldf("select distinct c.cwe as 'cwe', c.className as 'className', 'CryLogger' as 'tool', 'FP' as 'Warning'
+                 from bench02crylogger c
+                 where className in (select class from tn)")
+
+
+
+# compute false-negative  
+crylogger_fn <- sqldf("select distinct t.cwe as 'cwe', t.class as 'className', 'CryLogger' as 'tool', 'FN' as 'Warning'
+                 from tp t
+                 where class not in (select className from bench02crylogger)")
+
+ds <- rbind(ds, crylogger_tp)
+ds <- rbind(ds, crylogger_fp)
+ds <- rbind(ds, crylogger_fn)
+
+sqldf("select tool, warning, count(*) from ds group by tool, warning")
+
+write.csv(ds, "../results/gt-cwes.csv",  row.names = FALSE)
 ```
