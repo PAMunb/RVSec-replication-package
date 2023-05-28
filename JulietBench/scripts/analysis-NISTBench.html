@@ -542,7 +542,7 @@ display: none;
 <span id="cb34-8"><a href="#cb34-8" tabindex="-1"></a></span>
 <span id="cb34-9"><a href="#cb34-9" tabindex="-1"></a><span class="fu">xtable</span>(cwes)</span></code></pre></div>
 <pre><code>## % latex table generated in R 4.2.0 by xtable 1.8-4 package
-## % Mon May 15 11:20:10 2023
+## % Sun May 28 17:15:24 2023
 ## \begin{table}[ht]
 ## \centering
 ## \begin{tabular}{rllr}
@@ -568,30 +568,30 @@ display: none;
 </div>
 <div id="computing-precision-and-recall-for-mop" class="section level2">
 <h2>Computing Precision and Recall for MOP</h2>
-<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" tabindex="-1"></a>tp <span class="ot">=</span> <span class="fu">sqldf</span>(<span class="st">&quot;select * </span></span>
+<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" tabindex="-1"></a>mop_tp <span class="ot">=</span> <span class="fu">sqldf</span>(<span class="st">&quot;select * </span></span>
 <span id="cb40-2"><a href="#cb40-2" tabindex="-1"></a><span class="st">            from warnings w</span></span>
 <span id="cb40-3"><a href="#cb40-3" tabindex="-1"></a><span class="st">            where tool = &#39;mop&#39; </span></span>
 <span id="cb40-4"><a href="#cb40-4" tabindex="-1"></a><span class="st">              and (w.className, w.method) in (select className, method from gt)&quot;</span>)</span>
 <span id="cb40-5"><a href="#cb40-5" tabindex="-1"></a></span>
-<span id="cb40-6"><a href="#cb40-6" tabindex="-1"></a>fp <span class="ot">=</span> <span class="fu">sqldf</span>(<span class="st">&quot;select * </span></span>
+<span id="cb40-6"><a href="#cb40-6" tabindex="-1"></a>mop_fp <span class="ot">=</span> <span class="fu">sqldf</span>(<span class="st">&quot;select * </span></span>
 <span id="cb40-7"><a href="#cb40-7" tabindex="-1"></a><span class="st">            from warnings w</span></span>
 <span id="cb40-8"><a href="#cb40-8" tabindex="-1"></a><span class="st">            where tool = &#39;mop&#39; </span></span>
 <span id="cb40-9"><a href="#cb40-9" tabindex="-1"></a><span class="st">              and (w.className, w.method) not in (select className, method from gt)&quot;</span>)</span>
 <span id="cb40-10"><a href="#cb40-10" tabindex="-1"></a></span>
 <span id="cb40-11"><a href="#cb40-11" tabindex="-1"></a></span>
-<span id="cb40-12"><a href="#cb40-12" tabindex="-1"></a>fn <span class="ot">=</span> <span class="fu">sqldf</span>(<span class="st">&quot;select CWE, className, method </span></span>
+<span id="cb40-12"><a href="#cb40-12" tabindex="-1"></a>mop_fn <span class="ot">=</span> <span class="fu">sqldf</span>(<span class="st">&quot;select CWE, className, method </span></span>
 <span id="cb40-13"><a href="#cb40-13" tabindex="-1"></a><span class="st">            from gt </span></span>
 <span id="cb40-14"><a href="#cb40-14" tabindex="-1"></a><span class="st">            where (className, method) not in (select className, method from warnings where tool = &#39;mop&#39;)&quot;</span>)</span>
 <span id="cb40-15"><a href="#cb40-15" tabindex="-1"></a></span>
-<span id="cb40-16"><a href="#cb40-16" tabindex="-1"></a><span class="fu">nrow</span>(tp)</span></code></pre></div>
+<span id="cb40-16"><a href="#cb40-16" tabindex="-1"></a><span class="fu">nrow</span>(mop_tp)</span></code></pre></div>
 <pre><code>## [1] 100</code></pre>
-<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" tabindex="-1"></a><span class="fu">nrow</span>(fp)</span></code></pre></div>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" tabindex="-1"></a><span class="fu">nrow</span>(mop_fp)</span></code></pre></div>
 <pre><code>## [1] 0</code></pre>
-<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" tabindex="-1"></a><span class="fu">nrow</span>(fn)</span></code></pre></div>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" tabindex="-1"></a><span class="fu">nrow</span>(mop_fn)</span></code></pre></div>
 <pre><code>## [1] 2</code></pre>
-<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" tabindex="-1"></a>precision_mop <span class="ot">=</span> <span class="fu">nrow</span>(tp) <span class="sc">/</span> (<span class="fu">nrow</span>(tp) <span class="sc">+</span> <span class="fu">nrow</span>(fp))</span>
+<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" tabindex="-1"></a>precision_mop <span class="ot">=</span> <span class="fu">nrow</span>(mop_tp) <span class="sc">/</span> (<span class="fu">nrow</span>(mop_tp) <span class="sc">+</span> <span class="fu">nrow</span>(mop_fp))</span>
 <span id="cb46-2"><a href="#cb46-2" tabindex="-1"></a></span>
-<span id="cb46-3"><a href="#cb46-3" tabindex="-1"></a>recall_mop <span class="ot">=</span> <span class="fu">nrow</span>(tp) <span class="sc">/</span> (<span class="fu">nrow</span>(tp) <span class="sc">+</span> <span class="fu">nrow</span>(fn))</span>
+<span id="cb46-3"><a href="#cb46-3" tabindex="-1"></a>recall_mop <span class="ot">=</span> <span class="fu">nrow</span>(mop_tp) <span class="sc">/</span> (<span class="fu">nrow</span>(mop_tp) <span class="sc">+</span> <span class="fu">nrow</span>(mop_fn))</span>
 <span id="cb46-4"><a href="#cb46-4" tabindex="-1"></a></span>
 <span id="cb46-5"><a href="#cb46-5" tabindex="-1"></a>fmeasure_mop <span class="ot">=</span> <span class="dv">2</span> <span class="sc">*</span> ((precision_mop <span class="sc">*</span> recall_mop) <span class="sc">/</span> (precision_mop <span class="sc">+</span> recall_mop))</span>
 <span id="cb46-6"><a href="#cb46-6" tabindex="-1"></a></span>
@@ -605,31 +605,31 @@ display: none;
 </div>
 <div id="computing-precision-and-recall-for-cc" class="section level2">
 <h2>Computing Precision and Recall for CC</h2>
-<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" tabindex="-1"></a>tp <span class="ot">=</span> <span class="fu">sqldf</span>(<span class="st">&quot;select * </span></span>
+<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" tabindex="-1"></a>cc_tp <span class="ot">=</span> <span class="fu">sqldf</span>(<span class="st">&quot;select * </span></span>
 <span id="cb52-2"><a href="#cb52-2" tabindex="-1"></a><span class="st">            from warnings w</span></span>
 <span id="cb52-3"><a href="#cb52-3" tabindex="-1"></a><span class="st">            where tool = &#39;cc&#39; </span></span>
 <span id="cb52-4"><a href="#cb52-4" tabindex="-1"></a><span class="st">              and (w.className, w.method) in (select className, method from gt)&quot;</span>)</span>
 <span id="cb52-5"><a href="#cb52-5" tabindex="-1"></a></span>
-<span id="cb52-6"><a href="#cb52-6" tabindex="-1"></a>fp <span class="ot">=</span> <span class="fu">sqldf</span>(<span class="st">&quot;select * </span></span>
+<span id="cb52-6"><a href="#cb52-6" tabindex="-1"></a>cc_fp <span class="ot">=</span> <span class="fu">sqldf</span>(<span class="st">&quot;select * </span></span>
 <span id="cb52-7"><a href="#cb52-7" tabindex="-1"></a><span class="st">            from warnings w</span></span>
 <span id="cb52-8"><a href="#cb52-8" tabindex="-1"></a><span class="st">            where tool = &#39;cc&#39; </span></span>
 <span id="cb52-9"><a href="#cb52-9" tabindex="-1"></a><span class="st">              and (w.className, w.method) not in (select className, method from gt)&quot;</span>)</span>
 <span id="cb52-10"><a href="#cb52-10" tabindex="-1"></a></span>
 <span id="cb52-11"><a href="#cb52-11" tabindex="-1"></a></span>
-<span id="cb52-12"><a href="#cb52-12" tabindex="-1"></a>fn <span class="ot">=</span> <span class="fu">sqldf</span>(<span class="st">&quot;select className, method </span></span>
+<span id="cb52-12"><a href="#cb52-12" tabindex="-1"></a>cc_fn <span class="ot">=</span> <span class="fu">sqldf</span>(<span class="st">&quot;select CWE, className, method </span></span>
 <span id="cb52-13"><a href="#cb52-13" tabindex="-1"></a><span class="st">            from gt </span></span>
 <span id="cb52-14"><a href="#cb52-14" tabindex="-1"></a><span class="st">            where (className, method) not in (select className, method from warnings where tool = &#39;cc&#39;)&quot;</span>)</span>
 <span id="cb52-15"><a href="#cb52-15" tabindex="-1"></a></span>
 <span id="cb52-16"><a href="#cb52-16" tabindex="-1"></a></span>
-<span id="cb52-17"><a href="#cb52-17" tabindex="-1"></a><span class="fu">nrow</span>(tp)</span></code></pre></div>
+<span id="cb52-17"><a href="#cb52-17" tabindex="-1"></a><span class="fu">nrow</span>(cc_tp)</span></code></pre></div>
 <pre><code>## [1] 102</code></pre>
-<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" tabindex="-1"></a><span class="fu">nrow</span>(fp)</span></code></pre></div>
+<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" tabindex="-1"></a><span class="fu">nrow</span>(cc_fp)</span></code></pre></div>
 <pre><code>## [1] 60</code></pre>
-<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" tabindex="-1"></a><span class="fu">nrow</span>(fn)</span></code></pre></div>
+<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" tabindex="-1"></a><span class="fu">nrow</span>(cc_fn)</span></code></pre></div>
 <pre><code>## [1] 0</code></pre>
-<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" tabindex="-1"></a>precision_cc <span class="ot">=</span> <span class="fu">nrow</span>(tp) <span class="sc">/</span> (<span class="fu">nrow</span>(tp) <span class="sc">+</span> <span class="fu">nrow</span>(fp))</span>
+<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" tabindex="-1"></a>precision_cc <span class="ot">=</span> <span class="fu">nrow</span>(cc_tp) <span class="sc">/</span> (<span class="fu">nrow</span>(cc_tp) <span class="sc">+</span> <span class="fu">nrow</span>(cc_fp))</span>
 <span id="cb58-2"><a href="#cb58-2" tabindex="-1"></a></span>
-<span id="cb58-3"><a href="#cb58-3" tabindex="-1"></a>recall_cc <span class="ot">=</span> <span class="fu">nrow</span>(tp) <span class="sc">/</span> (<span class="fu">nrow</span>(tp) <span class="sc">+</span> <span class="fu">nrow</span>(fn))</span>
+<span id="cb58-3"><a href="#cb58-3" tabindex="-1"></a>recall_cc <span class="ot">=</span> <span class="fu">nrow</span>(cc_tp) <span class="sc">/</span> (<span class="fu">nrow</span>(cc_tp) <span class="sc">+</span> <span class="fu">nrow</span>(cc_fn))</span>
 <span id="cb58-4"><a href="#cb58-4" tabindex="-1"></a></span>
 <span id="cb58-5"><a href="#cb58-5" tabindex="-1"></a>fmeasure_cc <span class="ot">=</span> <span class="dv">2</span> <span class="sc">*</span> ((precision_cc <span class="sc">*</span> recall_cc) <span class="sc">/</span> (precision_cc <span class="sc">+</span> recall_cc))</span>
 <span id="cb58-6"><a href="#cb58-6" tabindex="-1"></a></span>
@@ -648,31 +648,31 @@ display: none;
 <span id="cb64-3"><a href="#cb64-3" tabindex="-1"></a><span class="st">            where tool = &#39;cg&#39;&quot;</span>)</span></code></pre></div>
 <pre><code>##   count(*)
 ## 1       85</code></pre>
-<div class="sourceCode" id="cb66"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1" tabindex="-1"></a>tp <span class="ot">=</span> <span class="fu">sqldf</span>(<span class="st">&quot;select * </span></span>
+<div class="sourceCode" id="cb66"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1" tabindex="-1"></a>cg_tp <span class="ot">=</span> <span class="fu">sqldf</span>(<span class="st">&quot;select * </span></span>
 <span id="cb66-2"><a href="#cb66-2" tabindex="-1"></a><span class="st">            from warnings w</span></span>
 <span id="cb66-3"><a href="#cb66-3" tabindex="-1"></a><span class="st">            where tool = &#39;cg&#39; </span></span>
 <span id="cb66-4"><a href="#cb66-4" tabindex="-1"></a><span class="st">              and (w.className, w.method) in (select className, method from gt)&quot;</span>)</span>
 <span id="cb66-5"><a href="#cb66-5" tabindex="-1"></a></span>
-<span id="cb66-6"><a href="#cb66-6" tabindex="-1"></a>fp <span class="ot">=</span> <span class="fu">sqldf</span>(<span class="st">&quot;select * </span></span>
+<span id="cb66-6"><a href="#cb66-6" tabindex="-1"></a>cg_fp <span class="ot">=</span> <span class="fu">sqldf</span>(<span class="st">&quot;select * </span></span>
 <span id="cb66-7"><a href="#cb66-7" tabindex="-1"></a><span class="st">            from warnings w</span></span>
 <span id="cb66-8"><a href="#cb66-8" tabindex="-1"></a><span class="st">            where tool = &#39;cg&#39; </span></span>
 <span id="cb66-9"><a href="#cb66-9" tabindex="-1"></a><span class="st">              and (w.className, w.method) not in (select className, method from gt)&quot;</span>)</span>
 <span id="cb66-10"><a href="#cb66-10" tabindex="-1"></a></span>
 <span id="cb66-11"><a href="#cb66-11" tabindex="-1"></a></span>
-<span id="cb66-12"><a href="#cb66-12" tabindex="-1"></a>fn <span class="ot">=</span> <span class="fu">sqldf</span>(<span class="st">&quot;select className, method </span></span>
+<span id="cb66-12"><a href="#cb66-12" tabindex="-1"></a>cg_fn <span class="ot">=</span> <span class="fu">sqldf</span>(<span class="st">&quot;select CWE, className, method </span></span>
 <span id="cb66-13"><a href="#cb66-13" tabindex="-1"></a><span class="st">            from gt </span></span>
 <span id="cb66-14"><a href="#cb66-14" tabindex="-1"></a><span class="st">            where (className, method) not in (select className, method from warnings where tool = &#39;cg&#39;)&quot;</span>)</span>
 <span id="cb66-15"><a href="#cb66-15" tabindex="-1"></a></span>
 <span id="cb66-16"><a href="#cb66-16" tabindex="-1"></a></span>
-<span id="cb66-17"><a href="#cb66-17" tabindex="-1"></a><span class="fu">nrow</span>(tp)</span></code></pre></div>
+<span id="cb66-17"><a href="#cb66-17" tabindex="-1"></a><span class="fu">nrow</span>(cg_tp)</span></code></pre></div>
 <pre><code>## [1] 85</code></pre>
-<div class="sourceCode" id="cb68"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb68-1"><a href="#cb68-1" tabindex="-1"></a><span class="fu">nrow</span>(fp)</span></code></pre></div>
+<div class="sourceCode" id="cb68"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb68-1"><a href="#cb68-1" tabindex="-1"></a><span class="fu">nrow</span>(cg_fp)</span></code></pre></div>
 <pre><code>## [1] 0</code></pre>
-<div class="sourceCode" id="cb70"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb70-1"><a href="#cb70-1" tabindex="-1"></a><span class="fu">nrow</span>(fn)</span></code></pre></div>
+<div class="sourceCode" id="cb70"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb70-1"><a href="#cb70-1" tabindex="-1"></a><span class="fu">nrow</span>(cg_fn)</span></code></pre></div>
 <pre><code>## [1] 17</code></pre>
-<div class="sourceCode" id="cb72"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb72-1"><a href="#cb72-1" tabindex="-1"></a>precision_cg <span class="ot">=</span> <span class="fu">nrow</span>(tp) <span class="sc">/</span> (<span class="fu">nrow</span>(tp) <span class="sc">+</span> <span class="fu">nrow</span>(fp))</span>
+<div class="sourceCode" id="cb72"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb72-1"><a href="#cb72-1" tabindex="-1"></a>precision_cg <span class="ot">=</span> <span class="fu">nrow</span>(cg_tp) <span class="sc">/</span> (<span class="fu">nrow</span>(cg_tp) <span class="sc">+</span> <span class="fu">nrow</span>(cg_fp))</span>
 <span id="cb72-2"><a href="#cb72-2" tabindex="-1"></a></span>
-<span id="cb72-3"><a href="#cb72-3" tabindex="-1"></a>recall_cg <span class="ot">=</span> <span class="fu">nrow</span>(tp) <span class="sc">/</span> (<span class="fu">nrow</span>(tp) <span class="sc">+</span> <span class="fu">nrow</span>(fn))</span>
+<span id="cb72-3"><a href="#cb72-3" tabindex="-1"></a>recall_cg <span class="ot">=</span> <span class="fu">nrow</span>(cg_tp) <span class="sc">/</span> (<span class="fu">nrow</span>(cg_tp) <span class="sc">+</span> <span class="fu">nrow</span>(cg_fn))</span>
 <span id="cb72-4"><a href="#cb72-4" tabindex="-1"></a></span>
 <span id="cb72-5"><a href="#cb72-5" tabindex="-1"></a>fmeasure_cg <span class="ot">=</span> <span class="dv">2</span> <span class="sc">*</span> ((precision_cg <span class="sc">*</span> recall_cg) <span class="sc">/</span> (precision_cg <span class="sc">+</span> recall_cg))</span>
 <span id="cb72-6"><a href="#cb72-6" tabindex="-1"></a></span>
@@ -686,35 +686,34 @@ display: none;
 </div>
 <div id="computing-precision-and-recall-for-crylogger" class="section level2">
 <h2>Computing Precision and Recall for CryLogger</h2>
-<div class="sourceCode" id="cb78"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb78-1"><a href="#cb78-1" tabindex="-1"></a>tp <span class="ot">=</span> <span class="fu">sqldf</span>(<span class="st">&quot;select * </span></span>
+<div class="sourceCode" id="cb78"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb78-1"><a href="#cb78-1" tabindex="-1"></a>cl_tp <span class="ot">=</span> <span class="fu">sqldf</span>(<span class="st">&quot;select * </span></span>
 <span id="cb78-2"><a href="#cb78-2" tabindex="-1"></a><span class="st">            from warnings w</span></span>
 <span id="cb78-3"><a href="#cb78-3" tabindex="-1"></a><span class="st">            where tool = &#39;crylogger&#39; </span></span>
 <span id="cb78-4"><a href="#cb78-4" tabindex="-1"></a><span class="st">              and (w.className, w.method) in (select className, method from gt)&quot;</span>)</span>
 <span id="cb78-5"><a href="#cb78-5" tabindex="-1"></a></span>
-<span id="cb78-6"><a href="#cb78-6" tabindex="-1"></a>fp <span class="ot">=</span> <span class="fu">sqldf</span>(<span class="st">&quot;select * </span></span>
+<span id="cb78-6"><a href="#cb78-6" tabindex="-1"></a>cl_fp <span class="ot">=</span> <span class="fu">sqldf</span>(<span class="st">&quot;select * </span></span>
 <span id="cb78-7"><a href="#cb78-7" tabindex="-1"></a><span class="st">            from warnings w</span></span>
 <span id="cb78-8"><a href="#cb78-8" tabindex="-1"></a><span class="st">            where tool = &#39;crylogger&#39; </span></span>
 <span id="cb78-9"><a href="#cb78-9" tabindex="-1"></a><span class="st">              and (w.className, w.method) not in (select className, method from gt)&quot;</span>)</span>
 <span id="cb78-10"><a href="#cb78-10" tabindex="-1"></a></span>
 <span id="cb78-11"><a href="#cb78-11" tabindex="-1"></a></span>
-<span id="cb78-12"><a href="#cb78-12" tabindex="-1"></a>fn <span class="ot">=</span> <span class="fu">sqldf</span>(<span class="st">&quot;select CWE, className, method </span></span>
-<span id="cb78-13"><a href="#cb78-13" tabindex="-1"></a><span class="st">            from gt </span></span>
-<span id="cb78-14"><a href="#cb78-14" tabindex="-1"></a><span class="st">            where (className, method) not in (select className, method from warnings where tool = &#39;crylogger&#39;)&quot;</span>)</span>
+<span id="cb78-12"><a href="#cb78-12" tabindex="-1"></a>cl_fn <span class="ot">=</span> <span class="fu">sqldf</span>(<span class="st">&quot;select CWE, className, method </span></span>
+<span id="cb78-13"><a href="#cb78-13" tabindex="-1"></a><span class="st">               from gt </span></span>
+<span id="cb78-14"><a href="#cb78-14" tabindex="-1"></a><span class="st">               where (className, method) not in (select className, method from warnings where tool = &#39;crylogger&#39;)&quot;</span>)</span>
 <span id="cb78-15"><a href="#cb78-15" tabindex="-1"></a></span>
-<span id="cb78-16"><a href="#cb78-16" tabindex="-1"></a><span class="fu">nrow</span>(tp)</span></code></pre></div>
+<span id="cb78-16"><a href="#cb78-16" tabindex="-1"></a><span class="fu">nrow</span>(cl_tp)</span></code></pre></div>
 <pre><code>## [1] 86</code></pre>
-<div class="sourceCode" id="cb80"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb80-1"><a href="#cb80-1" tabindex="-1"></a><span class="fu">nrow</span>(fp)</span></code></pre></div>
+<div class="sourceCode" id="cb80"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb80-1"><a href="#cb80-1" tabindex="-1"></a><span class="fu">nrow</span>(cl_fp)</span></code></pre></div>
 <pre><code>## [1] 7</code></pre>
-<div class="sourceCode" id="cb82"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb82-1"><a href="#cb82-1" tabindex="-1"></a><span class="fu">nrow</span>(fn)</span></code></pre></div>
+<div class="sourceCode" id="cb82"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb82-1"><a href="#cb82-1" tabindex="-1"></a><span class="fu">nrow</span>(cl_fn)</span></code></pre></div>
 <pre><code>## [1] 16</code></pre>
-<div class="sourceCode" id="cb84"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb84-1"><a href="#cb84-1" tabindex="-1"></a>precision_crylogger <span class="ot">=</span> <span class="fu">nrow</span>(tp) <span class="sc">/</span> (<span class="fu">nrow</span>(tp) <span class="sc">+</span> <span class="fu">nrow</span>(fp))</span>
+<div class="sourceCode" id="cb84"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb84-1"><a href="#cb84-1" tabindex="-1"></a>precision_crylogger <span class="ot">=</span> <span class="fu">nrow</span>(cl_tp) <span class="sc">/</span> (<span class="fu">nrow</span>(cl_tp) <span class="sc">+</span> <span class="fu">nrow</span>(cl_fp))</span>
 <span id="cb84-2"><a href="#cb84-2" tabindex="-1"></a></span>
-<span id="cb84-3"><a href="#cb84-3" tabindex="-1"></a>recall_crylogger <span class="ot">=</span> <span class="fu">nrow</span>(tp) <span class="sc">/</span> (<span class="fu">nrow</span>(tp) <span class="sc">+</span> <span class="fu">nrow</span>(fn))</span>
+<span id="cb84-3"><a href="#cb84-3" tabindex="-1"></a>recall_crylogger <span class="ot">=</span> <span class="fu">nrow</span>(cl_tp) <span class="sc">/</span> (<span class="fu">nrow</span>(cl_tp) <span class="sc">+</span> <span class="fu">nrow</span>(cl_fn))</span>
 <span id="cb84-4"><a href="#cb84-4" tabindex="-1"></a></span>
 <span id="cb84-5"><a href="#cb84-5" tabindex="-1"></a>fmeasure_crylogger <span class="ot">=</span> <span class="dv">2</span> <span class="sc">*</span> ((precision_crylogger <span class="sc">*</span> recall_crylogger) <span class="sc">/</span> (precision_crylogger <span class="sc">+</span> recall_crylogger))</span>
 <span id="cb84-6"><a href="#cb84-6" tabindex="-1"></a></span>
-<span id="cb84-7"><a href="#cb84-7" tabindex="-1"></a></span>
-<span id="cb84-8"><a href="#cb84-8" tabindex="-1"></a>precision_crylogger</span></code></pre></div>
+<span id="cb84-7"><a href="#cb84-7" tabindex="-1"></a>precision_crylogger</span></code></pre></div>
 <pre><code>## [1] 0.9247312</code></pre>
 <div class="sourceCode" id="cb86"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb86-1"><a href="#cb86-1" tabindex="-1"></a>recall_crylogger</span></code></pre></div>
 <pre><code>## [1] 0.8431373</code></pre>
@@ -736,36 +735,38 @@ display: none;
 ## 2  CogniCrypt 0.6296296 1.0000000 0.7727273
 ## 3 CryptoGuard 1.0000000 0.8333333 0.9090909
 ## 4   CryLogger 0.9247312 0.8431373 0.8820513</code></pre>
-<div class="sourceCode" id="cb92"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb92-1"><a href="#cb92-1" tabindex="-1"></a><span class="fu">sqldf</span>(<span class="st">&quot;select CWE, count(*) from fn group by CWE&quot;</span>)</span></code></pre></div>
-<pre><code>##      CWE count(*)
-## 1 CWE325       16</code></pre>
-<div class="sourceCode" id="cb94"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb94-1"><a href="#cb94-1" tabindex="-1"></a><span class="fu">sqldf</span>(<span class="st">&quot;select ClassName from fn&quot;</span>)</span></code></pre></div>
-<pre><code>##                                                              className
-## 1  CWE325_Missing_Required_Cryptographic_Step__MessageDigest_update_01
-## 2  CWE325_Missing_Required_Cryptographic_Step__MessageDigest_update_02
-## 3  CWE325_Missing_Required_Cryptographic_Step__MessageDigest_update_03
-## 4  CWE325_Missing_Required_Cryptographic_Step__MessageDigest_update_04
-## 5  CWE325_Missing_Required_Cryptographic_Step__MessageDigest_update_05
-## 6  CWE325_Missing_Required_Cryptographic_Step__MessageDigest_update_06
-## 7  CWE325_Missing_Required_Cryptographic_Step__MessageDigest_update_07
-## 8  CWE325_Missing_Required_Cryptographic_Step__MessageDigest_update_08
-## 9  CWE325_Missing_Required_Cryptographic_Step__MessageDigest_update_09
-## 10 CWE325_Missing_Required_Cryptographic_Step__MessageDigest_update_10
-## 11 CWE325_Missing_Required_Cryptographic_Step__MessageDigest_update_11
-## 12 CWE325_Missing_Required_Cryptographic_Step__MessageDigest_update_13
-## 13 CWE325_Missing_Required_Cryptographic_Step__MessageDigest_update_14
-## 14 CWE325_Missing_Required_Cryptographic_Step__MessageDigest_update_15
-## 15 CWE325_Missing_Required_Cryptographic_Step__MessageDigest_update_16
-## 16 CWE325_Missing_Required_Cryptographic_Step__MessageDigest_update_17</code></pre>
-<div class="sourceCode" id="cb96"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb96-1"><a href="#cb96-1" tabindex="-1"></a><span class="fu">sqldf</span>(<span class="st">&quot;select ClassName, method from fp&quot;</span>)</span></code></pre></div>
-<pre><code>##                                                             className method
-## 1 CWE325_Missing_Required_Cryptographic_Step__MessageDigest_update_12   good
-## 2                                   CWE327_Use_Broken_Crypto__3DES_12   good
-## 3                                    CWE327_Use_Broken_Crypto__DES_04   good
-## 4                                    CWE327_Use_Broken_Crypto__DES_12   good
-## 5                              CWE328_Reversible_One_Way_Hash__MD2_12   good
-## 6                              CWE328_Reversible_One_Way_Hash__MD5_12   good
-## 7                             CWE328_Reversible_One_Way_Hash__SHA1_12   good</code></pre>
+<div class="sourceCode" id="cb92"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb92-1"><a href="#cb92-1" tabindex="-1"></a>mop <span class="ot">&lt;-</span> <span class="fu">sqldf</span>(<span class="st">&quot;select distinct cwe,  className, &#39;RVSec&#39; as tool, &#39;TP&#39; as warning from mop_tp&quot;</span>)</span>
+<span id="cb92-2"><a href="#cb92-2" tabindex="-1"></a>mop <span class="ot">&lt;-</span> <span class="fu">rbind</span>(mop, <span class="fu">sqldf</span>(<span class="st">&quot;select distinct cwe,  className, &#39;RVSec&#39; as tool, &#39;FP&#39; as warning from mop_fp&quot;</span>))</span>
+<span id="cb92-3"><a href="#cb92-3" tabindex="-1"></a>mop <span class="ot">&lt;-</span> <span class="fu">rbind</span>(mop, <span class="fu">sqldf</span>(<span class="st">&quot;select distinct cwe,  className, &#39;RVSec&#39; as tool, &#39;FN&#39; as warning from mop_fn&quot;</span>))</span>
+<span id="cb92-4"><a href="#cb92-4" tabindex="-1"></a></span>
+<span id="cb92-5"><a href="#cb92-5" tabindex="-1"></a>cc <span class="ot">&lt;-</span> <span class="fu">sqldf</span>(<span class="st">&quot;select distinct cwe,  className, &#39;CogniCrypt&#39; as tool, &#39;TP&#39; as warning from cc_tp&quot;</span>)</span>
+<span id="cb92-6"><a href="#cb92-6" tabindex="-1"></a>cc <span class="ot">&lt;-</span> <span class="fu">rbind</span>(cc, <span class="fu">sqldf</span>(<span class="st">&quot;select distinct cwe,  className, &#39;CogniCrypt&#39; as tool, &#39;FP&#39; as warning from cc_fp&quot;</span>))</span>
+<span id="cb92-7"><a href="#cb92-7" tabindex="-1"></a>cc <span class="ot">&lt;-</span> <span class="fu">rbind</span>(cc, <span class="fu">sqldf</span>(<span class="st">&quot;select distinct cwe,  className, &#39;CogniCrypt&#39; as tool, &#39;FN&#39; as warning from cc_fn&quot;</span>))</span>
+<span id="cb92-8"><a href="#cb92-8" tabindex="-1"></a></span>
+<span id="cb92-9"><a href="#cb92-9" tabindex="-1"></a>cg <span class="ot">&lt;-</span> <span class="fu">sqldf</span>(<span class="st">&quot;select distinct cwe,  className, &#39;CryptoGuard&#39; as tool, &#39;TP&#39; as warning from cg_tp&quot;</span>)</span>
+<span id="cb92-10"><a href="#cb92-10" tabindex="-1"></a>cg <span class="ot">&lt;-</span> <span class="fu">rbind</span>(cg, <span class="fu">sqldf</span>(<span class="st">&quot;select distinct cwe,  className, &#39;CryptoGuard&#39; as tool, &#39;FP&#39; as warning from cg_fp&quot;</span>))</span>
+<span id="cb92-11"><a href="#cb92-11" tabindex="-1"></a>cg <span class="ot">&lt;-</span> <span class="fu">rbind</span>(cg, <span class="fu">sqldf</span>(<span class="st">&quot;select distinct cwe,  className, &#39;CryptoGuard&#39; as tool, &#39;FN&#39; as warning from cg_fn&quot;</span>))</span>
+<span id="cb92-12"><a href="#cb92-12" tabindex="-1"></a></span>
+<span id="cb92-13"><a href="#cb92-13" tabindex="-1"></a>cl <span class="ot">&lt;-</span> <span class="fu">sqldf</span>(<span class="st">&quot;select distinct cwe,  className, &#39;CryLogger&#39; as tool, &#39;TP&#39; as warning from cl_tp&quot;</span>)</span>
+<span id="cb92-14"><a href="#cb92-14" tabindex="-1"></a>cl <span class="ot">&lt;-</span> <span class="fu">rbind</span>(cl, <span class="fu">sqldf</span>(<span class="st">&quot;select distinct cwe,  className, &#39;CryLogger&#39; as tool, &#39;FP&#39; as warning from cl_fp&quot;</span>))</span>
+<span id="cb92-15"><a href="#cb92-15" tabindex="-1"></a>cl <span class="ot">&lt;-</span> <span class="fu">rbind</span>(cl, <span class="fu">sqldf</span>(<span class="st">&quot;select distinct cwe,  className, &#39;CryLogger&#39; as tool, &#39;FN&#39; as warning from cl_fn&quot;</span>))</span>
+<span id="cb92-16"><a href="#cb92-16" tabindex="-1"></a></span>
+<span id="cb92-17"><a href="#cb92-17" tabindex="-1"></a>ds <span class="ot">&lt;-</span> <span class="fu">rbind</span>(mop, cc)</span>
+<span id="cb92-18"><a href="#cb92-18" tabindex="-1"></a>ds <span class="ot">&lt;-</span> <span class="fu">rbind</span>(ds, cg)</span>
+<span id="cb92-19"><a href="#cb92-19" tabindex="-1"></a>ds <span class="ot">&lt;-</span> <span class="fu">rbind</span>(ds, cl)</span>
+<span id="cb92-20"><a href="#cb92-20" tabindex="-1"></a></span>
+<span id="cb92-21"><a href="#cb92-21" tabindex="-1"></a><span class="fu">sqldf</span>(<span class="st">&quot;select tool, warning, count(*) from ds group by tool, warning&quot;</span>)</span></code></pre></div>
+<pre><code>##          tool warning count(*)
+## 1  CogniCrypt      FP       34
+## 2  CogniCrypt      TP      102
+## 3   CryLogger      FN       16
+## 4   CryLogger      FP        7
+## 5   CryLogger      TP       86
+## 6 CryptoGuard      FN       17
+## 7 CryptoGuard      TP       85
+## 8       RVSec      FN        2
+## 9       RVSec      TP      100</code></pre>
+<div class="sourceCode" id="cb94"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb94-1"><a href="#cb94-1" tabindex="-1"></a><span class="fu">write.csv</span>(ds, <span class="st">&quot;../results/gt-cwes.csv&quot;</span>,  <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
 </div>
 
 

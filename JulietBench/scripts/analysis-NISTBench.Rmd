@@ -109,29 +109,29 @@ nrow(gt)
 
 
 ```{r mop}
-tp = sqldf("select * 
+mop_tp = sqldf("select * 
             from warnings w
             where tool = 'mop' 
               and (w.className, w.method) in (select className, method from gt)")
 
-fp = sqldf("select * 
+mop_fp = sqldf("select * 
             from warnings w
             where tool = 'mop' 
               and (w.className, w.method) not in (select className, method from gt)")
 
 
-fn = sqldf("select CWE, className, method 
+mop_fn = sqldf("select CWE, className, method 
             from gt 
             where (className, method) not in (select className, method from warnings where tool = 'mop')")
 
-nrow(tp)
-nrow(fp)
-nrow(fn)
+nrow(mop_tp)
+nrow(mop_fp)
+nrow(mop_fn)
 
 
-precision_mop = nrow(tp) / (nrow(tp) + nrow(fp))
+precision_mop = nrow(mop_tp) / (nrow(mop_tp) + nrow(mop_fp))
 
-recall_mop = nrow(tp) / (nrow(tp) + nrow(fn))
+recall_mop = nrow(mop_tp) / (nrow(mop_tp) + nrow(mop_fn))
 
 fmeasure_mop = 2 * ((precision_mop * recall_mop) / (precision_mop + recall_mop))
 
@@ -149,29 +149,29 @@ fmeasure_mop
 
 
 ```{r cc}
-tp = sqldf("select * 
+cc_tp = sqldf("select * 
             from warnings w
             where tool = 'cc' 
               and (w.className, w.method) in (select className, method from gt)")
 
-fp = sqldf("select * 
+cc_fp = sqldf("select * 
             from warnings w
             where tool = 'cc' 
               and (w.className, w.method) not in (select className, method from gt)")
 
 
-fn = sqldf("select className, method 
+cc_fn = sqldf("select CWE, className, method 
             from gt 
             where (className, method) not in (select className, method from warnings where tool = 'cc')")
 
 
-nrow(tp)
-nrow(fp)
-nrow(fn)
+nrow(cc_tp)
+nrow(cc_fp)
+nrow(cc_fn)
 
-precision_cc = nrow(tp) / (nrow(tp) + nrow(fp))
+precision_cc = nrow(cc_tp) / (nrow(cc_tp) + nrow(cc_fp))
 
-recall_cc = nrow(tp) / (nrow(tp) + nrow(fn))
+recall_cc = nrow(cc_tp) / (nrow(cc_tp) + nrow(cc_fn))
 
 fmeasure_cc = 2 * ((precision_cc * recall_cc) / (precision_cc + recall_cc))
 
@@ -194,29 +194,29 @@ sqldf("select count(*)
             from warnings w
             where tool = 'cg'")
 
-tp = sqldf("select * 
+cg_tp = sqldf("select * 
             from warnings w
             where tool = 'cg' 
               and (w.className, w.method) in (select className, method from gt)")
 
-fp = sqldf("select * 
+cg_fp = sqldf("select * 
             from warnings w
             where tool = 'cg' 
               and (w.className, w.method) not in (select className, method from gt)")
 
 
-fn = sqldf("select className, method 
+cg_fn = sqldf("select CWE, className, method 
             from gt 
             where (className, method) not in (select className, method from warnings where tool = 'cg')")
 
 
-nrow(tp)
-nrow(fp)
-nrow(fn)
+nrow(cg_tp)
+nrow(cg_fp)
+nrow(cg_fn)
 
-precision_cg = nrow(tp) / (nrow(tp) + nrow(fp))
+precision_cg = nrow(cg_tp) / (nrow(cg_tp) + nrow(cg_fp))
 
-recall_cg = nrow(tp) / (nrow(tp) + nrow(fn))
+recall_cg = nrow(cg_tp) / (nrow(cg_tp) + nrow(cg_fn))
 
 fmeasure_cg = 2 * ((precision_cg * recall_cg) / (precision_cg + recall_cg))
 
@@ -233,32 +233,31 @@ fmeasure_cg
 
 
 ```{r crylogger}
-tp = sqldf("select * 
+cl_tp = sqldf("select * 
             from warnings w
             where tool = 'crylogger' 
               and (w.className, w.method) in (select className, method from gt)")
 
-fp = sqldf("select * 
+cl_fp = sqldf("select * 
             from warnings w
             where tool = 'crylogger' 
               and (w.className, w.method) not in (select className, method from gt)")
 
 
-fn = sqldf("select CWE, className, method 
-            from gt 
-            where (className, method) not in (select className, method from warnings where tool = 'crylogger')")
+cl_fn = sqldf("select CWE, className, method 
+               from gt 
+               where (className, method) not in (select className, method from warnings where tool = 'crylogger')")
 
-nrow(tp)
-nrow(fp)
-nrow(fn)
+nrow(cl_tp)
+nrow(cl_fp)
+nrow(cl_fn)
 
 
-precision_crylogger = nrow(tp) / (nrow(tp) + nrow(fp))
+precision_crylogger = nrow(cl_tp) / (nrow(cl_tp) + nrow(cl_fp))
 
-recall_crylogger = nrow(tp) / (nrow(tp) + nrow(fn))
+recall_crylogger = nrow(cl_tp) / (nrow(cl_tp) + nrow(cl_fn))
 
 fmeasure_crylogger = 2 * ((precision_crylogger * recall_crylogger) / (precision_crylogger + recall_crylogger))
-
 
 precision_crylogger
 
@@ -286,9 +285,28 @@ analysis_ds
 
 
 ```{r}
-sqldf("select CWE, count(*) from fn group by CWE")
+mop <- sqldf("select distinct cwe,  className, 'RVSec' as tool, 'TP' as warning from mop_tp")
+mop <- rbind(mop, sqldf("select distinct cwe,  className, 'RVSec' as tool, 'FP' as warning from mop_fp"))
+mop <- rbind(mop, sqldf("select distinct cwe,  className, 'RVSec' as tool, 'FN' as warning from mop_fn"))
 
+cc <- sqldf("select distinct cwe,  className, 'CogniCrypt' as tool, 'TP' as warning from cc_tp")
+cc <- rbind(cc, sqldf("select distinct cwe,  className, 'CogniCrypt' as tool, 'FP' as warning from cc_fp"))
+cc <- rbind(cc, sqldf("select distinct cwe,  className, 'CogniCrypt' as tool, 'FN' as warning from cc_fn"))
 
-sqldf("select ClassName from fn")
-sqldf("select ClassName, method from fp")
+cg <- sqldf("select distinct cwe,  className, 'CryptoGuard' as tool, 'TP' as warning from cg_tp")
+cg <- rbind(cg, sqldf("select distinct cwe,  className, 'CryptoGuard' as tool, 'FP' as warning from cg_fp"))
+cg <- rbind(cg, sqldf("select distinct cwe,  className, 'CryptoGuard' as tool, 'FN' as warning from cg_fn"))
+
+cl <- sqldf("select distinct cwe,  className, 'CryLogger' as tool, 'TP' as warning from cl_tp")
+cl <- rbind(cl, sqldf("select distinct cwe,  className, 'CryLogger' as tool, 'FP' as warning from cl_fp"))
+cl <- rbind(cl, sqldf("select distinct cwe,  className, 'CryLogger' as tool, 'FN' as warning from cl_fn"))
+
+ds <- rbind(mop, cc)
+ds <- rbind(ds, cg)
+ds <- rbind(ds, cl)
+
+sqldf("select tool, warning, count(*) from ds group by tool, warning")
+
+write.csv(ds, "../results/gt-cwes.csv",  row.names = FALSE)
+
 ```
