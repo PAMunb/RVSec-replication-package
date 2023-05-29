@@ -20,7 +20,7 @@ library(corrplot)
 ## Load the ApacheBench DataSet
 
 ```{r load}
-final_ds <- read.csv("../results/gt-FIXED.csv", head=T, sep=',')
+final_ds <- read.csv("../results/gt-FIXED-new.csv", head=T, sep=',')
 colnames(final_ds)
 
 ##  [1] "Project"         "Spec"            "Class"           "Method"         
@@ -93,7 +93,8 @@ sqldf("select Project, count(*)
 
 ## Exploratory Data Analysis 
 
-### Total Warnings (grouped by Project and tool)
+### Total Warnings (grouped by Project and Tool)
+
 ```{r warnings-projects}
 warnings_projects = sqldf("select Project, Tool, count(*) as Warnings
                            from final_ds group by Project, Tool")
@@ -108,7 +109,7 @@ barchart(Warnings ~ Tool | Project,
 ## Compute the set of True Positives
 
 ```{r true-positives}
-tp = sqldf("select distinct Project, Spec, Class, Method 
+tp = sqldf("select distinct Project, Spec, Class, Method, CWE
             from final_ds 
             where Vulnerability = 'TRUE'
             order by 1,2,3,4")
@@ -121,11 +122,11 @@ nrow(tp)
 ## MOP Precision and Recal
 
 ```{r mop-assessment}
-mop_tp = sqldf("select distinct Project, Spec, Class, Method 
+mop_tp = sqldf("select distinct Project, Spec, Class, Method, CWE 
                 from final_ds 
                where Tool = 'RV' and Vulnerability = 'TRUE'")
 
-mop_fp = sqldf("select distinct Project, Spec, Class, Method 
+mop_fp = sqldf("select distinct Project, Spec, Class, Method, CWE 
                 from final_ds 
                 where Tool = 'RV' and Vulnerability = 'FALSE'")
 
@@ -146,11 +147,11 @@ mop_fmeasure
 ### CC Precision and Recal
 
 ```{r cc-assessment}
-cc_tp = sqldf("select distinct Project, Spec, Class, Method 
+cc_tp = sqldf("select distinct Project, Spec, Class, Method, CWE 
                 from final_ds 
                where Tool = 'CogniCrypt' and Vulnerability = 'TRUE'")
 
-cc_fp = sqldf("select distinct Project, Spec, Class, Method 
+cc_fp = sqldf("select distinct Project, Spec, Class, Method, CWE 
                 from final_ds 
                 where Tool = 'CogniCrypt' and Vulnerability = 'FALSE'")
 
@@ -171,11 +172,11 @@ cc_fmeasure
 ### CG Precision and Recal
 
 ```{r cg-assessment}
-cg_tp = sqldf("select distinct Project, Spec, Class, Method 
+cg_tp = sqldf("select distinct Project, Spec, Class, Method, CWE 
                 from final_ds 
                where Tool = 'CryptoGuard' and Vulnerability = 'TRUE'")
 
-cg_fp = sqldf("select distinct Project, Spec, Class, Method 
+cg_fp = sqldf("select distinct Project, Spec, Class, Method, CWE 
                 from final_ds 
                 where Tool = 'CryptoGuard' and Vulnerability = 'FALSE'")
 
@@ -192,7 +193,6 @@ cg_fmeasure = 2 * ((cg_precision * cg_recall) / (cg_precision + cg_recall))
 
 cg_precision
 cg_recall
-
 cg_fmeasure
 ```
 
@@ -206,11 +206,11 @@ clogger_ds_kerberos_codec <- read.csv("../results/crylogger/CryLogger-apacheds-k
 clogger_tika <- read.csv("../results/crylogger/CryLogger-tika-core.csv", head=T, sep=",")
 
 
-clogger_deltaspyke <- sqldf("select distinct spec, class, classname, method from clogger_deltaspyke")
-clogger_mcf <- sqldf("select distinct spec, class, classname, method from clogger_mcf")
-clogger_meecrowave <- sqldf("select distinct spec, class, classname, method from clogger_meecrowave")
-clogger_ds_kerberos_codec <- sqldf("select distinct spec, class, classname, method from clogger_ds_kerberos_codec")
-clogger_tika <- sqldf("select distinct spec, class, classname, method from clogger_tika")
+clogger_deltaspyke <- sqldf("select distinct spec, cwe, class, classname, method from clogger_deltaspyke")
+clogger_mcf <- sqldf("select distinct spec, cwe, class, classname, method from clogger_mcf")
+clogger_meecrowave <- sqldf("select distinct spec, cwe, class, classname, method from clogger_meecrowave")
+clogger_ds_kerberos_codec <- sqldf("select distinct spec, cwe, class, classname, method from clogger_ds_kerberos_codec")
+clogger_tika <- sqldf("select distinct spec, cwe, class, classname, method from clogger_tika")
 
 
 clogger <- rbind(clogger_mcf, clogger_meecrowave)
@@ -218,13 +218,15 @@ clogger <- rbind(clogger, clogger_ds_kerberos_codec)
 clogger <- rbind(clogger, clogger_tika)
 clogger <- rbind(clogger,clogger_deltaspyke)
 
+colnames(clogger)
+colnames(final_ds)
 
 ```
 
 ### Approximate the CryLogger outcomes with the ground truth
 
 ```{r}
-gt_clogger <- sqldf("select distinct class, method, vulnerability 
+gt_clogger <- sqldf("select distinct spec, project, class as 'className', method, vulnerability , cwe
                      from final_ds")
 
 nrow(final_ds)
@@ -232,40 +234,80 @@ nrow(gt_clogger)
 
 head(gt_clogger)
 
-tp <- sqldf("select count(distinct (c.className || ' - ' || c.method))
-             from clogger c, gt_clogger cgt 
-             where c.className = cgt.class 
-               and c.method = cgt.method
-               and vulnerability =  'TRUE'")
+cl_tp <- sqldf("select distinct c.className, c.method, c.cwe
+                from clogger c, gt_clogger cgt 
+               where c.className = cgt.className 
+                and c.method = cgt.method
+                and vulnerability =  'TRUE'")
 
-fp <- sqldf("select count(distinct (c.className || ' - ' || c.method))
-             from clogger c 
-             where (c.className, c.method) not in 
-               (select cgt.class, cgt.method 
-                from gt_clogger cgt
-                 where vulnerability =  'TRUE')")
+cl_fp <- sqldf("select distinct c.className, c.method, c.cwe
+                from clogger c 
+               where (c.className, c.method) not in 
+                 (select cgt.className, cgt.method 
+                  from gt_clogger cgt
+                  where vulnerability =  'TRUE')")
 
-fn <- sqldf("select count(distinct (cgt.class || ' - ' || cgt.method))
+cl_fn <- sqldf("select distinct cgt.className, cgt.method, cgt.cwe
              from gt_clogger cgt
              where vulnerability =  'TRUE' 
-               and (cgt.class, cgt.method) not in 
+               and (cgt.className, cgt.method) not in 
                      (select c.className, c.method 
                       from clogger c)")
 
-tp 
-fp 
-fn
 
 
-sqldf("select distinct (c.className || ' - ' || c.method)
-             from clogger c 
-             where (c.className, c.method) not in 
-               (select cgt.class, cgt.method 
-                from gt_clogger cgt
-                 where vulnerability =  'TRUE')")
+cl_precision = nrow(cl_tp) / (nrow(cl_tp) + nrow(cl_fp))
+cl_recall = nrow(cl_tp) / (nrow(cl_tp) + nrow(cl_fn))
+cl_fmeasure = 2 * ((cl_precision * cl_recall) / (cl_precision + cl_recall))
 
+cl_precision
+cl_recall
+cl_fmeasure
 
 ```
+
+## Accuracy Results for ApacheCryptoBench
+
+```{r table}
+Tools = c("MOP", "CogniCrypt", "CryptoGuard", "CryLogger")
+Precision = c(mop_precision, cc_precision, cg_precision, cl_precision)
+Recall = c(mop_recall, cc_recall, cg_recall, cl_recall)
+FMeasure = c(mop_fmeasure, cc_fmeasure, cg_fmeasure, cl_fmeasure)
+
+analysis_ds = data.frame(Tools, Precision, Recall, FMeasure)
+
+analysis_ds
+```
+
+## CWEs assessment
+
+```{r}
+mop <- sqldf("select distinct cwe as 'cwe',  class as 'className', 'RVSec' as tool, 'TP' as warning from mop_tp")
+mop <- rbind(mop, sqldf("select distinct cwe as 'cwe',  class as 'className', 'RVSec' as tool, 'FP' as warning from mop_fp"))
+mop <- rbind(mop, sqldf("select distinct cwe as 'cwe',  class as 'className', 'RVSec' as tool, 'FN' as warning from mop_fn"))
+
+cc <- sqldf("select distinct cwe as 'cwe',  class as 'className', 'CogniCrypt' as tool, 'TP' as warning from cc_tp")
+cc <- rbind(cc, sqldf("select distinct cwe as 'cwe',  class as 'className', 'CogniCrypt' as tool, 'FP' as warning from cc_fp"))
+cc <- rbind(cc, sqldf("select distinct cwe as 'cwe',  class as 'className', 'CogniCrypt' as tool, 'FN' as warning from cc_fn"))
+
+cg <- sqldf("select distinct cwe as 'cwe',  class as 'className', 'CryptoGuard' as tool, 'TP' as warning from cg_tp")
+cg <- rbind(cg, sqldf("select distinct cwe as 'cwe',  class as 'className', 'CryptoGuard' as tool, 'FP' as warning from cg_fp"))
+cg <- rbind(cg, sqldf("select distinct cwe as 'cwe',  class as 'className', 'CryptoGuard' as tool, 'FN' as warning from cg_fn"))
+
+cl <- sqldf("select distinct cwe as 'cwe',  className as 'className', 'CryLogger' as tool, 'TP' as warning from cl_tp")
+cl <- rbind(cl, sqldf("select distinct cwe as 'cwe',  className as 'className', 'CryLogger' as tool, 'FP' as warning from cl_fp"))
+cl <- rbind(cl, sqldf("select distinct cwe as 'cwe',  className as 'className', 'CryLogger' as tool, 'FN' as warning from cl_fn"))
+
+
+ds <- rbind(mop, cc)
+ds <- rbind(ds, cg)
+ds <- rbind(ds, cl)
+
+
+write.csv(ds, "../results/gt-cwes.csv",  row.names = FALSE)
+
+```
+
 ### Venn Diagram
 
 ```{r vd}
