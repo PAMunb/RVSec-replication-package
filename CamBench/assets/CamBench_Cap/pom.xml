@@ -11,27 +11,10 @@
 		<maven.compiler.target>8</maven.compiler.target>
 		<maven-surefire-plugin.version>3.0.0-M7</maven-surefire-plugin.version>
 		<rvsec.version>0.2.0</rvsec.version>
-		<!--		<aspectj.version>1.8.1</aspectj.version>-->
 		<guava.version>19.0</guava.version>
 	</properties>
 
 	<dependencies>
-		<!--		<dependency>-->
-		<!--			<groupId>br.unb.cic.rvmonitor</groupId>-->
-		<!--			<artifactId>rv-monitor</artifactId>-->
-		<!--			<version>${rvsec.version}</version>-->
-		<!--		</dependency>-->
-		<!--		<dependency>-->
-		<!--			<groupId>org.aspectj</groupId>-->
-		<!--			<artifactId>aspectjrt</artifactId>-->
-		<!--			<version>${aspectj.version}</version>-->
-		<!--		</dependency>-->
-		<!--		<dependency>-->
-		<!--			<groupId>org.aspectj</groupId>-->
-		<!--			<artifactId>aspectjtools</artifactId>-->
-		<!--			<version>${aspectj.version}</version>-->
-		<!--		</dependency>-->
-
 		<dependency>
 			<groupId>com.google.guava</groupId>
 			<artifactId>guava</artifactId>
@@ -54,6 +37,7 @@
 			<version>${rvsec.version}</version>
 		</dependency>
 	</dependencies>
+
 	<build>
 		<sourceDirectory>src</sourceDirectory>
 		<testSourceDirectory>test</testSourceDirectory>
@@ -62,7 +46,7 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>${maven-surefire-plugin.version}</version>
-				<configuration>					
+				<configuration>
 					<runOrder>alphabetical</runOrder>
 					<testFailureIgnore>false</testFailureIgnore>
 					<trimStackTrace>true</trimStackTrace>
@@ -82,12 +66,11 @@
 						<configuration>
 							<argLine>-Xmx4096m -XX:MaxPermSize=1024m</argLine>
 							<argLine>-javaagent:${basedir}/JavaMOPAgent.jar</argLine>
-							<runOrder>alphabetical</runOrder>
 						</configuration>
 					</plugin>
 				</plugins>
 			</build>
 		</profile>
 	</profiles>
-	
+
 </project>

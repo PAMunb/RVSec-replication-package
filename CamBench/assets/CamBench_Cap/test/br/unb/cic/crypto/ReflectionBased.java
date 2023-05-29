@@ -56,8 +56,6 @@ public abstract class ReflectionBased {
         Set<String> classNames = new HashSet<>();
 
         for (Class<?> c : classes) {
-        	System.err.println("CLASSE: "+c.getCanonicalName());
-        	
             Method mainMethod = findMainMethod(c);
 
             classNames.add(c.getName());
