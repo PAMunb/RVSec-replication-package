@@ -1,0 +1,488 @@
+spec,class,className,method,location,error,expecting
+CipherSpec,main.java.org.cambench.cap.mixedsensitivities.fieldflow.truepositive.ecbmode.EcbMode1,EcbMode1,main,EcbMode1.java:33,UnsafeAlgorithm,"expecting one of {AES/CBC/PKCS5Padding, AES/PCBC/ISO10126Padding, ...} but found AES/ECB/PKCS5Padding."
+CipherSpec,main.java.org.cambench.cap.mixedsensitivities.fieldflow.truepositive.ecbmode.EcbMode1,EcbMode1,main,EcbMode1.java:33,InvalidSequenceOfMethodCalls,unknown
+CipherSpec,main.java.org.cambench.cap.mixedsensitivities.contextpath.truepositive.ecbmode.EcbMode1,EcbMode1,main,EcbMode1.java:39,UnsafeAlgorithm,"expecting one of {AES/CBC/PKCS5Padding, AES/PCBC/ISO10126Padding, ...} but found AES/ECB/PKCS5Padding."
+CipherSpec,main.java.org.cambench.cap.mixedsensitivities.contextpath.truepositive.ecbmode.EcbMode1,EcbMode1,main,EcbMode1.java:39,InvalidSequenceOfMethodCalls,unknown
+KeyGeneratorSpec,main.java.org.cambench.cap.mixedsensitivities.objectpath.truepositive.brokencrypto.BrokenCrypto2,BrokenCrypto2,main,BrokenCrypto2.java:42,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found Blowfish."
+KeyGeneratorSpec,main.java.org.cambench.cap.mixedsensitivities.objectpath.truepositive.brokencrypto.BrokenCrypto2,BrokenCrypto2,main,BrokenCrypto2.java:42,InvalidSequenceOfMethodCalls,unknown
+CipherSpec,main.java.org.cambench.cap.contextsensitivity.truepositive.ecbmode.EcbMode1,EcbMode1,main,EcbMode1.java:32,UnsafeAlgorithm,"expecting one of {AES/CBC/PKCS5Padding, AES/PCBC/ISO10126Padding, ...} but found AES/ECB/PKCS5Padding."
+CipherSpec,main.java.org.cambench.cap.contextsensitivity.truepositive.ecbmode.EcbMode1,EcbMode1,main,EcbMode1.java:32,InvalidSequenceOfMethodCalls,unknown
+KeyGeneratorSpec,main.java.org.cambench.cap.mixedsensitivities.fieldflow.truepositive.brokencrypto.BrokenCrypto1,BrokenCrypto1,main,BrokenCrypto1.java:34,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found DES."
+KeyGeneratorSpec,main.java.org.cambench.cap.mixedsensitivities.fieldflow.truepositive.brokencrypto.BrokenCrypto1,BrokenCrypto1,main,BrokenCrypto1.java:34,InvalidSequenceOfMethodCalls,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.mixedsensitivities.contextpath.truepositive.insecurerandom.InsecureRandom1,InsecureRandom1,main,InsecureRandom1.java:49,UnsatisfiedConstraint,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.mixedsensitivities.contextpath.truepositive.insecurerandom.InsecureRandom1,InsecureRandom1,main,InsecureRandom1.java:49,InvalidSequenceOfMethodCalls,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.mixedsensitivities.inter2path.truepositive.staticiv.StaticIv1,StaticIv1,method1,StaticIv1.java:48,UnsatisfiedConstraint,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.mixedsensitivities.inter2path.truepositive.staticiv.StaticIv1,StaticIv1,method1,StaticIv1.java:48,InvalidSequenceOfMethodCalls,unknown
+PBEParameterSpec,main.java.org.cambench.cap.interprocedural3.truepositive.pbeparameters.PBEParameters1,PBEParameters1,method2,PBEParameters1.java:36,UnsafeAlgorithm,expecting at least 1000 iterations and a randomized salt.
+PBEParameterSpec,main.java.org.cambench.cap.interprocedural3.truepositive.pbeparameters.PBEParameters1,PBEParameters1,method2,PBEParameters1.java:36,InvalidSequenceOfMethodCalls,unknown
+CipherSpec,main.java.org.cambench.cap.pathsensitivity.truepositive.ecbmode.EcbMode1,EcbMode1,main,EcbMode1.java:37,UnsafeAlgorithm,"expecting one of {AES/CBC/PKCS5Padding, AES/PCBC/ISO10126Padding, ...} but found AES/ECB/PKCS5Padding."
+CipherSpec,main.java.org.cambench.cap.pathsensitivity.truepositive.ecbmode.EcbMode1,EcbMode1,main,EcbMode1.java:37,InvalidSequenceOfMethodCalls,unknown
+PBEParameterSpec,main.java.org.cambench.cap.contextsensitivity.truepositive.pbeparameters.PBEParameters1,PBEParameters1,main,PBEParameters1.java:33,UnsafeAlgorithm,expecting at least 1000 iterations and a randomized salt.
+PBEParameterSpec,main.java.org.cambench.cap.contextsensitivity.truepositive.pbeparameters.PBEParameters1,PBEParameters1,main,PBEParameters1.java:33,InvalidSequenceOfMethodCalls,unknown
+KeyPairSpec,main.java.org.cambench.cap.interprocedural3.truepositive.smallkeysize.CorrectedKeySize,CorrectedKeySize,method2,CorrectedKeySize.java:45,InvalidSequenceOfMethodCalls,unknown
+PBEParameterSpec,main.java.org.cambench.cap.fieldsensitivity.truepositive.pbeparameters.PBEParameters2,PBEParameters2,main,PBEParameters2.java:32,UnsafeAlgorithm,expecting at least 1000 iterations and a randomized salt.
+PBEParameterSpec,main.java.org.cambench.cap.fieldsensitivity.truepositive.pbeparameters.PBEParameters2,PBEParameters2,main,PBEParameters2.java:32,InvalidSequenceOfMethodCalls,unknown
+KeyPairGeneratorSpec,main.java.org.cambench.cap.mixedsensitivities.objectpath.truepositive.smallkeysize.SmallKeySize1,SmallKeySize1,main,SmallKeySize1.java:36,InvalidKeySize,invalid key size for algorithm RSA.
+KeyPairGeneratorSpec,main.java.org.cambench.cap.mixedsensitivities.objectpath.truepositive.smallkeysize.SmallKeySize1,SmallKeySize1,main,SmallKeySize1.java:36,InvalidSequenceOfMethodCalls,unknown
+KeyPairGeneratorSpec,main.java.org.cambench.cap.mixedsensitivities.objectpath.truepositive.smallkeysize.SmallKeySize1,SmallKeySize1,main,SmallKeySize1.java:41,InvalidSequenceOfMethodCalls,unknown
+KeyPairSpec,main.java.org.cambench.cap.mixedsensitivities.objectpath.truepositive.smallkeysize.SmallKeySize1,SmallKeySize1,main,SmallKeySize1.java:42,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,main.java.org.cambench.cap.mixedsensitivities.objectpath.truepositive.brokenhash.BrokenHash2,BrokenHash2,main,BrokenHash2.java:38,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found SHA-1."
+MessageDigestSpec,main.java.org.cambench.cap.mixedsensitivities.objectpath.truepositive.brokenhash.BrokenHash2,BrokenHash2,main,BrokenHash2.java:38,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,main.java.org.cambench.cap.mixedsensitivities.objectpath.truepositive.brokenhash.BrokenHash2,BrokenHash2,main,BrokenHash2.java:39,InvalidSequenceOfMethodCalls,unknown
+PBEParameterSpec,main.java.org.cambench.cap.interprocedural2.truepositive.pbeparameters.PBEParameters1,PBEParameters1,method1,PBEParameters1.java:30,UnsafeAlgorithm,expecting at least 1000 iterations and a randomized salt.
+PBEParameterSpec,main.java.org.cambench.cap.interprocedural2.truepositive.pbeparameters.PBEParameters1,PBEParameters1,method1,PBEParameters1.java:30,InvalidSequenceOfMethodCalls,unknown
+KeyPairGeneratorSpec,main.java.org.cambench.cap.mixedsensitivities.fieldobject.truepositive.smallkeysize.SmallKeySize1,SmallKeySize1,main,SmallKeySize1.java:38,InvalidKeySize,invalid key size for algorithm RSA.
+KeyPairGeneratorSpec,main.java.org.cambench.cap.mixedsensitivities.fieldobject.truepositive.smallkeysize.SmallKeySize1,SmallKeySize1,main,SmallKeySize1.java:38,InvalidSequenceOfMethodCalls,unknown
+KeyPairGeneratorSpec,main.java.org.cambench.cap.mixedsensitivities.fieldobject.truepositive.smallkeysize.SmallKeySize1,SmallKeySize1,main,SmallKeySize1.java:39,InvalidSequenceOfMethodCalls,unknown
+KeyPairSpec,main.java.org.cambench.cap.mixedsensitivities.fieldobject.truepositive.smallkeysize.SmallKeySize1,SmallKeySize1,main,SmallKeySize1.java:41,InvalidSequenceOfMethodCalls,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.fieldsensitivity.truepositive.insecurerandom.CorrectedRandom,CorrectedRandom,main,CorrectedRandom.java:41,UnsatisfiedConstraint,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.fieldsensitivity.truepositive.insecurerandom.CorrectedRandom,CorrectedRandom,main,CorrectedRandom.java:41,InvalidSequenceOfMethodCalls,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.contextsensitivity.truepositive.staticiv.StaticIv1,StaticIv1,main,StaticIv1.java:40,UnsatisfiedConstraint,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.contextsensitivity.truepositive.staticiv.StaticIv1,StaticIv1,main,StaticIv1.java:40,InvalidSequenceOfMethodCalls,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.fieldsensitivity.advanced.fielddepth2.truepositive.staticiv.StaticIv1,StaticIv1,main,StaticIv1.java:42,UnsatisfiedConstraint,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.fieldsensitivity.advanced.fielddepth2.truepositive.staticiv.StaticIv1,StaticIv1,main,StaticIv1.java:42,InvalidSequenceOfMethodCalls,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.objectsensitivity.truepositive.staticiv.StaticIv1,StaticIv1,main,StaticIv1.java:40,UnsatisfiedConstraint,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.objectsensitivity.truepositive.staticiv.StaticIv1,StaticIv1,main,StaticIv1.java:40,InvalidSequenceOfMethodCalls,unknown
+KeyGeneratorSpec,main.java.org.cambench.cap.basic.brokencrypto.BrokenCrypto1,BrokenCrypto1,main,BrokenCrypto1.java:29,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found DES."
+KeyGeneratorSpec,main.java.org.cambench.cap.basic.brokencrypto.BrokenCrypto1,BrokenCrypto1,main,BrokenCrypto1.java:29,InvalidSequenceOfMethodCalls,unknown
+KeyPairSpec,main.java.org.cambench.cap.contextsensitivity.advanced.callsites5.falsepositive.smallkeysize.SmallKeySize1,SmallKeySize1,main,SmallKeySize1.java:40,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,main.java.org.cambench.cap.mixedsensitivities.contextflow.truepositive.brokenhash.BrokenHash1,BrokenHash1,main,BrokenHash1.java:29,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found MD5."
+MessageDigestSpec,main.java.org.cambench.cap.mixedsensitivities.contextflow.truepositive.brokenhash.BrokenHash1,BrokenHash1,main,BrokenHash1.java:29,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,main.java.org.cambench.cap.mixedsensitivities.contextflow.truepositive.brokenhash.BrokenHash1,BrokenHash1,main,BrokenHash1.java:30,InvalidSequenceOfMethodCalls,unknown
+PBEParameterSpec,main.java.org.cambench.cap.fieldsensitivity.truepositive.pbeparameters.PBEParameters1,PBEParameters1,main,PBEParameters1.java:34,UnsafeAlgorithm,expecting at least 1000 iterations and a randomized salt.
+PBEParameterSpec,main.java.org.cambench.cap.fieldsensitivity.truepositive.pbeparameters.PBEParameters1,PBEParameters1,main,PBEParameters1.java:34,InvalidSequenceOfMethodCalls,unknown
+KeyGeneratorSpec,main.java.org.cambench.cap.mixedsensitivities.inter2field.truepositive.brokencrypto.BrokenCrypto1,BrokenCrypto1,method1,BrokenCrypto1.java:37,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found DES."
+KeyGeneratorSpec,main.java.org.cambench.cap.mixedsensitivities.inter2field.truepositive.brokencrypto.BrokenCrypto1,BrokenCrypto1,method1,BrokenCrypto1.java:37,InvalidSequenceOfMethodCalls,unknown
+KeyPairGeneratorSpec,main.java.org.cambench.cap.mixedsensitivities.fieldflow.truepositive.smallkeysize.SmallKeySize1,SmallKeySize1,main,SmallKeySize1.java:36,InvalidKeySize,invalid key size for algorithm RSA.
+KeyPairGeneratorSpec,main.java.org.cambench.cap.mixedsensitivities.fieldflow.truepositive.smallkeysize.SmallKeySize1,SmallKeySize1,main,SmallKeySize1.java:36,InvalidSequenceOfMethodCalls,unknown
+KeyPairGeneratorSpec,main.java.org.cambench.cap.mixedsensitivities.fieldflow.truepositive.smallkeysize.SmallKeySize1,SmallKeySize1,main,SmallKeySize1.java:37,InvalidSequenceOfMethodCalls,unknown
+KeyPairSpec,main.java.org.cambench.cap.mixedsensitivities.fieldflow.truepositive.smallkeysize.SmallKeySize1,SmallKeySize1,main,SmallKeySize1.java:39,InvalidSequenceOfMethodCalls,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.fieldsensitivity.truepositive.staticiv.StaticIv1,StaticIv1,main,StaticIv1.java:41,UnsatisfiedConstraint,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.fieldsensitivity.truepositive.staticiv.StaticIv1,StaticIv1,main,StaticIv1.java:41,InvalidSequenceOfMethodCalls,unknown
+KeyPairSpec,main.java.org.cambench.cap.fieldsensitivity.advanced.fielddepth2.truepositive.smallkeysize.CorrectedKeySize,CorrectedKeySize,main,CorrectedKeySize.java:38,InvalidSequenceOfMethodCalls,unknown
+PBEParameterSpec,main.java.org.cambench.cap.fieldsensitivity.advanced.fielddepth3.truepositive.pbeparameters.PBEParameters1,PBEParameters1,main,PBEParameters1.java:35,UnsafeAlgorithm,expecting at least 1000 iterations and a randomized salt.
+PBEParameterSpec,main.java.org.cambench.cap.fieldsensitivity.advanced.fielddepth3.truepositive.pbeparameters.PBEParameters1,PBEParameters1,main,PBEParameters1.java:35,InvalidSequenceOfMethodCalls,unknown
+KeyGeneratorSpec,main.java.org.cambench.cap.contextsensitivity.advanced.callsites5.truepositive.brokencrypto.BrokenCrypto1,BrokenCrypto1,main,BrokenCrypto1.java:36,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found DES."
+KeyGeneratorSpec,main.java.org.cambench.cap.contextsensitivity.advanced.callsites5.truepositive.brokencrypto.BrokenCrypto1,BrokenCrypto1,main,BrokenCrypto1.java:36,InvalidSequenceOfMethodCalls,unknown
+KeyPairSpec,main.java.org.cambench.cap.objectsensitivity.advanced.multipleobjects.truepositive.smallkeysize.CorrectedKeySize,CorrectedKeySize,main,CorrectedKeySize.java:36,InvalidSequenceOfMethodCalls,unknown
+CipherSpec,main.java.org.cambench.cap.mixedsensitivities.objectpath.truepositive.ecbmode.EcbMode1,EcbMode1,main,EcbMode1.java:40,UnsafeAlgorithm,"expecting one of {AES/CBC/PKCS5Padding, AES/PCBC/ISO10126Padding, ...} but found AES/ECB/PKCS5Padding."
+CipherSpec,main.java.org.cambench.cap.mixedsensitivities.objectpath.truepositive.ecbmode.EcbMode1,EcbMode1,main,EcbMode1.java:40,InvalidSequenceOfMethodCalls,unknown
+KeyGeneratorSpec,main.java.org.cambench.cap.mixedsensitivities.inter2path.truepositive.brokencrypto.BrokenCrypto1,BrokenCrypto1,method1,BrokenCrypto1.java:39,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found DES."
+KeyGeneratorSpec,main.java.org.cambench.cap.mixedsensitivities.inter2path.truepositive.brokencrypto.BrokenCrypto1,BrokenCrypto1,method1,BrokenCrypto1.java:39,InvalidSequenceOfMethodCalls,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.interprocedural3.truepositive.insecurerandom.InsecureRandom1,InsecureRandom1,method2,InsecureRandom1.java:46,UnsatisfiedConstraint,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.interprocedural3.truepositive.insecurerandom.InsecureRandom1,InsecureRandom1,method2,InsecureRandom1.java:46,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,main.java.org.cambench.cap.fieldsensitivity.advanced.fielddepth3.truepositive.brokenhash.BrokenHash1,BrokenHash1,main,BrokenHash1.java:32,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found MD5."
+MessageDigestSpec,main.java.org.cambench.cap.fieldsensitivity.advanced.fielddepth3.truepositive.brokenhash.BrokenHash1,BrokenHash1,main,BrokenHash1.java:32,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,main.java.org.cambench.cap.fieldsensitivity.advanced.fielddepth3.truepositive.brokenhash.BrokenHash1,BrokenHash1,main,BrokenHash1.java:33,InvalidSequenceOfMethodCalls,unknown
+KeyGeneratorSpec,main.java.org.cambench.cap.fieldsensitivity.advanced.fielddepth2.truepositive.brokencrypto.BrokenCrypto1,BrokenCrypto1,main,BrokenCrypto1.java:34,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found DES."
+KeyGeneratorSpec,main.java.org.cambench.cap.fieldsensitivity.advanced.fielddepth2.truepositive.brokencrypto.BrokenCrypto1,BrokenCrypto1,main,BrokenCrypto1.java:34,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,main.java.org.cambench.cap.mixedsensitivities.fieldobject.truepositive.brokenhash.BrokenHash1,BrokenHash1,main,BrokenHash1.java:33,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found MD5."
+MessageDigestSpec,main.java.org.cambench.cap.mixedsensitivities.fieldobject.truepositive.brokenhash.BrokenHash1,BrokenHash1,main,BrokenHash1.java:33,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,main.java.org.cambench.cap.mixedsensitivities.fieldobject.truepositive.brokenhash.BrokenHash1,BrokenHash1,main,BrokenHash1.java:34,InvalidSequenceOfMethodCalls,unknown
+KeyPairSpec,main.java.org.cambench.cap.pathsensitivity.falsepositive.smallkeysize.SmallKeySize1,SmallKeySize1,main,SmallKeySize1.java:39,InvalidSequenceOfMethodCalls,unknown
+KeyPairSpec,main.java.org.cambench.cap.mixedsensitivities.fieldflow.truepositive.smallkeysize.CorrectedKeySize,CorrectedKeySize,main,CorrectedKeySize.java:37,InvalidSequenceOfMethodCalls,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.mixedsensitivities.objectpath.truepositive.insecurerandom.InsecureRandom1,InsecureRandom1,main,InsecureRandom1.java:50,UnsatisfiedConstraint,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.mixedsensitivities.objectpath.truepositive.insecurerandom.InsecureRandom1,InsecureRandom1,main,InsecureRandom1.java:50,InvalidSequenceOfMethodCalls,unknown
+KeyPairSpec,main.java.org.cambench.cap.objectsensitivity.falsepositive.smallkeysize.SmallKeySize1,SmallKeySize1,main,SmallKeySize1.java:37,InvalidSequenceOfMethodCalls,unknown
+SecureRandomSpec,main.java.org.cambench.cap.basic.insecurerandom.InsecureRandom2,InsecureRandom2,main,InsecureRandom2.java:36,InvalidSequenceOfMethodCalls,unknown
+KeyPairSpec,main.java.org.cambench.cap.pathsensitivity.advanced.pathdepth2.falsepositive.smallkeysize.SmallKeySize1,SmallKeySize1,main,SmallKeySize1.java:46,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,main.java.org.cambench.cap.contextsensitivity.advanced.callsites5.truepositive.brokenhash.BrokenHash1,BrokenHash1,main,BrokenHash1.java:32,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found SHA-1."
+MessageDigestSpec,main.java.org.cambench.cap.contextsensitivity.advanced.callsites5.truepositive.brokenhash.BrokenHash1,BrokenHash1,main,BrokenHash1.java:32,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,main.java.org.cambench.cap.contextsensitivity.advanced.callsites5.truepositive.brokenhash.BrokenHash1,BrokenHash1,main,BrokenHash1.java:33,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,main.java.org.cambench.cap.mixedsensitivities.inter2flow.truepositive.brokenhash.BrokenHash1,BrokenHash1,method1,BrokenHash1.java:33,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found MD5."
+MessageDigestSpec,main.java.org.cambench.cap.mixedsensitivities.inter2flow.truepositive.brokenhash.BrokenHash1,BrokenHash1,method1,BrokenHash1.java:33,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,main.java.org.cambench.cap.mixedsensitivities.inter2flow.truepositive.brokenhash.BrokenHash1,BrokenHash1,method1,BrokenHash1.java:34,InvalidSequenceOfMethodCalls,unknown
+KeyPairGeneratorSpec,main.java.org.cambench.cap.objectsensitivity.advanced.multipleobjects.truepositive.smallkeysize.SmallKeySize1,SmallKeySize1,main,SmallKeySize1.java:37,InvalidKeySize,invalid key size for algorithm RSA.
+KeyPairGeneratorSpec,main.java.org.cambench.cap.objectsensitivity.advanced.multipleobjects.truepositive.smallkeysize.SmallKeySize1,SmallKeySize1,main,SmallKeySize1.java:37,InvalidSequenceOfMethodCalls,unknown
+KeyPairGeneratorSpec,main.java.org.cambench.cap.objectsensitivity.advanced.multipleobjects.truepositive.smallkeysize.SmallKeySize1,SmallKeySize1,main,SmallKeySize1.java:38,InvalidSequenceOfMethodCalls,unknown
+KeyPairSpec,main.java.org.cambench.cap.objectsensitivity.advanced.multipleobjects.truepositive.smallkeysize.SmallKeySize1,SmallKeySize1,main,SmallKeySize1.java:40,InvalidSequenceOfMethodCalls,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.contextsensitivity.truepositive.insecurerandom.CorrectedRandom,CorrectedRandom,main,CorrectedRandom.java:39,UnsatisfiedConstraint,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.contextsensitivity.truepositive.insecurerandom.CorrectedRandom,CorrectedRandom,main,CorrectedRandom.java:39,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,main.java.org.cambench.cap.mixedsensitivities.inter2context.truepositive.brokenhash.BrokenHash1,BrokenHash1,method1,BrokenHash1.java:36,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found MD5."
+MessageDigestSpec,main.java.org.cambench.cap.mixedsensitivities.inter2context.truepositive.brokenhash.BrokenHash1,BrokenHash1,method1,BrokenHash1.java:36,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,main.java.org.cambench.cap.mixedsensitivities.inter2context.truepositive.brokenhash.BrokenHash1,BrokenHash1,method1,BrokenHash1.java:37,InvalidSequenceOfMethodCalls,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.mixedsensitivities.inter2object.truepositive.insecurerandom.CorrectedRandom,CorrectedRandom,method1,CorrectedRandom.java:44,UnsatisfiedConstraint,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.mixedsensitivities.inter2object.truepositive.insecurerandom.CorrectedRandom,CorrectedRandom,method1,CorrectedRandom.java:44,InvalidSequenceOfMethodCalls,unknown
+CipherSpec,main.java.org.cambench.cap.mixedsensitivities.inter2path.truepositive.ecbmode.EcbMode1,EcbMode1,method1,EcbMode1.java:39,UnsafeAlgorithm,"expecting one of {AES/CBC/PKCS5Padding, AES/PCBC/ISO10126Padding, ...} but found AES/ECB/PKCS5Padding."
+CipherSpec,main.java.org.cambench.cap.mixedsensitivities.inter2path.truepositive.ecbmode.EcbMode1,EcbMode1,method1,EcbMode1.java:39,InvalidSequenceOfMethodCalls,unknown
+KeyPairGeneratorSpec,main.java.org.cambench.cap.mixedsensitivities.inter2flow.truepositive.smallkeysize.SmallKeySize2,SmallKeySize2,method1,SmallKeySize2.java:38,InvalidKeySize,invalid key size for algorithm RSA.
+KeyPairGeneratorSpec,main.java.org.cambench.cap.mixedsensitivities.inter2flow.truepositive.smallkeysize.SmallKeySize2,SmallKeySize2,method1,SmallKeySize2.java:38,InvalidSequenceOfMethodCalls,unknown
+KeyPairGeneratorSpec,main.java.org.cambench.cap.mixedsensitivities.inter2flow.truepositive.smallkeysize.SmallKeySize2,SmallKeySize2,method1,SmallKeySize2.java:39,InvalidSequenceOfMethodCalls,unknown
+KeyPairSpec,main.java.org.cambench.cap.mixedsensitivities.inter2flow.truepositive.smallkeysize.SmallKeySize2,SmallKeySize2,method1,SmallKeySize2.java:41,InvalidSequenceOfMethodCalls,unknown
+KeyGeneratorSpec,main.java.org.cambench.cap.mixedsensitivities.inter2flow.truepositive.brokencrypto.BrokenCrypto2,BrokenCrypto2,method1,BrokenCrypto2.java:36,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found Blowfish."
+KeyGeneratorSpec,main.java.org.cambench.cap.mixedsensitivities.inter2flow.truepositive.brokencrypto.BrokenCrypto2,BrokenCrypto2,method1,BrokenCrypto2.java:36,InvalidSequenceOfMethodCalls,unknown
+KeyPairGeneratorSpec,main.java.org.cambench.cap.mixedsensitivities.contextpath.truepositive.smallkeysize.SmallKeySize2,SmallKeySize2,main,SmallKeySize2.java:42,InvalidKeySize,invalid key size for algorithm RSA.
+KeyPairGeneratorSpec,main.java.org.cambench.cap.mixedsensitivities.contextpath.truepositive.smallkeysize.SmallKeySize2,SmallKeySize2,main,SmallKeySize2.java:42,InvalidSequenceOfMethodCalls,unknown
+KeyPairGeneratorSpec,main.java.org.cambench.cap.mixedsensitivities.contextpath.truepositive.smallkeysize.SmallKeySize2,SmallKeySize2,main,SmallKeySize2.java:43,InvalidSequenceOfMethodCalls,unknown
+KeyPairSpec,main.java.org.cambench.cap.mixedsensitivities.contextpath.truepositive.smallkeysize.SmallKeySize2,SmallKeySize2,main,SmallKeySize2.java:45,InvalidSequenceOfMethodCalls,unknown
+KeyPairGeneratorSpec,main.java.org.cambench.cap.pathsensitivity.truepositive.smallkeysize.SmallKeySize1,SmallKeySize1,main,SmallKeySize1.java:35,InvalidKeySize,invalid key size for algorithm RSA.
+KeyPairGeneratorSpec,main.java.org.cambench.cap.pathsensitivity.truepositive.smallkeysize.SmallKeySize1,SmallKeySize1,main,SmallKeySize1.java:35,InvalidSequenceOfMethodCalls,unknown
+KeyPairGeneratorSpec,main.java.org.cambench.cap.pathsensitivity.truepositive.smallkeysize.SmallKeySize1,SmallKeySize1,main,SmallKeySize1.java:38,InvalidSequenceOfMethodCalls,unknown
+KeyPairSpec,main.java.org.cambench.cap.pathsensitivity.truepositive.smallkeysize.SmallKeySize1,SmallKeySize1,main,SmallKeySize1.java:39,InvalidSequenceOfMethodCalls,unknown
+KeyPairGeneratorSpec,main.java.org.cambench.cap.flowsensitivity.truepositive.smallkeysize.SmallKeySize1,SmallKeySize1,main,SmallKeySize1.java:32,InvalidKeySize,invalid key size for algorithm RSA.
+KeyPairGeneratorSpec,main.java.org.cambench.cap.flowsensitivity.truepositive.smallkeysize.SmallKeySize1,SmallKeySize1,main,SmallKeySize1.java:32,InvalidSequenceOfMethodCalls,unknown
+KeyPairGeneratorSpec,main.java.org.cambench.cap.flowsensitivity.truepositive.smallkeysize.SmallKeySize1,SmallKeySize1,main,SmallKeySize1.java:33,InvalidSequenceOfMethodCalls,unknown
+KeyPairSpec,main.java.org.cambench.cap.flowsensitivity.truepositive.smallkeysize.SmallKeySize1,SmallKeySize1,main,SmallKeySize1.java:36,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,main.java.org.cambench.cap.fieldsensitivity.truepositive.brokenhash.BrokenHash1,BrokenHash1,main,BrokenHash1.java:30,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found MD5."
+MessageDigestSpec,main.java.org.cambench.cap.fieldsensitivity.truepositive.brokenhash.BrokenHash1,BrokenHash1,main,BrokenHash1.java:30,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,main.java.org.cambench.cap.fieldsensitivity.truepositive.brokenhash.BrokenHash1,BrokenHash1,main,BrokenHash1.java:31,InvalidSequenceOfMethodCalls,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.objectsensitivity.advanced.multipleobjects.truepositive.staticiv.StaticIv1,StaticIv1,main,StaticIv1.java:43,UnsatisfiedConstraint,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.objectsensitivity.advanced.multipleobjects.truepositive.staticiv.StaticIv1,StaticIv1,main,StaticIv1.java:43,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,main.java.org.cambench.cap.mixedsensitivities.contextpath.truepositive.brokenhash.BrokenHash1,BrokenHash1,main,BrokenHash1.java:36,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found MD5."
+MessageDigestSpec,main.java.org.cambench.cap.mixedsensitivities.contextpath.truepositive.brokenhash.BrokenHash1,BrokenHash1,main,BrokenHash1.java:36,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,main.java.org.cambench.cap.mixedsensitivities.contextpath.truepositive.brokenhash.BrokenHash1,BrokenHash1,main,BrokenHash1.java:37,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,main.java.org.cambench.cap.mixedsensitivities.inter2path.truepositive.brokenhash.BrokenHash1,BrokenHash1,method1,BrokenHash1.java:35,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found MD5."
+MessageDigestSpec,main.java.org.cambench.cap.mixedsensitivities.inter2path.truepositive.brokenhash.BrokenHash1,BrokenHash1,method1,BrokenHash1.java:35,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,main.java.org.cambench.cap.mixedsensitivities.inter2path.truepositive.brokenhash.BrokenHash1,BrokenHash1,method1,BrokenHash1.java:36,InvalidSequenceOfMethodCalls,unknown
+PBEParameterSpec,main.java.org.cambench.cap.contextsensitivity.truepositive.pbeparameters.PBEParameters2,PBEParameters2,main,PBEParameters2.java:31,UnsafeAlgorithm,expecting at least 1000 iterations and a randomized salt.
+PBEParameterSpec,main.java.org.cambench.cap.contextsensitivity.truepositive.pbeparameters.PBEParameters2,PBEParameters2,main,PBEParameters2.java:31,InvalidSequenceOfMethodCalls,unknown
+PBEParameterSpec,main.java.org.cambench.cap.objectsensitivity.truepositive.pbeparameters.PBEParameters2,PBEParameters2,main,PBEParameters2.java:31,UnsafeAlgorithm,expecting at least 1000 iterations and a randomized salt.
+PBEParameterSpec,main.java.org.cambench.cap.objectsensitivity.truepositive.pbeparameters.PBEParameters2,PBEParameters2,main,PBEParameters2.java:31,InvalidSequenceOfMethodCalls,unknown
+KeyPairGeneratorSpec,main.java.org.cambench.cap.mixedsensitivities.objectpath.truepositive.smallkeysize.SmallKeySize2,SmallKeySize2,main,SmallKeySize2.java:43,InvalidKeySize,invalid key size for algorithm RSA.
+KeyPairGeneratorSpec,main.java.org.cambench.cap.mixedsensitivities.objectpath.truepositive.smallkeysize.SmallKeySize2,SmallKeySize2,main,SmallKeySize2.java:43,InvalidSequenceOfMethodCalls,unknown
+KeyPairGeneratorSpec,main.java.org.cambench.cap.mixedsensitivities.objectpath.truepositive.smallkeysize.SmallKeySize2,SmallKeySize2,main,SmallKeySize2.java:44,InvalidSequenceOfMethodCalls,unknown
+KeyPairSpec,main.java.org.cambench.cap.mixedsensitivities.objectpath.truepositive.smallkeysize.SmallKeySize2,SmallKeySize2,main,SmallKeySize2.java:46,InvalidSequenceOfMethodCalls,unknown
+KeyGeneratorSpec,main.java.org.cambench.cap.mixedsensitivities.inter2object.truepositive.brokencrypto.BrokenCrypto1,BrokenCrypto1,method1,BrokenCrypto1.java:36,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found DES."
+KeyGeneratorSpec,main.java.org.cambench.cap.mixedsensitivities.inter2object.truepositive.brokencrypto.BrokenCrypto1,BrokenCrypto1,method1,BrokenCrypto1.java:36,InvalidSequenceOfMethodCalls,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.mixedsensitivities.fieldflow.truepositive.insecurerandom.CorrectedRandom,CorrectedRandom,main,CorrectedRandom.java:41,UnsatisfiedConstraint,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.mixedsensitivities.fieldflow.truepositive.insecurerandom.CorrectedRandom,CorrectedRandom,main,CorrectedRandom.java:41,InvalidSequenceOfMethodCalls,unknown
+KeyPairSpec,main.java.org.cambench.cap.mixedsensitivities.contextobject.falsepositive.smallkeysize.SmallKeySize1,SmallKeySize1,main,SmallKeySize1.java:37,InvalidSequenceOfMethodCalls,unknown
+KeyPairSpec,main.java.org.cambench.cap.fieldsensitivity.truepositive.smallkeysize.CorrectedKeySize,CorrectedKeySize,main,CorrectedKeySize.java:37,InvalidSequenceOfMethodCalls,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.mixedsensitivities.inter2path.truepositive.insecurerandom.InsecureRandom1,InsecureRandom1,method1,InsecureRandom1.java:48,UnsatisfiedConstraint,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.mixedsensitivities.inter2path.truepositive.insecurerandom.InsecureRandom1,InsecureRandom1,method1,InsecureRandom1.java:48,InvalidSequenceOfMethodCalls,unknown
+KeyPairSpec,main.java.org.cambench.cap.mixedsensitivities.inter2path.truepositive.smallkeysize.CorrectedKeySize,CorrectedKeySize,method1,CorrectedKeySize.java:37,InvalidSequenceOfMethodCalls,unknown
+KeyPairSpec,main.java.org.cambench.cap.objectsensitivity.truepositive.smallkeysize.CorrectedKeySize,CorrectedKeySize,main,CorrectedKeySize.java:36,InvalidSequenceOfMethodCalls,unknown
+KeyPairSpec,main.java.org.cambench.cap.mixedsensitivities.fieldobject.truepositive.smallkeysize.CorrectedKeySize,CorrectedKeySize,main,CorrectedKeySize.java:37,InvalidSequenceOfMethodCalls,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.fieldsensitivity.falsepositive.insecurerandom.InsecureRandom1,InsecureRandom1,main,InsecureRandom1.java:42,UnsatisfiedConstraint,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.fieldsensitivity.falsepositive.insecurerandom.InsecureRandom1,InsecureRandom1,main,InsecureRandom1.java:42,InvalidSequenceOfMethodCalls,unknown
+KeyPairSpec,main.java.org.cambench.cap.mixedsensitivities.inter2context.truepositive.smallkeysize.CorrectedKeySize,CorrectedKeySize,method1,CorrectedKeySize.java:43,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,main.java.org.cambench.cap.pathsensitivity.truepositive.brokenhash.BrokenHash1,BrokenHash1,main,BrokenHash1.java:34,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found MD5."
+MessageDigestSpec,main.java.org.cambench.cap.pathsensitivity.truepositive.brokenhash.BrokenHash1,BrokenHash1,main,BrokenHash1.java:34,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,main.java.org.cambench.cap.pathsensitivity.truepositive.brokenhash.BrokenHash1,BrokenHash1,main,BrokenHash1.java:35,InvalidSequenceOfMethodCalls,unknown
+KeyGeneratorSpec,main.java.org.cambench.cap.flowsensitivity.truepositive.brokencrypto.BrokenCrypto1,BrokenCrypto1,main,BrokenCrypto1.java:31,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found DES."
+KeyGeneratorSpec,main.java.org.cambench.cap.flowsensitivity.truepositive.brokencrypto.BrokenCrypto1,BrokenCrypto1,main,BrokenCrypto1.java:31,InvalidSequenceOfMethodCalls,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.objectsensitivity.falsepositive.insecurerandom.InsecureRandom1,InsecureRandom1,main,InsecureRandom1.java:41,UnsatisfiedConstraint,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.objectsensitivity.falsepositive.insecurerandom.InsecureRandom1,InsecureRandom1,main,InsecureRandom1.java:41,InvalidSequenceOfMethodCalls,unknown
+KeyPairSpec,main.java.org.cambench.cap.mixedsensitivities.contextpath.truepositive.smallkeysize.CorrectedKeySize,CorrectedKeySize,main,CorrectedKeySize.java:35,InvalidSequenceOfMethodCalls,unknown
+KeyPairSpec,main.java.org.cambench.cap.flowsensitivity.truepositive.smallkeysize.CorrectedKeySize,CorrectedKeySize,main,CorrectedKeySize.java:33,InvalidSequenceOfMethodCalls,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.mixedsensitivities.contextpath.truepositive.staticiv.StaticIv2,StaticIv2,main,StaticIv2.java:48,UnsatisfiedConstraint,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.mixedsensitivities.contextpath.truepositive.staticiv.StaticIv2,StaticIv2,main,StaticIv2.java:48,InvalidSequenceOfMethodCalls,unknown
+KeyPairSpec,main.java.org.cambench.cap.mixedsensitivities.fieldpath.falsepositive.smallkeysize.SmallKeySize1,SmallKeySize1,main,SmallKeySize1.java:44,InvalidSequenceOfMethodCalls,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.mixedsensitivities.fieldpath.falsepositive.insecurerandom.InsecureRandom1,InsecureRandom1,main,InsecureRandom1.java:47,UnsatisfiedConstraint,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.mixedsensitivities.fieldpath.falsepositive.insecurerandom.InsecureRandom1,InsecureRandom1,main,InsecureRandom1.java:47,InvalidSequenceOfMethodCalls,unknown
+KeyPairGeneratorSpec,main.java.org.cambench.cap.mixedsensitivities.fieldflow.truepositive.smallkeysize.SmallKeySize2,SmallKeySize2,main,SmallKeySize2.java:35,InvalidKeySize,invalid key size for algorithm RSA.
+KeyPairGeneratorSpec,main.java.org.cambench.cap.mixedsensitivities.fieldflow.truepositive.smallkeysize.SmallKeySize2,SmallKeySize2,main,SmallKeySize2.java:35,InvalidSequenceOfMethodCalls,unknown
+KeyPairGeneratorSpec,main.java.org.cambench.cap.mixedsensitivities.fieldflow.truepositive.smallkeysize.SmallKeySize2,SmallKeySize2,main,SmallKeySize2.java:36,InvalidSequenceOfMethodCalls,unknown
+KeyPairSpec,main.java.org.cambench.cap.mixedsensitivities.fieldflow.truepositive.smallkeysize.SmallKeySize2,SmallKeySize2,main,SmallKeySize2.java:38,InvalidSequenceOfMethodCalls,unknown
+KeyGeneratorSpec,main.java.org.cambench.cap.interprocedural2.truepositive.brokencrypto.BrokenCrypto1,BrokenCrypto1,method1,BrokenCrypto1.java:34,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found DES."
+KeyGeneratorSpec,main.java.org.cambench.cap.interprocedural2.truepositive.brokencrypto.BrokenCrypto1,BrokenCrypto1,method1,BrokenCrypto1.java:34,InvalidSequenceOfMethodCalls,unknown
+KeyPairSpec,main.java.org.cambench.cap.mixedsensitivities.inter2object.truepositive.smallkeysize.CorrectedKeySize,CorrectedKeySize,method1,CorrectedKeySize.java:39,InvalidSequenceOfMethodCalls,unknown
+PBEParameterSpec,main.java.org.cambench.cap.contextsensitivity.advanced.callsites5.truepositive.pbeparameters.PBEParameters1,PBEParameters1,main,PBEParameters1.java:36,UnsafeAlgorithm,expecting at least 1000 iterations and a randomized salt.
+PBEParameterSpec,main.java.org.cambench.cap.contextsensitivity.advanced.callsites5.truepositive.pbeparameters.PBEParameters1,PBEParameters1,main,PBEParameters1.java:36,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,main.java.org.cambench.cap.basic.brokenhash.BrokenHash1,BrokenHash1,main,BrokenHash1.java:26,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found MD5."
+MessageDigestSpec,main.java.org.cambench.cap.basic.brokenhash.BrokenHash1,BrokenHash1,main,BrokenHash1.java:26,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,main.java.org.cambench.cap.basic.brokenhash.BrokenHash1,BrokenHash1,main,BrokenHash1.java:27,InvalidSequenceOfMethodCalls,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.mixedsensitivities.contextpath.truepositive.staticiv.StaticIv1,StaticIv1,main,StaticIv1.java:43,UnsatisfiedConstraint,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.mixedsensitivities.contextpath.truepositive.staticiv.StaticIv1,StaticIv1,main,StaticIv1.java:43,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,main.java.org.cambench.cap.objectsensitivity.advanced.multipleobjects.truepositive.brokenhash.BrokenHash1,BrokenHash1,main,BrokenHash1.java:32,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found MD5."
+MessageDigestSpec,main.java.org.cambench.cap.objectsensitivity.advanced.multipleobjects.truepositive.brokenhash.BrokenHash1,BrokenHash1,main,BrokenHash1.java:32,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,main.java.org.cambench.cap.objectsensitivity.advanced.multipleobjects.truepositive.brokenhash.BrokenHash1,BrokenHash1,main,BrokenHash1.java:33,InvalidSequenceOfMethodCalls,unknown
+KeyPairSpec,main.java.org.cambench.cap.contextsensitivity.falsepositive.smallkeysize.SmallKeySize1,SmallKeySize1,main,SmallKeySize1.java:37,InvalidSequenceOfMethodCalls,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.mixedsensitivities.fieldobject.truepositive.insecurerandom.InsecureRandom1,InsecureRandom1,main,InsecureRandom1.java:45,UnsatisfiedConstraint,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.mixedsensitivities.fieldobject.truepositive.insecurerandom.InsecureRandom1,InsecureRandom1,main,InsecureRandom1.java:45,InvalidSequenceOfMethodCalls,unknown
+KeyPairGeneratorSpec,main.java.org.cambench.cap.fieldsensitivity.truepositive.smallkeysize.SmallKeySize1,SmallKeySize1,main,SmallKeySize1.java:35,InvalidKeySize,invalid key size for algorithm RSA.
+KeyPairGeneratorSpec,main.java.org.cambench.cap.fieldsensitivity.truepositive.smallkeysize.SmallKeySize1,SmallKeySize1,main,SmallKeySize1.java:35,InvalidSequenceOfMethodCalls,unknown
+KeyPairGeneratorSpec,main.java.org.cambench.cap.fieldsensitivity.truepositive.smallkeysize.SmallKeySize1,SmallKeySize1,main,SmallKeySize1.java:36,InvalidSequenceOfMethodCalls,unknown
+KeyPairSpec,main.java.org.cambench.cap.fieldsensitivity.truepositive.smallkeysize.SmallKeySize1,SmallKeySize1,main,SmallKeySize1.java:38,InvalidSequenceOfMethodCalls,unknown
+CipherSpec,main.java.org.cambench.cap.fieldsensitivity.truepositive.ecbmode.EcbMode1,EcbMode1,main,EcbMode1.java:33,UnsafeAlgorithm,"expecting one of {AES/CBC/PKCS5Padding, AES/PCBC/ISO10126Padding, ...} but found AES/ECB/PKCS5Padding."
+CipherSpec,main.java.org.cambench.cap.fieldsensitivity.truepositive.ecbmode.EcbMode1,EcbMode1,main,EcbMode1.java:33,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,main.java.org.cambench.cap.flowsensitivity.truepositive.brokenhash.BrokenHash1,BrokenHash1,main,BrokenHash1.java:28,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found MD5."
+MessageDigestSpec,main.java.org.cambench.cap.flowsensitivity.truepositive.brokenhash.BrokenHash1,BrokenHash1,main,BrokenHash1.java:28,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,main.java.org.cambench.cap.flowsensitivity.truepositive.brokenhash.BrokenHash1,BrokenHash1,main,BrokenHash1.java:29,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,main.java.org.cambench.cap.mixedsensitivities.fieldflow.truepositive.brokenhash.BrokenHash2,BrokenHash2,main,BrokenHash2.java:30,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found SHA-1."
+MessageDigestSpec,main.java.org.cambench.cap.mixedsensitivities.fieldflow.truepositive.brokenhash.BrokenHash2,BrokenHash2,main,BrokenHash2.java:30,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,main.java.org.cambench.cap.mixedsensitivities.fieldflow.truepositive.brokenhash.BrokenHash2,BrokenHash2,main,BrokenHash2.java:31,InvalidSequenceOfMethodCalls,unknown
+KeyGeneratorSpec,main.java.org.cambench.cap.objectsensitivity.advanced.multipleobjects.truepositive.brokencrypto.BrokenCrypto1,BrokenCrypto1,main,BrokenCrypto1.java:35,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found DES."
+KeyGeneratorSpec,main.java.org.cambench.cap.objectsensitivity.advanced.multipleobjects.truepositive.brokencrypto.BrokenCrypto1,BrokenCrypto1,main,BrokenCrypto1.java:35,InvalidSequenceOfMethodCalls,unknown
+KeyGeneratorSpec,main.java.org.cambench.cap.fieldsensitivity.truepositive.brokencrypto.BrokenCrypto1,BrokenCrypto1,main,BrokenCrypto1.java:33,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found DES."
+KeyGeneratorSpec,main.java.org.cambench.cap.fieldsensitivity.truepositive.brokencrypto.BrokenCrypto1,BrokenCrypto1,main,BrokenCrypto1.java:33,InvalidSequenceOfMethodCalls,unknown
+KeyPairGeneratorSpec,main.java.org.cambench.cap.fieldsensitivity.advanced.fielddepth2.truepositive.smallkeysize.SmallKeySize1,SmallKeySize1,main,SmallKeySize1.java:36,InvalidKeySize,invalid key size for algorithm RSA.
+KeyPairGeneratorSpec,main.java.org.cambench.cap.fieldsensitivity.advanced.fielddepth2.truepositive.smallkeysize.SmallKeySize1,SmallKeySize1,main,SmallKeySize1.java:36,InvalidSequenceOfMethodCalls,unknown
+KeyPairGeneratorSpec,main.java.org.cambench.cap.fieldsensitivity.advanced.fielddepth2.truepositive.smallkeysize.SmallKeySize1,SmallKeySize1,main,SmallKeySize1.java:37,InvalidSequenceOfMethodCalls,unknown
+KeyPairSpec,main.java.org.cambench.cap.fieldsensitivity.advanced.fielddepth2.truepositive.smallkeysize.SmallKeySize1,SmallKeySize1,main,SmallKeySize1.java:39,InvalidSequenceOfMethodCalls,unknown
+KeyPairSpec,main.java.org.cambench.cap.interprocedural2.falsepositive.smallkeysize.SmallKeySize1,SmallKeySize1,method1,SmallKeySize1.java:40,InvalidSequenceOfMethodCalls,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.mixedsensitivities.inter2field.truepositive.insecurerandom.CorrectedRandom,CorrectedRandom,method1,CorrectedRandom.java:45,UnsatisfiedConstraint,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.mixedsensitivities.inter2field.truepositive.insecurerandom.CorrectedRandom,CorrectedRandom,method1,CorrectedRandom.java:45,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,main.java.org.cambench.cap.objectsensitivity.truepositive.brokenhash.BrokenHash1,BrokenHash1,main,BrokenHash1.java:29,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found MD5."
+MessageDigestSpec,main.java.org.cambench.cap.objectsensitivity.truepositive.brokenhash.BrokenHash1,BrokenHash1,main,BrokenHash1.java:29,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,main.java.org.cambench.cap.objectsensitivity.truepositive.brokenhash.BrokenHash1,BrokenHash1,main,BrokenHash1.java:30,InvalidSequenceOfMethodCalls,unknown
+KeyPairGeneratorSpec,main.java.org.cambench.cap.mixedsensitivities.inter2object.truepositive.smallkeysize.SmallKeySize1,SmallKeySize1,method1,SmallKeySize1.java:37,InvalidKeySize,invalid key size for algorithm RSA.
+KeyPairGeneratorSpec,main.java.org.cambench.cap.mixedsensitivities.inter2object.truepositive.smallkeysize.SmallKeySize1,SmallKeySize1,method1,SmallKeySize1.java:37,InvalidSequenceOfMethodCalls,unknown
+KeyPairGeneratorSpec,main.java.org.cambench.cap.mixedsensitivities.inter2object.truepositive.smallkeysize.SmallKeySize1,SmallKeySize1,method1,SmallKeySize1.java:38,InvalidSequenceOfMethodCalls,unknown
+KeyPairSpec,main.java.org.cambench.cap.mixedsensitivities.inter2object.truepositive.smallkeysize.SmallKeySize1,SmallKeySize1,method1,SmallKeySize1.java:40,InvalidSequenceOfMethodCalls,unknown
+CipherSpec,main.java.org.cambench.cap.mixedsensitivities.inter2field.truepositive.ecbmode.EcbMode1,EcbMode1,method1,EcbMode1.java:37,UnsafeAlgorithm,"expecting one of {AES/CBC/PKCS5Padding, AES/PCBC/ISO10126Padding, ...} but found AES/ECB/PKCS5Padding."
+CipherSpec,main.java.org.cambench.cap.mixedsensitivities.inter2field.truepositive.ecbmode.EcbMode1,EcbMode1,method1,EcbMode1.java:37,InvalidSequenceOfMethodCalls,unknown
+KeyPairGeneratorSpec,main.java.org.cambench.cap.contextsensitivity.truepositive.smallkeysize.SmallKeySize1,SmallKeySize1,main,SmallKeySize1.java:34,InvalidKeySize,invalid key size for algorithm RSA.
+KeyPairGeneratorSpec,main.java.org.cambench.cap.contextsensitivity.truepositive.smallkeysize.SmallKeySize1,SmallKeySize1,main,SmallKeySize1.java:34,InvalidSequenceOfMethodCalls,unknown
+KeyPairGeneratorSpec,main.java.org.cambench.cap.contextsensitivity.truepositive.smallkeysize.SmallKeySize1,SmallKeySize1,main,SmallKeySize1.java:35,InvalidSequenceOfMethodCalls,unknown
+KeyPairSpec,main.java.org.cambench.cap.contextsensitivity.truepositive.smallkeysize.SmallKeySize1,SmallKeySize1,main,SmallKeySize1.java:37,InvalidSequenceOfMethodCalls,unknown
+KeyGeneratorSpec,main.java.org.cambench.cap.mixedsensitivities.fieldobject.truepositive.brokencrypto.BrokenCrypto1,BrokenCrypto1,main,BrokenCrypto1.java:36,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found DES."
+KeyGeneratorSpec,main.java.org.cambench.cap.mixedsensitivities.fieldobject.truepositive.brokencrypto.BrokenCrypto1,BrokenCrypto1,main,BrokenCrypto1.java:36,InvalidSequenceOfMethodCalls,unknown
+PBEParameterSpec,main.java.org.cambench.cap.interprocedural2.truepositive.pbeparameters.PBEParameters2,PBEParameters2,method1,PBEParameters2.java:34,UnsafeAlgorithm,expecting at least 1000 iterations and a randomized salt.
+PBEParameterSpec,main.java.org.cambench.cap.interprocedural2.truepositive.pbeparameters.PBEParameters2,PBEParameters2,method1,PBEParameters2.java:34,InvalidSequenceOfMethodCalls,unknown
+KeyGeneratorSpec,main.java.org.cambench.cap.mixedsensitivities.inter2flow.truepositive.brokencrypto.BrokenCrypto1,BrokenCrypto1,method1,BrokenCrypto1.java:36,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found DES."
+KeyGeneratorSpec,main.java.org.cambench.cap.mixedsensitivities.inter2flow.truepositive.brokencrypto.BrokenCrypto1,BrokenCrypto1,method1,BrokenCrypto1.java:36,InvalidSequenceOfMethodCalls,unknown
+KeyPairSpec,main.java.org.cambench.cap.flowsensitivity.advanced.valueswap.falsepositive.smallkeysize.SmallKeySize1,SmallKeySize1,main,SmallKeySize1.java:43,InvalidSequenceOfMethodCalls,unknown
+KeyPairSpec,main.java.org.cambench.cap.contextsensitivity.truepositive.smallkeysize.CorrectedKeySize,CorrectedKeySize,main,CorrectedKeySize.java:36,InvalidSequenceOfMethodCalls,unknown
+CipherSpec,main.java.org.cambench.cap.objectsensitivity.truepositive.ecbmode.EcbMode1,EcbMode1,main,EcbMode1.java:32,UnsafeAlgorithm,"expecting one of {AES/CBC/PKCS5Padding, AES/PCBC/ISO10126Padding, ...} but found AES/ECB/PKCS5Padding."
+CipherSpec,main.java.org.cambench.cap.objectsensitivity.truepositive.ecbmode.EcbMode1,EcbMode1,main,EcbMode1.java:32,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,main.java.org.cambench.cap.basic.brokenhash.BrokenHash2,BrokenHash2,main,BrokenHash2.java:26,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found SHA-1."
+MessageDigestSpec,main.java.org.cambench.cap.basic.brokenhash.BrokenHash2,BrokenHash2,main,BrokenHash2.java:26,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,main.java.org.cambench.cap.basic.brokenhash.BrokenHash2,BrokenHash2,main,BrokenHash2.java:27,InvalidSequenceOfMethodCalls,unknown
+PBEParameterSpec,main.java.org.cambench.cap.pathsensitivity.truepositive.pbeparameters.PBEParameters1,PBEParameters1,main,PBEParameters1.java:36,UnsafeAlgorithm,expecting at least 1000 iterations and a randomized salt.
+PBEParameterSpec,main.java.org.cambench.cap.pathsensitivity.truepositive.pbeparameters.PBEParameters1,PBEParameters1,main,PBEParameters1.java:36,InvalidSequenceOfMethodCalls,unknown
+PBEParameterSpec,main.java.org.cambench.cap.objectsensitivity.advanced.multipleobjects.truepositive.pbeparameters.PBEParameters1,PBEParameters1,main,PBEParameters1.java:36,UnsafeAlgorithm,expecting at least 1000 iterations and a randomized salt.
+PBEParameterSpec,main.java.org.cambench.cap.objectsensitivity.advanced.multipleobjects.truepositive.pbeparameters.PBEParameters1,PBEParameters1,main,PBEParameters1.java:36,InvalidSequenceOfMethodCalls,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.basic.staticiv.StaticIv2,StaticIv2,main,StaticIv2.java:33,UnsatisfiedConstraint,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.basic.staticiv.StaticIv2,StaticIv2,main,StaticIv2.java:33,InvalidSequenceOfMethodCalls,unknown
+KeyPairGeneratorSpec,main.java.org.cambench.cap.basic.smallkeysize.SmallKeySize1,SmallKeySize1,main,SmallKeySize1.java:31,InvalidKeySize,invalid key size for algorithm RSA.
+KeyPairGeneratorSpec,main.java.org.cambench.cap.basic.smallkeysize.SmallKeySize1,SmallKeySize1,main,SmallKeySize1.java:31,InvalidSequenceOfMethodCalls,unknown
+KeyPairGeneratorSpec,main.java.org.cambench.cap.basic.smallkeysize.SmallKeySize1,SmallKeySize1,main,SmallKeySize1.java:32,InvalidSequenceOfMethodCalls,unknown
+KeyPairSpec,main.java.org.cambench.cap.basic.smallkeysize.SmallKeySize1,SmallKeySize1,main,SmallKeySize1.java:34,InvalidSequenceOfMethodCalls,unknown
+CipherSpec,main.java.org.cambench.cap.mixedsensitivities.inter2context.truepositive.ecbmode.EcbMode1,EcbMode1,method1,EcbMode1.java:40,UnsafeAlgorithm,"expecting one of {AES/CBC/PKCS5Padding, AES/PCBC/ISO10126Padding, ...} but found AES/ECB/PKCS5Padding."
+CipherSpec,main.java.org.cambench.cap.mixedsensitivities.inter2context.truepositive.ecbmode.EcbMode1,EcbMode1,method1,EcbMode1.java:40,InvalidSequenceOfMethodCalls,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.mixedsensitivities.fieldflow.truepositive.insecurerandom.InsecureRandom1,InsecureRandom1,main,InsecureRandom1.java:43,UnsatisfiedConstraint,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.mixedsensitivities.fieldflow.truepositive.insecurerandom.InsecureRandom1,InsecureRandom1,main,InsecureRandom1.java:43,InvalidSequenceOfMethodCalls,unknown
+CipherSpec,main.java.org.cambench.cap.mixedsensitivities.contextflow.truepositive.ecbmode.EcbMode1,EcbMode1,main,EcbMode1.java:32,UnsafeAlgorithm,"expecting one of {AES/CBC/PKCS5Padding, AES/PCBC/ISO10126Padding, ...} but found AES/ECB/PKCS5Padding."
+CipherSpec,main.java.org.cambench.cap.mixedsensitivities.contextflow.truepositive.ecbmode.EcbMode1,EcbMode1,main,EcbMode1.java:32,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,main.java.org.cambench.cap.interprocedural2.truepositive.brokenhash.BrokenHash1,BrokenHash1,method1,BrokenHash1.java:32,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found MD5."
+MessageDigestSpec,main.java.org.cambench.cap.interprocedural2.truepositive.brokenhash.BrokenHash1,BrokenHash1,method1,BrokenHash1.java:32,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,main.java.org.cambench.cap.interprocedural2.truepositive.brokenhash.BrokenHash1,BrokenHash1,method1,BrokenHash1.java:33,InvalidSequenceOfMethodCalls,unknown
+KeyPairSpec,main.java.org.cambench.cap.fieldsensitivity.falsepositive.smallkeysize.SmallKeySize1,SmallKeySize1,main,SmallKeySize1.java:38,InvalidSequenceOfMethodCalls,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.mixedsensitivities.contextflow.truepositive.staticiv.StaticIv1,StaticIv1,main,StaticIv1.java:39,UnsatisfiedConstraint,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.mixedsensitivities.contextflow.truepositive.staticiv.StaticIv1,StaticIv1,main,StaticIv1.java:39,InvalidSequenceOfMethodCalls,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.objectsensitivity.truepositive.insecurerandom.CorrectedRandom,CorrectedRandom,main,CorrectedRandom.java:40,UnsatisfiedConstraint,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.objectsensitivity.truepositive.insecurerandom.CorrectedRandom,CorrectedRandom,main,CorrectedRandom.java:40,InvalidSequenceOfMethodCalls,unknown
+CipherSpec,main.java.org.cambench.cap.mixedsensitivities.inter2flow.truepositive.ecbmode.EcbMode1,EcbMode1,method1,EcbMode1.java:37,UnsafeAlgorithm,"expecting one of {AES/CBC/PKCS5Padding, AES/PCBC/ISO10126Padding, ...} but found AES/ECB/PKCS5Padding."
+CipherSpec,main.java.org.cambench.cap.mixedsensitivities.inter2flow.truepositive.ecbmode.EcbMode1,EcbMode1,method1,EcbMode1.java:37,InvalidSequenceOfMethodCalls,unknown
+KeyPairSpec,main.java.org.cambench.cap.mixedsensitivities.inter2field.truepositive.smallkeysize.CorrectedKeySize,CorrectedKeySize,method1,CorrectedKeySize.java:40,InvalidSequenceOfMethodCalls,unknown
+KeyPairSpec,main.java.org.cambench.cap.mixedsensitivities.contextflow.truepositive.smallkeysize.CorrectedKeySize,CorrectedKeySize,main,CorrectedKeySize.java:36,InvalidSequenceOfMethodCalls,unknown
+KeyPairGeneratorSpec,main.java.org.cambench.cap.basic.smallkeysize.SmallKeySize2,SmallKeySize2,main,SmallKeySize2.java:31,InvalidKeySize,invalid key size for algorithm RSA.
+KeyPairGeneratorSpec,main.java.org.cambench.cap.basic.smallkeysize.SmallKeySize2,SmallKeySize2,main,SmallKeySize2.java:31,InvalidSequenceOfMethodCalls,unknown
+KeyPairGeneratorSpec,main.java.org.cambench.cap.basic.smallkeysize.SmallKeySize2,SmallKeySize2,main,SmallKeySize2.java:32,InvalidSequenceOfMethodCalls,unknown
+KeyPairSpec,main.java.org.cambench.cap.basic.smallkeysize.SmallKeySize2,SmallKeySize2,main,SmallKeySize2.java:34,InvalidSequenceOfMethodCalls,unknown
+KeyPairSpec,main.java.org.cambench.cap.mixedsensitivities.flowpath.falsepositive.smallkeysize.SmallKeySize1,SmallKeySize1,main,SmallKeySize1.java:41,InvalidSequenceOfMethodCalls,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.mixedsensitivities.contextfield.falsepositive.insecurerandom.InsecureRandom1,InsecureRandom1,main,InsecureRandom1.java:42,UnsatisfiedConstraint,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.mixedsensitivities.contextfield.falsepositive.insecurerandom.InsecureRandom1,InsecureRandom1,main,InsecureRandom1.java:42,InvalidSequenceOfMethodCalls,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.interprocedural3.truepositive.staticiv.StaticIv1,StaticIv1,method2,StaticIv1.java:43,UnsatisfiedConstraint,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.interprocedural3.truepositive.staticiv.StaticIv1,StaticIv1,method2,StaticIv1.java:43,InvalidSequenceOfMethodCalls,unknown
+CipherSpec,main.java.org.cambench.cap.mixedsensitivities.fieldobject.truepositive.ecbmode.EcbMode1,EcbMode1,main,EcbMode1.java:36,UnsafeAlgorithm,"expecting one of {AES/CBC/PKCS5Padding, AES/PCBC/ISO10126Padding, ...} but found AES/ECB/PKCS5Padding."
+CipherSpec,main.java.org.cambench.cap.mixedsensitivities.fieldobject.truepositive.ecbmode.EcbMode1,EcbMode1,main,EcbMode1.java:36,InvalidSequenceOfMethodCalls,unknown
+KeyPairSpec,main.java.org.cambench.cap.fieldsensitivity.advanced.fielddepth3.truepositive.smallkeysize.CorrectedKeySize,CorrectedKeySize,main,CorrectedKeySize.java:39,InvalidSequenceOfMethodCalls,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.basic.insecurerandom.InsecureRandom1,InsecureRandom1,main,InsecureRandom1.java:37,UnsatisfiedConstraint,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.basic.insecurerandom.InsecureRandom1,InsecureRandom1,main,InsecureRandom1.java:37,InvalidSequenceOfMethodCalls,unknown
+KeyPairSpec,main.java.org.cambench.cap.mixedsensitivities.contextfield.falsepositive.smallkeysize.SmallKeySize1,SmallKeySize1,main,SmallKeySize1.java:38,InvalidSequenceOfMethodCalls,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.mixedsensitivities.fieldflow.truepositive.staticiv.StaticIv1,StaticIv1,main,StaticIv1.java:42,UnsatisfiedConstraint,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.mixedsensitivities.fieldflow.truepositive.staticiv.StaticIv1,StaticIv1,main,StaticIv1.java:42,InvalidSequenceOfMethodCalls,unknown
+KeyPairGeneratorSpec,main.java.org.cambench.cap.mixedsensitivities.inter2flow.truepositive.smallkeysize.SmallKeySize1,SmallKeySize1,method1,SmallKeySize1.java:38,InvalidKeySize,invalid key size for algorithm RSA.
+KeyPairGeneratorSpec,main.java.org.cambench.cap.mixedsensitivities.inter2flow.truepositive.smallkeysize.SmallKeySize1,SmallKeySize1,method1,SmallKeySize1.java:38,InvalidSequenceOfMethodCalls,unknown
+KeyPairGeneratorSpec,main.java.org.cambench.cap.mixedsensitivities.inter2flow.truepositive.smallkeysize.SmallKeySize1,SmallKeySize1,method1,SmallKeySize1.java:39,InvalidSequenceOfMethodCalls,unknown
+KeyPairSpec,main.java.org.cambench.cap.mixedsensitivities.inter2flow.truepositive.smallkeysize.SmallKeySize1,SmallKeySize1,method1,SmallKeySize1.java:41,InvalidSequenceOfMethodCalls,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.mixedsensitivities.objectpath.truepositive.staticiv.StaticIv1,StaticIv1,main,StaticIv1.java:43,UnsatisfiedConstraint,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.mixedsensitivities.objectpath.truepositive.staticiv.StaticIv1,StaticIv1,main,StaticIv1.java:43,InvalidSequenceOfMethodCalls,unknown
+PBEParameterSpec,main.java.org.cambench.cap.flowsensitivity.truepositive.pbeparameters.PBEParameters1,PBEParameters1,main,PBEParameters1.java:31,UnsafeAlgorithm,expecting at least 1000 iterations and a randomized salt.
+PBEParameterSpec,main.java.org.cambench.cap.flowsensitivity.truepositive.pbeparameters.PBEParameters1,PBEParameters1,main,PBEParameters1.java:31,InvalidSequenceOfMethodCalls,unknown
+KeyGeneratorSpec,main.java.org.cambench.cap.mixedsensitivities.contextpath.truepositive.brokencrypto.BrokenCrypto1,BrokenCrypto1,main,BrokenCrypto1.java:40,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found DES."
+KeyGeneratorSpec,main.java.org.cambench.cap.mixedsensitivities.contextpath.truepositive.brokencrypto.BrokenCrypto1,BrokenCrypto1,main,BrokenCrypto1.java:40,InvalidSequenceOfMethodCalls,unknown
+CipherSpec,main.java.org.cambench.cap.interprocedural2.truepositive.ecbmode.EcbMode1,EcbMode1,method1,EcbMode1.java:35,UnsafeAlgorithm,"expecting one of {AES/CBC/PKCS5Padding, AES/PCBC/ISO10126Padding, ...} but found AES/ECB/PKCS5Padding."
+CipherSpec,main.java.org.cambench.cap.interprocedural2.truepositive.ecbmode.EcbMode1,EcbMode1,method1,EcbMode1.java:35,InvalidSequenceOfMethodCalls,unknown
+KeyGeneratorSpec,main.java.org.cambench.cap.basic.brokencrypto.BrokenCrypto3,BrokenCrypto3,main,BrokenCrypto3.java:29,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found RC2."
+KeyGeneratorSpec,main.java.org.cambench.cap.basic.brokencrypto.BrokenCrypto3,BrokenCrypto3,main,BrokenCrypto3.java:29,InvalidSequenceOfMethodCalls,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.mixedsensitivities.fieldobject.truepositive.insecurerandom.CorrectedRandom,CorrectedRandom,main,CorrectedRandom.java:41,UnsatisfiedConstraint,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.mixedsensitivities.fieldobject.truepositive.insecurerandom.CorrectedRandom,CorrectedRandom,main,CorrectedRandom.java:41,InvalidSequenceOfMethodCalls,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.mixedsensitivities.contextflow.truepositive.insecurerandom.CorrectedRandom,CorrectedRandom,main,CorrectedRandom.java:39,UnsatisfiedConstraint,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.mixedsensitivities.contextflow.truepositive.insecurerandom.CorrectedRandom,CorrectedRandom,main,CorrectedRandom.java:39,InvalidSequenceOfMethodCalls,unknown
+PBEParameterSpec,main.java.org.cambench.cap.pathsensitivity.truepositive.pbeparameters.PBEParameters2,PBEParameters2,main,PBEParameters2.java:36,UnsafeAlgorithm,expecting at least 1000 iterations and a randomized salt.
+PBEParameterSpec,main.java.org.cambench.cap.pathsensitivity.truepositive.pbeparameters.PBEParameters2,PBEParameters2,main,PBEParameters2.java:36,InvalidSequenceOfMethodCalls,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.contextsensitivity.advanced.callsites5.truepositive.staticiv.StaticIv1,StaticIv1,main,StaticIv1.java:43,UnsatisfiedConstraint,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.contextsensitivity.advanced.callsites5.truepositive.staticiv.StaticIv1,StaticIv1,main,StaticIv1.java:43,InvalidSequenceOfMethodCalls,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.mixedsensitivities.contextpath.truepositive.insecurerandom.CorrectedRandom,CorrectedRandom,main,CorrectedRandom.java:40,UnsatisfiedConstraint,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.mixedsensitivities.contextpath.truepositive.insecurerandom.CorrectedRandom,CorrectedRandom,main,CorrectedRandom.java:40,InvalidSequenceOfMethodCalls,unknown
+KeyPairGeneratorSpec,main.java.org.cambench.cap.mixedsensitivities.inter2path.truepositive.smallkeysize.SmallKeySize1,SmallKeySize1,method1,SmallKeySize1.java:41,InvalidKeySize,invalid key size for algorithm RSA.
+KeyPairGeneratorSpec,main.java.org.cambench.cap.mixedsensitivities.inter2path.truepositive.smallkeysize.SmallKeySize1,SmallKeySize1,method1,SmallKeySize1.java:41,InvalidSequenceOfMethodCalls,unknown
+KeyPairGeneratorSpec,main.java.org.cambench.cap.mixedsensitivities.inter2path.truepositive.smallkeysize.SmallKeySize1,SmallKeySize1,method1,SmallKeySize1.java:42,InvalidSequenceOfMethodCalls,unknown
+KeyPairSpec,main.java.org.cambench.cap.mixedsensitivities.inter2path.truepositive.smallkeysize.SmallKeySize1,SmallKeySize1,method1,SmallKeySize1.java:43,InvalidSequenceOfMethodCalls,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.mixedsensitivities.fieldflow.truepositive.staticiv.StaticIv2,StaticIv2,main,StaticIv2.java:41,UnsatisfiedConstraint,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.mixedsensitivities.fieldflow.truepositive.staticiv.StaticIv2,StaticIv2,main,StaticIv2.java:41,InvalidSequenceOfMethodCalls,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.mixedsensitivities.flowobject.falsepositive.insecurerandom.InsecureRandom1,InsecureRandom1,main,InsecureRandom1.java:43,UnsatisfiedConstraint,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.mixedsensitivities.flowobject.falsepositive.insecurerandom.InsecureRandom1,InsecureRandom1,main,InsecureRandom1.java:43,InvalidSequenceOfMethodCalls,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.objectsensitivity.truepositive.insecurerandom.InsecureRandom1,InsecureRandom1,main,InsecureRandom1.java:41,UnsatisfiedConstraint,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.objectsensitivity.truepositive.insecurerandom.InsecureRandom1,InsecureRandom1,main,InsecureRandom1.java:41,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,main.java.org.cambench.cap.basic.brokenhash.BrokenHash3,BrokenHash3,main,BrokenHash3.java:26,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found MD2."
+MessageDigestSpec,main.java.org.cambench.cap.basic.brokenhash.BrokenHash3,BrokenHash3,main,BrokenHash3.java:26,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,main.java.org.cambench.cap.basic.brokenhash.BrokenHash3,BrokenHash3,main,BrokenHash3.java:27,InvalidSequenceOfMethodCalls,unknown
+KeyPairGeneratorSpec,main.java.org.cambench.cap.fieldsensitivity.advanced.fielddepth3.truepositive.smallkeysize.SmallKeySize1,SmallKeySize1,main,SmallKeySize1.java:37,InvalidKeySize,invalid key size for algorithm RSA.
+KeyPairGeneratorSpec,main.java.org.cambench.cap.fieldsensitivity.advanced.fielddepth3.truepositive.smallkeysize.SmallKeySize1,SmallKeySize1,main,SmallKeySize1.java:37,InvalidSequenceOfMethodCalls,unknown
+KeyPairGeneratorSpec,main.java.org.cambench.cap.fieldsensitivity.advanced.fielddepth3.truepositive.smallkeysize.SmallKeySize1,SmallKeySize1,main,SmallKeySize1.java:38,InvalidSequenceOfMethodCalls,unknown
+KeyPairSpec,main.java.org.cambench.cap.fieldsensitivity.advanced.fielddepth3.truepositive.smallkeysize.SmallKeySize1,SmallKeySize1,main,SmallKeySize1.java:40,InvalidSequenceOfMethodCalls,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.mixedsensitivities.inter2context.truepositive.insecurerandom.CorrectedRandom,CorrectedRandom,method1,CorrectedRandom.java:47,UnsatisfiedConstraint,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.mixedsensitivities.inter2context.truepositive.insecurerandom.CorrectedRandom,CorrectedRandom,method1,CorrectedRandom.java:47,InvalidSequenceOfMethodCalls,unknown
+PBEParameterSpec,main.java.org.cambench.cap.interprocedural3.truepositive.pbeparameters.PBEParameters2,PBEParameters2,method2,PBEParameters2.java:40,UnsafeAlgorithm,expecting at least 1000 iterations and a randomized salt.
+PBEParameterSpec,main.java.org.cambench.cap.interprocedural3.truepositive.pbeparameters.PBEParameters2,PBEParameters2,method2,PBEParameters2.java:40,InvalidSequenceOfMethodCalls,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.pathsensitivity.truepositive.staticiv.StaticIv1,StaticIv1,main,StaticIv1.java:44,UnsatisfiedConstraint,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.pathsensitivity.truepositive.staticiv.StaticIv1,StaticIv1,main,StaticIv1.java:44,InvalidSequenceOfMethodCalls,unknown
+KeyGeneratorSpec,main.java.org.cambench.cap.basic.brokencrypto.BrokenCrypto4,BrokenCrypto4,main,BrokenCrypto4.java:29,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found RC4."
+KeyGeneratorSpec,main.java.org.cambench.cap.basic.brokencrypto.BrokenCrypto4,BrokenCrypto4,main,BrokenCrypto4.java:29,InvalidSequenceOfMethodCalls,unknown
+KeyGeneratorSpec,main.java.org.cambench.cap.mixedsensitivities.inter2context.truepositive.brokencrypto.BrokenCrypto1,BrokenCrypto1,method1,BrokenCrypto1.java:39,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found DES."
+KeyGeneratorSpec,main.java.org.cambench.cap.mixedsensitivities.inter2context.truepositive.brokencrypto.BrokenCrypto1,BrokenCrypto1,method1,BrokenCrypto1.java:39,InvalidSequenceOfMethodCalls,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.mixedsensitivities.objectpath.truepositive.insecurerandom.CorrectedRandom,CorrectedRandom,main,CorrectedRandom.java:42,UnsatisfiedConstraint,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.mixedsensitivities.objectpath.truepositive.insecurerandom.CorrectedRandom,CorrectedRandom,main,CorrectedRandom.java:42,InvalidSequenceOfMethodCalls,unknown
+PBEParameterSpec,main.java.org.cambench.cap.objectsensitivity.truepositive.pbeparameters.PBEParameters1,PBEParameters1,main,PBEParameters1.java:33,UnsafeAlgorithm,expecting at least 1000 iterations and a randomized salt.
+PBEParameterSpec,main.java.org.cambench.cap.objectsensitivity.truepositive.pbeparameters.PBEParameters1,PBEParameters1,main,PBEParameters1.java:33,InvalidSequenceOfMethodCalls,unknown
+CipherSpec,main.java.org.cambench.cap.basic.ecbmode.EcbMode1,EcbMode1,main,EcbMode1.java:29,UnsafeAlgorithm,"expecting one of {AES/CBC/PKCS5Padding, AES/PCBC/ISO10126Padding, ...} but found AES/ECB/PKCS5Padding."
+CipherSpec,main.java.org.cambench.cap.basic.ecbmode.EcbMode1,EcbMode1,main,EcbMode1.java:29,InvalidSequenceOfMethodCalls,unknown
+KeyPairSpec,main.java.org.cambench.cap.pathsensitivity.truepositive.smallkeysize.CorrectedKeySize,CorrectedKeySize,main,CorrectedKeySize.java:34,InvalidSequenceOfMethodCalls,unknown
+PBEParameterSpec,main.java.org.cambench.cap.basic.pbeparameters.PBEParameters2,PBEParameters2,main,PBEParameters2.java:30,UnsafeAlgorithm,expecting at least 1000 iterations and a randomized salt.
+PBEParameterSpec,main.java.org.cambench.cap.basic.pbeparameters.PBEParameters2,PBEParameters2,main,PBEParameters2.java:30,InvalidSequenceOfMethodCalls,unknown
+KeyGeneratorSpec,main.java.org.cambench.cap.interprocedural3.truepositive.brokencrypto.BrokenCrypto1,BrokenCrypto1,method2,BrokenCrypto1.java:40,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found DES."
+KeyGeneratorSpec,main.java.org.cambench.cap.interprocedural3.truepositive.brokencrypto.BrokenCrypto1,BrokenCrypto1,method2,BrokenCrypto1.java:40,InvalidSequenceOfMethodCalls,unknown
+CipherSpec,main.java.org.cambench.cap.interprocedural3.truepositive.ecbmode.EcbMode1,EcbMode1,method2,EcbMode1.java:42,UnsafeAlgorithm,"expecting one of {AES/CBC/PKCS5Padding, AES/PCBC/ISO10126Padding, ...} but found AES/ECB/PKCS5Padding."
+CipherSpec,main.java.org.cambench.cap.interprocedural3.truepositive.ecbmode.EcbMode1,EcbMode1,method2,EcbMode1.java:42,InvalidSequenceOfMethodCalls,unknown
+PBEParameterSpec,main.java.org.cambench.cap.basic.pbeparameters.PBEParameters1,PBEParameters1,main,PBEParameters1.java:27,UnsafeAlgorithm,expecting at least 1000 iterations and a randomized salt.
+PBEParameterSpec,main.java.org.cambench.cap.basic.pbeparameters.PBEParameters1,PBEParameters1,main,PBEParameters1.java:27,InvalidSequenceOfMethodCalls,unknown
+CipherSpec,main.java.org.cambench.cap.flowsensitivity.truepositive.ecbmode.EcbMode1,EcbMode1,main,EcbMode1.java:31,UnsafeAlgorithm,"expecting one of {AES/CBC/PKCS5Padding, AES/PCBC/ISO10126Padding, ...} but found AES/ECB/PKCS5Padding."
+CipherSpec,main.java.org.cambench.cap.flowsensitivity.truepositive.ecbmode.EcbMode1,EcbMode1,main,EcbMode1.java:31,InvalidSequenceOfMethodCalls,unknown
+KeyPairSpec,main.java.org.cambench.cap.mixedsensitivities.flowobject.falsepositive.smallkeysize.SmallKeySize1,SmallKeySize1,main,SmallKeySize1.java:41,InvalidSequenceOfMethodCalls,unknown
+PBEParameterSpec,main.java.org.cambench.cap.fieldsensitivity.advanced.fielddepth2.truepositive.pbeparameters.PBEParameters1,PBEParameters1,main,PBEParameters1.java:34,UnsafeAlgorithm,expecting at least 1000 iterations and a randomized salt.
+PBEParameterSpec,main.java.org.cambench.cap.fieldsensitivity.advanced.fielddepth2.truepositive.pbeparameters.PBEParameters1,PBEParameters1,main,PBEParameters1.java:34,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,main.java.org.cambench.cap.mixedsensitivities.fieldflow.truepositive.brokenhash.BrokenHash1,BrokenHash1,main,BrokenHash1.java:31,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found MD5."
+MessageDigestSpec,main.java.org.cambench.cap.mixedsensitivities.fieldflow.truepositive.brokenhash.BrokenHash1,BrokenHash1,main,BrokenHash1.java:31,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,main.java.org.cambench.cap.mixedsensitivities.fieldflow.truepositive.brokenhash.BrokenHash1,BrokenHash1,main,BrokenHash1.java:32,InvalidSequenceOfMethodCalls,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.mixedsensitivities.contextobject.falsepositive.insecurerandom.InsecureRandom1,InsecureRandom1,main,InsecureRandom1.java:41,UnsatisfiedConstraint,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.mixedsensitivities.contextobject.falsepositive.insecurerandom.InsecureRandom1,InsecureRandom1,main,InsecureRandom1.java:41,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,main.java.org.cambench.cap.mixedsensitivities.inter2field.truepositive.brokenhash.BrokenHash1,BrokenHash1,method1,BrokenHash1.java:34,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found MD5."
+MessageDigestSpec,main.java.org.cambench.cap.mixedsensitivities.inter2field.truepositive.brokenhash.BrokenHash1,BrokenHash1,method1,BrokenHash1.java:34,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,main.java.org.cambench.cap.mixedsensitivities.inter2field.truepositive.brokenhash.BrokenHash1,BrokenHash1,method1,BrokenHash1.java:35,InvalidSequenceOfMethodCalls,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.mixedsensitivities.contextflow.truepositive.insecurerandom.InsecureRandom1,InsecureRandom1,main,InsecureRandom1.java:40,UnsatisfiedConstraint,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.mixedsensitivities.contextflow.truepositive.insecurerandom.InsecureRandom1,InsecureRandom1,main,InsecureRandom1.java:40,InvalidSequenceOfMethodCalls,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.interprocedural2.truepositive.insecurerandom.InsecureRandom1,InsecureRandom1,method1,InsecureRandom1.java:41,UnsatisfiedConstraint,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.interprocedural2.truepositive.insecurerandom.InsecureRandom1,InsecureRandom1,method1,InsecureRandom1.java:41,InvalidSequenceOfMethodCalls,unknown
+KeyGeneratorSpec,main.java.org.cambench.cap.mixedsensitivities.fieldflow.truepositive.brokencrypto.BrokenCrypto2,BrokenCrypto2,main,BrokenCrypto2.java:33,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found Blowfish."
+KeyGeneratorSpec,main.java.org.cambench.cap.mixedsensitivities.fieldflow.truepositive.brokencrypto.BrokenCrypto2,BrokenCrypto2,main,BrokenCrypto2.java:33,InvalidSequenceOfMethodCalls,unknown
+KeyPairSpec,main.java.org.cambench.cap.mixedsensitivities.contextpath.truepositive.smallkeysize.SmallKeySize1,SmallKeySize1,main,SmallKeySize1.java:41,InvalidSequenceOfMethodCalls,unknown
+KeyPairSpec,main.java.org.cambench.cap.flowsensitivity.falsepositive.smallkeysize.SmallKeySize1,SmallKeySize1,main,SmallKeySize1.java:37,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,main.java.org.cambench.cap.mixedsensitivities.inter2object.truepositive.brokenhash.BrokenHash1,BrokenHash1,method1,BrokenHash1.java:33,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found MD5."
+MessageDigestSpec,main.java.org.cambench.cap.mixedsensitivities.inter2object.truepositive.brokenhash.BrokenHash1,BrokenHash1,method1,BrokenHash1.java:33,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,main.java.org.cambench.cap.mixedsensitivities.inter2object.truepositive.brokenhash.BrokenHash1,BrokenHash1,method1,BrokenHash1.java:34,InvalidSequenceOfMethodCalls,unknown
+KeyPairGeneratorSpec,main.java.org.cambench.cap.contextsensitivity.advanced.callsites5.truepositive.smallkeysize.SmallKeySize1,SmallKeySize1,main,SmallKeySize1.java:37,InvalidKeySize,invalid key size for algorithm RSA.
+KeyPairGeneratorSpec,main.java.org.cambench.cap.contextsensitivity.advanced.callsites5.truepositive.smallkeysize.SmallKeySize1,SmallKeySize1,main,SmallKeySize1.java:37,InvalidSequenceOfMethodCalls,unknown
+KeyPairGeneratorSpec,main.java.org.cambench.cap.contextsensitivity.advanced.callsites5.truepositive.smallkeysize.SmallKeySize1,SmallKeySize1,main,SmallKeySize1.java:38,InvalidSequenceOfMethodCalls,unknown
+KeyPairSpec,main.java.org.cambench.cap.contextsensitivity.advanced.callsites5.truepositive.smallkeysize.SmallKeySize1,SmallKeySize1,main,SmallKeySize1.java:40,InvalidSequenceOfMethodCalls,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.mixedsensitivities.fieldobject.truepositive.staticiv.StaticIv1,StaticIv1,main,StaticIv1.java:44,UnsatisfiedConstraint,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.mixedsensitivities.fieldobject.truepositive.staticiv.StaticIv1,StaticIv1,main,StaticIv1.java:44,InvalidSequenceOfMethodCalls,unknown
+KeyPairSpec,main.java.org.cambench.cap.mixedsensitivities.objectpath.truepositive.smallkeysize.CorrectedKeySize,CorrectedKeySize,main,CorrectedKeySize.java:35,InvalidSequenceOfMethodCalls,unknown
+CipherSpec,main.java.org.cambench.cap.mixedsensitivities.inter2object.truepositive.ecbmode.EcbMode1,EcbMode1,method1,EcbMode1.java:36,UnsafeAlgorithm,"expecting one of {AES/CBC/PKCS5Padding, AES/PCBC/ISO10126Padding, ...} but found AES/ECB/PKCS5Padding."
+CipherSpec,main.java.org.cambench.cap.mixedsensitivities.inter2object.truepositive.ecbmode.EcbMode1,EcbMode1,method1,EcbMode1.java:36,InvalidSequenceOfMethodCalls,unknown
+KeyPairGeneratorSpec,main.java.org.cambench.cap.mixedsensitivities.inter2context.truepositive.smallkeysize.SmallKeySize1,SmallKeySize1,method1,SmallKeySize1.java:41,InvalidKeySize,invalid key size for algorithm RSA.
+KeyPairGeneratorSpec,main.java.org.cambench.cap.mixedsensitivities.inter2context.truepositive.smallkeysize.SmallKeySize1,SmallKeySize1,method1,SmallKeySize1.java:41,InvalidSequenceOfMethodCalls,unknown
+KeyPairGeneratorSpec,main.java.org.cambench.cap.mixedsensitivities.inter2context.truepositive.smallkeysize.SmallKeySize1,SmallKeySize1,method1,SmallKeySize1.java:42,InvalidSequenceOfMethodCalls,unknown
+KeyPairSpec,main.java.org.cambench.cap.mixedsensitivities.inter2context.truepositive.smallkeysize.SmallKeySize1,SmallKeySize1,method1,SmallKeySize1.java:44,InvalidSequenceOfMethodCalls,unknown
+KeyPairSpec,main.java.org.cambench.cap.basic.smallkeysize.CorrectedKeySize,CorrectedKeySize,main,CorrectedKeySize.java:34,InvalidSequenceOfMethodCalls,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.mixedsensitivities.inter2flow.truepositive.staticiv.StaticIv2,StaticIv2,method1,StaticIv2.java:42,UnsatisfiedConstraint,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.mixedsensitivities.inter2flow.truepositive.staticiv.StaticIv2,StaticIv2,method1,StaticIv2.java:42,InvalidSequenceOfMethodCalls,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.fieldsensitivity.truepositive.insecurerandom.InsecureRandom1,InsecureRandom1,main,InsecureRandom1.java:42,UnsatisfiedConstraint,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.fieldsensitivity.truepositive.insecurerandom.InsecureRandom1,InsecureRandom1,main,InsecureRandom1.java:42,InvalidSequenceOfMethodCalls,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.flowsensitivity.truepositive.insecurerandom.InsecureRandom1,InsecureRandom1,main,InsecureRandom1.java:39,UnsatisfiedConstraint,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.flowsensitivity.truepositive.insecurerandom.InsecureRandom1,InsecureRandom1,main,InsecureRandom1.java:39,InvalidSequenceOfMethodCalls,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.pathsensitivity.truepositive.insecurerandom.InsecureRandom1,InsecureRandom1,main,InsecureRandom1.java:45,UnsatisfiedConstraint,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.pathsensitivity.truepositive.insecurerandom.InsecureRandom1,InsecureRandom1,main,InsecureRandom1.java:45,InvalidSequenceOfMethodCalls,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.mixedsensitivities.inter2context.truepositive.staticiv.StaticIv1,StaticIv1,method1,StaticIv1.java:47,UnsatisfiedConstraint,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.mixedsensitivities.inter2context.truepositive.staticiv.StaticIv1,StaticIv1,method1,StaticIv1.java:47,InvalidSequenceOfMethodCalls,unknown
+KeyGeneratorSpec,main.java.org.cambench.cap.basic.brokencrypto.BrokenCrypto2,BrokenCrypto2,main,BrokenCrypto2.java:29,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found Blowfish."
+KeyGeneratorSpec,main.java.org.cambench.cap.basic.brokencrypto.BrokenCrypto2,BrokenCrypto2,main,BrokenCrypto2.java:29,InvalidSequenceOfMethodCalls,unknown
+KeyPairGeneratorSpec,main.java.org.cambench.cap.objectsensitivity.truepositive.smallkeysize.SmallKeySize1,SmallKeySize1,main,SmallKeySize1.java:34,InvalidKeySize,invalid key size for algorithm RSA.
+KeyPairGeneratorSpec,main.java.org.cambench.cap.objectsensitivity.truepositive.smallkeysize.SmallKeySize1,SmallKeySize1,main,SmallKeySize1.java:34,InvalidSequenceOfMethodCalls,unknown
+KeyPairGeneratorSpec,main.java.org.cambench.cap.objectsensitivity.truepositive.smallkeysize.SmallKeySize1,SmallKeySize1,main,SmallKeySize1.java:35,InvalidSequenceOfMethodCalls,unknown
+KeyPairSpec,main.java.org.cambench.cap.objectsensitivity.truepositive.smallkeysize.SmallKeySize1,SmallKeySize1,main,SmallKeySize1.java:37,InvalidSequenceOfMethodCalls,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.mixedsensitivities.inter2field.truepositive.staticiv.StaticIv1,StaticIv1,method1,StaticIv1.java:46,UnsatisfiedConstraint,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.mixedsensitivities.inter2field.truepositive.staticiv.StaticIv1,StaticIv1,method1,StaticIv1.java:46,InvalidSequenceOfMethodCalls,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.mixedsensitivities.inter2field.truepositive.insecurerandom.InsecureRandom1,InsecureRandom1,method1,InsecureRandom1.java:46,UnsatisfiedConstraint,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.mixedsensitivities.inter2field.truepositive.insecurerandom.InsecureRandom1,InsecureRandom1,method1,InsecureRandom1.java:46,InvalidSequenceOfMethodCalls,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.mixedsensitivities.objectpath.truepositive.staticiv.StaticIv2,StaticIv2,main,StaticIv2.java:48,UnsatisfiedConstraint,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.mixedsensitivities.objectpath.truepositive.staticiv.StaticIv2,StaticIv2,main,StaticIv2.java:48,InvalidSequenceOfMethodCalls,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.mixedsensitivities.inter2object.truepositive.insecurerandom.InsecureRandom1,InsecureRandom1,method1,InsecureRandom1.java:45,UnsatisfiedConstraint,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.mixedsensitivities.inter2object.truepositive.insecurerandom.InsecureRandom1,InsecureRandom1,method1,InsecureRandom1.java:45,InvalidSequenceOfMethodCalls,unknown
+KeyGeneratorSpec,main.java.org.cambench.cap.fieldsensitivity.advanced.fielddepth3.truepositive.brokencrypto.BrokenCrypto1,BrokenCrypto1,main,BrokenCrypto1.java:35,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found DES."
+KeyGeneratorSpec,main.java.org.cambench.cap.fieldsensitivity.advanced.fielddepth3.truepositive.brokencrypto.BrokenCrypto1,BrokenCrypto1,main,BrokenCrypto1.java:35,InvalidSequenceOfMethodCalls,unknown
+KeyPairSpec,main.java.org.cambench.cap.pathsensitivity.advanced.pathdepth3.falsepositive.smallkeysize.SmallKeySize1,SmallKeySize1,main,SmallKeySize1.java:49,InvalidSequenceOfMethodCalls,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.interprocedural2.truepositive.staticiv.StaticIv1,StaticIv1,method1,StaticIv1.java:38,UnsatisfiedConstraint,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.interprocedural2.truepositive.staticiv.StaticIv1,StaticIv1,method1,StaticIv1.java:38,InvalidSequenceOfMethodCalls,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.basic.staticiv.StaticIv1,StaticIv1,main,StaticIv1.java:33,UnsatisfiedConstraint,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.basic.staticiv.StaticIv1,StaticIv1,main,StaticIv1.java:33,InvalidSequenceOfMethodCalls,unknown
+KeyGeneratorSpec,main.java.org.cambench.cap.contextsensitivity.truepositive.brokencrypto.BrokenCrypto1,BrokenCrypto1,main,BrokenCrypto1.java:32,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found DES."
+KeyGeneratorSpec,main.java.org.cambench.cap.contextsensitivity.truepositive.brokencrypto.BrokenCrypto1,BrokenCrypto1,main,BrokenCrypto1.java:32,InvalidSequenceOfMethodCalls,unknown
+KeyPairSpec,main.java.org.cambench.cap.mixedsensitivities.fieldpath.falsepositive.smallkeysize.SmallKeySize2,SmallKeySize2,main,SmallKeySize2.java:44,InvalidSequenceOfMethodCalls,unknown
+KeyGeneratorSpec,main.java.org.cambench.cap.mixedsensitivities.contextpath.truepositive.brokencrypto.BrokenCrypto2,BrokenCrypto2,main,BrokenCrypto2.java:41,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found Blowfish."
+KeyGeneratorSpec,main.java.org.cambench.cap.mixedsensitivities.contextpath.truepositive.brokencrypto.BrokenCrypto2,BrokenCrypto2,main,BrokenCrypto2.java:41,InvalidSequenceOfMethodCalls,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.mixedsensitivities.inter2flow.truepositive.staticiv.StaticIv1,StaticIv1,method1,StaticIv1.java:44,UnsatisfiedConstraint,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.mixedsensitivities.inter2flow.truepositive.staticiv.StaticIv1,StaticIv1,method1,StaticIv1.java:44,InvalidSequenceOfMethodCalls,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.contextsensitivity.truepositive.insecurerandom.InsecureRandom1,InsecureRandom1,main,InsecureRandom1.java:40,UnsatisfiedConstraint,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.contextsensitivity.truepositive.insecurerandom.InsecureRandom1,InsecureRandom1,main,InsecureRandom1.java:40,InvalidSequenceOfMethodCalls,unknown
+KeyPairGeneratorSpec,main.java.org.cambench.cap.mixedsensitivities.inter2field.truepositive.smallkeysize.SmallKeySize1,SmallKeySize1,method1,SmallKeySize1.java:39,InvalidKeySize,invalid key size for algorithm RSA.
+KeyPairGeneratorSpec,main.java.org.cambench.cap.mixedsensitivities.inter2field.truepositive.smallkeysize.SmallKeySize1,SmallKeySize1,method1,SmallKeySize1.java:39,InvalidSequenceOfMethodCalls,unknown
+KeyPairGeneratorSpec,main.java.org.cambench.cap.mixedsensitivities.inter2field.truepositive.smallkeysize.SmallKeySize1,SmallKeySize1,method1,SmallKeySize1.java:40,InvalidSequenceOfMethodCalls,unknown
+KeyPairSpec,main.java.org.cambench.cap.mixedsensitivities.inter2field.truepositive.smallkeysize.SmallKeySize1,SmallKeySize1,method1,SmallKeySize1.java:42,InvalidSequenceOfMethodCalls,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.mixedsensitivities.inter2object.truepositive.staticiv.StaticIv1,StaticIv1,method1,StaticIv1.java:45,UnsatisfiedConstraint,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.mixedsensitivities.inter2object.truepositive.staticiv.StaticIv1,StaticIv1,method1,StaticIv1.java:45,InvalidSequenceOfMethodCalls,unknown
+KeyPairGeneratorSpec,main.java.org.cambench.cap.interprocedural2.truepositive.smallkeysize.SmallKeySize1,SmallKeySize1,method1,SmallKeySize1.java:37,InvalidKeySize,invalid key size for algorithm RSA.
+KeyPairGeneratorSpec,main.java.org.cambench.cap.interprocedural2.truepositive.smallkeysize.SmallKeySize1,SmallKeySize1,method1,SmallKeySize1.java:37,InvalidSequenceOfMethodCalls,unknown
+KeyPairGeneratorSpec,main.java.org.cambench.cap.interprocedural2.truepositive.smallkeysize.SmallKeySize1,SmallKeySize1,method1,SmallKeySize1.java:38,InvalidSequenceOfMethodCalls,unknown
+KeyPairSpec,main.java.org.cambench.cap.interprocedural2.truepositive.smallkeysize.SmallKeySize1,SmallKeySize1,method1,SmallKeySize1.java:40,InvalidSequenceOfMethodCalls,unknown
+KeyGeneratorSpec,main.java.org.cambench.cap.mixedsensitivities.contextflow.truepositive.brokencrypto.BrokenCrypto1,BrokenCrypto1,main,BrokenCrypto1.java:32,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found DES."
+KeyGeneratorSpec,main.java.org.cambench.cap.mixedsensitivities.contextflow.truepositive.brokencrypto.BrokenCrypto1,BrokenCrypto1,main,BrokenCrypto1.java:32,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,main.java.org.cambench.cap.mixedsensitivities.contextpath.truepositive.brokenhash.BrokenHash2,BrokenHash2,main,BrokenHash2.java:38,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found SHA-1."
+MessageDigestSpec,main.java.org.cambench.cap.mixedsensitivities.contextpath.truepositive.brokenhash.BrokenHash2,BrokenHash2,main,BrokenHash2.java:38,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,main.java.org.cambench.cap.mixedsensitivities.contextpath.truepositive.brokenhash.BrokenHash2,BrokenHash2,main,BrokenHash2.java:39,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,main.java.org.cambench.cap.mixedsensitivities.inter2flow.truepositive.brokenhash.BrokenHash2,BrokenHash2,method1,BrokenHash2.java:33,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found SHA-1."
+MessageDigestSpec,main.java.org.cambench.cap.mixedsensitivities.inter2flow.truepositive.brokenhash.BrokenHash2,BrokenHash2,method1,BrokenHash2.java:33,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,main.java.org.cambench.cap.mixedsensitivities.inter2flow.truepositive.brokenhash.BrokenHash2,BrokenHash2,method1,BrokenHash2.java:34,InvalidSequenceOfMethodCalls,unknown
+KeyPairSpec,main.java.org.cambench.cap.interprocedural3.falsepositive.smallkeysize.SmallKeySize1,SmallKeySize1,method2,SmallKeySize1.java:45,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,main.java.org.cambench.cap.mixedsensitivities.objectpath.truepositive.brokenhash.BrokenHash1,BrokenHash1,main,BrokenHash1.java:37,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found MD5."
+MessageDigestSpec,main.java.org.cambench.cap.mixedsensitivities.objectpath.truepositive.brokenhash.BrokenHash1,BrokenHash1,main,BrokenHash1.java:37,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,main.java.org.cambench.cap.mixedsensitivities.objectpath.truepositive.brokenhash.BrokenHash1,BrokenHash1,main,BrokenHash1.java:38,InvalidSequenceOfMethodCalls,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.flowsensitivity.truepositive.staticiv.StaticIv1,StaticIv1,main,StaticIv1.java:38,UnsatisfiedConstraint,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.flowsensitivity.truepositive.staticiv.StaticIv1,StaticIv1,main,StaticIv1.java:38,InvalidSequenceOfMethodCalls,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.mixedsensitivities.inter2context.truepositive.insecurerandom.InsecureRandom1,InsecureRandom1,method1,InsecureRandom1.java:48,UnsatisfiedConstraint,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.mixedsensitivities.inter2context.truepositive.insecurerandom.InsecureRandom1,InsecureRandom1,method1,InsecureRandom1.java:48,InvalidSequenceOfMethodCalls,unknown
+KeyPairSpec,main.java.org.cambench.cap.interprocedural2.truepositive.smallkeysize.CorrectedKeySize,CorrectedKeySize,method1,CorrectedKeySize.java:40,InvalidSequenceOfMethodCalls,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.contextsensitivity.falsepositive.insecurerandom.InsecureRandom1,InsecureRandom1,main,InsecureRandom1.java:40,UnsatisfiedConstraint,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.contextsensitivity.falsepositive.insecurerandom.InsecureRandom1,InsecureRandom1,main,InsecureRandom1.java:40,InvalidSequenceOfMethodCalls,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.fieldsensitivity.advanced.fielddepth3.truepositive.staticiv.StaticIv1,StaticIv1,main,StaticIv1.java:43,UnsatisfiedConstraint,unknown
+IvParameterSpecSpec,main.java.org.cambench.cap.fieldsensitivity.advanced.fielddepth3.truepositive.staticiv.StaticIv1,StaticIv1,main,StaticIv1.java:43,InvalidSequenceOfMethodCalls,unknown
+KeyGeneratorSpec,main.java.org.cambench.cap.pathsensitivity.truepositive.brokencrypto.BrokenCrypto1,BrokenCrypto1,main,BrokenCrypto1.java:38,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found DES."
+KeyGeneratorSpec,main.java.org.cambench.cap.pathsensitivity.truepositive.brokencrypto.BrokenCrypto1,BrokenCrypto1,main,BrokenCrypto1.java:38,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,main.java.org.cambench.cap.fieldsensitivity.advanced.fielddepth2.truepositive.brokenhash.BrokenHash1,BrokenHash1,main,BrokenHash1.java:31,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found MD5."
+MessageDigestSpec,main.java.org.cambench.cap.fieldsensitivity.advanced.fielddepth2.truepositive.brokenhash.BrokenHash1,BrokenHash1,main,BrokenHash1.java:31,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,main.java.org.cambench.cap.fieldsensitivity.advanced.fielddepth2.truepositive.brokenhash.BrokenHash1,BrokenHash1,main,BrokenHash1.java:32,InvalidSequenceOfMethodCalls,unknown
+KeyGeneratorSpec,main.java.org.cambench.cap.mixedsensitivities.objectpath.truepositive.brokencrypto.BrokenCrypto1,BrokenCrypto1,main,BrokenCrypto1.java:40,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found DES."
+KeyGeneratorSpec,main.java.org.cambench.cap.mixedsensitivities.objectpath.truepositive.brokencrypto.BrokenCrypto1,BrokenCrypto1,main,BrokenCrypto1.java:40,InvalidSequenceOfMethodCalls,unknown
+KeyPairSpec,main.java.org.cambench.cap.mixedsensitivities.inter2flow.truepositive.smallkeysize.CorrectedKeySize,CorrectedKeySize,method1,CorrectedKeySize.java:40,InvalidSequenceOfMethodCalls,unknown
+PBEParameterSpec,main.java.org.cambench.cap.flowsensitivity.truepositive.pbeparameters.PBEParameters2,PBEParameters2,main,PBEParameters2.java:30,UnsafeAlgorithm,expecting at least 1000 iterations and a randomized salt.
+PBEParameterSpec,main.java.org.cambench.cap.flowsensitivity.truepositive.pbeparameters.PBEParameters2,PBEParameters2,main,PBEParameters2.java:30,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,main.java.org.cambench.cap.contextsensitivity.truepositive.brokenhash.BrokenHash1,BrokenHash1,main,BrokenHash1.java:29,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found MD5."
+MessageDigestSpec,main.java.org.cambench.cap.contextsensitivity.truepositive.brokenhash.BrokenHash1,BrokenHash1,main,BrokenHash1.java:29,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,main.java.org.cambench.cap.contextsensitivity.truepositive.brokenhash.BrokenHash1,BrokenHash1,main,BrokenHash1.java:30,InvalidSequenceOfMethodCalls,unknown
+KeyPairSpec,main.java.org.cambench.cap.contextsensitivity.advanced.callsites5.truepositive.smallkeysize.CorrectedKeySize,CorrectedKeySize,main,CorrectedKeySize.java:36,InvalidSequenceOfMethodCalls,unknown
+KeyPairGeneratorSpec,main.java.org.cambench.cap.interprocedural3.truepositive.smallkeysize.SmallKeySize1,SmallKeySize1,method2,SmallKeySize1.java:42,InvalidKeySize,invalid key size for algorithm RSA.
+KeyPairGeneratorSpec,main.java.org.cambench.cap.interprocedural3.truepositive.smallkeysize.SmallKeySize1,SmallKeySize1,method2,SmallKeySize1.java:42,InvalidSequenceOfMethodCalls,unknown
+KeyPairGeneratorSpec,main.java.org.cambench.cap.interprocedural3.truepositive.smallkeysize.SmallKeySize1,SmallKeySize1,method2,SmallKeySize1.java:43,InvalidSequenceOfMethodCalls,unknown
+KeyPairSpec,main.java.org.cambench.cap.interprocedural3.truepositive.smallkeysize.SmallKeySize1,SmallKeySize1,method2,SmallKeySize1.java:45,InvalidSequenceOfMethodCalls,unknown
+KeyPairGeneratorSpec,main.java.org.cambench.cap.mixedsensitivities.contextflow.truepositive.smallkeysize.SmallKeySize1,SmallKeySize1,main,SmallKeySize1.java:34,InvalidKeySize,invalid key size for algorithm RSA.
+KeyPairGeneratorSpec,main.java.org.cambench.cap.mixedsensitivities.contextflow.truepositive.smallkeysize.SmallKeySize1,SmallKeySize1,main,SmallKeySize1.java:34,InvalidSequenceOfMethodCalls,unknown
+KeyPairGeneratorSpec,main.java.org.cambench.cap.mixedsensitivities.contextflow.truepositive.smallkeysize.SmallKeySize1,SmallKeySize1,main,SmallKeySize1.java:35,InvalidSequenceOfMethodCalls,unknown
+KeyPairSpec,main.java.org.cambench.cap.mixedsensitivities.contextflow.truepositive.smallkeysize.SmallKeySize1,SmallKeySize1,main,SmallKeySize1.java:37,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,main.java.org.cambench.cap.interprocedural3.truepositive.brokenhash.BrokenHash1,BrokenHash1,method2,BrokenHash1.java:38,UnsafeAlgorithm,"expecting one of {SHA-256, SHA-384, SHA-512} but found MD5."
+MessageDigestSpec,main.java.org.cambench.cap.interprocedural3.truepositive.brokenhash.BrokenHash1,BrokenHash1,method2,BrokenHash1.java:38,InvalidSequenceOfMethodCalls,unknown
+MessageDigestSpec,main.java.org.cambench.cap.interprocedural3.truepositive.brokenhash.BrokenHash1,BrokenHash1,method2,BrokenHash1.java:39,InvalidSequenceOfMethodCalls,unknown
+KeyGeneratorSpec,main.java.org.cambench.cap.objectsensitivity.truepositive.brokencrypto.BrokenCrypto1,BrokenCrypto1,main,BrokenCrypto1.java:32,UnsafeAlgorithm,"expecting one ofAES,HmacSHA256,HmacSHA384,HmacSHA512 but found DES."
+KeyGeneratorSpec,main.java.org.cambench.cap.objectsensitivity.truepositive.brokencrypto.BrokenCrypto1,BrokenCrypto1,main,BrokenCrypto1.java:32,InvalidSequenceOfMethodCalls,unknown
