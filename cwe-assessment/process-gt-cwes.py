@@ -1,12 +1,38 @@
 import csv
 
+
+cwesDict = { 319 : 'Cleartext Transmission of Sensitive Information',
+             321 : 'Use of Hard-coded Cryptographic Key',
+             325 : 'Missing Cryptographic Step',
+             326 : 'Inadequate Encryption Strength',
+             327 : 'Use of a Broken or Risky Cryptographic Algorithm', 
+             328 : 'Use of Weak Hash',
+             330 : 'Use of Insufficiently Random Values',
+             337 : 'Predictable Seed in Pseudo-Random Number Generator',
+             338 : 'Use of Cryptographically Weak Pseudo-Random Number Generator ',
+             341 : 'Predictable from Observable State',
+             798 : 'Use of Hard-coded Credentials',
+             916 : 'Use of Password Hash With Insufficient Computational Effort',
+             1391: 'Use of Weak Credentials',
+             1240: 'Use of a Cryptographic Primitive with a Risky Implementation',
+             1204: 'Generation of Weak Initialization Vector (IV)'
+        }
+
+cweTotal = {}
+
 def printRow(cwe, values):
+    if not (int(cwe) in cwesDict.keys()):
+        return
+
+    if cweTotal[cwe] < 10:
+        return
+    
     res = [0]*4
     
     for i in range(0, 4):
         res[i] = accuracy(values[3*i], values[3*i+1], values[3*i+2])
         
-    print(f"{cwe}     & {res[0]:.2f}     & {res[1]:.2f}          & {res[2]:.2f}          & {res[3]:.2f} \\\\")
+    print(f"{cwe} - {cwesDict[int(cwe)]}     & {res[0]:.2f}     & {res[1]:.2f}          & {res[2]:.2f}          & {res[3]:.2f} \\\\")
     
 
 def accuracy(tp, fp, fn):
@@ -47,6 +73,10 @@ with open('benchmarks.csv') as csvfile:
 
         cweFinal[cwe] = values
 
+        total = cweTotal.get(cwe, 0)
+        cweTotal[cwe] = total + 1
+        
+
 print("\\begin{tabular}{lcccc}") 
 print("CWE     & RVSec    & CryLogger     & CogniCrypt    & CryptoGuard  \\\\ \\midrow ")
 
@@ -55,3 +85,5 @@ for k in cweFinal:
 
 print("\\ebd{tabular}") 
     
+for k in cweTotal:
+    print(cweTotal[k])
